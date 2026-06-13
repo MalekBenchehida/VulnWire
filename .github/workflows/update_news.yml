@@ -1,0 +1,35 @@
+name: Update Cyber Intelligence
+on:
+  schedule:
+    - cron: '13 13 * * *' # 8:00 AM CDT -> 13:00 UTC
+    - cron: '17 17 * * *' # 12:00 PM CDT -> 17:00 UTC
+    - cron: '21 21 * * *' # 4:00 PM CDT -> 21:00 UTC
+  workflow_dispatch: # Allows you to run it manually
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Fetch Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/fetch_news.js
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Automated update: latest threat intelligence"
+          git push
