@@ -61,7 +61,7 @@ Respond ONLY with valid JSON, no markdown:
 
     const payload = { contents: [{ parts: [{ text: prompt }] }] };
 
-    const MODELS = ['gemini-1.5-flash-001', 'gemini-1.5-flash-002', 'gemini-1.5-pro-001', 'gemini-pro'];
+    const MODELS = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-flash-latest'];
 
     try {
         let data;
