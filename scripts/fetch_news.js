@@ -10,7 +10,7 @@ async function fetchNews() {
 
     console.log("Fetching latest cyber intelligence from Gemini...");
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
 
     const prompt = `Search the web for the latest cybersecurity news from today or yesterday. 
 Return exactly 4 stories for each of the following categories:
