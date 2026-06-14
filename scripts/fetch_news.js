@@ -10,7 +10,7 @@ async function fetchNews() {
 
     console.log("Fetching latest cyber intelligence from Gemini...");
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
     const prompt = `Search the web for the latest cybersecurity news from today or yesterday. 
 Return exactly 4 stories for each of the following categories:
@@ -46,7 +46,10 @@ Respond ONLY with a valid JSON object in this exact shape, no markdown or extra 
             body: JSON.stringify(payload)
         });
 
-        if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+        if (!response.ok) {
+            const body = await response.text();
+            throw new Error(`HTTP Error: ${response.status} - ${body}`);
+        }
         
         const data = await response.json();
         let jsonString = data.candidates[0].content.parts[0].text;
