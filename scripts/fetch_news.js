@@ -61,7 +61,7 @@ Respond ONLY with valid JSON, no markdown:
 
     const payload = { contents: [{ parts: [{ text: prompt }] }] };
 
-    const MODELS = ['gemini-2.0-flash', 'gemini-2.5-flash', 'gemini-flash-latest'];
+    const MODELS = ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-flash-latest', 'gemini-2.0-flash'];
 
     try {
         let data;
@@ -72,7 +72,7 @@ Respond ONLY with valid JSON, no markdown:
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
-            if (response.status === 404) { console.log(`${model} not available, trying next...`); continue; }
+            if (response.status === 404 || response.status === 429) { console.log(`${model} not available (${response.status}), trying next...`); continue; }
             if (!response.ok) {
                 const body = await response.text();
                 throw new Error(`HTTP Error: ${response.status} - ${body}`);
