@@ -13,11 +13,15 @@ async function fetchRSS(url) {
         const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
         const xml = await res.text();
         const items = [];
-        const regex = /<item>[\s\S]*?<title><!\[CDATA\[(.*?)\]\]><\/title>[\s\S]*?<\/item>|<item>[\s\S]*?<title>(.*?)<\/title>[\s\S]*?<\/item>/g;
-        let match;
-        while ((match = regex.exec(xml)) !== null && items.length < 10) {
-            const title = (match[1] || match[2] || '').trim();
-            if (title) items.push(title);
+        const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+        let itemMatch;
+        while ((itemMatch = itemRegex.exec(xml)) !== null && items.length < 10) {
+            const block = itemMatch[1];
+            const titleMatch = block.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) || block.match(/<title>(.*?)<\/title>/);
+            const linkMatch = block.match(/<link>(.*?)<\/link>/) || block.match(/<feedburner:origLink>(.*?)<\/feedburner:origLink>/);
+            const title = titleMatch ? titleMatch[1].trim() : null;
+            const link = linkMatch ? linkMatch[1].trim() : '';
+            if (title) items.push({ title, url: link });
         }
         return items;
     } catch {
@@ -43,21 +47,22 @@ async function fetchNews() {
 
     console.log(`Got ${headlines.length} headlines. Sending to Gemini...`);
 
-    const prompt = `You are a cybersecurity analyst. Using ONLY the headlines below, categorize and expand on them.
+    const prompt = `You are a cybersecurity analyst. Using ONLY the articles below, categorize and expand on them.
 Pick 4 stories for each category: Data Breaches, Ransomware, Vulnerabilities.
-If a category has fewer than 4 relevant headlines, use the closest matches.
+If a category has fewer than 4 relevant articles, use the closest matches.
 
-HEADLINES:
-${headlines.map((h, i) => `${i + 1}. ${h}`).join('\n')}
+ARTICLES:
+${headlines.map((h, i) => `${i + 1}. ${h.title} | URL: ${h.url}`).join('\n')}
 
 For each story provide:
 - title: The headline
 - tldr: A 2-sentence summary based on the headline.
 - action: Specific, actionable advice for a security team.
-- cve_ids: Any CVE numbers mentioned in the headline (e.g., ["CVE-2024-1234"]). If none, return [].
+- cve_ids: Any CVE numbers mentioned (e.g., ["CVE-2024-1234"]). If none, return [].
+- source_url: The URL from the article list above that matches this story.
 
 Respond ONLY with valid JSON, no markdown:
-{"breaches":[{"title":"...","tldr":"...","action":"...","cve_ids":[]}],"ransomware":[...],"vulns":[...]}`;
+{"breaches":[{"title":"...","tldr":"...","action":"...","cve_ids":[],"source_url":"..."}],"ransomware":[...],"vulns":[...]}`;
 
     const payload = { contents: [{ parts: [{ text: prompt }] }] };
 
