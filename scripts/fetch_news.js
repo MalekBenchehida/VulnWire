@@ -43,8 +43,6 @@ async function fetchNews() {
 
     console.log(`Got ${headlines.length} headlines. Sending to Gemini...`);
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
-
     const prompt = `You are a cybersecurity analyst. Using ONLY the headlines below, categorize and expand on them.
 Pick 4 stories for each category: Data Breaches, Ransomware, Vulnerabilities.
 If a category has fewer than 4 relevant headlines, use the closest matches.
@@ -63,19 +61,27 @@ Respond ONLY with valid JSON, no markdown:
 
     const payload = { contents: [{ parts: [{ text: prompt }] }] };
 
+    const MODELS = ['gemini-1.5-flash-001', 'gemini-1.5-flash-002', 'gemini-1.5-pro-001', 'gemini-pro'];
+
     try {
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-
-        if (!response.ok) {
-            const body = await response.text();
-            throw new Error(`HTTP Error: ${response.status} - ${body}`);
+        let data;
+        for (const model of MODELS) {
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            if (response.status === 404) { console.log(`${model} not available, trying next...`); continue; }
+            if (!response.ok) {
+                const body = await response.text();
+                throw new Error(`HTTP Error: ${response.status} - ${body}`);
+            }
+            console.log(`Using model: ${model}`);
+            data = await response.json();
+            break;
         }
-
-        const data = await response.json();
+        if (!data) throw new Error('No available Gemini model found.');
         let jsonString = data.candidates[0].content.parts[0].text;
         jsonString = jsonString.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '').trim();
 
