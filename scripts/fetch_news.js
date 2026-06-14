@@ -10,10 +10,9 @@ async function fetchNews() {
 
     console.log("Fetching latest cyber intelligence from Gemini...");
 
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
-    const prompt = `Search the web for the latest cybersecurity news from today or yesterday. 
-Return exactly 4 stories for each of the following categories:
+    const prompt = `You are a cybersecurity analyst. Provide 4 recent notable stories for each of these categories:
 1. Data Breaches
 2. Ransomware
 3. Vulnerabilities (Software flaws, zero-days)
@@ -28,15 +27,7 @@ Respond ONLY with a valid JSON object in this exact shape, no markdown or extra 
 {"breaches":[{"title":"...","tldr":"...","action":"...","cve_ids":[]}],"ransomware":[...],"vulns":[...]}`;
 
     const payload = {
-        contents: [{ parts: [{ text: prompt }] }],
-        tools: [{ 
-            google_search_retrieval: {
-                dynamic_retrieval_config: {
-                    mode: "MODE_DYNAMIC",
-                    dynamic_threshold: 0.3
-                }
-            } 
-        }]
+        contents: [{ parts: [{ text: prompt }] }]
     };
 
     try {
