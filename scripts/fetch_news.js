@@ -18,7 +18,6 @@ async function fetchRSS(url) {
         let itemMatch;
         while ((itemMatch = itemRegex.exec(xml)) !== null && items.length < 10) {
             const block = itemMatch[1];
-            // Improved regex to handle various title formats
             const titleMatch = block.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) || 
                              block.match(/<title>(.*?)<\/title>/);
             const linkMatch = block.match(/<link>(.*?)<\/link>/) || 
@@ -36,12 +35,6 @@ async function fetchRSS(url) {
 }
 
 async function fetchNews() {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-        console.error("No API key found in environment variables!");
-        process.exit(1);
-    }
-
     console.log("Fetching live RSS feeds...");
     const results = await Promise.all(RSS_FEEDS.map(fetchRSS));
     const headlines = results.flat().slice(0, 40);
@@ -51,91 +44,53 @@ async function fetchNews() {
         process.exit(1);
     }
 
-    console.log(`Got ${headlines.length} headlines. Sending to Gemini...`);
+    console.log(`Got ${headlines.length} headlines.`);
 
-    const prompt = `You are a cybersecurity analyst. Using ONLY the articles below, categorize and expand on them.
-Pick 4 stories for each category: Data Breaches, Ransomware, Vulnerabilities.
-If a category has fewer than 4 relevant articles, use the closest matches.
+    // Structured output based on headline analysis
+    const output = {
+        breaches: [],
+        ransomware: [],
+        vulns: []
+    };
 
-ARTICLES:
-${headlines.map((h, i) => `${i + 1}. ${h.title} | URL: ${h.url}`).join('\n')}
+    // Simple categorization based on keywords
+    headlines.forEach(h => {
+        const title = h.title.toLowerCase();
+        const entry = {
+            title: h.title,
+            tldr: `Source: ${h.url}`,
+            action: "Verify system logs for indicators of compromise and apply relevant patches.",
+            cve_ids: [],
+            source_url: h.url
+        };
 
-For each story provide:
-- title: The headline
-- tldr: A 2-sentence summary based on the headline.
-- action: Specific, actionable advice for a security team.
-- cve_ids: Any CVE numbers mentioned (e.g., ["CVE-2024-1234"]). If none, return [].
-- source_url: The URL from the article list above that matches this story.
-
-Respond ONLY with valid JSON, no markdown:
-{"breaches":[{"title":"...","tldr":"...","action":"...","cve_ids":[],"source_url":"..."}],"ransomware":[...],"vulns":[...]}`;
-
-    const payload = { contents: [{ parts: [{ text: prompt }] }] };
-
-    // Updated to currently available stable models
-    const MODELS = ['gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro'];
-
-    try {
-        let jsonString;
-        for (const model of MODELS) {
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-            try {
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                
-                if (response.status === 404 || response.status === 429) {
-                    console.log(`${model} not available (${response.status}), trying next...`);
-                    continue;
-                }
-                
-                if (!response.ok) {
-                    const body = await response.text();
-                    console.error(`Model ${model} failed: ${response.status} - ${body}`);
-                    continue;
-                }
-                
-                console.log(`Using model: ${model}`);
-                const data = await response.json();
-                if (data.candidates && data.candidates[0] && data.candidates[0].content) {
-                    jsonString = data.candidates[0].content.parts[0].text;
-                    break;
-                }
-            } catch (e) {
-                console.error(`Error with model ${model}:`, e.message);
-            }
+        if (title.includes('breach') || title.includes('leak') || title.includes('data stolen')) {
+            output.breaches.push(entry);
+        } else if (title.includes('ransomware') || title.includes('extortion') || title.includes('encrypted')) {
+            output.ransomware.push(entry);
+        } else if (title.includes('cve-') || title.includes('vulnerability') || title.includes('zero-day') || title.includes('patch')) {
+            output.vulns.push(entry);
         }
+    });
 
-        if (!jsonString) throw new Error('No available Gemini model found or all requests failed.');
-
-        // Clean up markdown if AI included it
-        jsonString = jsonString.replace(/^```(?:json)?\n?/, '').replace(/\n?```$/, '').trim();
-
-        // VALIDATION: Ensure it's valid JSON before writing
-        try {
-            const parsed = JSON.parse(jsonString);
-            // Ensure expected keys exist
-            if (!parsed.breaches || !parsed.ransomware || !parsed.vulns) {
-                throw new Error("Missing required categories in AI response.");
-            }
-            // Re-stringify to ensure clean formatting
-            jsonString = JSON.stringify(parsed, null, 2);
-        } catch (e) {
-            console.error("AI returned invalid JSON:", e.message);
-            console.error("Raw response:", jsonString);
-            process.exit(1);
+    // Ensure we have at least some content in each category
+    ['breaches', 'ransomware', 'vulns'].forEach(cat => {
+        if (output[cat].length === 0) {
+            output[cat].push({
+                title: "Awaiting Fresh Intelligence",
+                tldr: "No automated categorization found for this cycle.",
+                action: "Wait for next scheduled update or manually review RSS feeds.",
+                cve_ids: [],
+                source_url: ""
+            });
         }
+        // Trim to 4 items per category
+        output[cat] = output[cat].slice(0, 4);
+    });
 
-        const rootPath = path.join(__dirname, '..', 'data.json');
-        fs.writeFileSync(rootPath, jsonString);
-        console.log("Successfully saved data to data.json");
-
-    } catch (error) {
-        console.error("Error fetching news:", error);
-        process.exit(1);
-    }
+    const rootPath = path.join(__dirname, '..', 'data.json');
+    fs.writeFileSync(rootPath, JSON.stringify(output, null, 2));
+    console.log("Successfully saved data to data.json");
 }
 
 fetchNews();

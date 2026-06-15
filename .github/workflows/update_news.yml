@@ -31,5 +31,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data.json
-          git diff --quiet && git diff --staged --quiet || git commit -m "Automated update: latest threat intelligence"
+          git commit -m "Automated update: latest threat intelligence" || echo "No changes to commit"
           git push
