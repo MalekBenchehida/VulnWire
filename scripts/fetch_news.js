@@ -22,10 +22,13 @@ async function fetchRSS(url) {
                              block.match(/<title>(.*?)<\/title>/);
             const linkMatch = block.match(/<link>(.*?)<\/link>/) || 
                             block.match(/<feedburner:origLink>(.*?)<\/feedburner:origLink>/);
+            const descMatch = block.match(/<description><!\[CDATA\[(.*?)\]\]><\/description>/) || 
+                            block.match(/<description>(.*?)<\/description>/);
             
             const title = titleMatch ? titleMatch[1].replace(/<!\[CDATA\[|\]\]>/g, '').trim() : null;
             const link = linkMatch ? linkMatch[1].trim() : '';
-            if (title) items.push({ title, url: link });
+            const description = descMatch ? descMatch[1].replace(/<!\[CDATA\[|\]\]>/g, '').trim() : '';
+            if (title) items.push({ title, url: link, description });
         }
         return items;
     } catch (e) {
@@ -59,7 +62,7 @@ async function fetchNews() {
         const title = h.title.toLowerCase();
         const entry = {
             title: h.title,
-            tldr: "Breaking cybersecurity development requiring immediate attention and assessment.",
+            tldr: h.description || "Breaking cybersecurity development requiring immediate attention and assessment.",
             action: "Verify system logs for indicators of compromise and apply relevant patches.",
             cve_ids: [],
             source_url: h.url
