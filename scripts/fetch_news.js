@@ -50,7 +50,8 @@ async function fetchNews() {
     const output = {
         breaches: [],
         ransomware: [],
-        vulns: []
+        vulns: [],
+        insurance: []
     };
 
     // Simple categorization based on keywords
@@ -58,7 +59,7 @@ async function fetchNews() {
         const title = h.title.toLowerCase();
         const entry = {
             title: h.title,
-            tldr: `Source: ${h.url}`,
+            tldr: "Breaking cybersecurity development requiring immediate attention and assessment.",
             action: "Verify system logs for indicators of compromise and apply relevant patches.",
             cve_ids: [],
             source_url: h.url
@@ -70,11 +71,13 @@ async function fetchNews() {
             output.ransomware.push(entry);
         } else if (title.includes('cve-') || title.includes('vulnerability') || title.includes('zero-day') || title.includes('patch')) {
             output.vulns.push(entry);
+        } else if (title.includes('insurance') || title.includes('cyber insurance') || title.includes('coverage') || title.includes('premium') || title.includes('claim')) {
+            output.insurance.push(entry);
         }
     });
 
     // Ensure we have at least some content in each category
-    ['breaches', 'ransomware', 'vulns'].forEach(cat => {
+    ['breaches', 'ransomware', 'vulns', 'insurance'].forEach(cat => {
         if (output[cat].length === 0) {
             output[cat].push({
                 title: "Awaiting Fresh Intelligence",

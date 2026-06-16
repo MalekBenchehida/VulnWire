@@ -117,6 +117,9 @@
         <button onclick="switchTab('vulns')" id="tab-vulns" class="tab-btn text-slate-500 px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all whitespace-nowrap flex items-center gap-3 hover:text-emerald-400">
             <i class="fa-solid fa-bug opacity-70"></i> Vulnerabilities
         </button>
+        <button onclick="switchTab('insurance')" id="tab-insurance" class="tab-btn text-slate-500 px-8 py-4 font-bold text-sm tracking-widest uppercase transition-all whitespace-nowrap flex items-center gap-3 hover:text-emerald-400">
+            <i class="fa-solid fa-shield-halved opacity-70"></i> Cyber Insurance
+        </button>
     </div>
 
     <!-- UI Feedback -->
@@ -138,6 +141,7 @@
     <div id="feed-breaches" class="feed-container grid gap-6 md:grid-cols-2 lg:grid-cols-2"></div>
     <div id="feed-ransomware" class="feed-container grid gap-6 md:grid-cols-2 lg:grid-cols-2 hidden"></div>
     <div id="feed-vulns" class="feed-container grid gap-6 md:grid-cols-2 lg:grid-cols-2 hidden"></div>
+    <div id="feed-insurance" class="feed-container grid gap-6 md:grid-cols-2 lg:grid-cols-2 hidden"></div>
 </main>
 
 <footer class="glass-panel border-t border-emerald-500/10 p-6 text-[10px] text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -152,7 +156,7 @@
 </footer>
 
 <script>
-    let globalThreatData = { breaches: [], ransomware: [], vulns: [] };
+    let globalThreatData = { breaches: [], ransomware: [], vulns: [], insurance: [] };
     let currentTab = 'breaches';
 
     const mockData = {
@@ -165,7 +169,8 @@
             }
         ],
         ransomware: [],
-        vulns: []
+        vulns: [],
+        insurance: []
     };
 
     async function fetchLocalData() {
@@ -205,6 +210,7 @@
         renderCategory('breaches', globalThreatData.breaches);
         renderCategory('ransomware', globalThreatData.ransomware);
         renderCategory('vulns', globalThreatData.vulns);
+        renderCategory('insurance', globalThreatData.insurance);
         document.getElementById(`feed-${currentTab}`).classList.remove('hidden');
     }
 
@@ -236,7 +242,9 @@
                     <div class="scanner-line opacity-0 group-hover:opacity-10"></div>
                     
                     <div class="flex justify-between items-start mb-4">
-                        <h2 class="text-lg font-extrabold text-white leading-tight group-hover:text-emerald-400 transition-colors">${story.title}</h2>
+                        <h2 class="text-lg font-extrabold text-white leading-tight group-hover:text-emerald-400 transition-colors">
+                            ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="hover:text-emerald-300">${story.title}</a>` : story.title}
+                        </h2>
                         <span class="text-[8px] mono text-slate-600 border border-slate-800 px-1.5 py-0.5 rounded">INTEL_CONFIRMED</span>
                     </div>
 
@@ -272,7 +280,8 @@
         const categories = [
             { id: 'breaches', name: 'DATA BREACHES' },
             { id: 'ransomware', name: 'RANSOMWARE ACTIVITY' },
-            { id: 'vulns', name: 'CRITICAL VULNERABILITIES' }
+            { id: 'vulns', name: 'CRITICAL VULNERABILITIES' },
+            { id: 'insurance', name: 'CYBER INSURANCE' }
         ];
 
         categories.forEach(cat => {
