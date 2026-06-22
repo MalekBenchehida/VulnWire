@@ -212,10 +212,235 @@
             }
         ],
         ransomware: [],
-        vulns: [],
+        vulns: [
+            {
+                title: "Awaiting Next Scheduled Vulnerability Scan",
+                tldr: "No live vulnerability disclosures have been logged for this period. Scan results will update dynamically.",
+                action: "Review software asset inventories or trigger update scan manually.",
+                cve_ids: [],
+                source: "System",
+                active_exploitation: false,
+                affected_versions: "N/A",
+                how_to_determine_impact: "N/A",
+                tanium_query_hint: "N/A",
+                rapid7_query_hint: "N/A",
+                remediation_priority: "Low informational",
+                cvss_score: "0.0 None"
+            }
+        ],
         insurance: [],
         history: {}
     };
+
+    function escapeHtml(text) {
+        if (!text) return '';
+        return text
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function copyToClipboard(text, btn) {
+        if (!text) return;
+        navigator.clipboard.writeText(text).then(() => {
+            const originalText = btn.innerHTML;
+            btn.innerHTML = `<i class="fa-solid fa-check text-emerald-400"></i> Copied`;
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+            }, 1500);
+        });
+    }
+
+    function getCvssBadgeClass(cvss) {
+        if (!cvss) return 'bg-slate-800 text-slate-400 border-slate-700';
+        const scoreStr = cvss.toString().toLowerCase();
+        const score = parseFloat(scoreStr);
+        if (isNaN(score)) {
+            if (scoreStr.includes('critical')) return 'bg-red-500/20 text-red-400 border-red-500/30';
+            if (scoreStr.includes('high')) return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
+            return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+        }
+        if (score >= 9.0) return 'bg-red-500/20 text-red-400 border-red-500/40';
+        if (score >= 7.0) return 'bg-orange-500/20 text-orange-400 border-orange-500/40';
+        if (score >= 4.0) return 'bg-amber-500/20 text-amber-400 border-amber-500/40';
+        return 'bg-blue-500/20 text-blue-400 border-blue-500/40';
+    }
+
+    function getPriorityBadgeClass(priority) {
+        if (!priority) return 'bg-slate-800 text-slate-400 border-slate-700';
+        const p = priority.toString().toLowerCase();
+        if (p.includes('emergency') || p.includes('out-of-band')) {
+            return 'bg-red-500/20 text-red-400 border-red-500/40 animate-pulse';
+        }
+        if (p.includes('high')) return 'bg-orange-500/20 text-orange-400 border-orange-500/40';
+        if (p.includes('medium')) return 'bg-amber-500/20 text-amber-400 border-amber-500/40';
+        return 'bg-slate-800 text-slate-400 border-slate-700';
+    }
+
+    function createStoryCard(story, category) {
+        let cveBadges = '';
+        if (story.cve_ids && story.cve_ids.length > 0) {
+            cveBadges = story.cve_ids.map(cve => 
+                `<a href="https://nvd.nist.gov/vuln/detail/${cve}" target="_blank" class="inline-flex items-center bg-red-500/10 text-red-400 border border-red-500/30 rounded px-2 py-1 text-[10px] font-bold mono hover:bg-red-500 hover:text-white transition-all mr-2 mb-2">
+                    <i class="fa-solid fa-bug mr-1.5"></i> ${cve}
+                </a>`
+            ).join('');
+        }
+
+        const isVuln = category === 'vulns';
+        
+        const catMap = {
+            breaches: 'Breach',
+            ransomware: 'Ransomware',
+            vulns: 'Vulnerability',
+            insurance: 'Insurance'
+        };
+        const categoryLabel = story.category ? `<span class="text-[8px] mono text-emerald-500 border border-emerald-500/30 px-1.5 py-0.5 rounded uppercase bg-slate-950 shadow-sm">${catMap[story.category] || story.category}</span>` : '';
+
+        if (isVuln) {
+            const isExploited = !!story.active_exploitation;
+            const borderClass = isExploited ? 'border-l-4 border-l-red-500' : 'border-l-4 border-l-emerald-500/50';
+            
+            return `
+                <div class="glass-panel rounded-xl p-6 shadow-2xl transition-all duration-500 card-glow flex flex-col relative overflow-hidden group ${borderClass}">
+                    <div class="scanner-line opacity-0 group-hover:opacity-10"></div>
+                    
+                    <div class="flex justify-between items-start mb-3 gap-4">
+                        <h2 class="text-base font-extrabold text-white leading-tight group-hover:text-emerald-400 transition-colors">
+                            ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="hover:text-emerald-300">${story.title}</a>` : story.title}
+                        </h2>
+                        <div class="flex flex-col items-end gap-1.5 shrink-0">
+                            <span class="text-[8px] mono text-slate-500 border border-slate-800 px-1.5 py-0.5 rounded uppercase bg-slate-950">${story.source || 'INTEL_CONFIRMED'}</span>
+                            ${categoryLabel}
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-2 mb-3">
+                        ${isExploited ? `
+                            <span class="inline-flex items-center gap-1.5 bg-red-500/20 text-red-400 border border-red-500/40 rounded px-2 py-0.5 text-[9px] font-black mono uppercase tracking-wider animate-pulse">
+                                <span class="h-1.5 w-1.5 rounded-full bg-red-500 animate-ping"></span>
+                                🚨 Active Exploitation
+                            </span>
+                        ` : `
+                            <span class="inline-flex items-center gap-1 bg-slate-850 text-slate-400 border border-slate-700 rounded px-2 py-0.5 text-[9px] font-bold mono uppercase">
+                                No Active Exploits
+                            </span>
+                        `}
+                        
+                        ${story.cvss_score ? `
+                            <span class="inline-flex items-center gap-1 ${getCvssBadgeClass(story.cvss_score)} border rounded px-2 py-0.5 text-[9px] font-black mono">
+                                CVSS: ${story.cvss_score}
+                            </span>
+                        ` : ''}
+
+                        ${story.remediation_priority ? `
+                            <span class="inline-flex items-center gap-1 ${getPriorityBadgeClass(story.remediation_priority)} border rounded px-2 py-0.5 text-[9px] font-black mono">
+                                Priority: ${story.remediation_priority}
+                            </span>
+                        ` : ''}
+                    </div>
+
+                    ${cveBadges ? `<div class="mb-3 flex flex-wrap">${cveBadges}</div>` : ''}
+                    
+                    <div class="mb-4 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-[9px] mono text-emerald-500 font-bold uppercase tracking-widest">Analysis & TL;DR</span>
+                            <div class="h-[1px] flex-grow bg-emerald-500/10"></div>
+                        </div>
+                        <p class="text-xs leading-relaxed text-slate-400">${story.tldr || 'No description available.'}</p>
+                    </div>
+
+                    <!-- Section 1: Impact & Scope -->
+                    <div class="mb-4 bg-slate-950/40 p-3 rounded-lg border border-slate-800/85">
+                        <div class="text-[9px] font-black tracking-widest text-slate-400 uppercase mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-crosshairs text-emerald-500 text-xs"></i> Impact & Scope
+                        </div>
+                        <div class="grid gap-2 text-xs">
+                            <div>
+                                <span class="text-slate-500 font-semibold">Affected Versions:</span>
+                                <span class="text-slate-300 ml-1 font-mono">${story.affected_versions || 'Check vendor advisories.'}</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 font-semibold">How to Determine Impact:</span>
+                                <p class="text-slate-300 mt-0.5 leading-relaxed pl-3 border-l border-emerald-500/30 font-mono">${story.how_to_determine_impact || 'Review software inventory.'}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Hunting & Remediation -->
+                    <div class="bg-slate-950/60 p-4 rounded-lg border border-slate-800 flex flex-col gap-3">
+                        <div class="text-[9px] font-black tracking-widest text-slate-400 uppercase flex items-center gap-2">
+                            <i class="fa-solid fa-screwdriver-wrench text-amber-500 text-xs"></i> Hunting & Remediation
+                        </div>
+
+                        <div>
+                            <div class="flex items-center gap-1.5 mb-1">
+                                <i class="fa-solid fa-bolt-lightning text-amber-500 text-[10px]"></i>
+                                <span class="text-[9px] mono text-amber-500 font-bold uppercase tracking-widest">Protocol Response</span>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed font-mono">${story.action}</p>
+                        </div>
+
+                        <div class="grid gap-3 md:grid-cols-2">
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[9px] mono text-slate-400 font-bold uppercase tracking-widest">Tanium Query Hint</span>
+                                    <button onclick="copyToClipboard('${escapeHtml(story.tanium_query_hint || '')}', this)" class="text-[8px] mono text-slate-500 hover:text-emerald-400 transition-colors uppercase font-bold"><i class="fa-regular fa-copy"></i> Copy</button>
+                                </div>
+                                <pre class="bg-slate-950 text-[10px] text-emerald-400 p-2 rounded border border-slate-850 font-mono overflow-x-auto whitespace-pre-wrap select-all leading-normal max-h-24 scrollbar-thin">${story.tanium_query_hint || 'N/A'}</pre>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[9px] mono text-slate-400 font-bold uppercase tracking-widest">Rapid7 Query Hint</span>
+                                    <button onclick="copyToClipboard('${escapeHtml(story.rapid7_query_hint || '')}', this)" class="text-[8px] mono text-slate-500 hover:text-emerald-400 transition-colors uppercase font-bold"><i class="fa-regular fa-copy"></i> Copy</button>
+                                </div>
+                                <pre class="bg-slate-950 text-[10px] text-amber-400 p-2 rounded border border-slate-850 font-mono overflow-x-auto whitespace-pre-wrap select-all leading-normal max-h-24 scrollbar-thin">${story.rapid7_query_hint || 'N/A'}</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="mt-4 flex items-center gap-2 text-[10px] mono text-slate-500 hover:text-emerald-400 transition-colors uppercase tracking-widest self-start"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>` : ''}
+                </div>
+            `;
+        } else {
+            return `
+                <div class="glass-panel rounded-xl p-6 shadow-2xl transition-all duration-500 card-glow flex flex-col relative overflow-hidden group">
+                    <div class="scanner-line opacity-0 group-hover:opacity-10"></div>
+                    
+                    <div class="flex justify-between items-start mb-4 gap-4">
+                        <h2 class="text-lg font-extrabold text-white leading-tight group-hover:text-emerald-400 transition-colors">
+                            ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="hover:text-emerald-300">${story.title}</a>` : story.title}
+                        </h2>
+                        <div class="flex flex-col items-end gap-1.5 shrink-0">
+                            <span class="text-[8px] mono text-slate-600 border border-slate-800 px-1.5 py-0.5 rounded uppercase bg-slate-950">${story.source || 'INTEL_CONFIRMED'}</span>
+                            ${categoryLabel}
+                        </div>
+                    </div>
+
+                    ${cveBadges ? `<div class="mb-4 flex flex-wrap">${cveBadges}</div>` : ''}
+                    
+                    <div class="mb-6 flex-grow">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-[10px] mono text-emerald-500 font-bold uppercase tracking-widest">Analysis</span>
+                            <div class="h-[1px] flex-grow bg-emerald-500/10"></div>
+                        </div>
+                        <p class="text-sm leading-relaxed text-slate-400">${story.tldr}</p>
+                    </div>
+
+                    <div class="bg-slate-950/50 p-4 rounded-lg border border-amber-500/20 group-hover:border-amber-500/40 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-bolt-lightning text-amber-500 text-xs"></i>
+                            <span class="text-[10px] mono text-amber-500 font-bold uppercase tracking-widest">Protocol Response</span>
+                        </div>
+                        <p class="text-xs text-slate-300 mono leading-relaxed">${story.action}</p>
+                    </div>
+                    ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="mt-4 flex items-center gap-2 text-[10px] mono text-slate-500 hover:text-emerald-400 transition-colors uppercase tracking-widest self-start"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>` : ''}
+                </div>
+            `;
+        }
+    }
 
     async function fetchLocalData() {
         document.getElementById('loading').classList.remove('hidden');
@@ -229,7 +454,7 @@
             globalThreatData = data;
             renderFeeds();
         } catch (err) {
-            console.warn("Handshake failed, fallback to local buffer.");
+            console.warn("Handshake failed, fallback to local buffer.", err);
             globalThreatData = mockData;
             renderFeeds();
         }
@@ -286,47 +511,7 @@
         }
 
         items.forEach(story => {
-            let cveBadges = '';
-            if (story.cve_ids && story.cve_ids.length > 0) {
-                cveBadges = story.cve_ids.map(cve => 
-                    `<a href="https://nvd.nist.gov/vuln/detail/${cve}" target="_blank" class="inline-flex items-center bg-red-500/10 text-red-400 border border-red-500/30 rounded px-2 py-1 text-[10px] font-bold mono hover:bg-red-500 hover:text-white transition-all mr-2 mb-2">
-                        <i class="fa-solid fa-bug mr-1.5"></i> ${cve}
-                    </a>`
-                ).join('');
-            }
-
-            const card = `
-                <div class="glass-panel rounded-xl p-6 shadow-2xl transition-all duration-500 card-glow flex flex-col relative overflow-hidden group">
-                    <div class="scanner-line opacity-0 group-hover:opacity-10"></div>
-                    
-                    <div class="flex justify-between items-start mb-4 gap-4">
-                        <h2 class="text-lg font-extrabold text-white leading-tight group-hover:text-emerald-400 transition-colors">
-                            ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="hover:text-emerald-300">${story.title}</a>` : story.title}
-                        </h2>
-                        <span class="text-[8px] mono text-slate-600 border border-slate-800 px-1.5 py-0.5 rounded uppercase shrink-0">${story.source || 'INTEL_CONFIRMED'}</span>
-                    </div>
-
-                    <div class="mb-4">${cveBadges}</div>
-                    
-                    <div class="mb-6 flex-grow">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="text-[10px] mono text-emerald-500 font-bold uppercase tracking-widest">Analysis</span>
-                            <div class="h-[1px] flex-grow bg-emerald-500/10"></div>
-                        </div>
-                        <p class="text-sm leading-relaxed text-slate-400">${story.tldr}</p>
-                    </div>
-
-                    <div class="bg-slate-950/50 p-4 rounded-lg border border-amber-500/20 group-hover:border-amber-500/40 transition-colors">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fa-solid fa-bolt-lightning text-amber-500 text-xs"></i>
-                            <span class="text-[10px] mono text-amber-500 font-bold uppercase tracking-widest">Protocol Response</span>
-                        </div>
-                        <p class="text-xs text-slate-300 mono leading-relaxed">${story.action}</p>
-                    </div>
-                    ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="mt-4 flex items-center gap-2 text-[10px] mono text-slate-500 hover:text-emerald-400 transition-colors uppercase tracking-widest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>` : ''}
-                </div>
-            `;
-            container.innerHTML += card;
+            container.innerHTML += createStoryCard(story, containerId);
         });
     }
 
@@ -378,58 +563,7 @@
         }
         
         items.forEach(story => {
-            let cveBadges = '';
-            if (story.cve_ids && story.cve_ids.length > 0) {
-                cveBadges = story.cve_ids.map(cve => 
-                    `<a href="https://nvd.nist.gov/vuln/detail/${cve}" target="_blank" class="inline-flex items-center bg-red-500/10 text-red-400 border border-red-500/30 rounded px-2 py-1 text-[10px] font-bold mono hover:bg-red-500 hover:text-white transition-all mr-2 mb-2">
-                        <i class="fa-solid fa-bug mr-1.5"></i> ${cve}
-                    </a>`
-                ).join('');
-            }
-            
-            const catMap = {
-                breaches: 'Breach',
-                ransomware: 'Ransomware',
-                vulns: 'Vulnerability',
-                insurance: 'Insurance'
-            };
-            const categoryBadge = `<span class="text-[8px] mono text-emerald-500 border border-emerald-500/30 px-1.5 py-0.5 rounded uppercase mr-2 shadow-sm">${catMap[story.category] || 'Intel'}</span>`;
-            
-            const card = `
-                <div class="glass-panel rounded-xl p-6 shadow-2xl transition-all duration-500 card-glow flex flex-col relative overflow-hidden group">
-                    <div class="scanner-line opacity-0 group-hover:opacity-10"></div>
-                    
-                    <div class="flex justify-between items-start mb-4 gap-4">
-                        <h2 class="text-lg font-extrabold text-white leading-tight group-hover:text-emerald-400 transition-colors">
-                            ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="hover:text-emerald-300">${story.title}</a>` : story.title}
-                        </h2>
-                        <div class="flex flex-col items-end gap-1.5 shrink-0">
-                            <span class="text-[8px] mono text-slate-600 border border-slate-800 px-1.5 py-0.5 rounded uppercase">${story.source || 'OSINT Source'}</span>
-                            ${categoryBadge}
-                        </div>
-                    </div>
-
-                    <div class="mb-4">${cveBadges}</div>
-                    
-                    <div class="mb-6 flex-grow">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="text-[10px] mono text-emerald-500 font-bold uppercase tracking-widest">Analysis</span>
-                            <div class="h-[1px] flex-grow bg-emerald-500/10"></div>
-                        </div>
-                        <p class="text-sm leading-relaxed text-slate-400">${story.tldr}</p>
-                    </div>
-
-                    <div class="bg-slate-950/50 p-4 rounded-lg border border-amber-500/20 group-hover:border-amber-500/40 transition-colors">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fa-solid fa-bolt-lightning text-amber-500 text-xs"></i>
-                            <span class="text-[10px] mono text-amber-500 font-bold uppercase tracking-widest">Protocol Response</span>
-                        </div>
-                        <p class="text-xs text-slate-300 mono leading-relaxed">${story.action}</p>
-                    </div>
-                    ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="mt-4 flex items-center gap-2 text-[10px] mono text-slate-500 hover:text-emerald-400 transition-colors uppercase tracking-widest"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Full Article</a>` : ''}
-                </div>
-            `;
-            container.innerHTML += card;
+            container.innerHTML += createStoryCard(story, story.category);
         });
     }
 
@@ -499,10 +633,12 @@
                             ${story.source_url ? `<a href="${story.source_url}" target="_blank" rel="noopener" class="hover:text-emerald-400 flex items-center gap-1.5 transition-colors"><i class="fa-solid fa-link text-[10px] text-slate-500"></i> ${story.title}</a>` : story.title}
                         </h4>
                         <p class="text-slate-400 text-xs leading-normal mb-1.5">${story.tldr}</p>
-                        <div class="flex items-center gap-2 text-[9px] mono text-slate-500 uppercase">
+                        <div class="flex flex-wrap items-center gap-2 mt-1.5 text-[9px] mono text-slate-500 uppercase">
                             <span>Source: ${story.source || 'OSINT'}</span>
                             <span>•</span>
                             <span>Detected: ${story.date_detected}</span>
+                            ${story.cvss_score ? `<span>•</span><span class="text-red-400">CVSS: ${story.cvss_score}</span>` : ''}
+                            ${story.remediation_priority ? `<span>•</span><span class="text-amber-400">Priority: ${story.remediation_priority}</span>` : ''}
                         </div>
                     </div>
                 `;
@@ -586,6 +722,17 @@
                         textOutput += `CVEs: ${story.cve_ids.join(', ')}\n`;
                     }
                     textOutput += `ANALYSIS: ${story.tldr}\n`;
+
+                    if (cat.id === 'vulns') {
+                        textOutput += `CVSS SCORE: ${story.cvss_score || 'N/A'}\n`;
+                        textOutput += `REMEDIATION PRIORITY: ${story.remediation_priority || 'N/A'}\n`;
+                        textOutput += `ACTIVE EXPLOITATION: ${story.active_exploitation ? 'YES 🚨' : 'NO'}\n`;
+                        textOutput += `AFFECTED VERSIONS: ${story.affected_versions || 'N/A'}\n`;
+                        textOutput += `HOW TO DETERMINE IMPACT: ${story.how_to_determine_impact || 'N/A'}\n`;
+                        textOutput += `TANIUM QUERY HINT: ${story.tanium_query_hint || 'N/A'}\n`;
+                        textOutput += `RAPID7 QUERY HINT: ${story.rapid7_query_hint || 'N/A'}\n`;
+                    }
+
                     textOutput += `PROTOCOL: ${story.action}\n\n`;
                 });
             }
