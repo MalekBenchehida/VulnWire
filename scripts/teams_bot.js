@@ -28,7 +28,7 @@ const activities = [];
             '@context': 'https://schema.org/extensions',
             '@type': 'MessageCard',
             title: titleMap[cat],
-            text: `**${story.title}**\n\n${story.tldr}\n\n**Action:** ${story.action}`,
+            text: `**${story.title}**\n\nSource: *${story.source || 'OSINT'}*\n\n${story.tldr}\n\n**Action:** ${story.action}`,
             potentialAction: story.source_url ? [{
                 '@type': 'OpenUri',
                 name: 'Read More',
