@@ -1,6 +1,14 @@
 {
   "breaches": [
     {
+      "title": "Amadey and StealC Malware Network Disrupted, 27M Stolen Credentials Recovered",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Tata Electronics confirms cyberattack as hackers leak data",
       "tldr": "Tata Electronics has confirmed in a statement to BleepingComputer that it was the target of a cyberattack that impacted parts of its IT infrastructure. [...]",
       "action": "Verify system logs for indicators of compromise and apply relevant patches.",
@@ -36,6 +44,21 @@
     }
   ],
   "vulns": [
+    {
+      "title": "CISA Warns Critical Lantronix EDS5000 Flaw Is Being Actively Exploited",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
     {
       "title": "Cordyceps CI/CD Flaws Expose 300+ GitHub Repositories to Supply-Chain Attacks",
       "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
@@ -80,21 +103,6 @@
       "rapid7_query_hint": "asset.name CONTAINS ''",
       "remediation_priority": "Medium standard patching",
       "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Cisco Unified CM Flaw Exploited After PoC Reveals File-Write Path to Root",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
     }
   ],
   "insurance": [
@@ -617,6 +625,31 @@
         "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Amadey and StealC Malware Network Disrupted, 27M Stolen Credentials Recovered",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "CISA Warns Critical Lantronix EDS5000 Flaw Is Being Actively Exploited",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
