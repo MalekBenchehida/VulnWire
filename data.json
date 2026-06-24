@@ -2,119 +2,122 @@
   "breaches": [
     {
       "title": "Amadey and StealC Malware Network Disrupted, 27M Stolen Credentials Recovered",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "International law enforcement, including Europol and Microsoft, disrupted the infrastructure of Amadey and StealC malware. This operation recovered over 27 million stolen credentials. These malware families are known for information theft and providing initial access to other cybercriminals.",
+      "action": "Organizations should review their security logs for any indicators of compromise related to Amadey or StealC malware, and enforce strong password policies, multi-factor authentication, and credential rotation, especially for any accounts that may have been exposed.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html",
+      "source_url": "https://thehackernews.com/2026/06/amadey-and-stealC-malware-network.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "FortiBleed Targeted FortiGate Firewalls in 110 Million-Credential Harvesting Operation",
+      "tldr": "The \"FortiBleed\" operation exploited vulnerabilities in FortiGate firewalls to harvest an estimated 110 million credentials. This indicates a large-scale credential theft campaign targeting network devices.",
+      "action": "Immediately patch all FortiGate firewall devices to the latest secure versions. Conduct a thorough audit of all user accounts and enforce password resets and multi-factor authentication for all users, especially those with access to FortiGate devices.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/fortibleed-targeted-fortigate-firewalls.html",
       "source": "The Hacker News"
     },
     {
       "title": "Tata Electronics confirms cyberattack as hackers leak data",
-      "tldr": "Tata Electronics has confirmed in a statement to BleepingComputer that it was the target of a cyberattack that impacted parts of its IT infrastructure. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Tata Electronics has confirmed a cyberattack impacted parts of its IT infrastructure, leading to data leakage. The extent and type of data compromised were not immediately specified.",
+      "action": "Organizations should review third-party vendor security protocols, especially for critical suppliers like Tata. Monitor for any potential exposure of sensitive information related to partners or supply chain. Implement robust data loss prevention (DLP) measures.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/tata-electronics-confirms-cyberattack-as-hackers-leak-data/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Healthtech firm Xolis suffers data breach impacting 1.4 million people",
-      "tldr": "Healthcare technology company Xsolis says that sensitive data belonging to nearly 1.4 million individuals was compromised in a phishing attack that gave attackers access to its network. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "BeyondTrust, LastPass Impacted by Klue-Salesforce Incident",
+      "tldr": "BeyondTrust and LastPass were impacted by an incident involving third-party vendor Klue and Salesforce. While specific details on the nature of the impact are not fully clear, it highlights supply chain risks.",
+      "action": "Review all third-party vendor access and data sharing agreements. Implement strict access controls, principle of least privilege, and regular security audits for all vendors, especially those handling sensitive data or providing critical services.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/healthtech-firm-xolis-suffers-data-breach-impacting-14-million-people/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/beyondtrust-lastpass-impacted-by-klue-salesforce-incident/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "Stealthy Mistic backdoor linked to ransomware access broker KongTuke",
-      "tldr": "A new backdoor dubbed Mistic has been observed in financially motivated attacks targeting organizations in the insurance, education, IT, and professional services sectors. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Malicious Edge extension abuses Native Messaging as bridge to malware",
+      "tldr": "A malicious Microsoft Edge extension, \"Edgecution,\" was used in a ransomware attack. It exploited Native Messaging to escape the browser sandbox and deploy a Python-based backdoor, leading to a ransomware payload.",
+      "action": "Audit all installed browser extensions for legitimacy. Implement strict browser extension policies and regularly review endpoint security logs for signs of unauthorized processes or backdoor activity. Block \"Edgecution\" extension.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/",
       "source": "BleepingComputer"
     },
     {
-      "title": "New 'Mistic' RAT Opens Door to Several Ransomware Families",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "New 'Mistic' Backdoor/RAT Linked to Ransomware Access Broker KongTuke",
+      "tldr": "A new backdoor, dubbed 'Mistic', has been observed in financially motivated attacks targeting organizations in insurance, education, IT, and professional services. This stealthy Remote Access Trojan (RAT) is associated with the KongTuke ransomware access broker and serves as an initial access vector for various ransomware families.",
+      "action": "Implement robust endpoint detection and response (EDR) solutions and monitor for indicators of compromise related to the 'Mistic' backdoor. Review network traffic for unusual outbound connections and ensure all systems are patched to prevent common exploitation vectors. Prioritize network segmentation for critical assets.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/new-mistic-rat-opens-door-to-several-ransomware-families/",
-      "source": "SecurityWeek"
+      "source_url": "https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/",
+      "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
       "title": "CISA Warns Critical Lantronix EDS5000 Flaw Is Being Actively Exploited",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "CISA has issued a warning regarding a critical vulnerability in Lantronix EDS5000 serial-to-ethernet servers that is under active exploitation. This flaw allows attackers to gain unauthorized access and potentially full control over affected devices.",
+      "action": "Immediately identify all Lantronix EDS5000 devices within the network. Apply the latest firmware updates and security patches released by Lantronix without delay. Isolate these devices from the internet and critical internal networks until patched.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "affected_versions": "Lantronix EDS5000 serial-to-ethernet servers (All versions prior to the latest security update)",
+      "how_to_determine_impact": "Identify all deployed Lantronix EDS5000 devices. Check device firmware versions against vendor security advisories to determine if they are running vulnerable software. Verify network exposure.",
+      "tanium_query_hint": "Get Computer Name from all Computer containing Lantronix AND Get Installed Applications with Publisher Lantronix AND check version. Alternatively, use Get Network Adapter Information to identify devices by MAC/IP and then query local management interfaces for version.",
+      "rapid7_query_hint": "Search for assets with \"Lantronix\" in installed software or operating system. Check vulnerability definitions for \"Lantronix EDS5000\" and relevant CVEs, if any are linked. Use Insight Agent query to check for specific service versions or file paths related to the vulnerability if known.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Cordyceps CI/CD Flaws Expose 300+ GitHub Repositories to Supply-Chain Attacks",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "title": "Mandiant reveals how Cisco SD-WAN zero-day attacks gained root access",
+      "tldr": "Mandiant has detailed how hackers exploited a zero-day vulnerability, CVE-2026-20245, in Cisco Catalyst SD-WAN. This attack allowed the creation of rogue root accounts on targeted devices, providing full control to attackers.",
+      "action": "Immediately apply security updates from Cisco for Catalyst SD-WAN to address CVE-2026-20245. Review all user accounts on Cisco SD-WAN devices for any unauthorized or rogue root accounts and revoke them. Monitor for suspicious activity on these devices.",
+      "cve_ids": [
+        "CVE-2026-20245"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/mandiant-reveals-how-cisco-sd-wan-zero-day-attacks-gained-root-access/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Cisco Catalyst SD-WAN (All versions prior to the patch for CVE-2026-20245)",
+      "how_to_determine_impact": "Check Cisco Catalyst SD-WAN devices for installed software versions. Refer to Cisco's official advisory for CVE-2026-20245 to identify specific vulnerable versions and indicators of compromise, such as rogue root accounts.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Cisco Catalyst SD-WAN' and check version. Use Get User Accounts to look for suspicious or newly created root-level accounts on affected systems.",
+      "rapid7_query_hint": "Search for assets with \"Cisco Catalyst SD-WAN\". Filter vulnerabilities by \"CVE-2026-20245\". Use Insight Agent queries to check for specific file hashes or user account anomalies identified by Cisco's advisory.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Dawn of the Apex Agentic Adversary",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "title": "Cisco Unified CM flaw CVE-2026-20230 now exploited in attacks",
+      "tldr": "A high-severity Server-Side Request Forgery (SSRF) vulnerability, CVE-2026-20230, in Cisco Unified Communications Manager (CM) Server is actively being exploited in attacks. This flaw could allow an unauthenticated, remote attacker to perform various actions depending on the target server.",
+      "action": "Apply all available security patches from Cisco for Unified Communications Manager to address CVE-2026-20230. Review network logs for unusual connection attempts to Cisco CM servers and look for indicators of compromise related to SSRF exploitation.",
+      "cve_ids": [
+        "CVE-2026-20230"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisco-unified-cm-sme-flaw-cve-2026-20230-now-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Cisco Unified Communications Manager Server (All versions prior to the patch for CVE-2026-20230)",
+      "how_to_determine_impact": "Identify all Cisco Unified CM Servers. Check the installed version against Cisco's official security advisory for CVE-2026-20230 to confirm vulnerability. Monitor network activity for unusual HTTP requests or connections originating from CM servers.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Cisco Unified Communications Manager' and check version. Use Get Open Ports and Get Running Processes to identify instances and potential anomalous activity.",
+      "rapid7_query_hint": "Search for assets with \"Cisco Unified Communications Manager\". Filter vulnerabilities by \"CVE-2026-20230\". Review network logs for indicators of SSRF exploitation.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "8.2 High"
     },
     {
-      "title": "DoJ Seizes Huione Cloud Account Tied to Cyber Scam Money Laundering",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA warns of max severity Ubiquiti flaws exploited in attacks",
+      "tldr": "CISA has issued a warning regarding multiple maximum severity vulnerabilities in Ubiquiti UniFi OS that are being actively exploited in attacks. These flaws could lead to full compromise of affected devices. The warning also reiterates active exploitation of Lantronix serial-to-ethernet servers.",
+      "action": "Immediately identify all Ubiquiti UniFi OS devices within your network and apply the latest security patches. Ensure that these devices are not exposed directly to the internet if possible, or are behind robust firewall rules. Conduct thorough security audits on affected systems.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/doj-seizes-huione-cloud-account-tied-to.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-max-severity-ubiquiti-flaws-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Ubiquiti UniFi OS (All versions prior to the latest security updates addressing these maximum severity flaws)",
+      "how_to_determine_impact": "Identify all Ubiquiti UniFi OS devices. Check the installed firmware/software versions against official Ubiquiti security advisories for maximum severity flaws. Look for signs of compromise as detailed in vendor alerts.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Ubiquiti UniFi OS' and check version. Use Get Network Adapter Configuration to identify Ubiquiti devices.",
+      "rapid7_query_hint": "Search for assets with \"Ubiquiti UniFi OS\". Scan these devices for known vulnerabilities. Review network logs and system logs for any unauthorized access or unusual activity on these devices.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -648,6 +651,85 @@
         "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
         "tanium_query_hint": "Get Running Processes matching service name",
         "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "FortiBleed Targeted FortiGate Firewalls in 110 Million-Credential Harvesting Operation",
+        "tldr": "The \"FortiBleed\" operation exploited vulnerabilities in FortiGate firewalls to harvest an estimated 110 million credentials. This indicates a large-scale credential theft campaign targeting network devices.",
+        "action": "Immediately patch all FortiGate firewall devices to the latest secure versions. Conduct a thorough audit of all user accounts and enforce password resets and multi-factor authentication for all users, especially those with access to FortiGate devices.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/fortibleed-targeted-fortigate-firewalls.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "BeyondTrust, LastPass Impacted by Klue-Salesforce Incident",
+        "tldr": "BeyondTrust and LastPass were impacted by an incident involving third-party vendor Klue and Salesforce. While specific details on the nature of the impact are not fully clear, it highlights supply chain risks.",
+        "action": "Review all third-party vendor access and data sharing agreements. Implement strict access controls, principle of least privilege, and regular security audits for all vendors, especially those handling sensitive data or providing critical services.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/beyondtrust-lastpass-impacted-by-klue-salesforce-incident/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Malicious Edge extension abuses Native Messaging as bridge to malware",
+        "tldr": "A malicious Microsoft Edge extension, \"Edgecution,\" was used in a ransomware attack. It exploited Native Messaging to escape the browser sandbox and deploy a Python-based backdoor, leading to a ransomware payload.",
+        "action": "Audit all installed browser extensions for legitimacy. Implement strict browser extension policies and regularly review endpoint security logs for signs of unauthorized processes or backdoor activity. Block \"Edgecution\" extension.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/malicious-edge-extension-abuses-native-messaging-as-bridge-to-malware/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Mandiant reveals how Cisco SD-WAN zero-day attacks gained root access",
+        "tldr": "Mandiant has detailed how hackers exploited a zero-day vulnerability, CVE-2026-20245, in Cisco Catalyst SD-WAN. This attack allowed the creation of rogue root accounts on targeted devices, providing full control to attackers.",
+        "action": "Immediately apply security updates from Cisco for Catalyst SD-WAN to address CVE-2026-20245. Review all user accounts on Cisco SD-WAN devices for any unauthorized or rogue root accounts and revoke them. Monitor for suspicious activity on these devices.",
+        "cve_ids": [
+          "CVE-2026-20245"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/mandiant-reveals-how-cisco-sd-wan-zero-day-attacks-gained-root-access/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Catalyst SD-WAN (All versions prior to the patch for CVE-2026-20245)",
+        "how_to_determine_impact": "Check Cisco Catalyst SD-WAN devices for installed software versions. Refer to Cisco's official advisory for CVE-2026-20245 to identify specific vulnerable versions and indicators of compromise, such as rogue root accounts.",
+        "tanium_query_hint": "Get Installed Applications with Name 'Cisco Catalyst SD-WAN' and check version. Use Get User Accounts to look for suspicious or newly created root-level accounts on affected systems.",
+        "rapid7_query_hint": "Search for assets with \"Cisco Catalyst SD-WAN\". Filter vulnerabilities by \"CVE-2026-20245\". Use Insight Agent queries to check for specific file hashes or user account anomalies identified by Cisco's advisory.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Cisco Unified CM flaw CVE-2026-20230 now exploited in attacks",
+        "tldr": "A high-severity Server-Side Request Forgery (SSRF) vulnerability, CVE-2026-20230, in Cisco Unified Communications Manager (CM) Server is actively being exploited in attacks. This flaw could allow an unauthenticated, remote attacker to perform various actions depending on the target server.",
+        "action": "Apply all available security patches from Cisco for Unified Communications Manager to address CVE-2026-20230. Review network logs for unusual connection attempts to Cisco CM servers and look for indicators of compromise related to SSRF exploitation.",
+        "cve_ids": [
+          "CVE-2026-20230"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisco-unified-cm-sme-flaw-cve-2026-20230-now-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Unified Communications Manager Server (All versions prior to the patch for CVE-2026-20230)",
+        "how_to_determine_impact": "Identify all Cisco Unified CM Servers. Check the installed version against Cisco's official security advisory for CVE-2026-20230 to confirm vulnerability. Monitor network activity for unusual HTTP requests or connections originating from CM servers.",
+        "tanium_query_hint": "Get Installed Applications with Name 'Cisco Unified Communications Manager' and check version. Use Get Open Ports and Get Running Processes to identify instances and potential anomalous activity.",
+        "rapid7_query_hint": "Search for assets with \"Cisco Unified Communications Manager\". Filter vulnerabilities by \"CVE-2026-20230\". Review network logs for indicators of SSRF exploitation.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "8.2 High",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA warns of max severity Ubiquiti flaws exploited in attacks",
+        "tldr": "CISA has issued a warning regarding multiple maximum severity vulnerabilities in Ubiquiti UniFi OS that are being actively exploited in attacks. These flaws could lead to full compromise of affected devices. The warning also reiterates active exploitation of Lantronix serial-to-ethernet servers.",
+        "action": "Immediately identify all Ubiquiti UniFi OS devices within your network and apply the latest security patches. Ensure that these devices are not exposed directly to the internet if possible, or are behind robust firewall rules. Conduct thorough security audits on affected systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-max-severity-ubiquiti-flaws-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Ubiquiti UniFi OS (All versions prior to the latest security updates addressing these maximum severity flaws)",
+        "how_to_determine_impact": "Identify all Ubiquiti UniFi OS devices. Check the installed firmware/software versions against official Ubiquiti security advisories for maximum severity flaws. Look for signs of compromise as detailed in vendor alerts.",
+        "tanium_query_hint": "Get Installed Applications with Name 'Ubiquiti UniFi OS' and check version. Use Get Network Adapter Configuration to identify Ubiquiti devices.",
+        "rapid7_query_hint": "Search for assets with \"Ubiquiti UniFi OS\". Scan these devices for known vulnerabilities. Review network logs and system logs for any unauthorized access or unusual activity on these devices.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
         "category": "vulns"
