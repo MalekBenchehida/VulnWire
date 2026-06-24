@@ -1,111 +1,110 @@
 {
   "breaches": [
     {
-      "title": "FortiBleed Targeted FortiGate Firewalls in 110 Million-Credential Harvesting Operation",
-      "tldr": "A credential harvesting operation, named FortiBleed, targeted FortiGate Firewalls, leading to the potential compromise of 110 million credentials. This indicates a significant data leak or unauthorized access, leveraging vulnerabilities to steal sensitive user data.",
-      "action": "Investigate FortiGate firewall logs for suspicious activity, credential access attempts, and ensure all FortiGate devices are patched and securely configured. Rotate credentials for users potentially impacted by this large-scale credential harvesting. Monitor network traffic for unusual outbound connections.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/fortibleed-targeted-fortigate-firewalls.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Tata Electronics confirms cyberattack as hackers leak data",
-      "tldr": "Tata Electronics has officially confirmed that it was the target of a cyberattack that impacted parts of its IT infrastructure. As a result of this attack, hackers have leaked data, confirming a successful data exfiltration incident impacting the company's information.",
-      "action": "Investigate the full scope of the data leak, identify all affected individuals and data types, and comply with all relevant data breach notification laws. Implement enhanced monitoring across the IT infrastructure and review incident response procedures to prevent future occurrences.",
+      "tldr": "Tata Electronics has confirmed in a statement to BleepingComputer that it was the target of a cyberattack that impacted parts of its IT infrastructure. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/tata-electronics-confirms-cyberattack-as-hackers-leak-data/",
       "source": "BleepingComputer"
     },
     {
       "title": "Healthtech firm Xolis suffers data breach impacting 1.4 million people",
-      "tldr": "Healthcare technology company Xsolis has reported a data breach that compromised sensitive data belonging to nearly 1.4 million individuals. The breach stemmed from a phishing attack that granted attackers unauthorized access to its network, leading to the exposure of personal health information.",
-      "action": "Assess the full extent of compromised data, notify all affected individuals, and provide credit monitoring or identity theft protection as appropriate. Enhance phishing training for all employees and implement stronger email security controls, including multi-factor authentication and advanced anti-phishing solutions.",
+      "tldr": "Healthcare technology company Xsolis says that sensitive data belonging to nearly 1.4 million individuals was compromised in a phishing attack that gave attackers access to its network. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/healthtech-firm-xolis-suffers-data-breach-impacting-14-million-people/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "LastPass confirms data breach in Klue supply chain attack",
-      "tldr": "LastPass has confirmed that customer data was accessed from its Salesforce environment following a supply chain attack involving Klue. Attackers stole LastPass's OAuth tokens, using them to gain unauthorized access and exfiltrate customer information from the third-party platform.",
-      "action": "LastPass users should immediately review their accounts for any suspicious activity, change their master passwords, and enable multi-factor authentication (MFA). Organizations should enforce strong MFA across all critical systems and rigorously review third-party access to their data, especially involving OAuth tokens.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/lastpass-confirms-data-breach-in-klue-supply-chain-attack/",
-      "source": "BleepingComputer"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Stealthy Mistic backdoor linked to ransomware access broker KongTuke",
+      "tldr": "A new backdoor dubbed Mistic has been observed in financially motivated attacks targeting organizations in the insurance, education, IT, and professional services sectors. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "New 'Mistic' RAT Opens Door to Several Ransomware Families",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/new-mistic-rat-opens-door-to-several-ransomware-families/",
+      "source": "SecurityWeek"
+    }
+  ],
   "vulns": [
     {
-      "title": "Cisco Unified CM flaw CVE-2026-20230 now exploited in attacks",
-      "tldr": "A high-severity Server-Side Request Forgery (SSRF) vulnerability, tracked as CVE-2026-20230, in Cisco Unified Communications Manager (Unified CM) Server is now being actively exploited in the wild. This flaw allows attackers to make unauthorized requests on behalf of the vulnerable server, potentially leading to information disclosure or further internal network access.",
-      "action": "Immediately apply all available patches and security updates for Cisco Unified Communications Manager Server to address CVE-2026-20230. Isolate affected systems, review logs for any suspicious outgoing connections or unusual internal network activity, and implement network segmentation to limit potential lateral movement by attackers.",
-      "cve_ids": [
-        "CVE-2026-20230"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisco-unified-cm-sme-flaw-cve-2026-20230-now-exploited-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager Server (Unified CM) versions affected by CVE-2026-20230. Refer to Cisco's official advisory for exact vulnerable versions and patch information.",
-      "how_to_determine_impact": "Check Cisco Unified CM installations for vulnerability by verifying the installed version against Cisco's security advisory for CVE-2026-20230. Additionally, look for unusual network connections originating from the Unified CM server, especially to internal systems or external unauthorized destinations, which could indicate exploitation.",
-      "tanium_query_hint": "Get Installed Applications[Name and Version] from all machines. Filter for 'Cisco Unified Communications Manager'. Cross-reference detected versions with the Cisco advisory for CVE-2026-20230. Further, monitor network connections from CM servers for anomalous traffic patterns.",
-      "rapid7_query_hint": "Scan assets for `vulnerability.id = 'CVE-2026-20230'` or `installed_software.name CONTAINS 'Cisco Unified Communications Manager'` and filter by affected versions as per Cisco's advisory. Use InsightIDR to monitor network traffic for suspicious connections originating from these devices.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.2 High"
-    },
-    {
-      "title": "ShapedPlugin WordPress Pro Plugins Backdoored in Supply Chain Attack",
-      "tldr": "Several premium WordPress plugins developed by ShapedPlugin have been compromised through a supply chain attack, resulting in backdoored code being distributed. This critical compromise grants attackers potential full control over websites utilizing these affected plugins, posing a severe risk to web infrastructure.",
-      "action": "Immediately audit all WordPress installations for the presence of any ShapedPlugin Pro plugins. If found, remove them or update to verified clean versions obtained only from trusted, official sources. Thoroughly scan affected WordPress sites for web shells, unexpected files, or other malicious code that may have been implanted.",
+      "title": "Cordyceps CI/CD Flaws Expose 300+ GitHub Repositories to Supply-Chain Attacks",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/shapedplugin-wordpress-pro-plugins.html",
+      "source_url": "https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific premium WordPress plugins developed by ShapedPlugin that were backdoored. Consult official ShapedPlugin advisories or security bulletins for exact affected versions and mitigation steps.",
-      "how_to_determine_impact": "Check your WordPress installed plugins list for any plugins from 'ShapedPlugin' (especially 'Pro' versions). Review the integrity of plugin files by comparing them against known clean versions, looking for suspicious code injections or unexpected modifications.",
-      "tanium_query_hint": "On machines hosting WordPress, use 'Get Installed Applications' to identify WordPress installations. Then, use 'Get File Hash' or 'Get File Content' on files within `wp-content/plugins/shapedplugin-folder` to identify known backdoor signatures or discrepancies.",
-      "rapid7_query_hint": "Perform authenticated scans against web servers hosting WordPress to identify file integrity changes or known malicious patterns within the `wp-content/plugins` directory, specifically targeting directories associated with ShapedPlugin products.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "FFmpeg PixelSmash Flaw Allows RCE on Video Players, Media Servers, NAS Appliances",
-      "tldr": "A newly identified vulnerability, dubbed 'PixelSmash,' in the FFmpeg multimedia framework allows for Remote Code Execution (RCE). This critical flaw affects a wide range of devices, including video players, media servers, and Network Attached Storage (NAS) appliances that process video files, enabling attackers to execute arbitrary code.",
-      "action": "Immediately update all systems, applications, and devices that utilize FFmpeg to the latest patched version available. Monitor systems processing media for any unusual activity or unauthorized code execution. Consider isolating media processing environments to minimize potential attack surface.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/ffmpeg-pixelsmash-flaw-allows-rce-on-video-players-media-servers-nas-appliances/",
-      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "FFmpeg versions affected by the 'PixelSmash' flaw. All applications, operating systems, and hardware devices (e.g., video players, media servers, NAS) that bundle or utilize vulnerable FFmpeg libraries are at risk. Consult FFmpeg project advisories for specific version ranges.",
-      "how_to_determine_impact": "Identify all applications and systems within your environment that utilize FFmpeg for multimedia processing. Check the version of the FFmpeg library being used (e.g., `ffmpeg -version`) and compare it against the official FFmpeg security advisories to determine vulnerability.",
-      "tanium_query_hint": "Use 'Get Installed Applications[Name and Version]' from all machines to identify instances of 'FFmpeg'. Additionally, 'Get Running Processes[Name, CommandLine]' can help identify applications that may be leveraging FFmpeg libraries. Cross-reference detected versions with known vulnerable ranges.",
-      "rapid7_query_hint": "Scan assets for software using FFmpeg libraries. Search `installed_software.name CONTAINS 'FFmpeg'` and verify detected versions against known vulnerable ranges. Prioritize devices identified as media servers, video players, or NAS appliances.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "New macOS ClickFix attack silently mounts DMGs to push infostealer",
-      "tldr": "A novel macOS attack campaign, named 'ClickFix,' is actively exploiting Terminal commands to silently download, mount, and launch malicious Disk Image (DMG) files. This technique allows the attackers to deploy infostealing malware without overt user interaction, posing a significant threat to macOS users.",
-      "action": "Implement robust Endpoint Detection and Response (EDR) solutions on all macOS devices to detect and block unusual Terminal command executions or silent DMG mounting activities. Educate users on the dangers of unsolicited files and enforce strict application whitelisting policies to prevent unauthorized software execution.",
+      "title": "Dawn of the Apex Agentic Adversary",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-macos-clickfix-attack-silently-mounts-dmgs-to-push-infostealer/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "macOS devices targeted by the ClickFix campaign that can be coerced into silently mounting malicious DMGs. Specific macOS versions or configurations that are more vulnerable are not explicitly detailed; however, users of any macOS version should be vigilant.",
-      "how_to_determine_impact": "Monitor macOS endpoint logs for unexpected `hdiutil` (disk image utility) commands, particularly those executed silently or initiated by suspicious processes. Check for the presence of known infostealer malware families or unusual files in user download directories or temporary folders.",
-      "tanium_query_hint": "Use 'Get Running Processes[Name, CommandLine]' from all macOS machines to identify suspicious `hdiutil` commands or other unexpected process activity. Additionally, use 'Get File Exists[path]' for known infostealer file paths or indicators of compromise.",
-      "rapid7_query_hint": "Utilize InsightAgent queries on macOS assets to detect unusual process execution patterns or file modifications related to DMG mounting and infostealer installation. Look for `process.command_line CONTAINS 'hdiutil attach'` without corresponding user interaction logs.",
+      "source_url": "https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "DoJ Seizes Huione Cloud Account Tied to Cyber Scam Money Laundering",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/doj-seizes-huione-cloud-account-tied-to.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Cisco Unified CM Flaw Exploited After PoC Reveals File-Write Path to Root",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.0 High"
+      "cvss_score": "7.8 High"
     }
   ],
   "insurance": [
     {
-      "title": "Trump Order Sets 2030 Deadline for Federal Post-Quantum Crypto Migration",
-      "tldr": "A new executive order issued by President Trump establishes a mandatory deadline of 2030 for federal agencies to migrate their systems and data to post-quantum cryptography. This directive underscores the U.S. government's commitment to preparing for future cryptographic threats posed by quantum computing capabilities.",
-      "action": "Organizations, particularly those engaging with federal contracts or handling sensitive government data, should begin assessing their current cryptographic infrastructure. Develop a strategic roadmap for transitioning to post-quantum secure algorithms and technologies to meet anticipated regulatory and compliance requirements by 2030.",
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/trump-order-sets-2030-deadline-for.html",
-      "source": "The Hacker News"
+      "source_url": "",
+      "source": "System"
     }
   ],
   "history": {
@@ -517,6 +516,108 @@
         "source_url": "https://thehackernews.com/2026/06/trump-order-sets-2030-deadline-for.html",
         "source": "The Hacker News",
         "category": "insurance"
+      }
+    ],
+    "2026-06-24": [
+      {
+        "title": "Tata Electronics confirms cyberattack as hackers leak data",
+        "tldr": "Tata Electronics has confirmed in a statement to BleepingComputer that it was the target of a cyberattack that impacted parts of its IT infrastructure. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/tata-electronics-confirms-cyberattack-as-hackers-leak-data/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Healthtech firm Xolis suffers data breach impacting 1.4 million people",
+        "tldr": "Healthcare technology company Xsolis says that sensitive data belonging to nearly 1.4 million individuals was compromised in a phishing attack that gave attackers access to its network. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/healthtech-firm-xolis-suffers-data-breach-impacting-14-million-people/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Stealthy Mistic backdoor linked to ransomware access broker KongTuke",
+        "tldr": "A new backdoor dubbed Mistic has been observed in financially motivated attacks targeting organizations in the insurance, education, IT, and professional services sectors. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "New 'Mistic' RAT Opens Door to Several Ransomware Families",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/new-mistic-rat-opens-door-to-several-ransomware-families/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Cordyceps CI/CD Flaws Expose 300+ GitHub Repositories to Supply-Chain Attacks",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/cordyceps-cicd-flaws-expose-300-github.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Dawn of the Apex Agentic Adversary",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/dawn-of-apex-agentic-adversary.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "DoJ Seizes Huione Cloud Account Tied to Cyber Scam Money Laundering",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/doj-seizes-huione-cloud-account-tied-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Cisco Unified CM Flaw Exploited After PoC Reveals File-Write Path to Root",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/cisco-unified-cm-flaw-exploited-after.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
+        "category": "vulns"
       }
     ]
   }
