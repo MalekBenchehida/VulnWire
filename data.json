@@ -2,103 +2,103 @@
   "breaches": [
     {
       "title": "Amadey and StealC Malware Network Disrupted, 27M Stolen Credentials Recovered",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Law enforcement has successfully disrupted the Amadey and StealC malware networks, leading to the recovery of 27 million stolen credentials. This operation targets significant sources of credential theft.",
+      "action": "Immediately review logs and conduct an audit for any signs of compromise related to Amadey or StealC malware. Enforce mandatory password resets for potentially affected users and implement multi-factor authentication widely.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/amadey-and-stealc-malware-network.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Cal Water Says No OT Systems Breached in Iranian Handala Cyberattack",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Poland busts SIM-swapping gang tied to millions in crypto theft",
+      "tldr": "Polish authorities have arrested four members of an organized cybercrime group accused of breaching telecommunications partners and hijacking email accounts to carry out SIM-swapping attacks, resulting in millions of dollars in cryptocurrency theft.",
+      "action": "Educate users on SIM-swapping risks, recommend strong authentication methods like hardware security keys, and implement multi-factor authentication for critical accounts, especially those related to cryptocurrency holdings.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/cal-water-finds-no-evidence-of-ot-activity-after-hackers-claimed-they-could-disrupt-water-supply/",
-      "source": "SecurityWeek"
-    }
-  ],
-  "ransomware": [
+      "source_url": "https://www.bleepingcomputer.com/news/security/poland-busts-sim-swapping-gang-tied-to-millions-in-crypto-theft/",
+      "source": "BleepingComputer"
+    },
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "Order-tracking app Shop abused to push callback phishing attacks",
+      "tldr": "Threat actors are increasingly abusing Shopify's 'Shop' order-tracking app by adding fake purchase receipts into users' order histories to trick them into providing sensitive data or installing remote access software via callback phishing.",
+      "action": "Warn users about sophisticated phishing attempts leveraging legitimate services like the Shop app. Advise vigilance against unsolicited calls or requests for sensitive information, even if appearing to originate from trusted platforms. Ensure strong email filtering and user awareness training are up-to-date.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://www.bleepingcomputer.com/news/security/order-tracking-app-shop-abused-to-push-callback-phishing-attacks/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Bluekit phishing kit adopts browser-in-the-middle for login theft",
+      "tldr": "The Bluekit phishing-as-a-service platform continues to evolve, now incorporating browser-in-the-middle capabilities, significantly enhancing its effectiveness in stealing login credentials. Nearly 70 new hostnames associated with this kit have been identified recently.",
+      "action": "Implement advanced phishing detection and user education against browser-in-the-middle attacks. Enforce strong multi-factor authentication (MFA) that is resistant to man-in-the-middle attacks (e.g., FIDO2/WebAuthn) for all critical accounts.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/bluekit-phishing-kit-adopts-browser-in-the-middle-for-login-theft/",
+      "source": "BleepingComputer"
     }
   ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "Chrome Ad Blocker with 10M+ Installs Found with Dormant Script Injection Capability",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/chrome-ad-blocker-with-10m-installs.html",
+      "title": "Cisco Catalyst SD-WAN Zero-Day CVE-2026-20245 Exploited to Gain Root Access",
+      "tldr": "A zero-day vulnerability, CVE-2026-20245, in Cisco Catalyst SD-WAN has been actively exploited for months to gain root access to affected devices, highlighting a severe pre-patch exploitation window.",
+      "action": "Immediately apply the available patch from Cisco to all Catalyst SD-WAN devices to mitigate CVE-2026-20245. Conduct a forensic analysis for potential compromise if devices were unpatched during the documented exploitation period.",
+      "cve_ids": [
+        "CVE-2026-20245"
+      ],
+      "source_url": "https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "Cisco Catalyst SD-WAN (specific vulnerable versions need to be confirmed from official Cisco advisory, prior to patch release)",
+      "how_to_determine_impact": "Verify current software versions of all Cisco Catalyst SD-WAN devices against Cisco's security advisory for CVE-2026-20245. Review device logs for signs of unauthorized root access or anomalous activity, especially within the reported exploitation timeframe.",
+      "tanium_query_hint": "Get Cisco Product Version contains 'Cisco Catalyst SD-WAN' and Get Installed Version < [patched_version] OR Get Running Processes matches 'root' and Get Process Command Line for anomalies",
+      "rapid7_query_hint": "Search InsightVM for vulnerability checks on Cisco Catalyst SD-WAN devices related to CVE-2026-20245. In InsightIDR, query logs for unusual user logins, process execution as root, or configuration changes on SD-WAN assets.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "ThreatsDay Bulletin: Smart TV Proxyware, 24-Year curl Bug, AI Crime Forums + 13 More Stories",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA Warns Critical Lantronix EDS5000 Flaw Is Being Actively Exploited",
+      "tldr": "CISA has issued a warning about a critical vulnerability in Lantronix EDS5000 and serial-to-IP converter devices that is under active exploitation in attacks, specifically affecting operational technology (OT) environments.",
+      "action": "Immediately apply patches or mitigation steps provided by Lantronix. Isolate affected Lantronix EDS5000 and serial-to-IP converter devices from critical OT/IT networks if patching is not immediately feasible.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/threatsday-bulletin-smart-tv-proxyware.html",
+      "source_url": "https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html",
       "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Lantronix EDS5000 devices and serial-to-IP converters (specific firmware versions need to be confirmed from vendor/CISA advisory)",
+      "how_to_determine_impact": "Identify all Lantronix EDS5000 and serial-to-IP converter devices in the environment. Check firmware versions against vendor advisories and CISA alerts. Monitor network traffic and device logs for suspicious activity.",
+      "tanium_query_hint": "Get Firmware Version for 'Lantronix EDS5000' OR 'Lantronix Serial-to-IP' AND Get Network Connections from these devices for unusual egress",
+      "rapid7_query_hint": "Scan OT/IoT networks for Lantronix EDS5000/serial-to-IP devices; look for vulnerability checks related to these devices in scan results. Monitor network traffic from these devices for anomalies using InsightIDR.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical"
+    },
+    {
+      "title": "GitLab Patches Code Execution, Information Disclosure Vulnerabilities",
+      "tldr": "GitLab has released critical patches addressing multiple vulnerabilities, including remote code execution (RCE) and information disclosure flaws, significantly impacting the security of its platform.",
+      "action": "Immediately update all GitLab instances to the latest patched version to mitigate remote code execution and information disclosure vulnerabilities. Review audit logs for signs of compromise prior to patching.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/gitlab-patches-code-execution-information-disclosure-vulnerabilities/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "affected_versions": "GitLab (specific vulnerable versions need to be confirmed from GitLab security advisories, prior to patch release)",
+      "how_to_determine_impact": "Check all deployed GitLab instance versions against the vendor's latest security advisories. Look for indications of unauthorized access or data exfiltration in system and application logs.",
+      "tanium_query_hint": "Get Installed Applications contains 'GitLab' and Get Installed Version < [patched_version]",
+      "rapid7_query_hint": "Search for 'GitLab' in installed software inventory; look for vulnerability checks related to GitLab in scan results from InsightVM. Audit GitLab access logs for unusual activity via InsightIDR.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
+      "cvss_score": "8.8 High"
     },
     {
-      "title": "Surviving the Mythos Era: Richard Bejtlich on the Case for NDR",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Chrome 149 Update Resolves 18 Severe Vulnerabilities",
+      "tldr": "Google has released Chrome version 149, which addresses 18 severe vulnerabilities. This update reinforces the critical need for prompt browser updates to protect against exploitation.",
+      "action": "Immediately update all Google Chrome browsers to version 149 or later across all endpoints and servers to mitigate the identified severe vulnerabilities.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/surviving-mythos-era-richard-bejtlich.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/chrome-149-update-resolves-18-severe-vulnerabilities/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "New Gaslight macOS Malware Uses Prompt Injection to Disrupt AI-Assisted Analysis",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/new-gaslight-macos-malware-uses-prompt.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Google Chrome versions prior to 149",
+      "how_to_determine_impact": "Check the version of Google Chrome installed on all user workstations and servers within the environment. Any version below 149 is considered vulnerable.",
+      "tanium_query_hint": "Get Installed Applications contains 'Google Chrome' and Get Installed Version < 149",
+      "rapid7_query_hint": "Search for assets with Google Chrome installed and check reported versions; look for vulnerability checks related to Chrome in scan results from InsightVM.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.5 High"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -798,6 +798,99 @@
         "source_url": "https://www.securityweek.com/cal-water-finds-no-evidence-of-ot-activity-after-hackers-claimed-they-could-disrupt-water-supply/",
         "source": "SecurityWeek",
         "category": "insurance"
+      },
+      {
+        "title": "Poland busts SIM-swapping gang tied to millions in crypto theft",
+        "tldr": "Polish authorities have arrested four members of an organized cybercrime group accused of breaching telecommunications partners and hijacking email accounts to carry out SIM-swapping attacks, resulting in millions of dollars in cryptocurrency theft.",
+        "action": "Educate users on SIM-swapping risks, recommend strong authentication methods like hardware security keys, and implement multi-factor authentication for critical accounts, especially those related to cryptocurrency holdings.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/poland-busts-sim-swapping-gang-tied-to-millions-in-crypto-theft/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Order-tracking app Shop abused to push callback phishing attacks",
+        "tldr": "Threat actors are increasingly abusing Shopify's 'Shop' order-tracking app by adding fake purchase receipts into users' order histories to trick them into providing sensitive data or installing remote access software via callback phishing.",
+        "action": "Warn users about sophisticated phishing attempts leveraging legitimate services like the Shop app. Advise vigilance against unsolicited calls or requests for sensitive information, even if appearing to originate from trusted platforms. Ensure strong email filtering and user awareness training are up-to-date.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/order-tracking-app-shop-abused-to-push-callback-phishing-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Bluekit phishing kit adopts browser-in-the-middle for login theft",
+        "tldr": "The Bluekit phishing-as-a-service platform continues to evolve, now incorporating browser-in-the-middle capabilities, significantly enhancing its effectiveness in stealing login credentials. Nearly 70 new hostnames associated with this kit have been identified recently.",
+        "action": "Implement advanced phishing detection and user education against browser-in-the-middle attacks. Enforce strong multi-factor authentication (MFA) that is resistant to man-in-the-middle attacks (e.g., FIDO2/WebAuthn) for all critical accounts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/bluekit-phishing-kit-adopts-browser-in-the-middle-for-login-theft/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Cisco Catalyst SD-WAN Zero-Day CVE-2026-20245 Exploited to Gain Root Access",
+        "tldr": "A zero-day vulnerability, CVE-2026-20245, in Cisco Catalyst SD-WAN has been actively exploited for months to gain root access to affected devices, highlighting a severe pre-patch exploitation window.",
+        "action": "Immediately apply the available patch from Cisco to all Catalyst SD-WAN devices to mitigate CVE-2026-20245. Conduct a forensic analysis for potential compromise if devices were unpatched during the documented exploitation period.",
+        "cve_ids": [
+          "CVE-2026-20245"
+        ],
+        "source_url": "https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Catalyst SD-WAN (specific vulnerable versions need to be confirmed from official Cisco advisory, prior to patch release)",
+        "how_to_determine_impact": "Verify current software versions of all Cisco Catalyst SD-WAN devices against Cisco's security advisory for CVE-2026-20245. Review device logs for signs of unauthorized root access or anomalous activity, especially within the reported exploitation timeframe.",
+        "tanium_query_hint": "Get Cisco Product Version contains 'Cisco Catalyst SD-WAN' and Get Installed Version < [patched_version] OR Get Running Processes matches 'root' and Get Process Command Line for anomalies",
+        "rapid7_query_hint": "Search InsightVM for vulnerability checks on Cisco Catalyst SD-WAN devices related to CVE-2026-20245. In InsightIDR, query logs for unusual user logins, process execution as root, or configuration changes on SD-WAN assets.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA Warns Critical Lantronix EDS5000 Flaw Is Being Actively Exploited",
+        "tldr": "CISA has issued a warning about a critical vulnerability in Lantronix EDS5000 and serial-to-IP converter devices that is under active exploitation in attacks, specifically affecting operational technology (OT) environments.",
+        "action": "Immediately apply patches or mitigation steps provided by Lantronix. Isolate affected Lantronix EDS5000 and serial-to-IP converter devices from critical OT/IT networks if patching is not immediately feasible.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/cisa-warns-critical-lantronix-eds5000.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Lantronix EDS5000 devices and serial-to-IP converters (specific firmware versions need to be confirmed from vendor/CISA advisory)",
+        "how_to_determine_impact": "Identify all Lantronix EDS5000 and serial-to-IP converter devices in the environment. Check firmware versions against vendor advisories and CISA alerts. Monitor network traffic and device logs for suspicious activity.",
+        "tanium_query_hint": "Get Firmware Version for 'Lantronix EDS5000' OR 'Lantronix Serial-to-IP' AND Get Network Connections from these devices for unusual egress",
+        "rapid7_query_hint": "Scan OT/IoT networks for Lantronix EDS5000/serial-to-IP devices; look for vulnerability checks related to these devices in scan results. Monitor network traffic from these devices for anomalies using InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "GitLab Patches Code Execution, Information Disclosure Vulnerabilities",
+        "tldr": "GitLab has released critical patches addressing multiple vulnerabilities, including remote code execution (RCE) and information disclosure flaws, significantly impacting the security of its platform.",
+        "action": "Immediately update all GitLab instances to the latest patched version to mitigate remote code execution and information disclosure vulnerabilities. Review audit logs for signs of compromise prior to patching.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/gitlab-patches-code-execution-information-disclosure-vulnerabilities/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "GitLab (specific vulnerable versions need to be confirmed from GitLab security advisories, prior to patch release)",
+        "how_to_determine_impact": "Check all deployed GitLab instance versions against the vendor's latest security advisories. Look for indications of unauthorized access or data exfiltration in system and application logs.",
+        "tanium_query_hint": "Get Installed Applications contains 'GitLab' and Get Installed Version < [patched_version]",
+        "rapid7_query_hint": "Search for 'GitLab' in installed software inventory; look for vulnerability checks related to GitLab in scan results from InsightVM. Audit GitLab access logs for unusual activity via InsightIDR.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Chrome 149 Update Resolves 18 Severe Vulnerabilities",
+        "tldr": "Google has released Chrome version 149, which addresses 18 severe vulnerabilities. This update reinforces the critical need for prompt browser updates to protect against exploitation.",
+        "action": "Immediately update all Google Chrome browsers to version 149 or later across all endpoints and servers to mitigate the identified severe vulnerabilities.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/chrome-149-update-resolves-18-severe-vulnerabilities/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Google Chrome versions prior to 149",
+        "how_to_determine_impact": "Check the version of Google Chrome installed on all user workstations and servers within the environment. Any version below 149 is considered vulnerable.",
+        "tanium_query_hint": "Get Installed Applications contains 'Google Chrome' and Get Installed Version < 149",
+        "rapid7_query_hint": "Search for assets with Google Chrome installed and check reported versions; look for vulnerability checks related to Chrome in scan results from InsightVM.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.5 High",
+        "category": "vulns"
       }
     ]
   }
