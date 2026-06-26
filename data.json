@@ -1,102 +1,112 @@
 {
   "breaches": [
     {
-      "title": "Poland busts SIM-swapping gang tied to millions in crypto theft",
-      "tldr": "A cybercrime group in Poland was arrested for breaching telecom partners and hijacking email accounts to perform SIM-swapping attacks. These attacks resulted in the theft of millions in cryptocurrency.",
-      "action": "Review and implement multi-factor authentication (MFA) on all critical accounts, especially those linked to cryptocurrency or financial services. Educate users about SIM-swapping risks and encourage strong authentication methods. Consider hardware security keys where feasible.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/poland-busts-sim-swapping-gang-tied-to-millions-in-crypto-theft/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "More Klue Breach Victims Identified as Hackers Get Hacked",
-      "tldr": "Additional victims of the Klue data breach have been identified. The incident involved threat actors who themselves were reportedly compromised, leading to further exposure of sensitive information related to the initial breach.",
-      "action": "If your organization uses Klue, immediately investigate for any indicators of compromise related to this incident. Ensure all credentials and access tokens associated with Klue services are rotated, and enforce strict access controls. Monitor for any unauthorized access attempts.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/more-klue-breach-victims-identified-as-hackers-get-hacked/",
       "source": "SecurityWeek"
     },
     {
-      "title": "Tata Electronics Breach",
-      "tldr": "Tata Electronics has experienced a data breach. Details regarding the scope and nature of the compromised data are not fully disclosed, but the incident highlights ongoing risks to supply chain partners.",
-      "action": "Organizations that have data sharing agreements or partnerships with Tata Electronics should initiate an internal review to assess potential exposure. Monitor for any unusual activity or compromised credentials that might stem from this incident.",
+      "title": "In Other News: Chinese Mythos-Like AI, Tata Electronics Breach, Snyk Layoffs",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/in-other-news-chinese-mythos-like-ai-tata-electronics-breach-snyk-layoffs/",
       "source": "SecurityWeek"
     },
     {
       "title": "$3 Million Reportedly Stolen in Polymarket Hack",
-      "tldr": "The prediction market platform Polymarket has reportedly suffered a hack, resulting in the theft of approximately $3 million. The nature of the exploit and the specific assets compromised are under investigation.",
-      "action": "Users of Polymarket should review their account activity for any unauthorized transactions and consider changing passwords. Organizations involved in cryptocurrency or prediction markets should enhance their security protocols and incident response plans.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/3-million-reportedly-stolen-in-polymarket-hack/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
+      "title": "New SharkLoader Malware Deploys Cobalt Strike in StrikeShark Cyberattacks",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Chinese-Speaking APT Deploys New TinyRCT Backdoor in Southeast Asia Campaign",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/chinese-speaking-apt-deploys-new.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
       "title": "New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries",
-      "tldr": "A new \"pedit COW\" vulnerability in the Linux kernel allows local attackers to gain root privileges. The exploit works by poisoning cached binaries using a copy-on-write mechanism, potentially leading to full system compromise.",
-      "action": "Identify and patch all affected Linux systems immediately. Prioritize systems accessible by untrusted local users or those running critical services. Monitor for unusual process activity or privilege escalation attempts.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Linux kernel, specific versions not detailed. Assume broad impact across recent kernels until patch information is released.",
-      "how_to_determine_impact": "Inspect kernel versions (uname -r). Look for security advisories from your Linux distribution vendors. Monitor system logs for repeated failed privilege escalation attempts or unusual system calls related to memory/cache manipulation.",
-      "tanium_query_hint": "Get Kernel Version from all machines. Search for 'pedit COW' in 'Get Installed Patches'. Monitor 'Process Events' for suspicious activity from unprivileged users gaining root access.",
-      "rapid7_query_hint": "Run a credentialed scan to identify Linux assets and their kernel versions. Monitor InsightIDR for privilege escalation alerts or unusual root process executions. Search vulnerability checks related to 'Linux kernel' or 'copy-on-write' exploits.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.8 High"
     },
     {
       "title": "Amazon Q Developer Flaw Could Let Malicious Repos Run Code via MCP Configs",
-      "tldr": "A critical vulnerability in Amazon Q Developer could allow malicious code execution. Threat actors could leverage specially crafted repository configurations (MCP Configs) to run arbitrary code, potentially leading to cloud credential theft or broader compromise within the AWS environment.",
-      "action": "Review all Amazon Q Developer configurations and linked repositories for any signs of compromise or malicious configuration. Implement strict access controls for repository management and Amazon Q Developer permissions. Monitor AWS activity logs for suspicious API calls or resource modifications.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Amazon Q Developer services. Specific service configurations or versions within AWS are not yet detailed. Assume default configurations are potentially vulnerable until official guidance is provided.",
-      "how_to_determine_impact": "Audit Amazon Q Developer linked repositories for untrusted or suspicious entries. Review AWS CloudTrail logs for unusual activity related to Amazon Q Developer, especially API calls involving code execution, credential access, or resource provisioning.",
-      "tanium_query_hint": "This is a cloud-native vulnerability; Tanium's endpoint visibility may not directly apply. Focus on monitoring AWS activity logs via CloudTrail or integrate with cloud security posture management tools.",
-      "rapid7_query_hint": "Use InsightCloudSec to audit AWS configurations, specifically Amazon Q Developer and related IAM roles/permissions. Look for misconfigurations in repository access or unauthorized code execution within AWS environments. Monitor InsightIDR for suspicious AWS API calls.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 High"
-    },
-    {
-      "title": "CISA Adds Exploited PTC Windchill RCE Flaw to KEV as Web Shell Attacks Continue",
-      "tldr": "CISA has added a critical Remote Code Execution (RCE) vulnerability in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog. The flaw is actively being exploited in the wild, primarily through the deployment of web shells on affected systems.",
-      "action": "Immediately identify all PTC Windchill deployments. Apply vendor-provided patches without delay. After patching, conduct a thorough forensic analysis for web shells or other indicators of compromise, and remove any persistent threats.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "PTC Windchill. Specific vulnerable versions will be detailed in official PTC security advisories. Consult vendor documentation for exact versions requiring patches.",
-      "how_to_determine_impact": "Check installed versions of PTC Windchill. Look for unusual files in web server directories, especially .jsp, .aspx, or other web shell related extensions, that may indicate compromise. Review web server access logs for suspicious requests or uploads.",
-      "tanium_query_hint": "Get Installed Applications containing 'PTC Windchill'. Use 'Get File Hash' or 'Get File Content' to scan web server directories for known web shell signatures. Use 'Get Running Processes' to identify unusual processes spawned by the web server.",
-      "rapid7_query_hint": "Run a credentialed scan targeting PTC Windchill servers to detect vulnerable versions and installed patches. Search InsightIDR for alerts related to web shell deployment, unauthorized file modifications, or unusual network connections from Windchill servers. Use InsightAgent to inspect relevant directories for IOCs.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "New DirtyClone Linux Kernel Flaw Lets Local Users Gain Root via Cloned Packets",
-      "tldr": "A new Linux kernel vulnerability, dubbed \"DirtyClone,\" allows local users to achieve root privileges. The flaw exploits a mechanism related to cloned packets, enabling attackers to elevate their access and gain full control over the affected system.",
-      "action": "Prioritize patching all Linux systems with the latest kernel updates. Restrict local user access and implement least privilege principles. Monitor for suspicious activity from unprivileged accounts, especially attempts to manipulate network packet handling or memory.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Linux kernel, specific versions not detailed. Assume broad impact across recent kernels until patch information is released.",
-      "how_to_determine_impact": "Inspect kernel versions (uname -r). Look for security advisories from your Linux distribution vendors. Monitor system logs for repeated failed privilege escalation attempts or unusual network-related system calls from unprivileged users.",
-      "tanium_query_hint": "Get Kernel Version from all machines. Search for 'DirtyClone' in 'Get Installed Patches'. Monitor 'Process Events' and 'Network Connections' for suspicious activity from unprivileged users, especially related to raw socket usage or unusual network packet manipulation.",
-      "rapid7_query_hint": "Run a credentialed scan to identify Linux assets and their kernel versions. Monitor InsightIDR for privilege escalation alerts or unusual network activity associated with local user accounts. Search vulnerability checks related to 'Linux kernel' or 'packet cloning' exploits.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -990,6 +1000,38 @@
         "rapid7_query_hint": "Run a credentialed scan to identify Linux assets and their kernel versions. Monitor InsightIDR for privilege escalation alerts or unusual network activity associated with local user accounts. Search vulnerability checks related to 'Linux kernel' or 'packet cloning' exploits.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "New SharkLoader Malware Deploys Cobalt Strike in StrikeShark Cyberattacks",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/new-sharkloader-malware-deploys-cobalt.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Chinese-Speaking APT Deploys New TinyRCT Backdoor in Southeast Asia Campaign",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/chinese-speaking-apt-deploys-new.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
