@@ -1,99 +1,99 @@
 {
   "breaches": [
     {
+      "title": "FBI: Russian hackers now target Signal backup recovery keys",
+      "tldr": "The FBI and CISA warn that Russian intelligence services are expanding a phishing campaign, now specifically targeting Signal Backup Recovery Keys. Successful attacks allow adversaries to access victims' entire historical encrypted message archives, posing a severe privacy and intelligence collection threat.",
+      "action": "Advise all personnel, especially those handling sensitive information, to be highly vigilant against sophisticated phishing attempts targeting messaging apps. Strongly recommend reviewing Signal's backup settings and considering disabling cloud backups if not strictly necessary. Never share recovery keys.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Polymarket customers lose $3 million in supply-chain attack",
-      "tldr": "Polymarket customers lost an estimated $3 million due to a supply-chain attack where hackers injected a malicious script into the platform's frontend following a breach at a third-party vendor. Polymarket has pledged to fully reimburse affected customers.",
-      "action": "Organizations should enhance third-party risk management and implement robust supply chain security measures, including continuous monitoring of vendor security posture and strict Content Security Policies (CSP) for web applications. Users of similar platforms should be vigilant for suspicious activity.",
+      "tldr": "Polymarket reported an estimated $3 million loss for its customers due to a supply-chain attack where hackers injected a malicious script into the platform's frontend following a breach at a third-party vendor, enabling the theft of funds.",
+      "action": "Conduct an immediate review of all third-party vendor integrations and their security posture, particularly for those contributing to web application frontends. Implement and enforce Content Security Policy (CSP) and Subresource Integrity (SRI) to prevent unauthorized script injection and mitigate supply-chain risks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/",
       "source": "BleepingComputer"
     },
     {
+      "title": "Russian APT Deploys 'StockStay' Backdoor Against Ukrainian Targets",
+      "tldr": "A Russian Advanced Persistent Threat (APT) group has deployed a new 'StockStay' backdoor in targeted attacks against Ukrainian entities. This backdoor provides persistent access and facilitates data exfiltration, indicating a state-sponsored espionage campaign.",
+      "action": "Enhance endpoint detection and response (EDR) and network intrusion detection systems (NIDS) to identify 'StockStay' backdoor Indicators of Compromise (IoCs). Conduct proactive threat hunting on systems and networks, particularly for organizations with geopolitical relevance to Ukraine or critical infrastructure.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/russian-apt-deploys-stockstay-backdoor-against-ukrainian-targets/",
+      "source": "SecurityWeek"
+    },
+    {
       "title": "Cybersecurity firms targeted by fraudulent OpenAI organization invites",
-      "tldr": "Threat actors are creating fraudulent OpenAI tenants that impersonate legitimate companies and are inviting employees of cybersecurity firms to join them. This appears to be a sophisticated phishing tactic to trick targets into submitting sensitive company information in chats and projects within the fake OpenAI environment.",
-      "action": "Employees should verify the legitimacy of any OpenAI organization invites directly with their IT or security department. Organizations must educate staff on sophisticated phishing techniques, especially those leveraging AI platforms and impersonation tactics.",
+      "tldr": "Threat actors are impersonating legitimate companies by creating fake OpenAI tenants and sending fraudulent organization invitations to employees of cybersecurity firms. This is a targeted phishing ploy to trick recipients into divulging sensitive company information within the simulated OpenAI environment.",
+      "action": "Educate employees, especially within cybersecurity and AI development teams, about this novel phishing tactic. Establish strict protocols for verifying all external invitations to collaboration platforms, emphasizing out-of-band verification and scrutiny of domain names and sender details.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cybersecurity-firms-targeted-by-fraudulent-openai-organization-invites/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Poland busts SIM-swapping gang tied to millions in crypto theft",
-      "tldr": "Authorities in Poland have arrested four members of an organized cybercrime group accused of breaching telecommunications partners and hijacking email accounts. This allowed them to carry out SIM-swapping attacks, which resulted in the theft of millions of dollars in cryptocurrency.",
-      "action": "Individuals should enable strong multi-factor authentication (MFA) methods that are not reliant on SMS (e.g., authenticator apps, hardware tokens) for all critical accounts, especially financial and cryptocurrency services. Organizations should enhance security for telecommunication systems and email infrastructure.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/poland-busts-sim-swapping-gang-tied-to-millions-in-crypto-theft/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "In Other News: Chinese Mythos-Like AI, Tata Electronics Breach, Snyk Layoffs",
-      "tldr": "Tata Electronics has reportedly experienced a data breach. The incident adds to the growing list of cyberattacks targeting major manufacturing and technology firms, with specific details on the scope and impact still emerging.",
-      "action": "Tata Electronics and its partners should conduct a thorough forensic investigation to determine the full scope and impact of the breach. All organizations, particularly those in critical supply chains, should reassess their third-party risk management and incident response plans.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-chinese-mythos-like-ai-tata-electronics-breach-snyk-layoffs/",
-      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
       "title": "CISA Adds Exploited PTC Windchill RCE Flaw to KEV as Web Shell Attacks Continue",
-      "tldr": "CISA has added an actively exploited Remote Code Execution (RCE) vulnerability in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog. Attackers are continuing to leverage this flaw to deploy web shells, indicating widespread active exploitation of the vulnerability in the wild.",
-      "action": "Organizations using PTC Windchill must immediately apply the latest security patches to mitigate this actively exploited RCE vulnerability. Conduct a thorough forensic analysis for signs of compromise, including web shell presence or unauthorized file modifications.",
+      "tldr": "CISA has added an actively exploited Remote Code Execution (RCE) vulnerability in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog. Attackers are leveraging this flaw to deploy web shells, indicating a severe, ongoing threat to affected systems.",
+      "action": "Immediately apply all available security patches for PTC Windchill. Conduct an urgent forensic analysis of any Windchill servers to detect existing web shells or other indicators of compromise and investigate for unauthorized access.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "PTC Windchill versions vulnerable to the actively exploited RCE. Consult official PTC security advisories for specific affected versions and patches.",
-      "how_to_determine_impact": "Check installed PTC Windchill versions. Scan servers for known web shell indicators, unusual file modifications, or suspicious processes. Review web server access logs for anomalous requests or signs of post-exploitation activity.",
-      "tanium_query_hint": "Get Installed Applications from all machines where name contains 'PTC Windchill'. Get File Content['/path/to/webroot/*.jsp', 'web.xml'] or similar to detect webshells. Monitor 'Get Running Processes' for suspicious processes on Windchill servers.",
-      "rapid7_query_hint": "Search vulnerability checks for PTC Windchill RCE vulnerabilities in InsightVM. Use asset search filters for 'PTC Windchill' installations to assess patch status. Configure InsightIDR alerts for web shell activity or unusual command execution on Windchill servers.",
+      "affected_versions": "PTC Windchill (specific versions vulnerable to RCE. Refer to official PTC and CISA advisories for exact details).",
+      "how_to_determine_impact": "Identify all PTC Windchill instances. Cross-reference installed versions with official PTC security advisories. Conduct filesystem scans for unauthorized files (e.g., web shells) in Windchill deployment directories.",
+      "tanium_query_hint": "Get Installed Applications from all machines that contain 'PTC Windchill'. Use 'Get File Hash' and 'Get File Content' on known Windchill directories to detect suspicious files.",
+      "rapid7_query_hint": "Run credentialed scans for all assets running PTC Windchill, focusing on vulnerability checks for PTC products. Search InsightVM for vulnerability ID matches to the specific Windchill RCE flaw.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
-      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is giving federal agencies an urgent deadline to patch a vulnerability in Cisco Unified Communications Manager Server that is being actively exploited in attacks. All organizations should prioritize this update due to active exploitation.",
-      "action": "Immediately apply security patches to all Cisco Unified Communications Manager Server instances. Organizations should comply with vendor recommendations and CISA directives due to the active exploitation of this flaw. Conduct a compromise assessment for affected systems.",
+      "tldr": "CISA has mandated federal agencies patch an actively exploited vulnerability in Cisco Unified Communications Manager Server by an urgent deadline. This critical flaw is currently being leveraged in attacks, necessitating immediate remediation to prevent system compromise.",
+      "action": "Prioritize and immediately deploy the latest security patches for all Cisco Unified Communications Manager Server installations. Implement strict network segmentation around these systems and conduct thorough log reviews for any signs of compromise or unusual activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager Server versions affected by the actively exploited vulnerability. Consult Cisco's official security advisories for precise versions and available patches.",
-      "how_to_determine_impact": "Check installed Cisco Unified Communications Manager Server versions. Verify patch status against Cisco advisories. Monitor for any signs of compromise, such as unusual network traffic, unauthorized access attempts, or suspicious processes originating from the UC Manager server.",
-      "tanium_query_hint": "Get Installed Applications from all machines where name contains 'Cisco Unified Communications Manager'. Get Running Processes and their network connections for anomalous activity on UC Manager servers. Check 'Get Installed Patches' for relevant Cisco updates.",
-      "rapid7_query_hint": "Search for vulnerability checks related to Cisco Unified Communications Manager vulnerabilities in InsightVM. Filter assets for 'Cisco Unified Communications Manager' to assess patch status. Monitor network traffic for suspicious connections to/from UC Manager servers via InsightIDR.",
+      "affected_versions": "Cisco Unified Communications Manager Server (specific vulnerable versions. Refer to official Cisco and CISA advisories for exact details).",
+      "how_to_determine_impact": "Identify all Cisco Unified Communications Manager Server instances within your environment. Verify installed versions against official Cisco security advisories. Monitor network traffic and system logs for suspicious connections or unauthorized configuration changes.",
+      "tanium_query_hint": "Get Installed Applications from all machines that contain 'Cisco Unified Communications Manager'. Use 'Get Service State' for relevant Cisco services and 'Get Listening Ports' to identify anomalous network activity.",
+      "rapid7_query_hint": "Run credentialed scans on assets with Cisco Unified Communications Manager to detect the specific vulnerability. Utilize InsightIDR for monitoring logs from these systems for signs of compromise or brute force attempts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries",
+      "tldr": "A newly discovered \"pedit COW\" exploit in the Linux kernel allows local unprivileged users to achieve root access. This is accomplished by poisoning cached binaries, representing a critical local privilege escalation vulnerability.",
+      "action": "Immediately apply the latest security patches for your Linux distribution's kernel to mitigate the \"pedit COW\" vulnerability. Implement strong access controls, limit local user privileges, and monitor for any unusual process activity or privilege escalation attempts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Specific Linux Kernel versions vulnerable to 'pedit COW' exploit. Consult your Linux distribution's security advisories for precise affected versions and patch availability.",
+      "how_to_determine_impact": "Identify all Linux systems. Check the installed kernel versions (e.g., uname -r). Compare against vendor advisories for the 'pedit COW' vulnerability. Look for evidence of local users escalating privileges.",
+      "tanium_query_hint": "Get Kernel Version from all Linux machines. Search for pedit binaries or suspicious activity modifying cached system binaries (e.g., /usr/bin, /bin) using 'Get File Modified Time' and 'Get Running Processes'.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability checks pertaining to Linux kernel local privilege escalation, specifically for 'pedit COW'. Utilize asset search filters for Linux distributions and kernel versions.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.0 Critical"
     },
     {
-      "title": "New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries",
-      "tldr": "A new Linux 'pedit' Copy-on-Write (COW) exploit has been discovered that allows local users to gain root access by poisoning cached binaries. This critical flaw enables privilege escalation on affected Linux systems, posing a significant security risk for local privilege escalation.",
-      "action": "Prioritize patching of all vulnerable Linux systems to address the pedit COW vulnerability. Implement strict access controls, enable kernel hardening measures, and monitor for suspicious activity indicative of privilege escalation attempts by local users.",
+      "title": "Clean GitHub repo tricks AI coding agents into running malware",
+      "tldr": "A novel attack demonstrates how seemingly benign GitHub repositories can be weaponized to trick AI coding agents into executing malicious payloads. This method bypasses conventional security scans and human review, introducing a new supply chain risk for AI-powered development workflows.",
+      "action": "Implement robust sandboxing and strict execution policies for all AI coding agents, especially when interacting with external code repositories. Conduct thorough manual or automated vetting of even \"clean\" repositories and enforce least privilege principles for AI agent environments.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Linux kernel versions susceptible to pedit COW privilege escalation. Consult kernel release notes or vendor advisories for specific affected versions and recommended patches.",
-      "how_to_determine_impact": "Check Linux kernel version (`uname -r`). Look for specific patches addressing pedit COW vulnerabilities. Review `dmesg` or kernel logs for suspicious entries related to memory or file operations that could indicate exploitation attempts.",
-      "tanium_query_hint": "Get Kernel Version from all machines. Review 'Get Installed Patches' for relevant kernel updates. Monitor 'Get Running Processes' for unexpected processes running with root privileges.",
-      "rapid7_query_hint": "Search vulnerability checks for Linux kernel privilege escalation related to COW mechanisms in InsightVM. Filter assets by 'Linux' and relevant kernel versions. Monitor InsightIDR for signs of local privilege escalation.",
+      "source_url": "https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "AI coding agents and development environments that automatically clone and execute code from external sources (e.g., GitHub) without sufficient input validation or sandboxing. Consult AI vendor documentation for secure configuration guidance.",
+      "how_to_determine_impact": "Assess the use of AI coding agents in your development pipelines, specifically their interaction with and execution of code from external repositories. Review configurations for sandboxing, execution context, and audit logs for unusual agent behavior.",
+      "tanium_query_hint": "Not directly applicable to endpoint agents. Focus on cloud security posture management (CSPM) and secure software development lifecycle (SSDLC) practices for AI environments.",
+      "rapid7_query_hint": "Utilize InsightCloudSec for cloud environment scanning to identify overly permissive configurations for AI services or CI/CD pipelines. Review GitHub organization settings and webhooks for suspicious integrations.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
-    },
-    {
-      "title": "New DirtyClone Linux Kernel Flaw Lets Local Users Gain Root via Cloned Packets",
-      "tldr": "A newly discovered Linux kernel flaw, dubbed 'DirtyClone,' allows local users to escalate privileges to root by manipulating cloned packets. This is a critical vulnerability enabling unauthorized root access on affected systems, posing a significant risk for privilege escalation.",
-      "action": "Prioritize patching of all Linux systems to address the DirtyClone kernel vulnerability. Implement least privilege principles and strengthen process isolation. Continuously monitor for any signs of privilege escalation or unusual network packet manipulation by unprivileged processes.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Linux kernel versions vulnerable to DirtyClone privilege escalation via cloned packets. Consult kernel release notes or vendor advisories for specific affected versions and recommended patches.",
-      "how_to_determine_impact": "Check Linux kernel version (`uname -r`). Look for specific patches addressing the DirtyClone vulnerability. Monitor `strace` or kernel audit logs for suspicious packet cloning activity or unusual network-related system calls by unprivileged users.",
-      "tanium_query_hint": "Get Kernel Version from all machines. Review 'Get Installed Patches' for relevant kernel updates concerning network packet handling. Monitor 'Get Running Processes' and 'Get Network Connections' for anomalous behavior.",
-      "rapid7_query_hint": "Search vulnerability checks for Linux kernel privilege escalation related to packet cloning in InsightVM. Filter assets by 'Linux' and relevant kernel versions. Monitor InsightIDR for signs of local privilege escalation or suspicious network interactions.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
+      "cvss_score": "8.0 High"
     }
   ],
   "insurance": [],
@@ -1174,6 +1174,40 @@
         "rapid7_query_hint": "Search vulnerability checks for Linux kernel privilege escalation related to packet cloning in InsightVM. Filter assets by 'Linux' and relevant kernel versions. Monitor InsightIDR for signs of local privilege escalation or suspicious network interactions.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "FBI: Russian hackers now target Signal backup recovery keys",
+        "tldr": "The FBI and CISA warn that Russian intelligence services are expanding a phishing campaign, now specifically targeting Signal Backup Recovery Keys. Successful attacks allow adversaries to access victims' entire historical encrypted message archives, posing a severe privacy and intelligence collection threat.",
+        "action": "Advise all personnel, especially those handling sensitive information, to be highly vigilant against sophisticated phishing attempts targeting messaging apps. Strongly recommend reviewing Signal's backup settings and considering disabling cloud backups if not strictly necessary. Never share recovery keys.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Russian APT Deploys 'StockStay' Backdoor Against Ukrainian Targets",
+        "tldr": "A Russian Advanced Persistent Threat (APT) group has deployed a new 'StockStay' backdoor in targeted attacks against Ukrainian entities. This backdoor provides persistent access and facilitates data exfiltration, indicating a state-sponsored espionage campaign.",
+        "action": "Enhance endpoint detection and response (EDR) and network intrusion detection systems (NIDS) to identify 'StockStay' backdoor Indicators of Compromise (IoCs). Conduct proactive threat hunting on systems and networks, particularly for organizations with geopolitical relevance to Ukraine or critical infrastructure.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/russian-apt-deploys-stockstay-backdoor-against-ukrainian-targets/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Clean GitHub repo tricks AI coding agents into running malware",
+        "tldr": "A novel attack demonstrates how seemingly benign GitHub repositories can be weaponized to trick AI coding agents into executing malicious payloads. This method bypasses conventional security scans and human review, introducing a new supply chain risk for AI-powered development workflows.",
+        "action": "Implement robust sandboxing and strict execution policies for all AI coding agents, especially when interacting with external code repositories. Conduct thorough manual or automated vetting of even \"clean\" repositories and enforce least privilege principles for AI agent environments.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/clean-github-repo-tricks-ai-coding-agents-into-running-malware/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "AI coding agents and development environments that automatically clone and execute code from external sources (e.g., GitHub) without sufficient input validation or sandboxing. Consult AI vendor documentation for secure configuration guidance.",
+        "how_to_determine_impact": "Assess the use of AI coding agents in your development pipelines, specifically their interaction with and execution of code from external repositories. Review configurations for sandboxing, execution context, and audit logs for unusual agent behavior.",
+        "tanium_query_hint": "Not directly applicable to endpoint agents. Focus on cloud security posture management (CSPM) and secure software development lifecycle (SSDLC) practices for AI environments.",
+        "rapid7_query_hint": "Utilize InsightCloudSec for cloud environment scanning to identify overly permissive configurations for AI services or CI/CD pipelines. Review GitHub organization settings and webhooks for suspicious integrations.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.0 High",
         "category": "vulns"
       }
     ]
