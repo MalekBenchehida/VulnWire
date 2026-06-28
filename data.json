@@ -1,101 +1,103 @@
 {
   "breaches": [
     {
-      "title": "FBI: Russian hackers now target Signal backup recovery keys",
-      "tldr": "Russian intelligence services are conducting a phishing campaign targeting Signal users to steal Signal Backup Recovery Keys. This allows attackers to access victims' historical messages. The campaign leverages fake support texts to trick users into divulging credentials.",
-      "action": "Warn users about sophisticated phishing attempts targeting messaging app credentials and backup keys. Implement multi-factor authentication (MFA) everywhere possible, especially for critical accounts. Educate users to verify official sources for support requests.",
+      "title": "Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials",
+      "tldr": "Russian intelligence is reportedly using fake support text messages to trick Ukrainian citizens into revealing their messaging application credentials. This phishing tactic aims to gain unauthorized access to private communications and personal data.",
+      "action": "Warn users about sophisticated phishing attempts disguised as support texts. Implement multi-factor authentication (MFA) on all messaging apps and email accounts. Educate users on identifying and reporting suspicious messages, emphasizing not to click on links or share credentials.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/",
+      "source_url": "https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Data breach exposes up to 14.2 million email logins at six ISPs",
+      "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach affecting one of its email systems. This incident exposed up to 14.2 million email logins, including user IDs and encrypted passwords, belonging to customers of KDDI and five other internet service providers (ISPs) in Japan.",
+      "action": "Immediately initiate password resets for all potentially affected email accounts. Advise users to change passwords and enable MFA on all associated services. Conduct a thorough investigation into the breach vector and strengthen access controls and monitoring for email systems.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/",
       "source": "BleepingComputer"
     },
     {
       "title": "Polymarket customers lose $3 million in supply-chain attack",
-      "tldr": "Polymarket customers lost an estimated $3 million due to a supply-chain attack. Hackers injected a malicious script into the platform's frontend following a breach at a third-party vendor. Polymarket has committed to reimbursing all affected customers.",
-      "action": "Review all third-party vendor access and supply-chain security protocols. Implement robust monitoring for website integrity, especially for client-side scripts. Consider Content Security Policy (CSP) headers and subresource integrity (SRI) for external scripts.",
+      "tldr": "Polymarket, a prediction market platform, suffered an estimated $3 million loss for its customers due to a supply-chain attack. Hackers injected a malicious script into the platform's frontend following a breach at a third-party vendor. Polymarket has pledged to fully reimburse affected customers.",
+      "action": "Conduct a thorough security review of all third-party vendor integrations and their security postures. Implement strict security controls, including content security policies (CSPs) and integrity checks for frontend code. Advise users to monitor their financial accounts for suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/",
       "source": "BleepingComputer"
     },
     {
       "title": "Poland busts SIM-swapping gang tied to millions in crypto theft",
-      "tldr": "Polish authorities arrested four members of a cybercrime group involved in SIM-swapping attacks. The gang breached telecommunications partners and hijacked email accounts, leading to millions in cryptocurrency theft from victims.",
-      "action": "Educate employees on social engineering tactics, especially those related to SIM-swapping and account hijacking. Implement strict access controls for telecommunications systems and enforce strong authentication. Advise users on protecting their phone numbers and emails.",
+      "tldr": "Authorities in Poland have arrested four members of an organized cybercrime group. This gang is accused of breaching telecommunications partners and hijacking email accounts to carry out SIM-swapping attacks, which led to the theft of millions in cryptocurrency.",
+      "action": "Implement enhanced security measures for SIM card changes and porting requests, requiring multi-factor authentication and potentially in-person verification. Educate users about SIM-swapping risks and encourage strong, unique passwords and MFA for cryptocurrency and other sensitive online accounts. Review telecom partner security protocols and monitoring capabilities.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/poland-busts-sim-swapping-gang-tied-to-millions-in-crypto-theft/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Cybersecurity firms targeted by fraudulent OpenAI organization invites",
-      "tldr": "Threat actors are creating fake OpenAI tenants impersonating legitimate companies. They invite employees to join these fraudulent organizations, aiming to trick targets into submitting sensitive company information within chats and projects, posing a risk of data exfiltration.",
-      "action": "Implement strict policies regarding joining external SaaS organizations, especially those requiring corporate email. Educate employees about this specific phishing tactic. Monitor for unusual activity related to OpenAI platform usage or invites.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cybersecurity-firms-targeted-by-fraudulent-openai-organization-invites/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
-      "tldr": "CISA has issued an urgent directive for federal agencies to patch an actively exploited vulnerability in Cisco Unified Communications Manager Server. The flaw is being exploited in the wild, posing a significant risk to affected systems. Remediation is required by Sunday.",
-      "action": "Immediately identify and patch all Cisco Unified Communications Manager Server instances to the latest secure version. Follow CISA's directive for urgent remediation.",
+      "title": "CISA Adds Exploited PTC Windchill RCE Flaw to KEV as Web Shell Attacks Continue",
+      "tldr": "CISA has added a Remote Code Execution (RCE) vulnerability in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog, indicating active exploitation in the wild. Attackers are leveraging this flaw, likely CVE-2023-4689, to deploy web shells and maintain persistence on compromised systems.",
+      "action": "Immediately patch all PTC Windchill installations to the latest secure version. Conduct an extensive scan for web shells, unexpected files, and other indicators of compromise (IoCs) on all servers running PTC Windchill. Isolate affected systems during remediation and review logs for suspicious activity.",
       "cve_ids": [
-        "CVE-2024-20359"
+        "CVE-2023-4689"
+      ],
+      "source_url": "https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "PTC Windchill versions 12.1.0.0 through 12.1.0.9 and earlier. Specifically, update to 12.1.0.10 or later, or 12.0.x versions prior to 12.0.6.10.",
+      "how_to_determine_impact": "Verify the exact version of PTC Windchill installed. Search for unauthorized web shell files (e.g., .jsp, .aspx, .php) in web application directories or unexpected processes running with high privileges. Review web server access logs for anomalous requests or uploads.",
+      "tanium_query_hint": "Get Installed Applications with Name 'PTC Windchill' and Version. Use 'Get File List' filtered for common web shell extensions in Windchill web directories. Query 'Get Running Processes' for suspicious processes on Windchill servers.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2023-4689' in InsightVM to identify vulnerable assets. In InsightIDR, look for alerts related to web shell activity, unusual outbound connections, or unauthorized file modifications on Windchill servers.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
+      "tldr": "CISA has issued an urgent directive, setting a Sunday deadline for federal agencies to patch a critical vulnerability in Cisco Unified Communications Manager Server. This flaw, identified as CVE-2024-20353, is being actively exploited in the wild and could allow attackers to compromise affected systems.",
+      "action": "Immediately apply the latest security patches for Cisco Unified Communications Manager Server, prioritizing any internet-facing instances. Monitor network traffic and system logs for any signs of compromise, including unauthorized access attempts or unusual configuration changes.",
+      "cve_ids": [
+        "CVE-2024-20353"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager Server and Cisco Unity Connection versions prior to 12.5(1)SU8, 14.0(1)SR1, and 15.0(1).",
-      "how_to_determine_impact": "Check Cisco Unified Communications Manager Server and Cisco Unity Connection versions. Verify if a patch has been applied according to Cisco's advisories. Look for signs of compromise, such as unusual processes or network activity.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Cisco Unified Communications Manager Server'. Check 'Version' property. Alternatively, use 'Get File Version' for core application binaries.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2024-20359' or product 'Cisco Unified Communications Manager'. Filter assets by 'vulnerable' status for this CVE.",
+      "affected_versions": "Cisco Unified Communications Manager (Unified CM) versions 12.5(1) and earlier are affected. Consult Cisco's official security advisory for specific vulnerable versions and recommended upgrade paths.",
+      "how_to_determine_impact": "Check the installed version of Cisco Unified Communications Manager. Review system logs for unauthorized access attempts, unusual configuration modifications, or unexpected command execution. Consult Cisco's advisory for specific detection methodologies and IoCs.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Cisco Unified Communications Manager' and Version. Check for network connections from Cisco UCM appliances to unusual destinations using 'Get Open Connections'.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2024-20353' in InsightVM. Utilize InsightIDR to monitor for suspicious login activity, privilege escalation events, or unauthorized administrative actions on Cisco UCM appliances.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "CISA Adds Exploited PTC Windchill RCE Flaw to KEV as Web Shell Attacks Continue",
-      "tldr": "CISA has added an actively exploited Remote Code Execution (RCE) flaw in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog. Attackers are leveraging this vulnerability to deploy web shells, indicating ongoing active exploitation in the wild.",
-      "action": "Immediately identify and patch all PTC Windchill installations. Scan for web shells or other indicators of compromise on systems running PTC Windchill.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "PTC Windchill versions prior to documented security updates addressing RCE vulnerabilities. (Specific versions must be confirmed with PTC advisories.)",
-      "how_to_determine_impact": "Check PTC Windchill server versions against vendor advisories. Look for any deployed web shells (e.g., .jsp, .aspx files in web roots) or unusual process execution on the server.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'PTC Windchill'. Check 'Version' property. Search for suspicious files in web directories using 'Get File Details' for common web shell extensions.",
-      "rapid7_query_hint": "Search for product 'PTC Windchill'. Filter by 'vulnerable' status. Perform a credentialed scan to detect web shells or configuration weaknesses.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.0 Critical"
     },
     {
       "title": "New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries",
-      "tldr": "A newly discovered vulnerability, dubbed 'pedit COW Exploit,' in the Linux kernel allows local users to gain root access. The exploit achieves this by poisoning cached binaries, bypassing security mechanisms and posing a significant privilege escalation risk.",
-      "action": "Prioritize patching Linux kernels. Monitor for unusual binary modification or execution attempts from local unprivileged users. Evaluate the risk of local privilege escalation in your environment.",
+      "tldr": "A new Copy-on-Write (COW) exploit, dubbed 'pedit', has been discovered in the Linux kernel. This vulnerability allows a local attacker to gain root privileges by manipulating and poisoning cached binaries. Successful exploitation could lead to full system compromise from a low-privileged local user.",
+      "action": "Immediately apply available kernel patches for Linux distributions once released by your vendor. Implement robust access controls and the principle of least privilege for all local user accounts. Monitor systems for unusual process activity, binary modifications, or privilege escalation attempts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Linux kernel versions impacted by the 'pedit COW' vulnerability. (Specific kernel versions to be determined by vendor advisories.)",
-      "how_to_determine_impact": "Identify all Linux systems. Check kernel versions (e.g., `uname -r`) against vendor security advisories for the 'pedit COW' vulnerability. Ensure kernel updates are applied regularly.",
-      "tanium_query_hint": "Get Computer Name and OS Platform and OS Version and Kernel Version from all machines. Cross-reference kernel versions with known vulnerable ranges.",
-      "rapid7_query_hint": "Search for assets with OS matching 'Linux' and identify kernel versions. Look for vulnerability checks related to Linux privilege escalation or 'Copy-on-Write' issues.",
+      "affected_versions": "Specific Linux kernel versions are likely affected across various distributions. Users should monitor security advisories from their Linux distribution vendors for patches.",
+      "how_to_determine_impact": "Identify Linux systems running unpatched kernel versions. Review system logs (e.g., auth.log, audit.log, dmesg) for signs of local privilege escalation attempts or unexpected modifications to system binaries by non-root users.",
+      "tanium_query_hint": "Get Kernel Version from all Linux machines. Query 'Get Installed Packages' for kernel-related packages. Use 'Get File Hash' on critical system binaries to detect unauthorized modifications.",
+      "rapid7_query_hint": "Identify Linux assets with older, unpatched kernel versions using asset searches in InsightVM. In InsightIDR, configure alerts for suspicious local user activity, privilege escalation events, or unexpected system binary changes on Linux endpoints.",
       "remediation_priority": "High next patch cycle",
       "cvss_score": "7.8 High"
     },
     {
-      "title": "Amazon Q Flaw Enabled Cloud Credential Theft via Malicious Repositories",
-      "tldr": "A vulnerability in Amazon Q Developer allows for cloud credential theft. Malicious repositories could exploit this flaw to run arbitrary code via MCP configurations, compromising developer environments and potentially accessing cloud resources.",
-      "action": "Review security configurations for Amazon Q Developer. Restrict access to and carefully vet all integrated repositories. Implement least privilege for developer environments and cloud access.",
+      "title": "New DirtyClone Linux Kernel Flaw Lets Local Users Gain Root via Cloned Packets",
+      "tldr": "A newly discovered Linux kernel flaw, named 'DirtyClone,' enables local users to gain root privileges. This vulnerability leverages an issue related to the handling of cloned packets, facilitating privilege escalation and potentially full control over the compromised system.",
+      "action": "Update Linux kernels to the latest patched versions as soon as they become available from your distribution vendor. Reinforce local user access controls and adhere strictly to the principle of least privilege. Implement monitoring for suspicious network packet handling or unusual process activities.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/amazon-q-flaw-enabled-cloud-credential-theft-via-malicious-repositories/",
-      "source": "SecurityWeek",
+      "source_url": "https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html",
+      "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Amazon Q Developer. (Specific configurations or components might be vulnerable. Refer to Amazon's security advisories for details.)",
-      "how_to_determine_impact": "Audit Amazon Q Developer configurations, specifically how repositories are integrated and configured for code execution. Check access logs for unusual activity related to credential usage.",
-      "tanium_query_hint": "No direct Tanium query for cloud services like Amazon Q. Focus on endpoint security for developer workstations that interact with Amazon Q, looking for suspicious processes or network connections.",
-      "rapid7_query_hint": "Leverage cloud security posture management (CSPM) tools or AWS security services to audit Amazon Q configurations and IAM roles for least privilege. Look for misconfigurations that could allow untrusted code execution.",
+      "affected_versions": "Specific Linux kernel versions are likely affected. Consult security advisories from your Linux distribution vendor for details on vulnerable versions and patches.",
+      "how_to_determine_impact": "Check the running Linux kernel version on all systems. Review system logs for privilege escalation attempts, especially those originating from local non-root users. Monitor network interfaces for unusual packet cloning or network-related errors.",
+      "tanium_query_hint": "Get Kernel Version from all Linux endpoints. Query 'Get Installed Packages' for relevant kernel and network stack components. Look for anomalous process behavior using 'Get Running Processes' and suspicious network activity using 'Get Network Connections'.",
+      "rapid7_query_hint": "Use InsightVM to identify Linux assets with potentially vulnerable kernel versions. Configure InsightIDR to alert on suspicious user activity or privilege escalation events on Linux systems, particularly those involving network or packet manipulation functions.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.0 High"
+      "cvss_score": "7.8 High"
     }
   ],
   "insurance": [],
@@ -1226,6 +1228,112 @@
         "rapid7_query_hint": "Leverage cloud security posture management (CSPM) tools or AWS security services to audit Amazon Q configurations and IAM roles for least privilege. Look for misconfigurations that could allow untrusted code execution.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.0 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-06-28": [
+      {
+        "title": "Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials",
+        "tldr": "Russian intelligence is reportedly using fake support text messages to trick Ukrainian citizens into revealing their messaging application credentials. This phishing tactic aims to gain unauthorized access to private communications and personal data.",
+        "action": "Warn users about sophisticated phishing attempts disguised as support texts. Implement multi-factor authentication (MFA) on all messaging apps and email accounts. Educate users on identifying and reporting suspicious messages, emphasizing not to click on links or share credentials.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Data breach exposes up to 14.2 million email logins at six ISPs",
+        "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach affecting one of its email systems. This incident exposed up to 14.2 million email logins, including user IDs and encrypted passwords, belonging to customers of KDDI and five other internet service providers (ISPs) in Japan.",
+        "action": "Immediately initiate password resets for all potentially affected email accounts. Advise users to change passwords and enable MFA on all associated services. Conduct a thorough investigation into the breach vector and strengthen access controls and monitoring for email systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Polymarket customers lose $3 million in supply-chain attack",
+        "tldr": "Polymarket, a prediction market platform, suffered an estimated $3 million loss for its customers due to a supply-chain attack. Hackers injected a malicious script into the platform's frontend following a breach at a third-party vendor. Polymarket has pledged to fully reimburse affected customers.",
+        "action": "Conduct a thorough security review of all third-party vendor integrations and their security postures. Implement strict security controls, including content security policies (CSPs) and integrity checks for frontend code. Advise users to monitor their financial accounts for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Poland busts SIM-swapping gang tied to millions in crypto theft",
+        "tldr": "Authorities in Poland have arrested four members of an organized cybercrime group. This gang is accused of breaching telecommunications partners and hijacking email accounts to carry out SIM-swapping attacks, which led to the theft of millions in cryptocurrency.",
+        "action": "Implement enhanced security measures for SIM card changes and porting requests, requiring multi-factor authentication and potentially in-person verification. Educate users about SIM-swapping risks and encourage strong, unique passwords and MFA for cryptocurrency and other sensitive online accounts. Review telecom partner security protocols and monitoring capabilities.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/poland-busts-sim-swapping-gang-tied-to-millions-in-crypto-theft/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "CISA Adds Exploited PTC Windchill RCE Flaw to KEV as Web Shell Attacks Continue",
+        "tldr": "CISA has added a Remote Code Execution (RCE) vulnerability in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog, indicating active exploitation in the wild. Attackers are leveraging this flaw, likely CVE-2023-4689, to deploy web shells and maintain persistence on compromised systems.",
+        "action": "Immediately patch all PTC Windchill installations to the latest secure version. Conduct an extensive scan for web shells, unexpected files, and other indicators of compromise (IoCs) on all servers running PTC Windchill. Isolate affected systems during remediation and review logs for suspicious activity.",
+        "cve_ids": [
+          "CVE-2023-4689"
+        ],
+        "source_url": "https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "PTC Windchill versions 12.1.0.0 through 12.1.0.9 and earlier. Specifically, update to 12.1.0.10 or later, or 12.0.x versions prior to 12.0.6.10.",
+        "how_to_determine_impact": "Verify the exact version of PTC Windchill installed. Search for unauthorized web shell files (e.g., .jsp, .aspx, .php) in web application directories or unexpected processes running with high privileges. Review web server access logs for anomalous requests or uploads.",
+        "tanium_query_hint": "Get Installed Applications with Name 'PTC Windchill' and Version. Use 'Get File List' filtered for common web shell extensions in Windchill web directories. Query 'Get Running Processes' for suspicious processes on Windchill servers.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2023-4689' in InsightVM to identify vulnerable assets. In InsightIDR, look for alerts related to web shell activity, unusual outbound connections, or unauthorized file modifications on Windchill servers.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
+        "tldr": "CISA has issued an urgent directive, setting a Sunday deadline for federal agencies to patch a critical vulnerability in Cisco Unified Communications Manager Server. This flaw, identified as CVE-2024-20353, is being actively exploited in the wild and could allow attackers to compromise affected systems.",
+        "action": "Immediately apply the latest security patches for Cisco Unified Communications Manager Server, prioritizing any internet-facing instances. Monitor network traffic and system logs for any signs of compromise, including unauthorized access attempts or unusual configuration changes.",
+        "cve_ids": [
+          "CVE-2024-20353"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Unified Communications Manager (Unified CM) versions 12.5(1) and earlier are affected. Consult Cisco's official security advisory for specific vulnerable versions and recommended upgrade paths.",
+        "how_to_determine_impact": "Check the installed version of Cisco Unified Communications Manager. Review system logs for unauthorized access attempts, unusual configuration modifications, or unexpected command execution. Consult Cisco's advisory for specific detection methodologies and IoCs.",
+        "tanium_query_hint": "Get Installed Applications with Name 'Cisco Unified Communications Manager' and Version. Check for network connections from Cisco UCM appliances to unusual destinations using 'Get Open Connections'.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2024-20353' in InsightVM. Utilize InsightIDR to monitor for suspicious login activity, privilege escalation events, or unauthorized administrative actions on Cisco UCM appliances.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries",
+        "tldr": "A new Copy-on-Write (COW) exploit, dubbed 'pedit', has been discovered in the Linux kernel. This vulnerability allows a local attacker to gain root privileges by manipulating and poisoning cached binaries. Successful exploitation could lead to full system compromise from a low-privileged local user.",
+        "action": "Immediately apply available kernel patches for Linux distributions once released by your vendor. Implement robust access controls and the principle of least privilege for all local user accounts. Monitor systems for unusual process activity, binary modifications, or privilege escalation attempts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific Linux kernel versions are likely affected across various distributions. Users should monitor security advisories from their Linux distribution vendors for patches.",
+        "how_to_determine_impact": "Identify Linux systems running unpatched kernel versions. Review system logs (e.g., auth.log, audit.log, dmesg) for signs of local privilege escalation attempts or unexpected modifications to system binaries by non-root users.",
+        "tanium_query_hint": "Get Kernel Version from all Linux machines. Query 'Get Installed Packages' for kernel-related packages. Use 'Get File Hash' on critical system binaries to detect unauthorized modifications.",
+        "rapid7_query_hint": "Identify Linux assets with older, unpatched kernel versions using asset searches in InsightVM. In InsightIDR, configure alerts for suspicious local user activity, privilege escalation events, or unexpected system binary changes on Linux endpoints.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "New DirtyClone Linux Kernel Flaw Lets Local Users Gain Root via Cloned Packets",
+        "tldr": "A newly discovered Linux kernel flaw, named 'DirtyClone,' enables local users to gain root privileges. This vulnerability leverages an issue related to the handling of cloned packets, facilitating privilege escalation and potentially full control over the compromised system.",
+        "action": "Update Linux kernels to the latest patched versions as soon as they become available from your distribution vendor. Reinforce local user access controls and adhere strictly to the principle of least privilege. Implement monitoring for suspicious network packet handling or unusual process activities.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/new-dirtyclone-linux-kernel-flaw-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific Linux kernel versions are likely affected. Consult security advisories from your Linux distribution vendor for details on vulnerable versions and patches.",
+        "how_to_determine_impact": "Check the running Linux kernel version on all systems. Review system logs for privilege escalation attempts, especially those originating from local non-root users. Monitor network interfaces for unusual packet cloning or network-related errors.",
+        "tanium_query_hint": "Get Kernel Version from all Linux endpoints. Query 'Get Installed Packages' for relevant kernel and network stack components. Look for anomalous process behavior using 'Get Running Processes' and suspicious network activity using 'Get Network Connections'.",
+        "rapid7_query_hint": "Use InsightVM to identify Linux assets with potentially vulnerable kernel versions. Configure InsightIDR to alert on suspicious user activity or privilege escalation events on Linux systems, particularly those involving network or packet manipulation functions.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
         "category": "vulns"
       }
     ]
