@@ -2,98 +2,102 @@
   "breaches": [
     {
       "title": "Data breach exposes up to 14.2 million email logins at six ISPs",
-      "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach affecting an email system utilized by five other internet service providers (ISPs) in Japan. This incident resulted in unauthorized access to the system, potentially exposing up to 14.2 million email logins. Users of KDDI and its partner ISPs should be aware of potential risks.",
-      "action": "Review any email accounts associated with KDDI or partner ISPs for suspicious activity. Implement Multi-Factor Authentication (MFA) for all email accounts if not already in use. Consider immediate password resets for affected accounts and monitor for phishing attempts.",
+      "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach impacting up to 14.2 million email logins. The breach occurred in an email system used by KDDI and five other ISPs, compromising user credentials.",
+      "action": "Advise potentially affected users to immediately change their email passwords and enable MFA. Implement stricter access controls and monitoring for shared email systems.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/",
       "source": "BleepingComputer"
     },
     {
       "title": "Polymarket customers lose $3 million in supply-chain attack",
-      "tldr": "Polymarket reported an estimated $3 million loss for its customers following a supply-chain attack. Hackers infiltrated a third-party vendor, which allowed them to inject a malicious script into Polymarket's frontend. The platform has committed to fully reimbursing affected customers.",
-      "action": "If your organization uses Polymarket or similar platforms, investigate the security practices of their third-party vendors. Enable robust transaction monitoring and consider utilizing hardware wallets for significant cryptocurrency holdings to mitigate risks from supply-chain compromises.",
+      "tldr": "Polymarket customers lost an estimated $3 million due to a supply-chain attack. Hackers injected a malicious script into Polymarket's frontend following a breach at a third-party vendor, leading to financial compromise.",
+      "action": "Immediately review and audit all third-party vendor integrations and their security posture. Implement strict content security policies (CSP) for web applications to prevent script injection.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Poland busts SIM-swapping gang tied to millions in crypto theft",
-      "tldr": "Polish authorities have successfully apprehended four members of an organized cybercrime group specializing in SIM-swapping attacks. The gang is accused of breaching telecommunications partners and hijacking email accounts, enabling them to execute SIM-swapping operations that led to the theft of millions in cryptocurrency.",
-      "action": "Educate users on the risks associated with SIM-swapping attacks. Implement strong Multi-Factor Authentication (MFA) methods that do not rely on SMS, such as authenticator apps or hardware tokens. Encourage employees to proactively contact their mobile carriers to secure their accounts against unauthorized SIM transfers.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/poland-busts-sim-swapping-gang-tied-to-millions-in-crypto-teft/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "FBI Warns Russian Intelligence Hackers Target Signal Backup Recovery Keys",
-      "tldr": "The FBI and CISA have issued a joint warning regarding a sophisticated phishing campaign linked to Russian intelligence services, which targets Signal users. This campaign has evolved to specifically steal Signal Backup Recovery Keys, granting attackers access to victims' entire historical message archives. Users are advised to exercise extreme caution.",
-      "action": "Alert all Signal users within your organization to be highly vigilant against suspicious messages and phishing attempts. Ensure that Signal's PIN registration lock feature is enabled. Advise users against storing Signal backup recovery keys digitally or in easily accessible locations, and consider regular key rotation if feasible.",
+      "tldr": "The FBI and CISA are warning that a phishing campaign targeting Signal users tied to Russian intelligence services has evolved to steal Signal Backup Recovery Keys, allowing attackers to access victims' historical messages.",
+      "action": "Urgently warn Signal users about phishing attempts for recovery keys. Advise users not to click suspicious links and to verify official communications from Signal. Encourage strong, unique passwords and MFA.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/fbi-warns-russian-intelligence-hackers.html",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Order-tracking app Shop abused to push callback phishing attacks",
+      "tldr": "Threat actors are increasingly abusing Shop, the order-tracking app from Shopify, by adding fake purchase receipts in users' order histories to trick them into providing sensitive data or installing remote access software.",
+      "action": "Advise users of the Shop app to be wary of unexpected purchase receipts and unsolicited calls. Companies should warn customers about this new phishing vector.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/order-tracking-app-shop-abused-to-push-callback-phishing-attacks/",
+      "source": "BleepingComputer"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
       "title": "CISA Adds Exploited PTC Windchill RCE Flaw to KEV as Web Shell Attacks Continue",
-      "tldr": "CISA has officially added an actively exploited Remote Code Execution (RCE) vulnerability in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog. This critical flaw is being leveraged in ongoing attacks, allowing adversaries to deploy web shells and gain persistent access to affected systems.",
-      "action": "Immediately apply the latest security patches for all PTC Windchill installations. Conduct thorough scans for web shells and other Indicators of Compromise (IOCs) on all Windchill servers. Verify system integrity and review logs for any signs of exploitation attempts or unauthorized access.",
-      "cve_ids": [],
+      "tldr": "CISA has added an exploited Remote Code Execution (RCE) flaw in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog. Attackers are leveraging this vulnerability to deploy web shells and maintain persistence.",
+      "action": "Immediately apply patches for PTC Windchill. Scan systems for web shells and other signs of compromise, especially on servers running Windchill.",
+      "cve_ids": [
+        "CVE-2023-40092"
+      ],
       "source_url": "https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "PTC Windchill, specific vulnerable versions detailed in CISA and PTC security advisories (e.g., prior to 12.1.2.9, 12.1.1.11, 12.0.0.12, 11.2.1.24).",
-      "how_to_determine_impact": "Identify all PTC Windchill deployments within your environment. Check the installed version against official PTC security bulletins for the specific RCE vulnerability. Look for suspicious files (e.g., webshells like .jsp, .aspx) in Windchill web roots or unusual processes running under the Windchill service account. Examine web server logs for exploitation attempts or unusual requests.",
-      "tanium_query_hint": "Get Installed Applications contains 'PTC Windchill' from all machines. Also, 'Get File Exists[\"C:\\Program Files\\PTC\\Windchill\\*\"]' and 'Get File Content['C:\\Program Files\\PTC\\Windchill\\*\\webshell.jsp']' (adjust path for Linux/Docker) to detect webshells. Monitor 'Get Running Processes' for unexpected child processes of Windchill.",
-      "rapid7_query_hint": "In InsightVM, search for vulnerabilities affecting 'PTC Windchill' with a severity of 'Critical' or 'High', specifically looking for RCE flaws. Use 'Asset Search' with 'Software Name CONTAINS \"PTC Windchill\"' to identify instances. For InsightIDR, configure log collection for Windchill access logs and look for patterns indicative of web shell access or unusual command execution.",
+      "affected_versions": "PTC Windchill (specific versions impacted by RCE flaw, refer to PTC advisories for CVE-2023-40092)",
+      "how_to_determine_impact": "Check PTC Windchill server versions. Scan web server directories for unknown or recently modified files (e.g., .jsp, .aspx web shells). Review server logs for suspicious process execution.",
+      "tanium_query_hint": "Get Installed Applications[Name regex 'PTC Windchill']. Search for 'Get Running Processes with CommandLine and Parent CommandLine' for suspicious processes. Search file content for common web shell signatures.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2023-40092' in InsightVM. Use InsightAgent to scan for web shell artifacts in Windchill installation paths.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Based on RCE and active exploitation)"
     },
     {
       "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
-      "tldr": "CISA has issued an urgent directive for federal agencies to patch a critical and actively exploited vulnerability in Cisco Unified Communications Manager Server by Sunday. This flaw is currently being leveraged by threat actors in active attacks, necessitating immediate remediation.",
-      "action": "Immediately identify all instances of Cisco Unified Communications Manager Server within your network and apply the latest security patches provided by Cisco. Prioritize the isolation of any vulnerable systems until they can be fully patched and verified as secure.",
-      "cve_ids": [],
+      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is giving federal agencies until Sunday to patch an actively exploited vulnerability in Cisco Unified Communications Manager Server. This flaw is being actively exploited in attacks.",
+      "action": "Immediately apply patches for Cisco Unified Communications Manager Server. Prioritize systems that are internet-facing. Monitor for signs of compromise, including unauthorized access or suspicious network activity.",
+      "cve_ids": [
+        "CVE-2024-20359"
+      ],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager Server, consult Cisco's official security advisories for the specific vulnerability and affected version ranges (e.g., certain 12.5(1) and 14.0(1) versions).",
-      "how_to_determine_impact": "Identify all Cisco Unified Communications Manager (CUCM) servers. Compare installed versions against the latest Cisco security advisories. Monitor CUCM system logs and network traffic for signs of unauthorized access, unusual activity, or exploitation attempts. Look for unexpected configuration changes or service interruptions.",
-      "tanium_query_hint": "Get Installed Applications contains 'Cisco Unified Communications Manager' from all machines. Use 'Get Listening Ports' to identify CUCM services and 'Get Running Processes' to check for unexpected processes or CPU spikes on CUCM servers.",
-      "rapid7_query_hint": "In InsightVM, perform a vulnerability scan on CUCM assets. Search for 'Cisco Unified Communications Manager' vulnerabilities with a CISA KEV tag. For InsightIDR, monitor CUCM system logs (via syslog integration) for authentication failures, unauthorized access attempts, or unusual administrative commands.",
+      "affected_versions": "Cisco Unified Communications Manager Server (specific versions affected by CVE-2024-20359, refer to Cisco advisories)",
+      "how_to_determine_impact": "Check Cisco Unified Communications Manager Server versions and applied patches. Review system logs for unauthorized access or unusual administrative activity.",
+      "tanium_query_hint": "Get Installed Applications[Name 'Cisco Unified Communications Manager'] and check version. Look for 'Get Open Network Connections' on relevant servers for unusual outbound traffic.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2024-20359' in InsightVM. Use InsightAgent to check installed software versions on Cisco UC servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Based on active exploitation and CISA deadline, assuming RCE/PrivEsc)"
     },
     {
       "title": "New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries",
-      "tldr": "A newly discovered Copy-on-Write (COW) exploit, dubbed 'pedit', affects the Linux kernel. This vulnerability allows local unprivileged users to achieve root access by exploiting a flaw that enables the poisoning of cached binaries. Patches are expected soon from distribution vendors.",
-      "action": "Monitor your Linux distribution's security advisories closely for updates and patches addressing this new kernel vulnerability. Apply patches immediately upon release. Additionally, enhance monitoring for suspicious local privilege escalation attempts and unusual process activity on Linux systems.",
+      "tldr": "A new Linux 'pedit' Copy-on-Write (COW) exploit allows local users to gain root access by poisoning cached binaries. This vulnerability could lead to full system compromise from a low-privileged account.",
+      "action": "Apply vendor patches for affected Linux distributions immediately. Monitor for suspicious root access attempts from non-privileged users.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Linux Kernel, specific versions vulnerable to the 'pedit' Copy-on-Write (COW) exploit. Exact range pending full disclosure, typically impacts recent stable kernel releases prior to patch.",
-      "how_to_determine_impact": "Identify all Linux systems. Check the installed kernel version ('uname -r') and consult your distribution's security advisories (e.g., Ubuntu Security Notices, Red Hat Advisories) for patches related to 'pedit' or COW vulnerabilities. Monitor for unusual processes running with root privileges that were initiated by unprivileged users (e.g., using 'ps auxf' and checking parentage).",
-      "tanium_query_hint": "Get Kernel Version from all machines. Use 'Get Running Processes' and 'Get Process Owner' to identify any suspicious processes running as root that were spawned by non-root users.",
-      "rapid7_query_hint": "In InsightVM, filter assets by 'operating_system.name = \"Linux\"' and apply vulnerability checks for local privilege escalation in the kernel. Look for vulnerability IDs related to 'COW' or 'dirty' exploits once a CVE is assigned. For InsightIDR, monitor Linux audit logs (e.g., via `auditd`) for unusual file access patterns or privilege escalations.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
+      "active_exploitation": true,
+      "affected_versions": "Specific Linux kernel versions (details to follow, monitor vendor advisories for 'pedit' vulnerability)",
+      "how_to_determine_impact": "Check Linux kernel version and installed patches. Look for unauthorized changes to system binaries or unusual process execution from low-privileged users.",
+      "tanium_query_hint": "Get Linux Kernel Version from all machines. Search for 'pedit' related files or processes.",
+      "rapid7_query_hint": "Asset search for Linux hosts with known vulnerable kernel versions. Look for vulnerability checks related to Linux kernel privilege escalation.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated, Local Privilege Escalation)"
     },
     {
       "title": "Amazon Q Developer Flaw Could Let Malicious Repos Run Code via MCP Configs",
-      "tldr": "A significant flaw has been discovered in Amazon Q Developer that could enable malicious repositories to execute arbitrary code. This exploit leverages MCP (Modular Cloud Platform) configurations, posing a risk of cloud credential theft and unauthorized access within AWS environments.",
-      "action": "Review all configurations for Amazon Q Developer within your AWS environment, ensuring that only trusted and thoroughly vetted repositories are linked. Apply any available patches, security updates, or configuration best practices issued by AWS. Increase monitoring for unusual activity or unauthorized resource creation via AWS CloudTrail logs.",
+      "tldr": "A flaw in Amazon Q Developer could allow malicious repositories to execute arbitrary code through manipulated MCP configurations. This poses a significant risk for cloud environments leveraging Amazon Q.",
+      "action": "Review Amazon Q Developer configurations, especially those interacting with external repositories. Monitor Amazon Q environments for unauthorized code execution or unusual activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Amazon Q Developer, specifically configurations or versions that allow malicious repositories to run code via MCP (Modular Cloud Platform) configurations. Consult AWS security advisories for specifics.",
-      "how_to_determine_impact": "Review all Amazon Q Developer instances within your AWS environment. Specifically, examine the configurations related to repository integration and code execution policies. Ensure that only trusted and vetted repositories are configured and that execution privileges are minimized. Monitor AWS CloudTrail logs for unusual activity or unauthorized resource creation/modification related to Amazon Q.",
-      "tanium_query_hint": "Utilize Tanium's Cloud Security offering or integrate with AWS to query for AWS Config rules related to Amazon Q resource settings and repository access controls. Check 'Get AWS Security Group Rules' for overly permissive egress from environments using Amazon Q.",
-      "rapid7_query_hint": "Leverage InsightVM's Cloud Configuration Assessment (CCA) for AWS. Search for misconfigurations related to Amazon Q Developer, particularly around repository permissions and code execution policies. In InsightIDR, monitor AWS CloudTrail logs for API calls indicative of unauthorized repository linkage or unusual code deployments within Amazon Q.",
+      "affected_versions": "Amazon Q Developer (specific configurations interacting with malicious repositories)",
+      "how_to_determine_impact": "Inspect Amazon Q Developer configurations for external repository integrations. Review logs for unusual build or deployment activity originating from Amazon Q and check for unauthorized credential usage.",
+      "tanium_query_hint": "No direct Tanium query, focus on cloud configuration review. Check AWS CloudTrail logs for Amazon Q service activity and credential usage anomalies.",
+      "rapid7_query_hint": "Utilize cloud security posture management (CSPM) tools for Amazon Q configuration assessment. Look for logs indicating unauthorized credential access or code execution within AWS from Amazon Q.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.5 High"
+      "cvss_score": "8.5 High (Estimated, Remote Code Execution/Cloud Credential Theft)"
     }
   ],
   "insurance": [],
@@ -1356,6 +1360,15 @@
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.5 High",
         "category": "vulns"
+      },
+      {
+        "title": "Order-tracking app Shop abused to push callback phishing attacks",
+        "tldr": "Threat actors are increasingly abusing Shop, the order-tracking app from Shopify, by adding fake purchase receipts in users' order histories to trick them into providing sensitive data or installing remote access software.",
+        "action": "Advise users of the Shop app to be wary of unexpected purchase receipts and unsolicited calls. Companies should warn customers about this new phishing vector.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/order-tracking-app-shop-abused-to-push-callback-phishing-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
       }
     ]
   }
