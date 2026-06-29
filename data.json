@@ -2,102 +2,104 @@
   "breaches": [
     {
       "title": "Data breach exposes up to 14.2 million email logins at six ISPs",
-      "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach affecting its email system, impacting up to 14.2 million email logins across six internet service providers in Japan. Threat actors gained unauthorized access to the email system.",
-      "action": "Users of affected ISPs should immediately change their email passwords and enable multi-factor authentication where available. Organizations should review logs for suspicious activity related to KDDI or associated ISPs.",
+      "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach affecting one of its email systems. This breach exposed up to 14.2 million email logins, impacting customers across six different internet service providers (ISPs) in Japan.",
+      "action": "Customers of KDDI and the affected ISPs should immediately change their email passwords and enable multi-factor authentication. Organizations should advise their employees in Japan to take these steps and monitor for credential stuffing attacks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials",
-      "tldr": "Russian intelligence services are reportedly using fake support text messages to steal messaging credentials from Ukrainian citizens. This phishing campaign aims to gain access to private communications.",
-      "action": "Advise users to be extremely cautious of unsolicited messages, especially those requesting credentials or linking to login pages. Implement strong phishing awareness training and multi-factor authentication.",
+      "title": "236,000 DCloud Uni-App Sites Used in Crypto Scams, Phishing, and Wallet Drainers",
+      "tldr": "Over 236,000 DCloud Uni-App sites have been identified as being used in widespread crypto scams, phishing campaigns, and wallet drainers, impacting a large number of potential victims and leading to financial loss.",
+      "action": "Users should exercise extreme caution with unfamiliar crypto-related sites and applications. Organizations should educate employees on phishing and scam indicators and reinforce the use of multi-factor authentication for all financial accounts.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html",
+      "source_url": "https://thehackernews.com/2026/06/236000-dcloud-uni-app-sites-used-in.html",
       "source": "The Hacker News"
     },
     {
-      "title": "FBI: Russian hackers now target Signal backup recovery keys",
-      "tldr": "The FBI and CISA warn that a phishing campaign, linked to Russian intelligence, is now targeting Signal users' Backup Recovery Keys. This allows attackers to access victims' entire historical message archives, not just new communications.",
-      "action": "Signal users should be vigilant against phishing attempts and verify any requests for backup recovery keys. Consider disabling Signal backups to the cloud if concerned about this specific vector. Ensure multi-factor authentication is enabled where possible for linked email accounts.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Insurance Regulators Group NAIC Hit in Oracle PeopleSoft Hack",
-      "tldr": "The National Association of Insurance Commissioners (NAIC) was impacted by a hack involving its Oracle PeopleSoft system. This incident highlights data security risks for organizations utilizing enterprise resource planning (ERP) software.",
-      "action": "Organizations using Oracle PeopleSoft should ensure all security patches are applied, review access controls, and monitor for unauthorized activity. Conduct an internal audit of ERP system security.",
+      "tldr": "The National Association of Insurance Commissioners (NAIC), a group of insurance regulators, was reportedly affected by a hack involving Oracle PeopleSoft. The nature and extent of the data breach are under investigation, raising concerns about sensitive regulatory data.",
+      "action": "Organizations using Oracle PeopleSoft should ensure all security patches are applied and review access logs for any unauthorized activity. Affected entities should initiate incident response protocols, including data breach notification assessments.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/insurance-regulators-group-naic-hit-in-oracle-peoplesoft-hack/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Chinese Framework Powers 200,000 Scam Sites",
+      "tldr": "A Chinese framework is reportedly powering over 200,000 scam sites, facilitating various malicious activities including phishing, crypto scams, and potentially data theft on a massive scale.",
+      "action": "Implement web filtering and email security solutions to block access to known malicious domains. Educate users about the risks of visiting unverified websites and recognizing scam indicators to prevent potential data or financial loss.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/chinese-framework-powers-200000-scam-sites/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
+      "title": "Public PoC Released for Critical libssh2 CVE-2026-55200 Client-Side SSH Flaw",
+      "tldr": "A public Proof-of-Concept (PoC) has been released for CVE-2026-55200, a critical client-side SSH vulnerability in libssh2. This flaw could allow attackers to execute arbitrary code or compromise systems that use vulnerable versions of libssh2 when connecting to a malicious SSH server.",
+      "action": "Immediately identify and patch all systems utilizing libssh2, especially client-side SSH implementations. Prioritize systems that connect to untrusted or external SSH servers.",
+      "cve_ids": [
+        "CVE-2026-55200"
+      ],
+      "source_url": "https://thehackernews.com/2026/06/public-poc-released-for-critical.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "libssh2 library, client-side SSH implementations. Specific vulnerable versions should be checked against official libssh2 advisories, but generally applies to unpatched versions.",
+      "how_to_determine_impact": "Identify all assets that utilize the libssh2 library for SSH client functionalities. Check installed software packages, dependencies (e.g., 'apt list --installed' or 'yum list installed'), and custom applications for libssh2 versions. Inspect network logs for unusual outbound SSH connections from client systems to potentially malicious servers.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'libssh2' from all machines; Get File Version['/usr/lib*/libssh2.so*'] from all machines; Get Running Processes matching 'ssh' and their associated loaded libraries.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-55200' in InsightVM or Nexpose; Asset search for installed software containing 'libssh2'; Use custom queries in InsightVM to identify systems with specific libssh2 file versions (check 'Installed Software' data).",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
       "title": "Critical SimpleHelp flaw exploited to deploy new stealer malware",
-      "tldr": "Hackers are actively exploiting CVE-2026-48558, a critical vulnerability in SimpleHelp, to deploy Djinn Stealer. Djinn Stealer is a cross-platform information stealer impacting Windows, macOS, and Linux systems. Active exploitation means immediate remediation is required.",
-      "action": "Immediately patch all SimpleHelp installations to the latest secure version. Isolate SimpleHelp servers from critical internal networks until patched. Scan endpoints for Djinn Stealer indicators of compromise.",
+      "tldr": "A critical vulnerability (CVE-2026-48558) in SimpleHelp is being actively exploited by attackers to deploy 'Djinn Stealer', a new cross-platform information stealer impacting Windows, macOS, and Linux systems.",
+      "action": "Immediately patch all SimpleHelp installations to the latest secure version. Conduct an investigation for signs of compromise, specifically looking for Djinn Stealer on SimpleHelp servers and connected endpoints.",
       "cve_ids": [
         "CVE-2026-48558"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SimpleHelp versions prior to the latest patched release (specific versions should be confirmed with SimpleHelp vendor documentation).",
-      "how_to_determine_impact": "Identify all SimpleHelp server instances. Check SimpleHelp logs and connected client systems for signs of unauthorized access, suspicious processes (e.g., Djinn Stealer), or unusual outbound connections. Verify the version of SimpleHelp installed.",
-      "tanium_query_hint": "Get Tanium Gathered Data['Installed Applications'] from all machines where Tanium Gathered Data['Installed Applications'] contains 'SimpleHelp'. For potential compromise: Get Running Processes with MD5 Hash from all machines where Running Processes matches 'Djinn Stealer process name/hash'.",
-      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-48558' in InsightVM. For InsightIDR, look for alerts related to new/unusual processes or network connections originating from SimpleHelp servers or clients, or specific Djinn Stealer indicators.",
+      "affected_versions": "SimpleHelp remote access software. Specific vulnerable versions not detailed in the article, but applies to unpatched installations susceptible to CVE-2026-48558.",
+      "how_to_determine_impact": "Verify the version of SimpleHelp remote access server software. Check server and client system logs for suspicious processes (e.g., 'Djinn' or 'Taskweaver' executables), unusual network connections, or unauthorized remote access sessions. Consult SimpleHelp's official advisories for specific version remediation details.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'SimpleHelp'; Get Running Processes with Name contains 'Djinn' or 'Taskweaver'; Get Network Connections from SimpleHelp servers to unexpected IPs.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-48558' in InsightVM; Asset search for installed software named 'SimpleHelp'; Hunt for Djinn Stealer or Taskweaver indicators of compromise (IOCs) using file hashes, process names, or network connections in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Hackers now exploit critical Oracle E-Business flaw in attacks",
-      "tldr": "A critical vulnerability, CVE-2026-46817, in Oracle E-Business Suite (EBS) is now being actively exploited by attackers. This flaw in the financial application poses a significant risk to organizations using EBS.",
-      "action": "Apply the latest security patches for Oracle E-Business Suite immediately. Review network traffic and logs for any indicators of compromise related to EBS and external connections.",
+      "tldr": "Attackers are actively exploiting a critical vulnerability (CVE-2026-46817) in the Oracle E-Business Suite (EBS) financial application. This exploitation could lead to unauthorized access and compromise of critical financial data and systems.",
+      "action": "Apply the latest security patches for Oracle E-Business Suite immediately. Conduct a thorough audit of EBS logs and system activity for any signs of compromise following the disclosure of active exploitation.",
       "cve_ids": [
         "CVE-2026-46817"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Oracle E-Business Suite (EBS) (specific vulnerable versions should be confirmed with Oracle advisory for CVE-2026-46817).",
-      "how_to_determine_impact": "Identify all Oracle E-Business Suite installations. Verify the patch level of each instance. Monitor for unauthorized access attempts, unusual database activity, or changes to critical financial data.",
-      "tanium_query_hint": "Get Installed Applications from all machines where Installed Applications contains 'Oracle E-Business Suite'. Query for specific patch levels or file versions as per Oracle advisory.",
-      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-46817' in InsightVM. Monitor InsightIDR for suspicious activity originating from Oracle EBS servers, particularly related to database access or system commands.",
+      "affected_versions": "Oracle E-Business Suite (EBS) financial application. Specific vulnerable versions not detailed in the article, but applies to unpatched installations susceptible to CVE-2026-46817.",
+      "how_to_determine_impact": "Verify the version of Oracle E-Business Suite on all deployed instances. Conduct a thorough review of EBS application logs, database access logs, and system audit trails for unauthorized access attempts, unusual queries, or any data exfiltration. Consult Oracle's official security advisories for specific version details and indicators of compromise.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'Oracle E-Business Suite' from relevant servers; Get File Version['/path/to/ebs/components'] on EBS servers; Get Network Connections from EBS servers to untrusted or unusual external IPs.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-46817' in InsightVM or Nexpose; Asset search for installed software named 'Oracle E-Business Suite'; Review database audit logs for suspicious activity or unauthorized schema changes.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
-      "tldr": "CISA has issued an urgent directive for federal agencies to patch an actively exploited vulnerability in Cisco Unified Communications Manager Server by Sunday. This flaw is being used in attacks, requiring immediate attention.",
-      "action": "Immediately apply the recommended security patches for Cisco Unified Communications Manager Server. Review systems for compromise, including unusual log entries or unauthorized access.",
+      "title": "'DirtyClone' Linux Kernel Vulnerability Leads to Root Access",
+      "tldr": "A newly disclosed Linux Kernel vulnerability, dubbed 'DirtyClone,' has been found to allow attackers to gain root access on affected systems. This critical flaw could enable full system compromise.",
+      "action": "Immediately apply the latest Linux kernel security updates to all vulnerable systems. Prioritize patching servers and critical infrastructure running Linux. Implement least privilege principles and monitor for suspicious root access.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager Server (specific vulnerable versions should be confirmed with Cisco advisory cited by CISA).",
-      "how_to_determine_impact": "Identify all Cisco Unified Communications Manager Server instances. Check the installed version and patch level against Cisco's security advisories. Monitor for unauthorized access, configuration changes, or unusual traffic.",
-      "tanium_query_hint": "Get Installed Applications from all machines where Installed Applications contains 'Cisco Unified Communications Manager'. Query for specific file versions or patch presence as per Cisco advisory.",
-      "rapid7_query_hint": "Search for relevant Cisco Unified Communications Manager vulnerabilities in InsightVM (refer to CISA's directive for specific CVE if available). Monitor InsightIDR for suspicious activity on UC Manager servers.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Amazon Q Flaw Enabled Cloud Credential Theft via Malicious Repositories",
-      "tldr": "A flaw in Amazon Q allowed for cloud credential theft through the use of malicious repositories. This vulnerability enabled attackers to gain unauthorized access to sensitive cloud credentials, posing a significant risk to cloud environments.",
-      "action": "Review all Amazon Q configurations for adherence to security best practices. Monitor for unauthorized access or unusual activity originating from Amazon Q or linked repositories. Immediately rotate any potentially compromised cloud credentials.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/amazon-q-flaw-enabled-cloud-credential-theft-via-malicious-repositories/",
+      "source_url": "https://www.securityweek.com/dirtyclone-linux-kernel-vulnerability-leads-to-root-access/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Amazon Q (specific vulnerable versions/configurations should be confirmed with AWS advisories).",
-      "how_to_determine_impact": "Identify all Amazon Q instances and integrated repositories. Review repository configurations for suspicious content or unauthorized changes. Check AWS CloudTrail logs for unusual API calls or credential usage associated with Amazon Q.",
-      "tanium_query_hint": "Consult AWS console and documentation for configuration details. For connected endpoints, query 'Get Installed Applications' for Amazon Q related components if applicable, and 'Get Running Processes' for unusual activity.",
-      "rapid7_query_hint": "Monitor AWS accounts via InsightCloudSec for suspicious activity related to Amazon Q. Review InsightIDR logs for credential misuse or unauthorized access attempts from cloud environments.",
+      "affected_versions": "Linux Kernel. Specific vulnerable versions are not detailed in the article, but refers to the 'DirtyClone' flaw leading to root access. All unpatched Linux distributions should be considered at risk until patched.",
+      "how_to_determine_impact": "Identify the kernel version ('uname -r') on all Linux systems. Consult distribution-specific security advisories (e.g., Ubuntu Security Notices, Red Hat Advisories) for patches related to 'DirtyClone' or similar privilege escalation vulnerabilities. Look for any suspicious processes running with root privileges from unusual locations or unexpected user context.",
+      "tanium_query_hint": "Get Kernel Version from all Linux machines; Get Installed Patches with Name contains 'linux-image' or 'kernel' and compare against known fixed versions; Get Running Processes with User equals 'root' and look for unusual parent processes or command lines.",
+      "rapid7_query_hint": "Asset search for Linux systems by kernel version in InsightVM; Look for vulnerability IDs associated with Linux kernel privilege escalation or 'DirtyClone' in InsightVM; Scan Linux assets for missing kernel patches that address this vulnerability.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical"
+      "cvss_score": "9.0 Critical"
     }
   ],
   "insurance": [],
@@ -1474,6 +1476,58 @@
         "rapid7_query_hint": "Monitor AWS accounts via InsightCloudSec for suspicious activity related to Amazon Q. Review InsightIDR logs for credential misuse or unauthorized access attempts from cloud environments.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.5 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "236,000 DCloud Uni-App Sites Used in Crypto Scams, Phishing, and Wallet Drainers",
+        "tldr": "Over 236,000 DCloud Uni-App sites have been identified as being used in widespread crypto scams, phishing campaigns, and wallet drainers, impacting a large number of potential victims and leading to financial loss.",
+        "action": "Users should exercise extreme caution with unfamiliar crypto-related sites and applications. Organizations should educate employees on phishing and scam indicators and reinforce the use of multi-factor authentication for all financial accounts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/236000-dcloud-uni-app-sites-used-in.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Chinese Framework Powers 200,000 Scam Sites",
+        "tldr": "A Chinese framework is reportedly powering over 200,000 scam sites, facilitating various malicious activities including phishing, crypto scams, and potentially data theft on a massive scale.",
+        "action": "Implement web filtering and email security solutions to block access to known malicious domains. Educate users about the risks of visiting unverified websites and recognizing scam indicators to prevent potential data or financial loss.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/chinese-framework-powers-200000-scam-sites/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Public PoC Released for Critical libssh2 CVE-2026-55200 Client-Side SSH Flaw",
+        "tldr": "A public Proof-of-Concept (PoC) has been released for CVE-2026-55200, a critical client-side SSH vulnerability in libssh2. This flaw could allow attackers to execute arbitrary code or compromise systems that use vulnerable versions of libssh2 when connecting to a malicious SSH server.",
+        "action": "Immediately identify and patch all systems utilizing libssh2, especially client-side SSH implementations. Prioritize systems that connect to untrusted or external SSH servers.",
+        "cve_ids": [
+          "CVE-2026-55200"
+        ],
+        "source_url": "https://thehackernews.com/2026/06/public-poc-released-for-critical.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "libssh2 library, client-side SSH implementations. Specific vulnerable versions should be checked against official libssh2 advisories, but generally applies to unpatched versions.",
+        "how_to_determine_impact": "Identify all assets that utilize the libssh2 library for SSH client functionalities. Check installed software packages, dependencies (e.g., 'apt list --installed' or 'yum list installed'), and custom applications for libssh2 versions. Inspect network logs for unusual outbound SSH connections from client systems to potentially malicious servers.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'libssh2' from all machines; Get File Version['/usr/lib*/libssh2.so*'] from all machines; Get Running Processes matching 'ssh' and their associated loaded libraries.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-55200' in InsightVM or Nexpose; Asset search for installed software containing 'libssh2'; Use custom queries in InsightVM to identify systems with specific libssh2 file versions (check 'Installed Software' data).",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "'DirtyClone' Linux Kernel Vulnerability Leads to Root Access",
+        "tldr": "A newly disclosed Linux Kernel vulnerability, dubbed 'DirtyClone,' has been found to allow attackers to gain root access on affected systems. This critical flaw could enable full system compromise.",
+        "action": "Immediately apply the latest Linux kernel security updates to all vulnerable systems. Prioritize patching servers and critical infrastructure running Linux. Implement least privilege principles and monitor for suspicious root access.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/dirtyclone-linux-kernel-vulnerability-leads-to-root-access/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Linux Kernel. Specific vulnerable versions are not detailed in the article, but refers to the 'DirtyClone' flaw leading to root access. All unpatched Linux distributions should be considered at risk until patched.",
+        "how_to_determine_impact": "Identify the kernel version ('uname -r') on all Linux systems. Consult distribution-specific security advisories (e.g., Ubuntu Security Notices, Red Hat Advisories) for patches related to 'DirtyClone' or similar privilege escalation vulnerabilities. Look for any suspicious processes running with root privileges from unusual locations or unexpected user context.",
+        "tanium_query_hint": "Get Kernel Version from all Linux machines; Get Installed Patches with Name contains 'linux-image' or 'kernel' and compare against known fixed versions; Get Running Processes with User equals 'root' and look for unusual parent processes or command lines.",
+        "rapid7_query_hint": "Asset search for Linux systems by kernel version in InsightVM; Look for vulnerability IDs associated with Linux kernel privilege escalation or 'DirtyClone' in InsightVM; Scan Linux assets for missing kernel patches that address this vulnerability.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
         "category": "vulns"
       }
     ]
