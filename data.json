@@ -1,108 +1,117 @@
 {
   "breaches": [
     {
-      "title": "Data breach exposes up to 14.2 million email logins at six ISPs",
-      "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach affecting one of its email systems. This breach exposed up to 14.2 million email logins, impacting customers across six different internet service providers (ISPs) in Japan.",
-      "action": "Customers of KDDI and the affected ISPs should immediately change their email passwords and enable multi-factor authentication. Organizations should advise their employees in Japan to take these steps and monitor for credential stuffing attacks.",
+      "title": "Nissan discloses employee data breach linked to Oracle zero-day attacks",
+      "tldr": "Nissan has reported a data breach impacting current and former employees. The breach was caused by threat actors exploiting a zero-day vulnerability in Oracle PeopleSoft, an attack method previously associated with the ShinyHunters extortion group.",
+      "action": "Identify all Oracle PeopleSoft instances within your environment. Immediately apply any available patches or workarounds for known vulnerabilities related to PeopleSoft and investigate for indicators of compromise related to ShinyHunters.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/",
       "source": "BleepingComputer"
     },
     {
-      "title": "236,000 DCloud Uni-App Sites Used in Crypto Scams, Phishing, and Wallet Drainers",
-      "tldr": "Over 236,000 DCloud Uni-App sites have been identified as being used in widespread crypto scams, phishing campaigns, and wallet drainers, impacting a large number of potential victims and leading to financial loss.",
-      "action": "Users should exercise extreme caution with unfamiliar crypto-related sites and applications. Organizations should educate employees on phishing and scam indicators and reinforce the use of multi-factor authentication for all financial accounts.",
+      "title": "NAIC says public data stolen in ShinyHunters' PeopleSoft breach",
+      "tldr": "The National Association of Insurance Commissioners (NAIC) confirmed a breach by the ShinyHunters extortion group. The attackers exploited a zero-day vulnerability in an Oracle PeopleSoft server, stealing publicly available data, outdated logs, and configuration files.",
+      "action": "Review access logs and security configurations for Oracle PeopleSoft servers, particularly looking for unauthorized access or data exfiltration attempts. Ensure all PeopleSoft instances are patched and monitor for activity from the ShinyHunters group.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/236000-dcloud-uni-app-sites-used-in.html",
+      "source_url": "https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Malicious Perplexity Chrome Extension Intercepted Searches and Address Bar Input",
+      "tldr": "A malicious Chrome extension, masquerading as 'Perplexity', was discovered intercepting user searches and address bar input. This allows for exfiltration of sensitive browsing data and potentially other personal information.",
+      "action": "Advise all users to audit their installed Chrome extensions, removing any unfamiliar or suspicious ones. Implement browser extension whitelisting where possible and enforce strict policies on extension installations.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/06/malicious-perplexity-chrome-extension.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Insurance Regulators Group NAIC Hit in Oracle PeopleSoft Hack",
-      "tldr": "The National Association of Insurance Commissioners (NAIC), a group of insurance regulators, was reportedly affected by a hack involving Oracle PeopleSoft. The nature and extent of the data breach are under investigation, raising concerns about sensitive regulatory data.",
-      "action": "Organizations using Oracle PeopleSoft should ensure all security patches are applied and review access logs for any unauthorized activity. Affected entities should initiate incident response protocols, including data breach notification assessments.",
+      "title": "Hijacked npm and Go Packages Use VS Code Tasks to Deploy Python Infostealer",
+      "tldr": "Malicious actors are compromising npm and Go packages, leveraging VS Code tasks to deploy a Python-based infostealer. This supply chain attack can lead to the theft of sensitive data from developer machines.",
+      "action": "Developers should verify the integrity and provenance of all npm and Go packages before use. Implement software supply chain security practices, including package scanning and integrity checks. Monitor developer workstations for suspicious VS Code task executions or Python infostealer activity.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/insurance-regulators-group-naic-hit-in-oracle-peoplesoft-hack/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Chinese Framework Powers 200,000 Scam Sites",
-      "tldr": "A Chinese framework is reportedly powering over 200,000 scam sites, facilitating various malicious activities including phishing, crypto scams, and potentially data theft on a massive scale.",
-      "action": "Implement web filtering and email security solutions to block access to known malicious domains. Educate users about the risks of visiting unverified websites and recognizing scam indicators to prevent potential data or financial loss.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/chinese-framework-powers-200000-scam-sites/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/06/hijacked-npm-and-go-packages-use-vs.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Public PoC Released for Critical libssh2 CVE-2026-55200 Client-Side SSH Flaw",
-      "tldr": "A public Proof-of-Concept (PoC) has been released for CVE-2026-55200, a critical client-side SSH vulnerability in libssh2. This flaw could allow attackers to execute arbitrary code or compromise systems that use vulnerable versions of libssh2 when connecting to a malicious SSH server.",
-      "action": "Immediately identify and patch all systems utilizing libssh2, especially client-side SSH implementations. Prioritize systems that connect to untrusted or external SSH servers.",
-      "cve_ids": [
-        "CVE-2026-55200"
-      ],
-      "source_url": "https://thehackernews.com/2026/06/public-poc-released-for-critical.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "libssh2 library, client-side SSH implementations. Specific vulnerable versions should be checked against official libssh2 advisories, but generally applies to unpatched versions.",
-      "how_to_determine_impact": "Identify all assets that utilize the libssh2 library for SSH client functionalities. Check installed software packages, dependencies (e.g., 'apt list --installed' or 'yum list installed'), and custom applications for libssh2 versions. Inspect network logs for unusual outbound SSH connections from client systems to potentially malicious servers.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'libssh2' from all machines; Get File Version['/usr/lib*/libssh2.so*'] from all machines; Get Running Processes matching 'ssh' and their associated loaded libraries.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-55200' in InsightVM or Nexpose; Asset search for installed software containing 'libssh2'; Use custom queries in InsightVM to identify systems with specific libssh2 file versions (check 'Installed Software' data).",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "Critical SimpleHelp flaw exploited to deploy new stealer malware",
-      "tldr": "A critical vulnerability (CVE-2026-48558) in SimpleHelp is being actively exploited by attackers to deploy 'Djinn Stealer', a new cross-platform information stealer impacting Windows, macOS, and Linux systems.",
-      "action": "Immediately patch all SimpleHelp installations to the latest secure version. Conduct an investigation for signs of compromise, specifically looking for Djinn Stealer on SimpleHelp servers and connected endpoints.",
+      "tldr": "A critical vulnerability, CVE-2026-48558, in SimpleHelp remote support software is being actively exploited in the wild. Attackers are leveraging this flaw to deploy Djinn Stealer, a new cross-platform information stealer affecting Windows, macOS, and Linux systems.",
+      "action": "Immediately patch all SimpleHelp installations to the latest secure version. Investigate systems running SimpleHelp for signs of compromise, specifically the presence of Djinn Stealer or related indicators of compromise.",
       "cve_ids": [
         "CVE-2026-48558"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SimpleHelp remote access software. Specific vulnerable versions not detailed in the article, but applies to unpatched installations susceptible to CVE-2026-48558.",
-      "how_to_determine_impact": "Verify the version of SimpleHelp remote access server software. Check server and client system logs for suspicious processes (e.g., 'Djinn' or 'Taskweaver' executables), unusual network connections, or unauthorized remote access sessions. Consult SimpleHelp's official advisories for specific version remediation details.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'SimpleHelp'; Get Running Processes with Name contains 'Djinn' or 'Taskweaver'; Get Network Connections from SimpleHelp servers to unexpected IPs.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-48558' in InsightVM; Asset search for installed software named 'SimpleHelp'; Hunt for Djinn Stealer or Taskweaver indicators of compromise (IOCs) using file hashes, process names, or network connections in InsightIDR.",
+      "affected_versions": "SimpleHelp remote support software",
+      "how_to_determine_impact": "Identify all SimpleHelp installations. Verify the version number against vendor advisories for CVE-2026-48558. Check logs for unusual outbound connections or the execution of unrecognized processes, especially in paths related to SimpleHelp or common temporary directories.",
+      "tanium_query_hint": "Get Tanium System Details matching 'SimpleHelp' and compare version numbers. Use 'Get Running Processes' for suspicious executables like 'Djinn Stealer' or unusual process parentage. Use 'Get File Hash' on SimpleHelp executables and compare with known good hashes.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-48558' on assets. Utilize InsightVM's 'Installed Software' query to identify SimpleHelp versions. For InsightIDR, search logs for 'SimpleHelp' and keywords related to process creation, network connections, or file modifications indicative of infostealer activity.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Hackers now exploit critical Oracle E-Business flaw in attacks",
-      "tldr": "Attackers are actively exploiting a critical vulnerability (CVE-2026-46817) in the Oracle E-Business Suite (EBS) financial application. This exploitation could lead to unauthorized access and compromise of critical financial data and systems.",
-      "action": "Apply the latest security patches for Oracle E-Business Suite immediately. Conduct a thorough audit of EBS logs and system activity for any signs of compromise following the disclosure of active exploitation.",
+      "tldr": "A critical vulnerability, CVE-2026-46817, in Oracle E-Business Suite (EBS) financial application is now being actively exploited by attackers. This flaw could lead to significant compromise of financial and business-critical data.",
+      "action": "Patch all Oracle E-Business Suite installations immediately. Review logs for any suspicious activity, unauthorized access attempts, or data exfiltration from EBS instances.",
       "cve_ids": [
         "CVE-2026-46817"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Oracle E-Business Suite (EBS) financial application. Specific vulnerable versions not detailed in the article, but applies to unpatched installations susceptible to CVE-2026-46817.",
-      "how_to_determine_impact": "Verify the version of Oracle E-Business Suite on all deployed instances. Conduct a thorough review of EBS application logs, database access logs, and system audit trails for unauthorized access attempts, unusual queries, or any data exfiltration. Consult Oracle's official security advisories for specific version details and indicators of compromise.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'Oracle E-Business Suite' from relevant servers; Get File Version['/path/to/ebs/components'] on EBS servers; Get Network Connections from EBS servers to untrusted or unusual external IPs.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-46817' in InsightVM or Nexpose; Asset search for installed software named 'Oracle E-Business Suite'; Review database audit logs for suspicious activity or unauthorized schema changes.",
+      "affected_versions": "Oracle E-Business Suite (EBS)",
+      "how_to_determine_impact": "Identify all Oracle EBS installations. Verify the version number and applied patches against Oracle's security advisories for CVE-2026-46817. Check application logs for unexpected user activity, privilege escalation, or data manipulation within EBS.",
+      "tanium_query_hint": "Use 'Get Installed Applications' or 'Get Software Package' to identify Oracle E-Business Suite. Query 'Get Files' to check patch levels or configuration files. Monitor 'Get Network Connections' for unusual outbound traffic from EBS servers.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-46817'. Utilize InsightVM to scan for Oracle EBS vulnerabilities. In InsightIDR, create alerts for suspicious activity patterns related to Oracle EBS authentication, administration, or large data transfers.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
+      "title": "Public PoC Released for Critical libssh2 CVE-2026-55200 Client-Side SSH Flaw",
+      "tldr": "A critical client-side SSH vulnerability, CVE-2026-55200, in libssh2 has a public Proof-of-Concept (PoC) available. This increases the likelihood of active exploitation, allowing attackers to compromise systems using vulnerable libssh2 clients.",
+      "action": "Identify all systems and applications utilizing libssh2, especially client-side implementations. Prioritize patching libssh2 to a version that remediates CVE-2026-55200. Restrict client SSH connections to trusted servers until patches are applied.",
+      "cve_ids": [
+        "CVE-2026-55200"
+      ],
+      "source_url": "https://thehackernews.com/2026/06/public-poc-released-for-critical.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "libssh2 library, specifically client-side SSH implementations",
+      "how_to_determine_impact": "Identify all applications and systems that link against or use the libssh2 library. Check the version of libssh2 present on these systems and compare it against vendor advisories for CVE-2026-55200.",
+      "tanium_query_hint": "Use 'Get Files with Name' to find 'libssh2.dll', 'libssh2.so' or 'libssh2.dylib' and their versions. Use 'Get Running Processes' and 'Get Module Versions' to identify processes loading vulnerable libssh2 versions.",
+      "rapid7_query_hint": "Scan assets for vulnerability ID 'CVE-2026-55200'. Use custom vulnerability checks for specific libssh2 file versions or package manager queries (e.g., 'dpkg -l | grep libssh2' for Linux) on relevant assets.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical"
+    },
+    {
       "title": "'DirtyClone' Linux Kernel Vulnerability Leads to Root Access",
-      "tldr": "A newly disclosed Linux Kernel vulnerability, dubbed 'DirtyClone,' has been found to allow attackers to gain root access on affected systems. This critical flaw could enable full system compromise.",
-      "action": "Immediately apply the latest Linux kernel security updates to all vulnerable systems. Prioritize patching servers and critical infrastructure running Linux. Implement least privilege principles and monitor for suspicious root access.",
+      "tldr": "A newly disclosed Linux Kernel vulnerability, dubbed 'DirtyClone', allows attackers to achieve root access on affected systems. This critical flaw could enable full system compromise if exploited.",
+      "action": "Apply the latest Linux Kernel security updates as soon as they become available. Until patched, implement additional compensating controls such as limiting non-essential user privileges and strengthening endpoint detection and response.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/dirtyclone-linux-kernel-vulnerability-leads-to-root-access/",
       "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Linux Kernel. Specific vulnerable versions are not detailed in the article, but refers to the 'DirtyClone' flaw leading to root access. All unpatched Linux distributions should be considered at risk until patched.",
-      "how_to_determine_impact": "Identify the kernel version ('uname -r') on all Linux systems. Consult distribution-specific security advisories (e.g., Ubuntu Security Notices, Red Hat Advisories) for patches related to 'DirtyClone' or similar privilege escalation vulnerabilities. Look for any suspicious processes running with root privileges from unusual locations or unexpected user context.",
-      "tanium_query_hint": "Get Kernel Version from all Linux machines; Get Installed Patches with Name contains 'linux-image' or 'kernel' and compare against known fixed versions; Get Running Processes with User equals 'root' and look for unusual parent processes or command lines.",
-      "rapid7_query_hint": "Asset search for Linux systems by kernel version in InsightVM; Look for vulnerability IDs associated with Linux kernel privilege escalation or 'DirtyClone' in InsightVM; Scan Linux assets for missing kernel patches that address this vulnerability.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "active_exploitation": false,
+      "affected_versions": "Linux Kernel",
+      "how_to_determine_impact": "Check the kernel version of all Linux systems (`uname -r`). Consult distribution-specific security advisories for patches related to 'DirtyClone' or recent critical kernel vulnerabilities leading to root access.",
+      "tanium_query_hint": "Get Kernel Version from all Linux endpoints. Use 'Get Tanium Linux Package List' to identify installed kernel packages and compare with vendor patch lists. Monitor for unusual privilege escalation attempts.",
+      "rapid7_query_hint": "Scan Linux assets with InsightVM for kernel vulnerabilities. Use agent queries for 'uname -r' output. Search InsightIDR logs for system calls or process creations indicative of root privilege escalation.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "NAIC says public data stolen in ShinyHunters' PeopleSoft breach",
+      "tldr": "The National Association of Insurance Commissioners (NAIC), a group of insurance regulators, experienced a data breach by the ShinyHunters extortion group. Publicly available data, old logs, and configuration files were stolen by exploiting an Oracle PeopleSoft zero-day.",
+      "action": "While this directly impacts NAIC, insurance companies should note that regulators are also targets of sophisticated attacks. Review your own third-party risk management with regulators and ensure robust defenses for similar enterprise applications.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/",
+      "source": "BleepingComputer"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -1529,6 +1538,42 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical",
         "category": "vulns"
+      },
+      {
+        "title": "Nissan discloses employee data breach linked to Oracle zero-day attacks",
+        "tldr": "Nissan has reported a data breach impacting current and former employees. The breach was caused by threat actors exploiting a zero-day vulnerability in Oracle PeopleSoft, an attack method previously associated with the ShinyHunters extortion group.",
+        "action": "Identify all Oracle PeopleSoft instances within your environment. Immediately apply any available patches or workarounds for known vulnerabilities related to PeopleSoft and investigate for indicators of compromise related to ShinyHunters.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "NAIC says public data stolen in ShinyHunters' PeopleSoft breach",
+        "tldr": "The National Association of Insurance Commissioners (NAIC) confirmed a breach by the ShinyHunters extortion group. The attackers exploited a zero-day vulnerability in an Oracle PeopleSoft server, stealing publicly available data, outdated logs, and configuration files.",
+        "action": "Review access logs and security configurations for Oracle PeopleSoft servers, particularly looking for unauthorized access or data exfiltration attempts. Ensure all PeopleSoft instances are patched and monitor for activity from the ShinyHunters group.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Malicious Perplexity Chrome Extension Intercepted Searches and Address Bar Input",
+        "tldr": "A malicious Chrome extension, masquerading as 'Perplexity', was discovered intercepting user searches and address bar input. This allows for exfiltration of sensitive browsing data and potentially other personal information.",
+        "action": "Advise all users to audit their installed Chrome extensions, removing any unfamiliar or suspicious ones. Implement browser extension whitelisting where possible and enforce strict policies on extension installations.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/malicious-perplexity-chrome-extension.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hijacked npm and Go Packages Use VS Code Tasks to Deploy Python Infostealer",
+        "tldr": "Malicious actors are compromising npm and Go packages, leveraging VS Code tasks to deploy a Python-based infostealer. This supply chain attack can lead to the theft of sensitive data from developer machines.",
+        "action": "Developers should verify the integrity and provenance of all npm and Go packages before use. Implement software supply chain security practices, including package scanning and integrity checks. Monitor developer workstations for suspicious VS Code task executions or Python infostealer activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/hijacked-npm-and-go-packages-use-vs.html",
+        "source": "The Hacker News",
+        "category": "breaches"
       }
     ]
   }
