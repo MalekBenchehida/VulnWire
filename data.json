@@ -2,102 +2,102 @@
   "breaches": [
     {
       "title": "Data breach exposes up to 14.2 million email logins at six ISPs",
-      "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach impacting up to 14.2 million email logins. The breach occurred in an email system used by KDDI and five other ISPs, compromising user credentials.",
-      "action": "Advise potentially affected users to immediately change their email passwords and enable MFA. Implement stricter access controls and monitoring for shared email systems.",
+      "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach affecting its email system, impacting up to 14.2 million email logins across six internet service providers in Japan. Threat actors gained unauthorized access to the email system.",
+      "action": "Users of affected ISPs should immediately change their email passwords and enable multi-factor authentication where available. Organizations should review logs for suspicious activity related to KDDI or associated ISPs.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Polymarket customers lose $3 million in supply-chain attack",
-      "tldr": "Polymarket customers lost an estimated $3 million due to a supply-chain attack. Hackers injected a malicious script into Polymarket's frontend following a breach at a third-party vendor, leading to financial compromise.",
-      "action": "Immediately review and audit all third-party vendor integrations and their security posture. Implement strict content security policies (CSP) for web applications to prevent script injection.",
+      "title": "Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials",
+      "tldr": "Russian intelligence services are reportedly using fake support text messages to steal messaging credentials from Ukrainian citizens. This phishing campaign aims to gain access to private communications.",
+      "action": "Advise users to be extremely cautious of unsolicited messages, especially those requesting credentials or linking to login pages. Implement strong phishing awareness training and multi-factor authentication.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-customers-lose-3-million-in-supply-chain-attack/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "FBI Warns Russian Intelligence Hackers Target Signal Backup Recovery Keys",
-      "tldr": "The FBI and CISA are warning that a phishing campaign targeting Signal users tied to Russian intelligence services has evolved to steal Signal Backup Recovery Keys, allowing attackers to access victims' historical messages.",
-      "action": "Urgently warn Signal users about phishing attempts for recovery keys. Advise users not to click suspicious links and to verify official communications from Signal. Encourage strong, unique passwords and MFA.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/fbi-warns-russian-intelligence-hackers.html",
+      "source_url": "https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Order-tracking app Shop abused to push callback phishing attacks",
-      "tldr": "Threat actors are increasingly abusing Shop, the order-tracking app from Shopify, by adding fake purchase receipts in users' order histories to trick them into providing sensitive data or installing remote access software.",
-      "action": "Advise users of the Shop app to be wary of unexpected purchase receipts and unsolicited calls. Companies should warn customers about this new phishing vector.",
+      "title": "FBI: Russian hackers now target Signal backup recovery keys",
+      "tldr": "The FBI and CISA warn that a phishing campaign, linked to Russian intelligence, is now targeting Signal users' Backup Recovery Keys. This allows attackers to access victims' entire historical message archives, not just new communications.",
+      "action": "Signal users should be vigilant against phishing attempts and verify any requests for backup recovery keys. Consider disabling Signal backups to the cloud if concerned about this specific vector. Ensure multi-factor authentication is enabled where possible for linked email accounts.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/order-tracking-app-shop-abused-to-push-callback-phishing-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Insurance Regulators Group NAIC Hit in Oracle PeopleSoft Hack",
+      "tldr": "The National Association of Insurance Commissioners (NAIC) was impacted by a hack involving its Oracle PeopleSoft system. This incident highlights data security risks for organizations utilizing enterprise resource planning (ERP) software.",
+      "action": "Organizations using Oracle PeopleSoft should ensure all security patches are applied, review access controls, and monitor for unauthorized activity. Conduct an internal audit of ERP system security.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/insurance-regulators-group-naic-hit-in-oracle-peoplesoft-hack/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "CISA Adds Exploited PTC Windchill RCE Flaw to KEV as Web Shell Attacks Continue",
-      "tldr": "CISA has added an exploited Remote Code Execution (RCE) flaw in PTC Windchill to its Known Exploited Vulnerabilities (KEV) catalog. Attackers are leveraging this vulnerability to deploy web shells and maintain persistence.",
-      "action": "Immediately apply patches for PTC Windchill. Scan systems for web shells and other signs of compromise, especially on servers running Windchill.",
+      "title": "Critical SimpleHelp flaw exploited to deploy new stealer malware",
+      "tldr": "Hackers are actively exploiting CVE-2026-48558, a critical vulnerability in SimpleHelp, to deploy Djinn Stealer. Djinn Stealer is a cross-platform information stealer impacting Windows, macOS, and Linux systems. Active exploitation means immediate remediation is required.",
+      "action": "Immediately patch all SimpleHelp installations to the latest secure version. Isolate SimpleHelp servers from critical internal networks until patched. Scan endpoints for Djinn Stealer indicators of compromise.",
       "cve_ids": [
-        "CVE-2023-40092"
+        "CVE-2026-48558"
       ],
-      "source_url": "https://thehackernews.com/2026/06/cisa-adds-exploited-ptc-windchill-rce.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "PTC Windchill (specific versions impacted by RCE flaw, refer to PTC advisories for CVE-2023-40092)",
-      "how_to_determine_impact": "Check PTC Windchill server versions. Scan web server directories for unknown or recently modified files (e.g., .jsp, .aspx web shells). Review server logs for suspicious process execution.",
-      "tanium_query_hint": "Get Installed Applications[Name regex 'PTC Windchill']. Search for 'Get Running Processes with CommandLine and Parent CommandLine' for suspicious processes. Search file content for common web shell signatures.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2023-40092' in InsightVM. Use InsightAgent to scan for web shell artifacts in Windchill installation paths.",
+      "affected_versions": "SimpleHelp versions prior to the latest patched release (specific versions should be confirmed with SimpleHelp vendor documentation).",
+      "how_to_determine_impact": "Identify all SimpleHelp server instances. Check SimpleHelp logs and connected client systems for signs of unauthorized access, suspicious processes (e.g., Djinn Stealer), or unusual outbound connections. Verify the version of SimpleHelp installed.",
+      "tanium_query_hint": "Get Tanium Gathered Data['Installed Applications'] from all machines where Tanium Gathered Data['Installed Applications'] contains 'SimpleHelp'. For potential compromise: Get Running Processes with MD5 Hash from all machines where Running Processes matches 'Djinn Stealer process name/hash'.",
+      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-48558' in InsightVM. For InsightIDR, look for alerts related to new/unusual processes or network connections originating from SimpleHelp servers or clients, or specific Djinn Stealer indicators.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Based on RCE and active exploitation)"
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Hackers now exploit critical Oracle E-Business flaw in attacks",
+      "tldr": "A critical vulnerability, CVE-2026-46817, in Oracle E-Business Suite (EBS) is now being actively exploited by attackers. This flaw in the financial application poses a significant risk to organizations using EBS.",
+      "action": "Apply the latest security patches for Oracle E-Business Suite immediately. Review network traffic and logs for any indicators of compromise related to EBS and external connections.",
+      "cve_ids": [
+        "CVE-2026-46817"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Oracle E-Business Suite (EBS) (specific vulnerable versions should be confirmed with Oracle advisory for CVE-2026-46817).",
+      "how_to_determine_impact": "Identify all Oracle E-Business Suite installations. Verify the patch level of each instance. Monitor for unauthorized access attempts, unusual database activity, or changes to critical financial data.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Installed Applications contains 'Oracle E-Business Suite'. Query for specific patch levels or file versions as per Oracle advisory.",
+      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-46817' in InsightVM. Monitor InsightIDR for suspicious activity originating from Oracle EBS servers, particularly related to database access or system commands.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
-      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is giving federal agencies until Sunday to patch an actively exploited vulnerability in Cisco Unified Communications Manager Server. This flaw is being actively exploited in attacks.",
-      "action": "Immediately apply patches for Cisco Unified Communications Manager Server. Prioritize systems that are internet-facing. Monitor for signs of compromise, including unauthorized access or suspicious network activity.",
-      "cve_ids": [
-        "CVE-2024-20359"
-      ],
+      "tldr": "CISA has issued an urgent directive for federal agencies to patch an actively exploited vulnerability in Cisco Unified Communications Manager Server by Sunday. This flaw is being used in attacks, requiring immediate attention.",
+      "action": "Immediately apply the recommended security patches for Cisco Unified Communications Manager Server. Review systems for compromise, including unusual log entries or unauthorized access.",
+      "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager Server (specific versions affected by CVE-2024-20359, refer to Cisco advisories)",
-      "how_to_determine_impact": "Check Cisco Unified Communications Manager Server versions and applied patches. Review system logs for unauthorized access or unusual administrative activity.",
-      "tanium_query_hint": "Get Installed Applications[Name 'Cisco Unified Communications Manager'] and check version. Look for 'Get Open Network Connections' on relevant servers for unusual outbound traffic.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2024-20359' in InsightVM. Use InsightAgent to check installed software versions on Cisco UC servers.",
+      "affected_versions": "Cisco Unified Communications Manager Server (specific vulnerable versions should be confirmed with Cisco advisory cited by CISA).",
+      "how_to_determine_impact": "Identify all Cisco Unified Communications Manager Server instances. Check the installed version and patch level against Cisco's security advisories. Monitor for unauthorized access, configuration changes, or unusual traffic.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Installed Applications contains 'Cisco Unified Communications Manager'. Query for specific file versions or patch presence as per Cisco advisory.",
+      "rapid7_query_hint": "Search for relevant Cisco Unified Communications Manager vulnerabilities in InsightVM (refer to CISA's directive for specific CVE if available). Monitor InsightIDR for suspicious activity on UC Manager servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Based on active exploitation and CISA deadline, assuming RCE/PrivEsc)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "New Linux pedit COW Exploit Enables Root Access by Poisoning Cached Binaries",
-      "tldr": "A new Linux 'pedit' Copy-on-Write (COW) exploit allows local users to gain root access by poisoning cached binaries. This vulnerability could lead to full system compromise from a low-privileged account.",
-      "action": "Apply vendor patches for affected Linux distributions immediately. Monitor for suspicious root access attempts from non-privileged users.",
+      "title": "Amazon Q Flaw Enabled Cloud Credential Theft via Malicious Repositories",
+      "tldr": "A flaw in Amazon Q allowed for cloud credential theft through the use of malicious repositories. This vulnerability enabled attackers to gain unauthorized access to sensitive cloud credentials, posing a significant risk to cloud environments.",
+      "action": "Review all Amazon Q configurations for adherence to security best practices. Monitor for unauthorized access or unusual activity originating from Amazon Q or linked repositories. Immediately rotate any potentially compromised cloud credentials.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/amazon-q-flaw-enabled-cloud-credential-theft-via-malicious-repositories/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Specific Linux kernel versions (details to follow, monitor vendor advisories for 'pedit' vulnerability)",
-      "how_to_determine_impact": "Check Linux kernel version and installed patches. Look for unauthorized changes to system binaries or unusual process execution from low-privileged users.",
-      "tanium_query_hint": "Get Linux Kernel Version from all machines. Search for 'pedit' related files or processes.",
-      "rapid7_query_hint": "Asset search for Linux hosts with known vulnerable kernel versions. Look for vulnerability checks related to Linux kernel privilege escalation.",
+      "affected_versions": "Amazon Q (specific vulnerable versions/configurations should be confirmed with AWS advisories).",
+      "how_to_determine_impact": "Identify all Amazon Q instances and integrated repositories. Review repository configurations for suspicious content or unauthorized changes. Check AWS CloudTrail logs for unusual API calls or credential usage associated with Amazon Q.",
+      "tanium_query_hint": "Consult AWS console and documentation for configuration details. For connected endpoints, query 'Get Installed Applications' for Amazon Q related components if applicable, and 'Get Running Processes' for unusual activity.",
+      "rapid7_query_hint": "Monitor AWS accounts via InsightCloudSec for suspicious activity related to Amazon Q. Review InsightIDR logs for credential misuse or unauthorized access attempts from cloud environments.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (Estimated, Local Privilege Escalation)"
-    },
-    {
-      "title": "Amazon Q Developer Flaw Could Let Malicious Repos Run Code via MCP Configs",
-      "tldr": "A flaw in Amazon Q Developer could allow malicious repositories to execute arbitrary code through manipulated MCP configurations. This poses a significant risk for cloud environments leveraging Amazon Q.",
-      "action": "Review Amazon Q Developer configurations, especially those interacting with external repositories. Monitor Amazon Q environments for unauthorized code execution or unusual activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/06/amazon-q-developer-flaw-could-let.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Amazon Q Developer (specific configurations interacting with malicious repositories)",
-      "how_to_determine_impact": "Inspect Amazon Q Developer configurations for external repository integrations. Review logs for unusual build or deployment activity originating from Amazon Q and check for unauthorized credential usage.",
-      "tanium_query_hint": "No direct Tanium query, focus on cloud configuration review. Check AWS CloudTrail logs for Amazon Q service activity and credential usage anomalies.",
-      "rapid7_query_hint": "Utilize cloud security posture management (CSPM) tools for Amazon Q configuration assessment. Look for logs indicating unauthorized credential access or code execution within AWS from Amazon Q.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.5 High (Estimated, Remote Code Execution/Cloud Credential Theft)"
+      "cvss_score": "9.5 Critical"
     }
   ],
   "insurance": [],
@@ -1369,6 +1369,112 @@
         "source_url": "https://www.bleepingcomputer.com/news/security/order-tracking-app-shop-abused-to-push-callback-phishing-attacks/",
         "source": "BleepingComputer",
         "category": "breaches"
+      }
+    ],
+    "2026-06-29": [
+      {
+        "title": "Data breach exposes up to 14.2 million email logins at six ISPs",
+        "tldr": "Japanese telecommunications operator KDDI Corporation disclosed a data breach affecting its email system, impacting up to 14.2 million email logins across six internet service providers in Japan. Threat actors gained unauthorized access to the email system.",
+        "action": "Users of affected ISPs should immediately change their email passwords and enable multi-factor authentication where available. Organizations should review logs for suspicious activity related to KDDI or associated ISPs.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-exposes-up-to-142-million-email-logins-at-six-isps/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Ukraine Says Russian Intelligence Used Fake Support Texts to Steal Messaging Credentials",
+        "tldr": "Russian intelligence services are reportedly using fake support text messages to steal messaging credentials from Ukrainian citizens. This phishing campaign aims to gain access to private communications.",
+        "action": "Advise users to be extremely cautious of unsolicited messages, especially those requesting credentials or linking to login pages. Implement strong phishing awareness training and multi-factor authentication.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/06/ukraine-says-russian-intelligence-used.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "FBI: Russian hackers now target Signal backup recovery keys",
+        "tldr": "The FBI and CISA warn that a phishing campaign, linked to Russian intelligence, is now targeting Signal users' Backup Recovery Keys. This allows attackers to access victims' entire historical message archives, not just new communications.",
+        "action": "Signal users should be vigilant against phishing attempts and verify any requests for backup recovery keys. Consider disabling Signal backups to the cloud if concerned about this specific vector. Ensure multi-factor authentication is enabled where possible for linked email accounts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/fbi-russian-hackers-now-target-signal-backup-recovery-keys/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Insurance Regulators Group NAIC Hit in Oracle PeopleSoft Hack",
+        "tldr": "The National Association of Insurance Commissioners (NAIC) was impacted by a hack involving its Oracle PeopleSoft system. This incident highlights data security risks for organizations utilizing enterprise resource planning (ERP) software.",
+        "action": "Organizations using Oracle PeopleSoft should ensure all security patches are applied, review access controls, and monitor for unauthorized activity. Conduct an internal audit of ERP system security.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/insurance-regulators-group-naic-hit-in-oracle-peoplesoft-hack/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Critical SimpleHelp flaw exploited to deploy new stealer malware",
+        "tldr": "Hackers are actively exploiting CVE-2026-48558, a critical vulnerability in SimpleHelp, to deploy Djinn Stealer. Djinn Stealer is a cross-platform information stealer impacting Windows, macOS, and Linux systems. Active exploitation means immediate remediation is required.",
+        "action": "Immediately patch all SimpleHelp installations to the latest secure version. Isolate SimpleHelp servers from critical internal networks until patched. Scan endpoints for Djinn Stealer indicators of compromise.",
+        "cve_ids": [
+          "CVE-2026-48558"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "SimpleHelp versions prior to the latest patched release (specific versions should be confirmed with SimpleHelp vendor documentation).",
+        "how_to_determine_impact": "Identify all SimpleHelp server instances. Check SimpleHelp logs and connected client systems for signs of unauthorized access, suspicious processes (e.g., Djinn Stealer), or unusual outbound connections. Verify the version of SimpleHelp installed.",
+        "tanium_query_hint": "Get Tanium Gathered Data['Installed Applications'] from all machines where Tanium Gathered Data['Installed Applications'] contains 'SimpleHelp'. For potential compromise: Get Running Processes with MD5 Hash from all machines where Running Processes matches 'Djinn Stealer process name/hash'.",
+        "rapid7_query_hint": "Search for vulnerability 'CVE-2026-48558' in InsightVM. For InsightIDR, look for alerts related to new/unusual processes or network connections originating from SimpleHelp servers or clients, or specific Djinn Stealer indicators.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers now exploit critical Oracle E-Business flaw in attacks",
+        "tldr": "A critical vulnerability, CVE-2026-46817, in Oracle E-Business Suite (EBS) is now being actively exploited by attackers. This flaw in the financial application poses a significant risk to organizations using EBS.",
+        "action": "Apply the latest security patches for Oracle E-Business Suite immediately. Review network traffic and logs for any indicators of compromise related to EBS and external connections.",
+        "cve_ids": [
+          "CVE-2026-46817"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Oracle E-Business Suite (EBS) (specific vulnerable versions should be confirmed with Oracle advisory for CVE-2026-46817).",
+        "how_to_determine_impact": "Identify all Oracle E-Business Suite installations. Verify the patch level of each instance. Monitor for unauthorized access attempts, unusual database activity, or changes to critical financial data.",
+        "tanium_query_hint": "Get Installed Applications from all machines where Installed Applications contains 'Oracle E-Business Suite'. Query for specific patch levels or file versions as per Oracle advisory.",
+        "rapid7_query_hint": "Search for vulnerability 'CVE-2026-46817' in InsightVM. Monitor InsightIDR for suspicious activity originating from Oracle EBS servers, particularly related to database access or system commands.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA sets urgent deadline to fix Cisco flaw exploited in attacks",
+        "tldr": "CISA has issued an urgent directive for federal agencies to patch an actively exploited vulnerability in Cisco Unified Communications Manager Server by Sunday. This flaw is being used in attacks, requiring immediate attention.",
+        "action": "Immediately apply the recommended security patches for Cisco Unified Communications Manager Server. Review systems for compromise, including unusual log entries or unauthorized access.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-sets-urgent-deadline-to-fix-cisco-flaw-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Unified Communications Manager Server (specific vulnerable versions should be confirmed with Cisco advisory cited by CISA).",
+        "how_to_determine_impact": "Identify all Cisco Unified Communications Manager Server instances. Check the installed version and patch level against Cisco's security advisories. Monitor for unauthorized access, configuration changes, or unusual traffic.",
+        "tanium_query_hint": "Get Installed Applications from all machines where Installed Applications contains 'Cisco Unified Communications Manager'. Query for specific file versions or patch presence as per Cisco advisory.",
+        "rapid7_query_hint": "Search for relevant Cisco Unified Communications Manager vulnerabilities in InsightVM (refer to CISA's directive for specific CVE if available). Monitor InsightIDR for suspicious activity on UC Manager servers.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Amazon Q Flaw Enabled Cloud Credential Theft via Malicious Repositories",
+        "tldr": "A flaw in Amazon Q allowed for cloud credential theft through the use of malicious repositories. This vulnerability enabled attackers to gain unauthorized access to sensitive cloud credentials, posing a significant risk to cloud environments.",
+        "action": "Review all Amazon Q configurations for adherence to security best practices. Monitor for unauthorized access or unusual activity originating from Amazon Q or linked repositories. Immediately rotate any potentially compromised cloud credentials.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/amazon-q-flaw-enabled-cloud-credential-theft-via-malicious-repositories/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Amazon Q (specific vulnerable versions/configurations should be confirmed with AWS advisories).",
+        "how_to_determine_impact": "Identify all Amazon Q instances and integrated repositories. Review repository configurations for suspicious content or unauthorized changes. Check AWS CloudTrail logs for unusual API calls or credential usage associated with Amazon Q.",
+        "tanium_query_hint": "Consult AWS console and documentation for configuration details. For connected endpoints, query 'Get Installed Applications' for Amazon Q related components if applicable, and 'Get Running Processes' for unusual activity.",
+        "rapid7_query_hint": "Monitor AWS accounts via InsightCloudSec for suspicious activity related to Amazon Q. Review InsightIDR logs for credential misuse or unauthorized access attempts from cloud environments.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.5 Critical",
+        "category": "vulns"
       }
     ]
   }
