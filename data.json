@@ -2,42 +2,42 @@
   "breaches": [
     {
       "title": "282 iOS AI Apps Leak API Keys and Open AI Proxy Access in Network Traffic Study",
-      "tldr": "A network traffic analysis revealed that 282 iOS AI applications are insecurely handling API keys and OpenAI proxy access credentials. This vulnerability leads to the exposure of sensitive API keys in network traffic, enabling potential unauthorized access and abuse of AI services and associated data.",
-      "action": "Immediately audit all iOS AI applications used within the organization for insecure API key handling. Revoke and rotate any potentially leaked API keys and implement robust secure API key management practices, including stricter network traffic encryption and monitoring for AI-related applications.",
+      "tldr": "A study revealed that 282 iOS AI applications are insecurely handling API keys, leading to their leakage and open access to AI proxies in network traffic. This exposure creates risks for unauthorized AI service usage, data exfiltration, and potential account compromises.",
+      "action": "For developers, implement secure API key management and ensure encrypted communication. For users, review permissions for AI apps and monitor for suspicious activity from linked AI accounts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/282-ios-apps-found-leaking-llm-api-keys.html",
       "source": "The Hacker News"
     },
     {
       "title": "Fake Perplexity extension on Chrome Web Store tracked searches",
-      "tldr": "A malicious Chrome Web Store extension, disguised as the Perplexity AI answer engine, has been found intercepting user search traffic and collecting browsing information. This deceptive extension compromises user privacy by exfiltrating sensitive browsing data without consent.",
-      "action": "Immediately instruct all users to review and remove any suspicious or untrusted browser extensions, particularly those masquerading as legitimate AI tools like Perplexity. Implement browser extension whitelisting policies and educate employees on verifying extension authenticity before installation.",
+      "tldr": "A malicious browser extension, disguised as \"Perplexity AI\" on the Chrome Web Store, was found to intercept and collect users' search queries and browsing data. This unauthorized data collection poses a significant privacy risk to affected individuals.",
+      "action": "Immediately remove any suspicious \"Perplexity AI\" or unverified extensions from Chrome browsers. Advise users to rigorously vet extensions before installation and adhere to strict security best practices.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/fake-perplexity-extension-on-chrome-web-store-tracked-searches/",
       "source": "BleepingComputer"
     },
     {
       "title": "Insurance giant Aflac discloses data breach after subsidiary hack",
-      "tldr": "American insurance giant Aflac has disclosed a data breach originating from a hack of its Japan subsidiary's systems. Attackers successfully stole personal and bank account information belonging to 4.38 million individuals, highlighting vulnerabilities in subsidiary security protocols.",
-      "action": "Conduct an immediate security audit of all subsidiary systems and third-party vendor access points to identify and remediate vulnerabilities. Implement enhanced data protection measures for sensitive personal and financial information, and monitor for any unauthorized use of the stolen data.",
+      "tldr": "Aflac, a major American insurance company, disclosed a data breach impacting its Japan subsidiary. The hack resulted in the compromise of personal and bank account information for 4.38 million customers, highlighting significant third-party risk.",
+      "action": "Organizations should conduct thorough security audits of all subsidiaries and third-party vendors. Enhance data protection measures, implement robust incident response plans, and provide immediate notification and identity protection services to affected individuals.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/insurance-giant-aflac-discloses-data-breach-after-subsidiary-hack/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Nissan discloses employee data breach linked to Oracle zero-day attacks",
-      "tldr": "Nissan has reported a data breach impacting its current and former employees, stemming from the exploitation of an Oracle PeopleSoft zero-day vulnerability. The attack, attributed to the ShinyHunters extortion group, resulted in unauthorized access and theft of employee data.",
-      "action": "Immediately apply all available patches and security updates for Oracle PeopleSoft systems, prioritizing any identified zero-day vulnerabilities. Conduct a comprehensive forensic investigation to determine the full scope of data compromise and strengthen access controls and monitoring for PeopleSoft environments.",
+      "title": "Nissan Employee Data Breached in Oracle PeopleSoft Hack",
+      "tldr": "Nissan's employee data was breached due to a hack targeting their Oracle PeopleSoft installation. This incident underscores the importance of securing enterprise resource planning (ERP) systems, which often house extensive sensitive employee information.",
+      "action": "Review and strengthen the security posture of all Oracle PeopleSoft deployments, ensuring all available patches are applied. Implement strict access controls, monitor for unusual activity, and educate employees on data privacy best practices.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/nissan-discloses-employee-data-breach-linked-to-oracle-zero-day-attacks/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/nissan-employee-data-breached-in-oracle-peoplesoft-hack/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Blackfield ransomware asks Nidec Corporation for $2 million ransom",
-      "tldr": "The Blackfield ransomware gang has launched an attack against Nidec Corporation, a prominent Japanese manufacturer of electronic components. The threat actors are demanding a substantial $2 million ransom, indicating a significant compromise of Nidec's systems and data.",
-      "action": "Isolate all affected systems and activate incident response protocols. Implement and test robust data backup and recovery strategies, strengthen network segmentation, and conduct a thorough analysis to identify initial access vectors and lateral movement. Refrain from paying the ransom and report the incident to relevant authorities.",
+      "tldr": "The Blackfield ransomware gang has launched an attack on Nidec Corporation, a prominent Japanese electronics manufacturer, and is demanding a $2 million ransom. This incident highlights the persistent and financially motivated threat ransomware poses to critical industrial and manufacturing entities.",
+      "action": "Implement and regularly test comprehensive backup and disaster recovery plans. Enhance network segmentation, deploy advanced endpoint detection and response (EDR) solutions, and conduct regular security awareness training for all employees to recognize and report suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/blackfield-ransomware-asks-nidec-corporation-for-2-million-ransom/",
       "source": "BleepingComputer"
@@ -46,85 +46,68 @@
   "vulns": [
     {
       "title": "Attackers Exploit SimpleHelp CVE-2026-48558 to Deploy TaskWeaver and Djinn Stealer",
-      "tldr": "Attackers are actively exploiting CVE-2026-48558, a critical vulnerability in SimpleHelp remote access and support software. This exploitation allows for the deployment of TaskWeaver and Djinn Stealer malware, leading to system compromise and potential data exfiltration.",
-      "action": "Immediately apply the latest security patches for SimpleHelp to remediate CVE-2026-48558. Conduct an urgent scan of all endpoints for indicators of compromise related to TaskWeaver and Djinn Stealer malware, isolating and remediating any affected systems.",
+      "tldr": "Attackers are actively exploiting CVE-2026-48558 in SimpleHelp to deploy TaskWeaver, a backdoor, and Djinn Stealer malware. This critical vulnerability allows for remote code execution, leading to system compromise and data theft.",
+      "action": "Immediately apply all available patches for SimpleHelp installations to remediate CVE-2026-48558. Conduct a comprehensive forensic analysis of all SimpleHelp servers and connected endpoints for signs of compromise, including the presence of TaskWeaver or Djinn Stealer.",
       "cve_ids": [
         "CVE-2026-48558"
       ],
       "source_url": "https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "SimpleHelp versions prior to the patched release addressing CVE-2026-48558. Consult vendor advisories for specific version numbers.",
-      "how_to_determine_impact": "Verify SimpleHelp server version against the latest vendor advisories. Review SimpleHelp server logs for unauthorized access or unusual activity. Scan endpoints for known TaskWeaver/Djinn Stealer malware signatures or process names (e.g., taskweaver.exe, djinn.dll).",
-      "tanium_query_hint": "Get Installed Applications from all machines with Software Name matches 'SimpleHelp' and compare version to patched releases. Concurrently, 'Get Running Processes from all machines with Process Name contains 'taskweaver' or 'djinn' OR Get File Hash from all machines with File Path contains 'TaskWeaver.exe' or 'DjinnStealer.exe''",
-      "rapid7_query_hint": "Run an authenticated vulnerability scan on assets running SimpleHelp for 'CVE-2026-48558'. Use Insight Agent query: 'asset.software.name CONTAINS 'SimpleHelp' AND vulnerability.cve = 'CVE-2026-48558''. Also, search for 'malware.name = 'TaskWeaver' OR malware.name = 'Djinn Stealer'' for endpoint compromise.",
+      "affected_versions": "SimpleHelp versions affected by CVE-2026-48558. Consult SimpleHelp vendor advisories for specific vulnerable ranges.",
+      "how_to_determine_impact": "Check SimpleHelp server logs for unauthorized access or execution events. On endpoints with SimpleHelp client, look for suspicious processes (e.g., 'TaskWeaver.exe', 'DjinnStealer.exe') or unusual network connections. Verify application of relevant SimpleHelp patches.",
+      "tanium_query_hint": "Get Installed Applications where Name contains 'SimpleHelp' and Version is less than [patched_version]'. 'Get Running Processes where Name contains 'TaskWeaver' or 'Djinn'",
+      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-48558' in InsightVM. Use InsightIDR to monitor for suspicious process creation or network activity on SimpleHelp hosts.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "CISA: Windows BlueHammer flaw now exploited by ransomware gangs",
-      "tldr": "CISA has confirmed that the Microsoft Defender privilege escalation vulnerability, known as 'BlueHammer,' is currently being actively exploited by ransomware gangs. This flaw, previously used in zero-day attacks, allows attackers to gain elevated privileges, paving the way for ransomware deployment.",
-      "action": "Immediately apply all available security updates for Microsoft Defender and Windows operating systems. Enhance endpoint detection and response (EDR) monitoring for signs of privilege escalation, unusual process creation, and ransomware-related activities on all Windows devices.",
+      "tldr": "CISA has issued a warning that the Microsoft Defender privilege escalation vulnerability, dubbed \"BlueHammer,\" is now being actively exploited by ransomware gangs in the wild. This flaw, previously used in zero-day attacks, allows attackers to gain elevated privileges on compromised Windows systems.",
+      "action": "Apply all pending Microsoft Windows and Microsoft Defender security updates immediately to patch the \"BlueHammer\" vulnerability. Conduct a high-priority scan of all Windows endpoints for indicators of compromise related to privilege escalation and ransomware activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-windows-bluehammer-flaw-now-exploited-by-ransomware-gangs/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Defender on Windows operating systems (unpatched versions). Consult Microsoft security advisories for the exact vulnerable versions and corresponding patches.",
-      "how_to_determine_impact": "Verify that Microsoft Defender definitions and engine versions are fully up-to-date across all Windows endpoints. Review Windows Event Logs (Security, System, Defender) for unusual activity, privilege escalation attempts (Event ID 4624/4672), or suspicious processes originating from Defender-related directories.",
-      "tanium_query_hint": "Get Windows Defender Engine Version from all machines to ensure it matches or exceeds the patched version. Also, 'Get Recent Events from all machines with Event Log matches 'Security' and Event ID matches '4624' (Logon Type 10) AND Process Name contains 'Defender'' for suspicious activity.",
-      "rapid7_query_hint": "Scan endpoints for known Microsoft Defender vulnerabilities, referencing CISA's Known Exploited Vulnerabilities catalog. Use Insight Agent query: 'asset.software.vendor = 'Microsoft' AND asset.software.name CONTAINS 'Defender' AND vulnerability.exploited = 'TRUE''. Monitor for 'threat.category = 'Ransomware'' alerts.",
+      "affected_versions": "Microsoft Defender and Windows operating systems. Refer to Microsoft's security advisories for specific vulnerable builds and required patches.",
+      "how_to_determine_impact": "Verify that all Windows systems have the latest security updates and Microsoft Defender definitions installed. Monitor Windows event logs (Security, System) for unusual privilege escalation events (e.g., Event ID 4672, 4624 type 9) or suspicious Defender alerts.",
+      "tanium_query_hint": "Get Installed Patches with Age > 0 and Source equals 'Microsoft' to find missing updates. Get Microsoft Defender Realtime Protection Status and Get Microsoft Defender Definition Version. Get Event Log 'Security' where Event ID equals '4672'",
+      "rapid7_query_hint": "Search for Microsoft Defender privilege escalation vulnerabilities in InsightVM. Monitor assets for CISA KEV entries and known ransomware IOCs via InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.0 Critical"
     },
     {
       "title": "Langflow RCE Exploited to Deploy Monero Miner on Exposed AI App Endpoints",
-      "tldr": "A Remote Code Execution (RCE) vulnerability in Langflow, an open-source AI application framework, is being actively exploited on exposed AI app endpoints. Attackers are leveraging this flaw to deploy Monero cryptocurrency miners, leading to unauthorized resource consumption and potential further system compromise.",
-      "action": "Immediately identify and isolate all exposed Langflow AI app endpoints. Apply any available security patches or configuration changes to mitigate the RCE vulnerability. Scan affected systems for cryptocurrency miners, remove them, and ensure all systems are free of backdoors.",
+      "tldr": "A Remote Code Execution (RCE) vulnerability in Langflow AI application endpoints is being actively exploited. Attackers are leveraging this flaw to deploy Monero cryptocurrency miners on compromised systems, leading to unauthorized resource consumption and potential further system compromise.",
+      "action": "Immediately identify and secure all internet-exposed Langflow instances. Apply any available security patches or implement mitigation strategies to prevent RCE. Monitor for unusual process activity, excessive CPU usage, or network connections indicative of cryptocurrency mining.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Langflow AI applications with exposed endpoints. Specific vulnerable versions should be confirmed via Langflow security advisories.",
-      "how_to_determine_impact": "Monitor Langflow instances for unusually high CPU/memory usage, unexpected network connections to known cryptocurrency mining pools, or the presence of common miner executables (e.g., xmrig, monerod). Review web server access logs for suspicious requests to Langflow endpoints indicative of RCE attempts.",
-      "tanium_query_hint": "Get Running Processes from all machines with Process Name contains 'xmrig' or 'monerod'. Get Network Connections from all machines with Destination Port in ['3333', '4444', '5555'] (common mining ports). Get Installed Applications from all machines with Software Name matches 'Langflow' and check for unauthorized modifications.",
-      "rapid7_query_hint": "Scan for assets running 'Langflow' with exposed web interfaces. Use Insight Agent query: 'process.name = 'xmrig' OR process.name = 'monerod' OR (source.ip = asset.ip AND destination.port IN (3333, 4444, 5555) AND threat.category = 'Cryptomining')'. Review access logs for suspicious RCE attempts.",
+      "affected_versions": "Langflow AI application endpoints. Consult Langflow official documentation or security advisories for specific vulnerable versions and patch information.",
+      "how_to_determine_impact": "Check Langflow application logs for suspicious input or command execution attempts. On servers hosting Langflow, inspect running processes for unauthorized cryptocurrency mining executables (e.g., 'monerod', 'xmrig') and monitor system resource utilization.",
+      "tanium_query_hint": "Get Installed Applications where Name contains 'Langflow'. Get Running Processes where Name contains 'monero' or 'miner' or 'xmrig'. Get CPU Usage to detect resource spikes.",
+      "rapid7_query_hint": "Scan for assets running Langflow. Monitor endpoint activity for known cryptocurrency miner processes, unexpected network connections, and high resource consumption via InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Exploitation of Recent Oracle E-Business Suite Vulnerability Begins",
-      "tldr": "Active exploitation of a recently disclosed critical vulnerability in Oracle E-Business Suite has commenced. This flaw poses a severe risk to organizations, potentially leading to unauthorized access, data theft, and full system compromise within enterprise environments.",
-      "action": "Immediately apply all available security patches and mitigation steps released by Oracle for E-Business Suite. Conduct a thorough audit of all Oracle E-Business Suite deployments for any signs of compromise, including unauthorized access, suspicious transactions, or data exfiltration attempts.",
+      "tldr": "Active exploitation has commenced for a recently identified vulnerability in Oracle E-Business Suite. This critical flaw poses a severe risk, enabling unauthorized access, data manipulation, or service disruption within affected business-critical environments.",
+      "action": "Immediately apply all available security patches and updates for Oracle E-Business Suite as advised by Oracle. Conduct an urgent review of all E-Business Suite instances for any signs of compromise, including unusual user accounts, modified configurations, or unauthorized data access.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/exploitation-of-recent-oracle-e-business-suite-vulnerability-begins/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Oracle E-Business Suite (specific vulnerable versions to be confirmed via Oracle security advisories, potentially related to Oracle PeopleSoft zero-days).",
-      "how_to_determine_impact": "Consult Oracle's Critical Patch Update (CPU) and Security Advisories for details on the specific vulnerability and affected versions. Review E-Business Suite application logs and underlying database audit logs for anomalous activity, unauthorized administrative actions, or suspicious data access patterns.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Software Name matches 'Oracle E-Business Suite' and verify version against current patch levels. 'Get Netstat Connections from all machines with Remote Host matches 'suspicious_ip' and Remote Port matches 'Oracle_DB_Port'' (e.g., 1521, 1526).",
-      "rapid7_query_hint": "Perform authenticated vulnerability scans on assets running 'Oracle E-Business Suite' for recently published Oracle vulnerability IDs. Use Insight Agent to query for 'asset.software.name = 'Oracle E-Business Suite' AND vulnerability.severity = 'CRITICAL' AND vulnerability.exploited = 'TRUE''.",
+      "affected_versions": "Oracle E-Business Suite. Refer to Oracle's Critical Patch Update (CPU) advisories for the precise vulnerable versions and required patches.",
+      "how_to_determine_impact": "Consult Oracle's latest security advisories for the specific vulnerability details and indicators of compromise. Review Oracle E-Business Suite audit logs for suspicious login attempts, unauthorized administrative actions, or data exfiltration activities.",
+      "tanium_query_hint": "Get Installed Applications where Name contains 'Oracle E-Business Suite' and Version is less than [patched_version]. Get Oracle Database Processes (if relevant) and inspect associated logs.",
+      "rapid7_query_hint": "Scan for Oracle E-Business Suite vulnerabilities in InsightVM. Monitor Oracle application and database logs for suspicious activity via InsightIDR, specifically looking for indicators mentioned in Oracle's security alerts.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Insurance giant Aflac discloses data breach after subsidiary hack",
-      "tldr": "American insurance giant Aflac has disclosed a data breach originating from a hack of its Japan subsidiary's systems. Attackers successfully stole personal and bank account information belonging to 4.38 million individuals, highlighting vulnerabilities in subsidiary security protocols and potential impacts on insurance claims.",
-      "action": "Conduct an immediate security audit of all subsidiary systems and third-party vendor access points to identify and remediate vulnerabilities. Strengthen data protection measures for sensitive personal and financial information, and evaluate the breach's impact on cyber insurance coverage and potential claims.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/insurance-giant-aflac-discloses-data-breach-after-subsidiary-hack/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "NAIC says public data stolen in ShinyHunters' PeopleSoft breach",
-      "tldr": "The National Association of Insurance Commissioners (NAIC) has confirmed that the ShinyHunters extortion group stole publicly available data, outdated logs, and configuration files. This breach occurred through the exploitation of a zero-day vulnerability in an Oracle PeopleSoft server, though no sensitive personal insurance data was compromised.",
-      "action": "Patch Oracle PeopleSoft systems immediately to mitigate the zero-day vulnerability. Review and enhance security for all publicly accessible servers and data, including outdated logs and configuration files. Assess the implications of the breach on regulatory compliance and data governance within the insurance sector.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/",
-      "source": "BleepingComputer"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -1743,6 +1726,15 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
         "category": "vulns"
+      },
+      {
+        "title": "Nissan Employee Data Breached in Oracle PeopleSoft Hack",
+        "tldr": "Nissan's employee data was breached due to a hack targeting their Oracle PeopleSoft installation. This incident underscores the importance of securing enterprise resource planning (ERP) systems, which often house extensive sensitive employee information.",
+        "action": "Review and strengthen the security posture of all Oracle PeopleSoft deployments, ensuring all available patches are applied. Implement strict access controls, monitor for unusual activity, and educate employees on data privacy best practices.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/nissan-employee-data-breached-in-oracle-peoplesoft-hack/",
+        "source": "SecurityWeek",
+        "category": "breaches"
       }
     ]
   }
