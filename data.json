@@ -1,120 +1,119 @@
 {
   "breaches": [
     {
+      "title": "Kubota says hackers had month-long access to network systems",
+      "tldr": "Kubota North America disclosed that threat actors maintained unauthorized access to some of its network systems for over a month earlier this year, potentially exposing sensitive data. The extent of the data compromise is under investigation.",
+      "action": "Review network access logs for suspicious activity between late December and late January. Implement enhanced monitoring and segmentation.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/kubota-says-hackers-had-month-long-access-to-network-systems/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "DHS confirms hackers breached HSIN info-sharing platform",
-      "tldr": "The Department of Homeland Security (DHS) has confirmed a cyberattack that compromised its Homeland Security Information Network (HSIN). This sensitive information-sharing platform, used by federal, state, local, and private-sector partners, has been breached.",
-      "action": "Organizations using HSIN should immediately review their activity logs for any suspicious access or data exfiltration attempts related to the platform. Enhance monitoring of all external-facing systems connected to HSIN and report any anomalies to DHS.",
+      "tldr": "The Department of Homeland Security is investigating a cyberattack that compromised the Homeland Security Information Network (HSIN), a critical platform for sharing sensitive information among federal, state, local, and private-sector partners. Details on the nature and scope of the compromise are pending.",
+      "action": "Users of the HSIN platform should monitor DHS advisories, review recent activity logs, and remain vigilant for phishing attempts or unusual requests.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/",
       "source": "BleepingComputer"
     },
     {
       "title": "Hackers target Microsoft 365 accounts with 81 million login attempts",
-      "tldr": "An extensive password-spraying campaign targeted Microsoft 365 environments, resulting in over 81 million login attempts within a two-week period. This aggressive campaign aims to gain unauthorized access to user accounts.",
-      "action": "Enforce multi-factor authentication (MFA) for all Microsoft 365 accounts and implement robust account lockout policies. Monitor Microsoft 365 sign-in logs for unusual login patterns, excessive failed attempts, and logins from atypical geographic locations.",
+      "tldr": "A large-scale password-spraying campaign targeted Microsoft 365 environments, executing over 81 million login attempts in a two-week period. This aggressive campaign aims to compromise user accounts for potential unauthorized access and data exfiltration.",
+      "action": "Immediately enforce strong multi-factor authentication (MFA) across all Microsoft 365 accounts. Implement conditional access policies and monitor Azure AD sign-in logs for suspicious or anomalous login attempts, especially from unusual geographies or IP ranges.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-365-accounts-with-81-million-login-attempts/",
       "source": "BleepingComputer"
     },
     {
-      "title": "VEIL#DROP Malware Chain Uses Blogger Platform to Deliver PureLogs Stealer",
-      "tldr": "A sophisticated malware chain, dubbed VEIL#DROP, is leveraging the legitimate Blogger platform to distribute the PureLogs Stealer malware. This campaign aims to exfiltrate sensitive user data, including credentials and personal information, from infected systems.",
-      "action": "Educate users about phishing and social engineering tactics, especially those exploiting legitimate platforms like Blogger. Implement and enforce strong endpoint detection and response (EDR) solutions to detect and block known malware families like PureLogs Stealer and unusual process execution.",
+      "title": "Massive Password Spray Campaign Targeting Azure CLI",
+      "tldr": "A significant password spray campaign is actively targeting Azure CLI users, attempting to compromise credentials to gain unauthorized access to cloud resources. This poses a direct threat to organizations leveraging Azure for their infrastructure.",
+      "action": "Mandate strong multi-factor authentication (MFA) for all Azure accounts, particularly those with administrative privileges or access to Azure CLI. Monitor Azure Active Directory sign-in logs for failed authentication attempts and implement IP-based access restrictions where feasible.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Ousaban Banking Trojan Targets Iberian Bank Users with Fake PDF Lures",
-      "tldr": "The Ousaban banking trojan is actively targeting users of Iberian banks, employing deceptive PDF lures to trick victims into installing the malware. The primary objective is to steal banking credentials and other financial information.",
-      "action": "Alert users to be extremely cautious of unexpected PDF attachments, particularly those purporting to be from financial institutions. Implement robust email gateway filtering to block suspicious attachments and strengthen multi-factor authentication for all banking services.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/ousaban-banking-trojan-targets-iberian.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.securityweek.com/massive-password-spray-campaign-targeting-azure-cli/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "AI-Generated Browser Ransomware Abuses Chromium API on Windows and Android",
-      "tldr": "A novel form of browser ransomware, reportedly generated with artificial intelligence, is actively abusing Chromium APIs on both Windows and Android platforms. This ransomware targets browser data, potentially leading to encryption or extortion for access to user information.",
-      "action": "Ensure all Chromium-based browsers (e.g., Chrome, Edge, Brave) are updated to their absolute latest stable versions on all Windows and Android devices. Implement robust endpoint protection with advanced behavioral analysis capabilities to detect new and AI-generated ransomware strains. Educate users about the evolving risks of AI-generated threats.",
+      "tldr": "A new form of ransomware is being generated by AI, specifically designed to target browsers on Windows and Android devices by abusing the Chromium API. This novel approach allows the ransomware to encrypt browser data and potentially extort users.",
+      "action": "Ensure all Chromium-based browsers (Chrome, Edge, Brave, etc.) are updated to the latest version. Deploy and maintain robust endpoint protection and web filtering solutions. Educate users about the risks of downloading suspicious extensions or visiting malicious sites.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/ai-generated-browser-ransomware-abuses.html",
       "source": "The Hacker News"
+    },
+    {
+      "title": "FortiBleed credential-theft campaign linked to Lynx ransomware",
+      "tldr": "The FortiBleed campaign, known for stealing Fortinet credentials, has been directly linked to the INC and Lynx ransomware operations. Stolen credentials are being used to facilitate initial network access for subsequent ransomware deployments.",
+      "action": "Organizations using Fortinet devices should immediately review logs for signs of compromise, enforce strong multi-factor authentication (MFA) on all admin accounts, and reset any potentially compromised credentials. Implement network segmentation and continuous monitoring.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/",
+      "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
       "title": "Progress Kemp LoadMaster Pre-Auth RCE Flaw Faces Active Exploitation Attempts",
-      "tldr": "A critical pre-authentication Remote Code Execution (RCE) vulnerability in Progress Kemp LoadMaster is currently facing active exploitation attempts in the wild. This flaw allows unauthenticated attackers to execute arbitrary code on affected devices.",
-      "action": "Immediately apply the latest security updates provided by Progress for all Kemp LoadMaster instances. Conduct an urgent review of all LoadMaster systems for any signs of compromise, including unauthorized access, unusual processes, or suspicious network connections. Prioritize internet-facing devices.",
+      "tldr": "A pre-authentication Remote Code Execution (RCE) vulnerability in Progress Kemp LoadMaster is currently facing active exploitation attempts in the wild. This critical flaw allows unauthenticated attackers to execute arbitrary code on affected devices.",
+      "action": "Immediately apply vendor-provided patches or mitigations for Progress Kemp LoadMaster. Isolate or restrict network access to affected devices until patched. Actively scan for indicators of compromise (IOCs) on any internet-facing LoadMaster instances.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Progress Kemp LoadMaster, specific versions vulnerable to pre-authentication RCE. Refer to Progress security advisories (e.g., KEMP-XXXX) for precise affected versions and patch details.",
-      "how_to_determine_impact": "Check all deployed Progress Kemp LoadMaster appliances against the vendor's security advisory to confirm vulnerable versions. Look for indicators of compromise (IOCs) such as unexpected files, processes, or network traffic on LoadMaster systems. Consider any internet-facing instance at high risk.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name contains 'Kemp LoadMaster' and (Application Version < 'Required_Patched_Version'). Investigate 'Running Processes' and 'Network Connections' for anomalies on identified LoadMaster servers.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability IDs related to 'Progress Kemp LoadMaster RCE'. Use InsightIDR to monitor for suspicious activity, process execution, or network traffic originating from or targeting LoadMaster appliances.",
+      "affected_versions": "Progress Kemp LoadMaster, specific versions not provided in source. Consult vendor advisory for exact range.",
+      "how_to_determine_impact": "Check the version of all deployed Progress Kemp LoadMaster appliances. Review system logs for signs of unauthorized access or suspicious process execution. Verify network connections from LoadMaster devices to unusual external IPs.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'KempLoadMaster*' and look for installed versions. Or 'Get Running Processes' for unusual processes.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Kemp LoadMaster RCE'. Use an InsightAgent query to check software versions: 'select installed_software.version from installed_software where installed_software.name like '%Kemp LoadMaster%';'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Over 900 Oracle E-Business instances exposed to ongoing attacks",
-      "tldr": "More than 900 Oracle E-Business Suite (EBS) instances are currently found exposed online and are targets of ongoing attacks exploiting a critical security flaw. This situation presents a significant risk of unauthorized access, data compromise, and system control.",
-      "action": "Prioritize patching all internet-exposed Oracle E-Business Suite instances with the latest Critical Patch Updates (CPUs) from Oracle. Implement strict network segmentation and ensure EBS instances are not directly exposed to the internet unless absolutely necessary, with robust access controls.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/over-900-oracle-e-business-instances-exposed-to-ongoing-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Oracle E-Business Suite (EBS), specific versions containing critical security flaws. Consult Oracle's Critical Patch Update (CPU) advisories for detailed affected versions and recommended patches.",
-      "how_to_determine_impact": "Identify all internet-exposed Oracle E-Business Suite instances within your infrastructure. Cross-reference their installed patch levels against Oracle's latest CPU advisories. Look for any signs of compromise within the EBS application logs or underlying OS logs.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name contains 'Oracle E-Business Suite' and (Installed Patches not contains 'Latest_CPU_Patch'). Identify 'Listen Ports' on EBS servers to determine internet exposure.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability IDs associated with 'Oracle E-Business Suite Critical Patch Update'. Use asset filters for 'internet exposed' and check for unpatched EBS instances. Monitor InsightIDR for suspicious activity or login attempts against EBS servers.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Adobe Patches 7 CVSS 10.0 Flaws in ColdFusion and Campaign Classic",
-      "tldr": "Adobe has released critical security patches addressing seven vulnerabilities, all rated with a CVSS score of 10.0, in its ColdFusion web application platform and Campaign Classic marketing automation platform. These maximum severity flaws could allow remote code execution.",
-      "action": "Immediately apply all available security patches for Adobe ColdFusion and Campaign Classic to mitigate these maximum severity vulnerabilities. Prioritize patching systems that are publicly accessible or critical to business operations.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Adobe ColdFusion (multiple versions, check vendor advisory APSB26-XX for specifics) and Adobe Campaign Classic (multiple versions, check vendor advisory APSB26-YY for specifics).",
-      "how_to_determine_impact": "Consult Adobe's official security bulletin (e.g., APSB26-XX, APSB26-YY) to identify the exact affected versions. Verify the installed versions of ColdFusion and Campaign Classic against the advisory. Check for patch application status using standard software inventory tools or by checking build numbers after patching.",
-      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Adobe ColdFusion' or Application Name contains 'Adobe Campaign Classic') and (Application Version < 'Required_Patched_Version').",
-      "rapid7_query_hint": "Search for vulnerability IDs mentioned in Adobe's advisories for ColdFusion and Campaign Classic in InsightVM/InsightIDR. Use asset filters to identify hosts with these applications and unapplied patches.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "10.0 Critical (Estimated based on RCE, Pre-Auth, Active Exploitation)"
     },
     {
       "title": "BlueHammer Vulnerability Exploited in Ransomware Attacks",
-      "tldr": "The 'BlueHammer Vulnerability' is actively being exploited as an initial access vector in ongoing ransomware attacks. This critical flaw allows attackers to gain a foothold in systems, leading to subsequent ransomware deployment and data encryption.",
-      "action": "Immediately identify and patch all systems vulnerable to the 'BlueHammer Vulnerability'. Review endpoint logs and network traffic for indicators of compromise related to BlueHammer exploitation or associated ransomware activities. Enhance ransomware detection and prevention measures, including robust backups.",
+      "tldr": "The 'BlueHammer' vulnerability is actively being exploited in ongoing ransomware attacks. This critical flaw provides threat actors with an entry point for deploying ransomware and compromising systems.",
+      "action": "Identify and patch all systems vulnerable to 'BlueHammer' immediately. Implement network segmentation to limit lateral movement and enhance endpoint detection and response (EDR) capabilities to detect early signs of ransomware activity.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Specific product and versions affected by the 'BlueHammer Vulnerability'. Organizations must consult relevant vendor advisories or specific threat intelligence reports for precise details on affected software and versions (e.g., 'Microsoft Windows Server SMB vulnerabilities', 'Vulnerable VPN appliances').",
-      "how_to_determine_impact": "Refer to threat intelligence sources for detailed information on the 'BlueHammer Vulnerability' to identify the specific software/components affected and their vulnerable versions. Perform vulnerability scans and endpoint forensics to detect its presence and any signs of exploitation. Check for common ransomware IOCs.",
-      "tanium_query_hint": "Search 'Installed Applications' for potential affected software (e.g., 'SMB related products', 'VPN appliance software'). Query 'Running Processes' and 'Network Connections' for IOCs linked to ransomware and the BlueHammer exploitation. Use 'Detect Vulnerability' sensor if available for specific CVEs.",
-      "rapid7_query_hint": "Search InsightVM/InsightIDR for vulnerability IDs related to 'BlueHammer' or known vulnerabilities exploited by ransomware. Monitor for suspicious network connections, abnormal process execution, or file encryption activities indicative of ransomware deployment.",
+      "affected_versions": "Specific products and versions affected by 'BlueHammer' are not detailed in the source. Refer to vendor advisories once a CVE is assigned or more details are released.",
+      "how_to_determine_impact": "Monitor security advisories for specific indicators related to 'BlueHammer'. Conduct an internal scan for assets matching characteristics described in the future advisory. Look for unusual network activity or process execution consistent with ransomware prelude.",
+      "tanium_query_hint": "Query relevant systems using 'Get Running Processes' for suspicious executables, 'Get Open Ports' for unusual connections, or 'Get File Hash' for known IOCs once available.",
+      "rapid7_query_hint": "Search InsightVM for 'BlueHammer' vulnerability IDs. If no ID, monitor for common ransomware tactics and techniques via InsightIDR alerts. Check for unusual software installs or network shares.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical"
-    }
-  ],
-  "insurance": [
+      "cvss_score": "9.8 Critical (Estimated based on active exploitation in ransomware attacks)"
+    },
     {
-      "title": "Amazon fined $2.25M for withholding evidence from fraud victims",
-      "tldr": "The U.S. Federal Trade Commission (FTC) has fined Amazon $2.25 million, settling charges that the company obstructed identity theft victims' access to crucial transaction records. This action hampered victims' ability to resolve fraud cases and recover losses.",
-      "action": "Review and update internal policies and procedures for data retention, access, and disclosure, especially concerning fraud and identity theft victims, to ensure full compliance with regulatory requirements and avoid severe penalties. Establish clear, transparent processes for providing necessary information to victims and law enforcement agencies.",
+      "title": "Unpatched Argo CD Repo-Server Flaw Could Let Attackers Take Over Kubernetes Clusters",
+      "tldr": "A critical unpatched vulnerability exists in the Argo CD Repo-Server component that could allow attackers to gain full control over Kubernetes clusters. This flaw poses a significant risk to the integrity and confidentiality of containerized environments.",
+      "action": "Review Argo CD deployments and configurations. Isolate Argo CD Repo-Server where possible and apply any available workarounds or temporary mitigations as advised by the vendor until a patch is released. Prepare for immediate patching upon availability.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/amazon-fined-225m-for-withholding-evidence-from-fraud-victims/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Argo CD Repo-Server, specific vulnerable versions are not detailed in the source. Consult official Argo CD documentation or security advisories for current patch status.",
+      "how_to_determine_impact": "Identify all instances of Argo CD Repo-Server in your environment. Check the version of Argo CD deployed. Assess the potential blast radius of a compromise to the Kubernetes cluster managed by Argo CD.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to find Argo CD installations. Further investigate with 'Get Running Processes' and 'Get File Hash' for indicators within the Argo CD deployment.",
+      "rapid7_query_hint": "Search for 'Argo CD' vulnerabilities in InsightVM. Use InsightAgent queries to identify systems running Argo CD services: 'select processes.name, processes.command_line from processes where processes.name like '%argocd%';'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical (Estimated based on potential Kubernetes cluster takeover)"
+    },
+    {
+      "title": "Adobe Patches 7 CVSS 10.0 Flaws in ColdFusion and Campaign Classic",
+      "tldr": "Adobe has released patches addressing seven critical vulnerabilities, each with a CVSS score of 10.0, affecting ColdFusion and Campaign Classic products. These flaws could lead to severe impacts, including remote code execution.",
+      "action": "Immediately apply the latest security updates released by Adobe for all ColdFusion and Campaign Classic installations. Prioritize patching internet-facing or publicly accessible instances.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Adobe ColdFusion and Adobe Campaign Classic. Specific affected versions and patch details must be obtained from Adobe's official security bulletin (e.g., APSB23-XX).",
+      "how_to_determine_impact": "Check installed versions of Adobe ColdFusion and Adobe Campaign Classic on all servers. Compare against Adobe's official security advisories to determine if currently installed versions are vulnerable.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Name matches 'Adobe ColdFusion*' or 'Adobe Campaign Classic*'. Cross-reference versions with Adobe's advisories.",
+      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'Adobe ColdFusion' and 'Adobe Campaign Classic'. Use a query like 'vulnerability.title contains \"Adobe ColdFusion\" and vulnerability.severity = \"CRITICAL\"'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "10.0 Critical (As stated in the headline)"
     }
   ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -1889,6 +1888,49 @@
         "source_url": "https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html",
         "source": "The Hacker News",
         "category": "breaches"
+      },
+      {
+        "title": "Kubota says hackers had month-long access to network systems",
+        "tldr": "Kubota North America disclosed that threat actors maintained unauthorized access to some of its network systems for over a month earlier this year, potentially exposing sensitive data. The extent of the data compromise is under investigation.",
+        "action": "Review network access logs for suspicious activity between late December and late January. Implement enhanced monitoring and segmentation.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/kubota-says-hackers-had-month-long-access-to-network-systems/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Massive Password Spray Campaign Targeting Azure CLI",
+        "tldr": "A significant password spray campaign is actively targeting Azure CLI users, attempting to compromise credentials to gain unauthorized access to cloud resources. This poses a direct threat to organizations leveraging Azure for their infrastructure.",
+        "action": "Mandate strong multi-factor authentication (MFA) for all Azure accounts, particularly those with administrative privileges or access to Azure CLI. Monitor Azure Active Directory sign-in logs for failed authentication attempts and implement IP-based access restrictions where feasible.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/massive-password-spray-campaign-targeting-azure-cli/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "FortiBleed credential-theft campaign linked to Lynx ransomware",
+        "tldr": "The FortiBleed campaign, known for stealing Fortinet credentials, has been directly linked to the INC and Lynx ransomware operations. Stolen credentials are being used to facilitate initial network access for subsequent ransomware deployments.",
+        "action": "Organizations using Fortinet devices should immediately review logs for signs of compromise, enforce strong multi-factor authentication (MFA) on all admin accounts, and reset any potentially compromised credentials. Implement network segmentation and continuous monitoring.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/fortibleed-credential-theft-campaign-linked-to-lynx-ransomware/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Unpatched Argo CD Repo-Server Flaw Could Let Attackers Take Over Kubernetes Clusters",
+        "tldr": "A critical unpatched vulnerability exists in the Argo CD Repo-Server component that could allow attackers to gain full control over Kubernetes clusters. This flaw poses a significant risk to the integrity and confidentiality of containerized environments.",
+        "action": "Review Argo CD deployments and configurations. Isolate Argo CD Repo-Server where possible and apply any available workarounds or temporary mitigations as advised by the vendor until a patch is released. Prepare for immediate patching upon availability.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Argo CD Repo-Server, specific vulnerable versions are not detailed in the source. Consult official Argo CD documentation or security advisories for current patch status.",
+        "how_to_determine_impact": "Identify all instances of Argo CD Repo-Server in your environment. Check the version of Argo CD deployed. Assess the potential blast radius of a compromise to the Kubernetes cluster managed by Argo CD.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to find Argo CD installations. Further investigate with 'Get Running Processes' and 'Get File Hash' for indicators within the Argo CD deployment.",
+        "rapid7_query_hint": "Search for 'Argo CD' vulnerabilities in InsightVM. Use InsightAgent queries to identify systems running Argo CD services: 'select processes.name, processes.command_line from processes where processes.name like '%argocd%';'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical (Estimated based on potential Kubernetes cluster takeover)",
+        "category": "vulns"
       }
     ]
   }
