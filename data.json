@@ -1,25 +1,33 @@
 {
   "breaches": [
     {
-      "title": "Aflac Japan Data Breach Impacts 4.38 Million",
-      "tldr": "Aflac Japan has reported a data breach affecting 4.38 million individuals. The incident likely involved unauthorized access to customer data, leading to a significant compromise of personal information. The extent of the stolen data is still being assessed.",
-      "action": "Identify if your organization or employees are Aflac Japan policyholders. Advise affected individuals to monitor financial accounts and credit reports for suspicious activity and consider identity theft protection services. Review third-party vendor access to sensitive data.",
+      "title": "DHS confirms hackers breached HSIN info-sharing platform",
+      "tldr": "The Department of Homeland Security (DHS) has confirmed a cyberattack that compromised its Homeland Security Information Network (HSIN). This sensitive information-sharing platform, used by federal, state, local, and private-sector partners, has been breached.",
+      "action": "Organizations using HSIN should immediately review their activity logs for any suspicious access or data exfiltration attempts related to the platform. Enhance monitoring of all external-facing systems connected to HSIN and report any anomalies to DHS.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/aflac-japan-data-breach-impacts-4-38-million/",
-      "source": "SecurityWeek"
+      "source_url": "https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Azure CLI Password Spray Hits at Least 78 Microsoft Accounts in 81M+ Attempts",
-      "tldr": "A massive password spray campaign targeted Azure CLI users, involving over 81 million login attempts. This campaign successfully compromised at least 78 Microsoft accounts. Attackers are likely using common or leaked credentials to gain initial access.",
-      "action": "Immediately review Azure AD/Microsoft 365 login logs for password spray patterns and successful authentications from unusual locations or IPs. Enforce strong, unique passwords and enable multi-factor authentication (MFA) on all Azure accounts, especially for those using Azure CLI.",
+      "title": "Hackers target Microsoft 365 accounts with 81 million login attempts",
+      "tldr": "An extensive password-spraying campaign targeted Microsoft 365 environments, resulting in over 81 million login attempts within a two-week period. This aggressive campaign aims to gain unauthorized access to user accounts.",
+      "action": "Enforce multi-factor authentication (MFA) for all Microsoft 365 accounts and implement robust account lockout policies. Monitor Microsoft 365 sign-in logs for unusual login patterns, excessive failed attempts, and logins from atypical geographic locations.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-365-accounts-with-81-million-login-attempts/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "VEIL#DROP Malware Chain Uses Blogger Platform to Deliver PureLogs Stealer",
+      "tldr": "A sophisticated malware chain, dubbed VEIL#DROP, is leveraging the legitimate Blogger platform to distribute the PureLogs Stealer malware. This campaign aims to exfiltrate sensitive user data, including credentials and personal information, from infected systems.",
+      "action": "Educate users about phishing and social engineering tactics, especially those exploiting legitimate platforms like Blogger. Implement and enforce strong endpoint detection and response (EDR) solutions to detect and block known malware families like PureLogs Stealer and unusual process execution.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html",
       "source": "The Hacker News"
     },
     {
       "title": "Ousaban Banking Trojan Targets Iberian Bank Users with Fake PDF Lures",
-      "tldr": "The Ousaban banking trojan is actively targeting bank users in the Iberian Peninsula. It uses fake PDF lures to trick victims into downloading and installing the malware, which aims to steal banking credentials and financial data.",
-      "action": "Block known indicators of compromise associated with Ousaban. Educate users about phishing tactics, especially those involving unsolicited attachments like \"PDFs.\" Ensure endpoint detection and response (EDR) solutions are up-to-date and configured to detect banking trojans.",
+      "tldr": "The Ousaban banking trojan is actively targeting users of Iberian banks, employing deceptive PDF lures to trick victims into installing the malware. The primary objective is to steal banking credentials and other financial information.",
+      "action": "Alert users to be extremely cautious of unexpected PDF attachments, particularly those purporting to be from financial institutions. Implement robust email gateway filtering to block suspicious attachments and strengthen multi-factor authentication for all banking services.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/ousaban-banking-trojan-targets-iberian.html",
       "source": "The Hacker News"
@@ -28,88 +36,80 @@
   "ransomware": [
     {
       "title": "AI-Generated Browser Ransomware Abuses Chromium API on Windows and Android",
-      "tldr": "A new strain of ransomware, potentially AI-generated, is exploiting Chromium API on both Windows and Android devices. This ransomware specifically targets browser functionalities, likely locking users out or encrypting browser-related data.",
-      "action": "Educate users on the risks of suspicious browser extensions and unauthorized app installations. Ensure browsers are updated to the latest versions and consider using enterprise browser management solutions to control extensions and settings. Deploy advanced endpoint protection that can detect novel ransomware strains.",
+      "tldr": "A novel form of browser ransomware, reportedly generated with artificial intelligence, is actively abusing Chromium APIs on both Windows and Android platforms. This ransomware targets browser data, potentially leading to encryption or extortion for access to user information.",
+      "action": "Ensure all Chromium-based browsers (e.g., Chrome, Edge, Brave) are updated to their absolute latest stable versions on all Windows and Android devices. Implement robust endpoint protection with advanced behavioral analysis capabilities to detect new and AI-generated ransomware strains. Educate users about the evolving risks of AI-generated threats.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/ai-generated-browser-ransomware-abuses.html",
       "source": "The Hacker News"
-    },
-    {
-      "title": "BlueHammer Vulnerability Exploited in Ransomware Attacks",
-      "tldr": "A vulnerability, referred to as \"BlueHammer,\" is being actively exploited in ongoing ransomware attacks. This indicates that threat actors are leveraging this specific flaw to gain initial access or escalate privileges within target systems for ransomware deployment.",
-      "action": "Prioritize immediate investigation into the \"BlueHammer\" vulnerability. If specific CVEs are identified, patch affected systems without delay. Monitor network traffic and system logs for indicators of compromise related to BlueHammer exploitation or known ransomware activity.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/",
-      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "Progress Kemp LoadMaster Pre-Auth RCE Flaw Faces Active Exploitation Attempts",
-      "tldr": "A pre-authentication Remote Code Execution (RCE) vulnerability in Progress Kemp LoadMaster is currently facing active exploitation attempts. This critical flaw allows unauthenticated attackers to execute arbitrary code on affected devices.",
-      "action": "Immediately apply available patches or mitigation steps provided by Progress for Kemp LoadMaster. Isolate affected devices or restrict network access to them until remediation is complete. Scan for indicators of compromise on all LoadMaster instances.",
+      "tldr": "A critical pre-authentication Remote Code Execution (RCE) vulnerability in Progress Kemp LoadMaster is currently facing active exploitation attempts in the wild. This flaw allows unauthenticated attackers to execute arbitrary code on affected devices.",
+      "action": "Immediately apply the latest security updates provided by Progress for all Kemp LoadMaster instances. Conduct an urgent review of all LoadMaster systems for any signs of compromise, including unauthorized access, unusual processes, or suspicious network connections. Prioritize internet-facing devices.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Progress Kemp LoadMaster (specific versions not provided, assume all currently supported versions until vendor clarifies)",
-      "how_to_determine_impact": "Check Kemp LoadMaster firmware versions. Look for signs of unauthorized access, unusual processes, or configuration changes on LoadMaster appliances. Review access logs for suspicious pre-authentication activity.",
-      "tanium_query_hint": "Get Computer Name and OS Platform from all machines with Is Process Running[lm_svc_name] equals true. Then check specific file versions or configurations on those devices. Look for 'Get Running Processes' for unusual binaries. Use 'Get Software Package' for Kemp LoadMaster versions.",
-      "rapid7_query_hint": "Search for assets running 'Kemp LoadMaster' and check their installed software versions. Look for vulnerability checks related to 'Kemp LoadMaster RCE' or 'Progress LoadMaster'. Filter asset inventory by product name 'Kemp LoadMaster' and review vulnerability findings.",
+      "affected_versions": "Progress Kemp LoadMaster, specific versions vulnerable to pre-authentication RCE. Refer to Progress security advisories (e.g., KEMP-XXXX) for precise affected versions and patch details.",
+      "how_to_determine_impact": "Check all deployed Progress Kemp LoadMaster appliances against the vendor's security advisory to confirm vulnerable versions. Look for indicators of compromise (IOCs) such as unexpected files, processes, or network traffic on LoadMaster systems. Consider any internet-facing instance at high risk.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Application Name contains 'Kemp LoadMaster' and (Application Version < 'Required_Patched_Version'). Investigate 'Running Processes' and 'Network Connections' for anomalies on identified LoadMaster servers.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability IDs related to 'Progress Kemp LoadMaster RCE'. Use InsightIDR to monitor for suspicious activity, process execution, or network traffic originating from or targeting LoadMaster appliances.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Over 900 Oracle E-Business instances exposed to ongoing attacks",
-      "tldr": "More than 900 Oracle E-Business Suite (EBS) instances are publicly exposed and subject to ongoing attacks. These attacks are leveraging a critical security flaw, potentially leading to unauthorized access and data compromise.",
-      "action": "Identify all Oracle E-Business Suite instances within your environment. Ensure they are not exposed to the internet unnecessarily. Immediately apply all critical patches and security configurations recommended by Oracle for EBS. Implement network segmentation and intrusion detection/prevention systems.",
+      "tldr": "More than 900 Oracle E-Business Suite (EBS) instances are currently found exposed online and are targets of ongoing attacks exploiting a critical security flaw. This situation presents a significant risk of unauthorized access, data compromise, and system control.",
+      "action": "Prioritize patching all internet-exposed Oracle E-Business Suite instances with the latest Critical Patch Updates (CPUs) from Oracle. Implement strict network segmentation and ensure EBS instances are not directly exposed to the internet unless absolutely necessary, with robust access controls.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/over-900-oracle-e-business-instances-exposed-to-ongoing-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Oracle E-Business Suite (specific module and version details not provided, assume all vulnerable instances until Oracle clarifies)",
-      "how_to_determine_impact": "Identify all internet-facing Oracle EBS instances. Check Oracle's Critical Patch Update advisories for recent critical vulnerabilities affecting EBS. Inspect EBS logs for unusual login attempts or administrative actions.",
-      "tanium_query_hint": "Get Installed Applications matching 'Oracle E-Business Suite'. Check 'Get Open Network Connections' for EBS port exposure. Use 'Get Running Processes' for Oracle-related services and check their versions. Query for 'Get Vulnerability Details' if an explicit CVE is released and Tanium has coverage.",
-      "rapid7_query_hint": "Scan for Oracle E-Business Suite assets with network vulnerability scanners. Use InsightVM to check for known vulnerabilities impacting Oracle EBS. Filter asset search by 'Software Name' contains 'Oracle E-Business Suite' and review reported vulnerabilities.",
+      "affected_versions": "Oracle E-Business Suite (EBS), specific versions containing critical security flaws. Consult Oracle's Critical Patch Update (CPU) advisories for detailed affected versions and recommended patches.",
+      "how_to_determine_impact": "Identify all internet-exposed Oracle E-Business Suite instances within your infrastructure. Cross-reference their installed patch levels against Oracle's latest CPU advisories. Look for any signs of compromise within the EBS application logs or underlying OS logs.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Application Name contains 'Oracle E-Business Suite' and (Installed Patches not contains 'Latest_CPU_Patch'). Identify 'Listen Ports' on EBS servers to determine internet exposure.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability IDs associated with 'Oracle E-Business Suite Critical Patch Update'. Use asset filters for 'internet exposed' and check for unpatched EBS instances. Monitor InsightIDR for suspicious activity or login attempts against EBS servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Adobe Patches 7 CVSS 10.0 Flaws in ColdFusion and Campaign Classic",
-      "tldr": "Adobe has released critical security patches for seven maximum-severity (CVSS 10.0) vulnerabilities in its ColdFusion web application platform and Campaign Classic marketing automation platform. These flaws could allow remote code execution or arbitrary file upload, leading to complete system compromise.",
-      "action": "Immediately update all Adobe ColdFusion and Campaign Classic installations to the latest patched versions. Prioritize these updates due to the critical severity and potential for remote exploitation. Review access logs for signs of compromise prior to patching.",
+      "tldr": "Adobe has released critical security patches addressing seven vulnerabilities, all rated with a CVSS score of 10.0, in its ColdFusion web application platform and Campaign Classic marketing automation platform. These maximum severity flaws could allow remote code execution.",
+      "action": "Immediately apply all available security patches for Adobe ColdFusion and Campaign Classic to mitigate these maximum severity vulnerabilities. Prioritize patching systems that are publicly accessible or critical to business operations.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/adobe-patches-7-cvss-100-flaws-in.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Adobe ColdFusion (multiple versions, check Adobe's security bulletin for exact ranges). Adobe Campaign Classic (multiple versions, check Adobe's security bulletin for exact ranges).",
-      "how_to_determine_impact": "Check the exact version numbers of your Adobe ColdFusion and Adobe Campaign Classic installations. Refer to Adobe's official security bulletin for the specific patch release to identify vulnerable versions. Verify successful patch application.",
-      "tanium_query_hint": "Get Installed Applications matching 'Adobe ColdFusion' or 'Adobe Campaign Classic'. Filter by version number to identify vulnerable installations. Use 'Get File Version' for key Adobe binaries.",
-      "rapid7_query_hint": "Scan assets for installed versions of Adobe ColdFusion and Adobe Campaign Classic. Use InsightVM vulnerability definitions for Adobe's latest security bulletin to identify vulnerable systems based on version or missing patches.",
-      "remediation_priority": "High next patch cycle",
+      "affected_versions": "Adobe ColdFusion (multiple versions, check vendor advisory APSB26-XX for specifics) and Adobe Campaign Classic (multiple versions, check vendor advisory APSB26-YY for specifics).",
+      "how_to_determine_impact": "Consult Adobe's official security bulletin (e.g., APSB26-XX, APSB26-YY) to identify the exact affected versions. Verify the installed versions of ColdFusion and Campaign Classic against the advisory. Check for patch application status using standard software inventory tools or by checking build numbers after patching.",
+      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Adobe ColdFusion' or Application Name contains 'Adobe Campaign Classic') and (Application Version < 'Required_Patched_Version').",
+      "rapid7_query_hint": "Search for vulnerability IDs mentioned in Adobe's advisories for ColdFusion and Campaign Classic in InsightVM/InsightIDR. Use asset filters to identify hosts with these applications and unapplied patches.",
+      "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
-      "title": "Citrix Patches NetScaler Vulnerabilities, Including New ‘HTTP/2 Bomb’ Attack",
-      "tldr": "Citrix has released patches for multiple vulnerabilities in NetScaler, including a novel 'HTTP/2 Bomb' attack. These flaws could lead to denial of service, remote code execution, or other severe impacts on NetScaler appliances.",
-      "action": "Immediately update all Citrix NetScaler ADC and Gateway appliances to the latest patched versions provided by Citrix. Review Citrix security advisories for specific CVEs and mitigation steps. Monitor NetScaler logs for unusual HTTP/2 traffic patterns or resource exhaustion.",
+      "title": "BlueHammer Vulnerability Exploited in Ransomware Attacks",
+      "tldr": "The 'BlueHammer Vulnerability' is actively being exploited as an initial access vector in ongoing ransomware attacks. This critical flaw allows attackers to gain a foothold in systems, leading to subsequent ransomware deployment and data encryption.",
+      "action": "Immediately identify and patch all systems vulnerable to the 'BlueHammer Vulnerability'. Review endpoint logs and network traffic for indicators of compromise related to BlueHammer exploitation or associated ransomware activities. Enhance ransomware detection and prevention measures, including robust backups.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/citrix-patches-netscaler-vulnerabilities-including-new-http-2-bomb-attack/",
+      "source_url": "https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/",
       "source": "SecurityWeek",
-      "active_exploitation": false,
-      "affected_versions": "Citrix NetScaler ADC, Citrix NetScaler Gateway (specific versions not provided, refer to official Citrix security bulletin)",
-      "how_to_determine_impact": "Check the firmware version of all Citrix NetScaler ADC and Gateway appliances. Consult the latest Citrix security advisory for precise vulnerable version ranges and the HTTP/2 Bomb vulnerability details. Verify successful application of patches.",
-      "tanium_query_hint": "Get Installed Applications matching 'Citrix NetScaler'. Query for OS version or specific file versions on NetScaler appliances. Check 'Get Vulnerability Details' if CVEs are available and covered by Tanium.",
-      "rapid7_query_hint": "Perform authenticated scans on Citrix NetScaler appliances using InsightVM. Search for assets by 'Software Name' contains 'Citrix NetScaler' and filter for vulnerabilities associated with recent Citrix advisories.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
+      "active_exploitation": true,
+      "affected_versions": "Specific product and versions affected by the 'BlueHammer Vulnerability'. Organizations must consult relevant vendor advisories or specific threat intelligence reports for precise details on affected software and versions (e.g., 'Microsoft Windows Server SMB vulnerabilities', 'Vulnerable VPN appliances').",
+      "how_to_determine_impact": "Refer to threat intelligence sources for detailed information on the 'BlueHammer Vulnerability' to identify the specific software/components affected and their vulnerable versions. Perform vulnerability scans and endpoint forensics to detect its presence and any signs of exploitation. Check for common ransomware IOCs.",
+      "tanium_query_hint": "Search 'Installed Applications' for potential affected software (e.g., 'SMB related products', 'VPN appliance software'). Query 'Running Processes' and 'Network Connections' for IOCs linked to ransomware and the BlueHammer exploitation. Use 'Detect Vulnerability' sensor if available for specific CVEs.",
+      "rapid7_query_hint": "Search InsightVM/InsightIDR for vulnerability IDs related to 'BlueHammer' or known vulnerabilities exploited by ransomware. Monitor for suspicious network connections, abnormal process execution, or file encryption activities indicative of ransomware deployment.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.5 Critical"
     }
   ],
   "insurance": [
     {
       "title": "Amazon fined $2.25M for withholding evidence from fraud victims",
-      "tldr": "The U.S. Federal Trade Commission (FTC) fined Amazon $2.25 million for allegedly withholding evidence from victims of identity theft and fraud. This action highlights regulatory scrutiny on how companies assist victims and manage data post-incident, potentially impacting liability and cyber insurance claims.",
-      "action": "Review internal processes for assisting victims of fraud and identity theft to ensure compliance with regulatory requirements. Verify that protocols for evidence disclosure and victim support align with best practices and legal obligations. Evaluate potential impact on cyber liability insurance policy requirements for incident response and victim notification.",
+      "tldr": "The U.S. Federal Trade Commission (FTC) has fined Amazon $2.25 million, settling charges that the company obstructed identity theft victims' access to crucial transaction records. This action hampered victims' ability to resolve fraud cases and recover losses.",
+      "action": "Review and update internal policies and procedures for data retention, access, and disclosure, especially concerning fraud and identity theft victims, to ensure full compliance with regulatory requirements and avoid severe penalties. Establish clear, transparent processes for providing necessary information to victims and law enforcement agencies.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/amazon-fined-225m-for-withholding-evidence-from-fraud-victims/",
       "source": "BleepingComputer"
@@ -1862,6 +1862,33 @@
         "source_url": "https://www.bleepingcomputer.com/news/security/amazon-fined-225m-for-withholding-evidence-from-fraud-victims/",
         "source": "BleepingComputer",
         "category": "insurance"
+      },
+      {
+        "title": "DHS confirms hackers breached HSIN info-sharing platform",
+        "tldr": "The Department of Homeland Security (DHS) has confirmed a cyberattack that compromised its Homeland Security Information Network (HSIN). This sensitive information-sharing platform, used by federal, state, local, and private-sector partners, has been breached.",
+        "action": "Organizations using HSIN should immediately review their activity logs for any suspicious access or data exfiltration attempts related to the platform. Enhance monitoring of all external-facing systems connected to HSIN and report any anomalies to DHS.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/dhs-confirms-hackers-breached-hsin-info-sharing-platform/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers target Microsoft 365 accounts with 81 million login attempts",
+        "tldr": "An extensive password-spraying campaign targeted Microsoft 365 environments, resulting in over 81 million login attempts within a two-week period. This aggressive campaign aims to gain unauthorized access to user accounts.",
+        "action": "Enforce multi-factor authentication (MFA) for all Microsoft 365 accounts and implement robust account lockout policies. Monitor Microsoft 365 sign-in logs for unusual login patterns, excessive failed attempts, and logins from atypical geographic locations.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-365-accounts-with-81-million-login-attempts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "VEIL#DROP Malware Chain Uses Blogger Platform to Deliver PureLogs Stealer",
+        "tldr": "A sophisticated malware chain, dubbed VEIL#DROP, is leveraging the legitimate Blogger platform to distribute the PureLogs Stealer malware. This campaign aims to exfiltrate sensitive user data, including credentials and personal information, from infected systems.",
+        "action": "Educate users about phishing and social engineering tactics, especially those exploiting legitimate platforms like Blogger. Implement and enforce strong endpoint detection and response (EDR) solutions to detect and block known malware families like PureLogs Stealer and unusual process execution.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html",
+        "source": "The Hacker News",
+        "category": "breaches"
       }
     ]
   }
