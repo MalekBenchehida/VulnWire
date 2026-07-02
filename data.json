@@ -2,32 +2,24 @@
   "breaches": [
     {
       "title": "Medtronic notifies customers impacted by ShinyHunters data breach",
-      "tldr": "Healthcare device firm Medtronic is notifying customers about a data breach. The breach, attributed to ShinyHunters, exposed personal data of affected individuals to an unauthorized third party.",
-      "action": "Medtronic customers should monitor their accounts for suspicious activity and be vigilant against phishing attempts. Organizations should review third-party vendor security protocols.",
+      "tldr": "Healthcare device firm Medtronic is informing customers about a data breach by ShinyHunters. The incident exposed personal data to an unauthorized third party.",
+      "action": "Organizations should review their data breach response plans and ensure notification procedures are up-to-date. Customers of Medtronic should be vigilant for phishing attempts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/medtronic-notifies-customers-impacted-by-shinyhunters-data-breach/",
       "source": "BleepingComputer"
     },
     {
       "title": "Kubota says hackers had month-long access to network systems",
-      "tldr": "Kubota North America Corporation disclosed that threat actors maintained unauthorized access to some of its network systems for over a month earlier this year. The extent of data compromised or accessed during this prolonged period is under investigation.",
-      "action": "Implement enhanced network monitoring and segmentation to detect and contain unauthorized access quickly. Review incident response plans for prolonged intrusion scenarios.",
+      "tldr": "Kubota North America Corporation disclosed that threat actors maintained access to some of its network systems for over a month. This prolonged access period indicates a significant compromise.",
+      "action": "Organizations must implement advanced threat detection systems and regular log reviews to identify prolonged unauthorized access. Implement zero-trust principles and network segmentation.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/kubota-says-hackers-had-month-long-access-to-network-systems/",
       "source": "BleepingComputer"
     },
     {
-      "title": "VEIL#DROP Malware Chain Uses Blogger Platform to Deliver PureLogs Stealer",
-      "tldr": "A new malware chain, VEIL#DROP, is actively using the Blogger platform for command and control (C2) to deliver the PureLogs information stealer. This method allows attackers to discreetly exfiltrate sensitive data from compromised systems.",
-      "action": "Implement robust endpoint detection and response (EDR) solutions and monitor network traffic for suspicious connections to blogging platforms or unusual data exfiltration. Educate users about phishing and social engineering tactics.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/veildrop-malware-chain-uses-blogger.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "ConsentFix and ClickFix: How Microsoft 365 Accounts are Hijacked in 3 Seconds",
-      "tldr": "New attack methods, \"ConsentFix\" and \"ClickFix\", are bypassing MFA to hijack Microsoft 365 accounts rapidly. These attacks leverage fake prompts and manipulated OAuth flows to steal session tokens, granting unauthorized access to user accounts.",
-      "action": "Implement conditional access policies, enforce strong phishing-resistant MFA, and regularly audit OAuth application consents. Educate users to identify and report suspicious login prompts and consent requests.",
+      "tldr": "ConsentFix and ClickFix attacks leverage fake prompts and malicious OAuth flows to steal Microsoft 365 tokens, bypassing MFA. This allows attackers to hijack accounts rapidly and gain unauthorized access to data.",
+      "action": "Educate users on identifying malicious OAuth consent requests and suspicious prompts. Implement strong Conditional Access policies and monitor OAuth application permissions. Consider FIDO2/phishing-resistant MFA.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/",
       "source": "BleepingComputer"
@@ -36,83 +28,91 @@
   "ransomware": [
     {
       "title": "AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack",
-      "tldr": "A proof-of-concept demonstrates how an AI agent can exploit a Remote Code Execution (RCE) vulnerability in Langflow to automate a database ransomware attack. This signifies an emerging threat vector where AI can autonomously orchestrate sophisticated cyberattacks.",
-      "action": "Secure all AI development and deployment environments. Implement robust input validation and access controls for AI agents, and ensure all underlying platforms are regularly patched.",
+      "tldr": "A proof-of-concept demonstrates an AI agent exploiting a Remote Code Execution (RCE) vulnerability in Langflow. This allows the AI to automate and execute a database ransomware attack.",
+      "action": "Secure AI-driven systems and platforms like Langflow with robust access controls and vulnerability management. Patch RCE vulnerabilities promptly and ensure AI agents operate within strict, monitored boundaries.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
       "source": "The Hacker News"
     },
     {
       "title": "FortiBleed Credential Theft Linked to INC and Lynx Ransomware Operations",
-      "tldr": "The \"FortiBleed\" credential theft campaign is strongly linked to the INC and Lynx ransomware operations. Threat actors are exploiting Fortinet vulnerabilities to steal credentials, which are then used to facilitate network intrusions leading to ransomware deployment.",
-      "action": "Immediately patch all Fortinet products, especially FortiGate SSL VPNs, and enforce strong multi-factor authentication. Monitor for suspicious login attempts and network activity originating from Fortinet devices.",
+      "tldr": "The \"FortiBleed\" credential theft campaign is actively being used by INC and Lynx ransomware groups. Stolen Fortinet credentials are being leveraged to gain initial access for subsequent network intrusions leading to ransomware deployment.",
+      "action": "Immediately review and strengthen security for all Fortinet products, particularly FortiGate devices. Implement MFA, rotate credentials, and monitor for suspicious access attempts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/fortibleed-credential-theft-linked-to.html",
-      "source": "The Hacker News, BleepingComputer, SecurityWeek"
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ThreatsDay: AI Compute Hijacking, Apple Email Flaw, BlueHammer Ransomware + 14 Stories",
+      "tldr": "The \"ThreatsDay\" report highlights the emergence of the BlueHammer ransomware, indicating a new or ongoing ransomware threat. Organizations need to be aware of its potential impact.",
+      "action": "Implement a robust backup and recovery strategy, segment networks, enforce strong access controls, and maintain up-to-date endpoint protection to defend against ransomware like BlueHammer.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html",
+      "source": "The Hacker News"
     }
   ],
   "vulns": [
     {
       "title": "SharePoint RCE CVE-2026-45659 Added to CISA KEV After Active Exploitation",
-      "tldr": "A critical Remote Code Execution (RCE) vulnerability, CVE-2026-45659, in Microsoft SharePoint Server is being actively exploited in the wild. CISA has added this CVE to its Known Exploited Vulnerabilities Catalog, urging immediate remediation.",
-      "action": "Immediately apply the latest security updates for all affected Microsoft SharePoint Server installations. Isolate internet-facing SharePoint servers until patching is complete.",
+      "tldr": "A critical Remote Code Execution (RCE) vulnerability, CVE-2026-45659, in Microsoft SharePoint is now actively exploited. CISA has added it to its Known Exploited Vulnerabilities catalog, urging immediate patching.",
+      "action": "Immediately apply all available security updates for Microsoft SharePoint to remediate CVE-2026-45659. Prioritize patching systems exposed to the internet.",
       "cve_ids": [
         "CVE-2026-45659"
       ],
       "source_url": "https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html",
-      "source": "The Hacker News, BleepingComputer, SecurityWeek",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint Server (all supported versions prior to May 2026 patches). Specific versions should be confirmed with Microsoft's official security update guide.",
-      "how_to_determine_impact": "Verify the installed version of SharePoint Server. Check for the presence of the May 2026 security updates. Examine SharePoint logs for suspicious activity, unexpected process spawns, or unusual file modifications.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with (Installed Applications contains 'SharePoint Server') and (Installed Applications does not contain 'May 2026 Security Update for SharePoint'). Check 'Get File Version' for SharePoint core files.",
-      "rapid7_query_hint": "Search by 'Vulnerability ID: CVE-2026-45659'. Alternatively, use an asset search filter: 'Software Name contains 'SharePoint Server' AND Last Scan date is less than [date of May 2026 patch cycle]'. Look for relevant 'Vulnerability Findings' on SharePoint assets.",
+      "affected_versions": "Microsoft SharePoint Server (versions affected by CVE-2026-45659); check Microsoft Security Update Guide for exact versions.",
+      "how_to_determine_impact": "Verify if your SharePoint Server installations are running the patched versions. Check security event logs for signs of anomalous activity related to SharePoint processes.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'SharePoint' or 'SharePoint Server'. Check version numbers against Microsoft's advisory for CVE-2026-45659.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-45659' in InsightVM. Filter assets by 'Software Name' contains 'SharePoint' and 'Vulnerability Status' is 'Vulnerable'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated based on RCE and active exploitation)"
+      "cvss_score": "Likely Critical (estimated 9.8)"
     },
     {
-      "title": "Cisco Confirms In-the-Wild Exploitation of Unified CM Vulnerability",
-      "tldr": "Cisco has confirmed active exploitation of a vulnerability in its Unified Communications Manager (Unified CM) that was patched in early June. Attackers are leveraging this flaw, which could lead to unauthorized access or service disruption.",
-      "action": "Immediately apply the latest security updates for all affected Cisco Unified Communications Manager installations. Monitor network traffic for unusual connections to/from Unified CM devices.",
+      "title": "Cisco finally confirms attackers exploiting Unified CM flaw",
+      "tldr": "Cisco has confirmed active exploitation of a Unified Communications Manager (Unified CM) vulnerability that was patched in early June. This flaw could allow unauthorized access or privilege escalation.",
+      "action": "Apply the security patches for Cisco Unified Communications Manager immediately if not already done. Monitor Unified CM systems for any signs of compromise or unusual activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/",
-      "source": "BleepingComputer, SecurityWeek",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager (Unified CM) versions prior to the early June 2026 patch. Specific CVE and affected versions should be referenced in Cisco's official advisory.",
-      "how_to_determine_impact": "Verify the patch level of Cisco Unified CM installations. Check Cisco support forums or advisories for the specific CVE and remediation steps released in early June. Monitor system logs for unauthorized access attempts or suspicious configuration changes.",
-      "tanium_query_hint": "Target 'Cisco Unified CM' endpoints. Use 'Get Installed Patches' or 'Get Software Package Details' to confirm the presence of the early June 2026 security update. Look for unusual network connections with 'Get Open Network Connections'.",
-      "rapid7_query_hint": "Search for 'Cisco Unified Communications Manager' vulnerabilities. Filter by 'Publication Date' around early June 2026. Review asset scan results for relevant vulnerability findings on Cisco Unified CM devices.",
+      "affected_versions": "Cisco Unified Communications Manager (Unified CM); consult Cisco's security advisory for the specific CVE and affected versions patched in early June.",
+      "how_to_determine_impact": "Check the version of your Cisco Unified CM installations. Review system logs for unauthorized access attempts or suspicious process execution related to Unified CM.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name contains 'Cisco Unified CM'. Compare reported versions with Cisco's advisory.",
+      "rapid7_query_hint": "Search for relevant Cisco Unified CM vulnerabilities in InsightVM. Filter assets by 'Software Name' contains 'Cisco Unified Communications Manager' and 'Vulnerability Status' is 'Vulnerable'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (Estimated based on active exploitation and potential for unauthorized access)"
+      "cvss_score": "Likely High to Critical (estimated 8.x-9.x)"
     },
     {
       "title": "New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure",
-      "tldr": "A new vulnerability, dubbed \"CitrixBleed\", is being actively exploited in the wild immediately after its public disclosure. This critical flaw in Citrix products poses a significant risk for remote code execution and data exfiltration.",
-      "action": "Immediately identify all Citrix NetScaler/ADC instances and apply the emergency patches as soon as they become available. Restrict access to affected devices and monitor for suspicious activity.",
+      "tldr": "A new \"CitrixBleed\" vulnerability is being actively exploited immediately after its public disclosure. This highlights the rapid weaponization of newly revealed flaws in critical network infrastructure.",
+      "action": "Apply all available patches for Citrix NetScaler products that address the \"CitrixBleed\" vulnerability without delay. Review systems for signs of compromise preceding patch application.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Citrix NetScaler ADC and Gateway. Specific affected versions should be referenced in Citrix's official security advisory for the 'new CitrixBleed' vulnerability.",
-      "how_to_determine_impact": "Check Citrix NetScaler ADC and Gateway appliances for applied patches. Review system logs and network traffic for indicators of compromise related to CitrixBleed exploitation. Consult Citrix's security bulletins for detailed version information.",
-      "tanium_query_hint": "Use 'Get Installed Hotfixes' or 'Get File Version' on Citrix ADC/Gateway appliances to confirm patch status. Monitor 'Get Open Network Connections' and 'Get Running Processes' for unusual activity.",
-      "rapid7_query_hint": "Search by 'Vulnerability ID: [potential new CitrixBleed CVE]' (if available) or general 'CitrixBleed' terms. Review scan data for unpatched Citrix ADC/Gateway assets.",
+      "affected_versions": "Citrix NetScaler (specific versions affected by 'CitrixBleed'); refer to Citrix security advisories for precise details.",
+      "how_to_determine_impact": "Identify all Citrix NetScaler instances. Check their versions against the official Citrix advisory for the 'CitrixBleed' vulnerability. Look for indicators of compromise on affected systems.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name contains 'Citrix NetScaler'. Check the version numbers and refer to Citrix security bulletins.",
+      "rapid7_query_hint": "Search for 'CitrixBleed' or relevant Citrix NetScaler vulnerability IDs in InsightVM. Filter assets by 'Software Name' contains 'Citrix NetScaler' and 'Vulnerability Status' is 'Vulnerable'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated based on active exploitation and remote exploitation potential)"
+      "cvss_score": "Likely Critical (estimated 9.x)"
     },
     {
       "title": "Adobe Patches Critical ColdFusion, Campaign Classic Vulnerabilities",
-      "tldr": "Adobe has released security updates to address critical vulnerabilities in its ColdFusion and Campaign Classic products. These patches are crucial to prevent potential arbitrary code execution and other severe impacts.",
-      "action": "Immediately apply the latest security patches from Adobe for all installations of ColdFusion and Campaign Classic. Verify successful patch application and monitor for any post-patch issues.",
+      "tldr": "Adobe has released patches for critical vulnerabilities affecting ColdFusion and Campaign Classic products. These flaws could lead to remote code execution or other severe impacts.",
+      "action": "Apply the latest security updates released by Adobe for all ColdFusion and Campaign Classic installations immediately to mitigate critical vulnerabilities.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/adobe-patches-critical-coldfusion-campaign-classic-vulnerabilities/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Adobe ColdFusion and Campaign Classic (all versions prior to the latest security updates released by Adobe in this cycle). Consult Adobe's official security bulletin for precise affected versions and patch information.",
-      "how_to_determine_impact": "Verify the installed versions of Adobe ColdFusion and Campaign Classic. Check if the latest security updates provided by Adobe have been successfully applied. Review server logs for any indicators of compromise preceding the patch.",
-      "tanium_query_hint": "Use 'Get Installed Applications' and 'Get Installed Patches' to identify ColdFusion and Campaign Classic installations and their patch status. Verify file versions of key application components.",
-      "rapid7_query_hint": "Search for 'Adobe ColdFusion' and 'Adobe Campaign Classic' vulnerabilities by filtering on recent publication dates. Review scan results for any listed vulnerabilities requiring remediation.",
+      "affected_versions": "Adobe ColdFusion and Adobe Campaign Classic (specific versions patched); consult Adobe Security Bulletins for detailed affected versions and corresponding patches.",
+      "how_to_determine_impact": "Identify all instances of Adobe ColdFusion and Campaign Classic. Verify their current version numbers against Adobe's latest security advisories to determine if they are vulnerable.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name contains 'Adobe ColdFusion' or 'Adobe Campaign Classic'. Review version numbers against Adobe's advisory.",
+      "rapid7_query_hint": "Search for 'Adobe ColdFusion' or 'Adobe Campaign Classic' related vulnerability IDs in InsightVM. Filter assets by 'Software Name' contains either and 'Vulnerability Status' is 'Vulnerable'.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical (Estimated based on 'critical vulnerabilities' often implying high severity)"
+      "cvss_score": "Likely Critical (estimated 9.x)"
     }
   ],
   "insurance": [],
@@ -2055,6 +2055,15 @@
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.0 Critical (Estimated based on 'critical vulnerabilities' often implying high severity)",
         "category": "vulns"
+      },
+      {
+        "title": "ThreatsDay: AI Compute Hijacking, Apple Email Flaw, BlueHammer Ransomware + 14 Stories",
+        "tldr": "The \"ThreatsDay\" report highlights the emergence of the BlueHammer ransomware, indicating a new or ongoing ransomware threat. Organizations need to be aware of its potential impact.",
+        "action": "Implement a robust backup and recovery strategy, segment networks, enforce strong access controls, and maintain up-to-date endpoint protection to defend against ransomware like BlueHammer.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
       }
     ]
   }
