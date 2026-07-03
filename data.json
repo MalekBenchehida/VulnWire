@@ -1,138 +1,135 @@
 {
   "breaches": [
     {
-      "title": "ToddyCat-Linked Umbrij Malware Abuses OAuth to Access Gmail via Google API",
-      "tldr": "The ToddyCat-linked Umbrij malware is actively abusing OAuth to gain unauthorized access to Gmail accounts via Google API. This sophisticated attack allows for email content exfiltration and potential wider account compromise.",
-      "action": "Security teams must audit OAuth grants for Google accounts for any unauthorized or suspicious third-party applications. Enforce robust multi-factor authentication (MFA) and educate users on phishing that tricks them into granting malicious OAuth permissions.",
+      "title": "Medtronic Data Breach Impacts 3.8 Million People",
+      "tldr": "Medtronic, a prominent medical device company, has disclosed a significant data breach affecting 3.8 million individuals. This incident likely involved the compromise of sensitive personal health information (PHI) or personally identifiable information (PII).",
+      "action": "Organizations that utilize Medtronic devices or services should assess any potential downstream impacts to their systems or data. All organizations must reinforce data loss prevention (DLP) strategies, implement robust access controls, and ensure encryption for sensitive data at rest and in transit.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/toddycat-linked-umbrij-malware-abuses.html",
+      "source_url": "https://www.securityweek.com/medtronic-data-breach-impacts-3-8-million-people/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "European Parliament Member Investigating Spyware Was Hacked With Pegasus",
+      "tldr": "A European Parliament member, who was actively investigating spyware, became a victim of a targeted attack involving the Pegasus spyware. This high-profile incident highlights the ongoing use of advanced surveillance tools against political figures and the severe implications for privacy and security.",
+      "action": "High-risk individuals and organizations should implement enhanced mobile device security policies, including regular forensic audits and the use of highly secure, encrypted communication channels. Monitor devices for signs of compromise by advanced persistent threats.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/european-parliament-member.html",
       "source": "The Hacker News"
     },
     {
       "title": "ConsentFix and ClickFix: How Microsoft 365 Accounts are Hijacked in 3 Seconds",
-      "tldr": "New attack methods, \"ConsentFix\" and \"ClickFix,\" are rapidly hijacking Microsoft 365 accounts by stealing authentication tokens within seconds. These techniques leverage fake prompts and malicious OAuth flows to bypass traditional MFA.",
-      "action": "Implement and strictly enforce Microsoft 365 Conditional Access policies to restrict OAuth app consent to pre-approved applications. Conduct user awareness training on recognizing and reporting suspicious consent requests and URL redirects.",
+      "tldr": "ConsentFix and ClickFix attacks are rapidly hijacking Microsoft 365 accounts by stealing authentication tokens through deceptive prompts and malicious OAuth flows. These social engineering tactics effectively bypass traditional multi-factor authentication (MFA) mechanisms.",
+      "action": "Educate users comprehensively on advanced phishing, OAuth consent attacks, and the dangers of granting permissions to unknown applications. Implement Conditional Access policies in Azure AD to restrict token usage, enforce strong session management, and regularly audit OAuth applications and their granted permissions.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Medtronic notifies customers impacted by ShinyHunters data breach",
-      "tldr": "Healthcare giant Medtronic is informing customers of a data breach attributed to the ShinyHunters group, resulting in the exposure of personal customer data. This incident highlights ongoing risks to sensitive information held by large enterprises.",
-      "action": "Affected Medtronic customers should monitor credit reports and financial accounts for suspicious activity. Organizations should review third-party vendor security postures and implement robust data loss prevention (DLP) strategies.",
+      "title": "ToddyCat-Linked Umbrij Malware Abuses OAuth to Access Gmail via Google API",
+      "tldr": "The Umbrij malware, associated with the ToddyCat threat group, is exploiting OAuth mechanisms to gain unauthorized access to Gmail accounts through the Google API. This method allows attackers to bypass standard password-based authentication, posing a significant threat to email security.",
+      "action": "Immediately revoke any suspicious OAuth tokens linked to Google accounts. Conduct a thorough review of all connected applications and their permissions within Google accounts. Educate users on the risks of OAuth consent phishing and implement stricter internal policies for third-party application access and consent grants.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/medtronic-notifies-customers-impacted-by-shinyhunters-data-breach/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Kubota says hackers had month-long access to network systems",
-      "tldr": "Kubota North America Corporation has disclosed that unauthorized actors maintained unauthorized access to some of its network systems for over a month. This prolonged dwell time suggests a sophisticated intrusion with potential for extensive data exfiltration and system compromise.",
-      "action": "Enhance network monitoring and incident response capabilities to detect and respond to persistent threats more rapidly. Conduct thorough forensic investigations to identify initial access vectors, lateral movement, and compromised data or systems.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/kubota-says-hackers-had-month-long-access-to-network-systems/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/07/toddycat-linked-umbrij-malware-abuses.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
-      "title": "Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials",
-      "tldr": "Ransomware groups are evolving their tactics by exploiting \"Citrix Bleed 2\" vulnerabilities, utilizing Bring Your Own Vulnerable Driver (BYOVD) attacks, and compromising supply chain credentials. These methods aim to gain initial access and escalate privileges for ransomware deployment.",
-      "action": "Prioritize patching for all Citrix environments and related vulnerabilities. Implement driver enforcement policies to prevent BYOVD attacks and enhance supply chain security assessments to mitigate credential compromise risks.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack",
-      "tldr": "A recent report indicates an AI agent exploiting a Remote Code Execution (RCE) vulnerability within Langflow to automate and execute database ransomware attacks. This demonstrates the emerging threat of autonomous, AI-driven cyberattacks.",
-      "action": "Immediately identify and patch all Langflow instances to mitigate the RCE vulnerability. Securely configure and segment databases, and develop detection mechanisms for unusual API calls or automated exploit attempts.",
+      "tldr": "An AI agent has been observed exploiting a Remote Code Execution (RCE) vulnerability in Langflow to automate a database ransomware attack. This marks a concerning development where AI is used to autonomously identify and exploit vulnerabilities to deploy ransomware payloads.",
+      "action": "Immediately identify and patch all Langflow instances within your environment, especially those accessible externally or interacting with critical databases. Implement stringent network segmentation for databases and ensure robust, immutable backup and recovery procedures are in place.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
       "source": "The Hacker News"
     },
     {
       "title": "FortiBleed Credential Theft Linked to INC and Lynx Ransomware Operations",
-      "tldr": "The FortiBleed credential theft campaign has been definitively linked to the INC and Lynx ransomware operations. Stolen Fortinet credentials are being actively used to facilitate initial access and subsequent ransomware deployment.",
-      "action": "Mandate immediate password resets for all Fortinet user accounts and devices. Conduct thorough audits of Fortinet system logs for any signs of compromise or unauthorized access, and implement robust multi-factor authentication (MFA) across all administrative interfaces.",
+      "tldr": "Credential theft using 'FortiBleed' is being actively leveraged by the INC and Lynx ransomware groups to achieve initial access and escalate privileges within target networks. This method provides a potent vector for ransomware deployment, exploiting weaknesses in network perimeter defenses.",
+      "action": "Implement multi-factor authentication (MFA) across all Fortinet products, particularly any internet-facing appliances. Proactively monitor for FortiBleed-specific indicators of compromise (IOCs) and promptly apply all relevant Fortinet security patches to mitigate known vulnerabilities.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/fortibleed-credential-theft-linked-to.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials",
+      "tldr": "Ransomware groups are increasingly incorporating sophisticated attack techniques, including exploiting 'Citrix Bleed 2', utilizing Bring-Your-Own-Vulnerable-Driver (BYOVD) tactics, and compromising supply chain credentials. These evolving methods aim to bypass advanced defenses and facilitate more effective privilege escalation and lateral movement.",
+      "action": "Prioritize and immediately patch all Citrix products, especially those susceptible to 'Citrix Bleed 2' or similar exploits. Implement robust supply chain security protocols and regularly audit third-party access. Enhance endpoint detection and response (EDR) capabilities to detect and prevent BYOVD attempts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "ThreatsDay: AI Compute Hijacking, Apple Email Flaw, BlueHammer Ransomware + 14 Stories",
+      "tldr": "The 'ThreatsDay' summary highlights the emergence or notable activity of the 'BlueHammer Ransomware' group, indicating it as a current and relevant threat. Organizations should be prepared to defend against its potential impact.",
+      "action": "Strengthen ransomware defenses across all layers, including implementing robust backup and disaster recovery strategies, enforcing strict network segmentation, and deploying advanced endpoint protection. Stay informed about BlueHammer's specific tactics, techniques, and procedures (TTPs) as more information becomes available.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html",
       "source": "The Hacker News"
     }
   ],
   "vulns": [
     {
-      "title": "SharePoint RCE CVE-2026-45659 Added to CISA KEV After Active Exploitation",
-      "tldr": "CVE-2026-45659, a critical Remote Code Execution (RCE) vulnerability affecting Microsoft SharePoint, has been added to CISA's Known Exploited Vulnerabilities catalog. This indicates the flaw is under active exploitation, posing an severe risk to unpatched systems.",
-      "action": "Immediately apply all available security patches for Microsoft SharePoint that address CVE-2026-45659. Prioritize patching of internet-facing SharePoint servers and conduct an urgent compromise assessment.",
-      "cve_ids": [
-        "CVE-2026-45659"
-      ],
-      "source_url": "https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint, specific versions affected by CVE-2026-45659. Refer to Microsoft's official advisory for exact versions and impacted components (e.g., SharePoint Server Subscription Edition, SharePoint Server 2019, SharePoint Server 2016).",
-      "how_to_determine_impact": "Inspect all SharePoint servers to verify the successful application of the security update for CVE-2026-45659. Check event logs, IIS logs, and SharePoint ULS logs for anomalous activity, such as unexplained process launches or web requests. Utilize Microsoft's provided detection scripts or IoCs if available in their advisory.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to list SharePoint versions. Use 'Get Installed Patches' or 'Get Patch Status' to confirm the presence of the security update for CVE-2026-45659. Further investigate suspicious processes using 'Get Running Processes' and 'Get Netstat Connections'.",
-      "rapid7_query_hint": "Execute an authenticated scan with InsightVM targeting SharePoint servers, specifically looking for vulnerability ID 'CVE-2026-45659'. Utilize asset search filters in InsightVM or InsightIDR to identify SharePoint installations and review their patch compliance status. Search for IoCs in Endpoint Detection and Response (EDR) logs.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Estimate: 9.8 Critical"
-    },
-    {
-      "title": "Cisco finally confirms attackers exploiting Unified CM flaw",
-      "tldr": "Cisco has confirmed that attackers are actively exploiting a previously patched vulnerability in its Unified Communications Manager (Unified CM) product. Organizations using unpatched versions are at risk of compromise through this known flaw.",
-      "action": "Apply the specific security patch released by Cisco in early June for the Unified CM vulnerability. Conduct an immediate review of Unified CM instances for any signs of compromise or unauthorized access post-patching.",
+      "title": "CISA: Microsoft SharePoint RCE flaw now actively exploited",
+      "tldr": "CISA has issued a warning confirming that a high-severity Microsoft SharePoint Remote Code Execution (RCE) vulnerability, originally patched in May, is now being actively exploited in the wild. This critical flaw allows attackers to execute arbitrary code on vulnerable SharePoint servers, leading to full system compromise.",
+      "action": "Organizations must immediately verify and apply the May security updates for all Microsoft SharePoint installations. Conduct thorough scans of all SharePoint servers for indicators of compromise, including suspicious processes, web shells, or unauthorized file modifications. Review system logs for any anomalous activity.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager (Unified CM), specific versions fixed by a patch released in early June. Consult Cisco's official security advisory (expected to be linked to a CVE, but not provided in the feed) for precise version details.",
-      "how_to_determine_impact": "Verify all Cisco Unified CM deployments have successfully installed the early June security patch. Review Unified CM logs for any indicators of compromise (IoCs) or suspicious administrative actions that might be detailed in Cisco's advisory.",
-      "tanium_query_hint": "Use 'Get Installed Applications' or 'Get Package Data' to check Cisco Unified CM versions. Use 'Get File Version' or 'Get Registry Value' to inspect specific components mentioned in Cisco's advisory for patch verification.",
-      "rapid7_query_hint": "Perform an authenticated scan on Cisco Unified CM devices using InsightVM, targeting the vulnerability that was patched in June. Search InsightVM for relevant vulnerability IDs or software versions associated with this flaw.",
+      "affected_versions": "Microsoft SharePoint (specific vulnerable versions require consulting Microsoft's May 2026 security advisories for exact details and patch information).",
+      "how_to_determine_impact": "Confirm that all Microsoft SharePoint servers have the security updates released in May 2026 applied. Examine SharePoint server event logs, IIS logs, and application logs for unusual processes, deployment of unknown files, or unauthorized access attempts. Refer to Microsoft's security bulletins for specific detection patterns.",
+      "tanium_query_hint": "Get Patch Status from all machines with 'Microsoft SharePoint'. Get Running Processes with 'Cmd Line' contains 'powershell' or 'mshta' from all machines with 'Microsoft SharePoint'.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Microsoft SharePoint RCE' patched in May 2026 within InsightVM. Filter by 'Exploitable' = true and 'CISA KEV'. Run authenticated scans against all SharePoint server assets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Estimate: 9.0 Critical"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure",
-      "tldr": "A newly disclosed \"CitrixBleed\" vulnerability is being actively exploited in the wild almost immediately after its public disclosure. This rapid exploitation emphasizes the extreme urgency for patching Citrix NetScaler and Gateway devices.",
-      "action": "Immediately apply all available security patches for Citrix NetScaler and Gateway that address the \"CitrixBleed\" vulnerability. Conduct a thorough forensic analysis for signs of compromise on internet-facing devices.",
+      "tldr": "A new CitrixBleed vulnerability has been observed under active exploitation almost immediately following its public disclosure. This rapid exploitation highlights the critical nature of the flaw, which likely enables unauthorized access or remote code execution on vulnerable Citrix systems.",
+      "action": "Prioritize and immediately apply all available patches and mitigations for the newly disclosed CitrixBleed vulnerability across all affected Citrix products and appliances. Implement robust network intrusion detection and prevention systems (IDPS) to identify and block exploitation attempts.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Citrix NetScaler and Gateway products. Refer to Citrix's official security advisory (e.g., related to CVE-2023-4966 or similar 'Bleed' campaign vulnerabilities) for precise vulnerable versions.",
-      "how_to_determine_impact": "Identify all Citrix NetScaler and Gateway deployments. Check for the applied security updates addressing the 'CitrixBleed' vulnerability. Review access logs, system logs, and network traffic for IoCs such as unusual credential access or data exfiltration attempts mentioned in Citrix advisories.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to identify Citrix NetScaler/Gateway versions. Use 'Get File Version' or 'Get Registry Value' for specific components to verify patch application. Search for IoCs like suspicious processes or network connections.",
-      "rapid7_query_hint": "Perform an authenticated scan with InsightVM on Citrix NetScaler and Gateway devices, specifically looking for vulnerability IDs related to 'CitrixBleed'. Use InsightIDR to monitor for suspicious logins or abnormal network traffic originating from these devices.",
+      "affected_versions": "Citrix (specific products and versions affected by the new CitrixBleed vulnerability. Refer to urgent Citrix security advisories for the precise details).",
+      "how_to_determine_impact": "Verify that all Citrix appliances and software components are updated with the latest security patches addressing this new CitrixBleed vulnerability. Scan Citrix environments for indicators of compromise, such as unusual network connections, web shells, or evidence of credential dumping.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Citrix' contains 'ADC' or 'Gateway'. Get Patch Status from all machines with 'Citrix' for recent advisories. Examine process activity for unusual child processes or network connections.",
+      "rapid7_query_hint": "Search for 'CitrixBleed' vulnerabilities in InsightVM, filtering by recent disclosure dates and 'Exploitable' = true. Run authenticated scans against Citrix infrastructure assets and monitor InsightIDR for suspicious login attempts or compromised credentials.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Estimate: 9.8 Critical"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Unpatched Argo CD Repo-Server Flaw Could Let Attackers Take Over Kubernetes Clusters",
-      "tldr": "An unpatched flaw in the Argo CD Repo-Server component could enable attackers to achieve full compromise of Kubernetes clusters. This vulnerability presents a critical risk, allowing unauthorized control over containerized environments.",
-      "action": "Restrict network access to Argo CD Repo-Server instances and implement strong authentication. Closely monitor Argo CD and Kubernetes control plane logs for any anomalous activity. Apply the vendor patch immediately upon release.",
+      "title": "Cisco finally confirms attackers exploiting Unified CM flaw",
+      "tldr": "Cisco has officially confirmed that attackers are actively exploiting a vulnerability in its Unified Communications Manager (Unified CM) product, for which a patch was released in early June. This exploit allows threat actors to compromise critical unified communications infrastructure.",
+      "action": "Immediately apply the security patch released by Cisco in early June for all affected Cisco Unified Communications Manager (Unified CM) installations. Conduct comprehensive scans for indicators of compromise on all UC systems and meticulously review system logs for any suspicious activity, unauthorized access, or configuration changes.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/unpatched-argo-cd-repo-server-flaw.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Argo CD Repo-Server, specific versions affected by the unpatched flaw. Refer to official Argo CD advisories for details on affected versions and mitigation strategies.",
-      "how_to_determine_impact": "Identify all Argo CD Repo-Server deployments within Kubernetes clusters. Verify the installed version and configuration against official Argo CD security advisories. Check for excessive permissions or exposed endpoints for the Repo-Server.",
-      "tanium_query_hint": "Use 'Get Running Processes' filtered by 'argocd-repo-server' to identify instances. Use 'Get File Version' on Argo CD binaries. Investigate network listener ports using 'Get Netstat Connections' and associated configurations.",
-      "rapid7_query_hint": "Perform authenticated scans on Kubernetes nodes and containers where Argo CD Repo-Server is deployed. Search for related vulnerability IDs in InsightVM, or use InsightAgent queries to check for specific software versions or configurations on affected assets.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "Estimate: 9.0 Critical"
-    }
-  ],
-  "insurance": [
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Cisco Unified Communications Manager (Unified CM) (specific vulnerable versions should be referenced in Cisco's early June 2026 security advisories for patching details).",
+      "how_to_determine_impact": "Confirm that all Cisco Unified CM systems have the security updates released in early June 2026 applied. Review Unified CM system logs, particularly security and audit logs, for unauthorized access attempts, unusual service restarts, or unexpected process executions. Consult Cisco's advisory for specific IOCs.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Cisco Unified Communications Manager'. Get Patch Status from all machines with 'Cisco Unified Communications Manager'. Inspect network connections from UC devices for unusual external communication.",
+      "rapid7_query_hint": "Search for 'Cisco Unified CM' vulnerabilities patched in June 2026 within InsightVM. Filter by 'Exploitable' = true. Perform authenticated scans against all Cisco Unified CM assets and check for related alerts in InsightIDR.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical"
+    },
     {
-      "title": "Google loses final appeal to overturn €4.1 billion EU fine",
-      "tldr": "Google's final appeal against a €4.1 billion antitrust fine by the EU has been dismissed by the CJEU. This confirms a significant financial penalty and regulatory precedent regarding competition practices in the tech sector.",
-      "action": "Organizations, particularly those with significant market influence, should review their business practices for compliance with antitrust laws. Assess potential legal and financial exposures from regulatory fines, which can impact cyber insurance risk profiles and coverage.",
+      "title": "AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack",
+      "tldr": "A Remote Code Execution (RCE) vulnerability within Langflow has been actively exploited by an AI agent, leading to automated database ransomware attacks. This critical flaw allows for arbitrary code execution, enabling threat actors to gain control and deploy malicious payloads.",
+      "action": "Immediately patch all instances of Langflow to the latest secure version. If patching is not feasible, restrict network access to Langflow instances and monitor for any suspicious process execution or unauthorized outbound connections. Implement strong network segmentation for databases connected to Langflow.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/legal/google-loses-final-appeal-to-overturn-41-billion-eu-fine/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Langflow (specific vulnerable versions were not detailed, assume all prior versions are affected until a vendor-issued patch or advisory specifies otherwise).",
+      "how_to_determine_impact": "Identify all deployed Langflow instances in your environment. Verify the installed version against any public advisories. Monitor system logs for unexpected process launches, unauthorized file modifications, or unusual database interactions originating from Langflow processes. Review network traffic for suspicious connections to/from Langflow servers.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Langflow'. Get Running Processes from all machines with 'Langflow' and inspect command lines and parent/child relationships for anomalies.",
+      "rapid7_query_hint": "Search for 'Langflow' vulnerabilities in InsightVM. Filter by 'Exploitable' = true. Deploy InsightAgent to Langflow hosts for continuous monitoring of process activity and file changes. Analyze network flow data for unusual connections to critical databases.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -2124,6 +2121,128 @@
         "source_url": "https://www.bleepingcomputer.com/news/legal/google-loses-final-appeal-to-overturn-41-billion-eu-fine/",
         "source": "BleepingComputer",
         "category": "insurance"
+      }
+    ],
+    "2026-07-03": [
+      {
+        "title": "Medtronic Data Breach Impacts 3.8 Million People",
+        "tldr": "Medtronic, a prominent medical device company, has disclosed a significant data breach affecting 3.8 million individuals. This incident likely involved the compromise of sensitive personal health information (PHI) or personally identifiable information (PII).",
+        "action": "Organizations that utilize Medtronic devices or services should assess any potential downstream impacts to their systems or data. All organizations must reinforce data loss prevention (DLP) strategies, implement robust access controls, and ensure encryption for sensitive data at rest and in transit.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/medtronic-data-breach-impacts-3-8-million-people/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "European Parliament Member Investigating Spyware Was Hacked With Pegasus",
+        "tldr": "A European Parliament member, who was actively investigating spyware, became a victim of a targeted attack involving the Pegasus spyware. This high-profile incident highlights the ongoing use of advanced surveillance tools against political figures and the severe implications for privacy and security.",
+        "action": "High-risk individuals and organizations should implement enhanced mobile device security policies, including regular forensic audits and the use of highly secure, encrypted communication channels. Monitor devices for signs of compromise by advanced persistent threats.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/european-parliament-member.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "ConsentFix and ClickFix: How Microsoft 365 Accounts are Hijacked in 3 Seconds",
+        "tldr": "ConsentFix and ClickFix attacks are rapidly hijacking Microsoft 365 accounts by stealing authentication tokens through deceptive prompts and malicious OAuth flows. These social engineering tactics effectively bypass traditional multi-factor authentication (MFA) mechanisms.",
+        "action": "Educate users comprehensively on advanced phishing, OAuth consent attacks, and the dangers of granting permissions to unknown applications. Implement Conditional Access policies in Azure AD to restrict token usage, enforce strong session management, and regularly audit OAuth applications and their granted permissions.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "ToddyCat-Linked Umbrij Malware Abuses OAuth to Access Gmail via Google API",
+        "tldr": "The Umbrij malware, associated with the ToddyCat threat group, is exploiting OAuth mechanisms to gain unauthorized access to Gmail accounts through the Google API. This method allows attackers to bypass standard password-based authentication, posing a significant threat to email security.",
+        "action": "Immediately revoke any suspicious OAuth tokens linked to Google accounts. Conduct a thorough review of all connected applications and their permissions within Google accounts. Educate users on the risks of OAuth consent phishing and implement stricter internal policies for third-party application access and consent grants.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/toddycat-linked-umbrij-malware-abuses.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack",
+        "tldr": "An AI agent has been observed exploiting a Remote Code Execution (RCE) vulnerability in Langflow to automate a database ransomware attack. This marks a concerning development where AI is used to autonomously identify and exploit vulnerabilities to deploy ransomware payloads.",
+        "action": "Immediately identify and patch all Langflow instances within your environment, especially those accessible externally or interacting with critical databases. Implement stringent network segmentation for databases and ensure robust, immutable backup and recovery procedures are in place.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "FortiBleed Credential Theft Linked to INC and Lynx Ransomware Operations",
+        "tldr": "Credential theft using 'FortiBleed' is being actively leveraged by the INC and Lynx ransomware groups to achieve initial access and escalate privileges within target networks. This method provides a potent vector for ransomware deployment, exploiting weaknesses in network perimeter defenses.",
+        "action": "Implement multi-factor authentication (MFA) across all Fortinet products, particularly any internet-facing appliances. Proactively monitor for FortiBleed-specific indicators of compromise (IOCs) and promptly apply all relevant Fortinet security patches to mitigate known vulnerabilities.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/fortibleed-credential-theft-linked-to.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials",
+        "tldr": "Ransomware groups are increasingly incorporating sophisticated attack techniques, including exploiting 'Citrix Bleed 2', utilizing Bring-Your-Own-Vulnerable-Driver (BYOVD) tactics, and compromising supply chain credentials. These evolving methods aim to bypass advanced defenses and facilitate more effective privilege escalation and lateral movement.",
+        "action": "Prioritize and immediately patch all Citrix products, especially those susceptible to 'Citrix Bleed 2' or similar exploits. Implement robust supply chain security protocols and regularly audit third-party access. Enhance endpoint detection and response (EDR) capabilities to detect and prevent BYOVD attempts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "ThreatsDay: AI Compute Hijacking, Apple Email Flaw, BlueHammer Ransomware + 14 Stories",
+        "tldr": "The 'ThreatsDay' summary highlights the emergence or notable activity of the 'BlueHammer Ransomware' group, indicating it as a current and relevant threat. Organizations should be prepared to defend against its potential impact.",
+        "action": "Strengthen ransomware defenses across all layers, including implementing robust backup and disaster recovery strategies, enforcing strict network segmentation, and deploying advanced endpoint protection. Stay informed about BlueHammer's specific tactics, techniques, and procedures (TTPs) as more information becomes available.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "CISA: Microsoft SharePoint RCE flaw now actively exploited",
+        "tldr": "CISA has issued a warning confirming that a high-severity Microsoft SharePoint Remote Code Execution (RCE) vulnerability, originally patched in May, is now being actively exploited in the wild. This critical flaw allows attackers to execute arbitrary code on vulnerable SharePoint servers, leading to full system compromise.",
+        "action": "Organizations must immediately verify and apply the May security updates for all Microsoft SharePoint installations. Conduct thorough scans of all SharePoint servers for indicators of compromise, including suspicious processes, web shells, or unauthorized file modifications. Review system logs for any anomalous activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft SharePoint (specific vulnerable versions require consulting Microsoft's May 2026 security advisories for exact details and patch information).",
+        "how_to_determine_impact": "Confirm that all Microsoft SharePoint servers have the security updates released in May 2026 applied. Examine SharePoint server event logs, IIS logs, and application logs for unusual processes, deployment of unknown files, or unauthorized access attempts. Refer to Microsoft's security bulletins for specific detection patterns.",
+        "tanium_query_hint": "Get Patch Status from all machines with 'Microsoft SharePoint'. Get Running Processes with 'Cmd Line' contains 'powershell' or 'mshta' from all machines with 'Microsoft SharePoint'.",
+        "rapid7_query_hint": "Search for vulnerabilities related to 'Microsoft SharePoint RCE' patched in May 2026 within InsightVM. Filter by 'Exploitable' = true and 'CISA KEV'. Run authenticated scans against all SharePoint server assets.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure",
+        "tldr": "A new CitrixBleed vulnerability has been observed under active exploitation almost immediately following its public disclosure. This rapid exploitation highlights the critical nature of the flaw, which likely enables unauthorized access or remote code execution on vulnerable Citrix systems.",
+        "action": "Prioritize and immediately apply all available patches and mitigations for the newly disclosed CitrixBleed vulnerability across all affected Citrix products and appliances. Implement robust network intrusion detection and prevention systems (IDPS) to identify and block exploitation attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Citrix (specific products and versions affected by the new CitrixBleed vulnerability. Refer to urgent Citrix security advisories for the precise details).",
+        "how_to_determine_impact": "Verify that all Citrix appliances and software components are updated with the latest security patches addressing this new CitrixBleed vulnerability. Scan Citrix environments for indicators of compromise, such as unusual network connections, web shells, or evidence of credential dumping.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Citrix' contains 'ADC' or 'Gateway'. Get Patch Status from all machines with 'Citrix' for recent advisories. Examine process activity for unusual child processes or network connections.",
+        "rapid7_query_hint": "Search for 'CitrixBleed' vulnerabilities in InsightVM, filtering by recent disclosure dates and 'Exploitable' = true. Run authenticated scans against Citrix infrastructure assets and monitor InsightIDR for suspicious login attempts or compromised credentials.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Cisco finally confirms attackers exploiting Unified CM flaw",
+        "tldr": "Cisco has officially confirmed that attackers are actively exploiting a vulnerability in its Unified Communications Manager (Unified CM) product, for which a patch was released in early June. This exploit allows threat actors to compromise critical unified communications infrastructure.",
+        "action": "Immediately apply the security patch released by Cisco in early June for all affected Cisco Unified Communications Manager (Unified CM) installations. Conduct comprehensive scans for indicators of compromise on all UC systems and meticulously review system logs for any suspicious activity, unauthorized access, or configuration changes.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Unified Communications Manager (Unified CM) (specific vulnerable versions should be referenced in Cisco's early June 2026 security advisories for patching details).",
+        "how_to_determine_impact": "Confirm that all Cisco Unified CM systems have the security updates released in early June 2026 applied. Review Unified CM system logs, particularly security and audit logs, for unauthorized access attempts, unusual service restarts, or unexpected process executions. Consult Cisco's advisory for specific IOCs.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Cisco Unified Communications Manager'. Get Patch Status from all machines with 'Cisco Unified Communications Manager'. Inspect network connections from UC devices for unusual external communication.",
+        "rapid7_query_hint": "Search for 'Cisco Unified CM' vulnerabilities patched in June 2026 within InsightVM. Filter by 'Exploitable' = true. Perform authenticated scans against all Cisco Unified CM assets and check for related alerts in InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
       }
     ]
   }
