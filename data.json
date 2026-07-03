@@ -2,131 +2,131 @@
   "breaches": [
     {
       "title": "Medtronic Data Breach Impacts 3.8 Million People",
-      "tldr": "Medtronic, a prominent medical device company, has disclosed a significant data breach affecting 3.8 million individuals. This incident likely involved the compromise of sensitive personal health information (PHI) or personally identifiable information (PII).",
-      "action": "Organizations that utilize Medtronic devices or services should assess any potential downstream impacts to their systems or data. All organizations must reinforce data loss prevention (DLP) strategies, implement robust access controls, and ensure encryption for sensitive data at rest and in transit.",
+      "tldr": "Medical device company Medtronic experienced a data breach affecting 3.8 million individuals. While the specific type of data compromised is not detailed in the headline, such incidents often involve sensitive personal health information (PHI) or personally identifiable information (PII).",
+      "action": "Investigate if your organization uses Medtronic devices or services and if any data sharing agreements exist that could expose your data. Monitor for suspicious activity related to Medtronic and affected data subjects.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/medtronic-data-breach-impacts-3-8-million-people/",
       "source": "SecurityWeek"
     },
     {
       "title": "European Parliament Member Investigating Spyware Was Hacked With Pegasus",
-      "tldr": "A European Parliament member, who was actively investigating spyware, became a victim of a targeted attack involving the Pegasus spyware. This high-profile incident highlights the ongoing use of advanced surveillance tools against political figures and the severe implications for privacy and security.",
-      "action": "High-risk individuals and organizations should implement enhanced mobile device security policies, including regular forensic audits and the use of highly secure, encrypted communication channels. Monitor devices for signs of compromise by advanced persistent threats.",
+      "tldr": "A Member of the European Parliament (MEP) who was actively investigating spyware use has been targeted and successfully hacked using the notorious Pegasus spyware. This sophisticated attack highlights the persistent threat of state-sponsored spyware against high-profile individuals involved in sensitive investigations.",
+      "action": "Review mobile device security for high-profile personnel, especially those involved in sensitive investigations. Implement advanced mobile threat defense solutions, conduct regular device audits, and ensure timely patching to mitigate advanced spyware threats.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/european-parliament-member.html",
       "source": "The Hacker News"
     },
     {
       "title": "ConsentFix and ClickFix: How Microsoft 365 Accounts are Hijacked in 3 Seconds",
-      "tldr": "ConsentFix and ClickFix attacks are rapidly hijacking Microsoft 365 accounts by stealing authentication tokens through deceptive prompts and malicious OAuth flows. These social engineering tactics effectively bypass traditional multi-factor authentication (MFA) mechanisms.",
-      "action": "Educate users comprehensively on advanced phishing, OAuth consent attacks, and the dangers of granting permissions to unknown applications. Implement Conditional Access policies in Azure AD to restrict token usage, enforce strong session management, and regularly audit OAuth applications and their granted permissions.",
+      "tldr": "New attack techniques, 'ConsentFix' and 'ClickFix,' are rapidly hijacking Microsoft 365 accounts by stealing authentication tokens. These methods bypass multi-factor authentication (MFA) by tricking users through fake prompts and malicious OAuth flows.",
+      "action": "Educate users on sophisticated phishing tactics, particularly those involving OAuth consent requests. Implement strict OAuth application governance, regularly review granted application permissions, and deploy phishing-resistant MFA solutions (e.g., FIDO2 keys) across your Microsoft 365 environment.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/",
       "source": "BleepingComputer"
     },
     {
-      "title": "ToddyCat-Linked Umbrij Malware Abuses OAuth to Access Gmail via Google API",
-      "tldr": "The Umbrij malware, associated with the ToddyCat threat group, is exploiting OAuth mechanisms to gain unauthorized access to Gmail accounts through the Google API. This method allows attackers to bypass standard password-based authentication, posing a significant threat to email security.",
-      "action": "Immediately revoke any suspicious OAuth tokens linked to Google accounts. Conduct a thorough review of all connected applications and their permissions within Google accounts. Educate users on the risks of OAuth consent phishing and implement stricter internal policies for third-party application access and consent grants.",
+      "title": "North Korea-Linked npm Packages Mimic Rollup Polyfills to Steal Developer Secrets",
+      "tldr": "Malicious npm packages, attributed to North Korea-linked threat actors, are mimicking legitimate Rollup polyfills to infect developer environments. The primary objective is to steal sensitive developer secrets, which could lead to broader software supply chain compromises.",
+      "action": "Audit all npm package dependencies for authenticity and reputational risks, especially for new or less-known packages. Implement stringent software supply chain security practices, including integrity checks, code signing verification, and enforcing least privilege principles in development environments.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/toddycat-linked-umbrij-malware-abuses.html",
+      "source_url": "https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html",
       "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
-      "title": "AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack",
-      "tldr": "An AI agent has been observed exploiting a Remote Code Execution (RCE) vulnerability in Langflow to automate a database ransomware attack. This marks a concerning development where AI is used to autonomously identify and exploit vulnerabilities to deploy ransomware payloads.",
-      "action": "Immediately identify and patch all Langflow instances within your environment, especially those accessible externally or interacting with critical databases. Implement stringent network segmentation for databases and ensure robust, immutable backup and recovery procedures are in place.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "FortiBleed Credential Theft Linked to INC and Lynx Ransomware Operations",
-      "tldr": "Credential theft using 'FortiBleed' is being actively leveraged by the INC and Lynx ransomware groups to achieve initial access and escalate privileges within target networks. This method provides a potent vector for ransomware deployment, exploiting weaknesses in network perimeter defenses.",
-      "action": "Implement multi-factor authentication (MFA) across all Fortinet products, particularly any internet-facing appliances. Proactively monitor for FortiBleed-specific indicators of compromise (IOCs) and promptly apply all relevant Fortinet security patches to mitigate known vulnerabilities.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/fortibleed-credential-theft-linked-to.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Ransomware Groups Turn to Citrix Bleed 2, BYOVD, and Supply Chain Credentials",
-      "tldr": "Ransomware groups are increasingly incorporating sophisticated attack techniques, including exploiting 'Citrix Bleed 2', utilizing Bring-Your-Own-Vulnerable-Driver (BYOVD) tactics, and compromising supply chain credentials. These evolving methods aim to bypass advanced defenses and facilitate more effective privilege escalation and lateral movement.",
-      "action": "Prioritize and immediately patch all Citrix products, especially those susceptible to 'Citrix Bleed 2' or similar exploits. Implement robust supply chain security protocols and regularly audit third-party access. Enhance endpoint detection and response (EDR) capabilities to detect and prevent BYOVD attempts.",
+      "tldr": "Ransomware groups are evolving their tactics, increasingly exploiting a new 'Citrix Bleed 2' vulnerability, utilizing Bring Your Own Vulnerable Driver (BYOVD) techniques, and compromising supply chain credentials for initial access and widespread network encryption.",
+      "action": "Immediately identify and patch all Citrix products, with a focus on addressing 'Citrix Bleed 2' related vulnerabilities. Implement strict driver signing enforcement, monitor for unauthorized driver installations, and enhance supply chain security validation processes.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html",
       "source": "The Hacker News"
     },
     {
-      "title": "ThreatsDay: AI Compute Hijacking, Apple Email Flaw, BlueHammer Ransomware + 14 Stories",
-      "tldr": "The 'ThreatsDay' summary highlights the emergence or notable activity of the 'BlueHammer Ransomware' group, indicating it as a current and relevant threat. Organizations should be prepared to defend against its potential impact.",
-      "action": "Strengthen ransomware defenses across all layers, including implementing robust backup and disaster recovery strategies, enforcing strict network segmentation, and deploying advanced endpoint protection. Stay informed about BlueHammer's specific tactics, techniques, and procedures (TTPs) as more information becomes available.",
+      "title": "AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack",
+      "tldr": "A novel attack demonstrated how an AI agent could be leveraged to exploit a Remote Code Execution (RCE) vulnerability in Langflow, an open-source framework, to automate a database ransomware attack. This illustrates the emerging threat of AI tools being weaponized in cyberattacks.",
+      "action": "Identify all instances of Langflow in your environment and apply the latest security patches immediately if an RCE vulnerability is confirmed. Implement robust access controls and continuous monitoring for AI agent interactions with critical systems and data sources.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/threatsday-ai-compute-hijacking-apple.html",
+      "source_url": "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Agentic AI Used to Conduct Ransomware Attack via Langflow",
+      "tldr": "This report confirms the use of agentic AI to exploit a vulnerability within the Langflow framework, culminating in a ransomware attack. This advanced technique underscores the escalating risk posed by AI-powered automation in orchestrating sophisticated cyber threats and demands proactive defense.",
+      "action": "Verify all Langflow deployments within your infrastructure. Apply all available security updates and implement secure configurations for any platforms interacting with AI agents. Ensure comprehensive logging and monitoring for anomalous AI agent behavior.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/agentic-ai-used-to-conduct-ransomware-attack-via-langflow/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "FortiBleed Campaign Linked to INC, Lynx Ransomware Attacks",
+      "tldr": "A new 'FortiBleed' campaign is actively being exploited, with strong links to the INC and Lynx ransomware groups. This indicates that threat actors are leveraging vulnerabilities in Fortinet products to gain initial access and subsequently deploy ransomware payloads.",
+      "action": "Patch all Fortinet devices, especially those exposed to the internet, against any known vulnerabilities associated with the 'FortiBleed' campaign. Implement robust network segmentation and continuously monitor for indicators of compromise (IoCs) linked to INC and Lynx ransomware groups.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/fortibleed-campaign-linked-to-inc-lynx-ransomware-attacks/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "CISA: Microsoft SharePoint RCE flaw now actively exploited",
-      "tldr": "CISA has issued a warning confirming that a high-severity Microsoft SharePoint Remote Code Execution (RCE) vulnerability, originally patched in May, is now being actively exploited in the wild. This critical flaw allows attackers to execute arbitrary code on vulnerable SharePoint servers, leading to full system compromise.",
-      "action": "Organizations must immediately verify and apply the May security updates for all Microsoft SharePoint installations. Conduct thorough scans of all SharePoint servers for indicators of compromise, including suspicious processes, web shells, or unauthorized file modifications. Review system logs for any anomalous activity.",
+      "tldr": "CISA has issued a warning confirming that a high-severity Remote Code Execution (RCE) vulnerability in Microsoft SharePoint, originally patched in May, is now under active exploitation by threat actors in the wild. This vulnerability allows attackers to execute arbitrary code remotely on affected SharePoint servers.",
+      "action": "Immediately apply all available security patches for Microsoft SharePoint, specifically addressing the RCE vulnerability patched in May 2026. Prioritize patching internet-facing servers. Perform a thorough compromise assessment on any systems that have not been promptly patched to detect potential exploitation.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-rce-flaw-now-actively-exploited/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint (specific vulnerable versions require consulting Microsoft's May 2026 security advisories for exact details and patch information).",
-      "how_to_determine_impact": "Confirm that all Microsoft SharePoint servers have the security updates released in May 2026 applied. Examine SharePoint server event logs, IIS logs, and application logs for unusual processes, deployment of unknown files, or unauthorized access attempts. Refer to Microsoft's security bulletins for specific detection patterns.",
-      "tanium_query_hint": "Get Patch Status from all machines with 'Microsoft SharePoint'. Get Running Processes with 'Cmd Line' contains 'powershell' or 'mshta' from all machines with 'Microsoft SharePoint'.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Microsoft SharePoint RCE' patched in May 2026 within InsightVM. Filter by 'Exploitable' = true and 'CISA KEV'. Run authenticated scans against all SharePoint server assets.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure",
-      "tldr": "A new CitrixBleed vulnerability has been observed under active exploitation almost immediately following its public disclosure. This rapid exploitation highlights the critical nature of the flaw, which likely enables unauthorized access or remote code execution on vulnerable Citrix systems.",
-      "action": "Prioritize and immediately apply all available patches and mitigations for the newly disclosed CitrixBleed vulnerability across all affected Citrix products and appliances. Implement robust network intrusion detection and prevention systems (IDPS) to identify and block exploitation attempts.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Citrix (specific products and versions affected by the new CitrixBleed vulnerability. Refer to urgent Citrix security advisories for the precise details).",
-      "how_to_determine_impact": "Verify that all Citrix appliances and software components are updated with the latest security patches addressing this new CitrixBleed vulnerability. Scan Citrix environments for indicators of compromise, such as unusual network connections, web shells, or evidence of credential dumping.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Citrix' contains 'ADC' or 'Gateway'. Get Patch Status from all machines with 'Citrix' for recent advisories. Examine process activity for unusual child processes or network connections.",
-      "rapid7_query_hint": "Search for 'CitrixBleed' vulnerabilities in InsightVM, filtering by recent disclosure dates and 'Exploitable' = true. Run authenticated scans against Citrix infrastructure assets and monitor InsightIDR for suspicious login attempts or compromised credentials.",
+      "affected_versions": "Microsoft SharePoint Server Subscription Edition, SharePoint Server 2019, SharePoint Server 2016 (Consult Microsoft's May 2026 Patch Tuesday release notes for specific CVE and exact affected build numbers)",
+      "how_to_determine_impact": "Verify SharePoint server patch levels. Examine SharePoint Unified Logging System (ULS) logs for unusual activity, application event logs for unexpected process crashes or executions, and web server logs for suspicious requests or shell uploads (e.g., .aspx, .ashx files). Check for new or modified files in SharePoint web application directories.",
+      "tanium_query_hint": "Get Installed Applications with 'SharePoint Server' and 'Version'; Get Registry Value 'HKLM:\\SOFTWARE\\Microsoft\\Shared Tools\\Web Server Extensions\\16.0\\InstallLocation\\Version' for SharePoint 2016 (adjust for other versions); Get File Hash of 'C:\\Program Files\\Microsoft Office Servers\\*\\*\\wssv3.dll'",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Microsoft SharePoint RCE' in your InsightVM console, specifically checking for vulnerabilities released in May 2026. Use asset queries targeting 'Microsoft SharePoint' servers and filter by 'vulnerability status' and 'patch status' to identify unpatched assets.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Cisco finally confirms attackers exploiting Unified CM flaw",
-      "tldr": "Cisco has officially confirmed that attackers are actively exploiting a vulnerability in its Unified Communications Manager (Unified CM) product, for which a patch was released in early June. This exploit allows threat actors to compromise critical unified communications infrastructure.",
-      "action": "Immediately apply the security patch released by Cisco in early June for all affected Cisco Unified Communications Manager (Unified CM) installations. Conduct comprehensive scans for indicators of compromise on all UC systems and meticulously review system logs for any suspicious activity, unauthorized access, or configuration changes.",
+      "tldr": "Cisco has officially confirmed that a vulnerability in its Unified Communications Manager (Unified CM), for which a patch was released in early June, is now under active exploitation by attackers. This confirms the critical nature of the flaw and the immediate need for remediation.",
+      "action": "Prioritize and immediately apply the security patch released by Cisco in early June 2026 for Unified Communications Manager. Conduct a comprehensive forensic review of any unpatched or previously unpatched systems for signs of compromise, including unauthorized access or configuration changes.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Unified Communications Manager (Unified CM) (specific vulnerable versions should be referenced in Cisco's early June 2026 security advisories for patching details).",
-      "how_to_determine_impact": "Confirm that all Cisco Unified CM systems have the security updates released in early June 2026 applied. Review Unified CM system logs, particularly security and audit logs, for unauthorized access attempts, unusual service restarts, or unexpected process executions. Consult Cisco's advisory for specific IOCs.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Cisco Unified Communications Manager'. Get Patch Status from all machines with 'Cisco Unified Communications Manager'. Inspect network connections from UC devices for unusual external communication.",
-      "rapid7_query_hint": "Search for 'Cisco Unified CM' vulnerabilities patched in June 2026 within InsightVM. Filter by 'Exploitable' = true. Perform authenticated scans against all Cisco Unified CM assets and check for related alerts in InsightIDR.",
+      "affected_versions": "Cisco Unified Communications Manager (Unified CM) (Consult Cisco Security Advisories from early June 2026 for the specific CVE and exact affected versions. Likely applies to all actively supported release trains.)",
+      "how_to_determine_impact": "Review Cisco Unified CM server logs for unauthorized access, unusual administrative activity, or unexpected service restarts. Check the installed software version against Cisco's security advisory to confirm vulnerability. Look for signs of unauthorized process execution or file modifications within the Unified CM environment.",
+      "tanium_query_hint": "Get Installed Applications with 'Cisco Unified Communications Manager' and 'Version'; Get Process Name and Command Line where 'Process Name' contains 'Cisco' and 'Command Line' is unusual; Get File Version['C:\\Program Files\\Cisco\\Unified CM\\*']",
+      "rapid7_query_hint": "Search for vulnerability ID associated with Cisco Unified CM flaw patched in June 2026. Use asset queries for 'Cisco Unified Communications Manager' appliances and filter by 'vulnerability status' and 'patch status'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.0 High"
     },
     {
-      "title": "AI Agent Exploits Langflow RCE to Automate Database Ransomware Attack",
-      "tldr": "A Remote Code Execution (RCE) vulnerability within Langflow has been actively exploited by an AI agent, leading to automated database ransomware attacks. This critical flaw allows for arbitrary code execution, enabling threat actors to gain control and deploy malicious payloads.",
-      "action": "Immediately patch all instances of Langflow to the latest secure version. If patching is not feasible, restrict network access to Langflow instances and monitor for any suspicious process execution or unauthorized outbound connections. Implement strong network segmentation for databases connected to Langflow.",
+      "title": "New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure",
+      "tldr": "A newly disclosed 'CitrixBleed' vulnerability is being actively exploited by threat actors immediately following its public disclosure. This indicates a critical security flaw in Citrix products being rapidly weaponized by adversaries, posing an extreme risk to unpatched systems.",
+      "action": "Immediately identify all Citrix products, especially Citrix NetScaler ADC and Gateway appliances, in your environment. Apply the latest security patches addressing this new 'CitrixBleed' vulnerability without delay. Monitor network traffic for indicators of compromise related to Citrix exploitation and unauthorized access.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/ai-agent-exploits-langflow-rce-to.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Langflow (specific vulnerable versions were not detailed, assume all prior versions are affected until a vendor-issued patch or advisory specifies otherwise).",
-      "how_to_determine_impact": "Identify all deployed Langflow instances in your environment. Verify the installed version against any public advisories. Monitor system logs for unexpected process launches, unauthorized file modifications, or unusual database interactions originating from Langflow processes. Review network traffic for suspicious connections to/from Langflow servers.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Langflow'. Get Running Processes from all machines with 'Langflow' and inspect command lines and parent/child relationships for anomalies.",
-      "rapid7_query_hint": "Search for 'Langflow' vulnerabilities in InsightVM. Filter by 'Exploitable' = true. Deploy InsightAgent to Langflow hosts for continuous monitoring of process activity and file changes. Analyze network flow data for unusual connections to critical databases.",
+      "affected_versions": "Citrix NetScaler ADC and Gateway (Specific versions and product lines will be detailed in Citrix's forthcoming security advisory. It is critical to consult the official advisory for exact affected versions.)",
+      "how_to_determine_impact": "Consult Citrix's security advisory for details on affected components and version checks. Review Citrix ADC/Gateway logs for anomalous login attempts, unusual session activity, or signs of unauthorized file access. Check network traffic logs for connections to unexpected external IP addresses or data exfiltration.",
+      "tanium_query_hint": "Get Installed Applications with 'Citrix NetScaler' or 'Citrix Gateway' and 'Version'; Get Network Connections where 'Remote IP Address' is suspicious and 'Port' is 443; Get File Hash for known vulnerable binaries on Citrix appliances.",
+      "rapid7_query_hint": "Search for vulnerability ID related to 'CitrixBleed' or specific CVE if published. Use asset queries for 'Citrix NetScaler' and 'Citrix Gateway' appliances and filter by 'vulnerability status' and 'patch status'.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Critical Cursor AI Code Editor Flaws Could Lead to OS-Level Remote Code Execution",
+      "tldr": "Multiple critical vulnerabilities have been discovered in the Cursor AI Code Editor that could enable OS-level Remote Code Execution (RCE). These flaws pose a significant supply chain and workstation compromise risk to developers using the editor, potentially allowing attackers to control the underlying operating system.",
+      "action": "If your organization utilizes the Cursor AI Code Editor, immediately update all installations to the latest patched version. Isolate development environments, enforce strict network controls, and ensure that no sensitive data is processed on potentially vulnerable instances until updates are confirmed.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/critical-cursor-ai-ide-flaws-could-lead-to-os-level-remote-code-execution/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "Cursor AI Code Editor (All versions prior to the patched release. Developers should consult the Cursor AI official website or release notes for the secure version update.)",
+      "how_to_determine_impact": "Check the version of Cursor AI Code Editor installed on all developer workstations and any build servers. Look for unauthorized process execution, file modifications outside expected development activities, or unusual network connections originating from the editor's process.",
+      "tanium_query_hint": "Get Installed Applications with 'Cursor AI Code Editor' and 'Version'; Get Process Name and Command Line where 'Process Name' contains 'cursor.exe'; Get Running Processes with 'Path' containing 'Cursor' and 'Command Line' for suspicious arguments.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Cursor AI Code Editor RCE'. Target developer workstations and use asset queries for 'Installed Software' containing 'Cursor AI Code Editor' and filter by version to identify vulnerable instances.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 High"
     }
   ],
   "insurance": [],
@@ -2242,6 +2242,49 @@
         "rapid7_query_hint": "Search for 'Cisco Unified CM' vulnerabilities patched in June 2026 within InsightVM. Filter by 'Exploitable' = true. Perform authenticated scans against all Cisco Unified CM assets and check for related alerts in InsightIDR.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "North Korea-Linked npm Packages Mimic Rollup Polyfills to Steal Developer Secrets",
+        "tldr": "Malicious npm packages, attributed to North Korea-linked threat actors, are mimicking legitimate Rollup polyfills to infect developer environments. The primary objective is to steal sensitive developer secrets, which could lead to broader software supply chain compromises.",
+        "action": "Audit all npm package dependencies for authenticity and reputational risks, especially for new or less-known packages. Implement stringent software supply chain security practices, including integrity checks, code signing verification, and enforcing least privilege principles in development environments.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Agentic AI Used to Conduct Ransomware Attack via Langflow",
+        "tldr": "This report confirms the use of agentic AI to exploit a vulnerability within the Langflow framework, culminating in a ransomware attack. This advanced technique underscores the escalating risk posed by AI-powered automation in orchestrating sophisticated cyber threats and demands proactive defense.",
+        "action": "Verify all Langflow deployments within your infrastructure. Apply all available security updates and implement secure configurations for any platforms interacting with AI agents. Ensure comprehensive logging and monitoring for anomalous AI agent behavior.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/agentic-ai-used-to-conduct-ransomware-attack-via-langflow/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "FortiBleed Campaign Linked to INC, Lynx Ransomware Attacks",
+        "tldr": "A new 'FortiBleed' campaign is actively being exploited, with strong links to the INC and Lynx ransomware groups. This indicates that threat actors are leveraging vulnerabilities in Fortinet products to gain initial access and subsequently deploy ransomware payloads.",
+        "action": "Patch all Fortinet devices, especially those exposed to the internet, against any known vulnerabilities associated with the 'FortiBleed' campaign. Implement robust network segmentation and continuously monitor for indicators of compromise (IoCs) linked to INC and Lynx ransomware groups.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/fortibleed-campaign-linked-to-inc-lynx-ransomware-attacks/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Critical Cursor AI Code Editor Flaws Could Lead to OS-Level Remote Code Execution",
+        "tldr": "Multiple critical vulnerabilities have been discovered in the Cursor AI Code Editor that could enable OS-level Remote Code Execution (RCE). These flaws pose a significant supply chain and workstation compromise risk to developers using the editor, potentially allowing attackers to control the underlying operating system.",
+        "action": "If your organization utilizes the Cursor AI Code Editor, immediately update all installations to the latest patched version. Isolate development environments, enforce strict network controls, and ensure that no sensitive data is processed on potentially vulnerable instances until updates are confirmed.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/critical-cursor-ai-ide-flaws-could-lead-to-os-level-remote-code-execution/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Cursor AI Code Editor (All versions prior to the patched release. Developers should consult the Cursor AI official website or release notes for the secure version update.)",
+        "how_to_determine_impact": "Check the version of Cursor AI Code Editor installed on all developer workstations and any build servers. Look for unauthorized process execution, file modifications outside expected development activities, or unusual network connections originating from the editor's process.",
+        "tanium_query_hint": "Get Installed Applications with 'Cursor AI Code Editor' and 'Version'; Get Process Name and Command Line where 'Process Name' contains 'cursor.exe'; Get Running Processes with 'Path' containing 'Cursor' and 'Command Line' for suspicious arguments.",
+        "rapid7_query_hint": "Search for vulnerabilities related to 'Cursor AI Code Editor RCE'. Target developer workstations and use asset queries for 'Installed Software' containing 'Cursor AI Code Editor' and filter by version to identify vulnerable instances.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 High",
         "category": "vulns"
       }
     ]
