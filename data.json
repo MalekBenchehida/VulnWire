@@ -1,120 +1,135 @@
 {
   "breaches": [
     {
-      "title": "Medtronic Data Breach Impacts 3.8 Million People",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/medtronic-data-breach-impacts-3-8-million-people/",
-      "source": "SecurityWeek"
-    }
-  ],
-  "ransomware": [
-    {
       "title": "U.S. Government Entity Paid Kairos $1 Million in Data-Theft Extortion Case",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A U.S. government entity paid $1 million to the Kairos group in a data-theft extortion case. This indicates a successful data exfiltration event leading to a ransom payment to prevent data disclosure.",
+      "action": "Review data access logs and incident response plans for extortion scenarios. Implement robust data loss prevention (DLP) measures and enhance threat intelligence on extortion groups like Kairos.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html",
       "source": "The Hacker News"
     },
     {
+      "title": "European Parliament Member Investigating Spyware Was Hacked With Pegasus",
+      "tldr": "A European Parliament member investigating spyware has reportedly been hacked using the sophisticated Pegasus spyware. This incident highlights ongoing risks to high-profile individuals and potential implications for political and investigative integrity, involving advanced mobile device exploitation.",
+      "action": "Implement advanced mobile security solutions and conduct regular device audits for high-profile personnel. Provide secure communication channels and training on identifying sophisticated phishing attempts targeting mobile devices.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/european-parliament-member.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Medtronic Data Breach Impacts 3.8 Million People",
+      "tldr": "Medtronic has experienced a data breach impacting 3.8 million individuals. This incident likely involved the unauthorized access and potential exfiltration of sensitive personal or health information from Medtronic's systems.",
+      "action": "Review data privacy controls and incident response procedures for large-scale data breaches. Implement enhanced monitoring for unauthorized access to sensitive databases and ensure robust data encryption for data at rest and in transit.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/medtronic-data-breach-impacts-3-8-million-people/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "ConsentFix and ClickFix: How Microsoft 365 Accounts are Hijacked in 3 Seconds",
+      "tldr": "ConsentFix and ClickFix attacks can hijack Microsoft 365 accounts in seconds by exploiting fake prompts and OAuth flows to steal tokens. These techniques effectively bypass multi-factor authentication (MFA), posing a severe risk to M365 security.",
+      "action": "Implement robust Conditional Access policies in Microsoft 365 to restrict OAuth app consent and token usage. Conduct regular audits of granted application permissions. Educate users on identifying malicious consent requests and suspicious prompts.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/",
+      "source": "BleepingComputer"
+    }
+  ],
+  "ransomware": [
+    {
       "title": "New Avalon Malware Framework Packs CrownX Ransomware Capabilities",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "The new 'Avalon' malware framework has emerged, featuring capabilities associated with the CrownX ransomware. This framework facilitates ransomware attacks, potentially leading to data encryption and extortion for affected organizations.",
+      "action": "Update endpoint detection and response (EDR) systems with the latest threat intelligence on Avalon and CrownX. Strengthen email and web filtering to block known IOCs. Review and test backup and recovery procedures.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/new-avalon-malware-framework-packs.html",
       "source": "The Hacker News"
     },
     {
       "title": "JadePuffer ransomware used AI agent to automate entire attack",
-      "tldr": "Researchers identified what they believe is the first documented case of a ransomware operation, JadePuffer, conducted entirely by a large language model (LLM) agent. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Researchers have identified the 'JadePuffer' ransomware operation as potentially the first documented case where an entire attack was automated by a large language model (LLM) agent. This marks a significant evolution in ransomware tactics, potentially enabling more sophisticated and autonomous attacks.",
+      "action": "Enhance security measures against automated attacks, focusing on strong access controls, network segmentation, and advanced threat detection. Continuously update threat intelligence on emerging AI-driven attack methodologies.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/",
       "source": "BleepingComputer"
     },
     {
       "title": "Agentic AI Used to Conduct Ransomware Attack via Langflow",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "An agentic AI has been utilized to conduct a ransomware attack, specifically through Langflow. This demonstrates a new level of automation and sophistication in ransomware operations, where AI agents can potentially orchestrate and execute complex attack sequences.",
+      "action": "Implement advanced detection mechanisms capable of identifying AI-driven attack patterns. Strengthen defense in depth, focusing on preventing initial compromise vectors and rapid response to anomalous behavior, particularly in environments using Langflow or similar AI orchestration tools.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/agentic-ai-used-to-conduct-ransomware-attack-via-langflow/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "FortiBleed Campaign Linked to INC, Lynx Ransomware Attacks",
+      "tldr": "The 'FortiBleed' campaign is now linked to the INC and Lynx ransomware operations. This campaign exploits vulnerabilities in Fortinet products to gain initial access, leading to ransomware deployment and data encryption by these groups.",
+      "action": "Prioritize patching of all Fortinet products, particularly those exposed to the internet. Enhance monitoring for signs of compromise related to FortiBleed, INC, or Lynx ransomware, and review incident response plans for ransomware attacks.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/fortibleed-campaign-linked-to-inc-lynx-ransomware-attacks/",
       "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
-      "title": "North Korean Hackers Publish 108 Malicious Packages and Extensions in PolinRider Campaign",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Cisco finally confirms attackers exploiting Unified CM flaw",
+      "tldr": "Cisco has confirmed active exploitation of a Unified Communications Manager (Unified CM) vulnerability that was patched in early June. This confirms that threat actors are targeting unpatched Cisco Unified CM instances, potentially leading to system compromise.",
+      "action": "Immediately apply patches for the Cisco Unified CM vulnerability. Conduct an audit of all Cisco Unified CM deployments to verify patch status and search for signs of compromise if patching was not performed promptly.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/north-korean-hackers-publish-108.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Cisco Unified Communications Manager (Unified CM) (specific versions vulnerable before early June patch)",
+      "how_to_determine_impact": "Verify Cisco Unified CM software versions against vendor advisories. Check for successful patch installation. Monitor network logs for unusual activity or signs of unauthorized access to Unified CM systems. Look for specific IOCs from Cisco's advisory.",
+      "tanium_query_hint": "Use 'Get Installed Application Version[Cisco Unified Communications Manager]' or 'Get Cisco Product Version' sensor to identify versions. Check for file hashes or registry entries related to known exploitation. Refer to Cisco security advisories for specific IOCs.",
+      "rapid7_query_hint": "Run credentialed scans on Cisco Unified CM systems to detect vulnerable versions. Search InsightVM for the specific Cisco vulnerability ID (once known) or 'vulnerability.title contains \"Cisco Unified CM\" AND vulnerability.active_exploitation = true'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Likely 9.8 Critical"
     },
     {
-      "title": "Unpatched Flaws Disclosed in Filesystem Bundled Into Millions of Embedded Devices",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure",
+      "tldr": "A new 'CitrixBleed' vulnerability has been actively exploited almost immediately following its public disclosure. This critical flaw affects Citrix products, allowing threat actors to compromise systems and potentially access sensitive data or gain network persistence.",
+      "action": "Immediately apply all available patches for Citrix products affected by the new CitrixBleed vulnerability. Conduct a thorough forensic analysis for signs of compromise, as exploitation began rapidly after disclosure. Isolate affected systems until patched.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/unpatched-flaws-disclosed-in-filesystem.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
+      "source_url": "https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Specific Citrix products (e.g., NetScaler ADC/Gateway, consult Citrix advisories for exact versions)",
+      "how_to_determine_impact": "Identify all Citrix appliances (ADC, Gateway, etc.) in your environment. Check their firmware versions against Citrix security bulletins. Implement IOC scanning and monitor for unauthorized network connections or process activity associated with Citrix devices.",
+      "tanium_query_hint": "Use 'Get Citrix Product Version' or 'Get File Version' sensors on Citrix appliances to verify versions. Search for specific file hashes or registry entries provided in Citrix advisories for indicators of compromise. Execute 'Get Network Connections' to identify unusual outbound connections.",
+      "rapid7_query_hint": "Run credentialed scans on Citrix appliances. Search InsightVM for the specific CitrixBleed vulnerability ID (once available) or 'vulnerability.title contains \"CitrixBleed\" AND vulnerability.active_exploitation = true'. Monitor for suspicious log entries on Citrix devices.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Likely 9.8 Critical"
     },
     {
       "title": "New \"Bad Epoll\" Linux Kernel Flaw Lets Unprivileged Users Gain Root, Hits Android",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A new critical vulnerability, dubbed \"Bad Epoll,\" has been discovered in the Linux kernel, allowing unprivileged users to escalate privileges to root. This flaw significantly impacts Linux-based systems, including Android devices, posing a severe security risk.",
+      "action": "Immediately update Linux kernel on all affected systems and Android devices to patched versions. Prioritize systems accessible by unprivileged users or exposed to untrusted environments. Implement least privilege principles.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Linux kernel (specific versions to be determined from vendor advisories, impacting Android)",
+      "how_to_determine_impact": "Check kernel versions on all Linux and Android systems. Consult vendor advisories for specific vulnerable kernel versions and distribution-specific patches. Look for indicators of exploitation related to privilege escalation attempts.",
+      "tanium_query_hint": "Get Linux Kernel Version from all Linux endpoints. Use 'Get Tanium Client Status' to identify Linux endpoints. Consult OS vendor advisories for specific patch levels. Search for specific syscall usage if exploitation details emerge.",
+      "rapid7_query_hint": "Run credentialed scans on Linux assets to identify kernel versions. Search 'vulnerability.title contains \"Bad Epoll\" OR vulnerability.description contains \"epoll\" AND vulnerability.severity >= \"critical\"' in InsightVM. Check Android device management for patch status.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "North Korea-Linked npm Packages Mimic Rollup Polyfills to Steal Developer Secrets",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Critical Cursor AI Code Editor Flaws Could Lead to OS-Level Remote Code Execution",
+      "tldr": "Critical vulnerabilities have been identified in the Cursor AI Code Editor, which could potentially lead to OS-level remote code execution (RCE). These flaws pose a severe risk to developers and organizations using the editor, allowing attackers to compromise their systems.",
+      "action": "If using Cursor AI Code Editor, immediately check for and apply any available patches or updates. Temporarily restrict usage or isolate development environments where the editor is deployed until remediation is confirmed.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/north-korea-linked-npm-packages-mimic.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/critical-cursor-ai-ide-flaws-could-lead-to-os-level-remote-code-execution/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Cursor AI Code Editor (specific vulnerable versions, consult vendor advisories)",
+      "how_to_determine_impact": "Identify all workstations with Cursor AI Code Editor installed. Check the installed version against vendor security advisories. Look for any unusual process activity or network connections originating from the editor process.",
+      "tanium_query_hint": "Get Installed Application Version[Cursor AI Code Editor]. Use 'Get Running Processes' to monitor processes related to the editor for suspicious activity. Consult vendor for specific file paths or registry keys to check.",
+      "rapid7_query_hint": "Run credentialed scans to detect installed software versions. Search InsightVM for 'vulnerability.title contains \"Cursor AI Code Editor\" AND vulnerability.severity >= \"critical\"'. Monitor endpoint logs for RCE attempts.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -2587,6 +2602,81 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "European Parliament Member Investigating Spyware Was Hacked With Pegasus",
+        "tldr": "A European Parliament member investigating spyware has reportedly been hacked using the sophisticated Pegasus spyware. This incident highlights ongoing risks to high-profile individuals and potential implications for political and investigative integrity, involving advanced mobile device exploitation.",
+        "action": "Implement advanced mobile security solutions and conduct regular device audits for high-profile personnel. Provide secure communication channels and training on identifying sophisticated phishing attempts targeting mobile devices.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/european-parliament-member.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "ConsentFix and ClickFix: How Microsoft 365 Accounts are Hijacked in 3 Seconds",
+        "tldr": "ConsentFix and ClickFix attacks can hijack Microsoft 365 accounts in seconds by exploiting fake prompts and OAuth flows to steal tokens. These techniques effectively bypass multi-factor authentication (MFA), posing a severe risk to M365 security.",
+        "action": "Implement robust Conditional Access policies in Microsoft 365 to restrict OAuth app consent and token usage. Conduct regular audits of granted application permissions. Educate users on identifying malicious consent requests and suspicious prompts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/consentfix-and-clickfix-how-microsoft-365-accounts-are-hijacked-in-3-seconds/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "FortiBleed Campaign Linked to INC, Lynx Ransomware Attacks",
+        "tldr": "The 'FortiBleed' campaign is now linked to the INC and Lynx ransomware operations. This campaign exploits vulnerabilities in Fortinet products to gain initial access, leading to ransomware deployment and data encryption by these groups.",
+        "action": "Prioritize patching of all Fortinet products, particularly those exposed to the internet. Enhance monitoring for signs of compromise related to FortiBleed, INC, or Lynx ransomware, and review incident response plans for ransomware attacks.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/fortibleed-campaign-linked-to-inc-lynx-ransomware-attacks/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Cisco finally confirms attackers exploiting Unified CM flaw",
+        "tldr": "Cisco has confirmed active exploitation of a Unified Communications Manager (Unified CM) vulnerability that was patched in early June. This confirms that threat actors are targeting unpatched Cisco Unified CM instances, potentially leading to system compromise.",
+        "action": "Immediately apply patches for the Cisco Unified CM vulnerability. Conduct an audit of all Cisco Unified CM deployments to verify patch status and search for signs of compromise if patching was not performed promptly.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisco-finally-confirms-attackers-exploiting-unified-cm-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Unified Communications Manager (Unified CM) (specific versions vulnerable before early June patch)",
+        "how_to_determine_impact": "Verify Cisco Unified CM software versions against vendor advisories. Check for successful patch installation. Monitor network logs for unusual activity or signs of unauthorized access to Unified CM systems. Look for specific IOCs from Cisco's advisory.",
+        "tanium_query_hint": "Use 'Get Installed Application Version[Cisco Unified Communications Manager]' or 'Get Cisco Product Version' sensor to identify versions. Check for file hashes or registry entries related to known exploitation. Refer to Cisco security advisories for specific IOCs.",
+        "rapid7_query_hint": "Run credentialed scans on Cisco Unified CM systems to detect vulnerable versions. Search InsightVM for the specific Cisco vulnerability ID (once known) or 'vulnerability.title contains \"Cisco Unified CM\" AND vulnerability.active_exploitation = true'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Likely 9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "New CitrixBleed Vulnerability Exploited Immediately After Public Disclosure",
+        "tldr": "A new 'CitrixBleed' vulnerability has been actively exploited almost immediately following its public disclosure. This critical flaw affects Citrix products, allowing threat actors to compromise systems and potentially access sensitive data or gain network persistence.",
+        "action": "Immediately apply all available patches for Citrix products affected by the new CitrixBleed vulnerability. Conduct a thorough forensic analysis for signs of compromise, as exploitation began rapidly after disclosure. Isolate affected systems until patched.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/new-citrixbleed-vulnerability-exploited-immediately-after-public-disclosure/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Specific Citrix products (e.g., NetScaler ADC/Gateway, consult Citrix advisories for exact versions)",
+        "how_to_determine_impact": "Identify all Citrix appliances (ADC, Gateway, etc.) in your environment. Check their firmware versions against Citrix security bulletins. Implement IOC scanning and monitor for unauthorized network connections or process activity associated with Citrix devices.",
+        "tanium_query_hint": "Use 'Get Citrix Product Version' or 'Get File Version' sensors on Citrix appliances to verify versions. Search for specific file hashes or registry entries provided in Citrix advisories for indicators of compromise. Execute 'Get Network Connections' to identify unusual outbound connections.",
+        "rapid7_query_hint": "Run credentialed scans on Citrix appliances. Search InsightVM for the specific CitrixBleed vulnerability ID (once available) or 'vulnerability.title contains \"CitrixBleed\" AND vulnerability.active_exploitation = true'. Monitor for suspicious log entries on Citrix devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Likely 9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical Cursor AI Code Editor Flaws Could Lead to OS-Level Remote Code Execution",
+        "tldr": "Critical vulnerabilities have been identified in the Cursor AI Code Editor, which could potentially lead to OS-level remote code execution (RCE). These flaws pose a severe risk to developers and organizations using the editor, allowing attackers to compromise their systems.",
+        "action": "If using Cursor AI Code Editor, immediately check for and apply any available patches or updates. Temporarily restrict usage or isolate development environments where the editor is deployed until remediation is confirmed.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/critical-cursor-ai-ide-flaws-could-lead-to-os-level-remote-code-execution/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Cursor AI Code Editor (specific vulnerable versions, consult vendor advisories)",
+        "how_to_determine_impact": "Identify all workstations with Cursor AI Code Editor installed. Check the installed version against vendor security advisories. Look for any unusual process activity or network connections originating from the editor process.",
+        "tanium_query_hint": "Get Installed Application Version[Cursor AI Code Editor]. Use 'Get Running Processes' to monitor processes related to the editor for suspicious activity. Consult vendor for specific file paths or registry keys to check.",
+        "rapid7_query_hint": "Run credentialed scans to detect installed software versions. Search InsightVM for 'vulnerability.title contains \"Cursor AI Code Editor\" AND vulnerability.severity >= \"critical\"'. Monitor endpoint logs for RCE attempts.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
