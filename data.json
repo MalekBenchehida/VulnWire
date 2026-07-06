@@ -1,128 +1,136 @@
 {
   "breaches": [
     {
-      "title": "New TrojPix Attack Leaks Data From Air-Gapped Systems via Video Cable Emissions",
-      "tldr": "A novel TrojPix attack can exfiltrate sensitive data from physically isolated, air-gapped systems by analyzing electromagnetic emissions from video cables. This bypasses traditional network and physical security controls.",
-      "action": "Assess physical security measures for air-gapped systems, including electromagnetic shielding for video cables and display units. Implement strict controls on devices connected to air-gapped systems.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/new-trojpix-attack-leaks-data-from-air.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Suspected China-Nexus Hackers Use Fake Indian Tax Filing Utility to Deploy DcRAT",
-      "tldr": "Threat actors, suspected to be China-nexus, are using a malicious fake Indian tax filing utility to distribute and deploy DcRAT. This Remote Access Trojan can facilitate data theft, surveillance, and further system compromise for espionage purposes.",
-      "action": "Educate users about phishing and malicious software disguised as legitimate utilities. Implement robust endpoint detection and response (EDR) solutions to detect and block DcRAT activity and associated command-and-control communications.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/suspected-china-nexus-hackers-use-fake.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "NetNut proxy network disrupted, 2 million infected devices cut off",
-      "tldr": "A joint operation by Google and the FBI has successfully disrupted the NetNut residential proxy network. This network relied on approximately 2 million compromised Android devices, including smart TVs and streaming boxes, which were exploited to route malicious traffic.",
-      "action": "Scan all Android-based devices, especially smart TVs and streaming boxes, for malware and suspicious activity. Advise users to regularly update device firmware and avoid installing applications from untrusted sources to prevent device compromise.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/netnut-proxy-network-disrupted-2-million-infected-devices-cut-off/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Medtronic Data Breach Impacts 3.8 Million People",
-      "tldr": "Medical device company Medtronic has disclosed a data breach that has affected approximately 3.8 million individuals. The nature of the compromised data was not specified but typically involves personal and health-related information.",
-      "action": "Monitor for official Medtronic breach notifications and guidance. Users impacted should enable multi-factor authentication, monitor credit reports, and be vigilant against phishing attempts. Organizations relying on Medtronic services should assess their third-party risk.",
+      "tldr": "Medtronic has experienced a significant data breach, affecting approximately 3.8 million individuals. This incident likely involved unauthorized access and exfiltration of sensitive personal or health information.",
+      "action": "Organizations should review and strengthen data protection strategies, focusing on sensitive data access controls, encryption, and robust intrusion detection systems. Affected individuals should be promptly notified and offered identity theft protection services.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/medtronic-data-breach-impacts-3-8-million-people/",
       "source": "SecurityWeek"
+    },
+    {
+      "title": "Phishing poses as big-brand job interview to steal Google accounts",
+      "tldr": "A widespread phishing campaign is impersonating more than 30 prominent brands, including Adobe and Netflix, through fake job interview lures. The objective is to steal Google account credentials from marketing professionals, leading to potential account compromises and data breaches.",
+      "action": "Conduct immediate security awareness training for all employees, especially those in marketing roles, on identifying sophisticated phishing attempts. Enable and enforce multi-factor authentication (MFA) on all Google accounts and corporate credentials.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/phishing-poses-as-big-brand-job-interview-to-steal-google-accounts/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Fake IT support calls on Microsoft Teams push EtherRAT malware",
+      "tldr": "Threat actors are exploiting Microsoft Teams voice calls by impersonating corporate IT support staff to trick employees into installing EtherRAT malware. This tactic provides attackers with initial access to corporate networks, enabling further compromise and potential data exfiltration.",
+      "action": "Implement strict verification procedures for all IT support requests, particularly those involving software installation or remote access. Enhance monitoring of Microsoft Teams activity for suspicious calls, file transfers, or unusual employee requests.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/fake-it-support-calls-on-microsoft-teams-push-etherRAT-malware/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "New TrojPix Attack Leaks Data From Air-Gapped Systems via Video Cable Emissions",
+      "tldr": "A novel attack, named TrojPix, has been discovered that is capable of exfiltrating sensitive data from air-gapped systems. This method exploits electromagnetic emissions from video cables to transmit data, effectively bypassing traditional network-based security controls.",
+      "action": "Review and enhance physical security measures for all air-gapped systems, including the implementation of electromagnetic shielding for video cables. Establish and enforce strict policies regarding device connections and data transfer procedures.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/new-trojpix-attack-leaks-data-from-air.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
-      "title": "U.S. Government Entity Paid Kairos $1 Million in Data-Theft Extortion Case",
-      "tldr": "A U.S. government entity reportedly paid $1 million to the Kairos Group in an extortion case following a data theft incident. This payment was likely made to prevent the public release or ensure the deletion of the stolen data.",
-      "action": "Review and strengthen data exfiltration prevention mechanisms and incident response plans. Re-evaluate organizational policies on ransomware and extortion payments, focusing on data backup and recovery strategies.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/us-government-entity-paid-kairos-group.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "JadePuffer ransomware used AI agent to automate entire attack",
-      "tldr": "Researchers have identified JadePuffer, a ransomware operation believed to be the first documented case of an attack conducted entirely by a large language model (LLM) agent. This marks a significant shift towards automated and sophisticated cyberattacks.",
-      "action": "Enhance security monitoring for AI-driven attack patterns and behaviors. Implement robust endpoint protection with advanced behavioral analysis capabilities to detect novel, automated threats. Review and update incident response playbooks for AI-powered attacks.",
+      "tldr": "Researchers have identified what is believed to be the first documented case of a ransomware operation, JadePuffer, being conducted entirely by a large language model (LLM) agent. This innovation signifies an evolving threat landscape with highly automated and efficient ransomware tactics.",
+      "action": "Enhance AI-driven threat detection and prevention capabilities to identify sophisticated automated attacks. Implement robust network segmentation, least privilege access, and advanced endpoint protection to mitigate the impact of such automated compromises.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/jadepuffer-ransomware-used-ai-agent-to-automate-entire-attack/",
       "source": "BleepingComputer"
     },
     {
       "title": "Agentic AI Used to Conduct Ransomware Attack via Langflow",
-      "tldr": "An agentic AI system was observed conducting a ransomware attack, leveraging the Langflow platform for its operations. This demonstrates the increasing sophistication and automation capabilities now being integrated into ransomware campaigns.",
-      "action": "Implement strict security controls for AI agent deployments, including input/output validation and access restrictions. Monitor Langflow environments and similar AI development platforms for unauthorized code execution or suspicious activity indicative of malicious AI agent use.",
+      "tldr": "Agentic AI has been leveraged to execute a ransomware attack via Langflow, showcasing an advanced and automated method for deploying malicious payloads. This development highlights an emerging threat vector where AI agents are used to orchestrate and carry out ransomware operations.",
+      "action": "Implement strong security controls around AI agent development and deployment, including rigorous input validation, output filtering, and adversarial testing. Monitor for unusual or unauthorized activity originating from AI systems and ensure proper isolation.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/agentic-ai-used-to-conduct-ransomware-attack-via-langflow/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations",
+      "tldr": "Iranian state-sponsored hackers are deploying a new, custom command-and-control (C2) framework named 'Cavern' in targeted attacks against Israeli organizations. This sophisticated framework facilitates persistent access and control, often preceding data exfiltration or disruption activities.",
+      "action": "Implement advanced threat detection and prevention mechanisms, specifically focusing on C2 beaconing and anomalous network traffic patterns. Review network and endpoint logs for indicators of compromise (IOCs) associated with Iranian APT groups.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Armored Likho APT Targeting Government, Electric Power Entities",
+      "tldr": "The 'Armored Likho' APT group is actively targeting government and electric power entities. This state-sponsored activity aims to disrupt critical infrastructure or exfiltrate sensitive data, posing a significant national security threat with potential for widespread impact.",
+      "action": "Integrate enhanced threat intelligence feeds specific to APT groups targeting critical infrastructure. Deploy advanced network intrusion detection systems and strengthen operational technology (OT) security postures to defend against sophisticated attacks.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/armored-likho-apt-targeting-government-electric-power-entities/",
       "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "Max severity Adobe ColdFusion flaw now exploited in attacks",
-      "tldr": "A maximum severity Adobe ColdFusion vulnerability, identified as CVE-2026-48282, is now being actively exploited in attacks. This critical flaw allows attackers to gain unauthorized access and potentially execute arbitrary code on affected systems.",
-      "action": "Immediately apply the latest security patches released by Adobe for ColdFusion. Implement network-level protections to block known exploitation attempts and monitor ColdFusion servers for any indicators of compromise.",
+      "tldr": "A maximum-severity Adobe ColdFusion vulnerability, tracked as CVE-2026-48282, is now being actively exploited in the wild. This critical flaw poses a significant risk of remote code execution and full system compromise for affected servers.",
+      "action": "Immediately apply the security patch for CVE-2026-48282 to all Adobe ColdFusion installations. Conduct a thorough review of logs and systems for indicators of compromise (IOCs) and any unusual activity on ColdFusion servers.",
       "cve_ids": [
         "CVE-2026-48282"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-adobe-coldfusion-flaw-now-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Adobe ColdFusion versions vulnerable to CVE-2026-48282. Refer to Adobe's official security advisories for specific affected versions and patch details.",
-      "how_to_determine_impact": "Scan all Adobe ColdFusion installations across your environment for CVE-2026-48282. Verify current patch levels against vendor advisories. Check system logs for signs of suspicious activity or exploitation attempts.",
-      "tanium_query_hint": "Get Installed Applications contains 'Adobe ColdFusion' and (Get Registry Value 'HKLM\\SOFTWARE\\Adobe\\ColdFusion\\CurrentVersion' or 'Get File Version[\"C:\\ColdFusion\\cfusion\\bin\\coldfusion.exe\"]').",
-      "rapid7_query_hint": "Vulnerability ID: CVE-2026-48282. Asset search: Installed Software Name contains 'Adobe ColdFusion' and Vulnerability Title contains 'CVE-2026-48282'.",
+      "affected_versions": "Adobe ColdFusion, specific versions affected by CVE-2026-48282. Refer to Adobe's official security bulletin for precise version ranges.",
+      "how_to_determine_impact": "Identify all servers running Adobe ColdFusion. Check the installed version against Adobe's advisory for CVE-2026-48282. Look for signs of unusual process execution, web shell presence, or unauthorized file modifications on these servers.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Adobe ColdFusion'; Get Running Processes with 'cfusion.exe' and examine parent processes or unexpected child processes.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-48282' within InsightVM. Use asset search filters for 'software name = Adobe ColdFusion' and check installed versions. Conduct authenticated scans of ColdFusion servers.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure",
-      "tldr": "Threat actors are actively probing a Gitea Docker flaw, CVE-2026-20896, just 13 days after its public disclosure. This vulnerability in Gitea's Docker implementation could allow unauthorized access or privilege escalation.",
-      "action": "Prioritize patching for Gitea Docker installations to address CVE-2026-20896. Implement network segmentation and restrict access to Gitea instances. Monitor logs for suspicious activity originating from or targeting Gitea Docker deployments.",
+      "tldr": "Threat actors are actively probing for a recently disclosed Gitea Docker vulnerability, CVE-2026-20896, merely 13 days after its public disclosure. This indicates a high likelihood of impending or active exploitation attempts.",
+      "action": "Immediately apply the latest security patches or updates to all Gitea Docker installations. Implement enhanced network monitoring for suspicious activity specifically targeting Gitea instances and review logs for failed exploit attempts.",
       "cve_ids": [
         "CVE-2026-20896"
       ],
       "source_url": "https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Gitea Docker deployments vulnerable to CVE-2026-20896. Consult Gitea's official security advisories for specific affected versions.",
-      "how_to_determine_impact": "Identify all Gitea Docker instances. Check the version of Gitea running within the Docker containers. Scan for CVE-2026-20896 using vulnerability scanners. Review Docker container logs for suspicious connection attempts or errors related to the vulnerability.",
-      "tanium_query_hint": "Get Running Processes contains 'docker' AND Get Installed Applications contains 'Gitea'. Utilize 'Get Docker Container Info' to identify Gitea versions.",
-      "rapid7_query_hint": "Vulnerability ID: CVE-2026-20896. Asset search: Installed Software Name contains 'Gitea' AND Containerized equals true. Run a vulnerability scan against Docker hosts and containers.",
+      "affected_versions": "Gitea Docker installations, specific versions affected by CVE-2026-20896. Refer to Gitea's official advisories for patch details.",
+      "how_to_determine_impact": "Identify all Gitea instances running in Docker environments. Check the deployed Gitea version and cross-reference with the vendor's security advisory for CVE-2026-20896. Monitor Docker container logs for unusual activity.",
+      "tanium_query_hint": "Get Docker Containers running Gitea from all machines; Get Installed Applications from all machines with 'Gitea' and check versions within containers.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-20896' in InsightVM. Use asset search filters for 'software name = Gitea' and specifically look for containerized deployments. Conduct container image vulnerability scans.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "8.5 High (estimated based on active probing and typical impact of such flaws)"
+    },
+    {
+      "title": "Proof-of-Concept Exploit Released for Linux ‘Bad Epoll’ Root Access Vulnerability",
+      "tldr": "A proof-of-concept (PoC) exploit has been publicly released for the Linux 'Bad Epoll' vulnerability, which grants root access on affected systems. The availability of a public PoC significantly increases the risk of widespread active exploitation for vulnerable Linux installations.",
+      "action": "Immediately apply all available security patches for the Linux kernel that address the 'Bad Epoll' vulnerability. Restrict administrative and network access to affected systems until remediation is fully completed.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/proof-of-concept-exploit-released-for-linux-bad-epoll-root-access-vulnerability/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Linux kernel, specific versions affected by the 'Bad Epoll' vulnerability. Consult official Linux distribution advisories and kernel release notes for details.",
+      "how_to_determine_impact": "Check the Linux kernel versions on all deployed Linux systems. Refer to vendor-specific security bulletins for vulnerable versions and available patches. Verify if the 'epoll' system call is utilized by any potentially vulnerable applications or services.",
+      "tanium_query_hint": "Get Kernel Version from all Linux machines; Get Installed Packages from all Linux machines and check for kernel-related updates.",
+      "rapid7_query_hint": "Search for vulnerability ID associated with 'Linux Bad Epoll root access' or specific kernel version vulnerabilities. Use InsightAgent to query for 'Linux kernel version' across all Linux assets.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0+ Critical (estimated based on root access and PoC availability)"
     },
     {
       "title": "16-Year-Old Linux KVM Flaw Lets Guest VMs Escape to Host on Intel and AMD x86 Systems",
-      "tldr": "A 16-year-old vulnerability in Linux KVM allows guest virtual machines to escape to the host system on Intel and AMD x86 architectures. This severe flaw could grant an attacker full control over the host server from a compromised guest VM.",
-      "action": "Ensure all Linux KVM host systems on Intel and AMD x86 platforms are running the latest kernel versions with available security patches. Review hypervisor configurations for best practices to mitigate VM escape risks.",
+      "tldr": "A critical 16-year-old vulnerability has been discovered in Linux KVM (Kernel-based Virtual Machine) that allows guest virtual machines to escape to the host system. This flaw affects both Intel and AMD x86 architectures, potentially leading to full host compromise from a compromised guest VM.",
+      "action": "Immediately apply the latest kernel patches and updates to all Linux KVM host systems. Isolate KVM hosts from untrusted networks and implement strict access controls until patches are fully deployed and verified.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Linux KVM on Intel and AMD x86 systems. Specific vulnerable kernel versions depend on the Linux distribution and patch status. Consult distribution-specific advisories.",
-      "how_to_determine_impact": "Identify all Linux KVM hosts running on Intel or AMD x86 architectures. Check the kernel version of each host. Cross-reference kernel versions with Linux distribution security advisories concerning KVM vulnerabilities and VM escape flaws.",
-      "tanium_query_hint": "Get OS Platform contains 'Linux' AND (Get Installed Applications contains 'KVM' or 'QEMU'). Utilize 'Get Kernel Version' sensor for specific version details.",
-      "rapid7_query_hint": "Asset search: Operating System contains 'Linux' AND Host Service Name contains 'KVM' or 'QEMU'. Vulnerability search: 'Linux KVM VM escape'.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
-    },
-    {
-      "title": "Prompt Injection Attacks Trick AI Agents Into Making Crypto Payments",
-      "tldr": "Prompt injection attacks are being used to trick AI agents into performing unauthorized actions, specifically making cryptocurrency payments. This novel attack vector exploits vulnerabilities in how AI models interpret and execute user prompts.",
-      "action": "Implement robust input validation and sanitization for all AI agent prompts. Employ human-in-the-loop verification for sensitive AI agent actions, especially financial transactions. Monitor AI agent activity for anomalous payment requests or unusual prompt patterns.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/prompt-injection-attacks-trick-ai-agents-into-making-crypto-payments/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "AI Agents and Large Language Models (LLMs) susceptible to prompt injection vulnerabilities that allow for unauthorized actions like crypto payments.",
-      "how_to_determine_impact": "Review AI agent interaction logs for unusual prompts, unexpected outputs, or unauthorized transaction attempts. Test AI agents with known prompt injection techniques. Verify that financial transaction mechanisms are isolated and require explicit authorization beyond AI agent control.",
-      "tanium_query_hint": "Review AI application logs for prompt injection indicators such as unusual or complex prompt structures. Monitor network traffic from AI agent hosts for suspicious outbound connections (e.g., to cryptocurrency exchanges or wallets).",
-      "rapid7_query_hint": "Log search: Keywords 'prompt injection', 'unauthorized transaction', 'AI agent error'. Behavioral analytics on AI agent activity for anomalies in command execution or financial interactions. Implement custom detection rules for unusual AI agent API calls.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.0 High"
+      "affected_versions": "Linux KVM on Intel and AMD x86 systems. Specific vulnerable kernel versions need to be identified through official Linux distribution advisories and kernel changelogs.",
+      "how_to_determine_impact": "Inspect the kernel versions of all Linux KVM host systems. Refer to official Linux distribution advisories (e.g., Red Hat, Debian, Ubuntu) for specific vulnerable kernel versions and patch status. Verify if KVM is actively enabled and running on identified hosts.",
+      "tanium_query_hint": "Get Kernel Version from all machines; Get Installed KVM Packages from all machines to identify KVM hosts.",
+      "rapid7_query_hint": "Search for vulnerability IDs associated with 'Linux KVM guest escape' or specific kernel version vulnerabilities. Use InsightAgent to query for 'Linux kernel version' on potential KVM host systems and verify KVM installation.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0+ Critical (estimated due to host escape capability)"
     }
   ],
   "insurance": [],
@@ -2864,6 +2872,42 @@
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.0 High",
         "category": "vulns"
+      },
+      {
+        "title": "Phishing poses as big-brand job interview to steal Google accounts",
+        "tldr": "A widespread phishing campaign is impersonating more than 30 prominent brands, including Adobe and Netflix, through fake job interview lures. The objective is to steal Google account credentials from marketing professionals, leading to potential account compromises and data breaches.",
+        "action": "Conduct immediate security awareness training for all employees, especially those in marketing roles, on identifying sophisticated phishing attempts. Enable and enforce multi-factor authentication (MFA) on all Google accounts and corporate credentials.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/phishing-poses-as-big-brand-job-interview-to-steal-google-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Fake IT support calls on Microsoft Teams push EtherRAT malware",
+        "tldr": "Threat actors are exploiting Microsoft Teams voice calls by impersonating corporate IT support staff to trick employees into installing EtherRAT malware. This tactic provides attackers with initial access to corporate networks, enabling further compromise and potential data exfiltration.",
+        "action": "Implement strict verification procedures for all IT support requests, particularly those involving software installation or remote access. Enhance monitoring of Microsoft Teams activity for suspicious calls, file transfers, or unusual employee requests.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/fake-it-support-calls-on-microsoft-teams-push-etherRAT-malware/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Iran-Linked Hackers Use New Cavern C2 Framework to Target Israeli Organizations",
+        "tldr": "Iranian state-sponsored hackers are deploying a new, custom command-and-control (C2) framework named 'Cavern' in targeted attacks against Israeli organizations. This sophisticated framework facilitates persistent access and control, often preceding data exfiltration or disruption activities.",
+        "action": "Implement advanced threat detection and prevention mechanisms, specifically focusing on C2 beaconing and anomalous network traffic patterns. Review network and endpoint logs for indicators of compromise (IOCs) associated with Iranian APT groups.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/iran-linked-hackers-use-new-cavern-c2.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "Armored Likho APT Targeting Government, Electric Power Entities",
+        "tldr": "The 'Armored Likho' APT group is actively targeting government and electric power entities. This state-sponsored activity aims to disrupt critical infrastructure or exfiltrate sensitive data, posing a significant national security threat with potential for widespread impact.",
+        "action": "Integrate enhanced threat intelligence feeds specific to APT groups targeting critical infrastructure. Deploy advanced network intrusion detection systems and strengthen operational technology (OT) security postures to defend against sophisticated attacks.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/armored-likho-apt-targeting-government-electric-power-entities/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
       }
     ]
   }
