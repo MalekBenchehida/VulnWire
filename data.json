@@ -1,93 +1,116 @@
 {
   "breaches": [
     {
-      "title": "Phishing poses as big-brand job interview to steal Google accounts",
-      "tldr": "A sophisticated phishing campaign is impersonating over 30 well-known brands, including Adobe and Netflix, using fake job interviews to trick marketing professionals. The objective is to steal Google account credentials, potentially leading to widespread account takeovers.",
-      "action": "Educate employees, especially those in marketing or roles prone to recruitment emails, on identifying and reporting phishing attempts. Implement and enforce strong multi-factor authentication (MFA) across all Google accounts and monitor for suspicious login activity.",
+      "title": "DEBULL Tooling Abuses Microsoft Device-Code Flow to Target M365 Accounts",
+      "tldr": "DEBULL is a newly identified tooling that exploits the Microsoft Device-Code OAuth flow. This technique allows attackers to target and potentially compromise Microsoft 365 accounts by tricking users into authenticating malicious applications.",
+      "action": "Implement and enforce multi-factor authentication (MFA) across all Microsoft 365 accounts. Educate users about phishing attacks that leverage OAuth flows and device codes. Monitor Azure AD sign-in logs for unusual device code authentications.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/phishing-poses-as-big-brand-job-interview-to-steal-google-accounts/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "Fake IT support calls on Microsoft Teams push EtherRAT malware",
-      "tldr": "Threat actors are exploiting Microsoft Teams by impersonating corporate IT support staff via voice calls. Their goal is to persuade employees to install EtherRAT malware, thereby gaining initial access to internal corporate networks for further malicious activities.",
-      "action": "Issue an immediate internal alert to all employees warning about unsolicited IT support calls on Microsoft Teams. Establish and reinforce clear protocols for verifying IT requests through official, pre-defined channels only. Deploy and update Endpoint Detection and Response (EDR) solutions to detect EtherRAT malware and unusual process execution.",
+      "title": "Public GitHub Issue Could Trick GitHub Agentic Workflows Into Leaking Private Repo Data",
+      "tldr": "A vulnerability in GitHub's agentic workflows, exposed via a public GitHub issue, could be exploited. This flaw might allow attackers to trick these workflows into inadvertently leaking sensitive data from private repositories.",
+      "action": "Review and secure all GitHub agentic workflows, ensuring they adhere to the principle of least privilege. Monitor GitHub audit logs for any unusual activity or unauthorized data access. Consider restricting public issue creation on sensitive repositories if using agentic workflows.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fake-it-support-calls-on-microsoft-teams-push-etherrat-malware/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/07/public-github-issue-could-trick-github.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "Blogspot-Hosted Payloads Delivered in 'Veil#Drop' Attacks",
-      "tldr": "A new attack campaign, named 'Veil#Drop', is utilizing Blogspot to host and deliver malicious payloads. This tactic leverages a widely trusted platform to evade security defenses, likely aiming for initial compromise and malware deployment on target systems.",
-      "action": "Enhance email and web content filtering to block known malicious domains and detect suspicious file downloads, particularly from unexpected or untrusted Blogspot URLs. Strengthen endpoint protection with advanced threat detection to prevent the execution of unidentified payloads.",
+      "title": "Writer AI Flaw Could Let Agent Previews Leak Session Tokens Across Tenants",
+      "tldr": "A vulnerability has been identified in Writer AI's agent preview feature. This flaw could enable the leakage of session tokens across different tenants, potentially leading to unauthorized access to user accounts and data.",
+      "action": "If using Writer AI, verify that the vendor has applied the necessary patches to address this flaw. Monitor API logs and access logs for Writer AI for any suspicious session token usage or cross-tenant access attempts.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/blogspot-hosted-payloads-delivered-in-veildrop-attacks/",
+      "source_url": "https://thehackernews.com/2026/07/writer-ai-flaw-could-let-agent-previews.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Iran-Linked Hackers Using Modular C&C Framework in Cyberattacks",
+      "tldr": "Iranian state-sponsored hackers are deploying a sophisticated, modular Command & Control (C&C) framework in their cyberattacks. This framework enhances their ability to maintain persistence, exfiltrate data, and execute commands on compromised systems.",
+      "action": "Enhance network monitoring to detect indicators of compromise associated with Iran-linked threat groups and their C&C infrastructure. Implement strong endpoint detection and response (EDR) solutions to identify and block modular malware.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/iran-linked-hackers-using-modular-cc-framework-in-cyberattacks/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
-  "vulns": [
+  "ransomware": [
     {
-      "title": "Threat Actors Probe Gitea Docker Flaw CVE-2026-20896 13 Days After Disclosure",
-      "tldr": "Threat actors are actively probing for a recently disclosed Gitea Docker vulnerability, CVE-2026-20896, merely 13 days after its public disclosure. This indicates immediate and active interest in exploiting the flaw, highlighting an elevated risk for unpatched instances.",
-      "action": "Immediately apply available patches for Gitea Docker environments to address CVE-2026-20896. Monitor Gitea instances and network logs for any unusual access attempts or signs of compromise, focusing on the post-disclosure period.",
-      "cve_ids": [
-        "CVE-2026-20896"
-      ],
-      "source_url": "https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Gitea Docker deployments affected by CVE-2026-20896. Refer to official Gitea security advisories for specific vulnerable versions and patch details.",
-      "how_to_determine_impact": "Identify all Gitea Docker installations. Check the installed version against the official advisory for CVE-2026-20896. Review Gitea and system logs for any unauthorized access, error messages indicative of exploitation attempts, or unusual process spawning.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Gitea' contains 'Docker'. Use 'Get File Version' or 'Get Package Details' on Gitea binaries. 'Listen for event \"Gitea Docker\"' and 'Get Network Connections' filtered by Gitea service ports for anomalous activity.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-20896' in InsightVM. Use Asset Search with filter 'Software Name' contains 'Gitea' and check for associated vulnerabilities. Review web server logs for exploitation patterns.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "title": "RedWing MaaS Packages Android Bank Fraud as a Telegram Rental Service",
+      "tldr": "RedWing is an Android malware-as-a-service (MaaS) being offered via Telegram. It is designed to facilitate bank fraud, providing criminals with tools to conduct illicit financial activities.",
+      "action": "Monitor Android device logs for unusual banking app activity or unauthorized transactions. Implement strong mobile threat defense solutions. Educate users about phishing and social engineering tactics targeting banking credentials.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/redwing-maas-packages-android-bank.html",
+      "source": "The Hacker News"
     },
     {
+      "title": "County Government Reportedly Paid $1 Million to Cyber Extortion Group",
+      "tldr": "A county government reportedly paid $1 million to a cyber extortion group. This payment indicates a successful ransomware or data exfiltration attack where the victim chose to negotiate and pay the ransom demand.",
+      "action": "Strengthen incident response plans to include clear guidelines for ransomware and extortion events. Implement robust backup and recovery strategies, and consider tabletop exercises to prepare for such scenarios.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/county-government-reportedly-paid-1-million-to-cyber-extortion-group/",
+      "source": "SecurityWeek"
+    }
+  ],
+  "vulns": [
+    {
       "title": "Suspected China-Aligned Hackers Exploit Roundcube Flaws Against Universities",
-      "tldr": "Suspected China-aligned APT groups are actively exploiting unidentified vulnerabilities within Roundcube webmail software, specifically targeting university networks. This ongoing campaign suggests a high-value objective, such as espionage or intellectual property theft.",
-      "action": "Promptly update all Roundcube webmail installations to the latest secure version. Implement enhanced logging and monitoring for all Roundcube servers and associated network traffic to detect and investigate any indicators of compromise.",
+      "tldr": "Nation-state actors, suspected to be China-aligned, are actively exploiting vulnerabilities in Roundcube webmail software. These attacks target universities, likely aiming for intellectual property theft or espionage through email account compromise.",
+      "action": "Immediately patch all Roundcube webmail installations to the latest secure versions. Implement strong access controls and monitor university email systems for suspicious activity, including unusual login patterns or data exfiltration attempts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/suspected-china-aligned-hackers-exploit.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Roundcube webmail installations. Specific vulnerable versions are not stated in the headlines, but immediate patching to the latest secure release is recommended to address recently exploited flaws.",
-      "how_to_determine_impact": "Identify all instances of Roundcube webmail within the organization. Compare the installed version against official Roundcube security advisories for recent patches. Examine web server and application logs for unusual access patterns, errors, or evidence of unauthorized command execution.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Roundcube'. Use 'Get File Hash' on core Roundcube application files to detect tampering. 'Get Network Connections' to identify unusual outbound communication from Roundcube servers.",
-      "rapid7_query_hint": "Search for 'Roundcube' related vulnerabilities in InsightVM. Use Asset Search with filter 'Software Name' contains 'Roundcube' to find deployments. Configure InsightIDR to alert on suspicious activities originating from Roundcube servers.",
+      "affected_versions": "Roundcube webmail (specific versions not provided in snippet, refer to vendor advisories)",
+      "how_to_determine_impact": "Check Roundcube installation versions on all web servers. Review web server and application logs for indicators of compromise or exploit attempts targeting Roundcube.",
+      "tanium_query_hint": "Get Installed Applications containing 'Roundcube' from all machines. Check for specific Roundcube file versions if known. Monitor network connections from Roundcube servers for suspicious activity.",
+      "rapid7_query_hint": "Search for assets running 'Roundcube' in InsightVM. Use InsightIDR to monitor web server logs for indicators of compromise (IOCs) or unusual access patterns related to Roundcube.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 High"
+      "cvss_score": "9.0 Critical (estimated)"
+    },
+    {
+      "title": "Chinese hackers develop LONGLEASH malware to expand ORB network",
+      "tldr": "The Chinese hacking group 'UAT-7810' is using new malware, LONGLEASH, to expand its Operational Relay Box (ORB) network. They are primarily targeting and compromising unpatched Ruckus routers to achieve this.",
+      "action": "Identify and immediately patch all Ruckus routers within your environment. Implement network segmentation to isolate such devices and monitor for unusual outbound connections or the presence of LONGLEASH malware.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Unpatched Ruckus routers (specific models/firmware versions require vendor advisory consultation)",
+      "how_to_determine_impact": "Audit all Ruckus router deployments for current firmware versions and compare against vendor security advisories. Look for signs of compromise like unusual processes, unauthorized configurations, or suspicious network activity.",
+      "tanium_query_hint": "Get Network Device Information from all machines (if network devices are managed). Search for 'Ruckus' in software inventories or firmware versions. Deploy and scan for known LONGLEASH malware signatures.",
+      "rapid7_query_hint": "Conduct network scans to identify Ruckus router devices and their firmware versions in InsightVM. Monitor network traffic in InsightIDR for indicators of compromise related to LONGLEASH malware or suspicious connections from Ruckus devices.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (estimated)"
+    },
+    {
+      "title": "Critical Gitea Flaw Under Active Exploitation, Researchers Warn",
+      "tldr": "Researchers are warning about a critical vulnerability in Gitea that is currently under active exploitation. This flaw poses a significant risk to Gitea instances, potentially leading to unauthorized access or code execution.",
+      "action": "Immediately patch all Gitea instances to the latest secure version. Review Gitea logs for any indicators of compromise and unusual activity, given the active exploitation.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/critical-gitea-flaw-under-active-exploitation-researchers-warn/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Gitea (specific versions not provided, refer to vendor advisory for exact vulnerable versions)",
+      "how_to_determine_impact": "Check installed Gitea versions against the vendor's security advisory. Inspect Gitea server logs for unusual access patterns, errors, unauthorized commands, or new user accounts/repositories that may indicate compromise.",
+      "tanium_query_hint": "Get Installed Applications containing 'Gitea' from all machines. Check file versions of Gitea binaries. Monitor Gitea server processes for unusual child processes or network connections.",
+      "rapid7_query_hint": "Scan Gitea host servers for related vulnerabilities in InsightVM. Use InsightIDR to monitor Gitea server logs for signs of compromise or exploit attempts, including unusual API calls or repository modifications.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (estimated)"
     },
     {
       "title": "Critical Adobe ColdFusion Vulnerability Exploited in Attacks",
-      "tldr": "A critical vulnerability affecting Adobe ColdFusion is currently being actively exploited in the wild. This flaw enables attackers to execute arbitrary code or gain unauthorized access, posing a severe threat to systems running vulnerable versions of ColdFusion.",
-      "action": "Apply all available security patches and updates for Adobe ColdFusion immediately. Conduct a comprehensive forensic examination of all ColdFusion servers for signs of compromise, as active exploitation indicates a high probability of successful attacks against unpatched systems.",
+      "tldr": "A critical vulnerability in Adobe ColdFusion is being actively exploited in attacks. This flaw presents a severe risk, potentially allowing remote code execution or unauthorized access on affected servers.",
+      "action": "Immediately apply all available patches from Adobe for ColdFusion installations. Conduct a thorough audit of ColdFusion servers for any signs of compromise or malicious activity, as exploitation is ongoing.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/critical-adobe-coldfusion-vulnerability-exploited-in-attacks/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Adobe ColdFusion. Specific vulnerable versions require consulting recent Adobe security advisories, but immediate patching for all versions is critical due to active exploitation.",
-      "how_to_determine_impact": "Identify all systems running Adobe ColdFusion. Verify the installed version against official Adobe security bulletins for recently patched critical vulnerabilities. Analyze web server logs, ColdFusion application logs, and system logs for suspicious activity, unauthorized file creation, or unusual process execution.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Adobe ColdFusion'. Use 'Get File Hash' on ColdFusion executables and libraries to detect unauthorized modifications. 'Get Running Processes' and filter for unusual child processes under ColdFusion.",
-      "rapid7_query_hint": "Search InsightVM for 'Adobe ColdFusion' vulnerabilities and check for associated solution and patch status. Use Asset Search with filter 'Software Name' contains 'ColdFusion' to identify assets. Monitor InsightIDR for anomalies on ColdFusion servers.",
+      "affected_versions": "Adobe ColdFusion (specific versions not provided, refer to vendor advisory for exact vulnerable versions)",
+      "how_to_determine_impact": "Identify all Adobe ColdFusion installations and check their versions against the latest Adobe security bulletin. Review web server, application, and OS logs for unusual requests, process executions, or file modifications indicative of compromise.",
+      "tanium_query_hint": "Get Installed Applications containing 'Adobe ColdFusion' from all machines. Check file versions of ColdFusion executables and libraries. Monitor ColdFusion process trees for suspicious child processes or network connections.",
+      "rapid7_query_hint": "Scan servers running Adobe ColdFusion in InsightVM for related vulnerabilities. Use InsightIDR to monitor web server and application logs for suspicious ColdFusion requests or exploit payloads.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "New Januscape Linux flaw allows VM escape on Intel, AMD devices",
-      "tldr": "A 16-year-old Linux kernel vulnerability, now dubbed Januscape, has been discovered that enables virtual machine (VM) escape on Intel and AMD x86 systems. This critical flaw permits a malicious guest VM to execute arbitrary code with host privileges, completely compromising the underlying system.",
-      "action": "Patch Linux kernels on all virtualized hosts to versions that address the Januscape vulnerability (awaiting specific CVE details and patches). Prioritize isolation and restrict network access for critical VMs, and rigorously monitor for unusual interactions between guest and host systems.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/linux/new-januscape-linux-kernel-flaw-allows-vm-escape-on-intel-amd-devices/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Linux kernel versions spanning 16 years, impacting Intel and AMD x86 architectures. Specific vulnerable kernel versions will be detailed in official advisories; immediate assessment of all Linux-based VM hosts is necessary.",
-      "how_to_determine_impact": "Identify all Linux hosts that are running virtual machines (e.g., KVM, QEMU). Check the installed Linux kernel version on these hosts. Consult upcoming official kernel advisories (e.g., from kernel.org, distribution vendors) for specific versions affected by and patched for the Januscape flaw.",
-      "tanium_query_hint": "Get Kernel Version from all Linux machines. Filter for 'Running Processes' containing virtualization software names (e.g., 'qemu', 'libvirtd'). Use 'Get Installed Packages' to list kernel-related packages and their versions.",
-      "rapid7_query_hint": "Use Asset Search with filter 'OS Name' contains 'Linux' and 'Kernel Version' to identify hosts. Search InsightVM for 'Januscape' or 'Linux KVM VM Escape' related vulnerability IDs. Monitor InsightIDR for anomalous activity between guest VMs and their hosts.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (estimated)"
     }
   ],
   "insurance": [],
@@ -2959,6 +2982,92 @@
         "rapid7_query_hint": "Use Asset Search with filter 'OS Name' contains 'Linux' and 'Kernel Version' to identify hosts. Search InsightVM for 'Januscape' or 'Linux KVM VM Escape' related vulnerability IDs. Monitor InsightIDR for anomalous activity between guest VMs and their hosts.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "DEBULL Tooling Abuses Microsoft Device-Code Flow to Target M365 Accounts",
+        "tldr": "DEBULL is a newly identified tooling that exploits the Microsoft Device-Code OAuth flow. This technique allows attackers to target and potentially compromise Microsoft 365 accounts by tricking users into authenticating malicious applications.",
+        "action": "Implement and enforce multi-factor authentication (MFA) across all Microsoft 365 accounts. Educate users about phishing attacks that leverage OAuth flows and device codes. Monitor Azure AD sign-in logs for unusual device code authentications.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Public GitHub Issue Could Trick GitHub Agentic Workflows Into Leaking Private Repo Data",
+        "tldr": "A vulnerability in GitHub's agentic workflows, exposed via a public GitHub issue, could be exploited. This flaw might allow attackers to trick these workflows into inadvertently leaking sensitive data from private repositories.",
+        "action": "Review and secure all GitHub agentic workflows, ensuring they adhere to the principle of least privilege. Monitor GitHub audit logs for any unusual activity or unauthorized data access. Consider restricting public issue creation on sensitive repositories if using agentic workflows.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/public-github-issue-could-trick-github.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Writer AI Flaw Could Let Agent Previews Leak Session Tokens Across Tenants",
+        "tldr": "A vulnerability has been identified in Writer AI's agent preview feature. This flaw could enable the leakage of session tokens across different tenants, potentially leading to unauthorized access to user accounts and data.",
+        "action": "If using Writer AI, verify that the vendor has applied the necessary patches to address this flaw. Monitor API logs and access logs for Writer AI for any suspicious session token usage or cross-tenant access attempts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/writer-ai-flaw-could-let-agent-previews.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Iran-Linked Hackers Using Modular C&C Framework in Cyberattacks",
+        "tldr": "Iranian state-sponsored hackers are deploying a sophisticated, modular Command & Control (C&C) framework in their cyberattacks. This framework enhances their ability to maintain persistence, exfiltrate data, and execute commands on compromised systems.",
+        "action": "Enhance network monitoring to detect indicators of compromise associated with Iran-linked threat groups and their C&C infrastructure. Implement strong endpoint detection and response (EDR) solutions to identify and block modular malware.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/iran-linked-hackers-using-modular-cc-framework-in-cyberattacks/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "RedWing MaaS Packages Android Bank Fraud as a Telegram Rental Service",
+        "tldr": "RedWing is an Android malware-as-a-service (MaaS) being offered via Telegram. It is designed to facilitate bank fraud, providing criminals with tools to conduct illicit financial activities.",
+        "action": "Monitor Android device logs for unusual banking app activity or unauthorized transactions. Implement strong mobile threat defense solutions. Educate users about phishing and social engineering tactics targeting banking credentials.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/redwing-maas-packages-android-bank.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "County Government Reportedly Paid $1 Million to Cyber Extortion Group",
+        "tldr": "A county government reportedly paid $1 million to a cyber extortion group. This payment indicates a successful ransomware or data exfiltration attack where the victim chose to negotiate and pay the ransom demand.",
+        "action": "Strengthen incident response plans to include clear guidelines for ransomware and extortion events. Implement robust backup and recovery strategies, and consider tabletop exercises to prepare for such scenarios.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/county-government-reportedly-paid-1-million-to-cyber-extortion-group/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Chinese hackers develop LONGLEASH malware to expand ORB network",
+        "tldr": "The Chinese hacking group 'UAT-7810' is using new malware, LONGLEASH, to expand its Operational Relay Box (ORB) network. They are primarily targeting and compromising unpatched Ruckus routers to achieve this.",
+        "action": "Identify and immediately patch all Ruckus routers within your environment. Implement network segmentation to isolate such devices and monitor for unusual outbound connections or the presence of LONGLEASH malware.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Unpatched Ruckus routers (specific models/firmware versions require vendor advisory consultation)",
+        "how_to_determine_impact": "Audit all Ruckus router deployments for current firmware versions and compare against vendor security advisories. Look for signs of compromise like unusual processes, unauthorized configurations, or suspicious network activity.",
+        "tanium_query_hint": "Get Network Device Information from all machines (if network devices are managed). Search for 'Ruckus' in software inventories or firmware versions. Deploy and scan for known LONGLEASH malware signatures.",
+        "rapid7_query_hint": "Conduct network scans to identify Ruckus router devices and their firmware versions in InsightVM. Monitor network traffic in InsightIDR for indicators of compromise related to LONGLEASH malware or suspicious connections from Ruckus devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical Gitea Flaw Under Active Exploitation, Researchers Warn",
+        "tldr": "Researchers are warning about a critical vulnerability in Gitea that is currently under active exploitation. This flaw poses a significant risk to Gitea instances, potentially leading to unauthorized access or code execution.",
+        "action": "Immediately patch all Gitea instances to the latest secure version. Review Gitea logs for any indicators of compromise and unusual activity, given the active exploitation.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/critical-gitea-flaw-under-active-exploitation-researchers-warn/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Gitea (specific versions not provided, refer to vendor advisory for exact vulnerable versions)",
+        "how_to_determine_impact": "Check installed Gitea versions against the vendor's security advisory. Inspect Gitea server logs for unusual access patterns, errors, unauthorized commands, or new user accounts/repositories that may indicate compromise.",
+        "tanium_query_hint": "Get Installed Applications containing 'Gitea' from all machines. Check file versions of Gitea binaries. Monitor Gitea server processes for unusual child processes or network connections.",
+        "rapid7_query_hint": "Scan Gitea host servers for related vulnerabilities in InsightVM. Use InsightIDR to monitor Gitea server logs for signs of compromise or exploit attempts, including unusual API calls or repository modifications.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (estimated)",
         "category": "vulns"
       }
     ]
