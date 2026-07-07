@@ -1,51 +1,19 @@
 {
   "breaches": [
     {
-      "title": "DEBULL Tooling Abuses Microsoft Device-Code Flow to Target M365 Accounts",
-      "tldr": "DEBULL is a newly identified tooling that exploits the Microsoft Device-Code OAuth flow. This technique allows attackers to target and potentially compromise Microsoft 365 accounts by tricking users into authenticating malicious applications.",
-      "action": "Implement and enforce multi-factor authentication (MFA) across all Microsoft 365 accounts. Educate users about phishing attacks that leverage OAuth flows and device codes. Monitor Azure AD sign-in logs for unusual device code authentications.",
+      "title": "Accenture confirms breach after hacker offers stolen data for sale",
+      "tldr": "IT services giant Accenture has confirmed a security breach after a threat actor claimed to have stolen 35 GB of source code and other data from the company. The stolen data is reportedly being offered for sale by the hacker.",
+      "action": "Organizations that are Accenture clients should review their security posture, data sharing agreements with Accenture, and monitor for any suspicious activity potentially linked to this breach. Accenture is investigating the incident.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/debull-tooling-abuses-microsoft-device.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Public GitHub Issue Could Trick GitHub Agentic Workflows Into Leaking Private Repo Data",
-      "tldr": "A vulnerability in GitHub's agentic workflows, exposed via a public GitHub issue, could be exploited. This flaw might allow attackers to trick these workflows into inadvertently leaking sensitive data from private repositories.",
-      "action": "Review and secure all GitHub agentic workflows, ensuring they adhere to the principle of least privilege. Monitor GitHub audit logs for any unusual activity or unauthorized data access. Consider restricting public issue creation on sensitive repositories if using agentic workflows.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/public-github-issue-could-trick-github.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Writer AI Flaw Could Let Agent Previews Leak Session Tokens Across Tenants",
-      "tldr": "A vulnerability has been identified in Writer AI's agent preview feature. This flaw could enable the leakage of session tokens across different tenants, potentially leading to unauthorized access to user accounts and data.",
-      "action": "If using Writer AI, verify that the vendor has applied the necessary patches to address this flaw. Monitor API logs and access logs for Writer AI for any suspicious session token usage or cross-tenant access attempts.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/writer-ai-flaw-could-let-agent-previews.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Iran-Linked Hackers Using Modular C&C Framework in Cyberattacks",
-      "tldr": "Iranian state-sponsored hackers are deploying a sophisticated, modular Command & Control (C&C) framework in their cyberattacks. This framework enhances their ability to maintain persistence, exfiltrate data, and execute commands on compromised systems.",
-      "action": "Enhance network monitoring to detect indicators of compromise associated with Iran-linked threat groups and their C&C infrastructure. Implement strong endpoint detection and response (EDR) solutions to identify and block modular malware.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/iran-linked-hackers-using-modular-cc-framework-in-cyberattacks/",
-      "source": "SecurityWeek"
+      "source_url": "https://www.bleepingcomputer.com/news/security/accenture-confirms-breach-after-hacker-offers-stolen-data-for-sale/",
+      "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
-      "title": "RedWing MaaS Packages Android Bank Fraud as a Telegram Rental Service",
-      "tldr": "RedWing is an Android malware-as-a-service (MaaS) being offered via Telegram. It is designed to facilitate bank fraud, providing criminals with tools to conduct illicit financial activities.",
-      "action": "Monitor Android device logs for unusual banking app activity or unauthorized transactions. Implement strong mobile threat defense solutions. Educate users about phishing and social engineering tactics targeting banking credentials.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/redwing-maas-packages-android-bank.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "County Government Reportedly Paid $1 Million to Cyber Extortion Group",
-      "tldr": "A county government reportedly paid $1 million to a cyber extortion group. This payment indicates a successful ransomware or data exfiltration attack where the victim chose to negotiate and pay the ransom demand.",
-      "action": "Strengthen incident response plans to include clear guidelines for ransomware and extortion events. Implement robust backup and recovery strategies, and consider tabletop exercises to prepare for such scenarios.",
+      "tldr": "A county government has reportedly paid a ransom of $1 million to a cyber extortion group. This payment indicates a successful cyberattack, likely involving ransomware or data exfiltration and subsequent extortion, forcing the government to pay to restore services or prevent data leaks.",
+      "action": "Review and enhance incident response plans, ensuring robust data backup and recovery strategies are in place and regularly tested. Strengthen perimeter defenses and implement strong access controls to prevent similar extortion attacks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/county-government-reportedly-paid-1-million-to-cyber-extortion-group/",
       "source": "SecurityWeek"
@@ -53,64 +21,64 @@
   ],
   "vulns": [
     {
-      "title": "Suspected China-Aligned Hackers Exploit Roundcube Flaws Against Universities",
-      "tldr": "Nation-state actors, suspected to be China-aligned, are actively exploiting vulnerabilities in Roundcube webmail software. These attacks target universities, likely aiming for intellectual property theft or espionage through email account compromise.",
-      "action": "Immediately patch all Roundcube webmail installations to the latest secure versions. Implement strong access controls and monitor university email systems for suspicious activity, including unusual login patterns or data exfiltration attempts.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/suspected-china-aligned-hackers-exploit.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Roundcube webmail (specific versions not provided in snippet, refer to vendor advisories)",
-      "how_to_determine_impact": "Check Roundcube installation versions on all web servers. Review web server and application logs for indicators of compromise or exploit attempts targeting Roundcube.",
-      "tanium_query_hint": "Get Installed Applications containing 'Roundcube' from all machines. Check for specific Roundcube file versions if known. Monitor network connections from Roundcube servers for suspicious activity.",
-      "rapid7_query_hint": "Search for assets running 'Roundcube' in InsightVM. Use InsightIDR to monitor web server logs for indicators of compromise (IOCs) or unusual access patterns related to Roundcube.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (estimated)"
-    },
-    {
-      "title": "Chinese hackers develop LONGLEASH malware to expand ORB network",
-      "tldr": "The Chinese hacking group 'UAT-7810' is using new malware, LONGLEASH, to expand its Operational Relay Box (ORB) network. They are primarily targeting and compromising unpatched Ruckus routers to achieve this.",
-      "action": "Identify and immediately patch all Ruckus routers within your environment. Implement network segmentation to isolate such devices and monitor for unusual outbound connections or the presence of LONGLEASH malware.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-develop-longleash-malware-to-expand-orb-network/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Unpatched Ruckus routers (specific models/firmware versions require vendor advisory consultation)",
-      "how_to_determine_impact": "Audit all Ruckus router deployments for current firmware versions and compare against vendor security advisories. Look for signs of compromise like unusual processes, unauthorized configurations, or suspicious network activity.",
-      "tanium_query_hint": "Get Network Device Information from all machines (if network devices are managed). Search for 'Ruckus' in software inventories or firmware versions. Deploy and scan for known LONGLEASH malware signatures.",
-      "rapid7_query_hint": "Conduct network scans to identify Ruckus router devices and their firmware versions in InsightVM. Monitor network traffic in InsightIDR for indicators of compromise related to LONGLEASH malware or suspicious connections from Ruckus devices.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (estimated)"
-    },
-    {
       "title": "Critical Gitea Flaw Under Active Exploitation, Researchers Warn",
-      "tldr": "Researchers are warning about a critical vulnerability in Gitea that is currently under active exploitation. This flaw poses a significant risk to Gitea instances, potentially leading to unauthorized access or code execution.",
-      "action": "Immediately patch all Gitea instances to the latest secure version. Review Gitea logs for any indicators of compromise and unusual activity, given the active exploitation.",
+      "tldr": "A critical vulnerability in Gitea, a self-hosted Git service, is currently under active exploitation according to researchers. This flaw could allow attackers to compromise instances of Gitea, potentially leading to unauthorized code execution or data exposure on affected systems.",
+      "action": "Immediately identify all Gitea instances within your environment. Apply the latest security patches released by Gitea as soon as possible to mitigate the vulnerability. Review logs for any signs of compromise prior to patching.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/critical-gitea-flaw-under-active-exploitation-researchers-warn/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Gitea (specific versions not provided, refer to vendor advisory for exact vulnerable versions)",
-      "how_to_determine_impact": "Check installed Gitea versions against the vendor's security advisory. Inspect Gitea server logs for unusual access patterns, errors, unauthorized commands, or new user accounts/repositories that may indicate compromise.",
-      "tanium_query_hint": "Get Installed Applications containing 'Gitea' from all machines. Check file versions of Gitea binaries. Monitor Gitea server processes for unusual child processes or network connections.",
-      "rapid7_query_hint": "Scan Gitea host servers for related vulnerabilities in InsightVM. Use InsightIDR to monitor Gitea server logs for signs of compromise or exploit attempts, including unusual API calls or repository modifications.",
+      "affected_versions": "Gitea, specific vulnerable versions are not provided in the source but likely include recent stable releases. Consult Gitea's official advisories for precise version information.",
+      "how_to_determine_impact": "Check Gitea instance logs for unusual access patterns, unauthorized administrative actions, or unexpected code repository modifications. Verify your current Gitea version against vendor advisories. Look for signs of suspicious processes running on the host server.",
+      "tanium_query_hint": "Get Running Processes with CommandLine contains 'gitea' and file path contains 'gitea' or Get Installed Applications contains 'Gitea' for version information. Investigate host logs for suspicious activity on Gitea servers.",
+      "rapid7_query_hint": "Search for vulnerability ID 'gitea' or 'Git' related vulnerabilities. Use InsightAgent to query for 'Gitea' processes or installed packages on relevant assets. Review asset inventory for Gitea installations.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated)"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Critical Adobe ColdFusion Vulnerability Exploited in Attacks",
-      "tldr": "A critical vulnerability in Adobe ColdFusion is being actively exploited in attacks. This flaw presents a severe risk, potentially allowing remote code execution or unauthorized access on affected servers.",
-      "action": "Immediately apply all available patches from Adobe for ColdFusion installations. Conduct a thorough audit of ColdFusion servers for any signs of compromise or malicious activity, as exploitation is ongoing.",
+      "tldr": "A critical vulnerability in Adobe ColdFusion is being actively exploited in ongoing attacks. This flaw allows unauthorized access or code execution, posing a significant risk to affected web applications and servers running ColdFusion.",
+      "action": "Identify all Adobe ColdFusion installations within your infrastructure. Immediately apply the latest security updates provided by Adobe to patch the vulnerability. Conduct a thorough forensic analysis for signs of compromise on affected systems.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/critical-adobe-coldfusion-vulnerability-exploited-in-attacks/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Adobe ColdFusion (specific versions not provided, refer to vendor advisory for exact vulnerable versions)",
-      "how_to_determine_impact": "Identify all Adobe ColdFusion installations and check their versions against the latest Adobe security bulletin. Review web server, application, and OS logs for unusual requests, process executions, or file modifications indicative of compromise.",
-      "tanium_query_hint": "Get Installed Applications containing 'Adobe ColdFusion' from all machines. Check file versions of ColdFusion executables and libraries. Monitor ColdFusion process trees for suspicious child processes or network connections.",
-      "rapid7_query_hint": "Scan servers running Adobe ColdFusion in InsightVM for related vulnerabilities. Use InsightIDR to monitor web server and application logs for suspicious ColdFusion requests or exploit payloads.",
+      "affected_versions": "Adobe ColdFusion. Specific vulnerable versions should be referenced from Adobe's official security bulletins, which contain detailed information.",
+      "how_to_determine_impact": "Review ColdFusion server logs for suspicious requests, unauthorized file modifications, or unexpected process execution. Check for the presence of web shells or new, unauthorized user accounts. Verify your ColdFusion version against Adobe's advisories.",
+      "tanium_query_hint": "Get Installed Applications contains 'Adobe ColdFusion' for version information. Check running processes on ColdFusion servers for unusual activity. Look for recently modified files in web root directories.",
+      "rapid7_query_hint": "Search for vulnerability ID 'coldfusion' or 'Adobe' related vulnerabilities. Use InsightAgent to check file system integrity or process anomalies on servers running ColdFusion. Filter assets by 'Adobe ColdFusion' software.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated)"
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Hidden backdoor in Tenda router firmware grants admin access",
+      "tldr": "A hidden authentication backdoor has been discovered in multiple versions of Tenda router firmware. This backdoor could allow an attacker to gain full administrative access to the device's web management panel without proper authentication, leading to complete control over the router and potentially the network.",
+      "action": "Identify all Tenda routers in your environment. Immediately update their firmware to the latest available version from the vendor or replace affected devices if no patch is available. Implement network segmentation to isolate such devices.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hidden-backdoor-in-tenda-router-firmware-grants-admin-access/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Multiple Tenda router firmware versions. Specific models and firmware versions should be confirmed via Tenda's official advisories or CERT/CC warnings.",
+      "how_to_determine_impact": "Identify Tenda routers on your network through asset inventory or network scanning. Check firmware versions against vendor advisories for known backdoor vulnerabilities. Monitor network traffic from/to Tenda devices for unusual administrative logins or commands.",
+      "tanium_query_hint": "Get Running Processes contains 'tenda' or Get ARP Table to identify connected Tenda devices by MAC OUI. Check network device configurations for firmware version. (Note: Tanium does not typically scan embedded firmware directly, but can help identify devices on the network).",
+      "rapid7_query_hint": "Perform network scans to identify Tenda routers and exposed web management interfaces. Search for vulnerability ID 'Tenda' in InsightVM. Analyze discovered firmware versions for known backdoor presence.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical"
+    },
+    {
+      "title": "New Januscape Linux flaw allows VM escape on Intel, AMD devices",
+      "tldr": "A 16-year-old Linux kernel vulnerability, dubbed 'Januscape,' has been disclosed. This critical flaw allows an attacker to escape from a virtual machine (VM) and execute arbitrary code on the underlying host system, impacting both Intel and AMD platforms.",
+      "action": "Immediately identify all Linux systems functioning as VM hosts within your environment. Update the Linux kernel to the latest patched version to mitigate the 'Januscape' vulnerability. Isolate and monitor VM hosts for any suspicious activity.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/linux/new-januscape-linux-kernel-flaw-allows-vm-escape-on-intel-amd-devices/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Linux kernel, specifically a 16-year-old vulnerability. Affects systems with Intel and AMD processors across various Linux distributions running unpatched kernels.",
+      "how_to_determine_impact": "Check the kernel versions on all Linux VM host systems using `uname -r`. Compare these versions against vendor advisories for patches related to 'Januscape' or known VM escape vulnerabilities. Monitor VM hosts for unusual processes or resource usage.",
+      "tanium_query_hint": "Get Linux Kernel Version from all Linux endpoints. Use 'Get Running Processes' to identify virtualization software and check for unusual activity on VM hosts. Look for specific kernel module versions if applicable.",
+      "rapid7_query_hint": "Perform vulnerability scans on Linux VM hosts to identify kernel vulnerabilities. Search for 'Linux kernel VM escape' or 'Januscape' vulnerability IDs. Use InsightAgent to inventory kernel versions and relevant patches on Linux assets.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical"
     }
   ],
   "insurance": [],
@@ -3068,6 +3036,31 @@
         "rapid7_query_hint": "Scan Gitea host servers for related vulnerabilities in InsightVM. Use InsightIDR to monitor Gitea server logs for signs of compromise or exploit attempts, including unusual API calls or repository modifications.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Accenture confirms breach after hacker offers stolen data for sale",
+        "tldr": "IT services giant Accenture has confirmed a security breach after a threat actor claimed to have stolen 35 GB of source code and other data from the company. The stolen data is reportedly being offered for sale by the hacker.",
+        "action": "Organizations that are Accenture clients should review their security posture, data sharing agreements with Accenture, and monitor for any suspicious activity potentially linked to this breach. Accenture is investigating the incident.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/accenture-confirms-breach-after-hacker-offers-stolen-data-for-sale/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hidden backdoor in Tenda router firmware grants admin access",
+        "tldr": "A hidden authentication backdoor has been discovered in multiple versions of Tenda router firmware. This backdoor could allow an attacker to gain full administrative access to the device's web management panel without proper authentication, leading to complete control over the router and potentially the network.",
+        "action": "Identify all Tenda routers in your environment. Immediately update their firmware to the latest available version from the vendor or replace affected devices if no patch is available. Implement network segmentation to isolate such devices.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hidden-backdoor-in-tenda-router-firmware-grants-admin-access/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Multiple Tenda router firmware versions. Specific models and firmware versions should be confirmed via Tenda's official advisories or CERT/CC warnings.",
+        "how_to_determine_impact": "Identify Tenda routers on your network through asset inventory or network scanning. Check firmware versions against vendor advisories for known backdoor vulnerabilities. Monitor network traffic from/to Tenda devices for unusual administrative logins or commands.",
+        "tanium_query_hint": "Get Running Processes contains 'tenda' or Get ARP Table to identify connected Tenda devices by MAC OUI. Check network device configurations for firmware version. (Note: Tanium does not typically scan embedded firmware directly, but can help identify devices on the network).",
+        "rapid7_query_hint": "Perform network scans to identify Tenda routers and exposed web management interfaces. Search for vulnerability ID 'Tenda' in InsightVM. Analyze discovered firmware versions for known backdoor presence.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
         "category": "vulns"
       }
     ]
