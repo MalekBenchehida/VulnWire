@@ -1,27 +1,43 @@
 {
   "breaches": [
     {
+      "title": "Mount Royal University confirms breach as hackers claim attack",
+      "tldr": "Mount Royal University in Calgary confirmed a network breach where attackers stole and then deleted data from their file storage systems. The incident involved unauthorized access to the university's network, resulting in data compromise and removal.",
+      "action": "Organizations should ensure robust data backup and recovery strategies are in place and review network security logs for any unauthorized access attempts, especially targeting file storage systems. Implement multi-factor authentication for critical systems.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/mount-royal-university-confirms-breach-as-hackers-claim-attack/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Fake Paysafe, Skrill SDKs on NPM and PyPi steal credentials",
+      "tldr": "Malicious packages posing as official Paysafe, Skrill, and Neteller SDKs were discovered on popular package repositories like Node Package Manager (npm) and Python Package Index (PyPI). These counterfeit SDKs deliver stealer malware designed to compromise developer and user credentials.",
+      "action": "Developers must verify the authenticity of all third-party libraries and SDKs by checking official vendor channels. Implement software supply chain security practices, including scanning dependencies for known malicious code and maintaining strict package validation policies.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/fake-paysafe-skrill-sdks-on-npm-and-pypi-steal-credentials/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Telco giant KDDI says data breach affects over 12 million people",
-      "tldr": "Japanese telecommunications company KDDI has confirmed a data breach impacting over 12 million people. Attackers compromised an email platform used by five internet service providers (ISPs), leading to the exposure of email addresses and passwords.",
-      "action": "Customers of KDDI and the affected ISPs should immediately change their email and other associated passwords. Enable multi-factor authentication (MFA) on all accounts where available. Organizations should monitor for any credential stuffing attacks using leaked KDDI credentials.",
+      "tldr": "Japanese telecommunications provider KDDI announced a data breach impacting over 12 million customers. Attackers compromised an email platform used by five associated internet service providers, leading to the exposure of user email addresses and passwords.",
+      "action": "Users of KDDI-affiliated ISPs should immediately change their email and associated service passwords. Organizations should enforce strong password policies, implement multi-factor authentication for all email services, and monitor for credential stuffing attacks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/japanese-telecom-giant-kddi-says-data-breach-affects-12-million-people/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Accenture confirms breach after hacker offers stolen data for sale",
-      "tldr": "IT services giant Accenture has confirmed a security breach after a threat actor claimed to have stolen 35 GB of source code and other data. The stolen data was offered for sale, indicating potential unauthorized access to sensitive company assets.",
-      "action": "Accenture clients and partners should monitor for any unusual activity related to their interactions with Accenture. Organizations should review their supply chain security posture and access controls for third-party vendors.",
+      "title": "Accenture Confirms Data Breach After Hacker Claims Source Code Theft",
+      "tldr": "Accenture has confirmed a data breach following claims from a hacker group regarding the theft of source code. The confirmation indicates a successful intrusion into Accenture's systems, with details of the compromised data currently limited.",
+      "action": "Review access logs for all source code repositories and implement stringent access controls, including least privilege and multi-factor authentication. Conduct immediate forensic analysis to determine the extent of the breach and identify any exfiltrated sensitive data.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/accenture-confirms-breach-after-hacker-offers-stolen-data-for-sale/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/accenture-confirms-data-breach-after-hacker-claims-source-code-theft/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "County Government Reportedly Paid $1 Million to Cyber Extortion Group",
-      "tldr": "A county government reportedly paid $1 million to a cyber extortion group after suffering an attack. This payment highlights the severe impact of ransomware and extortion operations on public sector entities, often involving data encryption and threats of public release.",
-      "action": "Organizations should implement robust backup and disaster recovery plans, enforce strong endpoint security, and train employees on ransomware prevention. Develop and test comprehensive incident response plans for extortion scenarios, and consider consulting with law enforcement on ransom payments.",
+      "tldr": "A county government has reportedly paid a $1 million ransom to a cyber extortion group, indicating a successful ransomware attack. This payment suggests the attackers likely encrypted critical systems or exfiltrated sensitive data, using the threat of data destruction or public release as leverage.",
+      "action": "Implement robust data backup and recovery strategies, including immutable backups, and regularly test their effectiveness. Conduct incident response tabletop exercises for ransomware scenarios and enforce a strict patching regimen for all systems to minimize attack surfaces.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/county-government-reportedly-paid-1-million-to-cyber-extortion-group/",
       "source": "SecurityWeek"
@@ -30,63 +46,63 @@
   "vulns": [
     {
       "title": "CISA orders feds to prioritize patching Langflow auth bypass flaw",
-      "tldr": "CISA has mandated federal agencies to patch an actively exploited authentication bypass vulnerability in the Langflow visual framework for building AI agents. The flaw allows unauthorized access and requires immediate remediation due to its active exploitation in the wild.",
-      "action": "Immediately identify and patch all instances of Langflow to the latest secure version. Prioritize updates for internet-facing systems or those managing sensitive AI agent configurations. Verify the patch's successful application.",
+      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has issued an emergency directive for federal agencies to immediately patch an actively exploited authentication bypass vulnerability in the Langflow visual framework for building AI agents. This critical flaw allows unauthorized actors to bypass authentication mechanisms.",
+      "action": "Immediately apply the latest security updates provided by Langflow developers to mitigate the authentication bypass vulnerability. Prioritize this patch due to active exploitation and the CISA directive.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-prioritize-patching-langflow-auth-bypass-flaw/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Langflow visual framework for building AI agents (specific versions not provided)",
-      "how_to_determine_impact": "Identify all systems running the Langflow visual framework. Check the installed version against official Langflow security advisories for patched versions. Look for signs of unauthorized access or modification to AI agent configurations.",
-      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'Langflow')",
-      "rapid7_query_hint": "Asset search for 'software name = Langflow' and check for known vulnerability IDs or file version information corresponding to vulnerable versions. Use InsightIDR to monitor for unusual access patterns to Langflow systems.",
+      "affected_versions": "Langflow visual framework, all prior vulnerable versions require immediate update. Consult official Langflow security advisories for specific version ranges.",
+      "how_to_determine_impact": "Identify all deployments of Langflow within your environment. Verify the installed version against vendor-provided patched versions. Review access logs for any anomalous or unauthorized authentication attempts against Langflow instances.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name contains 'Langflow'. For specific version checks, use 'Get File Version[path_to_langflow_executable]' or 'Get Installed Patches' on relevant systems.",
+      "rapid7_query_hint": "Scan all assets for 'Langflow' installations. Search for vulnerability IDs related to 'Langflow authentication bypass' or 'Langflow CVE-XXXX-XXXXX' in InsightVM. Use asset query 'Installed Software Name Contains 'Langflow'' to identify affected systems.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "Critical (Estimate, likely 9.8 or higher due to active exploitation and authentication bypass)"
     },
     {
       "title": "CISA orders feds to patch max severity ColdFusion flaw by Friday",
-      "tldr": "CISA has issued an emergency directive for federal agencies to patch an actively exploited, maximum-severity vulnerability in Adobe ColdFusion by Friday. This critical remote code execution (RCE) flaw poses an immediate and severe risk to affected systems.",
-      "action": "Immediately identify and update all Adobe ColdFusion installations to the latest patched version. Prioritize internet-facing instances. Verify the update and monitor systems for any signs of compromise or malicious activity.",
+      "tldr": "CISA has mandated federal agencies to patch an actively exploited, maximum-severity vulnerability in Adobe ColdFusion by Friday. This critical flaw could enable remote code execution or other severe impacts on affected web applications.",
+      "action": "Apply the latest security updates for Adobe ColdFusion immediately. Due to active exploitation and CISA's directive, this patch should be considered an emergency out-of-band remediation and prioritized across all deployments.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-max-severity-coldfusion-flaw-by-friday/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Adobe ColdFusion commercial web app development platform (specific versions not provided)",
-      "how_to_determine_impact": "Identify all servers running Adobe ColdFusion. Check the installed version against Adobe's official security advisories. Look for indicators of compromise (IOCs) provided by CISA or Adobe.",
-      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'ColdFusion') and Get Running Processes from all machines where (Process Name contains 'coldfusion')",
-      "rapid7_query_hint": "Run authenticated scans against servers to detect ColdFusion installations and vulnerabilities. Query asset inventory for 'software name = Adobe ColdFusion'. Check for vulnerability IDs associated with recent ColdFusion RCE flaws.",
+      "affected_versions": "Adobe ColdFusion, specific vulnerable versions require immediate update as per Adobe's official security advisories.",
+      "how_to_determine_impact": "Identify all systems running Adobe ColdFusion. Verify the installed version against official Adobe security advisories. Check server logs and web application firewall (WAF) logs for signs of attempted exploitation or unusual activity originating from ColdFusion processes.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name contains 'Adobe ColdFusion'. For specific version checks, use 'Get File Version[path_to_coldfusion_executable]' or 'Get Installed Patches' for ColdFusion.",
+      "rapid7_query_hint": "Scan all assets for 'Adobe ColdFusion' installations. Search for vulnerability IDs related to 'Adobe ColdFusion max severity' or 'ColdFusion RCE' in InsightVM. Use asset query 'Installed Software Name Contains 'Adobe ColdFusion'' to identify affected systems.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "Critical (Estimate, likely 9.8 or higher due to active exploitation and maximum severity)"
+    },
+    {
+      "title": "Ubiquiti warns of new max severity UniFi OS vulnerability",
+      "tldr": "Ubiquiti has released security updates to address seven critical vulnerabilities in UniFi OS, including a maximum-severity flaw that could lead to command injection attacks. These vulnerabilities affect various UniFi OS devices, posing a significant risk to network infrastructure.",
+      "action": "Update all Ubiquiti UniFi OS devices to the latest available firmware version immediately. Consult Ubiquiti's official security advisories for specific patch details and apply them across all affected UniFi Connect, Talk, Access, Protect, and OS devices.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Ubiquiti UniFi OS, all prior vulnerable firmware versions across Connect, Talk, Access, Protect, and OS devices. Update to the latest official firmware.",
+      "how_to_determine_impact": "Check the firmware version of all Ubiquiti UniFi OS devices, including controllers and connected hardware. Compare these versions against Ubiquiti's official security advisories to identify any devices running vulnerable firmware.",
+      "tanium_query_hint": "If Tanium manages network devices, use relevant sensors to 'Get Device Firmware Version' for Ubiquiti devices. Otherwise, rely on network scanning tools or manual checks to ascertain firmware levels.",
+      "rapid7_query_hint": "Perform an authenticated scan of network infrastructure to detect Ubiquiti UniFi OS devices. Search InsightVM for vulnerability IDs related to 'Ubiquiti UniFi OS command injection' or 'UniFi firmware vulnerabilities'.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "Critical (Estimate, due to 'max severity' and command injection, likely 9.0+)"
     },
     {
       "title": "15-Year-Old GhostLock Flaw Enables Root and Container Escape on Most Linux Distros",
-      "tldr": "A severe vulnerability, dubbed 'GhostLock', has been discovered in Linux, allowing attackers to achieve root privileges and container escape on most Linux distributions. This flaw has existed for 15 years and poses a significant risk to Linux-based systems and containerized environments.",
-      "action": "Immediately identify and patch all Linux systems, including virtual machines and containers, to address the GhostLock vulnerability. Prioritize updates for systems with multi-tenant or containerized workloads, and those exposed to untrusted users.",
+      "tldr": "A critical 15-year-old vulnerability, dubbed 'GhostLock', has been discovered that enables root privilege escalation and container escape on most Linux distributions. This flaw, residing in the kernel, poses a severe risk to the isolation and security of Linux-based systems and containerized environments.",
+      "action": "Identify all Linux systems and container hosts within your environment. Apply vendor-specific patches or kernel updates as they become available from your Linux distribution provider to mitigate the GhostLock flaw. Ensure container runtimes are also updated.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Most Linux distributions over the past 15 years (specific kernel versions/packages not provided)",
-      "how_to_determine_impact": "Consult official advisories from your Linux distribution vendor (e.g., Red Hat, Debian, Ubuntu) to identify affected kernel versions and the corresponding patches. Scan Linux systems for the presence of the vulnerable component or kernel version.",
-      "tanium_query_hint": "Get Linux Package List from all machines where (Package Name contains 'kernel') and Get Kernel Version from all machines",
-      "rapid7_query_hint": "Run authenticated scans against Linux assets to detect kernel vulnerabilities. Use vulnerability checks for known Linux privilege escalation flaws. Query asset inventory for 'operating system contains Linux' and specific kernel versions.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Critical Gitea Flaw Under Active Exploitation, Researchers Warn",
-      "tldr": "A critical vulnerability in Gitea, a self-hosted Git service, is reportedly under active exploitation. Researchers warn that this flaw poses a severe risk, potentially allowing unauthorized access or control over Gitea instances, impacting code integrity and availability.",
-      "action": "Immediately identify and patch all Gitea instances to the latest secure version. Prioritize internet-facing Gitea deployments. Monitor logs for any indicators of compromise (IOCs) related to this exploitation, such as unexpected repository modifications or unauthorized user activity.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/critical-gitea-flaw-under-active-exploitation-researchers-warn/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Gitea (specific versions not provided)",
-      "how_to_determine_impact": "Identify all servers hosting Gitea. Check the installed version against official Gitea security advisories. Look for signs of compromise such as unauthorized repository modifications, creation of new user accounts, or unusual process activity on the Gitea server.",
-      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'Gitea') and Get Running Processes from all machines where (Process Name contains 'gitea')",
-      "rapid7_query_hint": "Run authenticated scans against servers to detect Gitea installations and vulnerabilities. Query asset inventory for 'software name = Gitea'. Check for vulnerability IDs associated with critical Gitea flaws and monitor for suspicious access to repositories via InsightIDR.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "Most Linux distributions, affecting various kernel versions over the last 15 years. Specific vulnerable kernel versions will be detailed in advisories from individual Linux distribution vendors.",
+      "how_to_determine_impact": "Check the kernel version of all Linux hosts and container environments using 'uname -r'. Consult respective Linux distribution security advisories (e.g., Red Hat, Debian, Ubuntu) for affected kernel ranges and available patches. Verify container isolation configurations.",
+      "tanium_query_hint": "Use 'Get Kernel Version from all Linux machines' sensor. Additionally, 'Get Installed Packages' on Linux endpoints to check for updated kernel packages (e.g., 'kernel-core' or 'linux-image').",
+      "rapid7_query_hint": "Perform authenticated scans of Linux assets in InsightVM. Search for 'GhostLock' or specific CVEs (once assigned) related to Linux kernel privilege escalation. Filter assets by 'Operating System Contains 'Linux'' and 'Kernel Version'.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "Critical (Estimate, due to root and container escape, likely 9.0+)"
     }
   ],
   "insurance": [],
@@ -3194,6 +3210,49 @@
         "rapid7_query_hint": "Run authenticated scans against servers to detect ColdFusion installations and vulnerabilities. Query asset inventory for 'software name = Adobe ColdFusion'. Check for vulnerability IDs associated with recent ColdFusion RCE flaws.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Mount Royal University confirms breach as hackers claim attack",
+        "tldr": "Mount Royal University in Calgary confirmed a network breach where attackers stole and then deleted data from their file storage systems. The incident involved unauthorized access to the university's network, resulting in data compromise and removal.",
+        "action": "Organizations should ensure robust data backup and recovery strategies are in place and review network security logs for any unauthorized access attempts, especially targeting file storage systems. Implement multi-factor authentication for critical systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/mount-royal-university-confirms-breach-as-hackers-claim-attack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Fake Paysafe, Skrill SDKs on NPM and PyPi steal credentials",
+        "tldr": "Malicious packages posing as official Paysafe, Skrill, and Neteller SDKs were discovered on popular package repositories like Node Package Manager (npm) and Python Package Index (PyPI). These counterfeit SDKs deliver stealer malware designed to compromise developer and user credentials.",
+        "action": "Developers must verify the authenticity of all third-party libraries and SDKs by checking official vendor channels. Implement software supply chain security practices, including scanning dependencies for known malicious code and maintaining strict package validation policies.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/fake-paysafe-skrill-sdks-on-npm-and-pypi-steal-credentials/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Accenture Confirms Data Breach After Hacker Claims Source Code Theft",
+        "tldr": "Accenture has confirmed a data breach following claims from a hacker group regarding the theft of source code. The confirmation indicates a successful intrusion into Accenture's systems, with details of the compromised data currently limited.",
+        "action": "Review access logs for all source code repositories and implement stringent access controls, including least privilege and multi-factor authentication. Conduct immediate forensic analysis to determine the extent of the breach and identify any exfiltrated sensitive data.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/accenture-confirms-data-breach-after-hacker-claims-source-code-theft/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Ubiquiti warns of new max severity UniFi OS vulnerability",
+        "tldr": "Ubiquiti has released security updates to address seven critical vulnerabilities in UniFi OS, including a maximum-severity flaw that could lead to command injection attacks. These vulnerabilities affect various UniFi OS devices, posing a significant risk to network infrastructure.",
+        "action": "Update all Ubiquiti UniFi OS devices to the latest available firmware version immediately. Consult Ubiquiti's official security advisories for specific patch details and apply them across all affected UniFi Connect, Talk, Access, Protect, and OS devices.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ubiquiti-warns-of-new-max-severity-unifi-os-vulnerability/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Ubiquiti UniFi OS, all prior vulnerable firmware versions across Connect, Talk, Access, Protect, and OS devices. Update to the latest official firmware.",
+        "how_to_determine_impact": "Check the firmware version of all Ubiquiti UniFi OS devices, including controllers and connected hardware. Compare these versions against Ubiquiti's official security advisories to identify any devices running vulnerable firmware.",
+        "tanium_query_hint": "If Tanium manages network devices, use relevant sensors to 'Get Device Firmware Version' for Ubiquiti devices. Otherwise, rely on network scanning tools or manual checks to ascertain firmware levels.",
+        "rapid7_query_hint": "Perform an authenticated scan of network infrastructure to detect Ubiquiti UniFi OS devices. Search InsightVM for vulnerability IDs related to 'Ubiquiti UniFi OS command injection' or 'UniFi firmware vulnerabilities'.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "Critical (Estimate, due to 'max severity' and command injection, likely 9.0+)",
         "category": "vulns"
       }
     ]
