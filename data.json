@@ -1,33 +1,33 @@
 {
   "breaches": [
     {
+      "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
+      "tldr": "The jscrambler npm package, version 8.14.0, was compromised and delivered a Rust-based infostealer during installation. This supply chain attack targets developers, potentially leading to the theft of sensitive information like credentials and cryptocurrency wallet keys from development environments.",
+      "action": "Developers should immediately verify the integrity of their jscrambler dependencies, especially version 8.14.0, and scan development systems for the Rust infostealer. Isolate and rebuild affected development environments.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages",
-      "tldr": "Injective Labs' GitHub account was compromised, leading to malicious npm packages being pushed that are designed to steal wallet keys. This is a supply chain attack targeting cryptocurrency users through a compromised development environment.",
-      "action": "Users of Injective Labs-related npm packages should immediately check for compromised packages and rotate any exposed cryptocurrency wallet keys. Injective Labs should perform a full compromise assessment of their GitHub.",
+      "tldr": "Injective Labs' GitHub account was compromised, leading to the distribution of malicious npm packages designed to steal wallet keys. This is a significant supply chain attack targeting blockchain developers and users, with potential for substantial financial loss.",
+      "action": "Developers involved with Injective Labs projects should audit their dependencies for malicious npm packages and check systems for evidence of key theft. Change any potentially compromised wallet keys immediately and revoke GitHub tokens associated with the compromised account.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/injective-labs-github-compromise-pushes.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Exposed Hacker Server Reveals WP-SHELLSTORM Backdooring Thousands of WordPress Sites",
-      "tldr": "An exposed hacker server has revealed the 'WP-SHELLSTORM' campaign, which has successfully backdoored thousands of WordPress sites. This indicates widespread compromise and potential data theft or further malicious activity on affected sites.",
-      "action": "WordPress site administrators should immediately scan their sites for WP-SHELLSTORM backdoors, review access logs for suspicious activity, and ensure all plugins, themes, and core WordPress installations are updated to the latest secure versions.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/exposed-hacker-server-reveals-wp.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Police suspects Dutch hackers were involved in Odido breach",
-      "tldr": "The Dutch National Police (Politie) says it has found 'strong indications' that Dutch hackers have been involved in a February breach at the telecommunications provider Odido. This highlights ongoing investigations into major data breaches and potential state-sponsored or organized crime involvement.",
-      "action": "Organizations should review their incident response plans, enhance threat detection capabilities, and regularly audit access logs to quickly identify and respond to breach attempts. Strengthen perimeter defenses and insider threat detection.",
+      "tldr": "Dutch National Police have found strong indications that local hackers were involved in a February data breach at telecommunications provider Odido. This ongoing investigation suggests a domestic threat actor for a significant telecommunications breach, highlighting internal and external threats.",
+      "action": "Organizations should review their incident response plans for managing insider threat or nation-state-sponsored domestic actor scenarios. Monitor for any potential links or further indicators of compromise from the Odido breach.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/police-suspects-dutch-hackers-were-involved-in-odido-breach/",
       "source": "BleepingComputer"
     },
     {
-      "title": "DHS Database Hacked",
-      "tldr": "A database belonging to the Department of Homeland Security (DHS) has reportedly been hacked, indicating a compromise of potentially sensitive government data. This represents a significant security incident for a critical government agency.",
-      "action": "Organizations, especially those with sensitive data, should review access controls for all critical databases and enhance monitoring for unauthorized access and exfiltration attempts. Implement multi-factor authentication for all privileged accounts.",
+      "title": "In Other News: DHS Database Hacked, Adobe Boosts Patch Cadence, Canada Disrupts Ransomware Ops",
+      "tldr": "A database belonging to the Department of Homeland Security (DHS) has reportedly been hacked. Details are sparse, but any compromise of a major government database is a critical incident with potentially far-reaching implications for national security and citizen data.",
+      "action": "Organizations, especially those with government contracts or data, should heighten monitoring for unusual activity and review their data protection strategies. Wait for official advisories from DHS regarding the scope and impact of the breach.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
       "source": "SecurityWeek"
@@ -36,97 +36,89 @@
   "ransomware": [
     {
       "title": "Ryuk ransomware member pleads guilty in the US, faces 15 years in prison",
-      "tldr": "A 34-year-old Armenian man has pleaded guilty in the U.S. for his involvement in hacking American companies and deploying the infamous Ryuk ransomware. He faces up to 15 years in prison, marking another success in international efforts against ransomware groups.",
-      "action": "Review and strengthen defenses against ransomware, including robust backups, network segmentation, endpoint detection and response (EDR), and regular security awareness training. Ensure legal teams are aware of international cooperation efforts against cybercriminals.",
+      "tldr": "A 34-year-old Armenian man pleaded guilty in the U.S. for deploying Ryuk ransomware against American companies. This highlights ongoing international law enforcement efforts to apprehend and prosecute ransomware operators, providing some deterrence to cybercriminals.",
+      "action": "Reinforce security awareness training regarding phishing and initial access vectors commonly used by ransomware groups. Ensure robust backup and recovery strategies are in place to mitigate ransomware impact, regardless of law enforcement successes.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-pleads-guilty-in-the-us-faces-15-years-in-prison/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Canada Disrupts Ransomware Ops",
-      "tldr": "Canadian authorities have successfully disrupted ransomware operations, indicating ongoing efforts by law enforcement to combat these threats globally. Such disruptions help to dismantle ransomware infrastructure and reduce the operational capacity of criminal gangs.",
-      "action": "Continuously update ransomware defense strategies, including proactive threat intelligence, robust incident response planning, and collaboration with law enforcement and industry peers to stay ahead of evolving threats.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Third US Security Expert Sentenced to Prison for Helping Ransomware Gang",
-      "tldr": "A third U.S. security expert has been sentenced to prison for assisting a ransomware gang. This underscores the severe legal consequences for individuals, including those with cybersecurity expertise, who choose to aid cybercriminal enterprises.",
-      "action": "Ensure all internal security personnel adhere to strict ethical guidelines and legal frameworks. Implement thorough background checks and continuous monitoring for insider threats to prevent malicious collaboration with cybercriminals.",
+      "tldr": "A third U.S. security expert has been sentenced to prison for assisting a ransomware gang, selling access to compromised networks. This indicates a growing trend of individuals with cybersecurity knowledge aiding criminal enterprises, which complicates defense efforts and highlights insider threats.",
+      "action": "Conduct thorough background checks for security personnel and implement strict access controls and monitoring for privileged accounts. Promote strong ethical guidelines and reporting mechanisms within security teams to prevent such collaborations.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/third-us-security-expert-sentenced-to-prison-for-helping-ransomware-gang/",
       "source": "SecurityWeek"
     },
     {
-      "title": "GigaWiper Combines Multiple Malware for System-Level Sabotage",
-      "tldr": "A new destructive malware, 'GigaWiper,' combines multiple malware techniques to achieve system-level sabotage. This advanced wiper aims to cause maximum damage and data loss, potentially as part of an extortion attempt or nation-state attack.",
-      "action": "Implement robust data backup and recovery strategies, network segmentation, and advanced endpoint protection with anti-wiper capabilities. Develop and test incident response plans specifically for destructive malware attacks.",
+      "title": "In Other News: DHS Database Hacked, Adobe Boosts Patch Cadence, Canada Disrupts Ransomware Ops",
+      "tldr": "Canadian authorities have successfully disrupted several ransomware operations, collaborating internationally to dismantle criminal infrastructure. This demonstrates effective international collaboration and active measures by law enforcement to disrupt threat actor capabilities.",
+      "action": "Stay informed on law enforcement advisories and technical reports from such disruptions to understand evolving ransomware tactics and implement corresponding defensive measures. Continue to invest in threat intelligence specific to active ransomware groups.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/gigawiper-combines-multiple-malware-for-system-level-sabotage/",
+      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
       "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
-      "title": "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat",
-      "tldr": "Progress Software has issued an urgent warning to ShareFile customers to immediately shut down Storage Zone Controllers due to a credible external security threat. This suggests an actively exploited or very severe vulnerability requiring immediate mitigation.",
-      "action": "Immediately follow Progress Software's guidance to shut down all ShareFile Storage Zone Controllers. Monitor for official patches and further instructions from the vendor to restore service securely.",
+      "title": "Progress urges ShareFile admins to shut down servers over “credible” threat",
+      "tldr": "Progress Software has issued an urgent advisory for ShareFile customers using Storage Zone Controllers to immediately shut down their servers due to a credible external security threat. This indicates an actively exploited or highly critical vulnerability that requires immediate mitigation to prevent compromise.",
+      "action": "Immediately shut down all ShareFile Storage Zone Controllers. Continuously monitor vendor communications for specific patching instructions and indicators of compromise. Conduct a forensic investigation for any signs of unauthorized access or data exfiltration prior to the shutdown.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Progress ShareFile Storage Zone Controllers (all vulnerable versions prior to vendor patch)",
-      "how_to_determine_impact": "Identify all systems running Progress ShareFile Storage Zone Controllers. The vendor recommends immediate shutdown, indicating no direct method to distinguish affected versions without an official patch.",
-      "tanium_query_hint": "Get Processes with Name \"StorageZoneController\" or Get Installed Applications with \"ShareFile Storage Zone Controller\". Act based on vendor guidance irrespective of version if using vulnerable component.",
-      "rapid7_query_hint": "Search for Software.name = \"Progress ShareFile Storage Zone Controller\" or filter assets by installed software. Monitor Rapid7 vulnerability database for specific CVEs once released.",
+      "affected_versions": "Progress ShareFile Storage Zone Controllers - Specific versions not yet disclosed, but all instances are advised for shutdown. Refer to Progress Software's official advisory for exact vulnerable versions.",
+      "how_to_determine_impact": "Check for running 'ShareFile Storage Zone Controller' services or applications on your servers. Verify configuration to identify if the Storage Zone Controller role is active. Look for any communication logs or network traffic originating from these controllers indicating unusual external connections.",
+      "tanium_query_hint": "Get Running Processes matches 'ShareFile Storage Zone Controller.exe' from all machines. Get Installed Applications contains 'ShareFile' and 'Storage Zone Controller' from all machines.",
+      "rapid7_query_hint": "Search for assets with installed software 'ShareFile' and 'Storage Zone Controller'. Use InsightAgent queries to check for active processes or network connections related to ShareFile services. Look for vulnerability checks related to ShareFile when available.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "10.0 Critical (Estimated, given the immediate shutdown recommendation)"
+    },
+    {
+      "title": "Zimbra urges customers to patch critical web client XSS flaw",
+      "tldr": "Zimbra is urging customers to apply patches for a critical Cross-Site Scripting (XSS) vulnerability affecting its Classic Web Client within the Zimbra Collaboration suite. This flaw allows attackers to execute arbitrary malicious code in user sessions via specially crafted emails, potentially leading to account compromise.",
+      "action": "Apply the latest security patches provided by Zimbra for the Classic Web Client without delay. Ensure all Zimbra Collaboration suite instances are updated to the recommended secure versions to mitigate this critical XSS vulnerability.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Zimbra Collaboration Suite (ZCS) Classic Web Client. Specific vulnerable versions should be referenced in Zimbra's official advisory.",
+      "how_to_determine_impact": "Identify Zimbra Collaboration Suite deployments. Check the version of the Classic Web Client in use against Zimbra's official security advisories. Inspect logs for unusual email activity or script execution originating from user sessions.",
+      "tanium_query_hint": "Get Installed Applications contains 'Zimbra' and 'Collaboration Suite' from all machines. Check for specific file versions related to the Classic Web Client if Zimbra provides specific file paths in their advisory.",
+      "rapid7_query_hint": "Search for assets with installed software 'Zimbra Collaboration Suite'. Monitor for relevant vulnerability checks in InsightVM. Use InsightAgent to search for specific file hash or version if a patch is available.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical (Estimated based on critical XSS in web client)"
     },
     {
       "title": "Hackers exploit critical auth bypass in Gitea Docker image",
-      "tldr": "Hackers are actively exploiting a critical authentication bypass vulnerability in the official Gitea Docker image. This flaw allows attackers to impersonate any user, including administrators, leading to full compromise of Git services and repositories.",
-      "action": "Immediately update the Gitea Docker image to the latest patched version. Review all Gitea instances for signs of compromise, such as unauthorized access, altered repositories, or suspicious log entries.",
+      "tldr": "Hackers are actively exploiting a critical authentication bypass vulnerability in the official Gitea Docker image, enabling them to impersonate any user, including administrators. This flaw could lead to full compromise of self-hosted Git repositories and sensitive code.",
+      "action": "Immediately update all Gitea Docker image deployments to the patched version. Review access logs for any unauthorized login attempts or suspicious activity, especially concerning administrative accounts, and rotate all affected credentials.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Official Gitea Docker image (specific vulnerable versions prior to patch, requires updating to the latest secure image)",
-      "how_to_determine_impact": "Check all deployed Gitea instances running from the official Docker image. Verify the current Docker image tag/version and compare against Gitea's security advisories. Look for signs of compromise in logs.",
-      "tanium_query_hint": "Use `Get Docker Images with Name \"gitea/gitea\"` to identify deployed images and their tags. Inspect running containers for `gitea` processes and their associated versions.",
-      "rapid7_query_hint": "Search for `Container.image.name = \"gitea/gitea\"` and look for associated vulnerability checks in InsightVM. Monitor for new vulnerability content related to Gitea Docker images.",
+      "affected_versions": "Official Gitea Docker images (specific versions not provided in the snippet, refer to Gitea's official advisory for exact vulnerable versions and patched releases).",
+      "how_to_determine_impact": "Identify all Gitea deployments, particularly those using official Docker images. Check for the installed version of the Gitea Docker image against the vendor's patch information. Review Gitea access logs for unauthenticated access attempts or unexpected logins by any user, especially admins.",
+      "tanium_query_hint": "Get Running Containers from all machines (for Docker). Get Installed Applications contains 'Gitea' from all machines. Check for specific Gitea version strings within Docker container environments.",
+      "rapid7_query_hint": "Search for assets running Docker containers with Gitea. Utilize InsightVM vulnerability checks for Gitea. Look for anomalous login patterns or access attempts in InsightIDR for Gitea instances.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated, given active exploitation and full authentication bypass)"
     },
     {
-      "title": "Critical Zimbra Flaw Could Let Crafted Emails Run Malicious Code in User Sessions",
-      "tldr": "A critical Cross-Site Scripting (XSS) vulnerability in Zimbra's Classic Web Client allows specially crafted emails to execute malicious code within a user's session. This could lead to session hijacking, data exfiltration, or further system compromise.",
-      "action": "Immediately apply the latest security patches from Zimbra to all affected Classic Web Client installations of the Zimbra Collaboration suite. Educate users about phishing and suspicious emails.",
+      "title": "New U-Boot flaws could enable stealthy firmware attacks",
+      "tldr": "Six new vulnerabilities have been discovered in U-Boot, a widely used bootloader, that could allow attackers to execute malicious code during device boot. These flaws pose a significant risk for stealthy firmware attacks, potentially undermining security protections and installing persistent malware.",
+      "action": "Identify all devices utilizing U-Boot and consult vendor advisories for available patches or mitigation strategies. Prioritize updating critical embedded systems and IoT devices where firmware integrity is paramount to prevent persistent compromise.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Zimbra Collaboration Suite - Classic Web Client (all vulnerable versions prior to patch)",
-      "how_to_determine_impact": "Check Zimbra Collaboration Suite installations for the Classic Web Client. Verify the current patch level by consulting Zimbra's official security advisories and version information.",
-      "tanium_query_hint": "Get Installed Applications with \"Zimbra Collaboration\" and filter by version. Also, check active processes for \"zmmailboxdctl\" or \"mailboxd\" and their associated versions for outdated components.",
-      "rapid7_query_hint": "Search for Vulnerability.title CONTAINS \"Zimbra Classic Web Client XSS\" or Software.name CONTAINS \"Zimbra Collaboration\" and filter by version information provided in advisories.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Australia warns of global campaign targeting vulnerable CMS platforms",
-      "tldr": "The Australian Cyber Security Centre (ACSC) has warned of a global exploitation campaign actively targeting vulnerable Content Management Systems (CMS) and their plugins. This indicates widespread active threats to web infrastructure, demanding urgent attention.",
-      "action": "Administrators of CMS platforms (WordPress, Joomla, Drupal, etc.) must immediately ensure all core software, themes, and plugins are updated to the latest secure versions. Conduct thorough security audits and vulnerability scans.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/australia-warns-of-global-campaign-targeting-vulnerable-cms-platforms/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-u-boot-flaws-could-enable-stealthy-firmware-attacks/",
       "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Various Content Management Systems (CMS) and their plugins, particularly outdated versions susceptible to known and unknown vulnerabilities being targeted by a global campaign.",
-      "how_to_determine_impact": "Inventory all deployed CMS platforms (e.g., WordPress, Joomla, Drupal) and their components (themes, plugins). Verify that all are running the latest, patched versions. Conduct external and internal vulnerability scans.",
-      "tanium_query_hint": "Get Installed Applications with \"WordPress\" or \"Joomla\" or \"Drupal\" and check versions. Use specific sensors for web server configurations or file integrity monitoring for known backdoor indicators.",
-      "rapid7_query_hint": "Search for `Software.category = \"CMS\"` or `Software.name IN (\"WordPress\", \"Joomla\", \"Drupal\")` and filter by critical and high vulnerabilities. Utilize Web Application Scans (WAS) for deeper analysis.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "active_exploitation": false,
+      "affected_versions": "U-Boot bootloader (specific vulnerable versions not detailed in the snippet; refer to vendor advisories for affected ranges).",
+      "how_to_determine_impact": "Identify embedded systems, IoT devices, or other hardware utilizing the U-Boot bootloader. Consult hardware vendor documentation and advisories to determine if their specific U-Boot implementation is affected by these six flaws. Implement secure boot where possible.",
+      "tanium_query_hint": "This is primarily a hardware/firmware vulnerability. Tanium's endpoint visibility might be limited here. Focus on 'Get System Information' or 'Get Hardware Information' to identify device models, then cross-reference with vendor advisories. For Linux-based embedded systems, 'Get Package Name and Version' for U-Boot related packages.",
+      "rapid7_query_hint": "Asset inventory for embedded systems or IoT devices. Consult vendor-specific vulnerability checks if available. For Linux-based systems, search for 'U-Boot' packages and versions.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.8 High (Estimated, bootloader vulnerabilities are severe but not explicitly active exploitation yet)"
     }
   ],
   "insurance": [],
@@ -3949,6 +3941,63 @@
         "source_url": "https://www.securityweek.com/gigawiper-combines-multiple-malware-for-system-level-sabotage/",
         "source": "SecurityWeek",
         "category": "ransomware"
+      },
+      {
+        "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
+        "tldr": "The jscrambler npm package, version 8.14.0, was compromised and delivered a Rust-based infostealer during installation. This supply chain attack targets developers, potentially leading to the theft of sensitive information like credentials and cryptocurrency wallet keys from development environments.",
+        "action": "Developers should immediately verify the integrity of their jscrambler dependencies, especially version 8.14.0, and scan development systems for the Rust infostealer. Isolate and rebuild affected development environments.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Progress urges ShareFile admins to shut down servers over “credible” threat",
+        "tldr": "Progress Software has issued an urgent advisory for ShareFile customers using Storage Zone Controllers to immediately shut down their servers due to a credible external security threat. This indicates an actively exploited or highly critical vulnerability that requires immediate mitigation to prevent compromise.",
+        "action": "Immediately shut down all ShareFile Storage Zone Controllers. Continuously monitor vendor communications for specific patching instructions and indicators of compromise. Conduct a forensic investigation for any signs of unauthorized access or data exfiltration prior to the shutdown.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/progress-urges-sharefile-customers-to-shut-down-servers-over-credible-threat/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Progress ShareFile Storage Zone Controllers - Specific versions not yet disclosed, but all instances are advised for shutdown. Refer to Progress Software's official advisory for exact vulnerable versions.",
+        "how_to_determine_impact": "Check for running 'ShareFile Storage Zone Controller' services or applications on your servers. Verify configuration to identify if the Storage Zone Controller role is active. Look for any communication logs or network traffic originating from these controllers indicating unusual external connections.",
+        "tanium_query_hint": "Get Running Processes matches 'ShareFile Storage Zone Controller.exe' from all machines. Get Installed Applications contains 'ShareFile' and 'Storage Zone Controller' from all machines.",
+        "rapid7_query_hint": "Search for assets with installed software 'ShareFile' and 'Storage Zone Controller'. Use InsightAgent queries to check for active processes or network connections related to ShareFile services. Look for vulnerability checks related to ShareFile when available.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical (Estimated, given the immediate shutdown recommendation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Zimbra urges customers to patch critical web client XSS flaw",
+        "tldr": "Zimbra is urging customers to apply patches for a critical Cross-Site Scripting (XSS) vulnerability affecting its Classic Web Client within the Zimbra Collaboration suite. This flaw allows attackers to execute arbitrary malicious code in user sessions via specially crafted emails, potentially leading to account compromise.",
+        "action": "Apply the latest security patches provided by Zimbra for the Classic Web Client without delay. Ensure all Zimbra Collaboration suite instances are updated to the recommended secure versions to mitigate this critical XSS vulnerability.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/zimbra-urges-customers-to-patch-critical-web-client-xss-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Zimbra Collaboration Suite (ZCS) Classic Web Client. Specific vulnerable versions should be referenced in Zimbra's official advisory.",
+        "how_to_determine_impact": "Identify Zimbra Collaboration Suite deployments. Check the version of the Classic Web Client in use against Zimbra's official security advisories. Inspect logs for unusual email activity or script execution originating from user sessions.",
+        "tanium_query_hint": "Get Installed Applications contains 'Zimbra' and 'Collaboration Suite' from all machines. Check for specific file versions related to the Classic Web Client if Zimbra provides specific file paths in their advisory.",
+        "rapid7_query_hint": "Search for assets with installed software 'Zimbra Collaboration Suite'. Monitor for relevant vulnerability checks in InsightVM. Use InsightAgent to search for specific file hash or version if a patch is available.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical (Estimated based on critical XSS in web client)",
+        "category": "vulns"
+      },
+      {
+        "title": "New U-Boot flaws could enable stealthy firmware attacks",
+        "tldr": "Six new vulnerabilities have been discovered in U-Boot, a widely used bootloader, that could allow attackers to execute malicious code during device boot. These flaws pose a significant risk for stealthy firmware attacks, potentially undermining security protections and installing persistent malware.",
+        "action": "Identify all devices utilizing U-Boot and consult vendor advisories for available patches or mitigation strategies. Prioritize updating critical embedded systems and IoT devices where firmware integrity is paramount to prevent persistent compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-u-boot-flaws-could-enable-stealthy-firmware-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "U-Boot bootloader (specific vulnerable versions not detailed in the snippet; refer to vendor advisories for affected ranges).",
+        "how_to_determine_impact": "Identify embedded systems, IoT devices, or other hardware utilizing the U-Boot bootloader. Consult hardware vendor documentation and advisories to determine if their specific U-Boot implementation is affected by these six flaws. Implement secure boot where possible.",
+        "tanium_query_hint": "This is primarily a hardware/firmware vulnerability. Tanium's endpoint visibility might be limited here. Focus on 'Get System Information' or 'Get Hardware Information' to identify device models, then cross-reference with vendor advisories. For Linux-based embedded systems, 'Get Package Name and Version' for U-Boot related packages.",
+        "rapid7_query_hint": "Asset inventory for embedded systems or IoT devices. Consult vendor-specific vulnerability checks if available. For Linux-based systems, search for 'U-Boot' packages and versions.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High (Estimated, bootloader vulnerabilities are severe but not explicitly active exploitation yet)",
+        "category": "vulns"
       }
     ]
   }
