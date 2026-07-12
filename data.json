@@ -1,114 +1,122 @@
 {
   "breaches": [
     {
-      "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
-      "tldr": "A compromised jscrambler npm package (version 8.14.0) has been identified dropping a Rust-based infostealer during installation. This supply chain attack targets developers, potentially leading to the theft of sensitive information and credentials from their systems.",
-      "action": "Immediately identify and remove any instances of jscrambler npm package version 8.14.0 from all development and production environments. Scan affected systems for indicators of compromise related to Rust infostealers, including suspicious processes and unauthorized network connections. Rotate all credentials and API keys used in potentially compromised environments.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages",
-      "tldr": "The GitHub account for Injective Labs has been compromised, leading to the distribution of malicious npm packages. These packages are designed to steal cryptocurrency wallet keys and other sensitive developer credentials, posing a severe supply chain risk.",
-      "action": "Immediately review and verify the integrity of any Injective Labs npm packages in use, rolling back to known secure versions or removing them if compromise is suspected. Conduct a thorough forensic analysis of systems that installed these packages, scan for wallet key stealers, and rotate all cryptocurrency wallet keys and development credentials.",
+      "tldr": "Injective Labs' GitHub account has been compromised, leading to the distribution of malicious npm packages designed to steal cryptocurrency wallet keys. This supply chain attack poses a direct threat to developers and users of these packages, potentially resulting in significant financial losses.",
+      "action": "If you have used npm packages from Injective Labs, audit your systems for malicious code and indicators of compromise. Immediately revoke and rotate any compromised wallet keys. Avoid using packages from the compromised GitHub account until remediation is confirmed.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/injective-labs-github-compromise-pushes.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Police suspects Dutch hackers were involved in Odido breach",
-      "tldr": "The Dutch National Police have found strong indications that Dutch hackers were involved in a data breach at telecommunications provider Odido in February. This ongoing investigation points to potential localized cybercriminal activity targeting critical infrastructure.",
-      "action": "Organizations, especially in the telecom sector, should enhance internal network monitoring and insider threat detection capabilities. Regularly review access controls, audit logs, and conduct behavioral analysis to identify suspicious activities. Strengthen collaboration with national law enforcement and intelligence agencies for threat sharing.",
+      "title": "DHS Database Hacked",
+      "tldr": "The Department of Homeland Security (DHS) has experienced a database hack, indicating a compromise of sensitive government data. Details are scarce but point to a significant security incident affecting a critical U.S. agency.",
+      "action": "Federal agencies, especially DHS, must conduct thorough forensic investigations and implement enhanced security controls to prevent future breaches. All organizations should review their data protection strategies and incident response plans.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/police-suspects-dutch-hackers-were-involved-in-odido-breach/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
+      "source": "SecurityWeek"
     },
     {
       "title": "Okta Warns of Vishing Attacks Targeting Microsoft 365 Customers",
-      "tldr": "Okta has issued a warning regarding active vishing (voice phishing) attacks specifically targeting Microsoft 365 customers. These social engineering campaigns aim to trick users into divulging credentials, leading to unauthorized account access and potential data breaches.",
-      "action": "Implement and enforce robust multi-factor authentication (MFA), preferably phishing-resistant methods like FIDO2, across all Microsoft 365 accounts. Conduct immediate and ongoing security awareness training for all employees on vishing tactics and the importance of verifying caller identity before sharing sensitive information. Monitor for suspicious login attempts and anomalous user behavior in Microsoft 365 logs.",
+      "tldr": "Okta has issued a warning about active vishing (voice phishing) campaigns specifically targeting Microsoft 365 customers. These attacks aim to trick users into divulging credentials, potentially leading to widespread account compromises across affected organizations.",
+      "action": "Implement robust multi-factor authentication (MFA) for all Microsoft 365 accounts and enforce strict policies against MFA bypass. Conduct regular security awareness training, specifically focusing on vishing tactics and how to identify and report them.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/okta-warns-of-vishing-attacks-targeting-microsoft-365-customers/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Network of 200 GitHub Repositories Used for Malware Infection",
+      "tldr": "A vast network of 200 GitHub repositories has been identified as being used for distributing malware. This supply chain vector leverages the trusted nature of GitHub to infect users who download or clone these malicious repositories, leading to system compromise.",
+      "action": "Developers should exercise extreme caution when importing code from GitHub, verifying the authenticity and integrity of repositories. Organizations should implement static and dynamic code analysis in their CI/CD pipelines to detect malicious payloads.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/network-of-200-github-repositories-used-for-malware-infection/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Ryuk ransomware member pleads guilty in the US, faces 15 years in prison",
-      "tldr": "A 34-year-old Armenian man has pleaded guilty in the U.S. to hacking American companies and deploying the notorious Ryuk ransomware to encrypt their systems. This conviction highlights the legal consequences faced by individuals involved in ransomware operations.",
-      "action": "Review and strengthen organizational ransomware defenses, focusing on robust data backup and recovery strategies, stringent network segmentation, and the implementation of multi-factor authentication across all critical systems. Ensure incident response plans are regularly updated and practiced to prepare for potential ransomware attacks.",
+      "tldr": "A 34-year-old Armenian individual has pleaded guilty in the U.S. for their involvement in deploying the notorious Ryuk ransomware against American companies. This conviction marks a significant legal victory against ransomware operators, with the individual facing up to 15 years in prison.",
+      "action": "While not a direct technical action, this reinforces the importance of robust ransomware defenses. Review and enhance ransomware protection strategies, including backups, network segmentation, and endpoint detection and response (EDR).",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-pleads-guilty-in-the-us-faces-15-years-in-prison/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Third US Security Expert Sentenced to Prison for Helping Ransomware Gang",
-      "tldr": "A third U.S. security expert has been sentenced to prison for providing assistance to a ransomware gang. This case underscores the serious legal repercussions for individuals, even those with cybersecurity knowledge, who collaborate with cybercriminal entities.",
-      "action": "Reinforce ethical guidelines and legal awareness training for all security personnel, emphasizing the severe consequences of involvement with cybercriminal organizations. Conduct thorough background checks for employees with access to sensitive systems and implement continuous monitoring for suspicious activities or associations.",
+      "title": "Canada Disrupts Ransomware Ops",
+      "tldr": "Canadian authorities have successfully disrupted ransomware operations, indicating a proactive stance against cybercrime. This effort likely involved law enforcement and cybersecurity agencies working to dismantle the infrastructure used by ransomware groups.",
+      "action": "While a positive development, organizations should not rely solely on law enforcement disruptions. Continue to maintain robust ransomware defenses, including up-to-date backups, strong access controls, and incident response plans to mitigate future threats.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/third-us-security-expert-sentenced-to-prison-for-helping-ransomware-gang/",
+      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "GigaWiper Combines Multiple Malware for System-Level Sabotage",
+      "tldr": "GigaWiper is a new destructive malware that integrates multiple malware components to achieve system-level sabotage. This advanced wiper malware aims to render systems inoperable and data irrecoverable, posing an existential threat to affected organizations.",
+      "action": "Implement robust backup and recovery strategies, including off-site and immutable backups. Deploy advanced endpoint detection and response (EDR) solutions capable of detecting multi-stage attacks and wiper behavior. Enhance network segmentation to limit lateral movement.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/gigawiper-combines-multiple-malware-for-system-level-sabotage/",
       "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat",
-      "tldr": "Progress Software has issued an urgent directive for ShareFile customers using Storage Zone Controllers to immediately shut down their on-premises servers due to a credible external security threat. This indicates an active exploit or severe vulnerability that necessitates immediate isolation to prevent compromise.",
-      "action": "Immediately shut down all ShareFile Storage Zone Controllers. Do not bring them back online until Progress Software provides specific patching or mitigation instructions and an all-clear advisory. Conduct a forensic investigation for any signs of compromise if controllers were online and exposed.",
+      "tldr": "Progress Software has issued an urgent advisory for ShareFile customers using Storage Zone Controllers, recommending they immediately shut down these servers due to a credible external security threat. This suggests an unpatched or actively exploited vulnerability that could lead to severe compromise.",
+      "action": "Immediately shut down all ShareFile Storage Zone Controllers as advised by Progress Software. Monitor official Progress/ShareFile channels for a patch or further mitigation guidance. Prepare for potential data restoration if a compromise occurred.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "ShareFile Storage Zone Controllers (on-premises versions). Specific vulnerable versions should be confirmed via Progress Software's official advisories.",
-      "how_to_determine_impact": "Identify all deployed ShareFile Storage Zone Controllers. Confirm their operational status (online/offline). Review system and network logs for any unusual activity, outbound connections, or unauthorized file access prior to shutdown, which could indicate compromise.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'ShareFile Storage Zone Controller'. To confirm shutdown, use 'Get Running Processes' for 'ShareFile' related processes and verify they are not active.",
-      "rapid7_query_hint": "Search for assets with installed software 'ShareFile Storage Zone Controller'. Use InsightAgent to check running processes or network connections if the system was online prior to shutdown. Check for vulnerability checks in InsightVM if a CVE is released later.",
+      "affected_versions": "ShareFile Storage Zone Controllers - all versions prior to a future patch.",
+      "how_to_determine_impact": "Identify all servers running ShareFile Storage Zone Controller software. Verify if they are powered off or isolated from network access.",
+      "tanium_query_hint": "Get Installed Applications with Name matches \"ShareFile Storage Zone Controller\" to locate instances. Get Network Connections from all processes to identify unusual outbound connections from these systems if still running.",
+      "rapid7_query_hint": "Asset search for \"ShareFile Storage Zone Controller\" in installed software. Monitor network traffic from these assets for suspicious patterns in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "10.0 Critical"
     },
     {
       "title": "Hackers exploit critical auth bypass in Gitea Docker image",
-      "tldr": "Threat actors are actively exploiting a critical authentication bypass vulnerability present in the official Docker image for the Gitea self-hosted Git service. This flaw enables attackers to impersonate any user, including administrators, thereby gaining full control over repositories and the Gitea instance.",
-      "action": "Immediately update all instances of the Gitea Docker image to the patched version as released by the vendor. If immediate patching is not feasible, restrict network access to the Gitea Docker instance, limiting it strictly to trusted IP ranges or VPN-only access. Review Gitea audit logs for any unauthorized access or administrative actions.",
+      "tldr": "Attackers are actively exploiting a critical authentication bypass vulnerability in the official Gitea Docker image. This flaw allows unauthorized users to impersonate any user, including administrators, leading to full compromise of self-hosted Git services and sensitive data.",
+      "action": "Immediately patch or update all Gitea Docker installations to a secure version. If patching is not immediately possible, restrict network access to Gitea instances. Audit Gitea logs for unauthorized administrative actions or user impersonation.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Official Gitea Docker image. Specific vulnerable versions need to be confirmed by Gitea's official security advisories.",
-      "how_to_determine_impact": "Identify all deployments of the Gitea Docker image. Verify the image version against official Gitea announcements for the patched release. Review Gitea application logs and container orchestration logs for unauthorized access attempts, successful logins from unknown IPs, or suspicious administrative actions.",
-      "tanium_query_hint": "Use 'Get Docker Image Info' (if sensor available) or 'Get Running Processes' within containers for 'gitea' processes. Check 'Get Network Listeners' for Gitea's exposed ports. Inspect container logs for suspicious activity.",
-      "rapid7_query_hint": "Search for assets with installed software 'Gitea' running within Docker containers. Use InsightAgent to monitor container processes and network activity for suspicious behavior. Review InsightIDR logs for unusual authentication events against Gitea.",
+      "affected_versions": "Official Gitea Docker image - specific vulnerable versions should be identified by Gitea in their advisory. Non-Docker installations may or may not be affected; verify with vendor.",
+      "how_to_determine_impact": "Check if Gitea is deployed via the official Docker image. Verify the exact Docker image version. Review Gitea audit logs for suspicious login attempts or administrative actions by unknown users.",
+      "tanium_query_hint": "Get Running Processes with Name matches \"docker\" and Command Line matches \"gitea\" to identify running Gitea Docker containers. Get Installed Applications with Name matches \"Gitea\" for non-Docker instances.",
+      "rapid7_query_hint": "Asset search for Gitea installations or Docker containers running Gitea. Look for vulnerability checks related to Gitea authentication bypass. Monitor for anomalous administrative activity in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Laser Attack Resets Tangem Wallet Passwords on Cards That Can't Be Patched",
-      "tldr": "A physical laser attack has been demonstrated to successfully reset Tangem wallet passwords on specific hardware cards, rendering them vulnerable to unauthorized access and fund theft. Critically, these affected card models cannot be patched, leaving users exposed.",
-      "action": "Users of Tangem wallets must immediately identify if their specific card model is among those confirmed to be vulnerable and unpatchable. If affected, promptly transfer all funds to a new, secure, and validated hardware wallet or a Tangem card model confirmed immune to this attack. Cease use of compromised cards.",
+      "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
+      "tldr": "A compromised version of the jscrambler 8.14.0 npm package has been observed dropping a Rust-based infostealer during installation. This supply chain attack targets developers using the affected package, potentially leading to credential and sensitive data theft from their systems.",
+      "action": "Developers should immediately check if they are using `jscrambler` version 8.14.0 and downgrade or upgrade to a secure version. Scan systems for known Rust infostealers. Review developer workstations for suspicious activity or unauthorized network connections.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/laser-attack-resets-tangem-wallet.html",
+      "source_url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific Tangem wallet card models identified as unpatchable via firmware updates and vulnerable to physical laser attacks. Users must consult Tangem's official statements for a list of affected models.",
-      "how_to_determine_impact": "Consult Tangem's official security advisories or product support pages to determine if your specific card model (identified by serial number or model ID) is affected. This is a physical vulnerability, not detectable via software scans.",
-      "tanium_query_hint": "Not directly applicable as this is a physical hardware vulnerability of a consumer device, not typically managed by enterprise Tanium deployments.",
-      "rapid7_query_hint": "Not directly applicable as this is a physical hardware vulnerability of a consumer device, not typically managed by enterprise Rapid7 deployments.",
+      "affected_versions": "jscrambler npm package version 8.14.0",
+      "how_to_determine_impact": "Check `package.json` for `jscrambler` dependency version. Inspect system for artifacts of Rust-based infostealer. Monitor outbound network connections from build environments and developer machines.",
+      "tanium_query_hint": "Get Running Processes matching \"rustc\" or \"cargo\" to detect unusual Rust activity. Get Installed Applications with Name matches \"jscrambler\" to identify affected installations.",
+      "rapid7_query_hint": "Asset search for \"jscrambler\" in installed software. Look for processes associated with known infostealers. Consider agent-based queries for unusual process execution or file modifications.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.0 Critical"
     },
     {
       "title": "Australia warns of global campaign targeting vulnerable CMS platforms",
-      "tldr": "The Australian Cyber Security Centre (ACSC) has issued a warning regarding an active, global exploitation campaign. Threat actors are targeting various vulnerable content management systems (CMS) and their associated plugins, aiming to compromise web assets.",
-      "action": "Conduct an immediate inventory of all deployed CMS platforms and plugins across the organization. Ensure all identified CMS installations and their components are updated to the absolute latest secure versions. Implement and configure Web Application Firewalls (WAFs) and Intrusion Prevention Systems (IPS) to detect and block known exploitation attempts targeting CMS vulnerabilities. Perform regular security audits of web assets.",
+      "tldr": "The Australian Cyber Security Centre (ACSC) has warned about a global exploitation campaign actively targeting vulnerable Content Management Systems (CMS) and their plugins. This campaign aims to compromise websites for various malicious purposes, including data theft, serving malware, and defacement.",
+      "action": "Immediately identify all CMS platforms and plugins in your environment. Ensure all are updated to the latest secure versions. Implement strong access controls and monitor CMS logs for suspicious activity. Consider web application firewalls (WAFs) to protect against known exploits.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/australia-warns-of-global-campaign-targeting-vulnerable-cms-platforms/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Various vulnerable content management systems (CMS) and their plugins. Specific vulnerable versions require consulting vendor advisories for each CMS (e.g., WordPress, Joomla, Drupal) and their respective plugins.",
-      "how_to_determine_impact": "Inventory all web servers to identify installed CMS platforms and their versions. Cross-reference these versions with publicly available vulnerability databases (NVD, vendor advisories) for known exploits. Monitor web server access logs, WAF logs, and IDS/IPS alerts for indicators of exploitation attempts.",
-      "tanium_query_hint": "Get Installed Applications from web servers where CMS platforms are hosted (e.g., 'WordPress', 'Joomla'). Use 'Get Running Processes' and 'Get Network Listeners' to identify web server components. 'Get File Content' on configuration files might reveal plugin versions.",
-      "rapid7_query_hint": "Perform authenticated vulnerability scans on all web-facing assets to identify CMS platforms and known vulnerabilities in InsightVM. Use InsightAgent to monitor web server logs and processes for suspicious activity indicative of exploitation.",
+      "affected_versions": "Various vulnerable Content Management Systems (CMS) and their plugins. Consult vendor advisories for specific platforms like WordPress, Joomla, Drupal, etc., and their associated plugins.",
+      "how_to_determine_impact": "Inventory all CMS installations and their plugins. Check their versions against known vulnerabilities. Scan for web shell presence or unauthorized file modifications in web server directories.",
+      "tanium_query_hint": "Get Installed Applications with Name matches \"WordPress|Joomla|Drupal\" or other CMS platforms. Get File Hash of [\"path to web root files\"] to detect unauthorized changes.",
+      "rapid7_query_hint": "Asset search for known CMS platforms. Run web application scans using InsightAppSec. Look for vulnerability checks related to CMS platforms and plugins in InsightVM. Monitor for web shell activity in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     }
@@ -4110,6 +4118,33 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
         "category": "vulns"
+      },
+      {
+        "title": "DHS Database Hacked",
+        "tldr": "The Department of Homeland Security (DHS) has experienced a database hack, indicating a compromise of sensitive government data. Details are scarce but point to a significant security incident affecting a critical U.S. agency.",
+        "action": "Federal agencies, especially DHS, must conduct thorough forensic investigations and implement enhanced security controls to prevent future breaches. All organizations should review their data protection strategies and incident response plans.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Network of 200 GitHub Repositories Used for Malware Infection",
+        "tldr": "A vast network of 200 GitHub repositories has been identified as being used for distributing malware. This supply chain vector leverages the trusted nature of GitHub to infect users who download or clone these malicious repositories, leading to system compromise.",
+        "action": "Developers should exercise extreme caution when importing code from GitHub, verifying the authenticity and integrity of repositories. Organizations should implement static and dynamic code analysis in their CI/CD pipelines to detect malicious payloads.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/network-of-200-github-repositories-used-for-malware-infection/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "GigaWiper Combines Multiple Malware for System-Level Sabotage",
+        "tldr": "GigaWiper is a new destructive malware that integrates multiple malware components to achieve system-level sabotage. This advanced wiper malware aims to render systems inoperable and data irrecoverable, posing an existential threat to affected organizations.",
+        "action": "Implement robust backup and recovery strategies, including off-site and immutable backups. Deploy advanced endpoint detection and response (EDR) solutions capable of detecting multi-stage attacks and wiper behavior. Enhance network segmentation to limit lateral movement.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/gigawiper-combines-multiple-malware-for-system-level-sabotage/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
       }
     ]
   }
