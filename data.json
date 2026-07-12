@@ -1,33 +1,33 @@
 {
   "breaches": [
     {
+      "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
+      "tldr": "A compromised jscrambler npm package (v8.14.0) is distributing a Rust-based infostealer during installation. This software supply chain attack poses a significant risk to developers and projects using this package, leading to potential data exfiltration and credential theft.",
+      "action": "Immediately audit all projects for usage of jscrambler 8.14.0 npm package. If found, remove the compromised package, scan affected systems for Rust infostealers, and rotate all credentials associated with developer machines and build environments.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Injective Labs GitHub Compromise Pushes Wallet-Key-Stealing npm Packages",
-      "tldr": "Injective Labs' GitHub account has been compromised, leading to the distribution of malicious npm packages designed to steal cryptocurrency wallet keys. This supply chain attack poses a direct threat to developers and users of these packages, potentially resulting in significant financial losses.",
-      "action": "If you have used npm packages from Injective Labs, audit your systems for malicious code and indicators of compromise. Immediately revoke and rotate any compromised wallet keys. Avoid using packages from the compromised GitHub account until remediation is confirmed.",
+      "tldr": "Injective Labs' GitHub account was compromised, leading to the distribution of malicious npm packages designed to steal cryptocurrency wallet keys. This is a significant software supply chain attack directly targeting cryptocurrency users and developers, risking financial loss.",
+      "action": "Immediately audit all projects for usage of npm packages from Injective Labs or packages potentially affected by this compromise. If found, remove, scan systems for malware, and revoke/rotate all cryptographic keys and credentials, especially wallet keys.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/injective-labs-github-compromise-pushes.html",
       "source": "The Hacker News"
     },
     {
-      "title": "DHS Database Hacked",
-      "tldr": "The Department of Homeland Security (DHS) has experienced a database hack, indicating a compromise of sensitive government data. Details are scarce but point to a significant security incident affecting a critical U.S. agency.",
-      "action": "Federal agencies, especially DHS, must conduct thorough forensic investigations and implement enhanced security controls to prevent future breaches. All organizations should review their data protection strategies and incident response plans.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Okta Warns of Vishing Attacks Targeting Microsoft 365 Customers",
-      "tldr": "Okta has issued a warning about active vishing (voice phishing) campaigns specifically targeting Microsoft 365 customers. These attacks aim to trick users into divulging credentials, potentially leading to widespread account compromises across affected organizations.",
-      "action": "Implement robust multi-factor authentication (MFA) for all Microsoft 365 accounts and enforce strict policies against MFA bypass. Conduct regular security awareness training, specifically focusing on vishing tactics and how to identify and report them.",
+      "tldr": "Okta is warning of active vishing (voice phishing) attacks specifically targeting Microsoft 365 customers. These attacks aim to steal credentials and bypass multi-factor authentication (MFA) to gain unauthorized access to corporate environments, leading to potential data breaches.",
+      "action": "Educate users on vishing techniques and the importance of verifying unexpected calls, especially those requesting credentials or MFA codes. Implement strong multi-factor authentication (MFA) across all Microsoft 365 accounts and enforce strict access policies. Monitor for unusual login attempts and MFA bypass attempts.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/okta-warns-of-vishing-attacks-targeting-microsoft-365-customers/",
+      "source_url": "https://www.securityweek.com/okta-warns-of-vishing-attacks-targeting-microsoft-365-customers/2026/07/okta-warns-of-vishing-attacks-targeting-microsoft-365-customers/",
       "source": "SecurityWeek"
     },
     {
       "title": "Network of 200 GitHub Repositories Used for Malware Infection",
-      "tldr": "A vast network of 200 GitHub repositories has been identified as being used for distributing malware. This supply chain vector leverages the trusted nature of GitHub to infect users who download or clone these malicious repositories, leading to system compromise.",
-      "action": "Developers should exercise extreme caution when importing code from GitHub, verifying the authenticity and integrity of repositories. Organizations should implement static and dynamic code analysis in their CI/CD pipelines to detect malicious payloads.",
+      "tldr": "A network of 200 GitHub repositories has been identified as a distribution source for malware infections. This indicates a widespread campaign leveraging legitimate platforms for malicious purposes, posing a significant risk of software supply chain compromise and subsequent data breaches.",
+      "action": "Implement strict policies for code dependencies, including thorough vetting of GitHub repositories and scanning imported code. Utilize security scanning tools for all ingested code. Block access to known malicious GitHub repositories and educate developers on supply chain risks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/network-of-200-github-repositories-used-for-malware-infection/",
       "source": "SecurityWeek"
@@ -36,88 +36,80 @@
   "ransomware": [
     {
       "title": "Ryuk ransomware member pleads guilty in the US, faces 15 years in prison",
-      "tldr": "A 34-year-old Armenian individual has pleaded guilty in the U.S. for their involvement in deploying the notorious Ryuk ransomware against American companies. This conviction marks a significant legal victory against ransomware operators, with the individual facing up to 15 years in prison.",
-      "action": "While not a direct technical action, this reinforces the importance of robust ransomware defenses. Review and enhance ransomware protection strategies, including backups, network segmentation, and endpoint detection and response (EDR).",
+      "tldr": "A 34-year-old Armenian man has pleaded guilty in the U.S. to hacking companies and deploying the infamous Ryuk ransomware to encrypt their systems. This marks a significant legal victory against a member of the notorious Ryuk ransomware group, underscoring ongoing law enforcement efforts.",
+      "action": "Review internal security controls and incident response plans against the latest Ryuk TTPs. Ensure robust, immutable backups are in place and regularly tested. Stay informed on legal actions against ransomware actors to understand the scope of the threat landscape.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-pleads-guilty-in-the-us-faces-15-years-in-prison/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Canada Disrupts Ransomware Ops",
-      "tldr": "Canadian authorities have successfully disrupted ransomware operations, indicating a proactive stance against cybercrime. This effort likely involved law enforcement and cybersecurity agencies working to dismantle the infrastructure used by ransomware groups.",
-      "action": "While a positive development, organizations should not rely solely on law enforcement disruptions. Continue to maintain robust ransomware defenses, including up-to-date backups, strong access controls, and incident response plans to mitigate future threats.",
+      "title": "Third US Security Expert Sentenced to Prison for Helping Ransomware Gang",
+      "tldr": "A third U.S. security expert has been sentenced to prison for assisting a ransomware gang. This highlights the severe legal consequences for individuals who collaborate with malicious cyber activities, even those with cybersecurity expertise.",
+      "action": "Reinforce ethical guidelines and legal awareness among all security personnel regarding involvement with malicious cyber activities. Foster a strong culture of integrity and ensure clear reporting channels for suspicious contacts or requests.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "GigaWiper Combines Multiple Malware for System-Level Sabotage",
-      "tldr": "GigaWiper is a new destructive malware that integrates multiple malware components to achieve system-level sabotage. This advanced wiper malware aims to render systems inoperable and data irrecoverable, posing an existential threat to affected organizations.",
-      "action": "Implement robust backup and recovery strategies, including off-site and immutable backups. Deploy advanced endpoint detection and response (EDR) solutions capable of detecting multi-stage attacks and wiper behavior. Enhance network segmentation to limit lateral movement.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/gigawiper-combines-multiple-malware-for-system-level-sabotage/",
+      "source_url": "https://www.securityweek.com/third-us-security-expert-sentenced-to-prison-for-helping-ransomware-gang/",
       "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "URGENT - Progress Tells ShareFile Customers to Shut Down Storage Zone Controllers Over Security Threat",
-      "tldr": "Progress Software has issued an urgent advisory for ShareFile customers using Storage Zone Controllers, recommending they immediately shut down these servers due to a credible external security threat. This suggests an unpatched or actively exploited vulnerability that could lead to severe compromise.",
-      "action": "Immediately shut down all ShareFile Storage Zone Controllers as advised by Progress Software. Monitor official Progress/ShareFile channels for a patch or further mitigation guidance. Prepare for potential data restoration if a compromise occurred.",
+      "tldr": "Progress Software has urgently advised ShareFile customers using Storage Zone Controllers to shut down their servers due to a \"credible external security threat.\" This indicates a severe, potentially actively exploited vulnerability or ongoing attack targeting the on-premises secure file-sharing software.",
+      "action": "Immediately shut down all ShareFile Storage Zone Controllers as advised by Progress Software. Monitor Progress's official channels for further updates, patches, and detailed mitigation steps. Prepare for potential restoration from backups and forensic investigation.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "ShareFile Storage Zone Controllers - all versions prior to a future patch.",
-      "how_to_determine_impact": "Identify all servers running ShareFile Storage Zone Controller software. Verify if they are powered off or isolated from network access.",
-      "tanium_query_hint": "Get Installed Applications with Name matches \"ShareFile Storage Zone Controller\" to locate instances. Get Network Connections from all processes to identify unusual outbound connections from these systems if still running.",
-      "rapid7_query_hint": "Asset search for \"ShareFile Storage Zone Controller\" in installed software. Monitor network traffic from these assets for suspicious patterns in InsightIDR.",
+      "affected_versions": "ShareFile Storage Zone Controllers (specific versions not provided in headline, refer to Progress Software's official security advisory).",
+      "how_to_determine_impact": "Identify all ShareFile Storage Zone Controller instances in your environment. Verify current operational status and configuration. Monitor official Progress Software channels for detailed vulnerability assessment and compromise indicators specific to this threat.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'ShareFile Storage Zone Controller' in the name. Use 'Get Running Processes' to identify instances. Check for unauthorized changes using 'Get File Hash' on critical ShareFile binaries after any restart or patch.",
+      "rapid7_query_hint": "Search for assets with 'ShareFile Storage Zone Controller' installed in InsightVM. Monitor network and endpoint logs for suspicious activity associated with ShareFile services. Consult Rapid7's advisory database for specific vulnerability IDs related to Progress Software once released.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
       "title": "Hackers exploit critical auth bypass in Gitea Docker image",
-      "tldr": "Attackers are actively exploiting a critical authentication bypass vulnerability in the official Gitea Docker image. This flaw allows unauthorized users to impersonate any user, including administrators, leading to full compromise of self-hosted Git services and sensitive data.",
-      "action": "Immediately patch or update all Gitea Docker installations to a secure version. If patching is not immediately possible, restrict network access to Gitea instances. Audit Gitea logs for unauthorized administrative actions or user impersonation.",
+      "tldr": "Hackers are actively exploiting a critical authentication bypass vulnerability in the official Docker image for Gitea, a self-hosted Git service. This flaw allows attackers to impersonate any user, including administrators, leading to full compromise of Git repositories and codebases.",
+      "action": "Immediately update or reconfigure all Gitea Docker images according to vendor advisories to patch the critical authentication bypass. Audit Gitea instances for signs of compromise, such as unauthorized user accounts, repository modifications, or data exfiltration, and rotate all Gitea credentials.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Official Gitea Docker image - specific vulnerable versions should be identified by Gitea in their advisory. Non-Docker installations may or may not be affected; verify with vendor.",
-      "how_to_determine_impact": "Check if Gitea is deployed via the official Docker image. Verify the exact Docker image version. Review Gitea audit logs for suspicious login attempts or administrative actions by unknown users.",
-      "tanium_query_hint": "Get Running Processes with Name matches \"docker\" and Command Line matches \"gitea\" to identify running Gitea Docker containers. Get Installed Applications with Name matches \"Gitea\" for non-Docker instances.",
-      "rapid7_query_hint": "Asset search for Gitea installations or Docker containers running Gitea. Look for vulnerability checks related to Gitea authentication bypass. Monitor for anomalous administrative activity in InsightIDR.",
+      "affected_versions": "Official Gitea Docker image (specific vulnerable versions not specified, refer to Gitea's official security advisory).",
+      "how_to_determine_impact": "Inspect all deployed Gitea Docker containers for their image version. Review Gitea audit logs for unauthorized user creation, privilege escalation, or unexpected repository access. Look for any new or modified administrator accounts or suspicious commits.",
+      "tanium_query_hint": "On Docker hosts: 'Get Docker Containers Status' filtering by 'Gitea'. Check image versions. Use 'Get Logged On Users' or 'Get Process Name' within Docker containers for suspicious activity, if Tanium has visibility into containers.",
+      "rapid7_query_hint": "Scan Docker hosts and Gitea instances with authenticated checks for image versions and known vulnerabilities. Search InsightVM for 'Gitea authentication bypass'. Monitor Gitea access logs for unauthorized administrative actions.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Compromised jscrambler 8.14.0 npm Release Drops Rust Infostealer During Install",
-      "tldr": "A compromised version of the jscrambler 8.14.0 npm package has been observed dropping a Rust-based infostealer during installation. This supply chain attack targets developers using the affected package, potentially leading to credential and sensitive data theft from their systems.",
-      "action": "Developers should immediately check if they are using `jscrambler` version 8.14.0 and downgrade or upgrade to a secure version. Scan systems for known Rust infostealers. Review developer workstations for suspicious activity or unauthorized network connections.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "jscrambler npm package version 8.14.0",
-      "how_to_determine_impact": "Check `package.json` for `jscrambler` dependency version. Inspect system for artifacts of Rust-based infostealer. Monitor outbound network connections from build environments and developer machines.",
-      "tanium_query_hint": "Get Running Processes matching \"rustc\" or \"cargo\" to detect unusual Rust activity. Get Installed Applications with Name matches \"jscrambler\" to identify affected installations.",
-      "rapid7_query_hint": "Asset search for \"jscrambler\" in installed software. Look for processes associated with known infostealers. Consider agent-based queries for unusual process execution or file modifications.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
-    },
-    {
       "title": "Australia warns of global campaign targeting vulnerable CMS platforms",
-      "tldr": "The Australian Cyber Security Centre (ACSC) has warned about a global exploitation campaign actively targeting vulnerable Content Management Systems (CMS) and their plugins. This campaign aims to compromise websites for various malicious purposes, including data theft, serving malware, and defacement.",
-      "action": "Immediately identify all CMS platforms and plugins in your environment. Ensure all are updated to the latest secure versions. Implement strong access controls and monitor CMS logs for suspicious activity. Consider web application firewalls (WAFs) to protect against known exploits.",
+      "tldr": "The Australian Cyber Security Centre (ACSC) has issued an alert about an ongoing global exploitation campaign targeting vulnerable Content Management Systems (CMS) and their plugins. This indicates widespread active exploitation of known or zero-day flaws in CMS platforms, risking web defacement, data theft, and further compromise.",
+      "action": "Immediately identify all CMS platforms and their plugins within the environment. Ensure all CMS installations and plugins are updated to the latest, patched versions. Implement a Web Application Firewall (WAF), conduct regular vulnerability scans, and monitor for indicators of compromise (IoCs) and suspicious web traffic.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/australia-warns-of-global-campaign-targeting-vulnerable-cms-platforms/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Various vulnerable Content Management Systems (CMS) and their plugins. Consult vendor advisories for specific platforms like WordPress, Joomla, Drupal, etc., and their associated plugins.",
-      "how_to_determine_impact": "Inventory all CMS installations and their plugins. Check their versions against known vulnerabilities. Scan for web shell presence or unauthorized file modifications in web server directories.",
-      "tanium_query_hint": "Get Installed Applications with Name matches \"WordPress|Joomla|Drupal\" or other CMS platforms. Get File Hash of [\"path to web root files\"] to detect unauthorized changes.",
-      "rapid7_query_hint": "Asset search for known CMS platforms. Run web application scans using InsightAppSec. Look for vulnerability checks related to CMS platforms and plugins in InsightVM. Monitor for web shell activity in InsightIDR.",
+      "affected_versions": "Various vulnerable Content Management Systems (CMS) and their plugins (specific platforms and versions not specified, refer to ACSC advisory for details).",
+      "how_to_determine_impact": "Inventory all web servers hosting CMS platforms (e.g., WordPress, Joomla, Drupal). Check their versions and installed plugins against known vulnerabilities databases and the ACSC advisory. Perform integrity checks on CMS files and databases for any unauthorized modifications.",
+      "tanium_query_hint": "Get Installed Applications on web servers for common CMS (e.g., 'WordPress', 'Joomla'). Use 'Get File Hash' on CMS core directories to detect tampering. 'Get Web Server Status' for abnormal processes or connections originating from web servers.",
+      "rapid7_query_hint": "Perform authenticated web application scans on all identified CMS instances. Search InsightVM for vulnerabilities related to popular CMS platforms and their plugins. Monitor web server logs and IDS/IPS for exploitation attempts or unusual traffic patterns.",
       "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical"
+    },
+    {
+      "title": "Critical Zimbra Flaw Could Let Crafted Emails Run Malicious Code in User Sessions",
+      "tldr": "A critical vulnerability in Zimbra Collaboration Suite allows attackers to execute malicious code within user sessions via specially crafted emails. This could lead to account takeover, sensitive data exposure, and further compromise of the email server and connected systems.",
+      "action": "Immediately apply the latest security patches from Zimbra to all Zimbra Collaboration Suite deployments. If a patch is not available, implement email gateway rules to block suspicious attachments and highly scrutinized sender domains, and educate users on advanced phishing awareness to prevent exploitation.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Zimbra Collaboration Suite (specific vulnerable versions not specified, refer to Zimbra's official security advisory).",
+      "how_to_determine_impact": "Identify all Zimbra Collaboration Suite deployments in your environment. Verify the installed version against vendor advisories. Monitor mail server logs for suspicious email contents, unexpected command execution, or unauthorized access attempts via webmail interfaces.",
+      "tanium_query_hint": "Get Installed Applications from all servers with 'Zimbra' in the name. Check for vulnerable file versions as per vendor advisory. Use 'Get Process List' to detect unusual processes spawned by the Zimbra user or associated services.",
+      "rapid7_query_hint": "Scan Zimbra servers with authenticated checks for known vulnerabilities. Search InsightVM for 'Zimbra' and related CVEs once available. Monitor email gateway logs for suspicious crafted emails and endpoint logs for unexpected activity originating from mail clients.",
+      "remediation_priority": "High next patch cycle",
       "cvss_score": "9.8 Critical"
     }
   ],
@@ -4145,6 +4137,22 @@
         "source_url": "https://www.securityweek.com/gigawiper-combines-multiple-malware-for-system-level-sabotage/",
         "source": "SecurityWeek",
         "category": "ransomware"
+      },
+      {
+        "title": "Critical Zimbra Flaw Could Let Crafted Emails Run Malicious Code in User Sessions",
+        "tldr": "A critical vulnerability in Zimbra Collaboration Suite allows attackers to execute malicious code within user sessions via specially crafted emails. This could lead to account takeover, sensitive data exposure, and further compromise of the email server and connected systems.",
+        "action": "Immediately apply the latest security patches from Zimbra to all Zimbra Collaboration Suite deployments. If a patch is not available, implement email gateway rules to block suspicious attachments and highly scrutinized sender domains, and educate users on advanced phishing awareness to prevent exploitation.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/critical-zimbra-flaw-could-let-crafted_0483473395.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Zimbra Collaboration Suite (specific vulnerable versions not specified, refer to Zimbra's official security advisory).",
+        "how_to_determine_impact": "Identify all Zimbra Collaboration Suite deployments in your environment. Verify the installed version against vendor advisories. Monitor mail server logs for suspicious email contents, unexpected command execution, or unauthorized access attempts via webmail interfaces.",
+        "tanium_query_hint": "Get Installed Applications from all servers with 'Zimbra' in the name. Check for vulnerable file versions as per vendor advisory. Use 'Get Process List' to detect unusual processes spawned by the Zimbra user or associated services.",
+        "rapid7_query_hint": "Scan Zimbra servers with authenticated checks for known vulnerabilities. Search InsightVM for 'Zimbra' and related CVEs once available. Monitor email gateway logs for suspicious crafted emails and endpoint logs for unexpected activity originating from mail clients.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
       }
     ]
   }
