@@ -1,116 +1,99 @@
 {
   "breaches": [
     {
+      "title": "Google and Microsoft Pull ModHeader With 1.6 Million Installs After Dormant Collector Found",
+      "tldr": "Google and Microsoft removed the popular ModHeader browser extension, which had 1.6 million installs, due to the discovery of a dormant data collection component. This component had the potential to covertly exfiltrate user data, posing a significant privacy and security risk.",
+      "action": "Users should immediately uninstall ModHeader from all browsers. Review browser settings and revoke any unnecessary permissions granted to extensions. Consider changing sensitive credentials that might have been exposed.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Forg365 PhaaS Targets Microsoft 365 with Device Code and AitM Session Theft",
+      "tldr": "A new Phishing-as-a-Service (PhaaS) platform named Forg365 is actively targeting Microsoft 365 users. It employs sophisticated device code phishing and Adversary-in-the-Middle (AitM) techniques to bypass multi-factor authentication and steal user authentication sessions, leading to potential account compromise.",
+      "action": "Microsoft 365 administrators should deploy phishing-resistant MFA (e.g., FIDO2 security keys) where possible. Users must be educated on recognizing device code phishing scams and reporting suspicious login prompts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Lidl discloses online shop breach after service provider hack",
-      "tldr": "German discount supermarket chain Lidl has notified customers in Germany, Belgium, and the Netherlands of an online shop breach. The incident occurred at a service provider, resulting in the theft of customers' personal information.",
-      "action": "Customers should be advised to monitor their accounts for suspicious activity and consider changing passwords for affected online services. Organizations should review third-party vendor security protocols.",
+      "tldr": "German supermarket chain Lidl announced a data breach affecting its online shop customers in Germany, Belgium, and the Netherlands. The incident occurred at a third-party service provider, resulting in the compromise of customers' personal information including names, addresses, and purchase history.",
+      "action": "Lidl online shop customers in affected regions should closely monitor bank statements and credit reports for any unauthorized activity. It is advisable to change passwords for their Lidl accounts and any other accounts sharing the same credentials.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/",
       "source": "BleepingComputer"
     },
     {
       "title": "Centers Laboratory Data Breach Affects 540,000 Individuals",
-      "tldr": "Centers Laboratory experienced a data breach impacting 540,000 individuals. Details regarding the nature of the compromise and the type of data exposed are not fully specified but typically include personal health information.",
-      "action": "Affected individuals should be notified immediately. Organizations should conduct a thorough forensic investigation to identify the root cause, scope of compromise, and implement enhanced security controls.",
+      "tldr": "Centers Laboratory has reported a data breach that impacted approximately 540,000 individuals. The breach led to the exposure of sensitive personal health information (PHI) and other identifiable data, potentially including medical records and billing information.",
+      "action": "Affected individuals should be advised to remain vigilant against identity theft and monitor their financial accounts and medical explanations of benefits. Organizations should reinforce data security, encryption, and access control measures for sensitive data.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/centers-laboratory-data-breach-affects-540000-individuals/",
       "source": "SecurityWeek"
-    },
-    {
-      "title": "Forg365 PhaaS Targets Microsoft 365 with Device Code and AitM Session Theft",
-      "tldr": "A new Phishing-as-a-Service (PhaaS) platform, Forg365, is actively targeting Microsoft 365 users. It leverages device code phishing and Adversary-in-the-Middle (AitM) techniques to steal authentication sessions, bypassing multi-factor authentication.",
-      "action": "Implement strong MFA (FIDO2/hardware keys resistant to phishing), educate users on phishing awareness, enable conditional access policies, and monitor for unusual login activities, especially device code flows.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "DHS Database Hacked",
-      "tldr": "A database belonging to the Department of Homeland Security (DHS) has reportedly been hacked. Specific details about the compromised data or the attack vector are not immediately available, but it indicates a significant breach of a government entity.",
-      "action": "DHS and related agencies must conduct an immediate and thorough forensic investigation, secure affected systems, and assess the impact on sensitive government data. Other agencies should review their own database security.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
-      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Canada Disrupts Ransomware Ops",
-      "tldr": "Canadian authorities have successfully disrupted multiple ransomware operations. This intervention likely involved law enforcement and cybersecurity agencies working to dismantle the infrastructure used by ransomware groups, potentially preventing further attacks or assisting victims.",
-      "action": "Organizations should ensure robust incident response plans are in place and stay informed about active ransomware groups and their TTPs. Strengthen endpoint protection, backup strategies, and network segmentation.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Citrix Bleed 2 Ransomware",
-      "tldr": "The 'Weekly Recap' highlights 'Citrix Bleed 2 Ransomware,' indicating a new or evolved ransomware variant leveraging the Citrix Bleed vulnerability. This likely involves exploitation of known Citrix flaws (e.g., CVE-2023-4966) to gain initial access and deploy ransomware.",
-      "action": "Organizations using Citrix products, particularly those that were vulnerable to original Citrix Bleed, must ensure all systems are fully patched and hardened. Proactively hunt for indicators of compromise related to Citrix Bleed 2 and review access logs for unusual activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/weekly-recap-sharefile-threat-citrix.html",
-      "source": "The Hacker News"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
       "title": "CISA warns of actively exploited RCE flaws in Joomla extensions",
-      "tldr": "CISA has issued a warning regarding actively exploited Remote Code Execution (RCE) vulnerabilities in iCagenda and Balbooa Forms extensions for Joomla. Attackers are exploiting these flaws through arbitrary file uploads, allowing for system compromise.",
-      "action": "Immediately audit all Joomla installations for the presence of iCagenda and Balbooa Forms extensions. Apply vendor patches without delay, or disable/uninstall affected extensions if patching is not possible. Monitor for post-exploitation activity.",
+      "tldr": "CISA has issued an urgent warning regarding actively exploited Remote Code Execution (RCE) vulnerabilities in the iCagenda and Balbooa Forms Joomla extensions. Attackers are leveraging these flaws through arbitrary file uploads to compromise systems, posing a critical threat to web infrastructure.",
+      "action": "Immediately apply all available security patches for iCagenda and Balbooa Forms extensions. If patching is not feasible, disable or completely uninstall these extensions until a secure update can be implemented. Conduct forensic analysis for signs of compromise.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Joomla iCagenda and Balbooa Forms extensions (specific vulnerable versions not detailed, but all versions before latest patch should be assumed vulnerable)",
-      "how_to_determine_impact": "Inspect Joomla environments to identify if iCagenda and Balbooa Forms extensions are installed. Check extension versions against vendor advisories. Look for suspicious file uploads (e.g., .php files in /images or /tmp directories) or unusual process execution from web servers.",
-      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name matches 'Joomla' or 'iCagenda' or 'Balbooa Forms'). Then, 'Get File Hash' for recently modified files in Joomla web directories (e.g., Get File Hash['C:\\inetpub\\wwwroot\\joomla\\**'] from all machines where (Path matches '*iCagenda*' or Path matches '*Balbooa Forms*')).",
-      "rapid7_query_hint": "Search assets for vulnerability IDs related to Joomla iCagenda/Balbooa Forms or 'Remote Code Execution' on web servers. Use InsightAgent queries to check for presence and version of specific Joomla extensions or look for suspicious web server logs indicating file upload attempts to vulnerable directories.",
+      "affected_versions": "iCagenda and Balbooa Forms extensions for Joomla. All versions prior to the vendor-released patches are considered vulnerable. Specific version numbers should be checked against vendor advisories.",
+      "how_to_determine_impact": "Identify all Joomla installations within the environment. For each, verify the presence and version of iCagenda and Balbooa Forms. Check web server and Joomla logs for suspicious file uploads, RCE attempts, or unusual process spawning from the web server user.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Joomla', 'iCagenda', or 'Balbooa Forms'. Investigate 'Running Processes with Command Line' for any unusual activity or shell commands originating from the web server process (e.g., Apache, Nginx).",
+      "rapid7_query_hint": "Utilize InsightVM to scan web servers for identified vulnerabilities in Joomla, iCagenda, or Balbooa Forms. In InsightIDR, configure alerts for suspicious file writes to Joomla directories, unusual process execution by web server accounts, and anomalous network connections.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, based on actively exploited RCE)"
-    },
-    {
-      "title": "Progress Prompts ShareFile Storage Zone Controller Shutdown Amid Security Concerns",
-      "tldr": "Progress Software has issued an urgent directive for customers to shut down their ShareFile Storage Zone Controllers due to ongoing security concerns. This action implies a critical vulnerability or active exploitation affecting these components, necessitating immediate mitigation.",
-      "action": "Immediately follow Progress Software's directive to shut down all ShareFile Storage Zone Controllers. Monitor vendor advisories for detailed vulnerability information, patching instructions, and indicators of compromise (IOCs). Prepare for forensic analysis.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/progress-prompts-sharefile-storage-zone-controller-shutdown-amid-security-concerns/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "All versions of ShareFile Storage Zone Controller are affected until a specific patch or remediation is provided by Progress Software.",
-      "how_to_determine_impact": "Identify all systems running ShareFile Storage Zone Controller. Confirm if the component has been shut down as per vendor instructions. Review system logs for any signs of compromise prior to shutdown, such as unusual file access, process creation, or network connections.",
-      "tanium_query_hint": "Get Running Processes from all machines with (Process Name contains 'ShareFile' and Process Command Line contains 'Storage Zone Controller'). Get Installed Applications from all machines with (Application Name contains 'ShareFile Storage Zone Controller').",
-      "rapid7_query_hint": "Search assets for 'ShareFile Storage Zone Controller'. Use InsightAgent queries to detect running processes or installed applications matching 'ShareFile Storage Zone Controller'. Investigate for high network traffic or unusual activity from identified hosts.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, based on urgent vendor shutdown directive due to active concerns)"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Zimbra Patches Critical Code Execution Vulnerability",
-      "tldr": "Zimbra has released patches for a critical code execution vulnerability within its platform. This vulnerability, if exploited, could allow attackers to execute arbitrary code on affected Zimbra Collaboration Suite servers, leading to full system compromise.",
-      "action": "Immediately update all Zimbra Collaboration Suite installations to the patched versions. Prioritize systems accessible from the internet. Conduct a post-patch review for any signs of compromise if patching was delayed.",
+      "tldr": "Zimbra has released essential security patches to address a critical code execution vulnerability present in its widely used email and collaboration platform. This flaw could allow remote attackers to execute arbitrary code on affected servers, leading to full system compromise.",
+      "action": "All Zimbra administrators must prioritize and immediately deploy the latest security patches provided by Zimbra. After patching, verify the update's successful application and monitor system logs for any signs of post-exploitation or unusual activity.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/zimbra-patches-critical-code-execution-vulnerability/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Specific vulnerable versions of Zimbra Collaboration Suite (ZCS) prior to the recent patch. Consult Zimbra's official security advisories for exact version details.",
-      "how_to_determine_impact": "Check the version of Zimbra Collaboration Suite running on servers. Compare installed versions against Zimbra's official security patch releases. Review logs for unusual activity prior to applying patches.",
-      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Zimbra Collaboration Suite').",
-      "rapid7_query_hint": "Search assets for installed software 'Zimbra Collaboration Suite' and cross-reference with known vulnerability IDs. Use InsightAgent queries to check specific file versions or configurations mentioned in Zimbra's security advisories.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical (Estimated, based on 'critical code execution vulnerability')"
+      "affected_versions": "Zimbra email and collaboration platform. Specific vulnerable versions will be detailed in Zimbra's official security advisory. Update to the latest patched release recommended by the vendor.",
+      "how_to_determine_impact": "Inventory all Zimbra deployments to identify their current version. Cross-reference this with Zimbra's security advisories to determine vulnerability. Inspect Zimbra server logs for unauthorized access attempts, unusual command execution, or new user accounts.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Zimbra'. Check 'Running Processes with Command Line' for any suspicious processes or commands executing on Zimbra servers. Monitor 'Listen Ports' for unexpected open ports.",
+      "rapid7_query_hint": "Conduct credentialed scans using InsightVM against Zimbra servers to detect this critical RCE vulnerability. In InsightIDR, configure monitoring for Zimbra application logs and host activity for indicators of compromise, such as unusual administrative access or file modifications.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "RedHook Android malware now uses Wireless ADB for shell access",
-      "tldr": "A new variant of the RedHook Android malware has emerged, employing a novel technique to gain shell-level privileges without requiring a physical computer connection. It abuses the Android Wireless Debugging (Wireless ADB) mechanism, making it a significant threat to Android devices.",
-      "action": "Android users should ensure their devices are updated to the latest security patches. Organizations should implement mobile device management (MDM) solutions to control and monitor ADB access and enforce strong security policies for Android devices.",
+      "title": "Progress Prompts ShareFile Storage Zone Controller Shutdown Amid Security Concerns",
+      "tldr": "Progress Software has urged customers to immediately shut down or isolate their ShareFile Storage Zone Controllers due to significant security concerns. This directive implies an actively exploited or highly critical vulnerability demanding urgent mitigation to prevent data compromise.",
+      "action": "Organizations utilizing ShareFile Storage Zone Controllers must immediately follow Progress Software's recommendation to shut down or isolate these components. Await further official guidance and patches from the vendor, and conduct a thorough security review of affected systems.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/redhook-android-malware-now-uses-wireless-adb-for-shell-access/",
-      "source": "BleepingComputer",
+      "source_url": "https://www.securityweek.com/progress-prompts-sharefile-storage-zone-controller-shutdown-amid-security-concerns/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Android devices with Wireless ADB enabled and potentially unpatched against related hardening. Specific Android versions vulnerable may vary.",
-      "how_to_determine_impact": "Check Android devices for Wireless ADB being enabled, especially on corporate-managed devices. Monitor for suspicious network connections or unexpected shell access on Android endpoints. Investigate any instances of RedHook malware.",
-      "tanium_query_hint": "This is primarily a mobile device threat. Tanium's endpoint capabilities may not directly apply to all Android devices unless integrated with MDM. For managed Android, check MDM logs for unauthorized ADB connections or malware detections.",
-      "rapid7_query_hint": "For Android devices integrated with MDM solutions that feed into InsightIDR, look for alerts related to RedHook malware or suspicious ADB activity. On network level, monitor for unusual traffic originating from Android devices towards internal resources or C2 servers.",
+      "affected_versions": "Progress ShareFile Storage Zone Controllers. All active deployments are advised to be shut down. Specific vulnerable versions will be announced by Progress Software in forthcoming advisories.",
+      "how_to_determine_impact": "Identify all instances of ShareFile Storage Zone Controllers within the infrastructure. Verify their current operational status and ensure adherence to the vendor's shutdown/isolation directive. Check system logs for signs of compromise preceding the advisory.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'ShareFile Storage Zone Controller'. Verify the operational state of relevant services and processes. Look for unexpected network connections or file changes on these servers using 'Open Network Connections' and 'File Hashes of Path'.",
+      "rapid7_query_hint": "In InsightVM, prioritize scans for any vulnerabilities affecting ShareFile Storage Zone Controllers. In InsightIDR, monitor logs from servers hosting these controllers for anomalous process activity, unauthorized access attempts, or unusual outbound network connections.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical"
+    },
+    {
+      "title": "RabbitMQ Vulnerability Threatens Enterprise Systems",
+      "tldr": "A newly disclosed vulnerability in RabbitMQ, a popular open-source message broker, poses a serious threat to enterprise systems. This flaw could lead to unauthorized access, data manipulation, or denial-of-service, potentially impacting critical communication infrastructure and applications.",
+      "action": "Organizations running RabbitMQ should immediately apply the latest available security patches to mitigate this vulnerability. Additionally, review RabbitMQ configurations to ensure secure access controls and implement network segmentation where possible to limit exposure.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/rabbitmq-vulnerability-threatens-enterprise-systems/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "RabbitMQ, an open-source message broker. Specific vulnerable versions should be identified through vendor advisories. Update to the latest stable and patched release recommended by the vendor.",
+      "how_to_determine_impact": "Identify all RabbitMQ server instances in the environment. Check the installed version against official RabbitMQ security advisories. Review RabbitMQ logs for error messages, unauthorized connection attempts, or unusual message queue activity.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'RabbitMQ'. Check 'Running Processes' associated with RabbitMQ for any unexpected parameters or behavior. Monitor 'Listen Ports' for unauthorized services or connections.",
+      "rapid7_query_hint": "Use InsightVM to conduct vulnerability scans against servers hosting RabbitMQ. In InsightIDR, analyze RabbitMQ server logs and network traffic for suspicious activity, unusual client connections, or signs of protocol abuse.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.0 High (Estimated, based on malware gaining shell access, impacting mobile devices)"
+      "cvss_score": "8.2 High"
     }
   ],
   "insurance": [],
@@ -4263,6 +4246,31 @@
         "rapid7_query_hint": "For Android devices integrated with MDM solutions that feed into InsightIDR, look for alerts related to RedHook malware or suspicious ADB activity. On network level, monitor for unusual traffic originating from Android devices towards internal resources or C2 servers.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.0 High (Estimated, based on malware gaining shell access, impacting mobile devices)",
+        "category": "vulns"
+      },
+      {
+        "title": "Google and Microsoft Pull ModHeader With 1.6 Million Installs After Dormant Collector Found",
+        "tldr": "Google and Microsoft removed the popular ModHeader browser extension, which had 1.6 million installs, due to the discovery of a dormant data collection component. This component had the potential to covertly exfiltrate user data, posing a significant privacy and security risk.",
+        "action": "Users should immediately uninstall ModHeader from all browsers. Review browser settings and revoke any unnecessary permissions granted to extensions. Consider changing sensitive credentials that might have been exposed.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "RabbitMQ Vulnerability Threatens Enterprise Systems",
+        "tldr": "A newly disclosed vulnerability in RabbitMQ, a popular open-source message broker, poses a serious threat to enterprise systems. This flaw could lead to unauthorized access, data manipulation, or denial-of-service, potentially impacting critical communication infrastructure and applications.",
+        "action": "Organizations running RabbitMQ should immediately apply the latest available security patches to mitigate this vulnerability. Additionally, review RabbitMQ configurations to ensure secure access controls and implement network segmentation where possible to limit exposure.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/rabbitmq-vulnerability-threatens-enterprise-systems/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "RabbitMQ, an open-source message broker. Specific vulnerable versions should be identified through vendor advisories. Update to the latest stable and patched release recommended by the vendor.",
+        "how_to_determine_impact": "Identify all RabbitMQ server instances in the environment. Check the installed version against official RabbitMQ security advisories. Review RabbitMQ logs for error messages, unauthorized connection attempts, or unusual message queue activity.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'RabbitMQ'. Check 'Running Processes' associated with RabbitMQ for any unexpected parameters or behavior. Monitor 'Listen Ports' for unauthorized services or connections.",
+        "rapid7_query_hint": "Use InsightVM to conduct vulnerability scans against servers hosting RabbitMQ. In InsightIDR, analyze RabbitMQ server logs and network traffic for suspicious activity, unusual client connections, or signs of protocol abuse.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.2 High",
         "category": "vulns"
       }
     ]
