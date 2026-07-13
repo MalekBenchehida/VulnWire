@@ -1,99 +1,116 @@
 {
   "breaches": [
     {
-      "title": "Google and Microsoft Pull ModHeader With 1.6 Million Installs After Dormant Collector Found",
-      "tldr": "Google and Microsoft removed the popular ModHeader browser extension, which had 1.6 million installs, due to the discovery of a dormant data collection component. This component had the potential to covertly exfiltrate user data, posing a significant privacy and security risk.",
-      "action": "Users should immediately uninstall ModHeader from all browsers. Review browser settings and revoke any unnecessary permissions granted to extensions. Consider changing sensitive credentials that might have been exposed.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/google-and-microsoft-pull-modheader.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Forg365 PhaaS Targets Microsoft 365 with Device Code and AitM Session Theft",
-      "tldr": "A new Phishing-as-a-Service (PhaaS) platform named Forg365 is actively targeting Microsoft 365 users. It employs sophisticated device code phishing and Adversary-in-the-Middle (AitM) techniques to bypass multi-factor authentication and steal user authentication sessions, leading to potential account compromise.",
-      "action": "Microsoft 365 administrators should deploy phishing-resistant MFA (e.g., FIDO2 security keys) where possible. Users must be educated on recognizing device code phishing scams and reporting suspicious login prompts.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Lidl discloses online shop breach after service provider hack",
-      "tldr": "German supermarket chain Lidl announced a data breach affecting its online shop customers in Germany, Belgium, and the Netherlands. The incident occurred at a third-party service provider, resulting in the compromise of customers' personal information including names, addresses, and purchase history.",
-      "action": "Lidl online shop customers in affected regions should closely monitor bank statements and credit reports for any unauthorized activity. It is advisable to change passwords for their Lidl accounts and any other accounts sharing the same credentials.",
+      "tldr": "German discount supermarket chain Lidl experienced a data breach via a third-party service provider. Personal information of customers in Germany, Belgium, and the Netherlands was stolen, indicating a supply chain compromise.",
+      "action": "Review third-party vendor access and security posture, especially for those handling sensitive customer data. Ensure robust incident response plans are in place for supply chain attacks and monitor for unusual activity related to vendor integrations.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/",
       "source": "BleepingComputer"
     },
     {
       "title": "Centers Laboratory Data Breach Affects 540,000 Individuals",
-      "tldr": "Centers Laboratory has reported a data breach that impacted approximately 540,000 individuals. The breach led to the exposure of sensitive personal health information (PHI) and other identifiable data, potentially including medical records and billing information.",
-      "action": "Affected individuals should be advised to remain vigilant against identity theft and monitor their financial accounts and medical explanations of benefits. Organizations should reinforce data security, encryption, and access control measures for sensitive data.",
+      "tldr": "Centers Laboratory suffered a data breach impacting 540,000 individuals. While specific details on the compromised data types and attack vector are not fully disclosed, it likely involves personal health or identifying information.",
+      "action": "Implement enhanced monitoring for unauthorized access to sensitive databases, especially those containing PII/PHI. Review and strengthen access controls, data encryption policies, and conduct a thorough investigation into the breach's root cause.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/centers-laboratory-data-breach-affects-540000-individuals/",
       "source": "SecurityWeek"
+    },
+    {
+      "title": "New CrashStealer malware poses as Apple crash reporting tool",
+      "tldr": "A new macOS information-stealing malware, dubbed CrashStealer, is masquerading as Apple's legitimate crash-reporting utility. It targets and exfiltrates sensitive data including user credentials, Keychain data, and cryptocurrency wallet information.",
+      "action": "Educate macOS users about verifying application authenticity and avoiding suspicious downloads. Implement endpoint detection and response (EDR) solutions capable of detecting advanced macOS malware and anomalous process behavior. Monitor for unauthorized access to Keychain and crypto wallets.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-crashstealer-malware-poses-as-apple-crash-reporting-tool/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Hackers backdoor Jscrambler npm package with infostealer malware",
+      "tldr": "Jscrambler, a client-side web security company, disclosed a supply chain attack where a malicious version of its npm package was published. This backdoored package, downloaded almost 1,500 times, contains information-stealing malware.",
+      "action": "Review all development dependencies, especially npm packages, for integrity and authenticity. Implement software supply chain security practices, including cryptographic verification of packages and monitoring for suspicious updates. Audit systems that downloaded the compromised Jscrambler package for signs of compromise.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-jscrambler-npm-package-with-infostealer-malware/",
+      "source": "BleepingComputer"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Weekly Recap: ShareFile Threat, Citrix Bleed 2 Ransomware, AI Coding Attacks, and More",
+      "tldr": "The weekly recap highlights the emergence of 'Citrix Bleed 2 Ransomware', indicating a new variant or renewed activity of this significant ransomware family. This suggests ongoing exploitation of vulnerabilities likely in Citrix products.",
+      "action": "Review all Citrix environments for any unpatched vulnerabilities, especially those related to Citrix Bleed (e.g., CVE-2023-4966). Implement strong network segmentation, apply latest patches promptly, and monitor for suspicious activity indicative of ransomware deployment or lateral movement.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/weekly-recap-sharefile-threat-citrix.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "In Other News: DHS Database Hacked, Adobe Boosts Patch Cadence, Canada Disrupts Ransomware Ops",
+      "tldr": "Canadian authorities have successfully disrupted ransomware operations, indicating active efforts by law enforcement agencies against cybercriminal groups. This action aims to dismantle infrastructure, seize assets, and prevent future attacks, reflecting a proactive stance against ransomware threats.",
+      "action": "While not a direct attack, this highlights the persistent threat of ransomware. Continuously update and test backup and recovery plans, reinforce preventative measures like multi-factor authentication (MFA), strong password policies, and robust endpoint protection. Stay informed on specific ransomware groups targeted by law enforcement actions.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/in-other-news-dhs-database-hacked-adobe-boosts-patch-cadence-canada-disrupts-ransomware-ops/",
+      "source": "SecurityWeek"
+    }
+  ],
   "vulns": [
     {
       "title": "CISA warns of actively exploited RCE flaws in Joomla extensions",
-      "tldr": "CISA has issued an urgent warning regarding actively exploited Remote Code Execution (RCE) vulnerabilities in the iCagenda and Balbooa Forms Joomla extensions. Attackers are leveraging these flaws through arbitrary file uploads to compromise systems, posing a critical threat to web infrastructure.",
-      "action": "Immediately apply all available security patches for iCagenda and Balbooa Forms extensions. If patching is not feasible, disable or completely uninstall these extensions until a secure update can be implemented. Conduct forensic analysis for signs of compromise.",
+      "tldr": "CISA has issued a warning regarding actively exploited Remote Code Execution (RCE) vulnerabilities in iCagenda and Balbooa Forms extensions for Joomla. Attackers are leveraging arbitrary file uploads to achieve RCE, making immediate patching crucial.",
+      "action": "Immediately identify all Joomla installations with iCagenda or Balbooa Forms extensions. Apply vendor-provided patches or disable/remove affected extensions. Review web server logs for exploitation indicators like unusual file uploads or web shell deployments.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-actively-exploited-rce-flaws-in-joomla-extensions/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "iCagenda and Balbooa Forms extensions for Joomla. All versions prior to the vendor-released patches are considered vulnerable. Specific version numbers should be checked against vendor advisories.",
-      "how_to_determine_impact": "Identify all Joomla installations within the environment. For each, verify the presence and version of iCagenda and Balbooa Forms. Check web server and Joomla logs for suspicious file uploads, RCE attempts, or unusual process spawning from the web server user.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Joomla', 'iCagenda', or 'Balbooa Forms'. Investigate 'Running Processes with Command Line' for any unusual activity or shell commands originating from the web server process (e.g., Apache, Nginx).",
-      "rapid7_query_hint": "Utilize InsightVM to scan web servers for identified vulnerabilities in Joomla, iCagenda, or Balbooa Forms. In InsightIDR, configure alerts for suspicious file writes to Joomla directories, unusual process execution by web server accounts, and anomalous network connections.",
+      "affected_versions": "Joomla iCagenda and Balbooa Forms extensions; specific vulnerable versions are not publicly detailed but active exploitation targets older, unpatched releases.",
+      "how_to_determine_impact": "Scan Joomla instances for installed versions of iCagenda and Balbooa Forms. Check web server logs (e.g., Apache/Nginx access and error logs) for HTTP POST requests to extension paths, particularly file upload endpoints, and look for web shell artifacts.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Joomla' or 'iCagenda' or 'Balbooa Forms'. Use 'Get File Content' or 'Get File Hash' on common web shell paths within Joomla installation directories for Indicators of Compromise.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability assessments related to 'Joomla RCE' or specific extension names. Leverage InsightAgent to monitor for new or modified files in Joomla web directories or suspicious process execution originating from web servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
       "title": "Zimbra Patches Critical Code Execution Vulnerability",
-      "tldr": "Zimbra has released essential security patches to address a critical code execution vulnerability present in its widely used email and collaboration platform. This flaw could allow remote attackers to execute arbitrary code on affected servers, leading to full system compromise.",
-      "action": "All Zimbra administrators must prioritize and immediately deploy the latest security patches provided by Zimbra. After patching, verify the update's successful application and monitor system logs for any signs of post-exploitation or unusual activity.",
+      "tldr": "Zimbra has released patches for a critical code execution vulnerability that could allow attackers to execute arbitrary code. This flaw poses a significant risk to Zimbra email and collaboration platforms, potentially leading to full system compromise.",
+      "action": "Identify all Zimbra Collaboration Suite installations and immediately apply the latest security patches provided by Zimbra. Monitor Zimbra system and application logs for any suspicious activity or signs of exploitation prior to and after patching.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/zimbra-patches-critical-code-execution-vulnerability/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Zimbra email and collaboration platform. Specific vulnerable versions will be detailed in Zimbra's official security advisory. Update to the latest patched release recommended by the vendor.",
-      "how_to_determine_impact": "Inventory all Zimbra deployments to identify their current version. Cross-reference this with Zimbra's security advisories to determine vulnerability. Inspect Zimbra server logs for unauthorized access attempts, unusual command execution, or new user accounts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Zimbra'. Check 'Running Processes with Command Line' for any suspicious processes or commands executing on Zimbra servers. Monitor 'Listen Ports' for unexpected open ports.",
-      "rapid7_query_hint": "Conduct credentialed scans using InsightVM against Zimbra servers to detect this critical RCE vulnerability. In InsightIDR, configure monitoring for Zimbra application logs and host activity for indicators of compromise, such as unusual administrative access or file modifications.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Progress Prompts ShareFile Storage Zone Controller Shutdown Amid Security Concerns",
-      "tldr": "Progress Software has urged customers to immediately shut down or isolate their ShareFile Storage Zone Controllers due to significant security concerns. This directive implies an actively exploited or highly critical vulnerability demanding urgent mitigation to prevent data compromise.",
-      "action": "Organizations utilizing ShareFile Storage Zone Controllers must immediately follow Progress Software's recommendation to shut down or isolate these components. Await further official guidance and patches from the vendor, and conduct a thorough security review of affected systems.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/progress-prompts-sharefile-storage-zone-controller-shutdown-amid-security-concerns/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Progress ShareFile Storage Zone Controllers. All active deployments are advised to be shut down. Specific vulnerable versions will be announced by Progress Software in forthcoming advisories.",
-      "how_to_determine_impact": "Identify all instances of ShareFile Storage Zone Controllers within the infrastructure. Verify their current operational status and ensure adherence to the vendor's shutdown/isolation directive. Check system logs for signs of compromise preceding the advisory.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'ShareFile Storage Zone Controller'. Verify the operational state of relevant services and processes. Look for unexpected network connections or file changes on these servers using 'Open Network Connections' and 'File Hashes of Path'.",
-      "rapid7_query_hint": "In InsightVM, prioritize scans for any vulnerabilities affecting ShareFile Storage Zone Controllers. In InsightIDR, monitor logs from servers hosting these controllers for anomalous process activity, unauthorized access attempts, or unusual outbound network connections.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "affected_versions": "Specific vulnerable Zimbra Collaboration Suite versions are not detailed in the source. Users should apply all available security updates from Zimbra's official advisories.",
+      "how_to_determine_impact": "Check the version of Zimbra Collaboration Suite (ZCS) installed on your servers. Refer to Zimbra's official security advisories for patch information and affected version ranges. Inspect server logs for unusual process activity or unauthorized modifications.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Zimbra Collaboration Suite'. Use 'Get File Version' on core Zimbra binaries to confirm patch levels or 'Get Running Processes' for unexpected processes.",
+      "rapid7_query_hint": "Scan assets for installed versions of 'Zimbra' using InsightVM. Search for relevant vulnerability IDs or review asset inventory for software versions that match disclosed vulnerable ranges from Zimbra advisories.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
       "title": "RabbitMQ Vulnerability Threatens Enterprise Systems",
-      "tldr": "A newly disclosed vulnerability in RabbitMQ, a popular open-source message broker, poses a serious threat to enterprise systems. This flaw could lead to unauthorized access, data manipulation, or denial-of-service, potentially impacting critical communication infrastructure and applications.",
-      "action": "Organizations running RabbitMQ should immediately apply the latest available security patches to mitigate this vulnerability. Additionally, review RabbitMQ configurations to ensure secure access controls and implement network segmentation where possible to limit exposure.",
+      "tldr": "A new vulnerability has been discovered in RabbitMQ, an open-source message broker, posing a threat to enterprise systems. This flaw could potentially lead to service disruption or unauthorized access to sensitive message queues and data.",
+      "action": "Identify all RabbitMQ instances within your infrastructure. Consult official RabbitMQ security advisories for detailed vulnerability information and available patches. Prioritize applying necessary updates to mitigate potential risks and ensure proper configuration.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/rabbitmq-vulnerability-threatens-enterprise-systems/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "RabbitMQ, an open-source message broker. Specific vulnerable versions should be identified through vendor advisories. Update to the latest stable and patched release recommended by the vendor.",
-      "how_to_determine_impact": "Identify all RabbitMQ server instances in the environment. Check the installed version against official RabbitMQ security advisories. Review RabbitMQ logs for error messages, unauthorized connection attempts, or unusual message queue activity.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'RabbitMQ'. Check 'Running Processes' associated with RabbitMQ for any unexpected parameters or behavior. Monitor 'Listen Ports' for unauthorized services or connections.",
-      "rapid7_query_hint": "Use InsightVM to conduct vulnerability scans against servers hosting RabbitMQ. In InsightIDR, analyze RabbitMQ server logs and network traffic for suspicious activity, unusual client connections, or signs of protocol abuse.",
+      "affected_versions": "Specific vulnerable RabbitMQ versions are not detailed in the source. Consult official RabbitMQ documentation for affected versions and the latest security updates.",
+      "how_to_determine_impact": "Identify all servers hosting RabbitMQ services and check their installed versions. Review RabbitMQ server logs for error messages, unusual connection attempts, or unauthorized administrative actions. Verify proper network segmentation.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'RabbitMQ'. Use 'Get Running Processes' to identify RabbitMQ services and 'Get Network Connections' or 'Get Listening Ports' for anomalous network activity related to RabbitMQ ports.",
+      "rapid7_query_hint": "Scan assets using InsightVM, specifically targeting 'RabbitMQ' installations. Search for relevant vulnerability IDs or review asset inventory for installed RabbitMQ versions against vendor advisories. Monitor for suspicious activity on RabbitMQ ports using InsightIDR.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.2 High"
+      "cvss_score": "8.5 High (Estimated)"
+    },
+    {
+      "title": "New MemGhost Attack Plants Persistent False Memories in AI Agents Through One Email",
+      "tldr": "Researchers have uncovered a novel attack technique, 'MemGhost,' that can plant persistent false memories in AI agents via a single email. This attack could lead to long-term manipulation and misinformation from affected AI systems.",
+      "action": "For organizations developing or heavily relying on AI agents, review the robustness of memory mechanisms and input validation. Implement strict sanitization and verification processes for all data ingested by AI agents, especially from external sources like email. Consider employing adversarial training to strengthen AI against such manipulation.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "AI agents generally susceptible to memory manipulation via email-based inputs. This is a conceptual attack targeting AI models, not specific software versions or products.",
+      "how_to_determine_impact": "Evaluate AI agents for exposure to external, unverified data sources (e.g., email ingesters). Assess the criticality of AI-generated content and its potential for manipulation. Implement logging of input prompts and AI responses for audit.",
+      "tanium_query_hint": "This type of vulnerability is primarily at the AI model/application layer rather than traditional endpoint software. Focus on 'Get Installed Applications' or 'Get Running Processes' for AI development frameworks or inferencing services. Monitor network traffic for unusual data ingestion patterns to AI services.",
+      "rapid7_query_hint": "Direct vulnerability scanning is not applicable for this AI model attack. Focus on asset discovery for AI platforms, security posture of cloud AI services, and review security configurations for data inputs and outputs of AI agents.",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.5 High (Estimated)"
     }
   ],
   "insurance": [],
@@ -4271,6 +4288,40 @@
         "rapid7_query_hint": "Use InsightVM to conduct vulnerability scans against servers hosting RabbitMQ. In InsightIDR, analyze RabbitMQ server logs and network traffic for suspicious activity, unusual client connections, or signs of protocol abuse.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.2 High",
+        "category": "vulns"
+      },
+      {
+        "title": "New CrashStealer malware poses as Apple crash reporting tool",
+        "tldr": "A new macOS information-stealing malware, dubbed CrashStealer, is masquerading as Apple's legitimate crash-reporting utility. It targets and exfiltrates sensitive data including user credentials, Keychain data, and cryptocurrency wallet information.",
+        "action": "Educate macOS users about verifying application authenticity and avoiding suspicious downloads. Implement endpoint detection and response (EDR) solutions capable of detecting advanced macOS malware and anomalous process behavior. Monitor for unauthorized access to Keychain and crypto wallets.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-crashstealer-malware-poses-as-apple-crash-reporting-tool/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers backdoor Jscrambler npm package with infostealer malware",
+        "tldr": "Jscrambler, a client-side web security company, disclosed a supply chain attack where a malicious version of its npm package was published. This backdoored package, downloaded almost 1,500 times, contains information-stealing malware.",
+        "action": "Review all development dependencies, especially npm packages, for integrity and authenticity. Implement software supply chain security practices, including cryptographic verification of packages and monitoring for suspicious updates. Audit systems that downloaded the compromised Jscrambler package for signs of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-backdoor-jscrambler-npm-package-with-infostealer-malware/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "New MemGhost Attack Plants Persistent False Memories in AI Agents Through One Email",
+        "tldr": "Researchers have uncovered a novel attack technique, 'MemGhost,' that can plant persistent false memories in AI agents via a single email. This attack could lead to long-term manipulation and misinformation from affected AI systems.",
+        "action": "For organizations developing or heavily relying on AI agents, review the robustness of memory mechanisms and input validation. Implement strict sanitization and verification processes for all data ingested by AI agents, especially from external sources like email. Consider employing adversarial training to strengthen AI against such manipulation.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "AI agents generally susceptible to memory manipulation via email-based inputs. This is a conceptual attack targeting AI models, not specific software versions or products.",
+        "how_to_determine_impact": "Evaluate AI agents for exposure to external, unverified data sources (e.g., email ingesters). Assess the criticality of AI-generated content and its potential for manipulation. Implement logging of input prompts and AI responses for audit.",
+        "tanium_query_hint": "This type of vulnerability is primarily at the AI model/application layer rather than traditional endpoint software. Focus on 'Get Installed Applications' or 'Get Running Processes' for AI development frameworks or inferencing services. Monitor network traffic for unusual data ingestion patterns to AI services.",
+        "rapid7_query_hint": "Direct vulnerability scanning is not applicable for this AI model attack. Focus on asset discovery for AI platforms, security posture of cloud AI services, and review security configurations for data inputs and outputs of AI agents.",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.5 High (Estimated)",
         "category": "vulns"
       }
     ]
