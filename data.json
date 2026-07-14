@@ -1,120 +1,105 @@
 {
   "breaches": [
     {
-      "title": "LabubaRAT Masquerades as NVIDIA Software to Control Windows Hosts",
-      "tldr": "LabubaRAT is a new remote access trojan (RAT) that disguises itself as legitimate NVIDIA software to infect Windows systems. Its primary goal is to establish persistent control over compromised hosts, enabling attackers to execute commands and potentially exfiltrate data.",
-      "action": "Implement and enforce application whitelisting policies to prevent the execution of unauthorized software masquerading as legitimate applications. Educate users about identifying suspicious software and regularly scan systems for unknown processes and indicators of compromise.",
+      "title": "Grok Build Uploaded Entire Git Repositories to xAI Storage, Not Just Files It Read",
+      "tldr": "A Grok build inadvertently uploaded complete Git repositories to xAI storage, instead of only the specified files. This resulted in unauthorized exposure of potentially sensitive intellectual property and code from development environments.",
+      "action": "Immediately audit Grok's data upload configurations to ensure strict adherence to intended file transfers. Secure or delete any inadvertently uploaded Git repositories from xAI storage and implement robust data handling policies for AI development.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/labubarat-masquerades-as-nvidia.html",
+      "source_url": "https://thehackernews.com/2026/07/grok-build-uploads-entire-git.html",
       "source": "The Hacker News"
-    },
-    {
-      "title": "LastPass, Bitwarden users targeted with fake security alerts",
-      "tldr": "LastPass is warning users about an ongoing phishing campaign that uses fake security notices to direct them to fraudulent websites. The campaign's objective is to steal user credentials for LastPass, Bitwarden, and potentially other password managers.",
-      "action": "Educate users about this specific phishing campaign, emphasizing the importance of verifying security alerts directly with the service provider. Implement robust email security and web filtering solutions, and advise users to enable and utilize strong multi-factor authentication (MFA) on all critical accounts.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "New phishing kits target Microsoft 365 accounts, evade MFA",
-      "tldr": "Two new advanced phishing kits, Jalisco and OmegaLord, have been discovered in active attacks targeting Microsoft 365 accounts. These kits utilize sophisticated techniques to bypass multi-factor authentication (MFA), making them highly effective at compromising user accounts.",
-      "action": "Enhance phishing awareness training for all users, specifically highlighting techniques designed to evade MFA. Deploy advanced email security gateways and strengthen conditional access policies within Microsoft 365. Where feasible, implement FIDO2 security keys for highest authentication assurance.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-phishing-kits-target-microsoft-365-accounts-evade-mfa/",
-      "source": "BleepingComputer"
     },
     {
       "title": "Multiple Jscrambler Packages Impacted by Supply Chain Attack",
-      "tldr": "A supply chain attack has compromised multiple Jscrambler packages, leading to the distribution of malicious code. Organizations that have incorporated these affected packages into their applications could face severe security risks, including data theft and unauthorized system control.",
-      "action": "Immediately audit all projects for the presence of affected Jscrambler packages and update them to clean, verified versions or remove them entirely. Implement rigorous software supply chain security practices, including integrity checks, vulnerability scanning, and dependency analysis for all third-party libraries.",
+      "tldr": "Several Jscrambler packages have been compromised in a supply chain attack, indicating that malicious code may have been injected into legitimate software components. This type of attack can lead to widespread compromise of downstream users and their systems.",
+      "action": "Urgently audit all projects utilizing Jscrambler packages for signs of compromise and verify the integrity of all Jscrambler dependencies. Update to trusted, verified versions immediately and enforce stringent software supply chain security practices, including code signing and integrity checks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/multiple-jscrambler-packages-impacted-by-supply-chain-attack/",
       "source": "SecurityWeek"
-    }
-  ],
-  "ransomware": [
+    },
     {
-      "title": "U.S. Sanctions First VPN Service and Malware Cryptor Seller Over Ransomware Support",
-      "tldr": "The U.S. government has sanctioned a VPN service and a malware cryptor seller for their direct involvement in supporting ransomware operations. These sanctions are a strategic effort to disrupt the financial and operational infrastructure used by various ransomware groups.",
-      "action": "Review and update your organization's threat intelligence feeds to include details of sanctioned entities and their associated infrastructure (IP addresses, domains, etc.). Implement network blocks for these known indicators of compromise and enhance monitoring for any interactions with such entities.",
+      "title": "Spanish Police take down €140 million cyber fraud ring, arrest four",
+      "tldr": "Spanish Police have dismantled a cybercrime and money-laundering organization that amassed €140 million ($160 million) through investment fraud and Business Email Compromise (BEC) attacks. Four individuals linked to the extensive fraud ring have been arrested.",
+      "action": "Review and enhance internal financial controls and BEC prevention measures within your organization. Conduct regular security awareness training for all employees on investment scams and BEC techniques, and implement advanced monitoring for anomalous financial transactions.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/us-sanctions-first-vpn-service-and.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/spanish-police-take-down-140-million-cyber-fraud-ring-arrest-four/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "LastPass, Bitwarden users targeted with fake security alerts",
+      "tldr": "An active phishing campaign is targeting users of popular password managers like LastPass and Bitwarden. Attackers are using fake security alerts to redirect users to fraudulent websites, attempting to steal their master credentials.",
+      "action": "Educate users to recognize and report sophisticated phishing attempts, especially those impersonating security alerts from trusted services. Implement robust anti-phishing controls, including email filtering and web security solutions. Ensure multi-factor authentication (MFA) is enabled for all password manager accounts and other critical services.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/lastpass-bitwarden-users-targeted-with-fake-security-alerts/",
+      "source": "BleepingComputer"
     }
   ],
+  "ransomware": [],
   "vulns": [
     {
       "title": "Microsoft July 2026 Patch Tuesday fixes massive 570 flaws, 3 zero-days",
-      "tldr": "Microsoft's July 2026 Patch Tuesday addresses a record-breaking 570 flaws across its products. This includes two zero-day vulnerabilities that are actively being exploited in attacks, and one additional zero-day that has been publicly disclosed, making these updates critically important.",
-      "action": "Prioritize and immediately deploy all Microsoft July 2026 Patch Tuesday security updates across all affected Windows systems and associated Microsoft products. Focus remediation efforts particularly on systems impacted by the actively exploited zero-day vulnerabilities.",
+      "tldr": "Microsoft's July 2026 Patch Tuesday addresses a record-breaking 570 vulnerabilities, including two zero-day flaws actively exploited in attacks and one publicly disclosed zero-day. This comprehensive update is critical for mitigating widespread security risks across Microsoft products.",
+      "action": "Immediately apply all available Microsoft July 2026 security updates to all Windows systems and Microsoft products. Prioritize systems vulnerable to the actively exploited zero-days identified in the update bulletin.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Various Microsoft Windows operating systems and components. Consult the official Microsoft July 2026 Security Update Guide (available post-Patch Tuesday) for a comprehensive list of affected products and versions.",
-      "how_to_determine_impact": "Identify all Windows endpoints and servers. Confirm successful installation of the latest July 2026 cumulative updates and verify system reboot. Check for specific CVEs listed in the Microsoft advisory after release.",
-      "tanium_query_hint": "Get Computer Name and OS Platform and Installed Patches from all machines. Filter for 'Microsoft' and '2026-07'. Use 'Get Missing KBs' sensor to quickly identify systems lacking critical updates.",
-      "rapid7_query_hint": "Scan all Windows assets with InsightVM to identify missing July 2026 Patch Tuesday updates. Filter results by 'Microsoft' and 'July 2026' or specific KB articles once identified. Prioritize based on CISA KEV if applicable.",
+      "affected_versions": "Various Microsoft Windows operating systems (including Windows 10, Windows 11) and other Microsoft products. Refer to Microsoft's official July 2026 Security Update Guide for specific affected versions and associated KBs (e.g., KB5099539, KB5101650, KB5099414).",
+      "how_to_determine_impact": "Verify the installation of July 2026 cumulative updates via Windows Update history or by querying installed updates using 'wmic qfe get HotfixID' or 'Get-HotFix' in PowerShell. Check specific Knowledge Base (KB) articles relevant to your OS version.",
+      "tanium_query_hint": "Get Installed Patches from all machines where (Hotfix ID contains 'KB5099539' or Hotfix ID contains 'KB5101650' or Hotfix ID contains 'KB5099414') and (OS Name matches 'Windows')",
+      "rapid7_query_hint": "Vulnerability ID CONTAINS 'MS-2026-Jul' AND Vulnerability.severity = 'Critical' OR Vulnerability.title CONTAINS 'Microsoft July 2026 Patch Tuesday'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Varies, including multiple Critical (9.8+) and High (7.0+) scores for specific CVEs"
+      "cvss_score": "Critical to High"
     },
     {
-      "title": "OAuth Client ID Spoofing Lets Attackers Validate Stolen Microsoft Entra Credentials",
-      "tldr": "A new method of OAuth Client ID spoofing has been identified, allowing attackers to validate stolen Microsoft Entra ID credentials without triggering detection alerts. This technique confirms the validity of compromised credentials, facilitating further attacks and unauthorized access.",
-      "action": "Implement strong multi-factor authentication (MFA) for all Microsoft Entra ID accounts. Monitor for unusual authentication attempts and credential validation activities from unknown or suspicious OAuth clients. Review and harden OAuth client configurations, ensuring strict validation of client IDs and redirect URIs.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/oauth-client-id-spoofing-lets-attackers.html",
-      "source": "The Hacker News",
+      "title": "SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now",
+      "tldr": "SonicWall has issued an urgent warning about two zero-day vulnerabilities (CVE-2026-15409 and CVE-2026-15410) affecting its SMA1000 series products. These critical flaws are under active exploitation, requiring immediate action to prevent severe security breaches.",
+      "action": "Immediately apply the security updates released by SonicWall for all SMA1000 series products. Isolate any affected devices or restrict network access until patching is confirmed and completed. Monitor systems for any indicators of compromise.",
+      "cve_ids": [
+        "CVE-2026-15409",
+        "CVE-2026-15410"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Entra ID configurations that are susceptible to OAuth Client ID spoofing, potentially due to relaxed validation settings or specific application registrations. Consult Microsoft's guidance on OAuth security.",
-      "how_to_determine_impact": "Audit Microsoft Entra ID sign-in logs and OAuth application activity for suspicious validation attempts, unusual token requests, or successful credential validations from unexpected sources or clients. Verify that OAuth application registrations have appropriate permissions and strictly configured redirect URIs.",
-      "tanium_query_hint": "Focus on cloud-based logging and API monitoring for Entra ID. Use Tanium to check client-side indicators of compromise on endpoints that interact with Entra ID, such as specific browser extension activity or network connections to suspicious OAuth endpoints or identity providers.",
-      "rapid7_query_hint": "Monitor Microsoft Entra ID audit logs within InsightIDR for failed or successful login attempts that align with spoofing techniques, unusual token requests, or successful credential validations from unexpected locations/clients. Look for associated MITRE ATT&CK techniques related to 'Credential Access' (T1003) and 'Defense Evasion' (T1562).",
+      "affected_versions": "SonicWall SMA1000 series products. Consult SonicWall's official security advisory for specific affected firmware versions and required updates.",
+      "how_to_determine_impact": "Identify all SonicWall SMA1000 appliances in your environment. Verify their current firmware versions against SonicWall's advisory for CVE-2026-15409 and CVE-2026-15410. Confirm that the latest security patches have been successfully applied.",
+      "tanium_query_hint": "Get Firmware Version from all devices with (Vendor = 'SonicWall') and (Product Name contains 'SMA1000')",
+      "rapid7_query_hint": "Vulnerability ID IN ('CVE-2026-15409', 'CVE-2026-15410') OR asset.product CONTAINS 'SonicWall SMA1000' AND asset.vulnerability.severity = 'Critical'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
       "title": "Progress confirms ShareFile zero-day flaw behind Storage Zone shutdown",
-      "tldr": "Progress Software has confirmed that a high-severity zero-day vulnerability was responsible for the emergency shutdown of ShareFile Storage Zone Controllers last week. The vendor has released security updates to patch this critical flaw, which was likely actively exploited prior to its disclosure.",
-      "action": "Immediately apply the security updates released by Progress Software for ShareFile Storage Zone Controllers to all affected instances. Conduct a thorough forensic analysis for any indicators of compromise on affected systems, given the likely active exploitation of this zero-day.",
+      "tldr": "Progress Software has confirmed a high-severity zero-day vulnerability in ShareFile Storage Zone Controllers, which led to an emergency shutdown of these systems. The flaw is actively exploited, necessitating immediate patching to restore operations and prevent further compromise.",
+      "action": "Immediately apply the security updates released by Progress Software for all ShareFile Storage Zone Controllers. Isolate and conduct a thorough investigation of any affected controllers for signs of compromise or malicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/progress-confirms-sharefile-zero-day-flaw-behind-storage-zone-shutdown/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Progress ShareFile Storage Zone Controllers. Consult official Progress Software advisories for specific vulnerable versions and the corresponding patch releases.",
-      "how_to_determine_impact": "Identify all deployments of Progress ShareFile Storage Zone Controllers. Check the installed version and compare it against the vendor's patched version list. Investigate logs and system activity for suspicious behavior or compromise indicators prior to applying the patch.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'sharefile'. Look for specific ShareFile component versions using 'Get File Version[filepath]' for ShareFile binaries. Check for suspicious process activity related to ShareFile services.",
-      "rapid7_query_hint": "Scan assets running ShareFile Storage Zone Controller with InsightVM. Search for vulnerabilities related to 'Progress ShareFile' or 'Storage Zone Controller zero-day'. Monitor logs in InsightIDR for any unusual activity originating from ShareFile servers or related services.",
+      "affected_versions": "Progress Software ShareFile Storage Zone Controllers. Consult Progress Software's official advisory for specific affected versions and required patches.",
+      "how_to_determine_impact": "Identify all instances of ShareFile Storage Zone Controllers within your infrastructure. Check the installed version and patch level against Progress Software's security advisory. Review logs for unauthorized access attempts or unusual service behavior that might indicate exploitation.",
+      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'ShareFile Storage Zone Controller')",
+      "rapid7_query_hint": "Vulnerability.title CONTAINS 'ShareFile zero-day' AND Vulnerability.severity = 'Critical' OR asset.software.name CONTAINS 'ShareFile Storage Zone Controller'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
-      "title": "Unpatched Claude for Chrome Flaw Lets Extensions Read Gmail, Calendar",
-      "tldr": "An unpatched flaw in the Claude for Chrome extension allows other malicious or compromised browser extensions to read sensitive user data from Gmail and Calendar. This privacy vulnerability could lead to unauthorized access and exposure of highly personal information.",
-      "action": "If using the Claude for Chrome extension, disable or remove it immediately until an official patch is released by the developer. Review all installed browser extensions and their permissions, and exercise extreme caution when installing extensions that request broad access to sensitive data.",
+      "title": "SAP Patches CVSS 9.9 NetWeaver ABAP Flaw That Could Expose or Modify Data",
+      "tldr": "SAP has released critical security patches for a severe vulnerability in NetWeaver ABAP, rated with a CVSS score of 9.9. This flaw could allow unauthorized attackers to expose or modify sensitive data within affected SAP systems, leading to significant data integrity and confidentiality risks.",
+      "action": "Immediately apply the latest security patches provided by SAP for all NetWeaver ABAP systems. Prioritize patching these systems due to the critical CVSS score and potential for data exposure or modification.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/unpatched-claude-for-chrome-flaw-lets-extensions-read-gmail-calendar/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Claude for Chrome browser extension (all unpatched versions). Specific version numbers will be detailed in the official advisory when available.",
-      "how_to_determine_impact": "Identify all users with the Claude for Chrome extension installed in their browsers. Verify the installed version number and check their browser extension permissions. The vulnerability exists on any system where the unpatched version is active.",
-      "tanium_query_hint": "Get Chrome Extensions from all machines. Filter for 'Claude for Chrome'. Check for active instances and installed version numbers using 'Get Chrome Extension Details'. Advise users to remove if an unpatched version is detected.",
-      "rapid7_query_hint": "Use InsightAgent queries to inspect installed Chrome extensions across endpoints. Search for 'Claude for Chrome' and its version. Configure alerts for any detected unpatched versions or specific indicators of compromise related to this flaw within browser processes.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.8 High"
+      "source_url": "https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "SAP NetWeaver ABAP. Consult SAP's official security notes for specific affected versions and corresponding patch information.",
+      "how_to_determine_impact": "Identify all SAP NetWeaver ABAP installations in your environment. Check their current patch level against SAP's security advisories and ensure all required updates are applied. Consult the SAP Support Portal for detailed patch requirements.",
+      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'SAP NetWeaver ABAP')",
+      "rapid7_query_hint": "Vulnerability.title CONTAINS 'SAP NetWeaver ABAP' AND Vulnerability.cvssScore = '9.9' OR asset.software.name CONTAINS 'SAP NetWeaver ABAP'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.9 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Pentagon Suspends CMMC Phase 2 as It Rethinks Contractor Cybersecurity Rules",
-      "tldr": "The Pentagon has announced the suspension of Phase 2 of the Cybersecurity Maturity Model Certification (CMMC) program as it re-evaluates and rethinks its cybersecurity rules for defense contractors. This suspension signals a potential shift in upcoming compliance requirements for organizations operating within the defense industrial base.",
-      "action": "Defense contractors should closely monitor official announcements regarding the evolving CMMC requirements and any revised guidelines. While specific compliance mandates may change, continuously maintain and improve foundational cybersecurity postures, as strong security practices will remain crucial regardless of specific CMMC phase changes.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/pentagon-suspends-cmmc-phase-2-as-it-rethinks-contractor-cybersecurity-rules/",
-      "source": "SecurityWeek"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -4528,6 +4513,50 @@
         "source_url": "https://www.securityweek.com/pentagon-suspends-cmmc-phase-2-as-it-rethinks-contractor-cybersecurity-rules/",
         "source": "SecurityWeek",
         "category": "insurance"
+      },
+      {
+        "title": "Spanish Police take down €140 million cyber fraud ring, arrest four",
+        "tldr": "Spanish Police have dismantled a cybercrime and money-laundering organization that amassed €140 million ($160 million) through investment fraud and Business Email Compromise (BEC) attacks. Four individuals linked to the extensive fraud ring have been arrested.",
+        "action": "Review and enhance internal financial controls and BEC prevention measures within your organization. Conduct regular security awareness training for all employees on investment scams and BEC techniques, and implement advanced monitoring for anomalous financial transactions.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/spanish-police-take-down-140-million-cyber-fraud-ring-arrest-four/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now",
+        "tldr": "SonicWall has issued an urgent warning about two zero-day vulnerabilities (CVE-2026-15409 and CVE-2026-15410) affecting its SMA1000 series products. These critical flaws are under active exploitation, requiring immediate action to prevent severe security breaches.",
+        "action": "Immediately apply the security updates released by SonicWall for all SMA1000 series products. Isolate any affected devices or restrict network access until patching is confirmed and completed. Monitor systems for any indicators of compromise.",
+        "cve_ids": [
+          "CVE-2026-15409",
+          "CVE-2026-15410"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "SonicWall SMA1000 series products. Consult SonicWall's official security advisory for specific affected firmware versions and required updates.",
+        "how_to_determine_impact": "Identify all SonicWall SMA1000 appliances in your environment. Verify their current firmware versions against SonicWall's advisory for CVE-2026-15409 and CVE-2026-15410. Confirm that the latest security patches have been successfully applied.",
+        "tanium_query_hint": "Get Firmware Version from all devices with (Vendor = 'SonicWall') and (Product Name contains 'SMA1000')",
+        "rapid7_query_hint": "Vulnerability ID IN ('CVE-2026-15409', 'CVE-2026-15410') OR asset.product CONTAINS 'SonicWall SMA1000' AND asset.vulnerability.severity = 'Critical'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "SAP Patches CVSS 9.9 NetWeaver ABAP Flaw That Could Expose or Modify Data",
+        "tldr": "SAP has released critical security patches for a severe vulnerability in NetWeaver ABAP, rated with a CVSS score of 9.9. This flaw could allow unauthorized attackers to expose or modify sensitive data within affected SAP systems, leading to significant data integrity and confidentiality risks.",
+        "action": "Immediately apply the latest security patches provided by SAP for all NetWeaver ABAP systems. Prioritize patching these systems due to the critical CVSS score and potential for data exposure or modification.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "SAP NetWeaver ABAP. Consult SAP's official security notes for specific affected versions and corresponding patch information.",
+        "how_to_determine_impact": "Identify all SAP NetWeaver ABAP installations in your environment. Check their current patch level against SAP's security advisories and ensure all required updates are applied. Consult the SAP Support Portal for detailed patch requirements.",
+        "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'SAP NetWeaver ABAP')",
+        "rapid7_query_hint": "Vulnerability.title CONTAINS 'SAP NetWeaver ABAP' AND Vulnerability.cvssScore = '9.9' OR asset.software.name CONTAINS 'SAP NetWeaver ABAP'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.9 Critical",
+        "category": "vulns"
       }
     ]
   }
