@@ -2,50 +2,42 @@
   "breaches": [
     {
       "title": "OkoBot Malware Framework Injects Seed Phrase Phishing Into Ledger and Trezor Apps",
-      "tldr": "OkoBot malware is actively phishing seed phrases from Ledger and Trezor hardware wallet users. This framework injects malicious code into legitimate applications to steal cryptocurrency credentials, leading to potential financial loss.",
-      "action": "Users should be vigilant against phishing attempts and always verify application authenticity. Enable multi-factor authentication (MFA) and practice secure hardware wallet usage, never entering seed phrases into software applications.",
+      "tldr": "The OkoBot malware framework is actively leveraging a sophisticated technique to inject phishing forms directly into legitimate Ledger and Trezor cryptocurrency applications. This allows threat actors to trick users into divulging their seed phrases, subsequently gaining unauthorized access and stealing funds from their cryptocurrency wallets.",
+      "action": "Users of Ledger and Trezor applications should exercise extreme caution, verify the authenticity of any in-app prompts or requests, and ensure software updates are sourced exclusively from official vendor channels. Implement strong phishing awareness training and adhere to hardware wallet security best practices.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/okobot-malware-framework-injects-seed.html",
       "source": "The Hacker News"
     },
     {
-      "title": "AsyncAPI npm packages infected with credential-stealing malware",
-      "tldr": "Five malicious versions of AsyncAPI packages were published to the Node Package Manager (npm) in a supply-chain attack. These packages deliver a remote access trojan with information-stealing capabilities, specifically targeting credentials.",
-      "action": "Immediately audit all projects for the use of AsyncAPI npm packages. Remove and replace any compromised versions with known clean ones, and rotate any credentials that may have been exposed as a result of the compromise.",
+      "title": "Dutch police bust investment fraud ring stealing over €100 million",
+      "tldr": "Dutch police, collaborating with international law enforcement, have dismantled a major investment fraud ring responsible for defrauding tens of thousands of victims of over €100 million. The perpetrators lured victims into fraudulent investment schemes, resulting in significant financial losses.",
+      "action": "Individuals should remain skeptical of unsolicited investment opportunities, especially those promising unusually high returns. Organizations should educate employees on identifying social engineering tactics and investment fraud schemes. Report any suspicious financial activity to local law enforcement.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/-asyncapi-npm-packages-infected-with-credential-stealing-malware/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/dutch-police-bust-investment-fraud-ring-stealing-over-100-million/",
       "source": "BleepingComputer"
     },
     {
       "title": "Spanish Police take down €140 million cyber fraud ring, arrest four",
-      "tldr": "Spanish Police dismantled a sophisticated cybercrime and money-laundering organization. The group made €140 million ($160 million) from investment fraud and Business Email Compromise (BEC) attacks, resulting in significant financial losses.",
-      "action": "Reinforce user training on phishing, social engineering, and Business Email Compromise (BEC) awareness. Implement strong email security controls, including DMARC, SPF, and DKIM, to mitigate BEC risks.",
+      "tldr": "Spanish law enforcement has successfully dismantled a sophisticated cybercrime and money-laundering organization that amassed €140 million ($160 million) through investment fraud and Business Email Compromise (BEC) attacks. Four individuals were arrested in connection with the extensive illicit operations.",
+      "action": "Implement robust email security measures including SPF, DKIM, and DMARC, along with multi-factor authentication for all financial transactions. Conduct regular, targeted security awareness training focusing on BEC prevention and recognizing investment fraud indicators for all employees.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/spanish-police-take-down-140-million-cyber-fraud-ring-arrest-four/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Nearly 300 GitHub repos pose as legit software to push malware",
-      "tldr": "A threat actor has published hundreds of fake GitHub repositories, impersonating legitimate software and security projects. These malicious repositories are distributing infostealer malware, leading to potential system compromise and data theft.",
-      "action": "Educate developers to rigorously verify software sources and scrutinize GitHub repositories before use. Implement and maintain robust endpoint detection and response (EDR) solutions to detect and prevent infostealer malware execution.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/nearly-300-github-repos-pose-as-legit-software-to-push-malware/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
       "title": "US charges alleged operators of Russian bulletproof hosting service",
-      "tldr": "U.S. federal prosecutors have unsealed charges against three Russian nationals. They are accused of operating a 'bulletproof hosting' service that facilitated over $62 million in damages from ransomware attacks and other cybercrimes worldwide.",
-      "action": "Review incident response plans to understand how bulletproof hosting services support ransomware operations. Enhance threat intelligence to identify and block connections to such malicious infrastructure and command-and-control servers.",
+      "tldr": "U.S. federal prosecutors have unsealed charges against three Russian nationals accused of running a 'bulletproof hosting' service. This service provided essential infrastructure for various cybercrime groups, including ransomware gangs, facilitating over $62 million in damages globally.",
+      "action": "Enhance network monitoring capabilities to identify and block traffic to known malicious infrastructure, including bulletproof hosting providers. Review and strengthen incident response plans, focusing on recovery strategies and robust data backups to mitigate ransomware impact.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/us-charges-alleged-russian-bulletproof-hosting-service-operators/",
       "source": "BleepingComputer"
     },
     {
       "title": "US Charges Russian Individuals and Firms for Running Cybercrime Services",
-      "tldr": "The U.S. has filed charges against Russian individuals and companies accused of providing bulletproof hosting and other services that facilitate various cybercrime activities. These services are alleged to support ransomware attacks and other malicious campaigns.",
-      "action": "Stay informed about law enforcement actions against cybercrime facilitators, as this intelligence can inform risk assessments. Utilize this information to bolster defenses and improve detection capabilities against organized cyber threats and ransomware groups.",
+      "tldr": "The U.S. government has filed charges against Russian individuals and companies for operating a range of cybercrime services, including 'bulletproof hosting'. These services were instrumental in supporting various illicit activities, notably providing infrastructure for ransomware operations that caused significant financial losses worldwide.",
+      "action": "Integrate up-to-date threat intelligence feeds to proactively identify and block IP addresses and domains associated with bulletproof hosting and known ransomware command-and-control infrastructure. Fortify your organization's defenses against common ransomware attack vectors such as phishing, RDP exploitation, and unpatched vulnerabilities.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/us-charges-russian-individuals-and-firms-for-running-cybercrime-services/",
       "source": "SecurityWeek"
@@ -53,9 +45,24 @@
   ],
   "vulns": [
     {
+      "title": "Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack",
+      "tldr": "Microsoft's latest Patch Tuesday addresses a record 622 vulnerabilities across its product line, including two critical zero-day flaws that are actively being exploited in the wild. The extensive nature and active exploitation of these zero-days necessitate immediate patching to prevent compromise.",
+      "action": "Apply all available Microsoft security updates released for July 2026 immediately across all Windows systems, including servers, workstations, and associated applications. Prioritize patches identified as addressing actively exploited zero-day vulnerabilities.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Various Microsoft Windows products and components. Specifics require checking Microsoft's official Patch Tuesday release notes for July 2026.",
+      "how_to_determine_impact": "Identify all Microsoft Windows systems (servers and workstations). Consult Microsoft's July 2026 Patch Tuesday security advisories to determine specific affected products and required updates. Verify installation of all relevant updates, especially those addressing known exploited vulnerabilities (KEVs).",
+      "tanium_query_hint": "Get Installed Patches with Date from all machines where ( Get Missing Patches from all machines equals true )",
+      "rapid7_query_hint": "Asset Search: 'vulnerability.status:active AND vulnerability.severity:(critical OR severe) AND vulnerability.title:Microsoft July 2026 Patch Tuesday'",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate for actively exploited zero-days)"
+    },
+    {
       "title": "SonicWall warns of SMA1000 flaws exploited in zero-day attacks, patch now",
-      "tldr": "SonicWall has issued a critical warning regarding two SMA1000 vulnerabilities, CVE-2026-15409 and CVE-2026-15410. These zero-day flaws are being actively exploited in attacks, with one potentially enabling administrative command execution.",
-      "action": "Immediately apply the latest security updates for all SonicWall SMA1000 appliances to mitigate active zero-day exploitation. Monitor for indicators of compromise (IOCs) provided by SonicWall and isolate affected systems if patching is not immediately feasible.",
+      "tldr": "SonicWall has issued an urgent advisory warning about two critical zero-day vulnerabilities, CVE-2026-15409 and CVE-2026-15410, affecting its SMA 1000 series appliances. These flaws are actively being exploited in the wild and could allow attackers to execute arbitrary commands, potentially leading to administrative access.",
+      "action": "Immediately apply the latest security patches released by SonicWall for all SMA 1000 series appliances. If immediate patching is not feasible, implement all recommended temporary mitigations as specified in SonicWall's official security advisory.",
       "cve_ids": [
         "CVE-2026-15409",
         "CVE-2026-15410"
@@ -63,57 +70,42 @@
       "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SMA 1000 series appliances",
-      "how_to_determine_impact": "Verify SonicWall SMA 1000 appliance firmware versions against the official vendor advisory. Check logs for suspicious activity or indicators of compromise as specified by SonicWall.",
-      "tanium_query_hint": "Tanium's direct applicability to network appliances like SonicWall SMA 1000 is limited. Instead, use 'Get Network Connections' or 'Get DNS Activity' on connected endpoints to detect suspicious outbound communication originating from the appliance.",
-      "rapid7_query_hint": "In InsightVM, search for vulnerabilities related to 'SonicWall SMA 1000' and the CVE IDs 'CVE-2026-15409' and 'CVE-2026-15410'. Ensure these vulnerabilities are remediated based on asset scans.",
+      "affected_versions": "SonicWall SMA 1000 series appliances. Refer to SonicWall's official security advisory for specific vulnerable firmware versions and unaffected versions.",
+      "how_to_determine_impact": "Inventory all SonicWall SMA 1000 series appliances within your network. Check the installed firmware version on each device and compare it against the vulnerable versions detailed in SonicWall's security advisory for CVE-2026-15409 and CVE-2026-15410.",
+      "tanium_query_hint": "Get Installed Software Version[SonicWall SMA] from all machines where ( Get Installed Software Version[SonicWall SMA] < 'Specific_Vulnerable_Version_from_Advisory' )",
+      "rapid7_query_hint": "Vulnerability Search: 'CVE-2026-15409' OR 'CVE-2026-15410'. Asset Search: 'software.name:SonicWall SMA AND software.version:<Specific_Vulnerable_Version_from_Advisory>'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Estimate: 9.8 Critical"
-    },
-    {
-      "title": "Microsoft July 2026 Patch Tuesday fixes massive 570 flaws, 3 zero-days",
-      "tldr": "Microsoft's July 2026 Patch Tuesday addressed a record 570 flaws, including two zero-day vulnerabilities actively exploited in attacks and one publicly disclosed. These updates cover a wide range of Microsoft products and components.",
-      "action": "Prioritize immediate deployment of all Microsoft July 2026 Patch Tuesday updates across all applicable systems. Focus on critical updates that address actively exploited zero-days to mitigate immediate risks.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-july-2026-patch-tuesday-fixes-massive-570-flaws-3-zero-days/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Multiple Microsoft Windows and associated products (including Windows 10, Server versions, Office, etc.)",
-      "how_to_determine_impact": "Verify successful application of all July 2026 Patch Tuesday updates across the environment. Use Windows Update history or patch management tools to confirm installation status on each endpoint.",
-      "tanium_query_hint": "Use 'Get Installed Patches' and 'Get OS Build' sensors to confirm the presence of the latest Microsoft updates on all managed endpoints.",
-      "rapid7_query_hint": "Run a comprehensive vulnerability scan. Search for vulnerabilities associated with 'Microsoft' released in 'July 2026' or 'Patch Tuesday' and verify their remediation status.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Varies, including Critical and exploited zero-days"
+      "cvss_score": "9.8 Critical (Estimate based on zero-day exploitation and potential for admin command execution)"
     },
     {
       "title": "CISA warns admins to patch actively exploited SharePoint flaws",
-      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has issued a warning to administrators to patch actively exploited SharePoint Server flaws. Attackers are currently leveraging three vulnerabilities to compromise Internet-exposed on-premises SharePoint Server instances.",
-      "action": "Immediately apply all available patches and security updates for Microsoft SharePoint Server. Prioritize remediation for internet-facing instances, as these vulnerabilities are under active exploitation.",
+      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has issued a critical warning urging administrators to immediately patch three actively exploited vulnerabilities in on-premises Microsoft SharePoint Server instances. These flaws are being leveraged by attackers to gain unauthorized access to vulnerable servers.",
+      "action": "Apply all available security updates for Microsoft SharePoint Server immediately, prioritizing on-premises installations. Review SharePoint server logs for any indicators of compromise and ensure external access to these servers is tightly restricted and monitored.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-patch-actively-exploited-sharepoint-flaws/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Internet-exposed on-premises Microsoft SharePoint Server instances",
-      "how_to_determine_impact": "Check SharePoint Server versions against Microsoft and CISA advisories. Ensure all recommended patches are applied and review systems for indicators of compromise (IOCs) if available.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to identify SharePoint Server components and 'Get OS Build' for the underlying OS. Check for installed security updates via 'Get Installed Patches'.",
-      "rapid7_query_hint": "In InsightVM, search for vulnerabilities affecting 'SharePoint Server' and filter by 'CISA KEV' or 'Active Exploitation'. Verify the patch status of identified vulnerabilities.",
+      "affected_versions": "Microsoft SharePoint Server (on-premises installations). Specific vulnerable versions require checking CISA's and Microsoft's security advisories.",
+      "how_to_determine_impact": "Identify all on-premises Microsoft SharePoint Server installations in your environment, especially those exposed to the internet. Verify that all security updates recommended by CISA and Microsoft for actively exploited SharePoint vulnerabilities have been successfully applied.",
+      "tanium_query_hint": "Get Installed Applications with Version from all machines where ( Get Installed Applications contains 'SharePoint Server' ) AND ( Get Missing Patches from all machines equals true )",
+      "rapid7_query_hint": "Vulnerability Search: 'SharePoint exploited'. Asset Search: 'software.name:Microsoft SharePoint Server AND vulnerability.severity:(critical OR severe)'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Estimate: 9.0 Critical"
+      "cvss_score": "9.0 High (Estimate for actively exploited server-side flaws with unauthorized access)"
     },
     {
-      "title": "Progress Confirms Zero-Day Vulnerability Behind ShareFile Disruption",
-      "tldr": "Progress Software has confirmed a zero-day vulnerability as the cause of recent disruptions to its ShareFile service. This indicates that the flaw is actively being exploited in the wild, impacting the availability and security of the platform.",
-      "action": "Monitor Progress Software's official advisories for immediate patches, workarounds, or mitigation steps for ShareFile. If using self-hosted ShareFile components, apply any available patches or implement recommended mitigations without delay.",
+      "title": "Zoom warns of critical account takeover vulnerability",
+      "tldr": "Zoom has disclosed a critical vulnerability in its desktop client and SDK for Windows that could potentially allow an unauthenticated attacker to hijack user accounts. This flaw poses a significant risk of unauthorized access and compromise of Zoom accounts.",
+      "action": "Update all Zoom desktop clients for Windows and any applications utilizing the Zoom SDK for Windows to the latest secure versions as soon as patches are available. Communicate the urgency of updating to all users within your organization.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/progress-confirms-zero-day-vulnerability-behind-sharefile-disruption/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Progress ShareFile service and potentially related on-premises components",
-      "how_to_determine_impact": "Verify ShareFile service status and version against Progress Software's advisories. Check for any provided Indicators of Compromise (IOCs) on systems interacting with ShareFile.",
-      "tanium_query_hint": "For on-premises ShareFile components, use 'Get Installed Applications' to check version. For cloud services, monitor network logs for suspicious connections to ShareFile endpoints. N/A for Tanium to query cloud service directly.",
-      "rapid7_query_hint": "Monitor for IoCs released by Progress Software. In InsightVM, search for 'ShareFile' vulnerabilities and filter by recent release dates or active exploitation status.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Estimate: 9.8 Critical"
+      "source_url": "https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Zoom Desktop Client for Windows and Zoom SDK for Windows. Specific vulnerable version ranges will be detailed in Zoom's official security advisory.",
+      "how_to_determine_impact": "Inventory all endpoints running the Zoom Desktop Client for Windows or integrating the Zoom SDK. Compare the installed version numbers against Zoom's official security advisory to identify vulnerable assets.",
+      "tanium_query_hint": "Get Installed Applications with Version from all machines where ( Get Installed Applications contains 'Zoom Client' OR Get Installed Applications contains 'Zoom SDK' )",
+      "rapid7_query_hint": "Asset Search: 'software.name:Zoom AND software.version:<Specific_Vulnerable_Version_from_Advisory>' OR 'software.name:Zoom SDK AND software.version:<Specific_Vulnerable_Version_from_Advisory>'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical (Estimate based on unauthenticated account takeover potential)"
     }
   ],
   "insurance": [],
@@ -4697,6 +4689,47 @@
         "source_url": "https://www.securityweek.com/us-charges-russian-individuals-and-firms-for-running-cybercrime-services/",
         "source": "SecurityWeek",
         "category": "ransomware"
+      },
+      {
+        "title": "Dutch police bust investment fraud ring stealing over €100 million",
+        "tldr": "Dutch police, collaborating with international law enforcement, have dismantled a major investment fraud ring responsible for defrauding tens of thousands of victims of over €100 million. The perpetrators lured victims into fraudulent investment schemes, resulting in significant financial losses.",
+        "action": "Individuals should remain skeptical of unsolicited investment opportunities, especially those promising unusually high returns. Organizations should educate employees on identifying social engineering tactics and investment fraud schemes. Report any suspicious financial activity to local law enforcement.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/dutch-police-bust-investment-fraud-ring-stealing-over-100-million/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Microsoft Patches Record 622 Flaws, Including Two Zero-Days Under Active Attack",
+        "tldr": "Microsoft's latest Patch Tuesday addresses a record 622 vulnerabilities across its product line, including two critical zero-day flaws that are actively being exploited in the wild. The extensive nature and active exploitation of these zero-days necessitate immediate patching to prevent compromise.",
+        "action": "Apply all available Microsoft security updates released for July 2026 immediately across all Windows systems, including servers, workstations, and associated applications. Prioritize patches identified as addressing actively exploited zero-day vulnerabilities.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Various Microsoft Windows products and components. Specifics require checking Microsoft's official Patch Tuesday release notes for July 2026.",
+        "how_to_determine_impact": "Identify all Microsoft Windows systems (servers and workstations). Consult Microsoft's July 2026 Patch Tuesday security advisories to determine specific affected products and required updates. Verify installation of all relevant updates, especially those addressing known exploited vulnerabilities (KEVs).",
+        "tanium_query_hint": "Get Installed Patches with Date from all machines where ( Get Missing Patches from all machines equals true )",
+        "rapid7_query_hint": "Asset Search: 'vulnerability.status:active AND vulnerability.severity:(critical OR severe) AND vulnerability.title:Microsoft July 2026 Patch Tuesday'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate for actively exploited zero-days)",
+        "category": "vulns"
+      },
+      {
+        "title": "Zoom warns of critical account takeover vulnerability",
+        "tldr": "Zoom has disclosed a critical vulnerability in its desktop client and SDK for Windows that could potentially allow an unauthenticated attacker to hijack user accounts. This flaw poses a significant risk of unauthorized access and compromise of Zoom accounts.",
+        "action": "Update all Zoom desktop clients for Windows and any applications utilizing the Zoom SDK for Windows to the latest secure versions as soon as patches are available. Communicate the urgency of updating to all users within your organization.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Zoom Desktop Client for Windows and Zoom SDK for Windows. Specific vulnerable version ranges will be detailed in Zoom's official security advisory.",
+        "how_to_determine_impact": "Inventory all endpoints running the Zoom Desktop Client for Windows or integrating the Zoom SDK. Compare the installed version numbers against Zoom's official security advisory to identify vulnerable assets.",
+        "tanium_query_hint": "Get Installed Applications with Version from all machines where ( Get Installed Applications contains 'Zoom Client' OR Get Installed Applications contains 'Zoom SDK' )",
+        "rapid7_query_hint": "Asset Search: 'software.name:Zoom AND software.version:<Specific_Vulnerable_Version_from_Advisory>' OR 'software.name:Zoom SDK AND software.version:<Specific_Vulnerable_Version_from_Advisory>'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical (Estimate based on unauthenticated account takeover potential)",
+        "category": "vulns"
       }
     ]
   }
