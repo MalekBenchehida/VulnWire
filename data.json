@@ -1,111 +1,104 @@
 {
   "breaches": [
     {
-      "title": "Two Scattered Spider Hackers Get 5.5 Years Each for £29 Million TfL Hack",
-      "tldr": "Two members of the Scattered Spider hacking group were sentenced to 5.5 years in prison each for their involvement in the £29 million hack against Transport for London (TfL). This highlights legal repercussions for cybercriminals and the consequences of data breaches.",
-      "action": "Review internal logging and security analytics for indicators of compromise related to Scattered Spider if not already done, and reinforce legal awareness for cybercrime within your organization.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/two-scattered-spider-hackers-get-55.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "23andMe to pay $18 million in new genetics data breach settlement",
-      "tldr": "Genetic testing company 23andMe has agreed to an $18 million settlement with a coalition of 43 attorneys general over its failure to adequately protect customer genetic data, following a previous breach. This emphasizes the financial and legal consequences of data breaches, especially for sensitive personal information.",
-      "action": "Review data protection and privacy policies, especially for sensitive data categories. Ensure robust access controls and incident response plans are in place. Stay updated on regulatory compliance and legal precedents for data breach liability.",
+      "tldr": "Genetic testing company 23andMe has agreed to pay $18 million to settle claims from a coalition of 43 attorneys general that it failed to protect customers' genetic data. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/23andme-to-pay-18-million-in-new-genetics-data-breach-settlement/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "New TELEPUZ Malware Spreads via ClickFix to Steal Data and Run Commands",
-      "tldr": "A new malware called TELEPUZ is spreading through ClickFix, designed to steal data and execute arbitrary commands on infected systems. This poses a significant threat for data exfiltration and further system compromise, leveraging social engineering tactics.",
-      "action": "Deploy updated EDR/AV signatures to detect TELEPUZ malware. Educate users about ClickFix and similar social engineering vectors. Monitor network traffic for outbound connections to known TELEPUZ command-and-control infrastructure.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New ClickLock macOS Stealer Kills Apps Every 210ms Until Victims Type Their Password",
-      "tldr": "A new macOS stealer, ClickLock, actively kills applications every 210ms, forcing users to repeatedly enter their password in an attempt to capture credentials. This is a sophisticated social engineering technique combined with malware designed to bypass security.",
-      "action": "Educate macOS users about this specific threat and how to recognize suspicious behavior. Deploy endpoint detection and response (EDR) solutions capable of detecting abnormal process termination and credential harvesting attempts on macOS.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/new-clicklock-macos-stealer-kills-apps.html",
-      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
-      "title": "New Spirals ransomware encrypts victim network in under 24 hours",
-      "tldr": "A new ransomware group, Spirals, has demonstrated rapid network encryption capabilities, completing initial access, data theft, and encryption within a single day. This highlights the increasing speed and efficiency of modern ransomware operations and the need for swift response.",
-      "action": "Review and enhance ransomware readiness, focusing on rapid detection and response capabilities. Implement robust backup and recovery strategies, ensure network segmentation, and conduct incident response drills to improve response times for ransomware attacks.",
+      "title": "ThreatsDay: Game Cheat Spyware, 24-Hour Ransomware, Chrome Sync Stalking + 12 More Stories",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-spirals-ransomware-encrypts-victim-network-in-under-24-hours/",
+      "source_url": "https://thehackernews.com/2026/07/threatsday-game-cheat-spyware-24-hour.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Coca-Cola says Fairlife ransomware attack halts US dairy production",
+      "tldr": "The Coca-Cola Company disclosed today that a ransomware attack impacting its Fairlife dairy subsidiary has disrupted operations, temporarily suspending production of Fairlife products across the United States. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/",
       "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
-      "title": "CISA orders feds to patch actively exploited Oracle flaw by Saturday",
-      "tldr": "CISA has issued an urgent directive for federal agencies to patch a critical, actively exploited vulnerability in Oracle E-Business Suite by Saturday. This flaw is being leveraged in ongoing attacks, requiring immediate remediation to prevent compromise of financial applications.",
-      "action": "Immediately identify all Oracle E-Business Suite instances within your environment. Apply the vendor-provided patch for the critical vulnerability without delay. Verify successful application of the patch and monitor for post-exploitation activity.",
+      "title": "Two Scattered Spider Hackers Get 5.5 Years Each for £29 Million TfL Hack",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Oracle E-Business Suite (specific versions not provided, consult Oracle advisory and CISA KEV)",
-      "how_to_determine_impact": "Query Oracle E-Business Suite environments for the presence of the vulnerability. Check application logs for indicators of compromise or exploitation attempts related to the flaw. Consult Oracle patch release notes for version-specific details and CISA KEV for official identification methods.",
-      "tanium_query_hint": "Get Installed Applications with Name like 'Oracle E-Business Suite' and Version; Use custom sensors to check Oracle E-Business Suite patch status or configuration files for known indicators.",
-      "rapid7_query_hint": "Vulnerability ID: Search for the relevant Oracle E-Business Suite CVE ID in InsightVM once released (likely on CISA KEV). Asset Search: 'software.name = Oracle E-Business Suite AND software.version < [patched_version]'. Use InsightAgent to gather detailed software inventory and patch status.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Nightmare Eclipse Drops 'LegacyHive' Windows Zero-Day",
-      "tldr": "The Nightmare Eclipse group has released details on a 'LegacyHive' Windows zero-day vulnerability. This is a critical, unpatched flaw affecting Windows systems, allowing for potential privilege escalation or other severe impacts through an unknown mechanism.",
-      "action": "Immediately review the details of the 'LegacyHive' zero-day once public. Implement any temporary mitigations if available, such as blocking specific process behaviors or disabling vulnerable components. Monitor vendor channels for an emergency patch release from Microsoft.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/nightmare-eclipse-drops-legacyhive-windows-zero-day/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft Windows (specific versions not provided, consult Nightmare Eclipse disclosure or Microsoft advisory when available)",
-      "how_to_determine_impact": "Monitor for official Microsoft advisories and CVE assignment. Use endpoint detection and response (EDR) to scan for indicators of compromise (IOCs) related to 'LegacyHive' exploitation. Look for unusual process activity or privilege escalation attempts detailed in the disclosure.",
-      "tanium_query_hint": "Get Windows OS Version; Monitor for specific process creations, registry key modifications, or file system changes linked to 'LegacyHive' exploit (requires specific IOCs from disclosure).",
-      "rapid7_query_hint": "InsightVM: Monitor for new vulnerability checks for 'LegacyHive' zero-day once added. InsightIDR: Search logs for specific event IDs or process behaviors described in the 'LegacyHive' disclosure that indicate exploitation. Implement custom detection rules.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
-    },
-    {
-      "title": "Zoom warns of critical account takeover vulnerability",
-      "tldr": "Zoom has issued a warning regarding a critical account takeover vulnerability affecting its desktop client and SDK for Windows. This flaw could allow an unauthenticated attacker to hijack user accounts, leading to unauthorized access and potential data compromise during video conferencing sessions.",
-      "action": "Immediately update all Zoom desktop clients and SDKs for Windows to the latest patched versions. Advise users to update their Zoom clients. Monitor for any suspicious login activities or unauthorized changes to Zoom accounts within your organization.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/zoom-warns-of-critical-account-takeover-vulnerability/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/07/two-scattered-spider-hackers-get-55.html",
+      "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Zoom Desktop Client for Windows and Zoom SDK for Windows (specific vulnerable versions not provided, consult Zoom security advisory)",
-      "how_to_determine_impact": "Check installed Zoom client versions on all Windows endpoints. Cross-reference with the official Zoom security advisory to determine if currently installed versions are vulnerable. Review Zoom account logs for unusual login locations or failed authentication attempts that could indicate exploitation attempts.",
-      "tanium_query_hint": "Get Installed Applications with Name like 'Zoom' and Version; Get File Version['C:\nProgram Files\nZoom\nbin\nZoom.exe'] or relevant path for SDK installations.",
-      "rapid7_query_hint": "Vulnerability ID: Search for the relevant Zoom CVE ID in InsightVM once assigned. Asset Search: 'software.name = Zoom AND software.version < [patched_version]'. Use InsightAgent to obtain detailed software inventory from Windows endpoints.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
       "title": "n8n Token Exchange Flaw Could Let Attackers Log In as Users From Another Issuer",
-      "tldr": "A vulnerability in n8n's token exchange mechanism could allow attackers to bypass authentication and log in as legitimate users if they originate from a different identity issuer. This critical flaw potentially enables account takeover and unauthorized access to workflows.",
-      "action": "Immediately check for updates or vendor advisories for n8n. If running n8n, assess current configuration for token exchange and implement any recommended patches or mitigations to secure authentication flows.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/n8n-token-exchange-flaw-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "n8n (specific versions not provided, consult vendor advisory for details)",
-      "how_to_determine_impact": "Inspect n8n deployments for token exchange configurations. Check n8n system logs for unusual authentication attempts or successful logins from unexpected identity issuers. Consult n8n documentation for secure token exchange best practices and patch levels.",
-      "tanium_query_hint": "Get Installed Applications with Name like 'n8n' and Version; Get File Version['/path/to/n8n/binary'] for deployed instances.",
-      "rapid7_query_hint": "Vulnerability ID: Search for the relevant n8n CVE ID in InsightVM once assigned. Asset Search: 'software.name = n8n AND software.version < [patched_version]'. InsightIDR: Monitor authentication logs for suspicious activity against n8n endpoints.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "New TELEPUZ Malware Spreads via ClickFix to Steal Data and Run Commands",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/new-telepuz-malware-spreads-via.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "New ClickLock macOS Stealer Kills Apps Every 210ms Until Victims Type Their Password",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/new-clicklock-macos-stealer-kills-apps.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -4888,6 +4881,24 @@
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.8 High",
         "category": "vulns"
+      },
+      {
+        "title": "ThreatsDay: Game Cheat Spyware, 24-Hour Ransomware, Chrome Sync Stalking + 12 More Stories",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/threatsday-game-cheat-spyware-24-hour.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "Coca-Cola says Fairlife ransomware attack halts US dairy production",
+        "tldr": "The Coca-Cola Company disclosed today that a ransomware attack impacting its Fairlife dairy subsidiary has disrupted operations, temporarily suspending production of Fairlife products across the United States. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
       }
     ]
   }
