@@ -2,16 +2,32 @@
   "breaches": [
     {
       "title": "GoldenEyeDog Subgroup Linked to DigiCert Breach and Code-Signing Certificate Theft",
-      "tldr": "The GoldenEyeDog subgroup is linked to a breach at DigiCert, where code-signing certificates were stolen. This compromise could enable threat actors to sign malicious software with trusted certificates, evading security controls.",
-      "action": "Review all code-signing certificates used within the organization. Revoke and replace any certificates potentially compromised or issued by the affected CA during the breach timeframe if applicable. Enhance monitoring for newly signed, suspicious executables.",
+      "tldr": "The GoldenEyeDog subgroup is linked to a breach at DigiCert, resulting in the theft of code-signing certificates. This compromise poses a significant risk as stolen certificates can be used to sign malicious software, allowing it to bypass security checks and appear legitimate.",
+      "action": "Review trust policies for code-signing certificates, especially those issued by DigiCert. Monitor for unusual executables signed with new or unexpected DigiCert certificates. Enhance endpoint detection for files signed by potentially compromised certificates.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/goldeneyedog-subgroup-linked-to.html",
       "source": "The Hacker News"
     },
     {
+      "title": "Microsoft warns of surge in ACR Stealer attacks on customers",
+      "tldr": "Microsoft has issued a warning regarding a surge in active attacks leveraging the ACR Stealer malware. This malware uses 'ClickFix' lures to trick users, then steals browser-stored passwords, authentication tokens, and sensitive Microsoft 365 files, enabling account takeovers and data exfiltration.",
+      "action": "Implement strong multi-factor authentication (MFA) across all accounts, especially for Microsoft 365. Educate users about phishing and social engineering lures. Deploy and maintain robust endpoint detection and response (EDR) solutions to detect and block malware activity.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Abbott probes two cyber incidents amid extortion claims",
+      "tldr": "Abbott Laboratories is currently investigating two separate cybersecurity incidents. These include unauthorized access to internal legacy Exact Sciences systems within its Cancer Diagnostics business and claims of data theft from its LabCentral portal, alongside extortion demands.",
+      "action": "Immediately isolate any potentially compromised systems and conduct a thorough forensic investigation to determine the scope and impact of the breach. Review and strengthen access controls, especially for legacy systems. Prepare incident response plans for data recovery and potential legal notifications.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Ernst & Young discloses data breach after support system hack",
-      "tldr": "Ernst & Young (EY) is notifying customers of a data breach stemming from the compromise of a third-party support ticket system. The incident indicates that sensitive customer information handled by EY's IT personnel via this system may have been exposed.",
-      "action": "If you are an EY customer, monitor for phishing attempts or unauthorized use of personal/account information. For organizations, review third-party vendor access to internal systems and ensure robust security controls for support platforms.",
+      "tldr": "Ernst & Young (EY) has disclosed a data breach stemming from the compromise of a third-party support ticket system used by its IT department. This incident may have exposed customer data handled through the support portal.",
+      "action": "Notify affected customers and advise them to reset passwords if credentials were stored or processed by the system. Review and strengthen third-party vendor security agreements and access. Conduct a thorough audit of data accessed or exfiltrated from the compromised system.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/",
       "source": "BleepingComputer"
@@ -19,25 +35,17 @@
   ],
   "ransomware": [
     {
-      "title": "Abbott probes two cyber incidents amid extortion claims",
-      "tldr": "Abbott Laboratories is investigating two separate cyber incidents, including unauthorized access to legacy Exact Sciences systems in its Cancer Diagnostics business and a claim of data theft from its LabCentral portal. Extortion claims suggest a ransomware or data extortion group is involved.",
-      "action": "Isolate affected systems immediately. Conduct a thorough forensic investigation to determine the extent of the unauthorized access and data exfiltration. Implement robust endpoint detection and response, and review data backup strategies.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Cyberattack Disrupts Operations of Japanese Frozen Food Giant Nichirei",
-      "tldr": "Japanese frozen food giant Nichirei has suffered a cyberattack that disrupted its operations. While details are scarce, such disruptions often point to ransomware or destructive malware aimed at business interruption.",
-      "action": "Activate incident response plans. Isolate affected segments, assess the impact on operational technology (OT) and IT systems, and prioritize recovery efforts. Enhance network segmentation and implement strong backup and recovery protocols.",
+      "tldr": "Japanese frozen food giant Nichirei has suffered a cyberattack that has significantly disrupted its operations. While specific details are scarce, such broad operational disruptions often indicate a ransomware attack impacting critical business systems.",
+      "action": "Investigate the nature and scope of the cyberattack immediately. Prioritize restoration of critical systems from secure, offline backups. Implement and review incident response protocols for ransomware and operational disruption scenarios.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/cyberattack-disrupts-operations-of-japanese-frozen-food-giant-nichirei/",
       "source": "SecurityWeek"
     },
     {
       "title": "Coca-Cola Suspends US Fairlife Production Due to Ransomware Attack",
-      "tldr": "Coca-Cola has suspended production at its US Fairlife facilities following a ransomware attack. This incident highlights the significant operational impact ransomware can have on critical infrastructure and supply chains.",
-      "action": "Implement and test robust offline backup and recovery procedures. Enhance network security, including multi-factor authentication for all critical systems and strong endpoint protection. Conduct tabletop exercises for ransomware response.",
+      "tldr": "Coca-Cola has announced the suspension of production at its US Fairlife facilities as a direct consequence of a ransomware attack. This incident highlights the immediate and significant physical disruption ransomware can inflict on industrial operations.",
+      "action": "Initiate incident response procedures to contain the ransomware, eradicate it, and recover affected systems from immutable backups. Conduct a post-mortem to identify initial compromise vectors and strengthen network segmentation and endpoint protection to prevent future attacks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/coca-cola-suspends-us-fairlife-production-due-to-ransomware-attack/",
       "source": "SecurityWeek"
@@ -45,76 +53,67 @@
   ],
   "vulns": [
     {
-      "title": "WordPress Core \"wp2shell\" RCE flaws get public exploits, patch now",
-      "tldr": "Critical \"wp2shell\" RCE vulnerabilities in WordPress Core now have public exploits. Unauthenticated attackers can leverage these flaws to execute arbitrary code on vulnerable sites, posing an immediate severe risk.",
-      "action": "Immediately apply the latest security patches for WordPress Core to all installations. Implement Web Application Firewalls (WAFs) to mitigate exploitation attempts, and scan for indicators of compromise.",
+      "title": "WordPress Core \"wp2shell\" RCE Flaw Exploited by Public Proof-of-Concept",
+      "tldr": "A critical remote code execution (RCE) vulnerability, dubbed \"wp2shell,\" has been discovered in WordPress Core, allowing unauthenticated attackers to execute arbitrary code. Public exploits are now available, making immediate patching imperative due to active exploitation risk.",
+      "action": "Immediately update all WordPress Core installations to the latest patched version. Implement web application firewall (WAF) rules to mitigate known exploitation attempts if immediate patching is not feasible.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "WordPress Core, specific versions impacted by 'wp2shell' RCE. Refer to official WordPress security advisories for exact ranges.",
-      "how_to_determine_impact": "Identify all WordPress installations within the environment. Check WordPress version numbers and verify if the latest security patch addressing 'wp2shell' has been applied. Review logs for signs of unusual activity or RCE attempts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'wordpress' or 'webserver'. Filter by application name 'WordPress'. Use 'Get File Version['<path_to_wordpress_core_file>']' to verify patched files.",
-      "rapid7_query_hint": "Search for vulnerability 'WordPress wp2shell RCE' or similar. Use InsightVM to scan web servers running WordPress. Look for assets with identified WordPress vulnerabilities. For InsightIDR, search logs for 'RCE' or 'wp2shell' in web server access logs.",
+      "affected_versions": "WordPress Core (all versions prior to the patched release addressing \"wp2shell\"). Check official WordPress security advisories for specific version ranges.",
+      "how_to_determine_impact": "Verify your WordPress installation version. If it's not the latest patched version, it's vulnerable. Check server logs for suspicious requests to `wp-admin/admin-ajax.php` or `wp-content/themes/` directories for unexpected file writes or webshells.",
+      "tanium_query_hint": "Utilize a custom Tanium sensor to 'Get File Version' for `wp-includes/version.php` on web servers. Alternatively, 'Get Installed Applications' if WordPress is listed in package managers.",
+      "rapid7_query_hint": "Search InsightVM for 'Software Name Contains WordPress' and filter by version. Look for vulnerability checks related to unauthenticated RCE or 'wp2shell'. Use InsightIDR to monitor web server logs for exploitation attempts.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "New Windows LegacyHive zero-day gives hackers admin privileges",
-      "tldr": "A newly disclosed Windows zero-day exploit, dubbed \"LegacyHive,\" allows attackers to achieve administrative privileges on up-to-date Windows systems. The exploit is public, enabling local privilege escalation for threat actors.",
-      "action": "Implement enhanced monitoring for privilege escalation attempts on Windows endpoints. Apply virtual patching or host-based intrusion prevention if available. Prepare for an out-of-band patch from Microsoft.",
+      "title": "New Windows LegacyHive Zero-Day Exploit Grants Admin Privileges",
+      "tldr": "A new Windows zero-day exploit, named \"LegacyHive\" by security researcher \"Nightmare Eclipse,\" has been released. This vulnerability allows attackers to escalate privileges to administrative levels on currently up-to-date Windows systems, posing a severe risk.",
+      "action": "Implement enhanced monitoring for unusual process activity or privilege escalation attempts, particularly on Windows endpoints. Apply any available temporary mitigations or workarounds immediately, and prepare for an out-of-band security update from Microsoft.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Up-to-date Windows systems. Specific versions not detailed, but implies recent versions.",
-      "how_to_determine_impact": "Identify all Windows workstations and servers. Monitor for privilege escalation attempts, especially those involving the kernel or system processes. Check for process integrity levels and suspicious new user accounts.",
-      "tanium_query_hint": "Get Operating System from all machines. Search for processes with elevated privileges or unusual parent-child relationships. Investigate 'Get Running Processes' and 'Get Computer Name and OS Platform'.",
-      "rapid7_query_hint": "Search for vulnerability 'Windows LegacyHive' or 'privilege escalation'. Use InsightVM to scan Windows assets. Monitor for suspicious kernel-level activity or process injection in InsightIDR.",
+      "affected_versions": "Up-to-date Windows systems (specific versions not yet detailed, likely broad impact across client/server platforms).",
+      "how_to_determine_impact": "Monitor Windows Event Logs for specific privilege escalation events, especially relating to process creation by unusual users or system calls indicative of exploitation. Review endpoint detection and response (EDR) alerts for `LegacyHive` related indicators.",
+      "tanium_query_hint": "Use 'Get Running Processes with CommandLine Contains LegacyHive' or 'Get Registry Value[HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\LegacyHive]' for specific artifacts. Monitor for unusual process creation from system processes.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability checks associated with 'LegacyHive' or local privilege escalation. Configure InsightIDR to alert on suspicious process parent/child relationships or unauthorized registry modifications.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.8 High (Estimated)"
+      "cvss_score": "9.0 Critical"
     },
     {
-      "title": "HollowByte DDoS flaw bloats OpenSSL server memory with 11-byte payload",
-      "tldr": "The \"HollowByte\" vulnerability in OpenSSL allows unauthenticated attackers to trigger a denial-of-service (DoS) condition. By sending a mere 11-byte TLS request, an attacker can cause OpenSSL servers to consume excessive memory, leading to service disruption.",
-      "action": "Update OpenSSL to the latest patched version to mitigate the \"HollowByte\" DoS vulnerability. Implement rate limiting and network-based DDoS protections for all TLS-enabled services.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hollowbyte-ddos-flaw-bloats-openssl-server-memory-with-11-byte-payload/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "OpenSSL servers. Specific versions not detailed.",
-      "how_to_determine_impact": "Identify all servers running OpenSSL. Check OpenSSL version numbers. Monitor server memory utilization and network traffic for unusual spikes or 11-byte TLS requests.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'OpenSSL'. Check 'Get Listen Ports' for TLS services. Monitor 'Get Performance' for memory usage spikes.",
-      "rapid7_query_hint": "Search for vulnerability 'OpenSSL HollowByte' or 'DDoS'. Scan assets running OpenSSL services. Monitor network traffic for unusual TLS request patterns.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.5 High (Estimated)"
-    },
-    {
-      "title": "Fresh SharePoint Vulnerability Exploited Soon After Disclosure",
-      "tldr": "A newly discovered vulnerability in Microsoft SharePoint is being actively exploited shortly after its disclosure. The rapid exploitation indicates a critical flaw that threat actors are quickly leveraging.",
-      "action": "Prioritize and apply all available security updates for Microsoft SharePoint. Monitor SharePoint servers for signs of compromise, including unusual access patterns, suspicious processes, or unexpected file modifications.",
+      "title": "SharePoint Vulnerability Actively Exploited Post-Disclosure",
+      "tldr": "A newly disclosed vulnerability in Microsoft SharePoint is being actively exploited in the wild shortly after its public disclosure. This rapid exploitation poses an immediate and serious threat to organizations using vulnerable SharePoint instances.",
+      "action": "Immediately apply the latest security patches for Microsoft SharePoint. If patching is not possible, implement all available mitigations and closely monitor SharePoint servers for any signs of compromise or suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/fresh-sharepoint-vulnerability-exploited-soon-after-disclosure/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint. Specific versions not detailed.",
-      "how_to_determine_impact": "Identify all SharePoint servers. Check SharePoint version numbers and review installed updates. Monitor SharePoint logs for suspicious activity, unexpected file modifications, or unauthorized access attempts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'SharePoint'. Check 'Get File Version['<path_to_sharepoint_files>']' for core SharePoint components. Monitor IIS logs on SharePoint servers.",
-      "rapid7_query_hint": "Search for vulnerability 'SharePoint' and filter by recent disclosure date. Scan SharePoint servers using InsightVM. Monitor SharePoint and IIS logs via InsightIDR for anomalies associated with exploitation.",
+      "affected_versions": "Microsoft SharePoint (specific versions not detailed in the snippet, refer to Microsoft's latest security advisories for affected ranges).",
+      "how_to_determine_impact": "Check your SharePoint server versions against Microsoft's latest security advisories. Review SharePoint ULS logs, IIS logs, and Windows Event Logs for unusual access patterns, file modifications, or error messages indicative of exploitation attempts.",
+      "tanium_query_hint": "Utilize 'Get Installed Applications Contains SharePoint' to identify instances. Implement 'Get File Hash[path/to/sharepoint/binaries]' for known compromised files from advisories.",
+      "rapid7_query_hint": "Search InsightVM for 'Vulnerability Title Contains SharePoint' and filter by 'Active Exploitation' or for specific CVEs once assigned. Use InsightIDR to monitor SharePoint server logs for indicators of compromise or anomalous behavior.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (Estimated)"
-    }
-  ],
-  "insurance": [
+      "cvss_score": "9.0 Critical"
+    },
     {
-      "title": "Industry Reactions to Pentagon Suspending CMMC Phase 2: Feedback Friday",
-      "tldr": "The Pentagon has suspended Phase 2 of the Cybersecurity Maturity Model Certification (CMMC) program. This suspension creates uncertainty for defense contractors regarding compliance requirements, which directly impacts their cyber insurance eligibility and policy terms.",
-      "action": "Organizations in the Defense Industrial Base (DIB) should consult with their cyber insurance providers and legal counsel to understand the implications of the CMMC Phase 2 suspension on their current and future policies. Continue to enhance cybersecurity posture, as CMMC principles are still relevant.",
+      "title": "OpenSSL \"HollowByte\" DoS Flaw Exploitable with Minimal TLS Payload",
+      "tldr": "A denial-of-service (DoS) vulnerability, dubbed \"HollowByte,\" exists in OpenSSL, allowing unauthenticated attackers to cause server memory exhaustion with a malicious payload of just 11 bytes in a TLS request. This can lead to service outages.",
+      "action": "Update OpenSSL to the latest patched version that addresses the \"HollowByte\" vulnerability. Monitor server resources for unusual memory spikes or service interruptions if immediate patching is not possible.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/industry-reactions-to-pentagon-suspending-cmmc-phase-2-feedback-friday/",
-      "source": "SecurityWeek"
+      "source_url": "https://www.bleepingcomputer.com/news/security/hollowbyte-ddos-flaw-bloats-openssl-server-memory-with-11-byte-payload/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "OpenSSL (specific versions not detailed in the snippet; refer to official OpenSSL advisories for affected ranges and patched versions).",
+      "how_to_determine_impact": "Identify all systems running OpenSSL. Check the installed OpenSSL version against official advisories. Monitor affected servers for unusual memory consumption or service instability, especially after receiving TLS connection attempts from untrusted sources.",
+      "tanium_query_hint": "Use 'Get Installed Applications Contains OpenSSL' or 'Get File Version[path/to/libssl.so]' (for Linux/Windows) to identify vulnerable instances.",
+      "rapid7_query_hint": "Search InsightVM for 'Software Name Contains OpenSSL' and filter by version to identify vulnerable assets. Look for vulnerability checks related to OpenSSL DoS IDs.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.5 High"
     }
   ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
