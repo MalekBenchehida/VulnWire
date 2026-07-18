@@ -2,131 +2,115 @@
   "breaches": [
     {
       "title": "GoldenEyeDog Subgroup Linked to DigiCert Breach and Code-Signing Certificate Theft",
-      "tldr": "A subgroup identified as GoldenEyeDog has been implicated in a security breach at DigiCert, resulting in the theft of critical code-signing certificates. This compromise allows attackers to sign malicious software, making it appear legitimate and bypass security controls. The theft of such certificates poses a significant supply chain risk.",
-      "action": "Review trust policies for code-signing certificates, particularly those issued by DigiCert. Implement stringent integrity checks for all software prior to deployment and monitor for newly signed, suspicious binaries.",
+      "tldr": "The GoldenEyeDog subgroup has been implicated in a breach of DigiCert, resulting in the theft of code-signing certificates. This compromise allows attackers to sign malicious software, making it appear legitimate and bypass security controls, posing a supply chain risk.",
+      "action": "Organizations should review their trust policies for code-signing certificates, especially those issued by DigiCert around the time of the breach. Implement enhanced monitoring for software signed with potentially compromised certificates and revoke trust for any identified.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/goldeneyedog-subgroup-linked-to.html",
       "source": "The Hacker News"
     },
     {
-      "title": "ACR Stealer Uses ClickFix Lures to Steal Browser Tokens and Microsoft 365 Files",
-      "tldr": "The ACR Stealer malware is leveraging \"ClickFix\" social engineering tactics to trick users into downloading and executing it. Once installed, it proceeds to steal sensitive browser tokens and valuable files from Microsoft 365, leading to potential account compromise and data exfiltration.",
-      "action": "Educate users about advanced social engineering lures and the risks of downloading unofficial software or clicking suspicious links. Enforce multi-factor authentication (MFA) across all services, especially Microsoft 365, and ensure robust endpoint detection and response (EDR) solutions are deployed to detect and block infostealer malware.",
+      "title": "Microsoft warns of surge in ACR Stealer attacks on customers",
+      "tldr": "Microsoft has issued a warning regarding a significant increase in attacks leveraging the ACR Stealer malware. This malware targets browser-stored credentials, authentication tokens, and sensitive documents from enterprise customers, posing a severe threat to corporate data exfiltration and account compromise.",
+      "action": "Implement strong multi-factor authentication (MFA) across all services, especially Microsoft 365. Deploy EDR solutions, conduct user awareness training against phishing and social engineering, and proactively scan endpoints for ACR Stealer Indicators of Compromise (IOCs).",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/acr-stealer-uses-clickfix-lures-to.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Ernst & Young discloses data breach after support system hack",
-      "tldr": "Ernst & Young (EY) has reported a data breach that originated from the compromise of a third-party support ticket system utilized by its IT personnel. This incident likely exposed sensitive customer data and internal communications, raising concerns about third-party vendor risk.",
-      "action": "Organizations should conduct thorough security assessments of all third-party support systems and vendors. EY customers should remain vigilant for potential phishing attempts or unauthorized access attempts that could leverage information exposed in this breach.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/",
       "source": "BleepingComputer"
     },
     {
-      "title": "New ClickLock macOS malware traps users into revealing login password",
-      "tldr": "A novel macOS information-stealing malware, dubbed 'ClickLock,' terminates all visible processes to simulate a system lock-screen. This coercive tactic tricks users into entering their system login password, which the malware then intercepts and steals, compromising user credentials.",
-      "action": "Educate macOS users on this specific social engineering technique and the critical importance of verifying system prompts before entering credentials. Implement enhanced endpoint security for macOS, focusing on behavioral detection and process monitoring to identify and prevent such malware.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-clicklock-macos-malware-traps-users-into-revealing-login-password/",
-      "source": "BleepingComputer"
-    }
-  ],
-  "ransomware": [
-    {
-      "title": "Abbott Laboratories probes two cyber incidents amid extortion claims",
-      "tldr": "Abbott Laboratories is investigating two distinct cybersecurity incidents, including unauthorized access to legacy Exact Sciences systems within its Cancer Diagnostics business and claims of a breach of its LabCentral portal leading to data theft. The investigation includes reports of extortion, suggesting potential ransomware activity or data exfiltration for ransom.",
-      "action": "Monitor closely for further public disclosures regarding the nature of the breaches and any specific data compromised. Implement immediate incident response protocols, enhance monitoring for anomalous activity on legacy systems and critical portals, and prepare for potential data recovery if systems are encrypted or data is held for ransom.",
+      "title": "Abbott probes two cyber incidents amid extortion claims",
+      "tldr": "Abbott Laboratories is investigating two distinct cyber incidents, one involving unauthorized access to internal legacy Exact Sciences systems and another concerning claims of a breach of its LabCentral portal with stolen company data. These incidents are unfolding amidst potential extortion attempts.",
+      "action": "Isolate affected systems and conduct a thorough forensic investigation to determine the extent of compromise and data exfiltration. Engage legal and incident response teams, and prepare for potential data disclosure and regulatory notification requirements.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Armenia Detains Russian Tourist on U.S. Warrant for REvil Hacker, Lawyers Say Wrong Man",
-      "tldr": "Authorities in Armenia have detained a Russian tourist based on a U.S. warrant, alleging his involvement with the notorious REvil ransomware group. This arrest highlights ongoing international law enforcement efforts to apprehend ransomware operators, although lawyers for the detained individual dispute the identification.",
-      "action": "Stay informed about international law enforcement actions against major ransomware groups, as these can influence threat actor behavior and operations. Ensure robust defensive measures are in place against known REvil tactics, techniques, and procedures (TTPs).",
+      "title": "Ernst & Young discloses data breach after support system hack",
+      "tldr": "Ernst & Young (EY) is notifying customers of a data breach that originated from the compromise of a third-party support ticket system utilized by its IT personnel. This incident potentially exposed sensitive customer data managed through the affected ticketing system.",
+      "action": "If you are an EY client, inquire directly about the scope of the breach and specific data types potentially affected. All organizations should enhance their third-party risk management, rigorously vet vendor security, and ensure secure configurations for support systems.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/armenia-detains-russian-tourist-on-us.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Coca-Cola says Fairlife ransomware attack halts US dairy production",
-      "tldr": "The Coca-Cola Company has officially confirmed that a ransomware attack targeting its Fairlife dairy subsidiary has severely disrupted operations, leading to the temporary suspension of Fairlife product production across the United States. This incident underscores the critical impact ransomware can have on supply chains and physical production.",
-      "action": "Prioritize and reinforce robust ransomware defense strategies, including implementing immutable backups, strong network segmentation, advanced endpoint protection, and comprehensive incident response plans. Critically review and enhance the security posture of operational technology (OT) and industrial control systems (ICS) to mitigate ransomware impact on production facilities.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/coca-cola-says-fairlife-ransomware-attack-halts-us-dairy-production/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/",
       "source": "BleepingComputer"
-    },
+    }
+  ],
+  "ransomware": [
     {
       "title": "Cyberattack Disrupts Operations of Japanese Frozen Food Giant Nichirei",
-      "tldr": "Japanese frozen food giant Nichirei has reported a significant cyberattack that has caused widespread disruption to its operational capabilities. While specific details of the attack are still emerging, such impactful operational disruptions often indicate sophisticated breaches, including ransomware or destructive malware.",
-      "action": "Monitor for further details regarding the nature and scope of the attack on Nichirei. Organizations should proactively strengthen their incident response plans for operational disruptions, focusing on rapid recovery and business continuity. Review and enhance resilience strategies against cyberattacks impacting critical business processes.",
+      "tldr": "Japanese frozen food giant Nichirei experienced a cyberattack that significantly disrupted its operations. While specific details are limited, such widespread operational disruptions often indicate a ransomware attack or similar destructive malware campaign.",
+      "action": "Implement robust incident response plans, segment networks, and ensure comprehensive, immutable backups are regularly performed and tested. Proactively monitor for signs of intrusion and prepare for potential operational recovery scenarios.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/cyberattack-disrupts-operations-of-japanese-frozen-food-giant-nichirei/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Coca-Cola Suspends US Fairlife Production Due to Ransomware Attack",
+      "tldr": "Coca-Cola's Fairlife production facilities in the US have been suspended following a ransomware attack. This incident highlights the significant operational impact and business disruption that ransomware can inflict on critical infrastructure and supply chains.",
+      "action": "Ensure all critical systems are protected with up-to-date EDR/AV solutions, strong network segmentation, and regularly tested immutable backups. Implement and test a comprehensive ransomware incident response plan, including offline recovery strategies.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/coca-cola-suspends-us-fairlife-production-due-to-ransomware-attack/",
       "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
-      "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
-      "tldr": "A newly discovered critical vulnerability, dubbed 'wp2shell,' in the WordPress core allows unauthenticated attackers to execute arbitrary code on affected installations. This remote code execution (RCE) flaw poses an extreme risk to WordPress websites, potentially leading to full site compromise.",
-      "action": "Immediately identify all WordPress installations within your environment. Monitor official WordPress security advisories for patches and apply them with emergency priority. Scan for indicators of compromise on any exposed WordPress instances.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "WordPress core, specific vulnerable versions pending official advisory",
-      "how_to_determine_impact": "Check the exact version of all WordPress installations. Inspect web server and WordPress application logs for any suspicious requests or unauthorized file modifications indicative of exploitation attempts.",
-      "tanium_query_hint": "Get Installed Applications contains \"WordPress\"; Get File Version[\"/path/to/wordpress/wp-includes/version.php\"]",
-      "rapid7_query_hint": "Search for WordPress installations using asset queries: `asset.software.name CONTAINS \"WordPress\"`. Scan for relevant vulnerability checks once available: `vulnerability.title CONTAINS \"WordPress wp2shell\"`.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "New Windows LegacyHive zero-day gives hackers admin privileges",
-      "tldr": "A security researcher has publicly released a new Windows zero-day exploit, named 'LegacyHive,' which enables attackers to escalate privileges to administrative level on fully updated Windows systems. This local privilege escalation (LPE) vulnerability presents a severe threat, allowing unauthorized access to critical system functions after initial compromise.",
-      "action": "Monitor for an official patch from Microsoft and apply it immediately upon release. Implement enhanced endpoint detection and response (EDR) rules to detect indicators of compromise related to LegacyHive exploitation. Enforce the principle of least privilege for all user accounts.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Windows OS, all currently supported versions until a patch is released",
-      "how_to_determine_impact": "Audit all Windows systems for signs of unusual privilege escalation, suspicious process creation, or unauthorized administrative activity. Examine Windows Event Logs for security events (e.g., Event ID 4624 login type 10, Event ID 4672 special privileges assigned) that may indicate exploitation.",
-      "tanium_query_hint": "Get Windows OS Version; Get Running Processes where CommandLine contains \"LegacyHive\" (if specific exploit strings are known) or query for suspicious processes elevating privileges.",
-      "rapid7_query_hint": "Scan Windows assets for the presence of this vulnerability. Monitor for privilege escalation attempts in Endpoint Threat Detection modules: `asset.os.name CONTAINS \"Windows\" AND vulnerability.title CONTAINS \"LegacyHive\"`.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "7.8 High"
-    },
-    {
       "title": "CISA urges immediate action on actively exploited Fortinet flaws",
-      "tldr": "CISA has issued an alert urging federal agencies to take immediate action and patch two actively exploited vulnerabilities in the Fortinet FortiSandbox threat detection platform. These flaws are being actively leveraged by attackers in the wild, posing a significant risk to organizations using these devices.",
-      "action": "Organizations utilizing Fortinet FortiSandbox must immediately apply all available patches and security updates as per Fortinet's advisories. If patching is not feasible, implement all vendor-recommended mitigations. Scan for known indicators of compromise (IOCs) associated with the active exploitation of these vulnerabilities.",
+      "tldr": "CISA has issued an emergency directive for federal agencies, highlighting two actively exploited vulnerabilities in Fortinet FortiSandbox. These critical flaws pose an immediate threat, necessitating urgent patching to prevent system compromise.",
+      "action": "Immediately apply all available patches for your Fortinet FortiSandbox instances. Conduct a thorough review of logs for any signs of compromise and perform a forensic analysis if suspicious activity is detected.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Fortinet FortiSandbox, specific vulnerable versions as per CISA and Fortinet advisories",
-      "how_to_determine_impact": "Inventory all Fortinet FortiSandbox instances in the environment. Verify their current version numbers against the latest CISA and Fortinet security advisories. Check device logs for any suspicious activity or error messages indicating compromise.",
-      "tanium_query_hint": "Get Installed Applications contains \"FortiSandbox\"; Get FortiSandbox Version; Search for known IOCs in logs or file systems using 'Get File Hash' or 'Get Security Log'.",
-      "rapid7_query_hint": "Scan for Fortinet FortiSandbox appliances. Search for vulnerability IDs matching Fortinet FortiSandbox vulnerabilities or specific CVEs if provided in CISA KEV: `asset.software.name CONTAINS \"FortiSandbox\" AND vulnerability.severity IN [\"Critical\", \"High\"]`.",
+      "affected_versions": "Fortinet FortiSandbox threat detection platform (specific vulnerable versions should be referenced in official CISA or Fortinet advisories).",
+      "how_to_determine_impact": "Check the version of all Fortinet FortiSandbox installations. Consult Fortinet's security advisories for the specific CVEs CISA is referring to and their affected versions. Review audit logs for unauthorized access or suspicious activity on FortiSandbox devices, focusing on the period since disclosure.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name matches 'FortiSandbox' and Version less than 'latest_patched_version'. Query 'Network Connections' for suspicious outbound traffic from FortiSandbox appliances, consistent with C2 activity.",
+      "rapid7_query_hint": "Search for assets running FortiSandbox. Look for vulnerability detections specific to Fortinet FortiSandbox within InsightVM. Prioritize assets with these vulnerabilities for immediate patching and conduct a thorough review of compromise indicators via InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical (Estimated based on CISA's emergency directive and active exploitation)"
+    },
+    {
+      "title": "New Windows LegacyHive zero-day gives hackers admin privileges",
+      "tldr": "A new Windows zero-day exploit, dubbed 'LegacyHive,' has been publicly released, enabling attackers to achieve local privilege escalation on fully updated Windows systems. This severe vulnerability grants administrative privileges, posing a significant risk to endpoint security.",
+      "action": "Immediately apply any available out-of-band patches or workarounds from Microsoft. Monitor all Windows systems for suspicious privilege escalation attempts, unusual process creation, or known indicators of compromise related to LegacyHive.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Up-to-date Windows systems, including Windows Server (specific versions not provided but implied to affect recent OS builds).",
+      "how_to_determine_impact": "Monitor security event logs (e.g., Event ID 4672 for special privileges assigned) for privilege escalation attempts. Check for unusual processes running with elevated privileges on Windows endpoints. Review system changes for unauthorized modifications.",
+      "tanium_query_hint": "Monitor 'Running Processes' for suspicious executables, particularly those launched from temporary directories or with unusual parent-child relationships. Search 'Security Event Logs' for privilege escalation indicators (e.g., specific event IDs for new logons with administrative rights).",
+      "rapid7_query_hint": "Scan for any known Indicators of Compromise (IOCs) associated with LegacyHive. Use InsightIDR to detect suspicious privilege escalation activities, unauthorized access, or unusual process behavior. Implement behavioral analytics to flag anomalies.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated due to zero-day local privilege escalation)"
     },
     {
       "title": "Fresh SharePoint Vulnerability Exploited Soon After Disclosure",
-      "tldr": "A recently disclosed vulnerability affecting Microsoft SharePoint has been observed under active exploitation almost immediately after its public disclosure. This rapid weaponization highlights the severity of the flaw and the urgent need for mitigation, as attackers are quickly incorporating it into their toolkits.",
-      "action": "All organizations using Microsoft SharePoint must immediately identify their installations, verify if they are running a vulnerable version, and apply all available patches or vendor-recommended mitigations without delay. Actively scan SharePoint servers for any indicators of compromise related to the exploitation of this vulnerability.",
+      "tldr": "A newly disclosed vulnerability in Microsoft SharePoint is being actively exploited in the wild, mere days after its public disclosure. This rapid exploitation makes immediate patching critical for all organizations utilizing SharePoint to prevent compromise.",
+      "action": "Immediately apply all available security patches and updates for your Microsoft SharePoint Server installations. Conduct a thorough audit of SharePoint server logs for any signs of compromise, unusual access, or suspicious file modifications.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/fresh-sharepoint-vulnerability-exploited-soon-after-disclosure/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint, specific vulnerable versions pending official advisory",
-      "how_to_determine_impact": "Inventory all Microsoft SharePoint servers and determine their exact build and patch levels. Refer to Microsoft's official security advisories for the precise vulnerable versions and recommended detection methods or IOCs.",
-      "tanium_query_hint": "Get Installed Applications contains \"SharePoint\"; Get SharePoint Version; Query system logs for unusual activity on SharePoint servers using 'Get Event Log' or 'Get Security Log'.",
-      "rapid7_query_hint": "Scan SharePoint servers for the presence of this vulnerability. Utilize vulnerability assessment tools and `asset.software.name CONTAINS \"SharePoint\" AND vulnerability.severity IN [\"Critical\", \"High\"]` in InsightVM/IDR.",
+      "affected_versions": "Microsoft SharePoint Server (specific vulnerable versions not provided but implies recent versions affected by a critical flaw).",
+      "how_to_determine_impact": "Check the installed version of all SharePoint servers against Microsoft's official security advisories for recently disclosed vulnerabilities. Review SharePoint audit logs, IIS logs, and Windows event logs for signs of unauthorized access, suspicious command execution, or web shell deployment.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name matches 'SharePoint Server' and Version less than 'latest_patched_version'. Monitor 'Running Processes' and 'Network Connections' on SharePoint servers for anomalies. Search for known web shell signatures on SharePoint directories.",
+      "rapid7_query_hint": "Scan assets running Microsoft SharePoint. Look for vulnerability detections specific to recently disclosed SharePoint vulnerabilities in InsightVM. Prioritize these assets for immediate patching and investigate for compromise indicators using InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical (Estimated due to active exploitation on a widely used enterprise platform)"
+    },
+    {
+      "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
+      "tldr": "A new critical vulnerability, dubbed 'wp2shell,' has been discovered in WordPress core, allowing unauthenticated attackers to execute arbitrary code remotely. This flaw poses a significant risk to WordPress installations, enabling full system compromise.",
+      "action": "Immediately update all WordPress installations to the latest available security patch. Conduct a comprehensive forensic analysis for any signs of compromise if running vulnerable versions and implement web application firewall (WAF) rules to mitigate exploitation attempts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "WordPress Core (specific vulnerable versions not provided in snippet, but implies recent versions potentially affected).",
+      "how_to_determine_impact": "Check the WordPress version on all web servers. If running a vulnerable version, ensure immediate update. Look for suspicious file modifications (e.g., new PHP files, changes to core files), new user accounts, or unusual outbound connections from the web server.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'wordpress' or 'php' and Version less than 'latest_version_number'. Scan web server directories for suspicious files (e.g., using 'Get File Hash' for known malicious files or 'Get Recently Modified Files').",
+      "rapid7_query_hint": "Search for assets running WordPress. Check for vulnerabilities specific to WordPress core in InsightVM. Perform an authenticated scan on WordPress installations to identify version and potential compromises. Monitor web server logs for suspicious requests.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated due to unauthenticated remote code execution)"
     }
   ],
   "insurance": [],
@@ -5146,6 +5130,126 @@
         "rapid7_query_hint": "Search for WordPress installations using asset queries: `asset.software.name CONTAINS \"WordPress\"`. Scan for relevant vulnerability checks once available: `vulnerability.title CONTAINS \"WordPress wp2shell\"`.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-07-18": [
+      {
+        "title": "GoldenEyeDog Subgroup Linked to DigiCert Breach and Code-Signing Certificate Theft",
+        "tldr": "The GoldenEyeDog subgroup has been implicated in a breach of DigiCert, resulting in the theft of code-signing certificates. This compromise allows attackers to sign malicious software, making it appear legitimate and bypass security controls, posing a supply chain risk.",
+        "action": "Organizations should review their trust policies for code-signing certificates, especially those issued by DigiCert around the time of the breach. Implement enhanced monitoring for software signed with potentially compromised certificates and revoke trust for any identified.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/goldeneyedog-subgroup-linked-to.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Microsoft warns of surge in ACR Stealer attacks on customers",
+        "tldr": "Microsoft has issued a warning regarding a significant increase in attacks leveraging the ACR Stealer malware. This malware targets browser-stored credentials, authentication tokens, and sensitive documents from enterprise customers, posing a severe threat to corporate data exfiltration and account compromise.",
+        "action": "Implement strong multi-factor authentication (MFA) across all services, especially Microsoft 365. Deploy EDR solutions, conduct user awareness training against phishing and social engineering, and proactively scan endpoints for ACR Stealer Indicators of Compromise (IOCs).",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Abbott probes two cyber incidents amid extortion claims",
+        "tldr": "Abbott Laboratories is investigating two distinct cyber incidents, one involving unauthorized access to internal legacy Exact Sciences systems and another concerning claims of a breach of its LabCentral portal with stolen company data. These incidents are unfolding amidst potential extortion attempts.",
+        "action": "Isolate affected systems and conduct a thorough forensic investigation to determine the extent of compromise and data exfiltration. Engage legal and incident response teams, and prepare for potential data disclosure and regulatory notification requirements.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Ernst & Young discloses data breach after support system hack",
+        "tldr": "Ernst & Young (EY) is notifying customers of a data breach that originated from the compromise of a third-party support ticket system utilized by its IT personnel. This incident potentially exposed sensitive customer data managed through the affected ticketing system.",
+        "action": "If you are an EY client, inquire directly about the scope of the breach and specific data types potentially affected. All organizations should enhance their third-party risk management, rigorously vet vendor security, and ensure secure configurations for support systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Cyberattack Disrupts Operations of Japanese Frozen Food Giant Nichirei",
+        "tldr": "Japanese frozen food giant Nichirei experienced a cyberattack that significantly disrupted its operations. While specific details are limited, such widespread operational disruptions often indicate a ransomware attack or similar destructive malware campaign.",
+        "action": "Implement robust incident response plans, segment networks, and ensure comprehensive, immutable backups are regularly performed and tested. Proactively monitor for signs of intrusion and prepare for potential operational recovery scenarios.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/cyberattack-disrupts-operations-of-japanese-frozen-food-giant-nichirei/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Coca-Cola Suspends US Fairlife Production Due to Ransomware Attack",
+        "tldr": "Coca-Cola's Fairlife production facilities in the US have been suspended following a ransomware attack. This incident highlights the significant operational impact and business disruption that ransomware can inflict on critical infrastructure and supply chains.",
+        "action": "Ensure all critical systems are protected with up-to-date EDR/AV solutions, strong network segmentation, and regularly tested immutable backups. Implement and test a comprehensive ransomware incident response plan, including offline recovery strategies.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/coca-cola-suspends-us-fairlife-production-due-to-ransomware-attack/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "CISA urges immediate action on actively exploited Fortinet flaws",
+        "tldr": "CISA has issued an emergency directive for federal agencies, highlighting two actively exploited vulnerabilities in Fortinet FortiSandbox. These critical flaws pose an immediate threat, necessitating urgent patching to prevent system compromise.",
+        "action": "Immediately apply all available patches for your Fortinet FortiSandbox instances. Conduct a thorough review of logs for any signs of compromise and perform a forensic analysis if suspicious activity is detected.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-feds-to-patch-exploited-fortinet-fortisandbox-flaws-by-sunday/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Fortinet FortiSandbox threat detection platform (specific vulnerable versions should be referenced in official CISA or Fortinet advisories).",
+        "how_to_determine_impact": "Check the version of all Fortinet FortiSandbox installations. Consult Fortinet's security advisories for the specific CVEs CISA is referring to and their affected versions. Review audit logs for unauthorized access or suspicious activity on FortiSandbox devices, focusing on the period since disclosure.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Name matches 'FortiSandbox' and Version less than 'latest_patched_version'. Query 'Network Connections' for suspicious outbound traffic from FortiSandbox appliances, consistent with C2 activity.",
+        "rapid7_query_hint": "Search for assets running FortiSandbox. Look for vulnerability detections specific to Fortinet FortiSandbox within InsightVM. Prioritize assets with these vulnerabilities for immediate patching and conduct a thorough review of compromise indicators via InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated based on CISA's emergency directive and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "New Windows LegacyHive zero-day gives hackers admin privileges",
+        "tldr": "A new Windows zero-day exploit, dubbed 'LegacyHive,' has been publicly released, enabling attackers to achieve local privilege escalation on fully updated Windows systems. This severe vulnerability grants administrative privileges, posing a significant risk to endpoint security.",
+        "action": "Immediately apply any available out-of-band patches or workarounds from Microsoft. Monitor all Windows systems for suspicious privilege escalation attempts, unusual process creation, or known indicators of compromise related to LegacyHive.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Up-to-date Windows systems, including Windows Server (specific versions not provided but implied to affect recent OS builds).",
+        "how_to_determine_impact": "Monitor security event logs (e.g., Event ID 4672 for special privileges assigned) for privilege escalation attempts. Check for unusual processes running with elevated privileges on Windows endpoints. Review system changes for unauthorized modifications.",
+        "tanium_query_hint": "Monitor 'Running Processes' for suspicious executables, particularly those launched from temporary directories or with unusual parent-child relationships. Search 'Security Event Logs' for privilege escalation indicators (e.g., specific event IDs for new logons with administrative rights).",
+        "rapid7_query_hint": "Scan for any known Indicators of Compromise (IOCs) associated with LegacyHive. Use InsightIDR to detect suspicious privilege escalation activities, unauthorized access, or unusual process behavior. Implement behavioral analytics to flag anomalies.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (Estimated due to zero-day local privilege escalation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Fresh SharePoint Vulnerability Exploited Soon After Disclosure",
+        "tldr": "A newly disclosed vulnerability in Microsoft SharePoint is being actively exploited in the wild, mere days after its public disclosure. This rapid exploitation makes immediate patching critical for all organizations utilizing SharePoint to prevent compromise.",
+        "action": "Immediately apply all available security patches and updates for your Microsoft SharePoint Server installations. Conduct a thorough audit of SharePoint server logs for any signs of compromise, unusual access, or suspicious file modifications.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/fresh-sharepoint-vulnerability-exploited-soon-after-disclosure/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft SharePoint Server (specific vulnerable versions not provided but implies recent versions affected by a critical flaw).",
+        "how_to_determine_impact": "Check the installed version of all SharePoint servers against Microsoft's official security advisories for recently disclosed vulnerabilities. Review SharePoint audit logs, IIS logs, and Windows event logs for signs of unauthorized access, suspicious command execution, or web shell deployment.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Name matches 'SharePoint Server' and Version less than 'latest_patched_version'. Monitor 'Running Processes' and 'Network Connections' on SharePoint servers for anomalies. Search for known web shell signatures on SharePoint directories.",
+        "rapid7_query_hint": "Scan assets running Microsoft SharePoint. Look for vulnerability detections specific to recently disclosed SharePoint vulnerabilities in InsightVM. Prioritize these assets for immediate patching and investigate for compromise indicators using InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated due to active exploitation on a widely used enterprise platform)",
+        "category": "vulns"
+      },
+      {
+        "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
+        "tldr": "A new critical vulnerability, dubbed 'wp2shell,' has been discovered in WordPress core, allowing unauthenticated attackers to execute arbitrary code remotely. This flaw poses a significant risk to WordPress installations, enabling full system compromise.",
+        "action": "Immediately update all WordPress installations to the latest available security patch. Conduct a comprehensive forensic analysis for any signs of compromise if running vulnerable versions and implement web application firewall (WAF) rules to mitigate exploitation attempts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "WordPress Core (specific vulnerable versions not provided in snippet, but implies recent versions potentially affected).",
+        "how_to_determine_impact": "Check the WordPress version on all web servers. If running a vulnerable version, ensure immediate update. Look for suspicious file modifications (e.g., new PHP files, changes to core files), new user accounts, or unusual outbound connections from the web server.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'wordpress' or 'php' and Version less than 'latest_version_number'. Scan web server directories for suspicious files (e.g., using 'Get File Hash' for known malicious files or 'Get Recently Modified Files').",
+        "rapid7_query_hint": "Search for assets running WordPress. Check for vulnerabilities specific to WordPress core in InsightVM. Perform an authenticated scan on WordPress installations to identify version and potential compromises. Monitor web server logs for suspicious requests.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated due to unauthenticated remote code execution)",
         "category": "vulns"
       }
     ]
