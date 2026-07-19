@@ -2,24 +2,32 @@
   "breaches": [
     {
       "title": "GoldenEyeDog Subgroup Linked to DigiCert Breach and Code-Signing Certificate Theft",
-      "tldr": "A subgroup identified as GoldenEyeDog is connected to a breach at DigiCert, resulting in the theft of code-signing certificates. This compromise could enable supply chain attacks and impersonation through digitally signed malicious software.",
-      "action": "Review the integrity of all software signed with DigiCert certificates, especially those obtained around the time of the breach. Implement enhanced monitoring for suspicious code execution.",
+      "tldr": "The GoldenEyeDog subgroup is implicated in a data breach at DigiCert, which involved the theft of code-signing certificates. This compromise poses a significant supply chain risk due to the potential for malicious software to be signed with stolen credentials.",
+      "action": "Organizations should review the integrity of software signed with DigiCert certificates and be alert for any suspicious software updates or new executables. Consider revoking any compromised code-signing certificates if specific details become available.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/goldeneyedog-subgroup-linked-to.html",
       "source": "The Hacker News"
     },
     {
+      "title": "Microsoft warns of surge in ACR Stealer attacks on customers",
+      "tldr": "Microsoft is alerting customers to a significant increase in attacks leveraging the ACR Stealer malware. This malware targets enterprise customers to exfiltrate browser-stored passwords, authentication tokens, and sensitive documents, posing a direct threat of data breach and account compromise.",
+      "action": "Implement multi-factor authentication (MFA) across all services. Educate users about phishing and social engineering tactics. Deploy endpoint detection and response (EDR) solutions and ensure they are configured to detect and block known stealer malware. Review and rotate critical credentials.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Abbott probes two cyber incidents amid extortion claims",
-      "tldr": "Abbott Laboratories is investigating two distinct cyber incidents: unauthorized access to legacy Exact Sciences systems in its Cancer Diagnostics business, and a separate claim of a breach and data theft from its LabCentral portal. Extortion claims are also being investigated.",
-      "action": "Monitor for any unusual activity or data exfiltration from systems connected to Exact Sciences or LabCentral. Review access logs and enhance security controls on all connected systems.",
+      "tldr": "Abbott Laboratories is investigating two distinct cyber incidents, including unauthorized access to legacy Exact Sciences systems within its Cancer Diagnostics business and a claim of data theft from its LabCentral portal. Extortion attempts are also being investigated, suggesting potential data exfiltration.",
+      "action": "Monitor for any suspicious activity on systems, especially those related to Exact Sciences and LabCentral. Review access logs for unauthorized access and enhance monitoring for data exfiltration attempts. Prepare incident response plans for potential data disclosure.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/",
       "source": "BleepingComputer"
     },
     {
       "title": "Ernst & Young discloses data breach after support system hack",
-      "tldr": "Ernst & Young (EY) has announced a data breach originating from the compromise of a third-party support ticket system utilized by its IT staff. Customer data may have been exposed as a result.",
-      "action": "Review logs related to the compromised third-party support system for any unauthorized access or data exfiltration. Enhance security assessments for third-party vendors.",
+      "tldr": "Ernst & Young has announced a data breach originating from the compromise of a third-party support ticket system utilized by its IT staff. This incident likely exposed customer data and potentially sensitive internal communications handled through the system.",
+      "action": "Identify if your organization's data or personnel information was processed by the compromised third-party support system. If so, assess the type of data exposed and activate relevant incident response protocols. Enhance third-party vendor risk assessments and security controls.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/",
       "source": "BleepingComputer"
@@ -28,8 +36,8 @@
   "ransomware": [
     {
       "title": "Coca-Cola Suspends US Fairlife Production Due to Ransomware Attack",
-      "tldr": "Coca-Cola's Fairlife production in the US has been halted following a ransomware attack. This incident has severely impacted operational technology (OT) systems, leading to production suspension.",
-      "action": "Implement robust ransomware defense strategies, including air-gapped backups, strong segmentation, and comprehensive endpoint detection and response (EDR) solutions. Review and enhance OT security measures.",
+      "tldr": "Coca-Cola's Fairlife production in the U.S. has been halted following a confirmed ransomware attack. This incident highlights the significant operational disruption and supply chain impact that ransomware can inflict on critical infrastructure and manufacturing sectors.",
+      "action": "Ensure robust offline backups are regularly taken and tested. Implement strong network segmentation and advanced endpoint protection. Review and strengthen incident response plans specifically for ransomware attacks, including business continuity strategies for critical operations.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/coca-cola-suspends-us-fairlife-production-due-to-ransomware-attack/",
       "source": "SecurityWeek"
@@ -38,63 +46,63 @@
   "vulns": [
     {
       "title": "SonicWall SMA Zero-Days Exploited Before Disclosure to Gain Root Access",
-      "tldr": "Threat actors actively exploited zero-day vulnerabilities in SonicWall SMA devices prior to public disclosure. These exploits allowed attackers to gain root access, indicating severe compromise capabilities.",
-      "action": "Immediately patch SonicWall SMA devices to the latest security versions. Investigate logs for any signs of compromise, especially around the disclosure date.",
+      "tldr": "Multiple zero-day vulnerabilities in SonicWall SMA appliances were actively exploited to achieve root-level access before they were publicly disclosed. This poses an immediate and severe threat to organizations utilizing these devices.",
+      "action": "Immediately identify all SonicWall SMA appliances within your environment. Apply available patches or mitigation steps provided by SonicWall without delay. Conduct a thorough forensic analysis for signs of compromise if patches were not applied proactively.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SMA appliances (all vulnerable versions prior to the latest security update)",
-      "how_to_determine_impact": "Verify that all SonicWall SMA appliances are running the latest patched firmware. Check system and network logs for unauthorized access attempts or suspicious activities (e.g., unusual logins, file modifications) prior to the patch application.",
-      "tanium_query_hint": "Utilize Tanium Connect to pull 'Installed Applications' data and filter for 'SonicWall SMA'. Query 'Network Connections' and 'Event Logs' for suspicious activity from SMA devices around the disclosure period. Implement custom sensors for specific file hashes or process names if IOCs are released.",
-      "rapid7_query_hint": "Use InsightVM to scan for vulnerabilities specific to SonicWall SMA devices. For InsightIDR, monitor 'Authentication' and 'Admin Activity' logs for unusual access to SMA management interfaces. Leverage InsightAgent queries to check for specific file or process indicators on systems interacting with SMA.",
+      "affected_versions": "SonicWall SMA appliances. Specific vulnerable versions require official SonicWall advisory.",
+      "how_to_determine_impact": "Review SonicWall SMA appliance logs for unauthorized root access, unusual activity, or vendor-specific Indicators of Compromise (IOCs). Verify current firmware/software versions against official SonicWall advisories.",
+      "tanium_query_hint": "Get Computer Name and OS Platform from all machines with Installed Applications contains 'SonicWall SMA'. Check logs for '/var/log/messages' (Linux) or Windows Event Logs for suspicious processes or user activity.",
+      "rapid7_query_hint": "Asset search for 'SonicWall SMA'. Review log data in InsightIDR for unusual logins or process activity from SMA devices. Check for relevant vulnerability IDs once published by Rapid7.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimate: Zero-day, root access, exploited)"
     },
     {
-      "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
-      "tldr": "A critical 'wp2shell' vulnerability in WordPress Core allows unauthenticated attackers to execute arbitrary code. This flaw poses a significant risk as it can be exploited without prior authentication, and public exploits are now available.",
-      "action": "Immediately apply available patches for WordPress Core to mitigate the 'wp2shell' vulnerability. Harden web server configurations to limit execution privileges.",
+      "title": "WordPress Core \"wp2shell\" RCE flaws get public exploits, patch now",
+      "tldr": "Public exploits have been released for the critical \"wp2shell\" remote code execution (RCE) vulnerabilities affecting WordPress Core. These flaws allow unauthenticated attackers to execute arbitrary code, making immediate patching essential for all WordPress administrators.",
+      "action": "Urgently update all WordPress installations to the latest patched version. If immediate patching is not possible, implement web application firewall (WAF) rules to block known exploit patterns for \"wp2shell\" vulnerabilities.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "WordPress Core (specific versions vulnerable to 'wp2shell' RCE prior to patch)",
-      "how_to_determine_impact": "Identify all WordPress installations across the environment and check their exact version numbers. Compare against vendor advisories for affected ranges. Review web server access logs for unusual requests patterns indicative of exploitation attempts.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to identify 'WordPress' installations and their reported versions. For Linux/Windows web servers, use 'Get File Version' on core WordPress files or 'Get Content of File' on configuration files to identify vulnerable instances. Monitor 'Running Processes' for suspicious web server child processes.",
-      "rapid7_query_hint": "In InsightVM, scan web servers for WordPress installations and check for related vulnerabilities. In InsightIDR, configure alerts for suspicious web requests targeting WordPress paths or unusual process execution originating from web server accounts. Use 'Asset Search' with software filters for 'WordPress'.",
+      "affected_versions": "WordPress Core. Specific vulnerable versions require official WordPress advisory, typically all versions prior to the patched release.",
+      "how_to_determine_impact": "Verify WordPress version via the dashboard or `wp-includes/version.php`. Examine web server access logs for suspicious unauthenticated POST requests to core files (e.g., `wp-admin/admin-ajax.php`, `wp-login.php`) and file system for unauthorized file modifications or new files in WordPress directories.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'WordPress'. For Linux, 'Get File Content /var/www/html/wp-includes/version.php'. Check 'Get Files Matching Pattern' for unusual files in '/var/www/html/wp-content/'.",
+      "rapid7_query_hint": "Asset search for 'WordPress' instances. Check InsightIDR logs for web server access logs showing suspicious POST requests to WordPress core. Look for vulnerability ID related to 'wp2shell' RCE.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimate: Unauthenticated RCE, public exploits)"
     },
     {
       "title": "New Windows LegacyHive zero-day gives hackers admin privileges",
-      "tldr": "A new Windows zero-day exploit, dubbed 'LegacyHive,' has been publicly released, enabling attackers to escalate privileges on fully updated Windows systems. This is a critical local privilege escalation vulnerability.",
-      "action": "Monitor for indicators of compromise related to 'LegacyHive' exploitation. Apply any emergency patches from Microsoft immediately once available. Isolate critical systems if exploitation is suspected.",
+      "tldr": "A new Windows zero-day exploit, dubbed \"LegacyHive,\" has been publicly released, allowing attackers to escalate privileges to administrative levels on up-to-date Windows systems. This local privilege escalation (LPE) vulnerability poses a significant risk to system integrity.",
+      "action": "Implement least privilege principles rigorously. Monitor for unusual process creation or privilege escalation attempts, especially on critical Windows servers and workstations. Apply vendor-provided patches immediately upon release.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Up-to-date Windows systems (versions currently supported by Microsoft)",
-      "how_to_determine_impact": "Since this is a zero-day with a public exploit, assume immediate risk. Monitor Windows event logs (Security, System, Application) for suspicious privilege escalation events, new service installations, or unusual process creation from standard user accounts. Look for activity from the 'Nightmare Eclipse' exploit framework if IOCs are released.",
-      "tanium_query_hint": "Run 'Get Running Processes' and 'Get Running Services' on all Windows endpoints to look for unusual executables or services. Use 'Get Event Log' to search for specific event IDs related to privilege escalation (e.g., 4624, 4672, 4656). Leverage 'Get Registry Value' or 'Get File Hash' for any known IOCs.",
-      "rapid7_query_hint": "Monitor 'Endpoint Activity' in InsightIDR for privilege escalation attempts, suspicious process launches by low-privilege users, or unusual modifications to system configurations. Configure custom alerts based on any released IOCs (e.g., file names, registry changes). Run InsightVM scans for related vulnerabilities once a CVE is assigned.",
+      "affected_versions": "Up-to-date Windows systems. Specific builds and patch levels will be detailed in official Microsoft advisory once a CVE is assigned.",
+      "how_to_determine_impact": "Monitor Windows Event Logs (Security, System, AppLocker if used) for unusual privilege escalation events, new services created, or unexpected processes running with SYSTEM privileges. Look for signs of 'LegacyHive' exploit artifacts or behavior described in security advisories.",
+      "tanium_query_hint": "Get Running Processes with Parent Process Name is 'explorer.exe' and User Name is 'SYSTEM' for unusual activity. Check 'Get Registry Value' for `HKLM\\SYSTEM\\CurrentControlSet\\Services\\*` for newly created suspicious services. 'Get File Hash' for known exploit files.",
+      "rapid7_query_hint": "Asset search for Windows operating systems. Utilize InsightIDR for detecting unusual privilege escalation events, new process executions with SYSTEM privileges from non-standard parents, or suspicious activity within sensitive directories.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "8.8 High (Estimate: Local Privilege Escalation zero-day)"
     },
     {
-      "title": "Fresh SharePoint Vulnerability Exploited Soon After Disclosure",
-      "tldr": "A recently disclosed vulnerability in Microsoft SharePoint is being actively exploited in the wild shortly after its public revelation. This indicates a critical need for immediate patching to prevent compromise.",
-      "action": "Immediately apply all available security updates for Microsoft SharePoint. Monitor SharePoint servers for signs of compromise, including unusual access patterns, file modifications, or unexpected process execution.",
+      "title": "Critical NGINX Vulnerability Can Crash Workers and May Allow Remote Code Execution",
+      "tldr": "A critical vulnerability in NGINX has been identified that can lead to worker process crashes and potentially enable remote code execution (RCE). This flaw poses a severe risk to web servers running NGINX, allowing attackers to disrupt service or take full control.",
+      "action": "Identify all NGINX installations. Monitor NGINX error logs for signs of unexpected worker crashes. Prepare to apply patches immediately upon release from NGINX. Consider implementing web application firewall (WAF) rules as an interim mitigation if specifics become available.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/fresh-sharepoint-vulnerability-exploited-soon-after-disclosure/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint (specific vulnerable versions to be confirmed by Microsoft advisory, but assume all recently patched versions may be at risk until updated)",
-      "how_to_determine_impact": "Verify that all SharePoint servers are updated to the latest security patch level. Review SharePoint diagnostic logs, IIS logs, and Windows event logs for suspicious activity, particularly around the time of vulnerability disclosure and subsequent exploitation reports. Look for unusual requests, failed authentications, or unexpected file access.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to identify Microsoft SharePoint installations and their versions. Query 'IIS Logs' for suspicious HTTP requests or 'Event Log' for security-related events on SharePoint servers. Look for newly created files or modified configuration settings within SharePoint directories using 'Get File Details'.",
-      "rapid7_query_hint": "In InsightVM, perform authenticated scans on SharePoint servers to identify missing patches or known vulnerabilities. For InsightIDR, monitor SharePoint access logs, IIS logs, and Windows event logs for unusual activity, unauthorized file modifications, or suspicious administrative actions. Configure custom alerts for known attack patterns if IOCs are released.",
+      "source_url": "https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "NGINX. Specific vulnerable versions require official NGINX advisory.",
+      "how_to_determine_impact": "Identify NGINX version (`nginx -v` or `Get Installed Applications`). Review NGINX error logs (`/var/log/nginx/error.log` on Linux) for unexpected worker crashes or error messages indicating critical failures. Consult NGINX advisories for specific IOCs.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'NGINX'. On Linux, 'Get File Content /etc/nginx/nginx.conf' to inspect configuration or 'Get File Content /var/log/nginx/error.log' for logs.",
+      "rapid7_query_hint": "Asset search for 'NGINX' services. Monitor server logs via InsightIDR for unexpected NGINX process terminations or high CPU/memory usage indicative of DoS. Look for associated vulnerability IDs once published by Rapid7.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical (Estimate: Potential Remote Code Execution, DoS)"
     }
   ],
   "insurance": [],
@@ -5402,6 +5410,31 @@
         "rapid7_query_hint": "In InsightVM, scan web servers for WordPress installations and check for related vulnerabilities. In InsightIDR, configure alerts for suspicious web requests targeting WordPress paths or unusual process execution originating from web server accounts. Use 'Asset Search' with software filters for 'WordPress'.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Microsoft warns of surge in ACR Stealer attacks on customers",
+        "tldr": "Microsoft is alerting customers to a significant increase in attacks leveraging the ACR Stealer malware. This malware targets enterprise customers to exfiltrate browser-stored passwords, authentication tokens, and sensitive documents, posing a direct threat of data breach and account compromise.",
+        "action": "Implement multi-factor authentication (MFA) across all services. Educate users about phishing and social engineering tactics. Deploy endpoint detection and response (EDR) solutions and ensure they are configured to detect and block known stealer malware. Review and rotate critical credentials.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Critical NGINX Vulnerability Can Crash Workers and May Allow Remote Code Execution",
+        "tldr": "A critical vulnerability in NGINX has been identified that can lead to worker process crashes and potentially enable remote code execution (RCE). This flaw poses a severe risk to web servers running NGINX, allowing attackers to disrupt service or take full control.",
+        "action": "Identify all NGINX installations. Monitor NGINX error logs for signs of unexpected worker crashes. Prepare to apply patches immediately upon release from NGINX. Consider implementing web application firewall (WAF) rules as an interim mitigation if specifics become available.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/critical-nginx-vulnerability-can-crash.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "NGINX. Specific vulnerable versions require official NGINX advisory.",
+        "how_to_determine_impact": "Identify NGINX version (`nginx -v` or `Get Installed Applications`). Review NGINX error logs (`/var/log/nginx/error.log` on Linux) for unexpected worker crashes or error messages indicating critical failures. Consult NGINX advisories for specific IOCs.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'NGINX'. On Linux, 'Get File Content /etc/nginx/nginx.conf' to inspect configuration or 'Get File Content /var/log/nginx/error.log' for logs.",
+        "rapid7_query_hint": "Asset search for 'NGINX' services. Monitor server logs via InsightIDR for unexpected NGINX process terminations or high CPU/memory usage indicative of DoS. Look for associated vulnerability IDs once published by Rapid7.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate: Potential Remote Code Execution, DoS)",
         "category": "vulns"
       }
     ]
