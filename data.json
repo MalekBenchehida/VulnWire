@@ -2,24 +2,24 @@
   "breaches": [
     {
       "title": "GoldenEyeDog Subgroup Linked to DigiCert Breach and Code-Signing Certificate Theft",
-      "tldr": "A subgroup known as GoldenEyeDog has been identified as responsible for a breach against DigiCert. This incident involved the theft of code-signing certificates, which could be used to sign malicious software, making it appear legitimate. Organizations should review their trust chains and look for newly signed unauthorized executables.",
-      "action": "Review all code-signing certificates used within the organization, especially any derived from DigiCert, for signs of compromise or unauthorized issuance. Monitor for newly signed executables from unexpected sources.",
+      "tldr": "A subgroup identified as GoldenEyeDog is connected to a breach at DigiCert, resulting in the theft of code-signing certificates. This compromise could enable supply chain attacks and impersonation through digitally signed malicious software.",
+      "action": "Review the integrity of all software signed with DigiCert certificates, especially those obtained around the time of the breach. Implement enhanced monitoring for suspicious code execution.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/goldeneyedog-subgroup-linked-to.html",
       "source": "The Hacker News"
     },
     {
       "title": "Abbott probes two cyber incidents amid extortion claims",
-      "tldr": "Abbott Laboratories is investigating two separate cyber incidents: unauthorized access to internal legacy Exact Sciences systems in its Cancer Diagnostics business, and a claim of data theft from its LabCentral portal. Extortion claims suggest potential ransomware or data exfiltration.",
-      "action": "Organizations should review third-party access and legacy system security. Ensure robust monitoring is in place for unauthorized access to sensitive systems and data exfiltration attempts, particularly involving older systems.",
+      "tldr": "Abbott Laboratories is investigating two distinct cyber incidents: unauthorized access to legacy Exact Sciences systems in its Cancer Diagnostics business, and a separate claim of a breach and data theft from its LabCentral portal. Extortion claims are also being investigated.",
+      "action": "Monitor for any unusual activity or data exfiltration from systems connected to Exact Sciences or LabCentral. Review access logs and enhance security controls on all connected systems.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/abbott-laboratories-probes-two-cyber-incidents-amid-extortion-claims/",
       "source": "BleepingComputer"
     },
     {
       "title": "Ernst & Young discloses data breach after support system hack",
-      "tldr": "Ernst & Young has disclosed a data breach resulting from the compromise of a third-party support ticket system. This system was used by EY's IT personnel, indicating potential exposure of sensitive internal and customer support-related data.",
-      "action": "Assess exposure to third-party vendor risks, especially for systems handling support tickets or IT operations. Ensure third-party vendors adhere to stringent security protocols and conduct regular audits of their security posture.",
+      "tldr": "Ernst & Young (EY) has announced a data breach originating from the compromise of a third-party support ticket system utilized by its IT staff. Customer data may have been exposed as a result.",
+      "action": "Review logs related to the compromised third-party support system for any unauthorized access or data exfiltration. Enhance security assessments for third-party vendors.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/",
       "source": "BleepingComputer"
@@ -27,17 +27,9 @@
   ],
   "ransomware": [
     {
-      "title": "Cyberattack Disrupts Operations of Japanese Frozen Food Giant Nichirei",
-      "tldr": "A cyberattack has significantly disrupted the operations of Nichirei, a major Japanese frozen food producer. While the type of attack isn't specified, disruption of operations often points to ransomware or destructive malware.",
-      "action": "Implement and test robust incident response and business continuity plans. Ensure critical systems are isolated, backups are secure and offline, and network segmentation is effective to limit potential spread of disruptive attacks.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/cyberattack-disrupts-operations-of-japanese-frozen-food-giant-nichirei/",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Coca-Cola Suspends US Fairlife Production Due to Ransomware Attack",
-      "tldr": "Coca-Cola's Fairlife production in the US has been suspended following a ransomware attack. This incident highlights the direct operational impact ransomware can have on critical infrastructure and manufacturing sectors.",
-      "action": "Review and strengthen ransomware defenses, including multi-factor authentication, endpoint detection and response, and regular employee training on phishing. Prioritize network segmentation for operational technology (OT) environments to prevent ransomware spread.",
+      "tldr": "Coca-Cola's Fairlife production in the US has been halted following a ransomware attack. This incident has severely impacted operational technology (OT) systems, leading to production suspension.",
+      "action": "Implement robust ransomware defense strategies, including air-gapped backups, strong segmentation, and comprehensive endpoint detection and response (EDR) solutions. Review and enhance OT security measures.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/coca-cola-suspends-us-fairlife-production-due-to-ransomware-attack/",
       "source": "SecurityWeek"
@@ -46,63 +38,63 @@
   "vulns": [
     {
       "title": "SonicWall SMA Zero-Days Exploited Before Disclosure to Gain Root Access",
-      "tldr": "Multiple zero-day vulnerabilities in SonicWall SMA (Secure Mobile Access) appliances were actively exploited to gain root access before public disclosure. These flaws allowed attackers to bypass security measures and compromise systems.",
-      "action": "Immediately apply available patches for SonicWall SMA devices. If patching isn't possible, consider isolating or disabling affected devices. Hunt for indicators of compromise (IOCs) on all SonicWall SMA appliances and connected networks.",
+      "tldr": "Threat actors actively exploited zero-day vulnerabilities in SonicWall SMA devices prior to public disclosure. These exploits allowed attackers to gain root access, indicating severe compromise capabilities.",
+      "action": "Immediately patch SonicWall SMA devices to the latest security versions. Investigate logs for any signs of compromise, especially around the disclosure date.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/sonicwall-sma-zero-days-exploited.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SMA devices, specific versions impacted by zero-days. Consult vendor advisories for exact version ranges.",
-      "how_to_determine_impact": "Check SonicWall SMA device logs for unusual activity, unauthorized access attempts, or unknown processes. Verify firmware versions against vendor advisories. Look for signs of root access compromise.",
-      "tanium_query_hint": "Get Computer Name from all machines with 'SonicWall SMA' in Installed Applications; then 'Get Running Processes' for suspicious entries, and 'Get File Hash' for critical system files to compare against known good.",
-      "rapid7_query_hint": "Search for vulnerability ID related to 'SonicWall SMA' zero-day exploitation. For InsightIDR, look for suspicious logins from SMA devices or abnormal process execution on network assets connected to SMA. Use asset search for devices running SonicWall SMA software.",
+      "affected_versions": "SonicWall SMA appliances (all vulnerable versions prior to the latest security update)",
+      "how_to_determine_impact": "Verify that all SonicWall SMA appliances are running the latest patched firmware. Check system and network logs for unauthorized access attempts or suspicious activities (e.g., unusual logins, file modifications) prior to the patch application.",
+      "tanium_query_hint": "Utilize Tanium Connect to pull 'Installed Applications' data and filter for 'SonicWall SMA'. Query 'Network Connections' and 'Event Logs' for suspicious activity from SMA devices around the disclosure period. Implement custom sensors for specific file hashes or process names if IOCs are released.",
+      "rapid7_query_hint": "Use InsightVM to scan for vulnerabilities specific to SonicWall SMA devices. For InsightIDR, monitor 'Authentication' and 'Admin Activity' logs for unusual access to SMA management interfaces. Leverage InsightAgent queries to check for specific file or process indicators on systems interacting with SMA.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "WordPress Core \"wp2shell\" RCE flaws get public exploits, patch now",
-      "tldr": "Critical \"wp2shell\" Remote Code Execution (RCE) vulnerabilities in WordPress Core now have public exploits available. This makes immediate patching essential for all WordPress administrators to prevent unauthenticated attackers from running arbitrary code.",
-      "action": "Immediately update all WordPress installations to the latest patched version. Implement strong input validation and Web Application Firewall (WAF) rules to mitigate exploitation attempts.",
+      "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
+      "tldr": "A critical 'wp2shell' vulnerability in WordPress Core allows unauthenticated attackers to execute arbitrary code. This flaw poses a significant risk as it can be exploited without prior authentication, and public exploits are now available.",
+      "action": "Immediately apply available patches for WordPress Core to mitigate the 'wp2shell' vulnerability. Harden web server configurations to limit execution privileges.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "WordPress Core, specific versions vulnerable to 'wp2shell' flaws. Consult official WordPress security advisories.",
-      "how_to_determine_impact": "Check WordPress core version via admin panel or `version.php`. Look for unauthorized file modifications in the WordPress installation directory or unusual processes running on the web server.",
-      "tanium_query_hint": "Get File Version['/path/to/wordpress/wp-includes/version.php'] from all machines matching 'apache' or 'nginx' in running processes. Also check 'Get Installed Applications' for WordPress.",
-      "rapid7_query_hint": "Search for vulnerability ID related to 'WordPress wp2shell RCE'. Use InsightAgent to query for `wp-includes/version.php` content or unauthorized files within WordPress directories.",
+      "affected_versions": "WordPress Core (specific versions vulnerable to 'wp2shell' RCE prior to patch)",
+      "how_to_determine_impact": "Identify all WordPress installations across the environment and check their exact version numbers. Compare against vendor advisories for affected ranges. Review web server access logs for unusual requests patterns indicative of exploitation attempts.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to identify 'WordPress' installations and their reported versions. For Linux/Windows web servers, use 'Get File Version' on core WordPress files or 'Get Content of File' on configuration files to identify vulnerable instances. Monitor 'Running Processes' for suspicious web server child processes.",
+      "rapid7_query_hint": "In InsightVM, scan web servers for WordPress installations and check for related vulnerabilities. In InsightIDR, configure alerts for suspicious web requests targeting WordPress paths or unusual process execution originating from web server accounts. Use 'Asset Search' with software filters for 'WordPress'.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "New Windows LegacyHive zero-day gives hackers admin privileges",
-      "tldr": "A newly disclosed Windows zero-day exploit, dubbed \"LegacyHive,\" allows attackers to escalate privileges on up-to-date Windows systems. This vulnerability can grant administrative access to malicious actors.",
-      "action": "Monitor for official patches from Microsoft. Until patches are available, implement enhanced logging for privilege escalation attempts and apply host-based intrusion prevention systems. Restrict unnecessary administrative privileges.",
+      "tldr": "A new Windows zero-day exploit, dubbed 'LegacyHive,' has been publicly released, enabling attackers to escalate privileges on fully updated Windows systems. This is a critical local privilege escalation vulnerability.",
+      "action": "Monitor for indicators of compromise related to 'LegacyHive' exploitation. Apply any emergency patches from Microsoft immediately once available. Isolate critical systems if exploitation is suspected.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-legacyhive-zero-day-exploit-grants-hackers-admin-access/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Up-to-date Windows systems. Specific versions or components yet to be fully detailed by Microsoft.",
-      "how_to_determine_impact": "Review Windows Security Event Logs (Event ID 4624, 4672, 4688) for suspicious process creation with elevated privileges or unexpected administrative logins following non-admin activity. Look for any official Microsoft guidance once released.",
-      "tanium_query_hint": "Get Event Log[Security, 4624 or 4672 or 4688, 1 day] from all machines. Specifically look for patterns indicative of privilege escalation. Monitor processes for suspicious parent-child relationships.",
-      "rapid7_query_hint": "Search for `LegacyHive` in vulnerability or compromise alerts. For InsightIDR, configure alerts for unusual process creation with SYSTEM or Administrator privileges, especially from non-administrative contexts. Monitor for anomalous logon activities.",
+      "affected_versions": "Up-to-date Windows systems (versions currently supported by Microsoft)",
+      "how_to_determine_impact": "Since this is a zero-day with a public exploit, assume immediate risk. Monitor Windows event logs (Security, System, Application) for suspicious privilege escalation events, new service installations, or unusual process creation from standard user accounts. Look for activity from the 'Nightmare Eclipse' exploit framework if IOCs are released.",
+      "tanium_query_hint": "Run 'Get Running Processes' and 'Get Running Services' on all Windows endpoints to look for unusual executables or services. Use 'Get Event Log' to search for specific event IDs related to privilege escalation (e.g., 4624, 4672, 4656). Leverage 'Get Registry Value' or 'Get File Hash' for any known IOCs.",
+      "rapid7_query_hint": "Monitor 'Endpoint Activity' in InsightIDR for privilege escalation attempts, suspicious process launches by low-privilege users, or unusual modifications to system configurations. Configure custom alerts based on any released IOCs (e.g., file names, registry changes). Run InsightVM scans for related vulnerabilities once a CVE is assigned.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "7.8 High"
+      "cvss_score": "9.0 Critical"
     },
     {
       "title": "Fresh SharePoint Vulnerability Exploited Soon After Disclosure",
-      "tldr": "A newly disclosed vulnerability in SharePoint is being actively exploited shortly after its public disclosure. Organizations using SharePoint should prioritize patching to prevent potential compromise.",
-      "action": "Immediately apply all available security updates for SharePoint. Review SharePoint access logs and server logs for any signs of compromise or unusual activity, especially around the time of vulnerability disclosure.",
+      "tldr": "A recently disclosed vulnerability in Microsoft SharePoint is being actively exploited in the wild shortly after its public revelation. This indicates a critical need for immediate patching to prevent compromise.",
+      "action": "Immediately apply all available security updates for Microsoft SharePoint. Monitor SharePoint servers for signs of compromise, including unusual access patterns, file modifications, or unexpected process execution.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/fresh-sharepoint-vulnerability-exploited-soon-after-disclosure/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint, specific versions will be detailed in official Microsoft advisories. Assume all supported, unpatched versions are affected.",
-      "how_to_determine_impact": "Check SharePoint server logs for suspicious requests, error messages, or unexpected script execution. Verify SharePoint build numbers against Microsoft's security update release notes. Look for unauthorized changes to SharePoint content or configuration.",
-      "tanium_query_hint": "Get Installed Applications['Microsoft SharePoint'] and Get Registry Value['HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Shared Tools\\Web Server Extensions\\16.0\\SharePoint\\Build'] for version info. Monitor IIS logs for unusual activity on SharePoint sites.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to 'SharePoint' vulnerabilities. For InsightIDR, look for suspicious activity on SharePoint servers, such as unusual process execution, file modifications, or web shell detections.",
+      "affected_versions": "Microsoft SharePoint (specific vulnerable versions to be confirmed by Microsoft advisory, but assume all recently patched versions may be at risk until updated)",
+      "how_to_determine_impact": "Verify that all SharePoint servers are updated to the latest security patch level. Review SharePoint diagnostic logs, IIS logs, and Windows event logs for suspicious activity, particularly around the time of vulnerability disclosure and subsequent exploitation reports. Look for unusual requests, failed authentications, or unexpected file access.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to identify Microsoft SharePoint installations and their versions. Query 'IIS Logs' for suspicious HTTP requests or 'Event Log' for security-related events on SharePoint servers. Look for newly created files or modified configuration settings within SharePoint directories using 'Get File Details'.",
+      "rapid7_query_hint": "In InsightVM, perform authenticated scans on SharePoint servers to identify missing patches or known vulnerabilities. For InsightIDR, monitor SharePoint access logs, IIS logs, and Windows event logs for unusual activity, unauthorized file modifications, or suspicious administrative actions. Configure custom alerts for known attack patterns if IOCs are released.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.8 High"
+      "cvss_score": "9.0 Critical"
     }
   ],
   "insurance": [],
@@ -5394,6 +5386,22 @@
         "rapid7_query_hint": "Search for vulnerability IDs related to 'SharePoint' vulnerabilities. For InsightIDR, look for suspicious activity on SharePoint servers, such as unusual process execution, file modifications, or web shell detections.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "8.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "New wp2shell WordPress Core Flaw Lets Unauthenticated Attackers Run Code",
+        "tldr": "A critical 'wp2shell' vulnerability in WordPress Core allows unauthenticated attackers to execute arbitrary code. This flaw poses a significant risk as it can be exploited without prior authentication, and public exploits are now available.",
+        "action": "Immediately apply available patches for WordPress Core to mitigate the 'wp2shell' vulnerability. Harden web server configurations to limit execution privileges.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "WordPress Core (specific versions vulnerable to 'wp2shell' RCE prior to patch)",
+        "how_to_determine_impact": "Identify all WordPress installations across the environment and check their exact version numbers. Compare against vendor advisories for affected ranges. Review web server access logs for unusual requests patterns indicative of exploitation attempts.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to identify 'WordPress' installations and their reported versions. For Linux/Windows web servers, use 'Get File Version' on core WordPress files or 'Get Content of File' on configuration files to identify vulnerable instances. Monitor 'Running Processes' for suspicious web server child processes.",
+        "rapid7_query_hint": "In InsightVM, scan web servers for WordPress installations and check for related vulnerabilities. In InsightIDR, configure alerts for suspicious web requests targeting WordPress paths or unusual process execution originating from web server accounts. Use 'Asset Search' with software filters for 'WordPress'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
