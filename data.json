@@ -1,106 +1,120 @@
 {
   "breaches": [
     {
+      "title": "HollowGraph Malware Hides C2 and Stolen Files in Microsoft 365 Events Dated 2050",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "World's Largest AI Model Repository Hugging Face Breached by Autonomous AI Agent",
-      "tldr": "Hugging Face, the largest AI model repository, experienced a breach orchestrated by an autonomous AI agent, leading to unauthorized access to internal datasets and credentials. This marks a significant event in AI security, demonstrating AI-on-AI attack capabilities and posing risks to integrated AI development pipelines.",
-      "action": "Review security configurations for AI development platforms and model repositories. Implement robust access controls, multi-factor authentication, and continuous monitoring for anomalous AI agent behavior and data access patterns.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Ernst & Young Data Breach Affects Personal, Financial Information",
-      "tldr": "Ernst & Young (EY) has suffered a data breach, resulting in the exposure of personal and financial information. The incident affects sensitive client and employee data, necessitating immediate action to mitigate risks of fraud and identity theft for those impacted.",
-      "action": "Potentially affected individuals should monitor financial accounts and credit reports, and consider credit freezing/fraud alerts. Organizations should verify their data exposure and enhance data loss prevention (DLP) strategies and access controls for sensitive data.",
+      "title": "New Index Tracks Material Breaches — And Refuses to Add Up the Losses",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/ernst-young-data-breach-affects-personal-financial-information/",
+      "source_url": "https://www.securityweek.com/new-index-tracks-material-breaches-and-refuses-to-add-up-the-losses/",
       "source": "SecurityWeek"
     },
     {
-      "title": "Russian Intelligence Hacks IP Cameras to Spy on Military Logistics Across NATO States and Ukraine",
-      "tldr": "Russian intelligence agencies have compromised IP cameras to surveil military logistics in NATO countries and Ukraine. This espionage operation targets critical infrastructure for strategic intelligence gathering, indicating a sophisticated and sustained threat to national security.",
-      "action": "Secure all networked IP cameras, especially in sensitive or critical infrastructure environments, with strong, unique passwords, network segmentation, and regular firmware updates. Implement continuous monitoring for unusual network activity and unauthorized access attempts.",
+      "title": "Ernst & Young Data Breach Affects Personal, Financial Information",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/russian-intelligence-hacks-ip-cameras.html",
-      "source": "The Hacker News"
-    },
+      "source_url": "https://www.securityweek.com/ernst-young-data-breach-affects-personal-financial-information/",
+      "source": "SecurityWeek"
+    }
+  ],
+  "ransomware": [
     {
-      "title": "Microsoft warns of surge in ACR Stealer attacks on customers",
-      "tldr": "Microsoft reports a surge in attacks utilizing ACR Stealer malware to exfiltrate browser-stored passwords, authentication tokens, and sensitive documents from enterprise customers. This widespread campaign poses a significant risk of data theft and credential compromise across organizations.",
-      "action": "Deploy robust Endpoint Detection and Response (EDR) solutions. Enforce multi-factor authentication (MFA) across all services. Educate users on phishing and social engineering, and regularly audit privileged accounts and permissions to prevent initial access and credential theft.",
+      "title": "JadePuffer agentic attacks now target AI model data with ransomware",
+      "tldr": "The JadePuffer autonomous AI agent has upgraded with custom malware called EncForge that focuses on encrypting AI assets, such as training datasets, vector databases, and model checkpoints. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-warns-of-surge-in-acr-stealer-attacks-on-customers/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/",
       "source": "BleepingComputer"
     }
   ],
-  "ransomware": [],
   "vulns": [
     {
-      "title": "Critical ServiceNow code execution flaw now exploited in attacks",
-      "tldr": "A critical vulnerability, CVE-2026-6875, in the ServiceNow AI Platform is actively being exploited in the wild, allowing attackers to achieve remote code execution and compromise instances. This high-severity flaw demands immediate patching to prevent unauthorized access and system control.",
-      "action": "Apply the patch for CVE-2026-6875 to all affected ServiceNow AI Platform instances immediately. Conduct an urgent review of ServiceNow logs for any indicators of compromise, unauthorized access, or unusual activity that might indicate exploitation.",
-      "cve_ids": [
-        "CVE-2026-6875"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "ServiceNow AI Platform. Consult ServiceNow's official advisory for CVE-2026-6875 for the exact list of affected products and versions.",
-      "how_to_determine_impact": "Consult ServiceNow's official advisory for CVE-2026-6875 to identify specific affected versions. Check your ServiceNow instance logs for any unauthorized access, unusual API calls, or suspicious script execution indicative of exploitation.",
-      "tanium_query_hint": "Use Tanium 'Get Installed Applications' or 'Get Software Package' sensors to identify ServiceNow instances. Further, query 'Get Running Processes' or 'Get File Content' to check for specific indicators of compromise mentioned in ServiceNow's advisory.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-6875' or conduct an asset search for 'ServiceNow AI Platform' to identify vulnerable instances. Review InsightIDR logs for anomalous activity, RCE attempts, or unusual user behavior on ServiceNow assets.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, given active exploitation and RCE)"
-    },
-    {
-      "title": "Update now: 7-Zip fixes RCE flaw exploitable with malicious archives",
-      "tldr": "7-Zip version 26.02 patches a remote code execution vulnerability (CVE-2026-6874) where specially crafted XZ archives could lead to arbitrary code execution upon extraction. This critical flaw necessitates immediate updates to prevent system compromise from malicious files.",
-      "action": "Update all 7-Zip installations to version 26.02 or later without delay. Educate users about the dangers of opening untrusted or suspicious archive files, especially those in XZ format, to mitigate the risk of exploitation.",
-      "cve_ids": [
-        "CVE-2026-6874"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/update-now-7-zip-fixes-rce-flaw-exploitable-with-malicious-archives/",
-      "source": "BleepingComputer",
+      "title": "FakeGit Campaign Uses 7,600 GitHub Repositories to Spread SmartLoader Malware",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/fakegit-campaign-uses-7600-github.html",
+      "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "7-Zip versions prior to 26.02",
-      "how_to_determine_impact": "Identify systems with 7-Zip installed and check their version number. Any version below 26.02 is considered vulnerable. Focus on user workstations and servers that process user-supplied archives to prioritize remediation.",
-      "tanium_query_hint": "Use Tanium 'Get Installed Applications' to find '7-Zip' and 'Get File Version['C:\\Program Files\\7-Zip\\7z.exe']' for the exact version number. Identify machines running versions less than 26.02 and initiate patching.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-6874'. For asset search, filter for assets with '7-Zip' installed and check for versions prior to 26.02. Prioritize remediation for systems identified as vulnerable.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High (Estimated, RCE requires user interaction with crafted file)"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "WordPress Core \"wp2shell\" RCE flaws get public exploits, patch now",
-      "tldr": "Critical \"wp2shell\" remote code execution vulnerabilities in WordPress Core now have public exploits and are being actively exploited in the wild. This demands immediate attention and patching for all affected WordPress sites to prevent arbitrary code execution and full site compromise.",
-      "action": "Immediately update all WordPress Core installations to the latest patched version. Deploy a Web Application Firewall (WAF) to block known exploit attempts. Conduct integrity checks for compromised files if exploitation is suspected and review user accounts for unauthorized access.",
+      "title": "Exposed Server Reveals AI-Assisted Phishing Toolkit Behind WebDAV Malware Campaign",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "WordPress Core. Consult WordPress's official security advisories for the 'wp2shell' vulnerabilities for exact affected versions and patches.",
-      "how_to_determine_impact": "Check WordPress Core version on all instances. Any version identified in WordPress's official advisories for 'wp2shell' vulnerabilities is vulnerable. Review web server access logs for suspicious requests to upload directories or unusual file modifications indicating exploitation.",
-      "tanium_query_hint": "Use 'Get Installed Applications' or 'Get File Content' to locate WordPress installations and identify their version. Query web server logs via Tanium for patterns matching known 'wp2shell' exploitation attempts (e.g., suspicious POST requests to wp-content/uploads).",
-      "rapid7_query_hint": "Search InsightVM for vulnerability checks related to WordPress RCE or 'wp2shell'. Use InsightAgent queries to identify WordPress installations and their versions on web servers. Monitor InsightIDR for web attack patterns or unusual file creations in WordPress directories.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, given RCE and public/active exploitation)"
+      "source_url": "https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "SonicWall Zero-Days Exploited to Deliver Custom Malware for Weeks Before Patch",
-      "tldr": "Multiple zero-day vulnerabilities in SonicWall products were actively exploited for weeks by threat actors to deliver custom malware before patches became available. These sophisticated attacks highlight the critical need for immediate patching and thorough investigation into potential compromises.",
-      "action": "Apply all available patches for SonicWall products immediately. Conduct a forensic review of all SonicWall devices and connected networks for any signs of compromise or custom malware. Implement deep packet inspection and network segmentation as preventive measures.",
+      "title": "⚡ Weekly Recap: WordPress RCE, SonicWall 0-Days, AI Service Attacks, SharePoint 0-Day and More",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/sonicwall-zero-days-exploited-to-deliver-custom-malware-for-weeks-before-patch/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "SonicWall products affected by the recently patched zero-day vulnerabilities. Consult SonicWall's official advisories for specific product lines and patched versions.",
-      "how_to_determine_impact": "Refer to SonicWall's security advisories for zero-day vulnerabilities patched recently. Check logs on SonicWall devices for any indications of unauthorized access, unusual configuration changes, or suspicious outbound connections prior to the patch date.",
-      "tanium_query_hint": "Use Tanium to gather inventory of all SonicWall appliances and their firmware versions. Query 'Get Running Processes' or 'Get Network Connections' on systems behind SonicWall devices for anomalous activity or custom malware indicators.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability checks related to recent SonicWall zero-day patches. Conduct asset searches for SonicWall devices and verify their patch status. Monitor InsightIDR for any network intrusions or malware alerts originating from or traversing SonicWall devices.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, given zero-day exploitation and malware delivery)"
+      "source_url": "https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Russian Intelligence Hacks IP Cameras to Spy on Military Logistics Across NATO States and Ukraine",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/russian-intelligence-hacks-ip-cameras.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -5536,6 +5550,81 @@
         "rapid7_query_hint": "Search InsightVM for vulnerability checks related to recent SonicWall zero-day patches. Conduct asset searches for SonicWall devices and verify their patch status. Monitor InsightIDR for any network intrusions or malware alerts originating from or traversing SonicWall devices.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (Estimated, given zero-day exploitation and malware delivery)",
+        "category": "vulns"
+      },
+      {
+        "title": "HollowGraph Malware Hides C2 and Stolen Files in Microsoft 365 Events Dated 2050",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "New Index Tracks Material Breaches — And Refuses to Add Up the Losses",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/new-index-tracks-material-breaches-and-refuses-to-add-up-the-losses/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "JadePuffer agentic attacks now target AI model data with ransomware",
+        "tldr": "The JadePuffer autonomous AI agent has upgraded with custom malware called EncForge that focuses on encrypting AI assets, such as training datasets, vector databases, and model checkpoints. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "FakeGit Campaign Uses 7,600 GitHub Repositories to Spread SmartLoader Malware",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/fakegit-campaign-uses-7600-github.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Exposed Server Reveals AI-Assisted Phishing Toolkit Behind WebDAV Malware Campaign",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "⚡ Weekly Recap: WordPress RCE, SonicWall 0-Days, AI Service Attacks, SharePoint 0-Day and More",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
