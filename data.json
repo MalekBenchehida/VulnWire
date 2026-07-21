@@ -2,32 +2,24 @@
   "breaches": [
     {
       "title": "Estée Lauder discloses data breach via Oracle E-Business flaw",
-      "tldr": "Cosmetics giant Estée Lauder notified customers of a data breach stemming from hackers exploiting a flaw in their Oracle E-Business Suite, used for HR operations. This incident resulted in the exposure of customer data.",
-      "action": "Organizations using Oracle E-Business Suite should immediately patch known vulnerabilities and audit HR systems for unauthorized access or data exfiltration. Implement robust monitoring for Oracle EBS environments.",
+      "tldr": "Cosmetics giant Estée Lauder has confirmed a data breach affecting employees. The breach was caused by the exploitation of an undisclosed zero-day vulnerability in their Oracle E-Business Suite, which is used for human resources operations.",
+      "action": "Organizations using Oracle E-Business Suite must prioritize identifying and patching all known vulnerabilities, especially those related to HR systems. Implement strong access controls, monitor for zero-day exploits, and consider forensic investigation if similar systems are in use.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers steal $23.7 million in crypto from Ostium in off-chain attack",
-      "tldr": "The Ostium trading platform suffered a $23.75 million theft from its liquidity provider vault. Attackers compromised off-chain infrastructure responsible for feeding price data into the protocol.",
-      "action": "Review the security of all off-chain infrastructure, particularly those interacting with critical financial systems or providing data feeds. Implement multi-factor authentication and continuous monitoring for suspicious activity.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Meta Paid $78,000 Bounty for Vulnerability Exposing Customer Support Data",
-      "tldr": "Meta paid a $78,000 bug bounty for a vulnerability that could have exposed customer support data. This highlights the importance of robust vulnerability disclosure programs and the potential for sensitive data exposure.",
-      "action": "Implement a comprehensive bug bounty program to proactively identify and remediate vulnerabilities that could lead to data exposure. Regularly audit customer support systems for access controls and data handling procedures.",
+      "tldr": "Meta awarded a $78,000 bug bounty for a vulnerability that could have exposed customer support data. This highlights the effectiveness of bug bounty programs in proactively identifying critical flaws that could lead to data exposure.",
+      "action": "Organizations should establish or enhance their bug bounty programs to proactively identify and remediate vulnerabilities that could lead to data exposure. Regularly audit customer support platforms and CRM systems for potential data leakage points and implement least privilege access.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/meta-pays-78000-bounty-for-vulnerability-exposing-customer-support-data/",
       "source": "SecurityWeek"
     },
     {
       "title": "Clover Health Investments Discloses Data Breach",
-      "tldr": "Clover Health Investments has disclosed a data breach. Details on the nature and extent of the breach are not immediately available, but such disclosures indicate unauthorized access to sensitive information.",
-      "action": "Organizations should maintain incident response plans and prepare for transparent disclosure in the event of a data breach. Ensure all systems holding sensitive data are adequately secured and monitored.",
+      "tldr": "Clover Health Investments has disclosed a data breach, indicating unauthorized access to sensitive information. Specific details regarding the scope and nature of the compromised data are currently limited.",
+      "action": "Organizations should continuously monitor their systems for unauthorized access and data exfiltration. Ensure robust logging and alert mechanisms are in place, and review incident response protocols for rapid detection and containment of breaches.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/clover-health-investments-discloses-data-breach/",
       "source": "SecurityWeek"
@@ -35,87 +27,79 @@
   ],
   "ransomware": [
     {
-      "title": "Qilin Ransomware Attackers Exploit PAN-OS Authentication Bypass for Initial Access",
-      "tldr": "The Qilin ransomware gang is actively exploiting a critical authentication bypass vulnerability in Palo Alto Networks PAN-OS GlobalProtect VPN to gain initial access to victim networks. This vulnerability allows attackers to bypass authentication and breach systems.",
-      "action": "Immediately patch Palo Alto Networks PAN-OS GlobalProtect VPN instances to remediate the authentication bypass vulnerability. Monitor VPN access logs for suspicious activity and unauthorized logins, especially those prior to patching.",
+      "title": "Anubis ransomware claims Coca-Cola Fairlife attack, threatens data leak",
+      "tldr": "The Anubis ransomware group has claimed responsibility for a cyberattack against Coca-Cola's Fairlife dairy subsidiary. The attackers are threatening to publish allegedly stolen corporate data unless a ransom payment is made.",
+      "action": "Organizations should review and fortify their incident response plans, enhance data backup and recovery strategies, and implement robust multi-factor authentication and network segmentation to prevent and contain ransomware attacks. Conduct security awareness training to identify phishing attempts.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/qilin-ransomware-attackers-exploit-pan.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack",
-      "tldr": "A new ransomware strain, ENCFORGE, specifically targets AI model files. It leverages a Remote Code Execution (RCE) vulnerability in Langflow, a visual framework for LLM orchestration, to encrypt critical AI assets.",
-      "action": "Organizations utilizing Langflow should immediately update to the latest secure version and scan their systems for signs of compromise. Implement robust backup strategies for AI model files and secure development practices for AI applications.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/anubis-ransomware-claims-coca-cola-fairlife-attack-threatens-data-leak/",
+      "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
-      "title": "Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC",
-      "tldr": "A critical Remote Code Execution (RCE) vulnerability, CVE-2026-50522, in SharePoint is being actively exploited in the wild. Public Proof-of-Concept (PoC) code is available, accelerating attacks.",
-      "action": "Immediately apply all available security updates for Microsoft SharePoint Server. Isolate SharePoint servers and monitor for any unusual activity or unauthorized access attempts.",
+      "title": "Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation to Steal Machine Keys",
+      "tldr": "A critical Remote Code Execution (RCE) vulnerability, CVE-2026-50522, in Microsoft SharePoint is being actively exploited in the wild. Attackers are leveraging this flaw to steal machine keys, enabling them to maintain persistent access even after patches are applied.",
+      "action": "Immediately apply all available security patches for Microsoft SharePoint Server to address CVE-2026-50522. Following patching, all SharePoint machine keys and associated credentials must be rotated to invalidate stolen keys, and a forensic investigation for persistent access mechanisms is mandatory.",
       "cve_ids": [
         "CVE-2026-50522"
       ],
       "source_url": "https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint Server (all supported versions prior to the official patch)",
-      "how_to_determine_impact": "Verify SharePoint server patch levels. Look for suspicious processes running under SharePoint service accounts, unexpected web parts, or modifications to critical configuration files.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'SharePoint' and Product Name contains 'SharePoint Server' then check version. Get Running Processes with CommandLine matches 'powershell' or 'cmd.exe' and Parent Process Name contains 'w3wp.exe'",
-      "rapid7_query_hint": "Vulnerability.id: 'CVE-2026-50522' or Service.name: 'SharePoint' AND Vulnerability.severity: 'Critical'",
+      "affected_versions": "Microsoft SharePoint Server (Refer to Microsoft's official security advisory for CVE-2026-50522 for specific vulnerable versions and cumulative updates).",
+      "how_to_determine_impact": "Verify current SharePoint Server patch levels. Examine SharePoint logs for unusual activity, unauthorized file access (especially in web directories), or signs of machine key exfiltration. Look for webshells or unexplained persistent user accounts.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'SharePoint' and Version < 'latest_patched_version'. Use 'Get File Hash' for known IoC files or 'Get Running Processes' for suspicious activity. Look for access to cryptographic key stores or abnormal service account usage.",
+      "rapid7_query_hint": "Search InsightVM for 'CVE-2026-50522'. Use InsightAgent to monitor SharePoint server patch status, perform file integrity checks on critical SharePoint directories (e.g., _layouts, wwwroot), and analyze web server logs for suspicious requests or POST data indicative of exploitation.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Critical wp2shell WordPress flaws exploited to install webshells",
-      "tldr": "Critical vulnerabilities, CVE-2026-63030 and CVE-2026-60137, collectively known as 'wp2shell,' affecting WordPress Core are being actively exploited. Attackers are installing persistent webshells and malicious plugins on vulnerable WordPress sites.",
-      "action": "Immediately update all WordPress installations to the latest secure version. Scan WordPress sites for unauthorized files, especially webshells, and malicious plugins. Review web server logs for suspicious requests.",
+      "title": "Critical wp2shell WordPress Flaws Exploited to Install Webshells with Mass Scanning",
+      "tldr": "Critical 'wp2shell' vulnerabilities (CVE-2026-63030 and CVE-2026-60137) in WordPress Core are under active and widespread exploitation. Attackers are using public exploits for mass scanning to deploy persistent webshells and install malicious plugins on vulnerable sites.",
+      "action": "WordPress administrators must immediately update WordPress Core to the latest secure version to mitigate CVE-2026-63030 and CVE-2026-60137. Conduct a full file integrity scan and database audit for unauthorized files, webshells (especially in /wp-content/uploads/), or malicious plugin installations.",
       "cve_ids": [
         "CVE-2026-63030",
         "CVE-2026-60137"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/critical-wp2shell-wordpress-flaws-exploited-to-install-webshells/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/07/wordpress-wp2shell-exploitation-grows.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "WordPress Core (specific versions prior to patched release)",
-      "how_to_determine_impact": "Check WordPress version. Look for unexpected files in wp-content/uploads/ or other writable directories, new administrator accounts, or modified core files. Use an integrity checker plugin.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Product Name contains 'WordPress' and check version. Get File Hash[wp-content/uploads/*.php] or Get File Content[wp-config.php] for suspicious entries.",
-      "rapid7_query_hint": "Vulnerability.id: 'CVE-2026-63030' OR Vulnerability.id: 'CVE-2026-60137' or Software.name: 'WordPress' AND Vulnerability.severity: 'Critical'",
+      "affected_versions": "WordPress Core (Refer to official WordPress security advisories for CVE-2026-63030 and CVE-2026-60137 for specific vulnerable versions).",
+      "how_to_determine_impact": "Verify WordPress Core version. Perform a full file integrity check of the WordPress installation for any unauthorized *.php files, particularly in writeable directories like /wp-content/uploads/. Review wp-config.php for unexpected changes and wp_options table for new or modified plugin entries.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'WordPress' and Version < 'latest_patched_version'. Use 'Get File Exists' for common webshell filenames or paths. 'Get Running Processes' can identify suspicious PHP processes. Review web server access logs for anomalous POST requests.",
+      "rapid7_query_hint": "Search InsightVM for 'CVE-2026-63030' or 'CVE-2026-60137'. Use InsightAgent to monitor file integrity of WordPress directories, web server access logs for suspicious POST requests, and active processes running PHP scripts outside normal paths. Perform authenticated web application scans.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "SonicWall SMA1000 flaws exploited as zero-days to push custom malware",
-      "tldr": "Two previously undisclosed vulnerabilities in SonicWall SMA1000 devices were exploited as zero-days for weeks. Threat actors leveraged these flaws to install custom malware on vulnerable VPN appliances, allowing persistent access.",
-      "action": "Immediately apply all available patches and hotfixes for SonicWall SMA1000 appliances. Perform a forensic analysis on any SMA1000 devices that were unpatched during the exploitation window for signs of compromise and custom malware.",
+      "title": "Critical Palo Alto VPN Authentication Bypass Exploited by Qilin Ransomware Gang",
+      "tldr": "The Qilin ransomware gang is actively exploiting a critical authentication bypass vulnerability in Palo Alto Networks PAN-OS GlobalProtect VPN. This flaw allows attackers to gain initial access to target networks, ultimately leading to ransomware deployment.",
+      "action": "Immediately apply all available security patches for Palo Alto Networks PAN-OS GlobalProtect VPN. Implement and enforce multi-factor authentication for all VPN access, segment networks, and proactively monitor VPN appliance logs for suspicious login attempts, authentication bypasses, or indicators of compromise associated with Qilin ransomware.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Palo Alto Networks PAN-OS GlobalProtect VPN (Refer to Palo Alto Networks' official security advisory for the critical authentication bypass vulnerability for specific vulnerable versions and fixes).",
+      "how_to_determine_impact": "Check PAN-OS GlobalProtect VPN appliance firmware versions. Review VPN access logs for any unauthorized or suspicious successful login attempts, especially those bypassing MFA. Monitor internal network for signs of lateral movement or Qilin ransomware activity.",
+      "tanium_query_hint": "N/A (Appliance-specific, Tanium cannot directly query firmware versions). On connected endpoints, 'Get Network Connections' can identify suspicious traffic to or from the VPN internal interface. EDR logs can show post-exploitation activity.",
+      "rapid7_query_hint": "Search InsightVM for Palo Alto Networks GlobalProtect vulnerabilities. Configure InsightIDR to ingest and alert on VPN appliance logs for authentication anomalies, successful bypasses, or unusual user agent strings. Monitor for lateral movement within the network.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "SonicWall SMA1000 Zero-Day Flaws Exploited to Deploy Custom Malware",
+      "tldr": "Two previously undisclosed vulnerabilities in SonicWall SMA1000 appliances were actively exploited as zero-days for several weeks. Threat actors leveraged these flaws to deploy custom malware on vulnerable VPN appliances, providing persistent access to victim networks.",
+      "action": "SonicWall SMA1000 users must immediately apply all available security patches and firmware updates. Conduct a comprehensive forensic investigation of all SMA1000 appliances for any signs of compromise, custom malware, or unauthorized persistent access mechanisms.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-sma1000-flaws-exploited-as-zero-days-to-push-custom-malware/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SMA1000 series (specific firmware versions prior to patch)",
-      "how_to_determine_impact": "Verify firmware version of SMA1000 appliances. Check system logs for unauthorized access, unexpected reconfigurations, or unusual outbound connections. Look for presence of unknown files in appliance's file system if access is available.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Product Name contains 'SonicWall SMA1000' then check version. Get Running Processes from all machines with Process Name contains 'custom_malware_name' (if malware signature is known).",
-      "rapid7_query_hint": "Software.name: 'SonicWall SMA1000' AND Vulnerability.severity: 'Critical' AND Vulnerability.status: 'actively_exploited'",
+      "affected_versions": "SonicWall SMA1000 series (Refer to SonicWall's official security advisory for the zero-day vulnerabilities for specific vulnerable firmware versions and patches).",
+      "how_to_determine_impact": "Verify SonicWall SMA1000 firmware versions. Review appliance system logs, access logs, and security logs for unusual activity, unauthorized configuration changes, or unknown process executions. Look for unexpected files or directories on the appliance filesystem.",
+      "tanium_query_hint": "N/A (Appliance-specific, Tanium cannot directly query firmware versions). For endpoints connected via SMA1000, use 'Get Network Connections' to detect unusual outbound traffic. EDR logs on internal systems can help identify custom malware post-exploitation.",
+      "rapid7_query_hint": "Scan SonicWall SMA1000 appliances using network vulnerability scanners for indicators of compromise or known vulnerabilities. Review appliance logs via InsightIDR for unauthorized access attempts or suspicious system events. Perform authenticated scans against the appliance if possible.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "AWS Kiro Flaw Let a Poisoned Web Page Rewrite Its Config and Run Code",
-      "tldr": "A critical flaw in AWS Kiro could allow a specially crafted web page to rewrite the tool's configuration and execute arbitrary code. This high-severity vulnerability poses a significant risk for users of AWS Kiro.",
-      "action": "If using AWS Kiro, ensure it is updated to the latest secure version immediately. Implement strict input validation for any web pages processed by Kiro and review least privilege access policies.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/aws-kiro-flaw-let-poisoned-web-page.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "AWS Kiro (specific versions prior to patch)",
-      "how_to_determine_impact": "Check the deployed version of AWS Kiro. Review configurations and logs for any unauthorized changes or code execution attempts. Ensure Kiro instances are running in isolated environments.",
-      "tanium_query_hint": "Get Installed Applications with Product Name contains 'AWS Kiro' and check version. Get File Content[kiro_config_file.json] from all machines for unauthorized modifications.",
-      "rapid7_query_hint": "Software.name: 'AWS Kiro' AND Vulnerability.severity: 'Critical'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
     }
   ],
   "insurance": [],
@@ -5804,6 +5788,34 @@
         "rapid7_query_hint": "Software.name: 'AWS Kiro' AND Vulnerability.severity: 'Critical'",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Anubis ransomware claims Coca-Cola Fairlife attack, threatens data leak",
+        "tldr": "The Anubis ransomware group has claimed responsibility for a cyberattack against Coca-Cola's Fairlife dairy subsidiary. The attackers are threatening to publish allegedly stolen corporate data unless a ransom payment is made.",
+        "action": "Organizations should review and fortify their incident response plans, enhance data backup and recovery strategies, and implement robust multi-factor authentication and network segmentation to prevent and contain ransomware attacks. Conduct security awareness training to identify phishing attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/anubis-ransomware-claims-coca-cola-fairlife-attack-threatens-data-leak/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Critical wp2shell WordPress Flaws Exploited to Install Webshells with Mass Scanning",
+        "tldr": "Critical 'wp2shell' vulnerabilities (CVE-2026-63030 and CVE-2026-60137) in WordPress Core are under active and widespread exploitation. Attackers are using public exploits for mass scanning to deploy persistent webshells and install malicious plugins on vulnerable sites.",
+        "action": "WordPress administrators must immediately update WordPress Core to the latest secure version to mitigate CVE-2026-63030 and CVE-2026-60137. Conduct a full file integrity scan and database audit for unauthorized files, webshells (especially in /wp-content/uploads/), or malicious plugin installations.",
+        "cve_ids": [
+          "CVE-2026-63030",
+          "CVE-2026-60137"
+        ],
+        "source_url": "https://thehackernews.com/2026/07/wordpress-wp2shell-exploitation-grows.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "WordPress Core (Refer to official WordPress security advisories for CVE-2026-63030 and CVE-2026-60137 for specific vulnerable versions).",
+        "how_to_determine_impact": "Verify WordPress Core version. Perform a full file integrity check of the WordPress installation for any unauthorized *.php files, particularly in writeable directories like /wp-content/uploads/. Review wp-config.php for unexpected changes and wp_options table for new or modified plugin entries.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'WordPress' and Version < 'latest_patched_version'. Use 'Get File Exists' for common webshell filenames or paths. 'Get Running Processes' can identify suspicious PHP processes. Review web server access logs for anomalous POST requests.",
+        "rapid7_query_hint": "Search InsightVM for 'CVE-2026-63030' or 'CVE-2026-60137'. Use InsightAgent to monitor file integrity of WordPress directories, web server access logs for suspicious POST requests, and active processes running PHP scripts outside normal paths. Perform authenticated web application scans.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
