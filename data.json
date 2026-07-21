@@ -1,43 +1,59 @@
 {
   "breaches": [
     {
-      "title": "HollowGraph Malware Hides C2 and Stolen Files in Microsoft 365 Events Dated 2050",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Estée Lauder discloses data breach via Oracle E-Business flaw",
+      "tldr": "Cosmetics giant Estée Lauder announced a data breach affecting customers, which occurred due to the exploitation of a zero-day vulnerability in their Oracle E-Business Suite used for HR operations. This compromise led to unauthorized access and potential exfiltration of sensitive data.",
+      "action": "Review all Oracle E-Business Suite instances for the specified zero-day vulnerability and ensure any available patches are applied immediately. Conduct a comprehensive forensic investigation to determine the full scope of data impact and identify any further compromise or exfiltration.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/hollowgraph-malware-hides-c2-and-stolen.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/",
+      "source": "BleepingComputer"
     },
     {
-      "title": "World's Largest AI Model Repository Hugging Face Breached by Autonomous AI Agent",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Hackers steal $23.7 million in crypto from Ostium in off-chain attack",
+      "tldr": "The Ostium trading platform experienced a theft of $23.75 million in cryptocurrency from its liquidity provider vault. The attack exploited compromised off-chain infrastructure responsible for feeding price data into the protocol, effectively bypassing direct blockchain security measures.",
+      "action": "Review and secure all off-chain infrastructure components, particularly those that feed critical data to blockchain protocols. Implement strict access controls, multi-factor authentication, and robust monitoring systems to detect and prevent similar resource abuse.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/worlds-largest-ai-model-repository.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/",
+      "source": "BleepingComputer"
     },
     {
-      "title": "New Index Tracks Material Breaches — And Refuses to Add Up the Losses",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Meta Paid $78,000 Bounty for Vulnerability Exposing Customer Support Data",
+      "tldr": "Meta awarded a $78,000 bug bounty for a vulnerability that allowed the exposure of customer support data. Although the flaw has been patched, it highlighted the potential for sensitive information handled by support teams to be compromised.",
+      "action": "Ensure all systems handling customer support data are regularly audited for vulnerabilities, with a particular focus on those related to data exposure. Implement strict access controls, data loss prevention (DLP) measures, and strong encryption for all sensitive customer information.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/new-index-tracks-material-breaches-and-refuses-to-add-up-the-losses/",
+      "source_url": "https://www.securityweek.com/meta-pays-78000-bounty-for-vulnerability-exposing-customer-support-data/",
       "source": "SecurityWeek"
     },
     {
-      "title": "Ernst & Young Data Breach Affects Personal, Financial Information",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Clover Health Investments Discloses Data Breach",
+      "tldr": "Clover Health Investments has officially disclosed a data breach, confirming unauthorized access to sensitive information within their systems. The specific nature, scope, and impact of the compromised data are currently under investigation.",
+      "action": "Review incident response procedures and initiate a thorough forensic analysis to ascertain the breach's root cause, identify all affected systems, and determine the types of data compromised. Notify affected individuals and relevant regulatory authorities as required by law.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/ernst-young-data-breach-affects-personal-financial-information/",
+      "source_url": "https://www.securityweek.com/clover-health-investments-discloses-data-breach/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
+      "title": "Critical Palo Alto VPN bug now exploited by Qilin ransomware gang",
+      "tldr": "The Qilin ransomware gang is actively exploiting a critical authentication bypass vulnerability in Palo Alto Networks PAN-OS GlobalProtect VPN to gain initial access to target networks. This flaw allows unauthorized access, bypassing security controls to facilitate ransomware deployment.",
+      "action": "Immediately apply all available patches for the identified critical PAN-OS GlobalProtect VPN authentication bypass vulnerability. Review VPN logs for suspicious authentication attempts or unauthorized access and implement multi-factor authentication for all VPN access if not already in place.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack",
+      "tldr": "A new ransomware variant, ENCFORGE, is specifically designed to target and encrypt AI model files. It achieves this by exploiting a Remote Code Execution (RCE) vulnerability in Langflow, a prominent AI development platform, indicating a focused attack on AI assets.",
+      "action": "Immediately apply all available patches for Langflow, especially those addressing RCE vulnerabilities. Backup critical AI model files, training datasets, and vector databases to offline or immutable storage. Implement network segmentation for AI development and production environments to limit lateral movement.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "JadePuffer agentic attacks now target AI model data with ransomware",
-      "tldr": "The JadePuffer autonomous AI agent has upgraded with custom malware called EncForge that focuses on encrypting AI assets, such as training datasets, vector databases, and model checkpoints. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "The JadePuffer autonomous AI agent has been updated with custom malware called EncForge, specifically designed to target and encrypt AI assets. This includes critical training datasets, vector databases, and model checkpoints, representing an evolution in ransomware tactics focusing on AI data.",
+      "action": "Implement robust backup strategies for all AI model files, training datasets, and vector databases, utilizing immutable storage where possible. Isolate AI development and production environments, and enhance monitoring for any unusual file access patterns or encryption attempts indicative of ransomware activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/",
       "source": "BleepingComputer"
@@ -45,76 +61,69 @@
   ],
   "vulns": [
     {
-      "title": "FakeGit Campaign Uses 7,600 GitHub Repositories to Spread SmartLoader Malware",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/fakegit-campaign-uses-7600-github.html",
+      "title": "Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC",
+      "tldr": "A critical Remote Code Execution vulnerability, CVE-2026-50522, impacting Microsoft SharePoint, is actively being exploited in the wild following the release of a public Proof-of-Concept. This flaw allows unauthenticated attackers to execute arbitrary code with high privileges.",
+      "action": "Immediately identify all Microsoft SharePoint servers and apply the vendor's latest security patches for CVE-2026-50522. Isolate vulnerable systems until patched. Scan for indicators of compromise (IOCs) and monitor logs for unusual activity on affected servers.",
+      "cve_ids": [
+        "CVE-2026-50522"
+      ],
+      "source_url": "https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "Microsoft SharePoint (All vulnerable versions prior to vendor patch for CVE-2026-50522)",
+      "how_to_determine_impact": "Check all Microsoft SharePoint server installations for patch status related to CVE-2026-50522. Verify if the latest Cumulative Update (CU) addressing this CVE has been successfully installed. Look for unexpected processes (e.g., cmd.exe, powershell.exe), new files in SharePoint directories, or outbound connections from SharePoint servers not part of normal operations.",
+      "tanium_query_hint": "Get Installed Patches with Name matches 'KB[PatchID for CVE-2026-50522]'. Get Running Processes matches 'cmd.exe|powershell.exe' from all machines with Computer Name matches 'SharePoint'. Get Computer Name and OS Platform and Installed Applications matches 'Microsoft SharePoint'.",
+      "rapid7_query_hint": "Search 'CVE-2026-50522' in InsightVM. Use a vulnerability scan to identify unpatched SharePoint servers. In InsightIDR, look for alerts related to 'SharePoint RCE,' 'suspicious process execution on SharePoint servers,' or 'unusual outbound connections.'",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Exposed Server Reveals AI-Assisted Phishing Toolkit Behind WebDAV Malware Campaign",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Critical ServiceNow AI Platform Flaw Exploited for Unauthenticated Code Execution",
+      "tldr": "A critical vulnerability in the ServiceNow AI Platform is under active exploitation, enabling unauthenticated attackers to achieve remote code execution (RCE) without requiring any credentials. This poses a severe risk to affected ServiceNow instances.",
+      "action": "Immediately apply all available security patches and mitigations released by ServiceNow for their AI Platform. Conduct an urgent forensic review of all ServiceNow instances for signs of compromise, focusing on unauthorized access, new accounts, or unusual process execution.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/exposed-server-reveals-ai-assisted.html",
+      "source_url": "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "ServiceNow AI Platform (All vulnerable versions prior to vendor patch)",
+      "how_to_determine_impact": "Consult ServiceNow's security advisories for the specific vulnerability affecting the AI Platform. Verify the patch status of all ServiceNow instances. Look for unexpected API calls, unauthorized administrative actions, or new user accounts in ServiceNow audit logs. Monitor associated servers for unusual process activity or outbound network connections.",
+      "tanium_query_hint": "Get Installed Applications with Name matches 'ServiceNow AI Platform'. Check ServiceNow instance logs via API or direct access for suspicious activity. Get Service Status and Running Processes from all machines running ServiceNow.",
+      "rapid7_query_hint": "Leverage InsightVM to scan for ServiceNow platform vulnerabilities. In InsightIDR, search for alerts related to 'ServiceNow RCE,' 'unauthenticated access attempts,' or 'suspicious API calls' to ServiceNow instances.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "⚡ Weekly Recap: WordPress RCE, SonicWall 0-Days, AI Service Attacks, SharePoint 0-Day and More",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "SonicWall SMA1000 flaws exploited as zero-days to push custom malware",
+      "tldr": "Two zero-day vulnerabilities in SonicWall SMA1000 appliances have been actively exploited for weeks by threat actors to deploy custom malware. These flaws allow attackers to gain unauthorized access to VPN devices, leading to potential network compromise.",
+      "action": "Immediately apply the latest security patches and firmware updates released by SonicWall for all SMA1000 appliances. Conduct a comprehensive forensic investigation on all SMA1000 devices to detect and remove any custom malware and assess the extent of compromise.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/weekly-recap-wordpress-rce-sonicwall-0.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-sma1000-flaws-exploited-as-zero-days-to-push-custom-malware/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "SonicWall SMA1000 appliances (Specific versions not provided, assume all vulnerable firmware versions prior to vendor patch)",
+      "how_to_determine_impact": "Check the firmware version of all SonicWall SMA1000 devices against vendor advisories for the zero-day vulnerabilities. Look for unusual log entries, unexpected configuration changes, or the presence of new files and processes indicating custom malware deployment on the appliance or internal network.",
+      "tanium_query_hint": "Get Hardware Model and Firmware Version from all machines with Hardware Model matches 'SonicWall SMA1000'. Get Filesystem Listing['/var/log/messages'] and Get Running Processes to look for IOCs on appliance OS if accessible.",
+      "rapid7_query_hint": "Scan network devices for 'SonicWall SMA1000' vulnerabilities. Review network traffic logs for anomalous connections originating from SMA1000 devices. In InsightIDR, search for alerts related to 'SonicWall zero-day exploit' or 'malware activity on VPN appliances.'",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Russian Intelligence Hacks IP Cameras to Spy on Military Logistics Across NATO States and Ukraine",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Windows LegacyHive zero-day flaw gets free, unofficial patches",
+      "tldr": "A recently disclosed Windows zero-day vulnerability, referred to as 'LegacyHive,' allows attackers to escalate privileges on up-to-date Windows systems. While official patches are pending, unofficial fixes are available, highlighting the immediate risk of privilege escalation.",
+      "action": "Prioritize the evaluation of the 'LegacyHive' zero-day. If deemed necessary for critical systems and after thorough testing, consider deploying the unofficial patches as an interim measure. Implement least privilege principles and monitor Windows systems for suspicious privilege escalation attempts.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/russian-intelligence-hacks-ip-cameras.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Up-to-date Windows systems (Specific versions not provided, but generally affects recent Windows OS versions)",
+      "how_to_determine_impact": "Identify all Windows systems. Consult security researchers' advisories for technical details of the 'LegacyHive' flaw to determine specific vulnerable components or configurations. Check if unofficial patches have been deployed and monitor for evidence of privilege escalation (e.g., unexpected SYSTEM-level processes, unauthorized access to sensitive files).",
+      "tanium_query_hint": "Get Operating System and OS Build from all machines with OS Platform matches 'Windows'. Check for specific file hashes or registry keys associated with the unofficial patch. Get Running Processes with Parent Process matching 'explorer.exe' and User matching 'SYSTEM' for suspicious activity.",
+      "rapid7_query_hint": "Search for vulnerabilities with 'Windows LegacyHive' or relevant keywords. Monitor Windows event logs (Security, System) for suspicious activity related to privilege escalation (e.g., Event ID 4624 with logon type 10 from unexpected accounts, process creation events).",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "8.8 High"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -5625,6 +5634,137 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-07-21": [
+      {
+        "title": "Estée Lauder discloses data breach via Oracle E-Business flaw",
+        "tldr": "Cosmetics giant Estée Lauder announced a data breach affecting customers, which occurred due to the exploitation of a zero-day vulnerability in their Oracle E-Business Suite used for HR operations. This compromise led to unauthorized access and potential exfiltration of sensitive data.",
+        "action": "Review all Oracle E-Business Suite instances for the specified zero-day vulnerability and ensure any available patches are applied immediately. Conduct a comprehensive forensic investigation to determine the full scope of data impact and identify any further compromise or exfiltration.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers steal $23.7 million in crypto from Ostium in off-chain attack",
+        "tldr": "The Ostium trading platform experienced a theft of $23.75 million in cryptocurrency from its liquidity provider vault. The attack exploited compromised off-chain infrastructure responsible for feeding price data into the protocol, effectively bypassing direct blockchain security measures.",
+        "action": "Review and secure all off-chain infrastructure components, particularly those that feed critical data to blockchain protocols. Implement strict access controls, multi-factor authentication, and robust monitoring systems to detect and prevent similar resource abuse.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-237-million-in-crypto-from-ostium-in-off-chain-attack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Meta Paid $78,000 Bounty for Vulnerability Exposing Customer Support Data",
+        "tldr": "Meta awarded a $78,000 bug bounty for a vulnerability that allowed the exposure of customer support data. Although the flaw has been patched, it highlighted the potential for sensitive information handled by support teams to be compromised.",
+        "action": "Ensure all systems handling customer support data are regularly audited for vulnerabilities, with a particular focus on those related to data exposure. Implement strict access controls, data loss prevention (DLP) measures, and strong encryption for all sensitive customer information.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/meta-pays-78000-bounty-for-vulnerability-exposing-customer-support-data/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Clover Health Investments Discloses Data Breach",
+        "tldr": "Clover Health Investments has officially disclosed a data breach, confirming unauthorized access to sensitive information within their systems. The specific nature, scope, and impact of the compromised data are currently under investigation.",
+        "action": "Review incident response procedures and initiate a thorough forensic analysis to ascertain the breach's root cause, identify all affected systems, and determine the types of data compromised. Notify affected individuals and relevant regulatory authorities as required by law.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/clover-health-investments-discloses-data-breach/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Critical Palo Alto VPN bug now exploited by Qilin ransomware gang",
+        "tldr": "The Qilin ransomware gang is actively exploiting a critical authentication bypass vulnerability in Palo Alto Networks PAN-OS GlobalProtect VPN to gain initial access to target networks. This flaw allows unauthorized access, bypassing security controls to facilitate ransomware deployment.",
+        "action": "Immediately apply all available patches for the identified critical PAN-OS GlobalProtect VPN authentication bypass vulnerability. Review VPN logs for suspicious authentication attempts or unauthorized access and implement multi-factor authentication for all VPN access if not already in place.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "New ENCFORGE Ransomware Targets AI Model Files in Langflow RCE Attack",
+        "tldr": "A new ransomware variant, ENCFORGE, is specifically designed to target and encrypt AI model files. It achieves this by exploiting a Remote Code Execution (RCE) vulnerability in Langflow, a prominent AI development platform, indicating a focused attack on AI assets.",
+        "action": "Immediately apply all available patches for Langflow, especially those addressing RCE vulnerabilities. Backup critical AI model files, training datasets, and vector databases to offline or immutable storage. Implement network segmentation for AI development and production environments to limit lateral movement.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/new-encforge-ransomware-targets-ai.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "JadePuffer agentic attacks now target AI model data with ransomware",
+        "tldr": "The JadePuffer autonomous AI agent has been updated with custom malware called EncForge, specifically designed to target and encrypt AI assets. This includes critical training datasets, vector databases, and model checkpoints, representing an evolution in ransomware tactics focusing on AI data.",
+        "action": "Implement robust backup strategies for all AI model files, training datasets, and vector databases, utilizing immutable storage where possible. Isolate AI development and production environments, and enhance monitoring for any unusual file access patterns or encryption attempts indicative of ransomware activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation After Public PoC",
+        "tldr": "A critical Remote Code Execution vulnerability, CVE-2026-50522, impacting Microsoft SharePoint, is actively being exploited in the wild following the release of a public Proof-of-Concept. This flaw allows unauthenticated attackers to execute arbitrary code with high privileges.",
+        "action": "Immediately identify all Microsoft SharePoint servers and apply the vendor's latest security patches for CVE-2026-50522. Isolate vulnerable systems until patched. Scan for indicators of compromise (IOCs) and monitor logs for unusual activity on affected servers.",
+        "cve_ids": [
+          "CVE-2026-50522"
+        ],
+        "source_url": "https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft SharePoint (All vulnerable versions prior to vendor patch for CVE-2026-50522)",
+        "how_to_determine_impact": "Check all Microsoft SharePoint server installations for patch status related to CVE-2026-50522. Verify if the latest Cumulative Update (CU) addressing this CVE has been successfully installed. Look for unexpected processes (e.g., cmd.exe, powershell.exe), new files in SharePoint directories, or outbound connections from SharePoint servers not part of normal operations.",
+        "tanium_query_hint": "Get Installed Patches with Name matches 'KB[PatchID for CVE-2026-50522]'. Get Running Processes matches 'cmd.exe|powershell.exe' from all machines with Computer Name matches 'SharePoint'. Get Computer Name and OS Platform and Installed Applications matches 'Microsoft SharePoint'.",
+        "rapid7_query_hint": "Search 'CVE-2026-50522' in InsightVM. Use a vulnerability scan to identify unpatched SharePoint servers. In InsightIDR, look for alerts related to 'SharePoint RCE,' 'suspicious process execution on SharePoint servers,' or 'unusual outbound connections.'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical ServiceNow AI Platform Flaw Exploited for Unauthenticated Code Execution",
+        "tldr": "A critical vulnerability in the ServiceNow AI Platform is under active exploitation, enabling unauthenticated attackers to achieve remote code execution (RCE) without requiring any credentials. This poses a severe risk to affected ServiceNow instances.",
+        "action": "Immediately apply all available security patches and mitigations released by ServiceNow for their AI Platform. Conduct an urgent forensic review of all ServiceNow instances for signs of compromise, focusing on unauthorized access, new accounts, or unusual process execution.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/critical-servicenow-ai-platform-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "ServiceNow AI Platform (All vulnerable versions prior to vendor patch)",
+        "how_to_determine_impact": "Consult ServiceNow's security advisories for the specific vulnerability affecting the AI Platform. Verify the patch status of all ServiceNow instances. Look for unexpected API calls, unauthorized administrative actions, or new user accounts in ServiceNow audit logs. Monitor associated servers for unusual process activity or outbound network connections.",
+        "tanium_query_hint": "Get Installed Applications with Name matches 'ServiceNow AI Platform'. Check ServiceNow instance logs via API or direct access for suspicious activity. Get Service Status and Running Processes from all machines running ServiceNow.",
+        "rapid7_query_hint": "Leverage InsightVM to scan for ServiceNow platform vulnerabilities. In InsightIDR, search for alerts related to 'ServiceNow RCE,' 'unauthenticated access attempts,' or 'suspicious API calls' to ServiceNow instances.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "SonicWall SMA1000 flaws exploited as zero-days to push custom malware",
+        "tldr": "Two zero-day vulnerabilities in SonicWall SMA1000 appliances have been actively exploited for weeks by threat actors to deploy custom malware. These flaws allow attackers to gain unauthorized access to VPN devices, leading to potential network compromise.",
+        "action": "Immediately apply the latest security patches and firmware updates released by SonicWall for all SMA1000 appliances. Conduct a comprehensive forensic investigation on all SMA1000 devices to detect and remove any custom malware and assess the extent of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-sma1000-flaws-exploited-as-zero-days-to-push-custom-malware/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "SonicWall SMA1000 appliances (Specific versions not provided, assume all vulnerable firmware versions prior to vendor patch)",
+        "how_to_determine_impact": "Check the firmware version of all SonicWall SMA1000 devices against vendor advisories for the zero-day vulnerabilities. Look for unusual log entries, unexpected configuration changes, or the presence of new files and processes indicating custom malware deployment on the appliance or internal network.",
+        "tanium_query_hint": "Get Hardware Model and Firmware Version from all machines with Hardware Model matches 'SonicWall SMA1000'. Get Filesystem Listing['/var/log/messages'] and Get Running Processes to look for IOCs on appliance OS if accessible.",
+        "rapid7_query_hint": "Scan network devices for 'SonicWall SMA1000' vulnerabilities. Review network traffic logs for anomalous connections originating from SMA1000 devices. In InsightIDR, search for alerts related to 'SonicWall zero-day exploit' or 'malware activity on VPN appliances.'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Windows LegacyHive zero-day flaw gets free, unofficial patches",
+        "tldr": "A recently disclosed Windows zero-day vulnerability, referred to as 'LegacyHive,' allows attackers to escalate privileges on up-to-date Windows systems. While official patches are pending, unofficial fixes are available, highlighting the immediate risk of privilege escalation.",
+        "action": "Prioritize the evaluation of the 'LegacyHive' zero-day. If deemed necessary for critical systems and after thorough testing, consider deploying the unofficial patches as an interim measure. Implement least privilege principles and monitor Windows systems for suspicious privilege escalation attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/windows-legacyhive-zero-day-flaw-gets-free-unofficial-patches/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Up-to-date Windows systems (Specific versions not provided, but generally affects recent Windows OS versions)",
+        "how_to_determine_impact": "Identify all Windows systems. Consult security researchers' advisories for technical details of the 'LegacyHive' flaw to determine specific vulnerable components or configurations. Check if unofficial patches have been deployed and monitor for evidence of privilege escalation (e.g., unexpected SYSTEM-level processes, unauthorized access to sensitive files).",
+        "tanium_query_hint": "Get Operating System and OS Build from all machines with OS Platform matches 'Windows'. Check for specific file hashes or registry keys associated with the unofficial patch. Get Running Processes with Parent Process matching 'explorer.exe' and User matching 'SYSTEM' for suspicious activity.",
+        "rapid7_query_hint": "Search for vulnerabilities with 'Windows LegacyHive' or relevant keywords. Monitor Windows event logs (Security, System) for suspicious activity related to privilege escalation (e.g., Event ID 4624 with logon type 10 from unexpected accounts, process creation events).",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "8.8 High",
         "category": "vulns"
       }
     ]
