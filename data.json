@@ -1,105 +1,94 @@
 {
   "breaches": [
     {
-      "title": "Estée Lauder discloses data breach via Oracle E-Business flaw",
-      "tldr": "Cosmetics giant Estée Lauder has confirmed a data breach affecting employees. The breach was caused by the exploitation of an undisclosed zero-day vulnerability in their Oracle E-Business Suite, which is used for human resources operations.",
-      "action": "Organizations using Oracle E-Business Suite must prioritize identifying and patching all known vulnerabilities, especially those related to HR systems. Implement strong access controls, monitor for zero-day exploits, and consider forensic investigation if similar systems are in use.",
+      "title": "Chick-fil-A discloses data breach after credential stuffing attacks",
+      "tldr": "Chick-fil-A is notifying customers of a data breach stemming from recent credential stuffing attacks. Attackers compromised customer accounts, likely using credentials stolen from other breaches, to gain unauthorized access to Chick-fil-A accounts.",
+      "action": "Customers should reset their Chick-fil-A account passwords and enable multi-factor authentication if available. Security teams should monitor for credential stuffing attacks against their own services and enforce strong password policies and MFA.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/est-e-lauder-discloses-data-breach-via-oracle-e-business-flaw/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/chick-fil-a-discloses-data-breach-after-credential-stuffing-attacks/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Meta Paid $78,000 Bounty for Vulnerability Exposing Customer Support Data",
-      "tldr": "Meta awarded a $78,000 bug bounty for a vulnerability that could have exposed customer support data. This highlights the effectiveness of bug bounty programs in proactively identifying critical flaws that could lead to data exposure.",
-      "action": "Organizations should establish or enhance their bug bounty programs to proactively identify and remediate vulnerabilities that could lead to data exposure. Regularly audit customer support platforms and CRM systems for potential data leakage points and implement least privilege access.",
+      "title": "Suno, Paidwork Data Breaches Affect Tens of Millions of Accounts",
+      "tldr": "Two platforms, Suno and Paidwork, have reportedly suffered data breaches affecting tens of millions of user accounts combined. The breaches likely resulted in the exposure of personal information, posing a significant risk to user privacy.",
+      "action": "Users of Suno and Paidwork should immediately change their passwords, especially if they reuse passwords across multiple services. Monitor financial accounts for suspicious activity and be wary of phishing attempts leveraging stolen data.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/meta-pays-78000-bounty-for-vulnerability-exposing-customer-support-data/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Clover Health Investments Discloses Data Breach",
-      "tldr": "Clover Health Investments has disclosed a data breach, indicating unauthorized access to sensitive information. Specific details regarding the scope and nature of the compromised data are currently limited.",
-      "action": "Organizations should continuously monitor their systems for unauthorized access and data exfiltration. Ensure robust logging and alert mechanisms are in place, and review incident response protocols for rapid detection and containment of breaches.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/clover-health-investments-discloses-data-breach/",
+      "source_url": "https://www.securityweek.com/suno-paidwork-data-breaches-affect-tens-of-millions-of-accounts/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "Anubis ransomware claims Coca-Cola Fairlife attack, threatens data leak",
-      "tldr": "The Anubis ransomware group has claimed responsibility for a cyberattack against Coca-Cola's Fairlife dairy subsidiary. The attackers are threatening to publish allegedly stolen corporate data unless a ransom payment is made.",
-      "action": "Organizations should review and fortify their incident response plans, enhance data backup and recovery strategies, and implement robust multi-factor authentication and network segmentation to prevent and contain ransomware attacks. Conduct security awareness training to identify phishing attempts.",
+      "title": "Ransomware Group Threatening to Leak Data Stolen From Coca-Cola's Fairlife",
+      "tldr": "A ransomware group is threatening to leak data allegedly stolen from Fairlife, a dairy company owned by Coca-Cola. This incident suggests a successful data exfiltration operation followed by an extortion attempt, characteristic of modern ransomware attacks.",
+      "action": "Organizations should reinforce data loss prevention strategies, regularly back up critical data, and implement robust detection and response capabilities to identify and thwart data exfiltration attempts. Review network segmentation and access controls to limit lateral movement.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/anubis-ransomware-claims-coca-cola-fairlife-attack-threatens-data-leak/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/ransomware-group-threatening-to-leak-data-stolen-from-coca-colas-fairlife/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
-      "title": "Critical SharePoint RCE CVE-2026-50522 Under Active Exploitation to Steal Machine Keys",
-      "tldr": "A critical Remote Code Execution (RCE) vulnerability, CVE-2026-50522, in Microsoft SharePoint is being actively exploited in the wild. Attackers are leveraging this flaw to steal machine keys, enabling them to maintain persistent access even after patches are applied.",
-      "action": "Immediately apply all available security patches for Microsoft SharePoint Server to address CVE-2026-50522. Following patching, all SharePoint machine keys and associated credentials must be rotated to invalidate stolen keys, and a forensic investigation for persistent access mechanisms is mandatory.",
+      "title": "Critical SharePoint RCE flaw exploited to steal machine keys",
+      "tldr": "A critical Remote Code Execution (RCE) vulnerability, CVE-2026-50522, in Microsoft SharePoint is being actively exploited in the wild. Attackers are leveraging this flaw to steal machine keys, enabling persistent access even after affected servers are patched.",
+      "action": "Immediately apply the latest security updates for Microsoft SharePoint. Investigate all SharePoint servers for indicators of compromise, specifically looking for unauthorized access, modification of machine keys, or suspicious process execution related to CVE-2026-50522.",
       "cve_ids": [
         "CVE-2026-50522"
       ],
-      "source_url": "https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint Server (Refer to Microsoft's official security advisory for CVE-2026-50522 for specific vulnerable versions and cumulative updates).",
-      "how_to_determine_impact": "Verify current SharePoint Server patch levels. Examine SharePoint logs for unusual activity, unauthorized file access (especially in web directories), or signs of machine key exfiltration. Look for webshells or unexplained persistent user accounts.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'SharePoint' and Version < 'latest_patched_version'. Use 'Get File Hash' for known IoC files or 'Get Running Processes' for suspicious activity. Look for access to cryptographic key stores or abnormal service account usage.",
-      "rapid7_query_hint": "Search InsightVM for 'CVE-2026-50522'. Use InsightAgent to monitor SharePoint server patch status, perform file integrity checks on critical SharePoint directories (e.g., _layouts, wwwroot), and analyze web server logs for suspicious requests or POST data indicative of exploitation.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Critical wp2shell WordPress Flaws Exploited to Install Webshells with Mass Scanning",
-      "tldr": "Critical 'wp2shell' vulnerabilities (CVE-2026-63030 and CVE-2026-60137) in WordPress Core are under active and widespread exploitation. Attackers are using public exploits for mass scanning to deploy persistent webshells and install malicious plugins on vulnerable sites.",
-      "action": "WordPress administrators must immediately update WordPress Core to the latest secure version to mitigate CVE-2026-63030 and CVE-2026-60137. Conduct a full file integrity scan and database audit for unauthorized files, webshells (especially in /wp-content/uploads/), or malicious plugin installations.",
-      "cve_ids": [
-        "CVE-2026-63030",
-        "CVE-2026-60137"
-      ],
-      "source_url": "https://thehackernews.com/2026/07/wordpress-wp2shell-exploitation-grows.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "WordPress Core (Refer to official WordPress security advisories for CVE-2026-63030 and CVE-2026-60137 for specific vulnerable versions).",
-      "how_to_determine_impact": "Verify WordPress Core version. Perform a full file integrity check of the WordPress installation for any unauthorized *.php files, particularly in writeable directories like /wp-content/uploads/. Review wp-config.php for unexpected changes and wp_options table for new or modified plugin entries.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'WordPress' and Version < 'latest_patched_version'. Use 'Get File Exists' for common webshell filenames or paths. 'Get Running Processes' can identify suspicious PHP processes. Review web server access logs for anomalous POST requests.",
-      "rapid7_query_hint": "Search InsightVM for 'CVE-2026-63030' or 'CVE-2026-60137'. Use InsightAgent to monitor file integrity of WordPress directories, web server access logs for suspicious POST requests, and active processes running PHP scripts outside normal paths. Perform authenticated web application scans.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Critical Palo Alto VPN Authentication Bypass Exploited by Qilin Ransomware Gang",
-      "tldr": "The Qilin ransomware gang is actively exploiting a critical authentication bypass vulnerability in Palo Alto Networks PAN-OS GlobalProtect VPN. This flaw allows attackers to gain initial access to target networks, ultimately leading to ransomware deployment.",
-      "action": "Immediately apply all available security patches for Palo Alto Networks PAN-OS GlobalProtect VPN. Implement and enforce multi-factor authentication for all VPN access, segment networks, and proactively monitor VPN appliance logs for suspicious login attempts, authentication bypasses, or indicators of compromise associated with Qilin ransomware.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/critical-globalprotect-vpn-bug-now-exploited-in-ransomware-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/critical-sharepoint-rce-flaw-exploited-to-steal-machine-keys/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Palo Alto Networks PAN-OS GlobalProtect VPN (Refer to Palo Alto Networks' official security advisory for the critical authentication bypass vulnerability for specific vulnerable versions and fixes).",
-      "how_to_determine_impact": "Check PAN-OS GlobalProtect VPN appliance firmware versions. Review VPN access logs for any unauthorized or suspicious successful login attempts, especially those bypassing MFA. Monitor internal network for signs of lateral movement or Qilin ransomware activity.",
-      "tanium_query_hint": "N/A (Appliance-specific, Tanium cannot directly query firmware versions). On connected endpoints, 'Get Network Connections' can identify suspicious traffic to or from the VPN internal interface. EDR logs can show post-exploitation activity.",
-      "rapid7_query_hint": "Search InsightVM for Palo Alto Networks GlobalProtect vulnerabilities. Configure InsightIDR to ingest and alert on VPN appliance logs for authentication anomalies, successful bypasses, or unusual user agent strings. Monitor for lateral movement within the network.",
+      "affected_versions": "Microsoft SharePoint Server (all affected versions, consult Microsoft's advisory for CVE-2026-50522 for specifics)",
+      "how_to_determine_impact": "Identify all SharePoint Server instances. Check the installed build version against Microsoft's security update guide for CVE-2026-50522. Additionally, review SharePoint server logs for unusual activity, unauthorized file access, or suspicious process execution. Look for signs of machine key exfiltration.",
+      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'SharePoint'). Review 'Computer Name and Report Uptime and Get Registry Value[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\SharePoint\\MachineKeys]' to detect key access patterns.",
+      "rapid7_query_hint": "Search vulnerability ID 'CVE-2026-50522'. Run an authenticated scan on all SharePoint servers. Use InsightAgent to query for suspicious file modifications in SharePoint installation directories or unauthorized network connections from SharePoint processes.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "SonicWall SMA1000 Zero-Day Flaws Exploited to Deploy Custom Malware",
-      "tldr": "Two previously undisclosed vulnerabilities in SonicWall SMA1000 appliances were actively exploited as zero-days for several weeks. Threat actors leveraged these flaws to deploy custom malware on vulnerable VPN appliances, providing persistent access to victim networks.",
-      "action": "SonicWall SMA1000 users must immediately apply all available security patches and firmware updates. Conduct a comprehensive forensic investigation of all SMA1000 appliances for any signs of compromise, custom malware, or unauthorized persistent access mechanisms.",
+      "title": "CISA orders urgent action on actively exploited Langflow RCE flaw",
+      "tldr": "CISA has issued an urgent directive for U.S. government agencies to prioritize patching an actively exploited Remote Code Execution (RCE) vulnerability in Langflow, a visual framework for building AI agents. This critical flaw poses a significant risk to systems utilizing the framework.",
+      "action": "Prioritize and immediately apply available patches or mitigation steps for Langflow. Scan your environment to identify all Langflow installations and verify that all instances are updated to a non-vulnerable version.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-sma1000-flaws-exploited-as-zero-days-to-push-custom-malware/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-langflow-rce-flaw/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SMA1000 series (Refer to SonicWall's official security advisory for the zero-day vulnerabilities for specific vulnerable firmware versions and patches).",
-      "how_to_determine_impact": "Verify SonicWall SMA1000 firmware versions. Review appliance system logs, access logs, and security logs for unusual activity, unauthorized configuration changes, or unknown process executions. Look for unexpected files or directories on the appliance filesystem.",
-      "tanium_query_hint": "N/A (Appliance-specific, Tanium cannot directly query firmware versions). For endpoints connected via SMA1000, use 'Get Network Connections' to detect unusual outbound traffic. EDR logs on internal systems can help identify custom malware post-exploitation.",
-      "rapid7_query_hint": "Scan SonicWall SMA1000 appliances using network vulnerability scanners for indicators of compromise or known vulnerabilities. Review appliance logs via InsightIDR for unauthorized access attempts or suspicious system events. Perform authenticated scans against the appliance if possible.",
+      "affected_versions": "Langflow visual framework for building AI agents (all affected versions, consult vendor for specific vulnerable ranges)",
+      "how_to_determine_impact": "Identify all systems running Langflow. Verify the installed version against vendor advisories. Review system logs for signs of unauthorized code execution or unusual process activity originating from Langflow instances.",
+      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Langflow'). Check for 'Get Running Processes[python]' and 'Get Netstat' for suspicious connections from Langflow services.",
+      "rapid7_query_hint": "Asset search for 'Langflow'. Perform authenticated scans on relevant assets. Use InsightAgent to monitor for suspicious process creation or file changes associated with Langflow installations.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Oracle Patches Over 1,400 Vulnerabilities With Quarterly Security Updates",
+      "tldr": "Oracle has released its latest Critical Patch Update (CPU), addressing over 1,400 vulnerabilities across its extensive product portfolio. This comprehensive batch of patches includes fixes for critical flaws that could impact various Oracle applications, databases, and infrastructure components.",
+      "action": "Review the latest Oracle Critical Patch Update (CPU) advisory immediately. Prioritize and apply all relevant patches to affected Oracle products and systems across your enterprise according to vendor guidelines and your patch management policy.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/oracle-patches-over-1400-vulnerabilities-with-quarterly-security-updates/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "Various Oracle products and components. Consult the Oracle Critical Patch Update advisory for specific details on affected versions for each patched vulnerability.",
+      "how_to_determine_impact": "Identify all Oracle software installations (databases, middleware, applications, etc.) within your environment. Cross-reference installed versions with the Oracle Critical Patch Update advisory to determine the applicability of patches for each system.",
+      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Oracle'). Use 'Get Tanium Patch Report' to identify missing Oracle patches across your infrastructure.",
+      "rapid7_query_hint": "Run authenticated scans against all Oracle database and application servers. Use 'vulnerability ID search' for specific CVEs listed in Oracle's CPU, or asset search for 'Oracle' to check for general patch status and compliance.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "Varies, up to 9.8 Critical for some individual vulnerabilities"
+    },
+    {
+      "title": "Adobe Chrome extension flaw let sites access private WhatsApp chats",
+      "tldr": "A vulnerability in the Adobe Acrobat Chrome extension allowed malicious websites to access private WhatsApp Web conversations and other sensitive data without requiring any user authentication. This flaw could lead to unauthorized data theft and privacy compromise for users with the extension installed.",
+      "action": "Users should immediately update the Adobe Acrobat Chrome extension to the latest version. Alternatively, consider disabling or temporarily removing the extension until the update is confirmed. Security teams should verify client browser extension versions across endpoints.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Adobe Acrobat Chrome extension (prior to patched version, consult Adobe's advisory for specifics)",
+      "how_to_determine_impact": "Identify all user endpoints with Chrome browsers installed. Check the version of the Adobe Acrobat Chrome extension. This may require utilizing endpoint management tools or communicating instructions directly to users.",
+      "tanium_query_hint": "Get Chrome Extensions from all machines. Filter for 'Adobe Acrobat' and check its installed version. Prompt users to update or remove if outdated versions are discovered.",
+      "rapid7_query_hint": "Use InsightAgent to query for installed Chrome extensions and their versions. Target assets with Chrome browser installations and review extension manifests or configuration settings if possible.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.1 High"
     }
   ],
   "insurance": [],
@@ -5816,6 +5805,101 @@
         "rapid7_query_hint": "Search InsightVM for 'CVE-2026-63030' or 'CVE-2026-60137'. Use InsightAgent to monitor file integrity of WordPress directories, web server access logs for suspicious POST requests, and active processes running PHP scripts outside normal paths. Perform authenticated web application scans.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-07-22": [
+      {
+        "title": "Chick-fil-A discloses data breach after credential stuffing attacks",
+        "tldr": "Chick-fil-A is notifying customers of a data breach stemming from recent credential stuffing attacks. Attackers compromised customer accounts, likely using credentials stolen from other breaches, to gain unauthorized access to Chick-fil-A accounts.",
+        "action": "Customers should reset their Chick-fil-A account passwords and enable multi-factor authentication if available. Security teams should monitor for credential stuffing attacks against their own services and enforce strong password policies and MFA.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/chick-fil-a-discloses-data-breach-after-credential-stuffing-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Suno, Paidwork Data Breaches Affect Tens of Millions of Accounts",
+        "tldr": "Two platforms, Suno and Paidwork, have reportedly suffered data breaches affecting tens of millions of user accounts combined. The breaches likely resulted in the exposure of personal information, posing a significant risk to user privacy.",
+        "action": "Users of Suno and Paidwork should immediately change their passwords, especially if they reuse passwords across multiple services. Monitor financial accounts for suspicious activity and be wary of phishing attempts leveraging stolen data.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/suno-paidwork-data-breaches-affect-tens-of-millions-of-accounts/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Ransomware Group Threatening to Leak Data Stolen From Coca-Cola's Fairlife",
+        "tldr": "A ransomware group is threatening to leak data allegedly stolen from Fairlife, a dairy company owned by Coca-Cola. This incident suggests a successful data exfiltration operation followed by an extortion attempt, characteristic of modern ransomware attacks.",
+        "action": "Organizations should reinforce data loss prevention strategies, regularly back up critical data, and implement robust detection and response capabilities to identify and thwart data exfiltration attempts. Review network segmentation and access controls to limit lateral movement.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/ransomware-group-threatening-to-leak-data-stolen-from-coca-colas-fairlife/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Critical SharePoint RCE flaw exploited to steal machine keys",
+        "tldr": "A critical Remote Code Execution (RCE) vulnerability, CVE-2026-50522, in Microsoft SharePoint is being actively exploited in the wild. Attackers are leveraging this flaw to steal machine keys, enabling persistent access even after affected servers are patched.",
+        "action": "Immediately apply the latest security updates for Microsoft SharePoint. Investigate all SharePoint servers for indicators of compromise, specifically looking for unauthorized access, modification of machine keys, or suspicious process execution related to CVE-2026-50522.",
+        "cve_ids": [
+          "CVE-2026-50522"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/critical-sharepoint-rce-flaw-exploited-to-steal-machine-keys/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft SharePoint Server (all affected versions, consult Microsoft's advisory for CVE-2026-50522 for specifics)",
+        "how_to_determine_impact": "Identify all SharePoint Server instances. Check the installed build version against Microsoft's security update guide for CVE-2026-50522. Additionally, review SharePoint server logs for unusual activity, unauthorized file access, or suspicious process execution. Look for signs of machine key exfiltration.",
+        "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'SharePoint'). Review 'Computer Name and Report Uptime and Get Registry Value[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\SharePoint\\MachineKeys]' to detect key access patterns.",
+        "rapid7_query_hint": "Search vulnerability ID 'CVE-2026-50522'. Run an authenticated scan on all SharePoint servers. Use InsightAgent to query for suspicious file modifications in SharePoint installation directories or unauthorized network connections from SharePoint processes.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA orders urgent action on actively exploited Langflow RCE flaw",
+        "tldr": "CISA has issued an urgent directive for U.S. government agencies to prioritize patching an actively exploited Remote Code Execution (RCE) vulnerability in Langflow, a visual framework for building AI agents. This critical flaw poses a significant risk to systems utilizing the framework.",
+        "action": "Prioritize and immediately apply available patches or mitigation steps for Langflow. Scan your environment to identify all Langflow installations and verify that all instances are updated to a non-vulnerable version.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-langflow-rce-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Langflow visual framework for building AI agents (all affected versions, consult vendor for specific vulnerable ranges)",
+        "how_to_determine_impact": "Identify all systems running Langflow. Verify the installed version against vendor advisories. Review system logs for signs of unauthorized code execution or unusual process activity originating from Langflow instances.",
+        "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Langflow'). Check for 'Get Running Processes[python]' and 'Get Netstat' for suspicious connections from Langflow services.",
+        "rapid7_query_hint": "Asset search for 'Langflow'. Perform authenticated scans on relevant assets. Use InsightAgent to monitor for suspicious process creation or file changes associated with Langflow installations.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Oracle Patches Over 1,400 Vulnerabilities With Quarterly Security Updates",
+        "tldr": "Oracle has released its latest Critical Patch Update (CPU), addressing over 1,400 vulnerabilities across its extensive product portfolio. This comprehensive batch of patches includes fixes for critical flaws that could impact various Oracle applications, databases, and infrastructure components.",
+        "action": "Review the latest Oracle Critical Patch Update (CPU) advisory immediately. Prioritize and apply all relevant patches to affected Oracle products and systems across your enterprise according to vendor guidelines and your patch management policy.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/oracle-patches-over-1400-vulnerabilities-with-quarterly-security-updates/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Various Oracle products and components. Consult the Oracle Critical Patch Update advisory for specific details on affected versions for each patched vulnerability.",
+        "how_to_determine_impact": "Identify all Oracle software installations (databases, middleware, applications, etc.) within your environment. Cross-reference installed versions with the Oracle Critical Patch Update advisory to determine the applicability of patches for each system.",
+        "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Oracle'). Use 'Get Tanium Patch Report' to identify missing Oracle patches across your infrastructure.",
+        "rapid7_query_hint": "Run authenticated scans against all Oracle database and application servers. Use 'vulnerability ID search' for specific CVEs listed in Oracle's CPU, or asset search for 'Oracle' to check for general patch status and compliance.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "Varies, up to 9.8 Critical for some individual vulnerabilities",
+        "category": "vulns"
+      },
+      {
+        "title": "Adobe Chrome extension flaw let sites access private WhatsApp chats",
+        "tldr": "A vulnerability in the Adobe Acrobat Chrome extension allowed malicious websites to access private WhatsApp Web conversations and other sensitive data without requiring any user authentication. This flaw could lead to unauthorized data theft and privacy compromise for users with the extension installed.",
+        "action": "Users should immediately update the Adobe Acrobat Chrome extension to the latest version. Alternatively, consider disabling or temporarily removing the extension until the update is confirmed. Security teams should verify client browser extension versions across endpoints.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/adobe-chrome-extension-flaw-let-sites-access-private-whatsapp-chats/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Adobe Acrobat Chrome extension (prior to patched version, consult Adobe's advisory for specifics)",
+        "how_to_determine_impact": "Identify all user endpoints with Chrome browsers installed. Check the version of the Adobe Acrobat Chrome extension. This may require utilizing endpoint management tools or communicating instructions directly to users.",
+        "tanium_query_hint": "Get Chrome Extensions from all machines. Filter for 'Adobe Acrobat' and check its installed version. Prompt users to update or remove if outdated versions are discovered.",
+        "rapid7_query_hint": "Use InsightAgent to query for installed Chrome extensions and their versions. Target assets with Chrome browser installations and review extension manifests or configuration settings if possible.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.1 High",
         "category": "vulns"
       }
     ]
