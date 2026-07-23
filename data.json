@@ -1,43 +1,43 @@
 {
   "breaches": [
     {
-      "title": "Upbound Group Says Data Breach Led to $13 Million in Fraudulent Contract Losses",
-      "tldr": "Fintech company Upbound Group disclosed a data breach where threat actors stole data and subsequently used it to create $13 million in fraudulent Acima leases. This incident highlights the significant financial impact and potential for identity-related fraud stemming from compromised sensitive customer information.",
-      "action": "Review financial transactions for irregularities and implement stronger identity verification processes, especially for new accounts or lease applications. Monitor for the fraudulent use of stolen data in financial schemes and enhance data protection measures.",
+      "title": "Australian energy provider Origin says data breach exposes client data",
+      "tldr": "Origin Energy, an Australian energy provider, confirmed an unauthorized party accessed and leaked customer data online. The breach exposed sensitive Personally Identifiable Information (PII) of clients.",
+      "action": "Identify if your organization uses Origin Energy or similar third-party energy providers. If so, contact them for breach details and assess potential PII exposure. Advise affected individuals to monitor for suspicious activity.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/upbound-says-hack-caused-13-million-in-fraudulent-acima-leases/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/",
       "source": "BleepingComputer"
     },
     {
       "title": "Chick-fil-A Accounts Get Fried in Credential Stuffing Attack",
-      "tldr": "Chick-fil-A customer accounts were compromised in a credential stuffing attack, where attackers leveraged previously leaked credentials from other breaches to gain unauthorized access. This incident potentially exposed customer loyalty points and personal information stored within the accounts.",
-      "action": "Urge users to use unique, strong passwords for all online accounts and enable multi-factor authentication (MFA) wherever available. Organizations should monitor logs for suspicious login attempts and anomalous account activity, especially from known credential stuffing sources.",
+      "tldr": "Chick-fil-A customer accounts were compromised in a credential stuffing attack. While the full extent of data accessed isn't detailed, this method typically allows attackers to access personal information and potentially loyalty points or payment details stored in accounts.",
+      "action": "Users of Chick-fil-A accounts should immediately change their passwords, especially if they reuse passwords across services. Enable multi-factor authentication if available. Organizations should review their own credential stuffing prevention mechanisms and monitor for similar attacks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/chick-fil-a-accounts-get-fried-in-credential-stuffing-attack/",
       "source": "SecurityWeek"
     },
     {
-      "title": "Suno, Paidwork Data Breaches Affect Tens of Millions of Accounts",
-      "tldr": "Two online platforms, Suno and Paidwork, have reportedly experienced separate data breaches affecting tens of millions of user accounts. The nature of the compromised data likely includes personal identifiable information and login credentials, posing a significant risk to affected users.",
-      "action": "Users of Suno and Paidwork should immediately change their passwords for these services and any other accounts where they reused the same credentials. Enable multi-factor authentication if available. Organizations should monitor dark web forums for leaked credentials associated with these platforms.",
+      "title": "Upbound Group Says Data Breach Led to $13 Million in Fraudulent Contract Losses",
+      "tldr": "Upbound Group disclosed a data breach that resulted in $13 million in fraudulent contract losses. The breach's specific nature isn't detailed but highlights the financial impact and real-world consequences beyond data exposure.",
+      "action": "Implement enhanced fraud detection mechanisms and review contract verification processes. Conduct a thorough forensic investigation if your organization experiences similar incidents to understand the breach vector and data exfiltration methods.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/suno-paidwork-data-breaches-affect-tens-of-millions-of-accounts/",
+      "source_url": "https://www.securityweek.com/upbound-group-says-data-breach-led-to-13-million-in-fraudulent-contract-losses/",
       "source": "SecurityWeek"
     },
     {
-      "title": "China-Nexus JadeProx Uses New TriBack Loader in Government and Healthcare Attacks",
-      "tldr": "A China-nexus threat actor group, JadeProx, has been observed deploying a newly identified malware loader dubbed 'TriBack' in targeted attacks against government and healthcare organizations. These attacks aim to establish persistent access and facilitate the exfiltration of sensitive data, indicating potential breaches of highly critical information.",
-      "action": "Organizations in the government and healthcare sectors must enhance their threat detection capabilities to identify indicators of compromise (IOCs) related to TriBack loader and JadeProx activity. Strengthen endpoint detection and response (EDR) solutions and implement strict network segmentation to limit lateral movement.",
+      "title": "Suno, Paidwork Data Breaches Affect Tens of Millions of Accounts",
+      "tldr": "Data breaches at Suno and Paidwork have affected tens of millions of user accounts. The nature of the compromised data likely includes personal information and credentials, given the scale of impact.",
+      "action": "Users of Suno and Paidwork should change their passwords immediately and activate multi-factor authentication where possible. Organizations should remind employees about password hygiene and the risks of credential reuse across personal and work accounts.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/china-nexus-jadeprox-uses-new-triback.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.securityweek.com/suno-paidwork-data-breaches-affect-tens-of-millions-of-accounts/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Chaos Ransomware Uses msaRAT to Route C2 Traffic Through Headless Chrome and Edge",
-      "tldr": "The Chaos ransomware group is employing a new backdoor called msaRAT to effectively mask its command-and-control (C2) communications. This malware uniquely routes its C2 traffic through legitimate, headless instances of Chrome and Edge browsers, making detection significantly more challenging as it blends with normal browser activity.",
-      "action": "Implement robust network monitoring to detect unusual browser process activity, specifically headless instances establishing suspicious external connections. Enhance endpoint detection capabilities to identify msaRAT's unique C2 tunneling methods and block outbound connections from non-standard or suspicious browser processes.",
+      "tldr": "The Chaos ransomware gang is deploying msaRAT, a new backdoor, to establish command-and-control (C2) communications. This backdoor cleverly routes its C2 traffic through legitimate headless Chrome and Edge browser instances to evade detection.",
+      "action": "Implement network traffic analysis tools to detect anomalous browser-initiated connections to unusual external IPs. Monitor for headless browser processes (Chrome/Edge) executing in unexpected contexts, especially those making outbound connections. Review endpoint detection and response (EDR) rules for msaRAT indicators of compromise (IoCs).",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html",
       "source": "The Hacker News"
@@ -45,66 +45,66 @@
   ],
   "vulns": [
     {
-      "title": "New RefluXFS Linux flaw lets attackers gain root privileges",
-      "tldr": "A nine-year-old race condition vulnerability, identified as CVE-2026-64600, has been discovered in the Linux kernel's XFS filesystem. This critical flaw allows a local attacker to overwrite protected files and subsequently gain root privileges on affected systems, including default Red Hat Enterprise Linux installations.",
-      "action": "Immediately apply the latest security patches for the Linux kernel on all systems utilizing the XFS filesystem. Verify kernel versions and XFS module status. Implement mandatory access controls (MAC) like SELinux to restrict file write operations for non-root users and minimize local user privileges.",
+      "title": "Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes",
+      "tldr": "A Russian state-sponsored hacking group (Laundry Bear/Void Blizzard) exploited a zero-click, now-patched Zimbra vulnerability. This zero-day flaw was used in conjunction with phishing attacks to steal emails and 2FA codes from target organizations.",
+      "action": "Immediately ensure all Zimbra Collaboration servers are updated to the latest patched version. Conduct a forensic review for any signs of compromise, including suspicious email access patterns or unauthorized 2FA code generation. Educate users on sophisticated phishing attacks, especially those targeting 2FA.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/russian-espionage-group-exploited.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Zimbra Collaboration Suite (ZCS) versions prior to the patched release. Specific vulnerable versions are not detailed in the provided text.",
+      "how_to_determine_impact": "Check Zimbra server patch levels. Review Zimbra access logs for unauthorized logins, especially from unusual geographical locations or after suspicious phishing attempts. Audit email server configurations for any unauthorized forwarding rules or mailbox access. Monitor for unusual 2FA generation attempts or successful bypasses.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Zimbra' or 'mail'. Run 'Get Process Details' for Zimbra-related processes and check for unusual parameters or parent processes. Check 'Get File Version' for Zimbra binaries to determine patch level.",
+      "rapid7_query_hint": "Search for vulnerability ID related to Zimbra. Perform an authenticated scan against Zimbra servers to identify missing patches. Query InsightIDR logs for failed 2FA attempts followed by successful ones, or email server access from new IPs.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated - based on zero-day, zero-click, state-sponsored exploitation leading to email/2FA theft)"
+    },
+    {
+      "title": "Nine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs",
+      "tldr": "A nine-year-old race condition vulnerability, CVE-2026-64600, in the Linux kernel's XFS filesystem allows local attackers to overwrite protected files and achieve root privileges. This flaw affects default Red Hat Enterprise Linux (RHEL) installations.",
+      "action": "Apply security patches for the Linux kernel that address CVE-2026-64600 on all affected systems, particularly RHEL. Implement strict access controls to limit local user privileges and minimize the impact of successful exploitation.",
       "cve_ids": [
         "CVE-2026-64600"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/linux/new-refluxfs-linux-flaw-lets-attackers-gain-root-privileges/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Linux kernel's XFS filesystem on various distributions, explicitly affecting default Red Hat Enterprise Linux installs. Consult distribution-specific advisories for patch availability.",
-      "how_to_determine_impact": "On Linux systems, check filesystem type with `df -T` or `mount`. Verify the kernel version with `uname -r`. Cross-reference these details with vendor advisories for affected kernel versions when XFS is in use.",
-      "tanium_query_hint": "Get Computer Name and OS Platform and Kernel Version and Filesystem Type from all machines with (OS Platform contains 'Linux' and Filesystem Type contains 'xfs') else ''",
-      "rapid7_query_hint": "Vulnerability.name = 'CVE-2026-64600' OR Software.Name = 'Linux Kernel' AND Software.Configuration.Filesystem = 'XFS' AND Vulnerability.severity = 'critical'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "7.8 High"
-    },
-    {
-      "title": "New Check Point Zero-Day Vulnerability Exploited in the Wild",
-      "tldr": "Check Point has addressed a critical zero-day vulnerability in its SmartConsole GUI administration panel that is being actively exploited in the wild. This flaw allows attackers to gain full administrative access to security management systems, posing a severe risk to an organization's network defenses.",
-      "action": "Immediately apply the latest hotfixes or patches for Check Point SmartConsole. Thoroughly inspect all SmartConsole installations and management servers for indicators of compromise, including unauthorized access logs, unusual process execution, or configuration changes.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/new-check-point-zero-day-vulnerability-exploited-in-the-wild/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Specific versions of Check Point SmartConsole prior to vendor-released patches. Organizations should consult Check Point's official security advisories for precise versioning and patching instructions.",
-      "how_to_determine_impact": "Check the installed version of Check Point SmartConsole. Review SmartConsole audit logs and system logs on the management server for any anomalous activity, unauthorized logins, or configuration modifications.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Installed Applications contains 'Check Point SmartConsole' and Installed Applications Version less than 'Expected_Patched_Version'",
-      "rapid7_query_hint": "Software.Name = 'Check Point SmartConsole' AND Vulnerability.severity = 'critical' AND Vulnerability.Status = 'exploited'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Russian hackers exploit Zimbra zero-click flaw for email theft",
-      "tldr": "CISA has issued a warning regarding a zero-click vulnerability in Zimbra Collaboration email servers, which Russian state-sponsored actors (Laundry Bear/Void Blizzard) are actively exploiting. The flaw, often combined with phishing, leads to unauthorized email theft from targeted organizations.",
-      "action": "Apply all available security patches for Zimbra Collaboration servers immediately. Enhance email gateway security, conduct employee awareness training on sophisticated phishing, and monitor Zimbra server logs for signs of compromise, unusual access patterns, or data exfiltration.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-zimbra-zero-click-flaw-for-email-teft/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Zimbra Collaboration email servers (specific versions prior to patched release). Organizations must refer to Zimbra's official security advisories for the precise vulnerable versions and necessary updates.",
-      "how_to_determine_impact": "Identify Zimbra Collaboration server deployments. Check server versions against vendor advisories. Review mail server logs, access logs, and network traffic for suspicious activity indicative of zero-click exploitation or email exfiltration.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Installed Applications contains 'Zimbra Collaboration' and Installed Applications Version less than 'Expected_Patched_Version'",
-      "rapid7_query_hint": "Software.Name = 'Zimbra Collaboration' AND Vulnerability.severity = 'critical' AND Vulnerability.Status = 'exploited'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Claude Cowork Flaw Could Let AI Agent Escape Its VM and Access Mac Files",
-      "tldr": "A vulnerability discovered in Claude Cowork could potentially enable an AI agent to perform a virtual machine (VM) escape, thereby gaining unauthorized access to files on the host Mac operating system. This poses a significant risk to the integrity and confidentiality of data on the underlying system.",
-      "action": "Deploy Claude Cowork with robust sandboxing and least privilege principles. Isolate AI agents in highly restricted environments and continuously monitor for unusual process behavior or unauthorized file access attempts originating from AI agent VMs. Consult Anthropic for potential patches or mitigation strategies.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/claude-cowork-flaw-could-let-ai-agent.html",
+      "source_url": "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Claude Cowork, specifically when deployed within a virtual machine environment on macOS. Specific vulnerable versions would require vendor confirmation.",
-      "how_to_determine_impact": "Identify all instances of Claude Cowork running on macOS, especially within virtualized environments. Review the configuration of these VMs for sandbox integrity and isolation settings. Look for signs of VM escape or unauthorized host-level access.",
-      "tanium_query_hint": "Get Installed Applications from all machines with (Operating System contains 'Mac' and Installed Applications contains 'Claude Cowork') and (Running Processes contains 'vm' or Running Processes contains 'virtualbox' or Running Processes contains 'parallels')",
-      "rapid7_query_hint": "Software.Name = 'Claude Cowork' AND OperatingSystem.Name = 'macOS' AND Asset.Hardware.VirtualizationType = 'Virtual Machine' AND Vulnerability.severity = 'high'",
+      "affected_versions": "Linux kernel XFS filesystem. Specifically mentioned to affect default Red Hat Enterprise Linux (RHEL) installations. Specific kernel versions require patching.",
+      "how_to_determine_impact": "Identify Linux systems running XFS filesystem (e.g., `df -hT | grep xfs`). Check kernel version using `uname -r` and cross-reference with vendor advisories for CVE-2026-64600. Look for unexpected file modifications in protected directories by non-root users.",
+      "tanium_query_hint": "Get Computer Name and OS Platform and Kernel Version from all machines. Check 'Get Installed Applications' for RHEL distribution and version. Query for files that should be immutable or protected and have recent modification dates by non-root users.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-64600' in InsightVM. Run authenticated scans on Linux assets to detect vulnerable kernel versions. Query InsightIDR for process activity showing unusual privilege escalation attempts or file overwrites.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.5 High"
+      "cvss_score": "7.8 High (Estimated - local privilege escalation to root is significant, but requires local access)"
+    },
+    {
+      "title": "Check Point Patches Exploited SmartConsole Flaw Allowing Full Admin Access",
+      "tldr": "Check Point has patched an actively exploited zero-day vulnerability in its SmartConsole, which allowed attackers to gain full administrative access. The flaw was exploited in the wild, enabling unauthorized control over Check Point environments.",
+      "action": "Immediately update all Check Point SmartConsole installations to the latest patched version. Review logs for any unauthorized access attempts or administrative actions originating from unexpected sources prior to applying the patch. Isolate SmartConsole instances from public internet access.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/check-point-patches-exploited.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Check Point SmartConsole versions prior to the patched release. Specific vulnerable versions are not detailed in the provided text.",
+      "how_to_determine_impact": "Verify SmartConsole versions on all management workstations. Review SmartConsole audit logs for suspicious login attempts or changes made by unknown administrators. Check network appliance logs for unexpected connections to SmartConsole management ports.",
+      "tanium_query_hint": "Get Installed Applications and OS Platform from all machines. Filter for 'Check Point SmartConsole'. Get File Version for SmartConsole executable. Review event logs for administrative access originating from non-authorized hosts.",
+      "rapid7_query_hint": "Run authenticated scans to identify installed Check Point SmartConsole versions. Query InsightIDR for 'Check Point' related events, focusing on administrative login anomalies, new user creations, or configuration changes from unusual IPs.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated - based on zero-day, active exploitation, and full admin access)"
+    },
+    {
+      "title": "OpenAI Fixes ChatGPT Agent Flaw That Could Let Attackers Forge an AI Insider",
+      "tldr": "OpenAI has patched a vulnerability in its ChatGPT Agent that could allow attackers to impersonate an AI insider. This flaw potentially enabled malicious actors to manipulate the AI agent to gain unauthorized access or information within an organization.",
+      "action": "Ensure all instances of ChatGPT Agents or related OpenAI integrations are updated to the latest patched versions provided by OpenAI. Review access logs and interactions with AI agents for any suspicious or out-of-character commands or data access attempts. Implement strict access controls and principle of least privilege for AI agent interactions.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/openai-fixes-chatgpt-agent-flaw-that-could-let-attackers-forge-an-ai-insider/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "OpenAI ChatGPT Agent. Specific vulnerable versions are not detailed, but 'fixes' implies previous versions were affected.",
+      "how_to_determine_impact": "Consult OpenAI's official security advisories for specific affected agent versions. Monitor logs of AI agent interactions for unusual behavior, data requests, or attempts to access restricted information. Review configurations for any unauthorized integrations or permissions granted to AI agents.",
+      "tanium_query_hint": "N/A (Tanium typically focuses on endpoint/server management. Direct query for OpenAI agent is unlikely without custom sensors. Focus on systems integrating with OpenAI agents.) Review logs on systems interacting with OpenAI agents for unusual activity.",
+      "rapid7_query_hint": "N/A (Rapid7 InsightVM primarily for network/OS vulns. InsightIDR for user/entity behavior. Monitor InsightIDR for suspicious activity by accounts interacting with OpenAI agents or any cloud access anomalies related to OpenAI services.)",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.8 High (Estimated - based on potential for impersonation and unauthorized access via AI agent)"
     }
   ],
   "insurance": [],
@@ -6204,6 +6204,90 @@
         "rapid7_query_hint": "Software.Name = 'Claude Cowork' AND OperatingSystem.Name = 'macOS' AND Asset.Hardware.VirtualizationType = 'Virtual Machine' AND Vulnerability.severity = 'high'",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.5 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Australian energy provider Origin says data breach exposes client data",
+        "tldr": "Origin Energy, an Australian energy provider, confirmed an unauthorized party accessed and leaked customer data online. The breach exposed sensitive Personally Identifiable Information (PII) of clients.",
+        "action": "Identify if your organization uses Origin Energy or similar third-party energy providers. If so, contact them for breach details and assess potential PII exposure. Advise affected individuals to monitor for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Upbound Group Says Data Breach Led to $13 Million in Fraudulent Contract Losses",
+        "tldr": "Upbound Group disclosed a data breach that resulted in $13 million in fraudulent contract losses. The breach's specific nature isn't detailed but highlights the financial impact and real-world consequences beyond data exposure.",
+        "action": "Implement enhanced fraud detection mechanisms and review contract verification processes. Conduct a thorough forensic investigation if your organization experiences similar incidents to understand the breach vector and data exfiltration methods.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/upbound-group-says-data-breach-led-to-13-million-in-fraudulent-contract-losses/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes",
+        "tldr": "A Russian state-sponsored hacking group (Laundry Bear/Void Blizzard) exploited a zero-click, now-patched Zimbra vulnerability. This zero-day flaw was used in conjunction with phishing attacks to steal emails and 2FA codes from target organizations.",
+        "action": "Immediately ensure all Zimbra Collaboration servers are updated to the latest patched version. Conduct a forensic review for any signs of compromise, including suspicious email access patterns or unauthorized 2FA code generation. Educate users on sophisticated phishing attacks, especially those targeting 2FA.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/russian-espionage-group-exploited.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Zimbra Collaboration Suite (ZCS) versions prior to the patched release. Specific vulnerable versions are not detailed in the provided text.",
+        "how_to_determine_impact": "Check Zimbra server patch levels. Review Zimbra access logs for unauthorized logins, especially from unusual geographical locations or after suspicious phishing attempts. Audit email server configurations for any unauthorized forwarding rules or mailbox access. Monitor for unusual 2FA generation attempts or successful bypasses.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Zimbra' or 'mail'. Run 'Get Process Details' for Zimbra-related processes and check for unusual parameters or parent processes. Check 'Get File Version' for Zimbra binaries to determine patch level.",
+        "rapid7_query_hint": "Search for vulnerability ID related to Zimbra. Perform an authenticated scan against Zimbra servers to identify missing patches. Query InsightIDR logs for failed 2FA attempts followed by successful ones, or email server access from new IPs.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated - based on zero-day, zero-click, state-sponsored exploitation leading to email/2FA theft)",
+        "category": "vulns"
+      },
+      {
+        "title": "Nine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs",
+        "tldr": "A nine-year-old race condition vulnerability, CVE-2026-64600, in the Linux kernel's XFS filesystem allows local attackers to overwrite protected files and achieve root privileges. This flaw affects default Red Hat Enterprise Linux (RHEL) installations.",
+        "action": "Apply security patches for the Linux kernel that address CVE-2026-64600 on all affected systems, particularly RHEL. Implement strict access controls to limit local user privileges and minimize the impact of successful exploitation.",
+        "cve_ids": [
+          "CVE-2026-64600"
+        ],
+        "source_url": "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Linux kernel XFS filesystem. Specifically mentioned to affect default Red Hat Enterprise Linux (RHEL) installations. Specific kernel versions require patching.",
+        "how_to_determine_impact": "Identify Linux systems running XFS filesystem (e.g., `df -hT | grep xfs`). Check kernel version using `uname -r` and cross-reference with vendor advisories for CVE-2026-64600. Look for unexpected file modifications in protected directories by non-root users.",
+        "tanium_query_hint": "Get Computer Name and OS Platform and Kernel Version from all machines. Check 'Get Installed Applications' for RHEL distribution and version. Query for files that should be immutable or protected and have recent modification dates by non-root users.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-64600' in InsightVM. Run authenticated scans on Linux assets to detect vulnerable kernel versions. Query InsightIDR for process activity showing unusual privilege escalation attempts or file overwrites.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High (Estimated - local privilege escalation to root is significant, but requires local access)",
+        "category": "vulns"
+      },
+      {
+        "title": "Check Point Patches Exploited SmartConsole Flaw Allowing Full Admin Access",
+        "tldr": "Check Point has patched an actively exploited zero-day vulnerability in its SmartConsole, which allowed attackers to gain full administrative access. The flaw was exploited in the wild, enabling unauthorized control over Check Point environments.",
+        "action": "Immediately update all Check Point SmartConsole installations to the latest patched version. Review logs for any unauthorized access attempts or administrative actions originating from unexpected sources prior to applying the patch. Isolate SmartConsole instances from public internet access.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/check-point-patches-exploited.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Check Point SmartConsole versions prior to the patched release. Specific vulnerable versions are not detailed in the provided text.",
+        "how_to_determine_impact": "Verify SmartConsole versions on all management workstations. Review SmartConsole audit logs for suspicious login attempts or changes made by unknown administrators. Check network appliance logs for unexpected connections to SmartConsole management ports.",
+        "tanium_query_hint": "Get Installed Applications and OS Platform from all machines. Filter for 'Check Point SmartConsole'. Get File Version for SmartConsole executable. Review event logs for administrative access originating from non-authorized hosts.",
+        "rapid7_query_hint": "Run authenticated scans to identify installed Check Point SmartConsole versions. Query InsightIDR for 'Check Point' related events, focusing on administrative login anomalies, new user creations, or configuration changes from unusual IPs.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated - based on zero-day, active exploitation, and full admin access)",
+        "category": "vulns"
+      },
+      {
+        "title": "OpenAI Fixes ChatGPT Agent Flaw That Could Let Attackers Forge an AI Insider",
+        "tldr": "OpenAI has patched a vulnerability in its ChatGPT Agent that could allow attackers to impersonate an AI insider. This flaw potentially enabled malicious actors to manipulate the AI agent to gain unauthorized access or information within an organization.",
+        "action": "Ensure all instances of ChatGPT Agents or related OpenAI integrations are updated to the latest patched versions provided by OpenAI. Review access logs and interactions with AI agents for any suspicious or out-of-character commands or data access attempts. Implement strict access controls and principle of least privilege for AI agent interactions.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/openai-fixes-chatgpt-agent-flaw-that-could-let-attackers-forge-an-ai-insider/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "OpenAI ChatGPT Agent. Specific vulnerable versions are not detailed, but 'fixes' implies previous versions were affected.",
+        "how_to_determine_impact": "Consult OpenAI's official security advisories for specific affected agent versions. Monitor logs of AI agent interactions for unusual behavior, data requests, or attempts to access restricted information. Review configurations for any unauthorized integrations or permissions granted to AI agents.",
+        "tanium_query_hint": "N/A (Tanium typically focuses on endpoint/server management. Direct query for OpenAI agent is unlikely without custom sensors. Focus on systems integrating with OpenAI agents.) Review logs on systems interacting with OpenAI agents for unusual activity.",
+        "rapid7_query_hint": "N/A (Rapid7 InsightVM primarily for network/OS vulns. InsightIDR for user/entity behavior. Monitor InsightIDR for suspicious activity by accounts interacting with OpenAI agents or any cloud access anomalies related to OpenAI services.)",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High (Estimated - based on potential for impersonation and unauthorized access via AI agent)",
         "category": "vulns"
       }
     ]
