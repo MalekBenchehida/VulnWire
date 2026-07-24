@@ -1,110 +1,108 @@
 {
   "breaches": [
     {
+      "title": "Chick-fil-A data breach affects more than 13,000 customers",
+      "tldr": "Chick-fil-A confirmed a data breach affecting over 13,000 customer accounts. The breach occurred between June 17-19, stemming from credential stuffing attacks on their website and mobile app, leading to unauthorized access.",
+      "action": "Advise all Chick-fil-A customers to immediately reset their passwords, enable MFA if available, and review account activity for any suspicious transactions. Users should also change any reused passwords on other platforms.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/chick-fil-a-data-breach-affects-more-than-13-000-customers/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Australian energy provider Origin says data breach exposes client data",
-      "tldr": "Origin Energy, an Australian energy provider, confirmed an unauthorized party accessed and leaked customer data online. The breach exposed sensitive Personally Identifiable Information (PII) of clients.",
-      "action": "Identify if your organization uses Origin Energy or similar third-party energy providers. If so, contact them for breach details and assess potential PII exposure. Advise affected individuals to monitor for suspicious activity.",
+      "tldr": "Origin Energy, an Australian energy provider, announced a data breach where an unauthorized party accessed and leaked sensitive customer PII online. The breach exposed various personal identifiers for an undisclosed number of clients.",
+      "action": "Origin Energy customers should actively monitor financial statements and credit reports for fraudulent activity. The organization must initiate a full forensic investigation and ensure compliance with data breach notification laws.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Chick-fil-A Accounts Get Fried in Credential Stuffing Attack",
-      "tldr": "Chick-fil-A customer accounts were compromised in a credential stuffing attack. While the full extent of data accessed isn't detailed, this method typically allows attackers to access personal information and potentially loyalty points or payment details stored in accounts.",
-      "action": "Users of Chick-fil-A accounts should immediately change their passwords, especially if they reuse passwords across services. Enable multi-factor authentication if available. Organizations should review their own credential stuffing prevention mechanisms and monitor for similar attacks.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/chick-fil-a-accounts-get-fried-in-credential-stuffing-attack/",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Upbound Group Says Data Breach Led to $13 Million in Fraudulent Contract Losses",
-      "tldr": "Upbound Group disclosed a data breach that resulted in $13 million in fraudulent contract losses. The breach's specific nature isn't detailed but highlights the financial impact and real-world consequences beyond data exposure.",
-      "action": "Implement enhanced fraud detection mechanisms and review contract verification processes. Conduct a thorough forensic investigation if your organization experiences similar incidents to understand the breach vector and data exfiltration methods.",
+      "tldr": "Upbound Group reported a significant data breach that resulted in $13 million in fraudulent contract losses. The breach involved unauthorized access to corporate data, leading to financial impact and potential compromise of sensitive business information.",
+      "action": "Organizations should review internal security controls, especially those protecting financial and contract systems. Implement enhanced monitoring for anomalous financial transactions and ensure robust access management.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/upbound-group-says-data-breach-led-to-13-million-in-fraudulent-contract-losses/",
       "source": "SecurityWeek"
     },
     {
-      "title": "Suno, Paidwork Data Breaches Affect Tens of Millions of Accounts",
-      "tldr": "Data breaches at Suno and Paidwork have affected tens of millions of user accounts. The nature of the compromised data likely includes personal information and credentials, given the scale of impact.",
-      "action": "Users of Suno and Paidwork should change their passwords immediately and activate multi-factor authentication where possible. Organizations should remind employees about password hygiene and the risks of credential reuse across personal and work accounts.",
+      "title": "Hacker Runs Hermes AI Agent Unattended for Post-Exploitation at Thai Finance Ministry",
+      "tldr": "A hacker successfully deployed an unattended Hermes AI agent within the Thai Finance Ministry's network for post-exploitation activities, indicating a sophisticated compromise and ongoing access.",
+      "action": "Incident response teams must perform a deep forensic analysis to isolate the AI agent and determine its capabilities and actions. Enhance network segmentation, zero-trust policies, and AI activity monitoring to prevent similar advanced persistent threats.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/suno-paidwork-data-breaches-affect-tens-of-millions-of-accounts/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
-      "title": "Chaos Ransomware Uses msaRAT to Route C2 Traffic Through Headless Chrome and Edge",
-      "tldr": "The Chaos ransomware gang is deploying msaRAT, a new backdoor, to establish command-and-control (C2) communications. This backdoor cleverly routes its C2 traffic through legitimate headless Chrome and Edge browser instances to evade detection.",
-      "action": "Implement network traffic analysis tools to detect anomalous browser-initiated connections to unusual external IPs. Monitor for headless browser processes (Chrome/Edge) executing in unexpected contexts, especially those making outbound connections. Review endpoint detection and response (EDR) rules for msaRAT indicators of compromise (IoCs).",
+      "title": "Clop ransomware targets Windchill, FlexPLM in data theft attacks",
+      "tldr": "The Clop ransomware gang is actively exploiting internet-exposed PTC Windchill and FlexPLM instances in a new data theft and extortion campaign, bypassing defenses to exfiltrate sensitive data before demanding ransom.",
+      "action": "Immediately identify and patch all PTC Windchill and FlexPLM installations, particularly those internet-facing. Implement robust network segmentation, restrict external access, and enforce multi-factor authentication for administrative interfaces.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/chaos-ransomware-uses-msarat-to-route.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-teft-attacks/",
+      "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
       "title": "Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes",
-      "tldr": "A Russian state-sponsored hacking group (Laundry Bear/Void Blizzard) exploited a zero-click, now-patched Zimbra vulnerability. This zero-day flaw was used in conjunction with phishing attacks to steal emails and 2FA codes from target organizations.",
-      "action": "Immediately ensure all Zimbra Collaboration servers are updated to the latest patched version. Conduct a forensic review for any signs of compromise, including suspicious email access patterns or unauthorized 2FA code generation. Educate users on sophisticated phishing attacks, especially those targeting 2FA.",
+      "tldr": "A Russian state-sponsored group (Laundry Bear/Void Blizzard) exploited a now-patched Zimbra Collaboration zero-day vulnerability in conjunction with phishing attacks to steal emails and 2FA codes, indicating active and targeted exploitation.",
+      "action": "Organizations using Zimbra Collaboration must immediately update to the latest patched version. Implement enhanced phishing detection, bolster email gateway security, and enforce MFA across all accounts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/russian-espionage-group-exploited.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Zimbra Collaboration Suite (ZCS) versions prior to the patched release. Specific vulnerable versions are not detailed in the provided text.",
-      "how_to_determine_impact": "Check Zimbra server patch levels. Review Zimbra access logs for unauthorized logins, especially from unusual geographical locations or after suspicious phishing attempts. Audit email server configurations for any unauthorized forwarding rules or mailbox access. Monitor for unusual 2FA generation attempts or successful bypasses.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Zimbra' or 'mail'. Run 'Get Process Details' for Zimbra-related processes and check for unusual parameters or parent processes. Check 'Get File Version' for Zimbra binaries to determine patch level.",
-      "rapid7_query_hint": "Search for vulnerability ID related to Zimbra. Perform an authenticated scan against Zimbra servers to identify missing patches. Query InsightIDR logs for failed 2FA attempts followed by successful ones, or email server access from new IPs.",
+      "affected_versions": "Zimbra Collaboration versions vulnerable to the recently patched zero-day (specific patch versions should be verified with Zimbra's official security advisories).",
+      "how_to_determine_impact": "Verify all Zimbra Collaboration servers are running the latest patched version. Review Zimbra server logs for signs of unauthorized access, unusual email forwarding rules, or exfiltration activities indicative of compromise before patching.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Zimbra Collaboration'. Check 'Last Patch Date' for recent updates. Use 'Get Running Processes' to identify any unusual processes on Zimbra servers. Query 'Network Connections' for suspicious outbound email traffic or connections to known C2 infrastructure.",
+      "rapid7_query_hint": "Search for vulnerability ID (if assigned) for Zimbra Collaboration zero-day. Use InsightVM to scan Zimbra servers for missing security updates or indicators of compromise. Leverage InsightIDR to monitor user activity on Zimbra for anomalous logins, email access patterns, or MFA bypass attempts.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated - based on zero-day, zero-click, state-sponsored exploitation leading to email/2FA theft)"
+      "cvss_score": "9.8 Critical (Estimate based on active zero-day exploitation by state-sponsored actors, leading to sensitive data theft and 2FA bypass)"
     },
     {
-      "title": "Nine-Year-Old RefluXFS Linux Flaw Gives Local Users Root on Default RHEL Installs",
-      "tldr": "A nine-year-old race condition vulnerability, CVE-2026-64600, in the Linux kernel's XFS filesystem allows local attackers to overwrite protected files and achieve root privileges. This flaw affects default Red Hat Enterprise Linux (RHEL) installations.",
-      "action": "Apply security patches for the Linux kernel that address CVE-2026-64600 on all affected systems, particularly RHEL. Implement strict access controls to limit local user privileges and minimize the impact of successful exploitation.",
-      "cve_ids": [
-        "CVE-2026-64600"
-      ],
-      "source_url": "https://thehackernews.com/2026/07/nine-year-old-refluxfs-linux-flaw-gives.html",
+      "title": "Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say",
+      "tldr": "Researchers, utilizing Kimi K3 AI agents, discovered multiple zero-day vulnerabilities in Redis that allowed them to develop a remote code execution (RCE) exploit. This underscores the critical need for immediate attention from Redis maintainers.",
+      "action": "Await official Redis security advisories and patches. In the interim, ensure all Redis instances are strictly network-segmented, not publicly exposed, and secured with strong authentication and least privilege access controls.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Linux kernel XFS filesystem. Specifically mentioned to affect default Red Hat Enterprise Linux (RHEL) installations. Specific kernel versions require patching.",
-      "how_to_determine_impact": "Identify Linux systems running XFS filesystem (e.g., `df -hT | grep xfs`). Check kernel version using `uname -r` and cross-reference with vendor advisories for CVE-2026-64600. Look for unexpected file modifications in protected directories by non-root users.",
-      "tanium_query_hint": "Get Computer Name and OS Platform and Kernel Version from all machines. Check 'Get Installed Applications' for RHEL distribution and version. Query for files that should be immutable or protected and have recent modification dates by non-root users.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-64600' in InsightVM. Run authenticated scans on Linux assets to detect vulnerable kernel versions. Query InsightIDR for process activity showing unusual privilege escalation attempts or file overwrites.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High (Estimated - local privilege escalation to root is significant, but requires local access)"
+      "affected_versions": "Redis (specific versions impacted by the zero-days are yet to be officially disclosed by Redis, awaiting vendor advisory).",
+      "how_to_determine_impact": "Identify all Redis instances within the environment. Monitor Redis logs for unexpected commands, unauthorized connection attempts, or any signs of shell execution. Prepare for immediate patching upon official release.",
+      "tanium_query_hint": "Get Running Processes with 'redis-server'. Get Listen Ports for port 6379 and associated processes. Use 'Get Open Network Connections' to identify any unauthorized or suspicious connections to Redis instances. 'Get Package List' to verify Redis versions.",
+      "rapid7_query_hint": "Search asset inventory in InsightVM for 'Redis' to identify all deployments. Set up continuous monitoring with InsightVM for new Redis vulnerabilities. In InsightIDR, configure alerts for unusual process spawns from Redis, unauthorized user access, or suspicious network traffic to/from Redis hosts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate based on discovery of RCE zero-days in a widely used in-memory data store, allowing full system compromise)"
     },
     {
-      "title": "Check Point Patches Exploited SmartConsole Flaw Allowing Full Admin Access",
-      "tldr": "Check Point has patched an actively exploited zero-day vulnerability in its SmartConsole, which allowed attackers to gain full administrative access. The flaw was exploited in the wild, enabling unauthorized control over Check Point environments.",
-      "action": "Immediately update all Check Point SmartConsole installations to the latest patched version. Review logs for any unauthorized access attempts or administrative actions originating from unexpected sources prior to applying the patch. Isolate SmartConsole instances from public internet access.",
+      "title": "Certighost Exploit Lets Low-Privileged Active Directory Users Impersonate a Domain Controller",
+      "tldr": "The \"Certighost\" exploit allows low-privileged Active Directory users to impersonate a Domain Controller, enabling privilege escalation and potential full compromise of the Active Directory environment. This leverages weaknesses in AD certificate services.",
+      "action": "Audit Active Directory Certificate Services (AD CS) for unconstrained delegation and misconfigurations. Enforce least privilege for AD users, monitor for unusual certificate requests, and review authentication logs for suspicious activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/check-point-patches-exploited.html",
+      "source_url": "https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Check Point SmartConsole versions prior to the patched release. Specific vulnerable versions are not detailed in the provided text.",
-      "how_to_determine_impact": "Verify SmartConsole versions on all management workstations. Review SmartConsole audit logs for suspicious login attempts or changes made by unknown administrators. Check network appliance logs for unexpected connections to SmartConsole management ports.",
-      "tanium_query_hint": "Get Installed Applications and OS Platform from all machines. Filter for 'Check Point SmartConsole'. Get File Version for SmartConsole executable. Review event logs for administrative access originating from non-authorized hosts.",
-      "rapid7_query_hint": "Run authenticated scans to identify installed Check Point SmartConsole versions. Query InsightIDR for 'Check Point' related events, focusing on administrative login anomalies, new user creations, or configuration changes from unusual IPs.",
+      "affected_versions": "Active Directory environments utilizing Active Directory Certificate Services (AD CS), particularly those with specific misconfigurations, though exact version ranges require further vendor disclosure.",
+      "how_to_determine_impact": "Perform an extensive audit of Active Directory Certificate Services configurations, focusing on certificate templates, enrollment policies, and delegation settings. Check for known vulnerable configurations that permit unauthorized certificate issuance or impersonation.",
+      "tanium_query_hint": "Get Active Directory Objects for 'Certificate Authority'. Query 'Event Log' for Security Event ID 4886 (certificate request approved) or 4887 (certificate issued) from unexpected sources. Use 'Get Windows Service' to check AD CS service status and configuration.",
+      "rapid7_query_hint": "Run targeted scans in InsightVM against Domain Controllers and AD CS servers for misconfigurations related to certificate services and delegation. Monitor InsightIDR for anomalous Kerberos authentication, suspicious certificate issuance, or privilege escalation events originating from low-privileged users.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated - based on zero-day, active exploitation, and full admin access)"
+      "cvss_score": "9.1 Critical (Estimate based on proven exploit for privilege escalation within Active Directory, leading to domain compromise)"
     },
     {
-      "title": "OpenAI Fixes ChatGPT Agent Flaw That Could Let Attackers Forge an AI Insider",
-      "tldr": "OpenAI has patched a vulnerability in its ChatGPT Agent that could allow attackers to impersonate an AI insider. This flaw potentially enabled malicious actors to manipulate the AI agent to gain unauthorized access or information within an organization.",
-      "action": "Ensure all instances of ChatGPT Agents or related OpenAI integrations are updated to the latest patched versions provided by OpenAI. Review access logs and interactions with AI agents for any suspicious or out-of-character commands or data access attempts. Implement strict access controls and principle of least privilege for AI agent interactions.",
+      "title": "Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers",
+      "tldr": "Critical flaws within Microsoft's Bing Images service enabled attackers to run arbitrary commands with SYSTEM privileges on Microsoft's servers by uploading specially crafted SVG files. This represents a severe server-side remote code execution vulnerability.",
+      "action": "As a user or organization relying on Bing services, promptly apply all security updates released by Microsoft. For any internal systems processing user-uploaded SVG files, implement robust sanitization, strict content-type validation, and sandboxing.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/openai-fixes-chatgpt-agent-flaw-that-could-let-attackers-forge-an-ai-insider/",
-      "source": "SecurityWeek",
-      "active_exploitation": false,
-      "affected_versions": "OpenAI ChatGPT Agent. Specific vulnerable versions are not detailed, but 'fixes' implies previous versions were affected.",
-      "how_to_determine_impact": "Consult OpenAI's official security advisories for specific affected agent versions. Monitor logs of AI agent interactions for unusual behavior, data requests, or attempts to access restricted information. Review configurations for any unauthorized integrations or permissions granted to AI agents.",
-      "tanium_query_hint": "N/A (Tanium typically focuses on endpoint/server management. Direct query for OpenAI agent is unlikely without custom sensors. Focus on systems integrating with OpenAI agents.) Review logs on systems interacting with OpenAI agents for unusual activity.",
-      "rapid7_query_hint": "N/A (Rapid7 InsightVM primarily for network/OS vulns. InsightIDR for user/entity behavior. Monitor InsightIDR for suspicious activity by accounts interacting with OpenAI agents or any cloud access anomalies related to OpenAI services.)",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High (Estimated - based on potential for impersonation and unauthorized access via AI agent)"
+      "source_url": "https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Microsoft Bing Images service and its underlying infrastructure (await official advisory from Microsoft for specific affected components and versions).",
+      "how_to_determine_impact": "This vulnerability primarily impacts Microsoft's cloud infrastructure. Organizations should verify they are applying all recommended Microsoft updates and configurations for any integrated services. For internal systems, audit SVG processing pipelines for similar vulnerabilities.",
+      "tanium_query_hint": "This is a Microsoft cloud service vulnerability. For relevant internal systems, 'Get Installed Applications' for image processing software. Monitor 'Running Processes' and 'Network Connections' for unexpected activity if Bing APIs are integrated.",
+      "rapid7_query_hint": "Consult Microsoft's security advisories and apply any relevant patches to systems interacting with Bing. For internal web applications or services handling SVG uploads, perform security assessments with InsightVM to identify potential file upload or parsing vulnerabilities. Monitor InsightIDR for indicators of compromise related to web server exploits.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate based on RCE with SYSTEM privileges on a major public service, indicating severe impact)"
     }
   ],
   "insurance": [],
@@ -6288,6 +6286,117 @@
         "rapid7_query_hint": "N/A (Rapid7 InsightVM primarily for network/OS vulns. InsightIDR for user/entity behavior. Monitor InsightIDR for suspicious activity by accounts interacting with OpenAI agents or any cloud access anomalies related to OpenAI services.)",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.8 High (Estimated - based on potential for impersonation and unauthorized access via AI agent)",
+        "category": "vulns"
+      }
+    ],
+    "2026-07-24": [
+      {
+        "title": "Chick-fil-A data breach affects more than 13,000 customers",
+        "tldr": "Chick-fil-A confirmed a data breach affecting over 13,000 customer accounts. The breach occurred between June 17-19, stemming from credential stuffing attacks on their website and mobile app, leading to unauthorized access.",
+        "action": "Advise all Chick-fil-A customers to immediately reset their passwords, enable MFA if available, and review account activity for any suspicious transactions. Users should also change any reused passwords on other platforms.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/chick-fil-a-data-breach-affects-more-than-13-000-customers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Australian energy provider Origin says data breach exposes client data",
+        "tldr": "Origin Energy, an Australian energy provider, announced a data breach where an unauthorized party accessed and leaked sensitive customer PII online. The breach exposed various personal identifiers for an undisclosed number of clients.",
+        "action": "Origin Energy customers should actively monitor financial statements and credit reports for fraudulent activity. The organization must initiate a full forensic investigation and ensure compliance with data breach notification laws.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/australian-energy-provider-origin-says-data-breach-exposes-client-data/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Upbound Group Says Data Breach Led to $13 Million in Fraudulent Contract Losses",
+        "tldr": "Upbound Group reported a significant data breach that resulted in $13 million in fraudulent contract losses. The breach involved unauthorized access to corporate data, leading to financial impact and potential compromise of sensitive business information.",
+        "action": "Organizations should review internal security controls, especially those protecting financial and contract systems. Implement enhanced monitoring for anomalous financial transactions and ensure robust access management.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/upbound-group-says-data-breach-led-to-13-million-in-fraudulent-contract-losses/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Hacker Runs Hermes AI Agent Unattended for Post-Exploitation at Thai Finance Ministry",
+        "tldr": "A hacker successfully deployed an unattended Hermes AI agent within the Thai Finance Ministry's network for post-exploitation activities, indicating a sophisticated compromise and ongoing access.",
+        "action": "Incident response teams must perform a deep forensic analysis to isolate the AI agent and determine its capabilities and actions. Enhance network segmentation, zero-trust policies, and AI activity monitoring to prevent similar advanced persistent threats.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/hacker-runs-hermes-ai-agent-unattended.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Clop ransomware targets Windchill, FlexPLM in data theft attacks",
+        "tldr": "The Clop ransomware gang is actively exploiting internet-exposed PTC Windchill and FlexPLM instances in a new data theft and extortion campaign, bypassing defenses to exfiltrate sensitive data before demanding ransom.",
+        "action": "Immediately identify and patch all PTC Windchill and FlexPLM installations, particularly those internet-facing. Implement robust network segmentation, restrict external access, and enforce multi-factor authentication for administrative interfaces.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/clop-ransomware-targets-windchill-flexplm-in-data-teft-attacks/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes",
+        "tldr": "A Russian state-sponsored group (Laundry Bear/Void Blizzard) exploited a now-patched Zimbra Collaboration zero-day vulnerability in conjunction with phishing attacks to steal emails and 2FA codes, indicating active and targeted exploitation.",
+        "action": "Organizations using Zimbra Collaboration must immediately update to the latest patched version. Implement enhanced phishing detection, bolster email gateway security, and enforce MFA across all accounts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/russian-espionage-group-exploited.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Zimbra Collaboration versions vulnerable to the recently patched zero-day (specific patch versions should be verified with Zimbra's official security advisories).",
+        "how_to_determine_impact": "Verify all Zimbra Collaboration servers are running the latest patched version. Review Zimbra server logs for signs of unauthorized access, unusual email forwarding rules, or exfiltration activities indicative of compromise before patching.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Zimbra Collaboration'. Check 'Last Patch Date' for recent updates. Use 'Get Running Processes' to identify any unusual processes on Zimbra servers. Query 'Network Connections' for suspicious outbound email traffic or connections to known C2 infrastructure.",
+        "rapid7_query_hint": "Search for vulnerability ID (if assigned) for Zimbra Collaboration zero-day. Use InsightVM to scan Zimbra servers for missing security updates or indicators of compromise. Leverage InsightIDR to monitor user activity on Zimbra for anomalous logins, email access patterns, or MFA bypass attempts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on active zero-day exploitation by state-sponsored actors, leading to sensitive data theft and 2FA bypass)",
+        "category": "vulns"
+      },
+      {
+        "title": "Kimi K3 Agents Found Redis Zero-Days and Built RCE Exploit, Researchers Say",
+        "tldr": "Researchers, utilizing Kimi K3 AI agents, discovered multiple zero-day vulnerabilities in Redis that allowed them to develop a remote code execution (RCE) exploit. This underscores the critical need for immediate attention from Redis maintainers.",
+        "action": "Await official Redis security advisories and patches. In the interim, ensure all Redis instances are strictly network-segmented, not publicly exposed, and secured with strong authentication and least privilege access controls.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/kimi-k3-agents-found-redis-zero-days.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Redis (specific versions impacted by the zero-days are yet to be officially disclosed by Redis, awaiting vendor advisory).",
+        "how_to_determine_impact": "Identify all Redis instances within the environment. Monitor Redis logs for unexpected commands, unauthorized connection attempts, or any signs of shell execution. Prepare for immediate patching upon official release.",
+        "tanium_query_hint": "Get Running Processes with 'redis-server'. Get Listen Ports for port 6379 and associated processes. Use 'Get Open Network Connections' to identify any unauthorized or suspicious connections to Redis instances. 'Get Package List' to verify Redis versions.",
+        "rapid7_query_hint": "Search asset inventory in InsightVM for 'Redis' to identify all deployments. Set up continuous monitoring with InsightVM for new Redis vulnerabilities. In InsightIDR, configure alerts for unusual process spawns from Redis, unauthorized user access, or suspicious network traffic to/from Redis hosts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on discovery of RCE zero-days in a widely used in-memory data store, allowing full system compromise)",
+        "category": "vulns"
+      },
+      {
+        "title": "Certighost Exploit Lets Low-Privileged Active Directory Users Impersonate a Domain Controller",
+        "tldr": "The \"Certighost\" exploit allows low-privileged Active Directory users to impersonate a Domain Controller, enabling privilege escalation and potential full compromise of the Active Directory environment. This leverages weaknesses in AD certificate services.",
+        "action": "Audit Active Directory Certificate Services (AD CS) for unconstrained delegation and misconfigurations. Enforce least privilege for AD users, monitor for unusual certificate requests, and review authentication logs for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Active Directory environments utilizing Active Directory Certificate Services (AD CS), particularly those with specific misconfigurations, though exact version ranges require further vendor disclosure.",
+        "how_to_determine_impact": "Perform an extensive audit of Active Directory Certificate Services configurations, focusing on certificate templates, enrollment policies, and delegation settings. Check for known vulnerable configurations that permit unauthorized certificate issuance or impersonation.",
+        "tanium_query_hint": "Get Active Directory Objects for 'Certificate Authority'. Query 'Event Log' for Security Event ID 4886 (certificate request approved) or 4887 (certificate issued) from unexpected sources. Use 'Get Windows Service' to check AD CS service status and configuration.",
+        "rapid7_query_hint": "Run targeted scans in InsightVM against Domain Controllers and AD CS servers for misconfigurations related to certificate services and delegation. Monitor InsightIDR for anomalous Kerberos authentication, suspicious certificate issuance, or privilege escalation events originating from low-privileged users.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.1 Critical (Estimate based on proven exploit for privilege escalation within Active Directory, leading to domain compromise)",
+        "category": "vulns"
+      },
+      {
+        "title": "Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers",
+        "tldr": "Critical flaws within Microsoft's Bing Images service enabled attackers to run arbitrary commands with SYSTEM privileges on Microsoft's servers by uploading specially crafted SVG files. This represents a severe server-side remote code execution vulnerability.",
+        "action": "As a user or organization relying on Bing services, promptly apply all security updates released by Microsoft. For any internal systems processing user-uploaded SVG files, implement robust sanitization, strict content-type validation, and sandboxing.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft Bing Images service and its underlying infrastructure (await official advisory from Microsoft for specific affected components and versions).",
+        "how_to_determine_impact": "This vulnerability primarily impacts Microsoft's cloud infrastructure. Organizations should verify they are applying all recommended Microsoft updates and configurations for any integrated services. For internal systems, audit SVG processing pipelines for similar vulnerabilities.",
+        "tanium_query_hint": "This is a Microsoft cloud service vulnerability. For relevant internal systems, 'Get Installed Applications' for image processing software. Monitor 'Running Processes' and 'Network Connections' for unexpected activity if Bing APIs are integrated.",
+        "rapid7_query_hint": "Consult Microsoft's security advisories and apply any relevant patches to systems interacting with Bing. For internal web applications or services handling SVG uploads, perform security assessments with InsightVM to identify potential file upload or parsing vulnerabilities. Monitor InsightIDR for indicators of compromise related to web server exploits.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on RCE with SYSTEM privileges on a major public service, indicating severe impact)",
         "category": "vulns"
       }
     ]
