@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "OnTrac notifies customers of data breach after network hack",
-      "tldr": "OnTrac, a parcel delivery company, has informed customers about a network breach where personal details may have been accessed by hackers. The incident prompted a notification to potentially affected individuals as an investigation into the scope of compromised data is ongoing.",
-      "action": "Customers of OnTrac should monitor their financial statements and credit reports for suspicious activity and consider changing passwords for linked accounts if using similar credentials. Organizations should review third-party vendor security for supply chain partners handling sensitive data.",
+      "tldr": "OnTrac, a parcel delivery company, disclosed a data breach resulting from a network intrusion. Hackers may have accessed personal details of its customers.",
+      "action": "Customers should monitor their accounts for suspicious activity and be wary of phishing attempts. Organizations should review third-party vendor security, especially for logistics partners handling sensitive customer data.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ontrac-notifies-customers-of-data-breach-after-network-hack/",
       "source": "BleepingComputer"
     },
     {
       "title": "Chick-fil-A data breach affects more than 13,000 customers",
-      "tldr": "Chick-fil-A has confirmed a data breach impacting over 13,000 customers, resulting from a wave of credential stuffing attacks against its website and mobile app. These attacks occurred between June 17 and June 19, potentially compromising customer account information.",
-      "action": "Chick-fil-A customers should immediately change their passwords for Chick-fil-A accounts and any other online services where similar credentials might have been reused. Enable multi-factor authentication (MFA) on all accounts where it is available.",
+      "tldr": "Chick-fil-A confirmed a data breach impacting over 13,000 customer accounts due to credential stuffing attacks on their website and mobile app between June 17-19. Threat actors used previously compromised credentials to gain unauthorized access.",
+      "action": "Customers should change their Chick-fil-A account passwords to a unique, strong password and enable multi-factor authentication if available. Organizations should implement robust credential stuffing protection and monitor for account takeover attempts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/chick-fil-a-data-breach-affects-more-than-13-000-customers/",
       "source": "BleepingComputer"
     },
     {
-      "title": "ShinyHunters data leaks fuel $2,000 sextortion email scam",
-      "tldr": "Threat actors are leveraging email addresses obtained from data breaches leaked by the ShinyHunters extortion group. These compromised email addresses are being utilized in sextortion campaigns, demanding $2,000 in Bitcoin from recipients.",
-      "action": "Advise users to be highly skeptical of unsolicited emails, particularly those making threats or demanding payment. Implement robust email filtering rules to identify and block known scam indicators, and educate users on identifying phishing and sextortion attempts.",
+      "title": "Data Breach Confirmed After Australian Energy Giant Origin Is Hacked",
+      "tldr": "Australian energy provider Origin Energy has confirmed a data breach following a cyber attack on its systems. The extent of the compromised data is currently under investigation, but customer information may have been accessed.",
+      "action": "Organizations should review and strengthen their network perimeter defenses and incident response plans. Customers of Origin Energy should remain vigilant for unusual communications or unauthorized account activity.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-data-leaks-fuel-2-000-sextortion-email-scam/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/data-breach-confirmed-after-australian-energy-giant-origin-is-hacked/",
+      "source": "SecurityWeek"
     },
     {
       "title": "Hackers hijack hotel Wi-Fi DNS to steal Microsoft 365 accounts",
-      "tldr": "Hackers are compromising Wi-Fi networks in hotels and conference centers by altering DNS settings. This manipulation redirects unsuspecting users to fake Microsoft 365 login pages, aiming to steal their credentials.",
-      "action": "Advise users connecting to public Wi-Fi networks to always use a Virtual Private Network (VPN). Organizations should instruct employees to meticulously verify URLs before entering credentials and enforce multi-factor authentication (MFA) for all Microsoft 365 accounts.",
+      "tldr": "Threat actors are manipulating DNS settings on hotel and conference center Wi-Fi networks to redirect users to malicious, fake Microsoft 365 login pages. This tactic aims to harvest user credentials.",
+      "action": "Users should exercise extreme caution when logging into sensitive accounts on public Wi-Fi. Organizations should educate employees about DNS hijacking risks, encourage VPN usage, and enforce multi-factor authentication for all critical services, especially Microsoft 365.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-hotel-wi-fi-dns-to-steal-microsoft-365-accounts/",
       "source": "BleepingComputer"
@@ -35,17 +35,9 @@
   ],
   "ransomware": [
     {
-      "title": "Cl0p Affiliates Target Internet-Exposed PTC Windchill and FlexPLM with Unauthenticated RCE",
-      "tldr": "Affiliates of the Cl0p ransomware group are actively exploiting unauthenticated Remote Code Execution (RCE) vulnerabilities in internet-exposed PTC Windchill and FlexPLM products. This exploitation serves as an initial access vector for potential ransomware deployment and data exfiltration.",
-      "action": "Immediately identify and secure all internet-facing PTC Windchill and FlexPLM instances. Apply all available vendor patches for known RCE vulnerabilities and implement strict network segmentation and access controls to limit exposure of these systems.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "DevMan RaaS Portal Centralizes Payload Builds, Victim Management, and Affiliate Payouts",
-      "tldr": "A new Ransomware-as-a-Service (RaaS) portal, 'DevMan,' has emerged, providing a centralized platform for ransomware payload generation, victim management, and affiliate payment distribution. This platform significantly lowers the barrier to entry for aspiring ransomware operators.",
-      "action": "Enhance security controls to detect new and evolving ransomware variants, focusing on behavior-based detection. Implement robust, immutable backup and recovery strategies, and provide continuous security awareness training to users, particularly on phishing and social engineering tactics.",
+      "tldr": "A new Ransomware-as-a-Service (RaaS) portal named DevMan has emerged, providing affiliates with centralized tools for building payloads, managing victims, and processing payouts. This streamlines ransomware operations for various threat actors.",
+      "action": "Organizations should reinforce defensive measures against known ransomware tactics, including robust backups, strong endpoint detection and response (EDR), and regular security awareness training, as the availability of RaaS platforms lowers the barrier to entry for attackers.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/devman-raas-portal-centralizes-payload.html",
       "source": "The Hacker News"
@@ -54,70 +46,70 @@
   "vulns": [
     {
       "title": "Fastjson 1.x RCE Vulnerability Targeted in Attacks With No Patched Available",
-      "tldr": "An actively targeted Remote Code Execution (RCE) vulnerability exists in Fastjson 1.x versions. With no official patch currently available from the vendor, systems using vulnerable Fastjson 1.x implementations are at high risk of compromise.",
-      "action": "Identify and inventory all instances of Fastjson 1.x within your environment. Implement immediate mitigation strategies such as restricting network access to affected applications, deploying web application firewalls (WAFs) with rules to detect and block exploitation attempts, or upgrading to Fastjson 2.x if feasible.",
+      "tldr": "A critical Remote Code Execution (RCE) vulnerability in Fastjson 1.x is being actively exploited in the wild. There are currently no official patches available for affected versions, making systems highly susceptible to compromise.",
+      "action": "Immediately identify and isolate all systems running Fastjson 1.x. Implement network segmentation and egress filtering to restrict outbound connections from these systems. Consider temporary removal or migration to alternative libraries if business-critical. Continuously monitor for any in-the-wild exploitation.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Fastjson 1.x versions, typically pre-1.2.68. Specific vulnerable versions require consulting vendor advisories and application context.",
-      "how_to_determine_impact": "Scan application dependencies for Fastjson 1.x. Inspect application logs for deserialization errors, unexpected process spawning, or suspicious network traffic originating from Fastjson-dependent components. Analyze runtime environments for unusual Java processes.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'Fastjson' and Version starts with '1.'. Also, 'Get Running Processes' and filter for Java processes utilizing Fastjson libraries, looking for unexpected command lines or network connections.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'fastjson' or related Common Platform Enumeration (CPE) for Fastjson 1.x. Use InsightAgent query for 'software name = fastjson AND software version LIKE 1.%'. Monitor InsightIDR for suspicious activity related to Java applications.",
+      "affected_versions": "Fastjson 1.x (all versions unless a specific patched version is released)",
+      "how_to_determine_impact": "Scan your application dependencies and codebases for the Fastjson library. Verify the exact version being used. Check application logs for unusual deserialization errors or process spawns.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Fastjson' and '1.' and 'Listen Ports' to identify network exposure. Investigate process activity on identified machines.",
+      "rapid7_query_hint": "Search 'vulnerability.title = \"Fastjson 1.x RCE\"' or look for specific CVEs associated with Fastjson 1.x deserialization vulnerabilities. Use InsightAgent queries to identify deployed Fastjson libraries.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimate)"
     },
     {
-      "title": "Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git",
-      "tldr": "A researcher has released a Proof-of-Concept (PoC) exploit for a Remote Code Execution (RCE) vulnerability in GitLab. This flaw enables authenticated users to execute arbitrary commands with the privileges of the 'git' user, posing a risk for privilege escalation and system compromise.",
-      "action": "Immediately apply the latest security patches for your GitLab instances as advised by GitLab. Conduct a thorough review of access controls for all GitLab users and monitor GitLab servers for any unusual activity, especially commands executed by or under the 'git' user account.",
+      "title": "Cl0p Affiliates Target Internet-Exposed PTC Windchill and FlexPLM with Unauthenticated RCE",
+      "tldr": "Cl0p ransomware affiliates are actively exploiting an unauthenticated Remote Code Execution (RCE) vulnerability in internet-exposed PTC Windchill and FlexPLM software. This allows threat actors to gain initial access to vulnerable systems without requiring any authentication.",
+      "action": "Immediately identify and disconnect or restrict network access for all internet-exposed PTC Windchill and FlexPLM instances. Apply any available patches or vendor-recommended mitigations for RCE vulnerabilities. Implement robust intrusion detection and prevention systems to block Cl0p-associated indicators of compromise.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html",
+      "source_url": "https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "GitLab (specific vulnerable versions not provided in snippet; requires consulting official GitLab advisories).",
-      "how_to_determine_impact": "Cross-reference your installed GitLab versions with official GitLab security advisories to identify affected instances. Look for unexpected process execution, file modifications, or anomalous behavior originating from the 'git' user within the GitLab environment.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'GitLab'. Use 'Get Running Processes' to identify processes executed by the 'git' user and investigate any suspicious command lines or child processes.",
-      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'GitLab RCE'. Utilize InsightAgent to query for 'process.name = git and process.command_line CONTAINS \"unusual_command\"' to detect post-exploitation activity.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
+      "active_exploitation": true,
+      "affected_versions": "Internet-exposed instances of PTC Windchill and FlexPLM (specific vulnerable versions require vendor advisory)",
+      "how_to_determine_impact": "Perform external network scans to identify exposed PTC Windchill and FlexPLM services. Verify current patch levels against vendor advisories. Examine system logs for unauthorized access attempts or suspicious process execution.",
+      "tanium_query_hint": "Get Running Processes from all machines with 'Windchill' or 'FlexPLM' and 'Listen Ports' to identify network exposure. Follow up with 'Get Patch Status' to confirm applied updates.",
+      "rapid7_query_hint": "Scan for assets running PTC Windchill or FlexPLM. Search 'vulnerability.software.name = \"PTC Windchill\" OR vulnerability.software.name = \"PTC FlexPLM\" AND vulnerability.severity >= \"critical\"' in InsightVM.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate)"
     },
     {
       "title": "Certighost Exploit Lets Low-Privileged Active Directory Users Impersonate a Domain Controller",
-      "tldr": "A newly discovered exploit, dubbed 'Certighost,' allows low-privileged Active Directory users to impersonate a Domain Controller. This severe vulnerability could lead to significant privilege escalation, potentially compromising the entire Active Directory domain.",
-      "action": "Review and harden Active Directory Certificate Services (AD CS) configurations, following Microsoft's security best practices. Monitor for suspicious certificate requests or authentication attempts originating from low-privileged user accounts. Apply any relevant security updates for AD CS and domain controllers.",
+      "tldr": "A new exploit, dubbed 'Certighost,' allows low-privileged Active Directory users to escalate privileges and impersonate a Domain Controller. This severe vulnerability could lead to full domain compromise.",
+      "action": "Organizations should audit Active Directory configurations, particularly focusing on certificate services and delegation settings. Review and restrict permissions for issuing certificates. Apply all recommended security updates for Active Directory Certificate Services. Implement robust monitoring for suspicious authentication and certificate issuance.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Active Directory environments with vulnerable configurations of Certificate Services. Specific impact depends on AD CS configuration and Windows Server versions.",
-      "how_to_determine_impact": "Audit Active Directory Certificate Services (AD CS) configurations for misconfigurations that could facilitate certificate-based attacks. Analyze domain controller security event logs for unusual certificate issuance, authentication failures, or suspicious Kerberos activity.",
-      "tanium_query_hint": "Inspect AD CS configurations on domain controllers using 'Get Registry Value' for relevant certificate service settings. Utilize 'Get Event Log' to search for suspicious events (e.g., Event ID 4768, 4769) on domain controllers related to authentication and certificate services.",
-      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to AD CS misconfigurations or domain controller hardening. Use InsightIDR to monitor for suspicious activity related to certificate issuance or Kerberos authentication anomalies from non-privileged accounts.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.1 Critical"
+      "active_exploitation": true,
+      "affected_versions": "Active Directory environments configured with vulnerable Certificate Services or improper permissions.",
+      "how_to_determine_impact": "Review Active Directory Certificate Services (AD CS) configurations. Specifically, check template permissions for certificate issuance and delegation. Verify that no low-privileged users or groups have rights to enroll for highly privileged certificates.",
+      "tanium_query_hint": "Get Certificate Templates and Permissions from all machines with 'IsDomainController = True'. Query 'Get Active Directory Group Membership' to audit user rights on AD CS.",
+      "rapid7_query_hint": "Search 'vulnerability.title = \"Certighost\"' or 'vulnerability.category = \"Active Directory Privilege Escalation\"'. Use InsightVM to scan for misconfigurations related to AD CS.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical (Estimate)"
     },
     {
-      "title": "Rockwell Patches Code Execution Flaws in Arena Simulation Software",
-      "tldr": "Rockwell Automation has released patches to address multiple code execution flaws identified in its Arena Simulation Software. These vulnerabilities, if exploited, could allow an attacker to execute arbitrary code on systems running the affected software.",
-      "action": "Immediately update all installations of Rockwell Arena Simulation Software to the latest patched versions as recommended by Rockwell Automation. Prior to patching, scan and review affected systems for any indicators of compromise or unauthorized access.",
+      "title": "Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers",
+      "tldr": "Multiple flaws in Bing Images allow specially crafted SVG files to execute commands with SYSTEM privileges on Microsoft's backend servers. This represents a severe server-side vulnerability that could lead to widespread impact.",
+      "action": "While this is a server-side vulnerability that Microsoft needs to patch, users and organizations should exercise caution when processing or rendering SVG files from untrusted sources. Ensure all systems are updated and employ robust email and web filtering solutions.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/rockwell-patches-code-execution-flaws-in-arena-simulation-software/",
-      "source": "SecurityWeek",
+      "source_url": "https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html",
+      "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Rockwell Arena Simulation Software (specific vulnerable versions require consulting official Rockwell Automation security advisories).",
-      "how_to_determine_impact": "Identify all assets running Rockwell Arena Simulation Software. Compare the installed software versions against Rockwell Automation's official security advisories and patch notes to determine if they are affected by the disclosed vulnerabilities.",
-      "tanium_query_hint": "Use 'Get Installed Applications' sensor with 'Name contains 'Rockwell Arena Simulation'' and filter by specific version numbers to identify vulnerable installations.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability IDs or common vulnerabilities and exposures (CVEs) related to 'Rockwell Arena Simulation Software'. Use InsightAgent to query for 'software name = Rockwell Arena Simulation' to check installed versions.",
+      "affected_versions": "Microsoft's servers hosting the Bing Images service. Specific versions of internal image processing components are not disclosed.",
+      "how_to_determine_impact": "This is a cloud service vulnerability impacting Microsoft's infrastructure. Internal systems using Bing Images APIs should monitor for advisories. For end-users, ensure browser and operating system updates are current to mitigate general client-side risks.",
+      "tanium_query_hint": "N/A - This vulnerability impacts Microsoft's cloud infrastructure directly. For client-side mitigation, 'Get Browser Version' and ensure patches are applied.",
+      "rapid7_query_hint": "N/A - This vulnerability impacts Microsoft's cloud infrastructure directly. For client-side mitigation, ensure web browsers are up-to-date and configured for secure SVG handling.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
+      "cvss_score": "9.0 Critical (Estimate)"
     }
   ],
   "insurance": [
     {
       "title": "CTM360 Research Reveals How Insurance Phishing Has Evolved Into Real-Time Account Hijacking",
-      "tldr": "CTM360 research highlights a significant evolution in insurance phishing attacks, indicating a shift towards real-time account hijacking. This advanced tactic allows attackers to bypass traditional security measures and compromise policyholder accounts more effectively and immediately.",
-      "action": "Insurance providers and policyholders must enhance their vigilance against sophisticated phishing attempts. Implement and enforce multi-factor authentication (MFA) for all online accounts. Conduct regular security awareness training, focusing on identifying real-time phishing techniques and verifying communication legitimacy.",
+      "tldr": "New research from CTM360 highlights a significant evolution in insurance-themed phishing attacks, moving beyond simple credential theft to sophisticated real-time account hijacking techniques. These methods allow attackers to bypass multi-factor authentication and gain immediate control.",
+      "action": "Insurance providers should implement advanced anti-phishing technologies, enhance MFA protections (e.g., FIDO2), and provide continuous employee training on recognizing sophisticated phishing and real-time social engineering. Policyholders should be educated on the risks and advised to use strong, unique passwords and be wary of requests for real-time authentication codes.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/ctm360-research-reveals-how-insurance.html",
       "source": "The Hacker News"
@@ -6781,6 +6773,22 @@
         "rapid7_query_hint": "Search InsightVM for vulnerability IDs or common vulnerabilities and exposures (CVEs) related to 'Rockwell Arena Simulation Software'. Use InsightAgent to query for 'software name = Rockwell Arena Simulation' to check installed versions.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers",
+        "tldr": "Multiple flaws in Bing Images allow specially crafted SVG files to execute commands with SYSTEM privileges on Microsoft's backend servers. This represents a severe server-side vulnerability that could lead to widespread impact.",
+        "action": "While this is a server-side vulnerability that Microsoft needs to patch, users and organizations should exercise caution when processing or rendering SVG files from untrusted sources. Ensure all systems are updated and employ robust email and web filtering solutions.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Microsoft's servers hosting the Bing Images service. Specific versions of internal image processing components are not disclosed.",
+        "how_to_determine_impact": "This is a cloud service vulnerability impacting Microsoft's infrastructure. Internal systems using Bing Images APIs should monitor for advisories. For end-users, ensure browser and operating system updates are current to mitigate general client-side risks.",
+        "tanium_query_hint": "N/A - This vulnerability impacts Microsoft's cloud infrastructure directly. For client-side mitigation, 'Get Browser Version' and ensure patches are applied.",
+        "rapid7_query_hint": "N/A - This vulnerability impacts Microsoft's cloud infrastructure directly. For client-side mitigation, ensure web browsers are up-to-date and configured for secure SVG handling.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical (Estimate)",
         "category": "vulns"
       }
     ]
