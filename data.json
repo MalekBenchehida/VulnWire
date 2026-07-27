@@ -1,120 +1,135 @@
 {
   "breaches": [
     {
+      "title": "Coca-Cola confirms data theft in Fairlife ransomware attack",
+      "tldr": "The Coca-Cola Company has confirmed that data was stolen from its dairy subsidiary, Fairlife, during a ransomware attack. This incident highlights the use of double-extortion tactics by ransomware groups, involving both data encryption and exfiltration.",
+      "action": "Review and enhance data backup and recovery strategies. Implement strong data loss prevention (DLP) measures. Improve incident response plans specifically for ransomware attacks involving data exfiltration.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Ernst & Young data breach claimed by ShinyHunters extortion gang",
+      "tldr": "The ShinyHunters extortion group has claimed responsibility for a data breach at Ernst & Young (EY). They assert to have obtained credentials for some of EY's systems via a supply-chain attack, highlighting third-party risk.",
+      "action": "Conduct a thorough investigation into the claimed breach. Implement multi-factor authentication (MFA) across all systems. Audit third-party access and supply chain security controls.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "OnTrac notifies customers of data breach after network hack",
-      "tldr": "OnTrac, a parcel delivery company, disclosed a data breach resulting from a network intrusion. Hackers may have accessed personal details of its customers.",
-      "action": "Customers should monitor their accounts for suspicious activity and be wary of phishing attempts. Organizations should review third-party vendor security, especially for logistics partners handling sensitive customer data.",
+      "tldr": "OnTrac, a parcel delivery company, is informing customers that hackers breached its corporate network. The breach may have led to unauthorized access of personal details belonging to its customers.",
+      "action": "Advise customers to monitor financial accounts and credit reports for suspicious activity. Implement enhanced network intrusion detection and prevention systems. Conduct a thorough forensic investigation of the network hack.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ontrac-notifies-customers-of-data-breach-after-network-hack/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Chick-fil-A data breach affects more than 13,000 customers",
-      "tldr": "Chick-fil-A confirmed a data breach impacting over 13,000 customer accounts due to credential stuffing attacks on their website and mobile app between June 17-19. Threat actors used previously compromised credentials to gain unauthorized access.",
-      "action": "Customers should change their Chick-fil-A account passwords to a unique, strong password and enable multi-factor authentication if available. Organizations should implement robust credential stuffing protection and monitor for account takeover attempts.",
+      "title": "DentaQuest Data Breach Potentially Impacts Over 23 Million People",
+      "tldr": "DentaQuest, a dental insurance provider, has suffered a data breach that could potentially impact over 23 million individuals. This significant breach underscores the critical need for robust security measures for sensitive personal health information (PHI).",
+      "action": "Advise potentially affected individuals to monitor their credit reports and healthcare statements for suspicious activity. Implement stronger access controls and encryption for sensitive customer data. Conduct a comprehensive security audit of all third-party vendors with access to PHI.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/chick-fil-a-data-breach-affects-more-than-13-000-customers/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Data Breach Confirmed After Australian Energy Giant Origin Is Hacked",
-      "tldr": "Australian energy provider Origin Energy has confirmed a data breach following a cyber attack on its systems. The extent of the compromised data is currently under investigation, but customer information may have been accessed.",
-      "action": "Organizations should review and strengthen their network perimeter defenses and incident response plans. Customers of Origin Energy should remain vigilant for unusual communications or unauthorized account activity.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/data-breach-confirmed-after-australian-energy-giant-origin-is-hacked/",
+      "source_url": "https://www.securityweek.com/dentaquest-data-breach-potentially-impacts-over-23-million-people/",
       "source": "SecurityWeek"
-    },
-    {
-      "title": "Hackers hijack hotel Wi-Fi DNS to steal Microsoft 365 accounts",
-      "tldr": "Threat actors are manipulating DNS settings on hotel and conference center Wi-Fi networks to redirect users to malicious, fake Microsoft 365 login pages. This tactic aims to harvest user credentials.",
-      "action": "Users should exercise extreme caution when logging into sensitive accounts on public Wi-Fi. Organizations should educate employees about DNS hijacking risks, encourage VPN usage, and enforce multi-factor authentication for all critical services, especially Microsoft 365.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-hotel-wi-fi-dns-to-steal-microsoft-365-accounts/",
-      "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
-      "title": "DevMan RaaS Portal Centralizes Payload Builds, Victim Management, and Affiliate Payouts",
-      "tldr": "A new Ransomware-as-a-Service (RaaS) portal named DevMan has emerged, providing affiliates with centralized tools for building payloads, managing victims, and processing payouts. This streamlines ransomware operations for various threat actors.",
-      "action": "Organizations should reinforce defensive measures against known ransomware tactics, including robust backups, strong endpoint detection and response (EDR), and regular security awareness training, as the availability of RaaS platforms lowers the barrier to entry for attackers.",
+      "title": "Operation BlueDash Deploys Level RMM and ScreenConnect via Fake Teams Update",
+      "tldr": "Operation BlueDash is actively deploying Level RMM and ScreenConnect tools on victim systems through fake Microsoft Teams updates. This campaign uses social engineering to gain persistent remote access, often a precursor to ransomware or data exfiltration.",
+      "action": "Educate users on identifying fake software updates, especially for critical applications like Microsoft Teams. Monitor for unauthorized installations of remote management tools. Implement application whitelisting and egress filtering.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/devman-raas-portal-centralizes-payload.html",
+      "source_url": "https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Cruciferra Crypter Uses BYOVD and Process Ghosting to Hide Windows Malware",
+      "tldr": "The Cruciferra Crypter employs advanced techniques like Bring Your Own Vulnerable Driver (BYOVD) and process ghosting to hide Windows malware. This sophisticated obfuscation makes detection by traditional security solutions extremely challenging.",
+      "action": "Implement advanced endpoint detection and response (EDR) solutions with strong behavioral analysis capabilities. Ensure Windows kernel integrity protection is enabled. Monitor for suspicious driver loads and process anomalies.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "TELESHIM Abuses Telegram for C2 in Attacks Against Middle East Governments",
+      "tldr": "The TELESHIM threat actor group is abusing Telegram for command and control (C2) communications in targeted attacks against Middle East governments. This tactic leverages a legitimate messaging platform to blend C2 traffic with normal network activity, hindering detection.",
+      "action": "Implement strict network traffic monitoring and anomaly detection, particularly for encrypted channels. Restrict or closely monitor Telegram usage on government or corporate networks. Deploy robust endpoint security solutions.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "PTC Windchill Vulnerability Exploited in Ransomware Campaign",
+      "tldr": "A previously unknown or unpatched vulnerability in PTC Windchill is being actively exploited as part of a ransomware campaign. Attackers are leveraging this flaw to gain initial access or escalate privileges, leading to ransomware deployment.",
+      "action": "Immediately identify and patch all PTC Windchill installations to the latest secure version. Implement network segmentation around critical systems hosting Windchill. Enhance endpoint detection and response capabilities to detect early signs of ransomware activity.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/ptc-windchill-vulnerability-exploited-in-ransomware-campaign/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
+      "title": "Public Exploit Released for Patched vBulletin Pre-Auth Code Execution Flaw",
+      "tldr": "A public exploit has been released for a previously patched pre-authentication code execution vulnerability in vBulletin. This significantly increases the risk for organizations running unpatched vBulletin instances.",
+      "action": "Immediately apply the latest security patches for vBulletin if not already done. Scan for and inventory all vBulletin installations within your environment.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/public-exploit-released-for-patched.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Specific vulnerable versions not detailed, refer to vBulletin's official security advisories for the patch information.",
+      "how_to_determine_impact": "Identify all vBulletin installations within your environment. Verify patch levels against vendor advisories. Check web server logs for suspicious requests targeting vBulletin endpoints related to remote code execution.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'vBulletin' or 'IIS' or 'Apache' and 'webserver'. Check for file integrity changes in vBulletin installation directories for known indicators of compromise.",
+      "rapid7_query_hint": "Search for vulnerability checks related to 'vBulletin RCE' or 'vBulletin pre-auth'. Conduct authenticated scans on web servers hosting vBulletin for known vulnerabilities and misconfigurations.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process",
+      "tldr": "A sandbox escape vulnerability in n8n allows users with workflow editor privileges to execute arbitrary OS commands as the n8n process. This could lead to privilege escalation and compromise of the underlying system hosting n8n.",
+      "action": "Review n8n deployments, restrict workflow editor access to only highly trusted personnel, and apply any available patches from n8n immediately.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Specific vulnerable versions not detailed, refer to n8n's official security advisories.",
+      "how_to_determine_impact": "Identify all n8n instances within your environment. Review user roles and permissions, especially focusing on users with 'workflow editor' privileges. Monitor n8n process activity for unusual command execution.",
+      "tanium_query_hint": "Get Running Processes from all machines with Process Name matches 'n8n' and collect Command Line details. Get Installed Applications from all machines with Application Name matches 'n8n' to identify versions.",
+      "rapid7_query_hint": "Search for assets with 'n8n' installed. Monitor logs for suspicious activity originating from the n8n application process. Check for specific vulnerability checks if a CVE is released by n8n.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.8 High"
+    },
+    {
       "title": "Fastjson 1.x RCE Vulnerability Targeted in Attacks With No Patched Available",
-      "tldr": "A critical Remote Code Execution (RCE) vulnerability in Fastjson 1.x is being actively exploited in the wild. There are currently no official patches available for affected versions, making systems highly susceptible to compromise.",
-      "action": "Immediately identify and isolate all systems running Fastjson 1.x. Implement network segmentation and egress filtering to restrict outbound connections from these systems. Consider temporary removal or migration to alternative libraries if business-critical. Continuously monitor for any in-the-wild exploitation.",
+      "tldr": "A remote code execution (RCE) vulnerability in Fastjson 1.x is being actively targeted in attacks, with no official patch currently available for the affected versions. This poses a critical, zero-day-like risk to systems relying on vulnerable Fastjson libraries.",
+      "action": "Immediately identify all applications using Fastjson 1.x. Implement network-level protections (e.g., WAF rules) to block known attack patterns. Consider temporary mitigation strategies such as disabling autoType or upgrading to Fastjson 2.x if feasible.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Fastjson 1.x (all versions unless a specific patched version is released)",
-      "how_to_determine_impact": "Scan your application dependencies and codebases for the Fastjson library. Verify the exact version being used. Check application logs for unusual deserialization errors or process spawns.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Fastjson' and '1.' and 'Listen Ports' to identify network exposure. Investigate process activity on identified machines.",
-      "rapid7_query_hint": "Search 'vulnerability.title = \"Fastjson 1.x RCE\"' or look for specific CVEs associated with Fastjson 1.x deserialization vulnerabilities. Use InsightAgent queries to identify deployed Fastjson libraries.",
+      "affected_versions": "Fastjson 1.x. Specific minor versions not detailed; refer to Fastjson official security advisories for exact vulnerable ranges.",
+      "how_to_determine_impact": "Identify all Java applications that utilize the Fastjson library, specifically version 1.x. Inspect application dependencies (e.g., pom.xml, build.gradle) or perform file system searches for 'fastjson-1.' JAR files.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Java' or 'Tomcat' in Application Name. Use 'Get File Hash' on common Java application directories (e.g., 'C:\\Program Files\\Apache Software Foundation\\Tomcat*\\lib') to identify 'fastjson-1.*.jar' files. Check file versions of 'fastjson' jars.",
+      "rapid7_query_hint": "Search for assets running Java applications. Look for vulnerability checks related to 'Fastjson RCE' or 'deserialization vulnerability'. Use InsightAgent to scan for specific JAR file names like 'fastjson-1.*.jar'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Cl0p Affiliates Target Internet-Exposed PTC Windchill and FlexPLM with Unauthenticated RCE",
-      "tldr": "Cl0p ransomware affiliates are actively exploiting an unauthenticated Remote Code Execution (RCE) vulnerability in internet-exposed PTC Windchill and FlexPLM software. This allows threat actors to gain initial access to vulnerable systems without requiring any authentication.",
-      "action": "Immediately identify and disconnect or restrict network access for all internet-exposed PTC Windchill and FlexPLM instances. Apply any available patches or vendor-recommended mitigations for RCE vulnerabilities. Implement robust intrusion detection and prevention systems to block Cl0p-associated indicators of compromise.",
+      "title": "Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git",
+      "tldr": "A proof-of-concept (PoC) exploit has been published for a remote code execution (RCE) vulnerability in GitLab. This flaw allows authenticated users to run arbitrary commands on the GitLab server, potentially leading to full system compromise.",
+      "action": "Immediately apply the latest GitLab security patches. Restrict access to GitLab instances and ensure all user accounts follow the principle of least privilege. Monitor GitLab server logs for suspicious activity related to command execution.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/cl0p-affiliates-target-internet-exposed.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Internet-exposed instances of PTC Windchill and FlexPLM (specific vulnerable versions require vendor advisory)",
-      "how_to_determine_impact": "Perform external network scans to identify exposed PTC Windchill and FlexPLM services. Verify current patch levels against vendor advisories. Examine system logs for unauthorized access attempts or suspicious process execution.",
-      "tanium_query_hint": "Get Running Processes from all machines with 'Windchill' or 'FlexPLM' and 'Listen Ports' to identify network exposure. Follow up with 'Get Patch Status' to confirm applied updates.",
-      "rapid7_query_hint": "Scan for assets running PTC Windchill or FlexPLM. Search 'vulnerability.software.name = \"PTC Windchill\" OR vulnerability.software.name = \"PTC FlexPLM\" AND vulnerability.severity >= \"critical\"' in InsightVM.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate)"
-    },
-    {
-      "title": "Certighost Exploit Lets Low-Privileged Active Directory Users Impersonate a Domain Controller",
-      "tldr": "A new exploit, dubbed 'Certighost,' allows low-privileged Active Directory users to escalate privileges and impersonate a Domain Controller. This severe vulnerability could lead to full domain compromise.",
-      "action": "Organizations should audit Active Directory configurations, particularly focusing on certificate services and delegation settings. Review and restrict permissions for issuing certificates. Apply all recommended security updates for Active Directory Certificate Services. Implement robust monitoring for suspicious authentication and certificate issuance.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/certighost-exploit-lets-low-privileged.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Active Directory environments configured with vulnerable Certificate Services or improper permissions.",
-      "how_to_determine_impact": "Review Active Directory Certificate Services (AD CS) configurations. Specifically, check template permissions for certificate issuance and delegation. Verify that no low-privileged users or groups have rights to enroll for highly privileged certificates.",
-      "tanium_query_hint": "Get Certificate Templates and Permissions from all machines with 'IsDomainController = True'. Query 'Get Active Directory Group Membership' to audit user rights on AD CS.",
-      "rapid7_query_hint": "Search 'vulnerability.title = \"Certighost\"' or 'vulnerability.category = \"Active Directory Privilege Escalation\"'. Use InsightVM to scan for misconfigurations related to AD CS.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical (Estimate)"
-    },
-    {
-      "title": "Bing Images Flaws Let Crafted SVGs Run Commands as SYSTEM on Microsoft's Servers",
-      "tldr": "Multiple flaws in Bing Images allow specially crafted SVG files to execute commands with SYSTEM privileges on Microsoft's backend servers. This represents a severe server-side vulnerability that could lead to widespread impact.",
-      "action": "While this is a server-side vulnerability that Microsoft needs to patch, users and organizations should exercise caution when processing or rendering SVG files from untrusted sources. Ensure all systems are updated and employ robust email and web filtering solutions.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/bing-images-flaws-let-crafted-svgs-run.html",
+      "source_url": "https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Microsoft's servers hosting the Bing Images service. Specific versions of internal image processing components are not disclosed.",
-      "how_to_determine_impact": "This is a cloud service vulnerability impacting Microsoft's infrastructure. Internal systems using Bing Images APIs should monitor for advisories. For end-users, ensure browser and operating system updates are current to mitigate general client-side risks.",
-      "tanium_query_hint": "N/A - This vulnerability impacts Microsoft's cloud infrastructure directly. For client-side mitigation, 'Get Browser Version' and ensure patches are applied.",
-      "rapid7_query_hint": "N/A - This vulnerability impacts Microsoft's cloud infrastructure directly. For client-side mitigation, ensure web browsers are up-to-date and configured for secure SVG handling.",
+      "affected_versions": "Specific vulnerable versions not detailed, refer to GitLab's official security advisories for the exact patched versions.",
+      "how_to_determine_impact": "Identify all GitLab installations in your environment. Verify current GitLab version against vendor's security patch advisories. Review GitLab user permissions and audit logs for unauthorized command execution attempts, especially by authenticated users.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches 'GitLab'. Check running processes for unusual commands executed by the 'git' user or GitLab service accounts.",
+      "rapid7_query_hint": "Scan assets running GitLab for known vulnerabilities. Search for vulnerability checks related to 'GitLab RCE'. Monitor logs for suspicious activity on GitLab servers, particularly command executions from authenticated users.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical (Estimate)"
+      "cvss_score": "8.8 High"
     }
   ],
-  "insurance": [
-    {
-      "title": "CTM360 Research Reveals How Insurance Phishing Has Evolved Into Real-Time Account Hijacking",
-      "tldr": "New research from CTM360 highlights a significant evolution in insurance-themed phishing attacks, moving beyond simple credential theft to sophisticated real-time account hijacking techniques. These methods allow attackers to bypass multi-factor authentication and gain immediate control.",
-      "action": "Insurance providers should implement advanced anti-phishing technologies, enhance MFA protections (e.g., FIDO2), and provide continuous employee training on recognizing sophisticated phishing and real-time social engineering. Policyholders should be educated on the risks and advised to use strong, unique passwords and be wary of requests for real-time authentication codes.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/ctm360-research-reveals-how-insurance.html",
-      "source": "The Hacker News"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -6789,6 +6804,144 @@
         "rapid7_query_hint": "N/A - This vulnerability impacts Microsoft's cloud infrastructure directly. For client-side mitigation, ensure web browsers are up-to-date and configured for secure SVG handling.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.0 Critical (Estimate)",
+        "category": "vulns"
+      }
+    ],
+    "2026-07-27": [
+      {
+        "title": "Coca-Cola confirms data theft in Fairlife ransomware attack",
+        "tldr": "The Coca-Cola Company has confirmed that data was stolen from its dairy subsidiary, Fairlife, during a ransomware attack. This incident highlights the use of double-extortion tactics by ransomware groups, involving both data encryption and exfiltration.",
+        "action": "Review and enhance data backup and recovery strategies. Implement strong data loss prevention (DLP) measures. Improve incident response plans specifically for ransomware attacks involving data exfiltration.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Ernst & Young data breach claimed by ShinyHunters extortion gang",
+        "tldr": "The ShinyHunters extortion group has claimed responsibility for a data breach at Ernst & Young (EY). They assert to have obtained credentials for some of EY's systems via a supply-chain attack, highlighting third-party risk.",
+        "action": "Conduct a thorough investigation into the claimed breach. Implement multi-factor authentication (MFA) across all systems. Audit third-party access and supply chain security controls.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "OnTrac notifies customers of data breach after network hack",
+        "tldr": "OnTrac, a parcel delivery company, is informing customers that hackers breached its corporate network. The breach may have led to unauthorized access of personal details belonging to its customers.",
+        "action": "Advise customers to monitor financial accounts and credit reports for suspicious activity. Implement enhanced network intrusion detection and prevention systems. Conduct a thorough forensic investigation of the network hack.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ontrac-notifies-customers-of-data-breach-after-network-hack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "DentaQuest Data Breach Potentially Impacts Over 23 Million People",
+        "tldr": "DentaQuest, a dental insurance provider, has suffered a data breach that could potentially impact over 23 million individuals. This significant breach underscores the critical need for robust security measures for sensitive personal health information (PHI).",
+        "action": "Advise potentially affected individuals to monitor their credit reports and healthcare statements for suspicious activity. Implement stronger access controls and encryption for sensitive customer data. Conduct a comprehensive security audit of all third-party vendors with access to PHI.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/dentaquest-data-breach-potentially-impacts-over-23-million-people/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Operation BlueDash Deploys Level RMM and ScreenConnect via Fake Teams Update",
+        "tldr": "Operation BlueDash is actively deploying Level RMM and ScreenConnect tools on victim systems through fake Microsoft Teams updates. This campaign uses social engineering to gain persistent remote access, often a precursor to ransomware or data exfiltration.",
+        "action": "Educate users on identifying fake software updates, especially for critical applications like Microsoft Teams. Monitor for unauthorized installations of remote management tools. Implement application whitelisting and egress filtering.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/operation-bluedash-deploys-level-rmm.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "Cruciferra Crypter Uses BYOVD and Process Ghosting to Hide Windows Malware",
+        "tldr": "The Cruciferra Crypter employs advanced techniques like Bring Your Own Vulnerable Driver (BYOVD) and process ghosting to hide Windows malware. This sophisticated obfuscation makes detection by traditional security solutions extremely challenging.",
+        "action": "Implement advanced endpoint detection and response (EDR) solutions with strong behavioral analysis capabilities. Ensure Windows kernel integrity protection is enabled. Monitor for suspicious driver loads and process anomalies.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/cruciferra-crypter-uses-byovd-and.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "TELESHIM Abuses Telegram for C2 in Attacks Against Middle East Governments",
+        "tldr": "The TELESHIM threat actor group is abusing Telegram for command and control (C2) communications in targeted attacks against Middle East governments. This tactic leverages a legitimate messaging platform to blend C2 traffic with normal network activity, hindering detection.",
+        "action": "Implement strict network traffic monitoring and anomaly detection, particularly for encrypted channels. Restrict or closely monitor Telegram usage on government or corporate networks. Deploy robust endpoint security solutions.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/teleshim-abuses-telegram-for-c2-in.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "PTC Windchill Vulnerability Exploited in Ransomware Campaign",
+        "tldr": "A previously unknown or unpatched vulnerability in PTC Windchill is being actively exploited as part of a ransomware campaign. Attackers are leveraging this flaw to gain initial access or escalate privileges, leading to ransomware deployment.",
+        "action": "Immediately identify and patch all PTC Windchill installations to the latest secure version. Implement network segmentation around critical systems hosting Windchill. Enhance endpoint detection and response capabilities to detect early signs of ransomware activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/ptc-windchill-vulnerability-exploited-in-ransomware-campaign/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Public Exploit Released for Patched vBulletin Pre-Auth Code Execution Flaw",
+        "tldr": "A public exploit has been released for a previously patched pre-authentication code execution vulnerability in vBulletin. This significantly increases the risk for organizations running unpatched vBulletin instances.",
+        "action": "Immediately apply the latest security patches for vBulletin if not already done. Scan for and inventory all vBulletin installations within your environment.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/public-exploit-released-for-patched.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Specific vulnerable versions not detailed, refer to vBulletin's official security advisories for the patch information.",
+        "how_to_determine_impact": "Identify all vBulletin installations within your environment. Verify patch levels against vendor advisories. Check web server logs for suspicious requests targeting vBulletin endpoints related to remote code execution.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'vBulletin' or 'IIS' or 'Apache' and 'webserver'. Check for file integrity changes in vBulletin installation directories for known indicators of compromise.",
+        "rapid7_query_hint": "Search for vulnerability checks related to 'vBulletin RCE' or 'vBulletin pre-auth'. Conduct authenticated scans on web servers hosting vBulletin for known vulnerabilities and misconfigurations.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process",
+        "tldr": "A sandbox escape vulnerability in n8n allows users with workflow editor privileges to execute arbitrary OS commands as the n8n process. This could lead to privilege escalation and compromise of the underlying system hosting n8n.",
+        "action": "Review n8n deployments, restrict workflow editor access to only highly trusted personnel, and apply any available patches from n8n immediately.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific vulnerable versions not detailed, refer to n8n's official security advisories.",
+        "how_to_determine_impact": "Identify all n8n instances within your environment. Review user roles and permissions, especially focusing on users with 'workflow editor' privileges. Monitor n8n process activity for unusual command execution.",
+        "tanium_query_hint": "Get Running Processes from all machines with Process Name matches 'n8n' and collect Command Line details. Get Installed Applications from all machines with Application Name matches 'n8n' to identify versions.",
+        "rapid7_query_hint": "Search for assets with 'n8n' installed. Monitor logs for suspicious activity originating from the n8n application process. Check for specific vulnerability checks if a CVE is released by n8n.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Fastjson 1.x RCE Vulnerability Targeted in Attacks With No Patched Available",
+        "tldr": "A remote code execution (RCE) vulnerability in Fastjson 1.x is being actively targeted in attacks, with no official patch currently available for the affected versions. This poses a critical, zero-day-like risk to systems relying on vulnerable Fastjson libraries.",
+        "action": "Immediately identify all applications using Fastjson 1.x. Implement network-level protections (e.g., WAF rules) to block known attack patterns. Consider temporary mitigation strategies such as disabling autoType or upgrading to Fastjson 2.x if feasible.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/fastjson-1x-rce-vulnerability-targeted.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Fastjson 1.x. Specific minor versions not detailed; refer to Fastjson official security advisories for exact vulnerable ranges.",
+        "how_to_determine_impact": "Identify all Java applications that utilize the Fastjson library, specifically version 1.x. Inspect application dependencies (e.g., pom.xml, build.gradle) or perform file system searches for 'fastjson-1.' JAR files.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Java' or 'Tomcat' in Application Name. Use 'Get File Hash' on common Java application directories (e.g., 'C:\\Program Files\\Apache Software Foundation\\Tomcat*\\lib') to identify 'fastjson-1.*.jar' files. Check file versions of 'fastjson' jars.",
+        "rapid7_query_hint": "Search for assets running Java applications. Look for vulnerability checks related to 'Fastjson RCE' or 'deserialization vulnerability'. Use InsightAgent to scan for specific JAR file names like 'fastjson-1.*.jar'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Researcher Publishes GitLab RCE PoC Letting Authenticated Users Run Commands as Git",
+        "tldr": "A proof-of-concept (PoC) exploit has been published for a remote code execution (RCE) vulnerability in GitLab. This flaw allows authenticated users to run arbitrary commands on the GitLab server, potentially leading to full system compromise.",
+        "action": "Immediately apply the latest GitLab security patches. Restrict access to GitLab instances and ensure all user accounts follow the principle of least privilege. Monitor GitLab server logs for suspicious activity related to command execution.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/07/researcher-publishes-gitlab-rce-poc.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific vulnerable versions not detailed, refer to GitLab's official security advisories for the exact patched versions.",
+        "how_to_determine_impact": "Identify all GitLab installations in your environment. Verify current GitLab version against vendor's security patch advisories. Review GitLab user permissions and audit logs for unauthorized command execution attempts, especially by authenticated users.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches 'GitLab'. Check running processes for unusual commands executed by the 'git' user or GitLab service accounts.",
+        "rapid7_query_hint": "Scan assets running GitLab for known vulnerabilities. Search for vulnerability checks related to 'GitLab RCE'. Monitor logs for suspicious activity on GitLab servers, particularly command executions from authenticated users.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High",
         "category": "vulns"
       }
     ]
