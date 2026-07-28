@@ -1,43 +1,35 @@
 {
   "breaches": [
     {
+      "title": "Data breach at medical billing firm MCBS affects 1.26 million people",
+      "tldr": "Healthcare billing company Medical Computer Business Services (MCBS) disclosed a network breach in 2025 that exposed the sensitive information of over 1.2 million people.",
+      "action": "Affected individuals should monitor credit reports and be vigilant for phishing attempts. Organizations utilizing MCBS or similar services should review third-party vendor security practices.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-at-medical-billing-firm-mcbs-affects-126-million-people/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Apple sued over fake App Store crypto wallet app stealing $1.8M in Bitcoin",
-      "tldr": "Apple is facing a lawsuit from individuals who lost approximately $1.8 million in Bitcoin after downloading a fraudulent 'Sparrow Wallet' app from the App Store. The lawsuit alleges that Apple failed to adequately vet the malicious application, leading to significant financial theft for users.",
-      "action": "Educate users about the risks of fake apps and urge extreme caution when downloading cryptocurrency wallet applications. Advise users to always verify the authenticity of apps directly with the official developer's website before downloading, regardless of the app store.",
+      "tldr": "Apple is facing a lawsuit from users who lost approximately $1.8 million in Bitcoin after downloading and using a fraudulent Sparrow Wallet application from the official App Store.",
+      "action": "Users should independently verify the authenticity of cryptocurrency wallet applications before downloading. Organizations should advise employees on safe crypto practices and the risks of fraudulent apps.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/",
       "source": "BleepingComputer"
     },
     {
       "title": "Ernst & Young data breach claimed by ShinyHunters extortion gang",
-      "tldr": "The ShinyHunters extortion group has claimed responsibility for a data breach at Ernst & Young, stating they gained access to company systems via a supply-chain attack. This incident highlights the risks associated with third-party vendors and the potential for extensive data exposure from supply chain compromises.",
-      "action": "Strengthen supply chain security by thoroughly vetting third-party vendors and implementing strict access controls. Monitor for unusual activity from trusted vendor connections and enforce multi-factor authentication for all external access points.",
+      "tldr": "The ShinyHunters extortion gang has claimed responsibility for a recent Ernst & Young data breach, asserting they gained access to company systems via a supply-chain attack to steal credentials and data.",
+      "action": "Organizations should conduct thorough supply chain security audits, strengthen access controls, and continuously monitor for credential theft and unauthorized access, particularly from third-party vendors.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "ShinyHunters data leaks fuel $2,000 sextortion email scam",
-      "tldr": "Data leaks by the ShinyHunters extortion group are being leveraged by threat actors to send sextortion emails demanding $2,000 in Bitcoin. This illustrates how previously breached data can be repurposed for further malicious campaigns, causing continued harm to affected individuals.",
-      "action": "Inform employees and users about ongoing sextortion scams and advise them not to engage with or pay demands. Implement robust email security solutions and conduct awareness training on phishing and social engineering tactics.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-data-leaks-fuel-2-000-sextortion-email-scam/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "DentaQuest Data Breach Potentially Impacts Over 23 Million People",
-      "tldr": "DentaQuest has experienced a data breach that could potentially affect over 23 million individuals. This significant breach underscores the critical importance of robust data protection measures and incident response planning for organizations handling large volumes of sensitive personal information.",
-      "action": "Monitor for official notifications from DentaQuest regarding the scope and nature of the breach. Advise potentially impacted individuals to remain vigilant against phishing attempts and identity theft. Review and enhance data loss prevention strategies and third-party vendor security.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/dentaquest-data-breach-potentially-impacts-over-23-million-people/",
-      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Coca-Cola confirms data theft in Fairlife ransomware attack",
-      "tldr": "The Coca-Cola Company has confirmed that data was stolen from its dairy subsidiary, Fairlife, during a ransomware attack earlier this month. This indicates a double extortion tactic, where data is exfiltrated before encryption to pressure victims into paying the ransom.",
-      "action": "Ensure robust data backup and recovery strategies are in place, including offline backups. Implement advanced endpoint detection and response (EDR) solutions to detect and prevent ransomware activities, and conduct regular penetration testing for data exfiltration pathways.",
+      "tldr": "The Coca-Cola Company has confirmed that its dairy subsidiary, Fairlife, suffered a ransomware attack earlier this month which resulted in data theft, indicating a double extortion tactic.",
+      "action": "Implement robust backup and recovery strategies, enhance endpoint detection and response (EDR), and conduct regular security awareness training against ransomware and phishing. Review and segment networks to limit lateral movement and mitigate impact.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/",
       "source": "BleepingComputer"
@@ -45,64 +37,66 @@
   ],
   "vulns": [
     {
-      "title": "Public Exploit Released for Patched vBulletin Pre-Auth Code Execution Flaw",
-      "tldr": "A public exploit has been released for a previously patched pre-authentication code execution vulnerability in vBulletin. This critical flaw allows attackers to execute arbitrary code without authentication, posing a significant risk to unpatched vBulletin installations.",
-      "action": "Immediately identify and patch all vBulletin installations to the latest version. Verify systems are not compromised.",
+      "title": "Hackers target US firms in FastJson RCE zero-day attacks",
+      "tldr": "Hackers are actively exploiting a zero-day vulnerability in the FastJson open-source Java library, enabling remote code execution without authentication or elevated privileges. US firms are being targeted in these attacks.",
+      "action": "Immediately update FastJson library to the latest patched version. Implement web application firewalls (WAFs) to detect and block RCE attempts, and monitor all Java applications for suspicious activity and exploitation attempts.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/public-exploit-released-for-patched.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "vBulletin versions affected by a pre-authentication code execution flaw prior to the patch. Specific versions need to be identified based on vendor advisories for the patched vulnerability.",
-      "how_to_determine_impact": "Check vBulletin software versions across all deployed instances. Compare against vendor advisories for the specific pre-authentication RCE flaw that was patched. Look for signs of compromise if older versions were exposed.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'vBulletin' in the name. Filter for versions known to be vulnerable. Use 'Get Running Processes' to look for unusual activity on vBulletin servers.",
-      "rapid7_query_hint": "Search for assets with 'vBulletin' installed and cross-reference with vulnerability checks for known vBulletin RCEs. Use InsightAgent queries to detect suspicious process execution or file modifications on web servers.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process",
-      "tldr": "A critical sandbox escape vulnerability in the n8n workflow automation tool allows authenticated workflow editors to execute arbitrary operating system commands with the privileges of the n8n process. This could lead to full system compromise if exploited by a malicious or compromised user.",
-      "action": "Identify all n8n instances and apply the latest security patches immediately. Restrict access to workflow editing functions to trusted users only and review existing workflows for suspicious activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/n8n-sandbox-escape-lets-workflow.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "n8n versions vulnerable to sandbox escape prior to vendor patch. Consult n8n official security advisories for precise version ranges.",
-      "how_to_determine_impact": "Identify all systems running n8n. Check the installed version against n8n security advisories. Review n8n server logs for unusual command execution patterns or unauthorized access attempts by workflow editors.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'n8n' in the name. Filter for versions known to be vulnerable. Investigate 'Get Running Processes' for unexpected child processes spawned by n8n.",
-      "rapid7_query_hint": "Search for assets with 'n8n' installed and check for associated vulnerability identifiers. Use InsightAgent queries to monitor n8n process activity and detect unauthorized command execution attempts.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
-    },
-    {
-      "title": "New Certighost PoC exploit lets attackers hijack Windows domains",
-      "tldr": "A Proof-of-Concept exploit has been released for 'Certighost,' a Windows Active Directory Certificate Services (AD CS) vulnerability. This exploit allows authenticated attackers to potentially compromise an entire Windows domain by leveraging misconfigurations or flaws in AD CS.",
-      "action": "Review and audit all Active Directory Certificate Services configurations for misconfigurations. Apply relevant security updates from Microsoft addressing AD CS vulnerabilities. Implement least privilege for users and services interacting with AD CS.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-certighost-poc-exploit-lets-attackers-hijack-windows-domains/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-us-firms-in-fastjson-rce-zero-day-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Windows Active Directory Certificate Services (AD CS) with specific misconfigurations or unpatched vulnerabilities. Consult Microsoft advisories for 'Certighost' or related AD CS vulnerabilities.",
-      "how_to_determine_impact": "Audit AD CS configurations using tools like CertiKore or PingCastle to identify vulnerable settings or certificate templates. Check for unpatched Windows Server systems hosting AD CS roles. Review event logs for suspicious certificate issuance or domain controller activity.",
-      "tanium_query_hint": "Get Installed Applications from all Windows Domain Controllers and servers to identify AD CS roles. Use 'Get Registry Value' to inspect AD CS configuration settings (e.g., HKLMSystemCurrentControlSetServicesCertSvcConfiguration). Look for unusual processes on AD CS servers.",
-      "rapid7_query_hint": "Scan all Windows Domain Controllers and servers for AD CS vulnerabilities. Use InsightVM to check for configurations identified in Certighost or related AD CS issues. Use InsightAgent queries to monitor AD CS service processes and related event logs (e.g., Security Event ID 4882 for certificate template modifications).",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.1 Critical"
-    },
-    {
-      "title": "PTC Windchill Vulnerability Exploited in Ransomware Campaign",
-      "tldr": "A vulnerability in PTC Windchill has been actively exploited as part of a ransomware campaign. Attackers are leveraging this flaw to gain initial access or escalate privileges, leading to the deployment of ransomware within targeted environments.",
-      "action": "Immediately identify all PTC Windchill installations and apply all available security patches. Review systems for signs of compromise, especially those running Windchill, and ensure robust endpoint detection and response (EDR) is active.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/ptc-windchill-vulnerability-exploited-in-ransomware-campaign/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "PTC Windchill versions vulnerable to the exploited flaw. Consult official PTC security advisories for specific vulnerable versions and patch information.",
-      "how_to_determine_impact": "Identify all instances of PTC Windchill. Verify installed versions against PTC's security bulletins for vulnerabilities actively exploited in ransomware. Check system logs for unusual access, process execution, or file encryption activities related to Windchill services.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'PTC Windchill' in the name. Filter for versions known to be vulnerable. Use 'Get Running Processes' and 'Get File Hash' to detect known ransomware indicators or unusual activity on Windchill servers.",
-      "rapid7_query_hint": "Scan assets for PTC Windchill installations and corresponding vulnerabilities in InsightVM. Use InsightAgent queries to monitor Windchill process activity, network connections, and look for ransomware-related file modifications or encryption attempts.",
+      "affected_versions": "FastJson open-source Java library (specific vulnerable versions not yet publicly detailed by vendor).",
+      "how_to_determine_impact": "Identify all applications within your environment that utilize the FastJson library. Check the version of FastJson being used and compare against vendor advisories. Monitor application logs for indicators of compromise (IoCs) related to RCE attempts.",
+      "tanium_query_hint": "Get File Version['/path/to/fastjson.jar'] from all machines or Get Installed Applications where Application Name contains 'FastJson' or 'Java' and Application Type is 'Library'.",
+      "rapid7_query_hint": "vulnerability.vendor = 'FastJson' AND vulnerability.title CONTAINS 'RCE' AND vulnerability.active_exploit_public = true or asset.software.name = 'Fastjson' and asset.software.version < 'patched_version'.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Arista patches VeloCloud Orchestrator zero-day exploited in attacks",
+      "tldr": "Arista has released patches for a maximum-severity command injection vulnerability in on-premises VeloCloud Orchestrator deployments, which was being actively exploited as a zero-day.",
+      "action": "Immediately apply Arista's patches to all affected VeloCloud Orchestrator on-premises deployments. Conduct a forensic analysis for any signs of prior compromise or suspicious command execution on these systems.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Arista VeloCloud Orchestrator (on-premises deployments, specific vulnerable versions should be referenced from Arista's official advisory).",
+      "how_to_determine_impact": "Verify the version of your Arista VeloCloud Orchestrator installations against the latest vendor advisories. Review system and application logs for unauthorized command execution, unusual process activity, or suspicious network connections.",
+      "tanium_query_hint": "Get Installed Applications where Application Name contains 'Arista VeloCloud Orchestrator' and Application Version < 'patched_version' or Get Running Processes with Parent Process Name contains 'VeloCloud' and CommandLine contains 'suspicious_commands'.",
+      "rapid7_query_hint": "asset.software.name = 'Arista VeloCloud Orchestrator' AND asset.software.version < 'patched_version' or vulnerability.title CONTAINS 'Arista VeloCloud' AND vulnerability.active_exploit_public = true.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit",
+      "tldr": "A researcher developed a Linux kernel exploit, CVE-2026-53264 (CVSS: 7.8), that achieves root privileges from a local user on CentOS Stream 9 by exploiting a use-after-free race in the network traffic-control subsystem. AI assisted in the bug finding and exploit development.",
+      "action": "Prioritize patching Linux kernels, especially on CentOS Stream 9 systems, for CVE-2026-53264. Implement strict least privilege principles and monitor for privilege escalation attempts and unusual process behavior.",
+      "cve_ids": [
+        "CVE-2026-53264"
+      ],
+      "source_url": "https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Linux kernel, affecting CentOS Stream 9 (specific kernel versions vulnerable to CVE-2026-53264 should be identified via official advisories). The flaw is a use-after-free race in the kernel's network traffic-control subsystem.",
+      "how_to_determine_impact": "Check the operating system and kernel version (uname -r) on all Linux machines, specifically CentOS Stream 9. Consult vendor advisories for affected kernel versions.",
+      "tanium_query_hint": "Get Kernel Version from all machines where OS Platform contains 'Linux' and OS Name contains 'CentOS Stream 9'.",
+      "rapid7_query_hint": "vulnerability.cve = 'CVE-2026-53264' or asset.os.kernel.version CONTAINS 'vulnerable_version_string' AND asset.os.name = 'CentOS Stream 9'.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.8 High"
+    },
+    {
+      "title": "Over 24,000 exposed server BMCs leak password hash via decades-old flaw",
+      "tldr": "More than 24,000 internet-exposed server Baseboard Management Controllers (BMCs) are vulnerable to a decades-old flaw in their IPMI interface, which leaks authentication password hashes before login. This allows attackers to steal credentials.",
+      "action": "Immediately identify and secure all internet-exposed BMCs. Update BMC firmware to patched versions, enforce strong, unique passwords, and restrict network access to IPMI interfaces to trusted management networks only.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Baseboard Management Controllers (BMCs) with vulnerable IPMI implementations. This decades-old flaw suggests a wide range of legacy and potentially unmaintained BMC firmware versions.",
+      "how_to_determine_impact": "Conduct network scans for internet-exposed IPMI services (typically UDP port 623). Test for password hash disclosure vulnerabilities using publicly available tools or by attempting to retrieve hashes pre-authentication. Review BMC firmware versions against vendor advisories.",
+      "tanium_query_hint": "Get Computer Name and IP Address from all machines where (Listening Port 623 exists) AND (Application Name contains 'BMC' or 'IPMI').",
+      "rapid7_query_hint": "vulnerability.name = 'IPMI Password Hash Disclosure' or service.port=623 AND service.protocol='IPMI' AND service.status='open'.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.0 High"
     }
   ],
   "insurance": [],
@@ -6952,6 +6946,110 @@
         "rapid7_query_hint": "Scan all Windows Domain Controllers and servers for AD CS vulnerabilities. Use InsightVM to check for configurations identified in Certighost or related AD CS issues. Use InsightAgent queries to monitor AD CS service processes and related event logs (e.g., Security Event ID 4882 for certificate template modifications).",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.1 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-07-28": [
+      {
+        "title": "Data breach at medical billing firm MCBS affects 1.26 million people",
+        "tldr": "Healthcare billing company Medical Computer Business Services (MCBS) disclosed a network breach in 2025 that exposed the sensitive information of over 1.2 million people.",
+        "action": "Affected individuals should monitor credit reports and be vigilant for phishing attempts. Organizations utilizing MCBS or similar services should review third-party vendor security practices.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/data-breach-at-medical-billing-firm-mcbs-affects-126-million-people/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Apple sued over fake App Store crypto wallet app stealing $1.8M in Bitcoin",
+        "tldr": "Apple is facing a lawsuit from users who lost approximately $1.8 million in Bitcoin after downloading and using a fraudulent Sparrow Wallet application from the official App Store.",
+        "action": "Users should independently verify the authenticity of cryptocurrency wallet applications before downloading. Organizations should advise employees on safe crypto practices and the risks of fraudulent apps.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/apple/apple-sued-over-fake-app-store-crypto-wallet-app-stealing-18m-in-bitcoin/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Ernst & Young data breach claimed by ShinyHunters extortion gang",
+        "tldr": "The ShinyHunters extortion gang has claimed responsibility for a recent Ernst & Young data breach, asserting they gained access to company systems via a supply-chain attack to steal credentials and data.",
+        "action": "Organizations should conduct thorough supply chain security audits, strengthen access controls, and continuously monitor for credential theft and unauthorized access, particularly from third-party vendors.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ernst-and-young-data-breach-claimed-by-shinyhunters-extortion-gang/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Coca-Cola confirms data theft in Fairlife ransomware attack",
+        "tldr": "The Coca-Cola Company has confirmed that its dairy subsidiary, Fairlife, suffered a ransomware attack earlier this month which resulted in data theft, indicating a double extortion tactic.",
+        "action": "Implement robust backup and recovery strategies, enhance endpoint detection and response (EDR), and conduct regular security awareness training against ransomware and phishing. Review and segment networks to limit lateral movement and mitigate impact.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/coca-cola-confirms-data-theft-in-fairlife-ransomware-attack/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Hackers target US firms in FastJson RCE zero-day attacks",
+        "tldr": "Hackers are actively exploiting a zero-day vulnerability in the FastJson open-source Java library, enabling remote code execution without authentication or elevated privileges. US firms are being targeted in these attacks.",
+        "action": "Immediately update FastJson library to the latest patched version. Implement web application firewalls (WAFs) to detect and block RCE attempts, and monitor all Java applications for suspicious activity and exploitation attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-us-firms-in-fastjson-rce-zero-day-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "FastJson open-source Java library (specific vulnerable versions not yet publicly detailed by vendor).",
+        "how_to_determine_impact": "Identify all applications within your environment that utilize the FastJson library. Check the version of FastJson being used and compare against vendor advisories. Monitor application logs for indicators of compromise (IoCs) related to RCE attempts.",
+        "tanium_query_hint": "Get File Version['/path/to/fastjson.jar'] from all machines or Get Installed Applications where Application Name contains 'FastJson' or 'Java' and Application Type is 'Library'.",
+        "rapid7_query_hint": "vulnerability.vendor = 'FastJson' AND vulnerability.title CONTAINS 'RCE' AND vulnerability.active_exploit_public = true or asset.software.name = 'Fastjson' and asset.software.version < 'patched_version'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Arista patches VeloCloud Orchestrator zero-day exploited in attacks",
+        "tldr": "Arista has released patches for a maximum-severity command injection vulnerability in on-premises VeloCloud Orchestrator deployments, which was being actively exploited as a zero-day.",
+        "action": "Immediately apply Arista's patches to all affected VeloCloud Orchestrator on-premises deployments. Conduct a forensic analysis for any signs of prior compromise or suspicious command execution on these systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/arista-patches-velocloud-orchestrator-zero-day-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Arista VeloCloud Orchestrator (on-premises deployments, specific vulnerable versions should be referenced from Arista's official advisory).",
+        "how_to_determine_impact": "Verify the version of your Arista VeloCloud Orchestrator installations against the latest vendor advisories. Review system and application logs for unauthorized command execution, unusual process activity, or suspicious network connections.",
+        "tanium_query_hint": "Get Installed Applications where Application Name contains 'Arista VeloCloud Orchestrator' and Application Version < 'patched_version' or Get Running Processes with Parent Process Name contains 'VeloCloud' and CommandLine contains 'suspicious_commands'.",
+        "rapid7_query_hint": "asset.software.name = 'Arista VeloCloud Orchestrator' AND asset.software.version < 'patched_version' or vulnerability.title CONTAINS 'Arista VeloCloud' AND vulnerability.active_exploit_public = true.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Researcher Says AI Helped Develop Linux Traffic-Control Race Into Root Exploit",
+        "tldr": "A researcher developed a Linux kernel exploit, CVE-2026-53264 (CVSS: 7.8), that achieves root privileges from a local user on CentOS Stream 9 by exploiting a use-after-free race in the network traffic-control subsystem. AI assisted in the bug finding and exploit development.",
+        "action": "Prioritize patching Linux kernels, especially on CentOS Stream 9 systems, for CVE-2026-53264. Implement strict least privilege principles and monitor for privilege escalation attempts and unusual process behavior.",
+        "cve_ids": [
+          "CVE-2026-53264"
+        ],
+        "source_url": "https://thehackernews.com/2026/07/researcher-says-ai-helped-develop-linux.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Linux kernel, affecting CentOS Stream 9 (specific kernel versions vulnerable to CVE-2026-53264 should be identified via official advisories). The flaw is a use-after-free race in the kernel's network traffic-control subsystem.",
+        "how_to_determine_impact": "Check the operating system and kernel version (uname -r) on all Linux machines, specifically CentOS Stream 9. Consult vendor advisories for affected kernel versions.",
+        "tanium_query_hint": "Get Kernel Version from all machines where OS Platform contains 'Linux' and OS Name contains 'CentOS Stream 9'.",
+        "rapid7_query_hint": "vulnerability.cve = 'CVE-2026-53264' or asset.os.kernel.version CONTAINS 'vulnerable_version_string' AND asset.os.name = 'CentOS Stream 9'.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Over 24,000 exposed server BMCs leak password hash via decades-old flaw",
+        "tldr": "More than 24,000 internet-exposed server Baseboard Management Controllers (BMCs) are vulnerable to a decades-old flaw in their IPMI interface, which leaks authentication password hashes before login. This allows attackers to steal credentials.",
+        "action": "Immediately identify and secure all internet-exposed BMCs. Update BMC firmware to patched versions, enforce strong, unique passwords, and restrict network access to IPMI interfaces to trusted management networks only.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/over-24-000-exposed-server-bmcs-leak-password-hash-via-decades-old-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Baseboard Management Controllers (BMCs) with vulnerable IPMI implementations. This decades-old flaw suggests a wide range of legacy and potentially unmaintained BMC firmware versions.",
+        "how_to_determine_impact": "Conduct network scans for internet-exposed IPMI services (typically UDP port 623). Test for password hash disclosure vulnerabilities using publicly available tools or by attempting to retrieve hashes pre-authentication. Review BMC firmware versions against vendor advisories.",
+        "tanium_query_hint": "Get Computer Name and IP Address from all machines where (Listening Port 623 exists) AND (Application Name contains 'BMC' or 'IPMI').",
+        "rapid7_query_hint": "vulnerability.name = 'IPMI Password Hash Disclosure' or service.port=623 AND service.protocol='IPMI' AND service.status='open'.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.0 High",
         "category": "vulns"
       }
     ]
