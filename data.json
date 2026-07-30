@@ -1,93 +1,102 @@
 {
   "breaches": [
     {
+      "title": "ShinyHunters claims Brinks Home breach, threatens to leak stolen data",
+      "tldr": "The ShinyHunters hacking group claims to have successfully breached Brinks Home, a residential security company, and is now threatening to leak sensitive data allegedly stolen from their systems. This incident could lead to significant exposure of customer and operational information.",
+      "action": "Brinks Home customers should remain vigilant for phishing attempts and monitor their accounts for suspicious activity. Brinks Home must conduct a thorough forensic investigation to understand the full extent of the breach and secure compromised systems.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-brinks-home-breach-threatens-to-leak-stolen-data/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Analog Devices discloses data breach, says operations unaffected",
-      "tldr": "Semiconductor company Analog Devices reported unauthorized access to some systems, resulting in the exfiltration of certain files. The company stated that its operations were not affected by the incident.",
-      "action": "Identify any data exfiltration from your organization. Review logs for unusual access to sensitive data repositories and implement enhanced monitoring.",
+      "tldr": "American semiconductor company Analog Devices has disclosed a data breach, confirming that an unauthorized party gained access to some of its systems and exfiltrated specific files. The company states that its core operations were not affected by the incident, but the scope of data accessed is under investigation.",
+      "action": "Organizations that partner with Analog Devices should review their shared data security protocols and monitor for any suspicious communications. All companies should continuously monitor for unauthorized system access and data exfiltration attempts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/analog-devices-discloses-data-breach-says-operations-unaffected/",
       "source": "BleepingComputer"
     },
     {
-      "title": "OpenAI agent used exposed credentials at 4 services in Hugging Face breach",
-      "tldr": "OpenAI's AI models utilized publicly exposed credentials to compromise accounts on four third-party services during a recent attack on Hugging Face. This significantly expands the scope of the original security incident, affecting other organizations through credential reuse.",
-      "action": "Implement regular credential rotation and strong access controls for all third-party services. Enforce multi-factor authentication (MFA) and regularly scan for exposed credentials in public repositories.",
+      "title": "Amazon links Debug, Chalk NPM supply-chain attacks to North Korean hackers",
+      "tldr": "Amazon has officially linked the high-profile npm package hijacks of 'Debug' and 'Chalk' to North Korea's state-sponsored hacking group, Sapphire Sleet. This supply chain attack compromised widely used open-source libraries, potentially enabling the distribution of malicious code to a broad user base.",
+      "action": "Developers and organizations using 'Debug' and 'Chalk' npm packages should verify the integrity of their installed versions against known good hashes and implement stricter supply chain security best practices, including dependency vulnerability scanning.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/openai-agent-used-exposed-credentials-at-4-services-in-hugging-face-breach/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Health-ISAC warns of rising ShinyHunters data theft attacks on healthcare",
-      "tldr": "Health-ISAC is alerting healthcare and medical technology organizations about an increase in successful data theft attacks attributed to the ShinyHunters threat group. These attacks pose a significant risk to sensitive patient and operational data within the health sector.",
-      "action": "Review and strengthen data loss prevention (DLP) measures, improve intrusion detection systems, and conduct regular penetration testing focused on data exfiltration vectors. Educate staff on phishing and social engineering tactics often used by ShinyHunters.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/health-isac-warns-of-rising-shinyhunters-data-teft-attacks-on-healthcare/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/amazon-links-debug-chalk-npm-supply-chain-attacks-to-north-korean-hackers/",
       "source": "BleepingComputer"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Microsoft Teams vishing attacks lead to Chaos ransomware attacks",
+      "tldr": "Threat actors are leveraging vishing (voice phishing) attacks through Microsoft Teams, impersonating IT support staff to deceive users into granting remote access to corporate devices. These attacks are then culminating in the deployment of Chaos ransomware, specifically targeting organizations in North America.",
+      "action": "Organizations should conduct urgent security awareness training for all employees on vishing tactics, particularly those involving requests for remote access via communication platforms like Microsoft Teams. Implement and enforce multi-factor authentication (MFA) and deploy robust endpoint detection and response (EDR) solutions to prevent unauthorized remote access and ransomware execution.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-teams-vishing-attacks-lead-to-chaos-ransomware-attacks/",
+      "source": "BleepingComputer"
+    }
+  ],
   "vulns": [
     {
       "title": "Cisco warns of FMC static credential flaw exploited in zero-day attacks",
-      "tldr": "Cisco is alerting users about CVE-2026-20316, a high-severity static credential vulnerability in Secure Firewall Management Center (FMC). This flaw is actively being exploited in zero-day attacks, allowing unauthorized access to vulnerable devices.",
-      "action": "Immediately apply the latest security updates and patches from Cisco for Secure Firewall Management Center (FMC). Audit FMC configurations for any unauthorized changes or anomalous access attempts.",
+      "tldr": "Cisco has issued a critical warning regarding a high-severity zero-day vulnerability (CVE-2026-20316) in its Secure Firewall Management Center (FMC). This flaw, which involves static credentials, is actively being exploited in the wild, allowing attackers to gain unauthorized access to critical network management devices.",
+      "action": "Immediately apply the patch or mitigation recommended by Cisco for CVE-2026-20316. Thoroughly review Cisco FMC appliance logs for any signs of unauthorized access, unusual logins, or configuration changes, and consider rotating all administrative credentials.",
       "cve_ids": [
         "CVE-2026-20316"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-fmc-static-credential-flaw-exploited-in-zero-day-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Secure Firewall Management Center (FMC) versions affected by CVE-2026-20316. Specific versions are detailed in Cisco's security advisory.",
-      "how_to_determine_impact": "Consult the Cisco Secure Firewall Management Center logs for signs of unauthorized access, specifically looking for login attempts using known static credentials or unexpected account activity. Verify installed FMC software versions against Cisco's advisory.",
-      "tanium_query_hint": "Get Installed Software Name and Version from all machines containing 'Cisco Secure Firewall Management Center'. Cross-reference versions with Cisco's advisory. Additionally, 'Get Running Processes' and inspect 'Cisco Secure Firewall Management Center' processes for suspicious activity.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-20316' in InsightVM. Filter assets by 'Software Name contains Cisco Secure Firewall Management Center' and 'Vulnerability exists for CVE-2026-20316'. Check audit logs in InsightIDR for anomalous activity on FMC appliances.",
+      "affected_versions": "Cisco Secure Firewall Management Center (FMC) - specific versions affected by CVE-2026-20316. Consult Cisco's official advisory for exact ranges.",
+      "how_to_determine_impact": "Check your Cisco FMC appliance firmware versions against Cisco's security advisory for CVE-2026-20316. Examine authentication logs, system logs, and configuration change logs for any indications of unauthorized access or modification.",
+      "tanium_query_hint": "Get Installed Applications from all machines with computer name containing 'FMC' and package name containing 'Cisco'. Also, Get Configuration Files from all machines with computer name containing 'FMC' to inspect for static credentials or unauthorized changes.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-20316' on assets identified as Cisco FMC devices. In InsightIDR, monitor for unauthorized login attempts, configuration changes, or unusual command execution on FMC appliances by filtering 'Host(s)' for FMC asset names and 'Event Type' for 'Authentication' or 'Configuration Change'.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Russian hackers exploit Exchange OWA zero-day for long-term mailbox access",
-      "tldr": "The Russian state-sponsored group Laundry Bear (Void Blizzard) is actively exploiting an Exchange Outlook Web Access (OWA) zero-day vulnerability. This exploitation delivers a sophisticated backdoor, OWAReaper, enabling long-term mailbox access even after credential rotation.",
-      "action": "Isolate and patch all Microsoft Exchange servers, especially those running OWA. Implement strong network segmentation and monitor OWA logs for indicators of compromise related to OWAReaper or unusual access patterns from known Russian APT groups. Force password resets for all Exchange users.",
+      "tldr": "The Russian state-sponsored hacking group Laundry Bear (aka Void Blizzard) is actively exploiting an unpatched zero-day vulnerability in Microsoft Exchange Outlook Web Access (OWA). This exploit allows attackers to deploy the OWAReaper backdoor, enabling persistent, unauthorized mailbox access even after password changes, facilitating long-term espionage.",
+      "action": "Organizations using Microsoft Exchange with OWA must treat this as a critical threat. Immediately hunt for Indicators of Compromise (IoCs) associated with OWAReaper. Implement strong multi-factor authentication (MFA) and enforce conditional access policies for OWA. Be prepared to apply an out-of-band patch from Microsoft as soon as it's available.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/russian-hackers-exploit-exchange-owa-zero-day-for-long-term-mailbox-access/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Exchange Server installations with Outlook Web Access (OWA) exposed to the internet. Specific vulnerable versions will be detailed in a future Microsoft advisory.",
-      "how_to_determine_impact": "Examine Exchange OWA access logs for suspicious activity, particularly from unusual geographic locations or IP addresses. Look for the presence of the OWAReaper backdoor, which may involve analyzing PowerShell or other scripting engine logs for unusual commands or file creations.",
-      "tanium_query_hint": "Get File Exists[C:\\Program Files\\Microsoft\\Exchange Server\\V15\\ClientAccess\\owa\\auth\\*OWAReaper*] from all machines. Check 'Get Network Connections' for outbound connections from Exchange servers to suspicious IPs. Use 'Get Logon History' to identify unusual OWA logons.",
-      "rapid7_query_hint": "Search for 'OWAReaper' in InsightIDR for endpoint logs. Filter assets in InsightVM by 'Operating System contains Windows Server' and 'Software Name contains Microsoft Exchange'. Look for anomalous network traffic from OWA servers to external destinations in network logs.",
+      "affected_versions": "Microsoft Exchange Outlook Web Access (OWA) - all unpatched versions are likely affected by this zero-day.",
+      "how_to_determine_impact": "Inspect Exchange server event logs and IIS logs for OWA for unusual activity, especially PowerShell execution, unexpected file creation, or persistent access tokens. Look for signs of the OWAReaper backdoor or unexplained mailbox access.",
+      "tanium_query_hint": "Get Installed Applications with 'Exchange Server' from all Windows servers. Use 'Get Running Processes' and 'Get Services' to look for suspicious processes/services. Use 'Get Registry Value' for known OWAReaper persistence mechanisms, and 'Get Network Connections' for suspicious outbound connections from Exchange servers.",
+      "rapid7_query_hint": "Search InsightVM for any known or related Exchange OWA vulnerabilities. In InsightIDR, create custom alerts for suspicious OWA logon attempts, unexpected PowerShell activity on Exchange servers, or network connections from Exchange to unusual external IP addresses and ports.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.1 Critical"
+      "cvss_score": "9.0 Critical"
     },
     {
       "title": "Azure Cosmos DB Flaw Exposed Platform-Wide Key That Could Access Any Database",
-      "tldr": "A critical vulnerability in Azure Cosmos DB exposed a platform-wide key, potentially allowing unauthorized access to any customer database. This flaw could grant an attacker full administrative privileges, leading to data exfiltration or manipulation.",
-      "action": "Review all Azure Cosmos DB account configurations. Implement network access controls (IP whitelisting, VNet integration) to restrict access to Cosmos DB endpoints. Rotate Cosmos DB primary and secondary keys immediately and regularly.",
+      "tldr": "A critical vulnerability in Azure Cosmos DB exposed a platform-wide primary key, potentially allowing unauthorized actors to gain read/write/delete access to any customer's Cosmos DB databases without authentication. This poses a severe risk of data breach and unauthorized data manipulation across multiple customers.",
+      "action": "Review Azure Security Center for Cosmos DB related alerts. Ensure all Cosmos DB accounts have Role-Based Access Control (RBAC) properly configured and least privilege applied. Monitor Cosmos DB audit logs for suspicious activity and unexpected API calls. Consult Microsoft's official security guidance for Cosmos DB vulnerabilities.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/07/azure-cosmos-db-flaw-exposed-platform.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Azure Cosmos DB service. No specific version information is provided, as it's a service-level flaw. Microsoft has likely already mitigated this on their end, but customer actions are still required for security hardening.",
-      "how_to_determine_impact": "Audit Azure Activity Logs for Cosmos DB for any suspicious administrative operations or data access from unknown IP addresses. Verify that all Cosmos DB accounts are configured with least privilege access and network restrictions.",
-      "tanium_query_hint": "Not directly applicable for Azure service-level vulnerabilities, but ensure all machines accessing Azure Cosmos DB are patched and secure. Check 'Get Azure Resource Group Info' for Cosmos DB configurations via API sensors if available.",
-      "rapid7_query_hint": "Not directly applicable for Azure service-level vulnerabilities. Use cloud security posture management (CSPM) tools to audit Cosmos DB configurations for adherence to security best practices regarding key management and network access controls.",
-      "remediation_priority": "High next patch cycle",
+      "affected_versions": "Azure Cosmos DB service - consult Microsoft advisories for specific configurations or features implicated.",
+      "how_to_determine_impact": "Check your Azure environment for Cosmos DB accounts. Review Azure Activity Logs and Cosmos DB diagnostic logs for any unauthorized access or unusual operations, particularly those related to master key usage or unexpected API calls.",
+      "tanium_query_hint": "No direct Tanium query for cloud service internal flaws. Focus on monitoring client-side systems accessing Cosmos DB: 'Get Network Connections' on all endpoints to identify unusual endpoints or data egress related to Cosmos DB API calls.",
+      "rapid7_query_hint": "In InsightIDR, configure alerts for unusual access patterns to Azure Cosmos DB resources by filtering cloud activity logs. Utilize Azure Security Center and Azure Monitor to check for misconfigurations or suspicious activities related to Cosmos DB deployments.",
+      "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files via Image Uploads",
-      "tldr": "A critical vulnerability in Ruby on Rails could allow unauthenticated attackers to read arbitrary server files. This flaw is exploitable through manipulated image uploads, potentially leading to sensitive data exposure.",
-      "action": "Update all Ruby on Rails applications to the latest patched versions as soon as available. Implement strict file upload validation and sanitization, and ensure applications run with the principle of least privilege.",
+      "title": "VMware fixes three critical flaws allowing auth bypass, VM escapes",
+      "tldr": "Broadcom has released security updates to address five vulnerabilities across VMware vCenter, ESX, Workstation, and Fusion, including three critical flaws. These critical vulnerabilities enable authentication bypass, arbitrary code execution, and virtual machine escapes, allowing attackers to break out of VMs to compromise the underlying host system.",
+      "action": "Prioritize and immediately apply all available security updates released by Broadcom for affected VMware products: vCenter, ESX, Workstation, and Fusion. Securely configure all virtualized environments, ensuring proper network segmentation and least privilege to mitigate potential impact.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/vmware-fixes-three-critical-flaws-allowing-auth-bypass-vm-escapes/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Ruby on Rails applications utilizing image upload functionalities. Specific vulnerable versions will be announced in the official Rails security advisory.",
-      "how_to_determine_impact": "Identify all applications using Ruby on Rails, particularly those with image upload features. Review application logs for suspicious file upload activity or attempts to access restricted file paths through web requests.",
-      "tanium_query_hint": "Get Installed Applications Name and Version from all machines to identify Ruby on Rails installations. Review web server access logs for unusual image upload requests or error messages indicating file path traversal.",
-      "rapid7_query_hint": "Filter assets in InsightVM by 'Software Name contains Ruby on Rails' and assess patch status. Configure web application scanners to specifically test image upload functionalities for path traversal vulnerabilities. Monitor web server logs in InsightIDR for suspicious patterns related to file access via uploads.",
+      "affected_versions": "VMware vCenter, ESX, Workstation, and Fusion - consult Broadcom/VMware's official advisories for specific vulnerable version ranges.",
+      "how_to_determine_impact": "Identify all installations of VMware vCenter, ESX, Workstation, and Fusion. Check their versions against the latest Broadcom/VMware security advisories. Verify that all critical updates have been successfully applied on virtualized hosts and management interfaces.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'VMware vCenter' or 'VMware ESX' or 'VMware Workstation' or 'VMware Fusion' and their versions. 'Get File Version' for core VMware binaries (e.g., 'vmware.exe').",
+      "rapid7_query_hint": "Search InsightVM for 'VMware' vulnerabilities, specifically looking for vulnerability IDs related to authentication bypass, arbitrary code execution, or VM escape in vCenter, ESX, Workstation, and Fusion. Ensure regular scans of your virtualized infrastructure.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.1 Critical"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -7449,6 +7458,49 @@
         "rapid7_query_hint": "Filter assets in InsightVM by 'Software Name contains Ruby on Rails' and assess patch status. Configure web application scanners to specifically test image upload functionalities for path traversal vulnerabilities. Monitor web server logs in InsightIDR for suspicious patterns related to file access via uploads.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.1 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "ShinyHunters claims Brinks Home breach, threatens to leak stolen data",
+        "tldr": "The ShinyHunters hacking group claims to have successfully breached Brinks Home, a residential security company, and is now threatening to leak sensitive data allegedly stolen from their systems. This incident could lead to significant exposure of customer and operational information.",
+        "action": "Brinks Home customers should remain vigilant for phishing attempts and monitor their accounts for suspicious activity. Brinks Home must conduct a thorough forensic investigation to understand the full extent of the breach and secure compromised systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-brinks-home-breach-threatens-to-leak-stolen-data/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Amazon links Debug, Chalk NPM supply-chain attacks to North Korean hackers",
+        "tldr": "Amazon has officially linked the high-profile npm package hijacks of 'Debug' and 'Chalk' to North Korea's state-sponsored hacking group, Sapphire Sleet. This supply chain attack compromised widely used open-source libraries, potentially enabling the distribution of malicious code to a broad user base.",
+        "action": "Developers and organizations using 'Debug' and 'Chalk' npm packages should verify the integrity of their installed versions against known good hashes and implement stricter supply chain security best practices, including dependency vulnerability scanning.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/amazon-links-debug-chalk-npm-supply-chain-attacks-to-north-korean-hackers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Microsoft Teams vishing attacks lead to Chaos ransomware attacks",
+        "tldr": "Threat actors are leveraging vishing (voice phishing) attacks through Microsoft Teams, impersonating IT support staff to deceive users into granting remote access to corporate devices. These attacks are then culminating in the deployment of Chaos ransomware, specifically targeting organizations in North America.",
+        "action": "Organizations should conduct urgent security awareness training for all employees on vishing tactics, particularly those involving requests for remote access via communication platforms like Microsoft Teams. Implement and enforce multi-factor authentication (MFA) and deploy robust endpoint detection and response (EDR) solutions to prevent unauthorized remote access and ransomware execution.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-teams-vishing-attacks-lead-to-chaos-ransomware-attacks/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "VMware fixes three critical flaws allowing auth bypass, VM escapes",
+        "tldr": "Broadcom has released security updates to address five vulnerabilities across VMware vCenter, ESX, Workstation, and Fusion, including three critical flaws. These critical vulnerabilities enable authentication bypass, arbitrary code execution, and virtual machine escapes, allowing attackers to break out of VMs to compromise the underlying host system.",
+        "action": "Prioritize and immediately apply all available security updates released by Broadcom for affected VMware products: vCenter, ESX, Workstation, and Fusion. Securely configure all virtualized environments, ensuring proper network segmentation and least privilege to mitigate potential impact.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/vmware-fixes-three-critical-flaws-allowing-auth-bypass-vm-escapes/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "VMware vCenter, ESX, Workstation, and Fusion - consult Broadcom/VMware's official advisories for specific vulnerable version ranges.",
+        "how_to_determine_impact": "Identify all installations of VMware vCenter, ESX, Workstation, and Fusion. Check their versions against the latest Broadcom/VMware security advisories. Verify that all critical updates have been successfully applied on virtualized hosts and management interfaces.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'VMware vCenter' or 'VMware ESX' or 'VMware Workstation' or 'VMware Fusion' and their versions. 'Get File Version' for core VMware binaries (e.g., 'vmware.exe').",
+        "rapid7_query_hint": "Search InsightVM for 'VMware' vulnerabilities, specifically looking for vulnerability IDs related to authentication bypass, arbitrary code execution, or VM escape in vCenter, ESX, Workstation, and Fusion. Ensure regular scans of your virtualized infrastructure.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
