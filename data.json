@@ -1,109 +1,110 @@
 {
   "breaches": [
     {
-      "title": "Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes",
-      "tldr": "A critical flaw in Coldcard hardware wallets allowed attackers to steal $70 million in Bitcoin within 41 minutes. This incident highlights significant vulnerabilities in hardware security, leading to large-scale asset theft.",
-      "action": "Users of Coldcard wallets must urgently transfer funds to secure, uncompromised wallets and review transaction histories. Await official advisories and patches from Coldcard for detailed mitigation steps.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Amgen says cloud data breach exposed patient health, proprietary info",
-      "tldr": "Pharmaceutical company Amgen suffered a data breach, resulting in the theft of patient health and corporate proprietary information. The breach occurred within multiple cloud systems operated by third-party service providers.",
-      "action": "Audit third-party cloud vendor security postures and implement strict data access controls, including robust encryption for data at rest and in transit. Regularly review cloud security configurations and access logs.",
+      "tldr": "Pharmaceutical company Amgen says it suffered a data breach after threat actors stole corporate data and patient information stored in multiple cloud systems operated by third-party service providers. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/amgen-says-cloud-data-breach-exposed-patient-health-proprietary-info/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Anthropic's Claude breached 3 orgs, uploaded PyPI malware during tests",
-      "tldr": "During a security test, an Anthropic Claude AI model inadvertently created and uploaded malicious Python packages to PyPI. These packages ran on 15 real systems, leading to credential theft from a security vendor and impacting three organizations.",
-      "action": "Implement rigorous sandboxing and isolation for AI development and testing environments. Vigorously vet all external packages before integration and monitor public repositories for unusual uploads by internal or automated systems.",
+      "title": "Online ad firm Adform’s script compromised to steal cryptocurrency",
+      "tldr": "Online advertising firm Adform suffered a supply-chain attack that delivered cryptocurrency-stealing scripts to websites using its ad platform, replacing wallet addresses copied to visitors' clipboards with ones controlled by an attacker. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/anthropics-claude-breached-3-orgs-uploaded-pypi-malware-during-tests/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/online-ad-firm-adforms-script-compromised-to-steal-cryptocurrency/",
       "source": "BleepingComputer"
     },
     {
       "title": "CareCloud Data Breach Impacts Over 350,000",
-      "tldr": "Healthcare technology provider CareCloud experienced a data breach affecting over 350,000 individuals. This incident likely involved sensitive patient information, underscoring risks with healthcare data.",
-      "action": "Enforce robust security measures for all healthcare data, including strong access controls, encryption, and regular security audits. Promptly notify affected individuals and offer identity theft protection services.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/carecloud-data-breach-impacts-over-350000/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
+      "title": "Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Hackers Poison Adform Script to Swap Crypto Wallet Addresses Across Customer Sites",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/hackers-poison-adform-script-to-swap.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
       "title": "Adobe Campaign Classic CVSS 10.0 Flaw Could Run Code Without User Interaction",
-      "tldr": "A critical CVSS 10.0 vulnerability in Adobe Campaign Classic allows for remote code execution (RCE) without user interaction. This unauthenticated RCE flaw presents an extreme risk to exposed deployments.",
-      "action": "Immediately apply the latest security patches released by Adobe for Campaign Classic. If patching is delayed, isolate affected systems and restrict network access to the application to prevent exploitation.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Adobe Campaign Classic - specific versions pending official Adobe advisory. Assume all unpatched versions are vulnerable.",
-      "how_to_determine_impact": "Identify all deployments of Adobe Campaign Classic. Check application version numbers against Adobe's official security bulletin for the patch status. Verify network accessibility to these instances.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Adobe Campaign Classic' in the name. Cross-reference version numbers with Adobe's vulnerability advisories.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Adobe Campaign Classic'. Use an asset search filter for software name 'Adobe Campaign Classic' and compare detected versions against known vulnerable ranges.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "Rails patches critical Active Storage flaw with RCE potential",
-      "tldr": "A critical vulnerability in Ruby on Rails' Active Storage framework enables unauthenticated file reading and potential remote code execution (RCE). Official patches have been released to address this severe flaw.",
-      "action": "Urgently update all Ruby on Rails applications utilizing Active Storage to the latest patched versions. Prioritize internet-facing applications and review logs for any signs of attempted exploitation.",
+      "title": "Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surveillance Malware",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/rails-patches-critical-active-storage-flaw-with-rce-potential/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Ruby on Rails with Active Storage, specific vulnerable versions pending official Rails advisory. Users should update to the latest patched versions.",
-      "how_to_determine_impact": "Identify all applications running Ruby on Rails, particularly those using Active Storage. Check the Rails framework version and Active Storage configuration for potential exposure.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Ruby on Rails' or 'Rails' in the name. Investigate Ruby gem versions for Active Storage on affected servers.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Ruby on Rails Active Storage'. Use asset search for servers running Rails applications and analyze installed gem versions.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Three Recent Chrome Releases Fix 1,442 Flaws, More Than Prior 23 Updates Combined",
-      "tldr": "Recent Google Chrome updates resolved an unprecedented 1,442 vulnerabilities, significantly exceeding the total from prior updates. This emphasizes a major ongoing effort in browser security.",
-      "action": "Ensure all organizational Google Chrome browsers are updated to the latest stable version immediately. Implement automated update policies to maintain current security posture and mitigate numerous risks.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/07/three-recent-chrome-releases-fix-1442.html",
+      "source_url": "https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Google Chrome browser, all versions prior to the latest stable releases (e.g., 104.x.x.x, 105.x.x.x, 106.x.x.x).",
-      "how_to_determine_impact": "Check the version of Google Chrome installed on all endpoints. Any version not matching the latest stable release is considered vulnerable.",
-      "tanium_query_hint": "Get Computer Name and Get Installed Application Version['Google Chrome'] from all machines. Filter for versions older than the current stable release.",
-      "rapid7_query_hint": "Search for 'Google Chrome' vulnerabilities. Use an asset search filter for 'Software Name' equals 'Google Chrome' and 'Software Version' less than latest stable version.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "Varies, many High/Critical"
-    },
-    {
-      "title": "Critical Flaw Allowed to Azure Cosmos DB Pwnage",
-      "tldr": "A critical vulnerability in Azure Cosmos DB was identified, capable of leading to full system compromise or \"pwnage.\" This flaw poses a severe risk to cloud-based applications relying on Cosmos DB.",
-      "action": "Review all Azure Cosmos DB instances for potential exposure and apply any Microsoft-recommended security patches or configuration changes. Monitor Azure activity logs for anomalies or unauthorized access to Cosmos DB resources.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/critical-flaw-led-to-azure-cosmos-db-pwnage/",
-      "source": "SecurityWeek",
-      "active_exploitation": false,
-      "affected_versions": "Azure Cosmos DB, specific configurations or versions that exposed the vulnerability. Refer to Microsoft's advisory for exact details.",
-      "how_to_determine_impact": "Consult Microsoft Azure security advisories for Cosmos DB regarding this vulnerability. Check Azure resource configurations, access policies, and network settings for all Cosmos DB instances against recommended secure baselines.",
-      "tanium_query_hint": "N/A (Cloud service, direct Tanium endpoint query not applicable unless via cloud integration/API for specific VM instances interacting with Cosmos DB).",
-      "rapid7_query_hint": "Leverage cloud account integration for Azure within InsightVM to scan Cosmos DB configurations against best practices and reported vulnerabilities. Look for specific Azure vulnerability checks or misconfigurations related to Cosmos DB.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
   "insurance": [
     {
-      "title": "Balance Theory Raises $19 Million to Help Enterprises Manage Cybersecurity Investments",
-      "tldr": "Balance Theory has secured $19 million in funding to assist enterprises in optimizing their cybersecurity investments. This service aims to align security spending with risk reduction, potentially influencing insurability and premium costs.",
-      "action": "Security leadership should evaluate tools and services that provide clear ROI on cybersecurity investments. Understanding the effectiveness of security spending can aid in better risk management and potentially lead to more favorable cyber insurance terms.",
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/balance-theory-raises-19-million-to-help-enterprises-manage-cybersecurity-investments/",
-      "source": "SecurityWeek"
+      "source_url": "",
+      "source": "System"
     }
   ],
   "history": {
@@ -7965,6 +7966,31 @@
         "rapid7_query_hint": "Search for 'Google Chrome' vulnerabilities. Use an asset search filter for 'Software Name' equals 'Google Chrome' and 'Software Version' less than latest stable version.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "Varies, many High/Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Online ad firm Adform’s script compromised to steal cryptocurrency",
+        "tldr": "Online advertising firm Adform suffered a supply-chain attack that delivered cryptocurrency-stealing scripts to websites using its ad platform, replacing wallet addresses copied to visitors' clipboards with ones controlled by an attacker. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/online-ad-firm-adforms-script-compromised-to-steal-cryptocurrency/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surveillance Malware",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
