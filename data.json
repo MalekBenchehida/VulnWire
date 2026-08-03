@@ -1,112 +1,111 @@
 {
   "breaches": [
     {
+      "title": "PNLD Breach Exposes U.K. Police and Government Contact Details on Dark Web",
+      "tldr": "A cyberattack on the U.K.'s Police National Legal Database (PNLD) led to the exposure and leak of contact details for over 100,000 police officers and criminal justice professionals on the dark web by the ExfilSquad hacker group.",
+      "action": "Implement multi-factor authentication (MFA) for all personnel, review and strengthen access controls for sensitive internal databases, and provide guidance to affected individuals on identity theft protection and potential targeting.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/pnld-breach-exposes-uk-police-and.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Amgen says cloud data breach exposed patient health, proprietary info",
-      "tldr": "Pharmaceutical company Amgen says it suffered a data breach after threat actors stole corporate data and patient information stored in multiple cloud systems operated by third-party service providers. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Pharmaceutical company Amgen disclosed a data breach where threat actors stole corporate and patient health information from multiple third-party cloud systems. This compromises sensitive patient data and proprietary corporate assets.",
+      "action": "Conduct an immediate audit of all third-party cloud service providers and their security postures. Enhance monitoring for unauthorized data exfiltration from cloud environments and ensure robust encryption for all sensitive data at rest and in transit.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/amgen-says-cloud-data-breach-exposed-patient-health-proprietary-info/",
       "source": "BleepingComputer"
     },
     {
+      "title": "Brinks Home Discloses Data Breach as Hackers Leak Files",
+      "tldr": "Brinks Home has announced a data breach, confirming that hackers accessed their systems and subsequently leaked stolen files online. This incident involves unauthorized access and public exposure of sensitive corporate and potentially customer data.",
+      "action": "Activate incident response protocols, inform affected customers, and offer credit monitoring services where appropriate. Strengthen endpoint detection and response (EDR), implement network segmentation, and fortify data loss prevention (DLP) controls.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/brinks-home-discloses-data-breach-as-hackers-leak-files/",
+      "source": "SecurityWeek"
+    },
+    {
       "title": "Online ad firm Adform’s script compromised to steal cryptocurrency",
-      "tldr": "Online advertising firm Adform suffered a supply-chain attack that delivered cryptocurrency-stealing scripts to websites using its ad platform, replacing wallet addresses copied to visitors' clipboards with ones controlled by an attacker. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Online advertising firm Adform suffered a supply-chain attack where its embedded script was poisoned. Attackers injected code to swap cryptocurrency wallet addresses on customer websites, diverting funds to their control.",
+      "action": "Websites using Adform or similar third-party ad scripts should audit their implementations for integrity and unauthorized modifications. Implement strict Content Security Policies (CSPs) to whitelist trusted script sources and hashes.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/online-ad-firm-adforms-script-compromised-to-steal-cryptocurrency/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "CareCloud Data Breach Impacts Over 350,000",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/carecloud-data-breach-impacts-over-350000/",
-      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "River Bank Says Hackers Deleted Data Stolen in Ransomware Attack",
+      "tldr": "River Bank has disclosed a ransomware attack where the threat actors not only exfiltrated and encrypted data but also subsequently deleted the stolen information. This signifies a highly destructive attack with severe data loss implications beyond typical encryption.",
+      "action": "Ensure robust, immutable backups are routinely created, tested, and stored offline or in secure, segregated environments. Implement advanced Endpoint Detection and Response (EDR) and network segmentation to prevent and contain ransomware activity.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://www.securityweek.com/river-bank-says-hackers-deleted-data-stolen-in-ransomware-attack/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A critical vulnerability in the random number generator (RNG) of Coldcard hardware wallet firmware has been directly linked to an estimated $70 million Bitcoin theft. This flaw compromises the security of wallet seeds generated using affected firmware versions.",
+      "action": "Coldcard users must immediately verify if their wallet seeds were generated on specific vulnerable firmware versions. If vulnerable, funds should be promptly transferred to a new wallet generated with updated, secure firmware.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "Coldcard hardware wallet firmware (specific vulnerable versions affecting RNG, as per vendor advisory).",
+      "how_to_determine_impact": "Coldcard users should consult official vendor advisories to determine the exact vulnerable firmware ranges. This typically involves checking the firmware version active when the wallet seed was initially generated.",
+      "tanium_query_hint": "Not directly applicable as Tanium manages endpoints, not hardware wallets. Requires manual user verification of device firmware and seed generation history.",
+      "rapid7_query_hint": "Not directly applicable as Rapid7 InsightVM focuses on network-attached assets. Requires manual user verification of device firmware and seed generation history.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Hackers Poison Adform Script to Swap Crypto Wallet Addresses Across Customer Sites",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "N-able Says Attackers Take Over N-central Servers After Initial Fix Proves Incomplete",
+      "tldr": "Attackers are actively exploiting an incomplete patch for a vulnerability in N-able N-central servers, leading to successful server compromises and takeovers. This necessitates immediate application of the latest, complete security fix.",
+      "action": "Immediately apply the most recent, complete security patch provided by N-able for all N-central servers. Conduct a comprehensive forensic audit of all N-central environments for any signs of compromise, unauthorized access, or persistence.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/hackers-poison-adform-script-to-swap.html",
+      "source_url": "https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "N-able N-central servers (specific versions prior to the latest complete security patch released by N-able).",
+      "how_to_determine_impact": "Verify the installed version of N-able N-central software. Confirm the successful application of the latest, comprehensive security patch. Monitor server logs for suspicious processes, network connections, or unauthorized administrative actions.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'N-able N-central' and Version < 'latest_patched_version'. Check 'Running Processes' for suspicious executables or network connections on N-central servers.",
+      "rapid7_query_hint": "Scan assets for 'N-able N-central' software in InsightVM, filtering by vulnerable versions. Use InsightIDR to hunt for known IoCs (e.g., specific file hashes, process names, or unusual network traffic) on N-central hosts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Adobe Campaign Classic CVSS 10.0 Flaw Could Run Code Without User Interaction",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A critical vulnerability (CVSS 10.0) in Adobe Campaign Classic allows for remote code execution (RCE) without any user interaction, posing an extremely severe risk. This flaw could enable full system compromise.",
+      "action": "Prioritize and immediately apply all available security updates and patches from Adobe for Campaign Classic. Verify patch installation and conduct a thorough security assessment of affected systems post-remediation.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Adobe Campaign Classic (specific vulnerable versions, refer to official Adobe security bulletin for details).",
+      "how_to_determine_impact": "Check the exact version of Adobe Campaign Classic deployed in your environment. Consult Adobe's official security advisories for precise vulnerable versions and recommended verification steps.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'Adobe Campaign Classic' and Version < 'latest_patched_version'. Scan system configuration for unauthorized changes or suspicious files associated with the application.",
+      "rapid7_query_hint": "Search for assets with 'Adobe Campaign Classic' installed in InsightVM and filter by vulnerable versions. Monitor network and application logs in InsightIDR for any attempted exploitation patterns.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical"
     },
     {
-      "title": "Hijacked Hotel Wi-Fi Pushes Fake Updates to Deliver Surveillance Malware",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Recent SonicWall Vulnerabilities Exploited in Ransomware Attacks",
+      "tldr": "Multiple recent vulnerabilities in SonicWall products are being actively exploited by threat actors as initial access vectors for deploying ransomware. This represents a critical threat, enabling network compromise and data encryption.",
+      "action": "Immediately apply all available security patches and firmware updates for all SonicWall products. Enhance perimeter defenses with intrusion prevention systems (IPS) and advanced malware detection to block known ransomware attack patterns.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/hijacked-hotel-wi-fi-pushes-fake.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "SonicWall products (specific vulnerable firmware versions, refer to official SonicWall advisories).",
+      "how_to_determine_impact": "Verify that all SonicWall appliances are running the absolute latest firmware and security patches. Examine device logs for any indicators of compromise, unauthorized access, or unusual configuration changes.",
+      "tanium_query_hint": "Get Firewall Firmware Version from all SonicWall appliances. Ensure all instances are fully patched and configured according to vendor best practices for securing against ransomware. Look for suspicious connections.",
+      "rapid7_query_hint": "Run vulnerability scans on all SonicWall appliances using InsightVM, specifically checking for known vulnerabilities leading to ransomware. Monitor firewall logs and network traffic in InsightIDR for signs of exploitation or ransomware activity.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -7991,6 +7990,117 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-08-03": [
+      {
+        "title": "PNLD Breach Exposes U.K. Police and Government Contact Details on Dark Web",
+        "tldr": "A cyberattack on the U.K.'s Police National Legal Database (PNLD) led to the exposure and leak of contact details for over 100,000 police officers and criminal justice professionals on the dark web by the ExfilSquad hacker group.",
+        "action": "Implement multi-factor authentication (MFA) for all personnel, review and strengthen access controls for sensitive internal databases, and provide guidance to affected individuals on identity theft protection and potential targeting.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/pnld-breach-exposes-uk-police-and.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Amgen says cloud data breach exposed patient health, proprietary info",
+        "tldr": "Pharmaceutical company Amgen disclosed a data breach where threat actors stole corporate and patient health information from multiple third-party cloud systems. This compromises sensitive patient data and proprietary corporate assets.",
+        "action": "Conduct an immediate audit of all third-party cloud service providers and their security postures. Enhance monitoring for unauthorized data exfiltration from cloud environments and ensure robust encryption for all sensitive data at rest and in transit.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/amgen-says-cloud-data-breach-exposed-patient-health-proprietary-info/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Brinks Home Discloses Data Breach as Hackers Leak Files",
+        "tldr": "Brinks Home has announced a data breach, confirming that hackers accessed their systems and subsequently leaked stolen files online. This incident involves unauthorized access and public exposure of sensitive corporate and potentially customer data.",
+        "action": "Activate incident response protocols, inform affected customers, and offer credit monitoring services where appropriate. Strengthen endpoint detection and response (EDR), implement network segmentation, and fortify data loss prevention (DLP) controls.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/brinks-home-discloses-data-breach-as-hackers-leak-files/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Online ad firm Adform’s script compromised to steal cryptocurrency",
+        "tldr": "Online advertising firm Adform suffered a supply-chain attack where its embedded script was poisoned. Attackers injected code to swap cryptocurrency wallet addresses on customer websites, diverting funds to their control.",
+        "action": "Websites using Adform or similar third-party ad scripts should audit their implementations for integrity and unauthorized modifications. Implement strict Content Security Policies (CSPs) to whitelist trusted script sources and hashes.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/online-ad-firm-adforms-script-compromised-to-steal-cryptocurrency/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "River Bank Says Hackers Deleted Data Stolen in Ransomware Attack",
+        "tldr": "River Bank has disclosed a ransomware attack where the threat actors not only exfiltrated and encrypted data but also subsequently deleted the stolen information. This signifies a highly destructive attack with severe data loss implications beyond typical encryption.",
+        "action": "Ensure robust, immutable backups are routinely created, tested, and stored offline or in secure, segregated environments. Implement advanced Endpoint Detection and Response (EDR) and network segmentation to prevent and contain ransomware activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/river-bank-says-hackers-deleted-data-stolen-in-ransomware-attack/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Coldcard Hardware Wallet Flaw Linked to $70 Million Bitcoin Theft in 41 Minutes",
+        "tldr": "A critical vulnerability in the random number generator (RNG) of Coldcard hardware wallet firmware has been directly linked to an estimated $70 million Bitcoin theft. This flaw compromises the security of wallet seeds generated using affected firmware versions.",
+        "action": "Coldcard users must immediately verify if their wallet seeds were generated on specific vulnerable firmware versions. If vulnerable, funds should be promptly transferred to a new wallet generated with updated, secure firmware.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/coldcard-hardware-wallet-flaw-linked-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Coldcard hardware wallet firmware (specific vulnerable versions affecting RNG, as per vendor advisory).",
+        "how_to_determine_impact": "Coldcard users should consult official vendor advisories to determine the exact vulnerable firmware ranges. This typically involves checking the firmware version active when the wallet seed was initially generated.",
+        "tanium_query_hint": "Not directly applicable as Tanium manages endpoints, not hardware wallets. Requires manual user verification of device firmware and seed generation history.",
+        "rapid7_query_hint": "Not directly applicable as Rapid7 InsightVM focuses on network-attached assets. Requires manual user verification of device firmware and seed generation history.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "N-able Says Attackers Take Over N-central Servers After Initial Fix Proves Incomplete",
+        "tldr": "Attackers are actively exploiting an incomplete patch for a vulnerability in N-able N-central servers, leading to successful server compromises and takeovers. This necessitates immediate application of the latest, complete security fix.",
+        "action": "Immediately apply the most recent, complete security patch provided by N-able for all N-central servers. Conduct a comprehensive forensic audit of all N-central environments for any signs of compromise, unauthorized access, or persistence.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "N-able N-central servers (specific versions prior to the latest complete security patch released by N-able).",
+        "how_to_determine_impact": "Verify the installed version of N-able N-central software. Confirm the successful application of the latest, comprehensive security patch. Monitor server logs for suspicious processes, network connections, or unauthorized administrative actions.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'N-able N-central' and Version < 'latest_patched_version'. Check 'Running Processes' for suspicious executables or network connections on N-central servers.",
+        "rapid7_query_hint": "Scan assets for 'N-able N-central' software in InsightVM, filtering by vulnerable versions. Use InsightIDR to hunt for known IoCs (e.g., specific file hashes, process names, or unusual network traffic) on N-central hosts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Adobe Campaign Classic CVSS 10.0 Flaw Could Run Code Without User Interaction",
+        "tldr": "A critical vulnerability (CVSS 10.0) in Adobe Campaign Classic allows for remote code execution (RCE) without any user interaction, posing an extremely severe risk. This flaw could enable full system compromise.",
+        "action": "Prioritize and immediately apply all available security updates and patches from Adobe for Campaign Classic. Verify patch installation and conduct a thorough security assessment of affected systems post-remediation.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/adobe-campaign-classic-cvss-100-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Adobe Campaign Classic (specific vulnerable versions, refer to official Adobe security bulletin for details).",
+        "how_to_determine_impact": "Check the exact version of Adobe Campaign Classic deployed in your environment. Consult Adobe's official security advisories for precise vulnerable versions and recommended verification steps.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'Adobe Campaign Classic' and Version < 'latest_patched_version'. Scan system configuration for unauthorized changes or suspicious files associated with the application.",
+        "rapid7_query_hint": "Search for assets with 'Adobe Campaign Classic' installed in InsightVM and filter by vulnerable versions. Monitor network and application logs in InsightIDR for any attempted exploitation patterns.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Recent SonicWall Vulnerabilities Exploited in Ransomware Attacks",
+        "tldr": "Multiple recent vulnerabilities in SonicWall products are being actively exploited by threat actors as initial access vectors for deploying ransomware. This represents a critical threat, enabling network compromise and data encryption.",
+        "action": "Immediately apply all available security patches and firmware updates for all SonicWall products. Enhance perimeter defenses with intrusion prevention systems (IPS) and advanced malware detection to block known ransomware attack patterns.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "SonicWall products (specific vulnerable firmware versions, refer to official SonicWall advisories).",
+        "how_to_determine_impact": "Verify that all SonicWall appliances are running the absolute latest firmware and security patches. Examine device logs for any indicators of compromise, unauthorized access, or unusual configuration changes.",
+        "tanium_query_hint": "Get Firewall Firmware Version from all SonicWall appliances. Ensure all instances are fully patched and configured according to vendor best practices for securing against ransomware. Look for suspicious connections.",
+        "rapid7_query_hint": "Run vulnerability scans on all SonicWall appliances using InsightVM, specifically checking for known vulnerabilities leading to ransomware. Monitor firewall logs and network traffic in InsightIDR for signs of exploitation or ransomware activity.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
