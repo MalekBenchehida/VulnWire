@@ -1,85 +1,99 @@
 {
   "breaches": [
     {
+      "title": "Greatness PhaaS Adds Device Code Phishing to Bypass MFA and Steal Tokens",
+      "tldr": "The Greatness phishing-as-a-service (PhaaS) platform has evolved to incorporate device-code phishing. This technique allows attackers to bypass multi-factor authentication and steal session tokens, specifically targeting Microsoft 365 accounts, leading to account compromise.",
+      "action": "Implement enhanced phishing detection and user education against device-code phishing. Enforce conditional access policies for Microsoft 365. Monitor for unusual authentication flows or token usage anomalies.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/greatness-phaas-adds-device-code.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "New Pass-ta-key attacks let malware hijack Google-synced passkeys",
+      "tldr": "Security researchers have identified three distinct attack methods, dubbed 'Pass-ta-key,' which enable malware on compromised Windows devices to leverage Google Password Manager's synced passkeys. This allows attackers to hijack passkey-protected accounts, bypass user verification, and extract private keys.",
+      "action": "Ensure endpoints are protected against malware. Educate users on the risks of device compromise impacting passkey security. Implement strong endpoint detection and response (EDR) solutions and monitor for passkey-related malicious activity.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-pass-ta-key-attacks-let-malware-hijack-google-synced-passkeys/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Hotel Wi-Fi attacks use custom malware to breach Microsoft 365 accounts",
-      "tldr": "Russian threat actor Midnight Blizzard (APT29) is using custom malware in a global campaign targeting hospitality Wi-Fi networks. The attacks aim to breach Microsoft 365 accounts, indicating a targeted espionage effort.",
-      "action": "Organizations should review Microsoft 365 access logs for suspicious activity originating from hotel Wi-Fi networks and enforce strong MFA policies. Consider implementing network segmentation for guest Wi-Fi and educating traveling employees on secure network practices.",
+      "tldr": "Microsoft has attributed a global campaign targeting hospitality Wi-Fi networks to the Russian state-sponsored threat actor Midnight Blizzard (APT29). This group is using custom malware to compromise Microsoft 365 accounts, likely for espionage and persistent access.",
+      "action": "Advise users against connecting to unverified public Wi-Fi networks for corporate access. Implement strict network segmentation and egress filtering. Enhance monitoring for unusual login patterns, especially from potentially compromised geographies, and deploy advanced threat protection for Microsoft 365.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hotel-wi-fi-attacks-use-custom-malware-to-breach-microsoft-365-accounts/",
       "source": "BleepingComputer"
     },
     {
-      "title": "ExfilSquad hackers leak info of over 100,000 UK police officers, staff",
-      "tldr": "The Police National Legal Database (PNLD) in the U.K. suffered a cyberattack by ExfilSquad, resulting in the compromise and leak of contact data for more than 100,000 police officers and criminal justice professionals. This leak exposes sensitive personal information.",
-      "action": "Affected individuals should be notified immediately, and advised to be vigilant against targeted phishing and social engineering attempts. Organizations should enhance monitoring for unauthorized access and review data handling policies for sensitive databases.",
+      "title": "77 Open VSX extensions found harvesting developer info",
+      "tldr": "A significant number (77) of extensions on the Open VSX marketplace have been found impersonating legitimate developer tools. These malicious extensions covertly transmit sensitive information about the systems and development environments where they are installed, posing a supply chain risk.",
+      "action": "Audit all installed Open VSX extensions for legitimacy. Advise developers to verify the authenticity and reputation of extensions before installation. Implement software supply chain security practices to vet third-party tools and components.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/exfilsquad-hackers-leak-info-of-over-100-000-uk-police-officers-staff/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/77-open-vsx-extensions-found-harvesting-developer-info/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "CISA Adds Exploited N-able N-central Flaw to KEV After Customer Compromises",
-      "tldr": "CISA has added an actively exploited authentication bypass vulnerability (CVE-2026-18577) in N-able N-central to its KEV catalog. The flaw affects both hosted and on-premises servers and is being exploited in the wild, leading to customer compromises and unauthorized access.",
-      "action": "Immediately apply available patches or mitigation steps provided by N-able. Isolate affected N-central servers from the network until remediation is complete and perform a thorough compromise assessment.",
-      "cve_ids": [
-        "CVE-2026-18577"
-      ],
-      "source_url": "https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "N-able N-central servers (both hosted and on-premises). Refer to official N-able security advisories for specific vulnerable versions and patch information.",
-      "how_to_determine_impact": "Check N-able N-central server versions against official N-able security advisories. Look for signs of unauthorized access, unusual administrative activity, or unexpected remote connections from N-central servers or managed endpoints.",
-      "tanium_query_hint": "Get Installed Applications containing \"N-able N-central\". For network presence, use \"Get Open Ports showing 443\" or \"Get Listening Ports showing 443\" on known N-central server IPs. Review recent \"Process Hashes\" or \"DNS Lookups\" for suspicious activity.",
-      "rapid7_query_hint": "Search for Vulnerability ID 'CVE-2026-18577' in InsightVM. Use an asset query for installed software containing 'N-able N-central' to identify potential targets. Monitor InsightIDR logs for authentication anomalies on N-central servers.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "New cPanel Critical Flaw Could Let Hosting Customers Run SQL as Database Root",
-      "tldr": "A newly discovered critical flaw in cPanel could allow hosting customers to escalate privileges and execute arbitrary SQL commands as the database root. This poses a severe risk to shared hosting environments, enabling full control over customer databases.",
-      "action": "Monitor for official cPanel security updates and apply patches immediately upon release. Restrict unnecessary privileges for hosting customers and implement robust monitoring for unusual database activity or privilege escalation attempts.",
+      "tldr": "A newly discovered critical vulnerability in cPanel could allow an authenticated hosting customer to achieve database root privileges through SQL injection. This could lead to a complete compromise of the database server and potentially other systems hosted on the server.",
+      "action": "Immediately apply the latest security updates and patches for cPanel once released by the vendor. Review cPanel configurations and database access logs for any anomalous activity or unauthorized SQL commands.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Specific vulnerable cPanel versions are not detailed in the report, but implies recent versions. Check official cPanel advisories for affected versions.",
-      "how_to_determine_impact": "Check cPanel server versions against official cPanel security advisories. Review database logs for any suspicious SQL command execution by customer accounts or any unauthorized root-level database operations.",
-      "tanium_query_hint": "Get Installed Applications containing \"cPanel\". Review \"Running Processes\" for any unexpected root-level SQL processes or unauthorized database connections from customer accounts.",
-      "rapid7_query_hint": "Use asset search filters for installed software 'cPanel' to identify servers. Monitor for unusual database activity patterns or privilege escalation alerts within InsightIDR.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
-    },
-    {
-      "title": "TP-Link Omada ZTP Vulnerabilities Chain Into Full Network Takeover",
-      "tldr": "Multiple vulnerabilities in TP-Link Omada Zero-Touch Provisioning (ZTP) can be chained together to achieve a full network takeover. This is a critical risk for organizations using Omada networking gear, potentially allowing attackers complete control over network infrastructure.",
-      "action": "Consult TP-Link's official security advisories for patches or mitigation steps for Omada ZTP. Isolate Omada ZTP deployments from public internet if possible and implement strict network segmentation to limit the blast radius.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/tp-link-omada-ztp-vulnerabilities-chain-into-full-network-takeover/",
-      "source": "SecurityWeek",
-      "active_exploitation": false,
-      "affected_versions": "TP-Link Omada devices with Zero-Touch Provisioning (ZTP) enabled. Specific vulnerable firmware versions require checking TP-Link's official security bulletins.",
-      "how_to_determine_impact": "Identify all TP-Link Omada devices in the network, particularly those utilizing ZTP. Cross-reference their firmware versions against TP-Link's security bulletins for known vulnerabilities. Review network configurations for ZTP exposure.",
-      "tanium_query_hint": "Get Network Interfaces and filter by known TP-Link MAC addresses or Omada device types. Utilize network discovery sensors to identify Omada devices and their firmware versions. Check open ports for ZTP services.",
-      "rapid7_query_hint": "Scan networks for TP-Link Omada devices and identify exposed ZTP management interfaces. Use asset inventory to track Omada device types and firmware versions. Look for vulnerability detections related to Omada ZTP.",
+      "affected_versions": "cPanel & WHM (specific vulnerable versions not provided, refer to cPanel's official advisory when released)",
+      "how_to_determine_impact": "Identify all systems running cPanel & WHM. Check the installed version against the vendor's security advisories. Monitor database server logs for unexpected SQL commands or privilege escalation attempts originating from cPanel user accounts.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'cPanel' contains 'cPanel'. Look for 'Get Running Processes' that show unusual database interactions or root-level SQL processes.",
+      "rapid7_query_hint": "Vulnerability.title CONTAINS 'cPanel Critical Flaw' AND Vulnerability.severity >= 'High'. Asset.software.name CONTAINS 'cPanel'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical"
+      "cvss_score": "9.8 Critical (Estimated, based on root privilege escalation capability)"
     },
     {
-      "title": "Gemini Agent-to-Agent Attack Method Exposed Secrets, Enabled Pull Request Tampering",
-      "tldr": "A novel \"agent-to-agent\" attack method against Gemini AI models has been demonstrated, capable of exposing sensitive secrets and enabling tampering with pull requests. This highlights a critical flaw in AI model interaction security, allowing unauthorized data access and integrity compromise.",
-      "action": "Organizations using Gemini or similar multi-agent AI systems should review inter-agent communication protocols and implement robust input/output validation. Enhance access controls to prevent unauthorized data exposure and tampering within AI agent interactions.",
+      "title": "CISA Adds Exploited N-able N-central Flaw to KEV After Customer Compromises",
+      "tldr": "CISA has issued an alert and added an N-able N-central vulnerability to its Known Exploited Vulnerabilities (KEV) catalog. This action follows confirmed customer compromises, indicating active exploitation of the flaw in the wild, posing an immediate threat to managed service environments.",
+      "action": "Prioritize and immediately apply all available patches or mitigations for N-able N-central. Conduct a thorough forensic investigation for signs of compromise, including unauthorized access, data exfiltration, or persistence mechanisms.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/gemini-agent-to-agent-attack-exposed-secrets-enabled-pull-request-tampering/",
+      "source_url": "https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "N-able N-central (specific vulnerable versions not provided, refer to N-able's official advisory and CISA KEV for details)",
+      "how_to_determine_impact": "Identify all N-able N-central deployments. Verify current software versions. Check system logs, network traffic, and N-central audit trails for any Indicators of Compromise (IOCs) such as unusual process execution, remote connections, or configuration changes.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'N-able N-central' contains 'N-able N-central'. Investigate 'Get Network Connections' and 'Get Running Processes' for suspicious activity on N-able servers.",
+      "rapid7_query_hint": "Vulnerability.title CONTAINS 'N-able N-central' AND Vulnerability.tags CONTAINS 'CISA KEV'. Asset.software.name CONTAINS 'N-able N-central'",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated, based on active exploitation and KEV listing)"
+    },
+    {
+      "title": "TP-Link patches Omada ZTP flaws allowing hackers to breach networks",
+      "tldr": "TP-Link has released patches for 15 vulnerabilities impacting the Zero-Touch Provisioning (ZTP) mechanism of its Omada network devices. These flaws, when chained, could lead to remote code execution (RCE) and full network takeover, enabling attackers to breach and control managed networks.",
+      "action": "Immediately apply all available security patches and firmware updates for TP-Link Omada devices, including Omada SDN Controllers. After patching, review network logs and configurations for any signs of unauthorized access or suspicious ZTP activity.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/tp-link-patches-omada-ztp-flaws-allowing-hackers-to-breach-networks/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "TP-Link Omada SDN Controllers and associated devices utilizing ZTP (specific versions not provided, refer to TP-Link's official security advisory)",
+      "how_to_determine_impact": "Identify all TP-Link Omada SDN Controllers and connected devices. Check the firmware and software versions against the latest TP-Link security advisories. Look for anomalous ZTP provisioning events or unauthorized access attempts within controller logs.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'TP-Link Omada'. Check 'Get Network Connections' and 'Get Process CommandLine' on Omada controllers for unusual activity.",
+      "rapid7_query_hint": "Vulnerability.title CONTAINS 'TP-Link Omada ZTP' AND Asset.vendor CONTAINS 'TP-Link'. Asset.software.name CONTAINS 'Omada SDN Controller'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical (Estimated, based on RCE and full network takeover potential)"
+    },
+    {
+      "title": "Decades-Old BMC Vulnerability Exposes Thousands of Data Centers to Attacks",
+      "tldr": "A long-standing vulnerability in Baseboard Management Controllers (BMCs), potentially decades old, has been identified. This flaw exposes thousands of data centers globally to attacks, allowing for remote access and control of critical server hardware, bypassing operating system security.",
+      "action": "Identify all systems utilizing BMCs and determine if they are running vulnerable firmware. Apply vendor-provided patches or firmware updates for affected BMCs immediately. Isolate BMC management networks and enforce strict access controls.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/decades-old-bmc-vulnerability-exposes-thousands-of-data-centers-to-attacks/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Gemini AI models, or potentially other multi-agent AI systems with similar interaction architectures. Specific versions or configurations are not detailed in the report.",
-      "how_to_determine_impact": "Identify all deployments utilizing Gemini or other AI models in an agent-to-agent communication setup. Review their security configurations, data flow between agents, and logging for anomalous behavior or unauthorized data access.",
-      "tanium_query_hint": "Get Running Processes for AI agent instances. Inspect log files for unusual inter-process communication, unauthorized data access patterns, or indications of tampering with external repositories (e.g., GitHub).",
-      "rapid7_query_hint": "Monitor API calls and network traffic between AI agents for anomalous behavior. Look for specific vulnerability findings related to AI model interaction in security scans and review audit logs for unexpected pull request modifications.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
+      "affected_versions": "Various Baseboard Management Controller (BMC) firmware from multiple vendors (specific versions and vendors not provided, refer to detailed vulnerability report when available)",
+      "how_to_determine_impact": "Inventory all servers and devices equipped with BMCs. Determine the BMC vendor and firmware version. Consult vendor security advisories for patches related to decades-old vulnerabilities in BMCs. Check BMC network accessibility and logs for suspicious activity.",
+      "tanium_query_hint": "Get Hardware Information from all machines and filter for BMC details. Use 'Get Network Connections' to identify any unexpected BMC network exposure or traffic.",
+      "rapid7_query_hint": "Vulnerability.title CONTAINS 'BMC Vulnerability' AND Asset.hardware.type CONTAINS 'BMC'. Asset.network_service.port IN (623, 22, 443) AND Asset.network_service.protocol IN ('ipmi', 'ssh', 'https') for BMC interfaces.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, based on remote control of server hardware and widespread exposure)"
     }
   ],
   "insurance": [],
@@ -8334,6 +8348,65 @@
         "rapid7_query_hint": "Monitor API calls and network traffic between AI agents for anomalous behavior. Look for specific vulnerability findings related to AI model interaction in security scans and review audit logs for unexpected pull request modifications.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Greatness PhaaS Adds Device Code Phishing to Bypass MFA and Steal Tokens",
+        "tldr": "The Greatness phishing-as-a-service (PhaaS) platform has evolved to incorporate device-code phishing. This technique allows attackers to bypass multi-factor authentication and steal session tokens, specifically targeting Microsoft 365 accounts, leading to account compromise.",
+        "action": "Implement enhanced phishing detection and user education against device-code phishing. Enforce conditional access policies for Microsoft 365. Monitor for unusual authentication flows or token usage anomalies.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/greatness-phaas-adds-device-code.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "New Pass-ta-key attacks let malware hijack Google-synced passkeys",
+        "tldr": "Security researchers have identified three distinct attack methods, dubbed 'Pass-ta-key,' which enable malware on compromised Windows devices to leverage Google Password Manager's synced passkeys. This allows attackers to hijack passkey-protected accounts, bypass user verification, and extract private keys.",
+        "action": "Ensure endpoints are protected against malware. Educate users on the risks of device compromise impacting passkey security. Implement strong endpoint detection and response (EDR) solutions and monitor for passkey-related malicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-pass-ta-key-attacks-let-malware-hijack-google-synced-passkeys/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "77 Open VSX extensions found harvesting developer info",
+        "tldr": "A significant number (77) of extensions on the Open VSX marketplace have been found impersonating legitimate developer tools. These malicious extensions covertly transmit sensitive information about the systems and development environments where they are installed, posing a supply chain risk.",
+        "action": "Audit all installed Open VSX extensions for legitimacy. Advise developers to verify the authenticity and reputation of extensions before installation. Implement software supply chain security practices to vet third-party tools and components.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/77-open-vsx-extensions-found-harvesting-developer-info/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "TP-Link patches Omada ZTP flaws allowing hackers to breach networks",
+        "tldr": "TP-Link has released patches for 15 vulnerabilities impacting the Zero-Touch Provisioning (ZTP) mechanism of its Omada network devices. These flaws, when chained, could lead to remote code execution (RCE) and full network takeover, enabling attackers to breach and control managed networks.",
+        "action": "Immediately apply all available security patches and firmware updates for TP-Link Omada devices, including Omada SDN Controllers. After patching, review network logs and configurations for any signs of unauthorized access or suspicious ZTP activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/tp-link-patches-omada-ztp-flaws-allowing-hackers-to-breach-networks/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "TP-Link Omada SDN Controllers and associated devices utilizing ZTP (specific versions not provided, refer to TP-Link's official security advisory)",
+        "how_to_determine_impact": "Identify all TP-Link Omada SDN Controllers and connected devices. Check the firmware and software versions against the latest TP-Link security advisories. Look for anomalous ZTP provisioning events or unauthorized access attempts within controller logs.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'TP-Link Omada'. Check 'Get Network Connections' and 'Get Process CommandLine' on Omada controllers for unusual activity.",
+        "rapid7_query_hint": "Vulnerability.title CONTAINS 'TP-Link Omada ZTP' AND Asset.vendor CONTAINS 'TP-Link'. Asset.software.name CONTAINS 'Omada SDN Controller'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical (Estimated, based on RCE and full network takeover potential)",
+        "category": "vulns"
+      },
+      {
+        "title": "Decades-Old BMC Vulnerability Exposes Thousands of Data Centers to Attacks",
+        "tldr": "A long-standing vulnerability in Baseboard Management Controllers (BMCs), potentially decades old, has been identified. This flaw exposes thousands of data centers globally to attacks, allowing for remote access and control of critical server hardware, bypassing operating system security.",
+        "action": "Identify all systems utilizing BMCs and determine if they are running vulnerable firmware. Apply vendor-provided patches or firmware updates for affected BMCs immediately. Isolate BMC management networks and enforce strict access controls.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/decades-old-bmc-vulnerability-exposes-thousands-of-data-centers-to-attacks/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Various Baseboard Management Controller (BMC) firmware from multiple vendors (specific versions and vendors not provided, refer to detailed vulnerability report when available)",
+        "how_to_determine_impact": "Inventory all servers and devices equipped with BMCs. Determine the BMC vendor and firmware version. Consult vendor security advisories for patches related to decades-old vulnerabilities in BMCs. Check BMC network accessibility and logs for suspicious activity.",
+        "tanium_query_hint": "Get Hardware Information from all machines and filter for BMC details. Use 'Get Network Connections' to identify any unexpected BMC network exposure or traffic.",
+        "rapid7_query_hint": "Vulnerability.title CONTAINS 'BMC Vulnerability' AND Asset.hardware.type CONTAINS 'BMC'. Asset.network_service.port IN (623, 22, 443) AND Asset.network_service.protocol IN ('ipmi', 'ssh', 'https') for BMC interfaces.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, based on remote control of server hardware and widespread exposure)",
         "category": "vulns"
       }
     ]
