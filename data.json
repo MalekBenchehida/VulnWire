@@ -1,110 +1,85 @@
 {
   "breaches": [
     {
-      "title": "ExfilSquad hackers leak info of over 100,000 UK police officers, staff",
-      "tldr": "The 'ExfilSquad' hacking group has leaked contact data belonging to over 100,000 UK police officers and criminal justice professionals. This sensitive data was compromised during a cyberattack on the U.K.'s Police National Legal Database (PNLD).",
-      "action": "Notify all affected individuals immediately and advise them to monitor for phishing attempts and potential identity theft. Conduct a thorough forensic investigation into the PNLD breach to identify root causes and implement enhanced security measures for sensitive personnel data.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/exfilsquad-hackers-leak-info-of-over-100-000-uk-police-officers-staff/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Hotel Wi-Fi attacks use custom malware to breach Microsoft 365 accounts",
-      "tldr": "The Russian state-sponsored threat actor Midnight Blizzard (APT29) is conducting a global campaign leveraging custom malware on hotel Wi-Fi networks to breach Microsoft 365 accounts. This enables unauthorized access to corporate and individual M365 environments for espionage or further compromise.",
-      "action": "Advise employees using public Wi-Fi, especially when traveling, to connect via a trusted VPN. Implement strong multi-factor authentication (MFA) for all Microsoft 365 accounts and monitor M365 logs for unusual login patterns or access from suspicious locations.",
+      "tldr": "Russian threat actor Midnight Blizzard (APT29) is using custom malware in a global campaign targeting hospitality Wi-Fi networks. The attacks aim to breach Microsoft 365 accounts, indicating a targeted espionage effort.",
+      "action": "Organizations should review Microsoft 365 access logs for suspicious activity originating from hotel Wi-Fi networks and enforce strong MFA policies. Consider implementing network segmentation for guest Wi-Fi and educating traveling employees on secure network practices.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hotel-wi-fi-attacks-use-custom-malware-to-breach-microsoft-365-accounts/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Fake Roblox Xeno script launcher pushes infostealer, RAT malware",
-      "tldr": "Fake installers for the 'Xeno Executor' Roblox script launcher are actively distributing infostealer and Remote Access Trojan (RAT) malware to unsuspecting players. This compromises affected systems, allowing attackers to steal sensitive information and gain remote control.",
-      "action": "Educate users, particularly gamers, about the risks of downloading unofficial software or game modifications from untrusted sources. Implement application whitelisting and robust endpoint detection and response (EDR) solutions to prevent the execution of unauthorized software and scan systems for infostealers and RATs.",
+      "title": "ExfilSquad hackers leak info of over 100,000 UK police officers, staff",
+      "tldr": "The Police National Legal Database (PNLD) in the U.K. suffered a cyberattack by ExfilSquad, resulting in the compromise and leak of contact data for more than 100,000 police officers and criminal justice professionals. This leak exposes sensitive personal information.",
+      "action": "Affected individuals should be notified immediately, and advised to be vigilant against targeted phishing and social engineering attempts. Organizations should enhance monitoring for unauthorized access and review data handling policies for sensitive databases.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fake-roblox-xeno-script-launcher-pushes-infostealer-rat-malware/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/exfilsquad-hackers-leak-info-of-over-100-000-uk-police-officers-staff/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "150,000 Impacted by Madera Community Hospital Data Breach",
-      "tldr": "Madera Community Hospital has disclosed a data breach affecting 150,000 individuals. The incident likely involved the compromise of sensitive patient and personal information, raising significant privacy and security concerns for those impacted.",
-      "action": "Ensure all affected individuals are notified immediately and offered credit monitoring and identity theft protection services. The hospital must conduct a thorough forensic investigation to determine the cause and full scope of the breach, and implement remediation to prevent future incidents. Review and update incident response plans.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/150000-impacted-by-madera-community-hospital-data-breach/",
-      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "INC Ransomware Emerges as Dominant Actor Exploiting SonicWall SMA 1000 Flaws",
-      "tldr": "The INC ransomware group has become a dominant threat actor by actively exploiting unpatched vulnerabilities in SonicWall SMA 1000 appliances. This exploitation allows them to gain initial network access, deploy ransomware, and extort victims by encrypting data and threatening its leak.",
-      "action": "Immediately apply the latest security patches and firmware updates to all SonicWall SMA 1000 appliances. Implement robust network segmentation and enforce multi-factor authentication (MFA) for all remote access. Monitor logs for suspicious activity originating from SMA 1000 devices and conduct a threat hunt for indicators of compromise.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/inc-ransomware-emerges-as-dominant.html",
-      "source": "The Hacker News"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "N-able warns of N-central auth bypass flaw exploited in attacks",
-      "tldr": "N-able has issued a critical warning regarding an actively exploited authentication bypass vulnerability, CVE-2026-18577, affecting both hosted and on-premises N-central servers. Attackers are leveraging this flaw to compromise customer systems, necessitating urgent patching to prevent unauthorized access and control.",
-      "action": "Immediately apply the vendor-provided security patch for N-able N-central (CVE-2026-18577). Conduct a comprehensive incident response investigation for any signs of compromise, including unauthorized access or activity. Isolate unpatched systems until remediation is complete.",
+      "title": "CISA Adds Exploited N-able N-central Flaw to KEV After Customer Compromises",
+      "tldr": "CISA has added an actively exploited authentication bypass vulnerability (CVE-2026-18577) in N-able N-central to its KEV catalog. The flaw affects both hosted and on-premises servers and is being exploited in the wild, leading to customer compromises and unauthorized access.",
+      "action": "Immediately apply available patches or mitigation steps provided by N-able. Isolate affected N-central servers from the network until remediation is complete and perform a thorough compromise assessment.",
       "cve_ids": [
         "CVE-2026-18577"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/n-able-warns-of-n-central-auth-bypass-flaw-exploited-in-attacks/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "N-able N-central servers, both hosted and on-premises, specifically vulnerable to CVE-2026-18577. Consult N-able's official security advisory for precise version details.",
-      "how_to_determine_impact": "Verify the version of N-able N-central installations against the official N-able security bulletin for CVE-2026-18577. Review N-central access logs and system logs for any unauthorized login attempts, unusual administrative actions, or indications of compromise.",
-      "tanium_query_hint": "Get Installed Applications contains 'N-able N-central' and Get Registry Value 'HKLM\\SOFTWARE\\N-able\\N-central\\Version' (or similar path) less than 'patched_version'; Look for 'N-central' process activity and network connections from unusual sources.",
-      "rapid7_query_hint": "Vulnerability: 'CVE-2026-18577' OR 'N-able N-central authentication bypass'; Software: 'N-able N-central' AND 'Version: < vulnerable_version>'; Log Search: 'N-central logs' AND ('unauthorized access' OR 'authentication bypass').",
+      "affected_versions": "N-able N-central servers (both hosted and on-premises). Refer to official N-able security advisories for specific vulnerable versions and patch information.",
+      "how_to_determine_impact": "Check N-able N-central server versions against official N-able security advisories. Look for signs of unauthorized access, unusual administrative activity, or unexpected remote connections from N-central servers or managed endpoints.",
+      "tanium_query_hint": "Get Installed Applications containing \"N-able N-central\". For network presence, use \"Get Open Ports showing 443\" or \"Get Listening Ports showing 443\" on known N-central server IPs. Review recent \"Process Hashes\" or \"DNS Lookups\" for suspicious activity.",
+      "rapid7_query_hint": "Search for Vulnerability ID 'CVE-2026-18577' in InsightVM. Use an asset query for installed software containing 'N-able N-central' to identify potential targets. Monitor InsightIDR logs for authentication anomalies on N-central servers.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "New cPanel Critical Flaw Could Let Hosting Customers Run SQL as Database Root",
-      "tldr": "A new critical vulnerability in cPanel allows hosting customers to execute arbitrary SQL commands as the database root user. This severe flaw could lead to full compromise of databases and potentially the entire hosting environment, impacting numerous websites and services hosted on affected servers.",
-      "action": "Immediately apply available patches or workarounds for cPanel to mitigate this critical SQL injection vulnerability. Restrict database permissions where possible and implement strong monitoring of cPanel logs for any suspicious database activity, especially root-level actions from customer accounts.",
+      "tldr": "A newly discovered critical flaw in cPanel could allow hosting customers to escalate privileges and execute arbitrary SQL commands as the database root. This poses a severe risk to shared hosting environments, enabling full control over customer databases.",
+      "action": "Monitor for official cPanel security updates and apply patches immediately upon release. Restrict unnecessary privileges for hosting customers and implement robust monitoring for unusual database activity or privilege escalation attempts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/new-cpanel-critical-flaw-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "All versions of cPanel/WHM affected by this new critical flaw. Administrators should consult cPanel's official advisories for specific vulnerable version ranges and updates.",
-      "how_to_determine_impact": "Check cPanel/WHM version numbers against the vendor's security advisories for this specific critical flaw. Monitor database access logs for execution of SQL commands by non-root cPanel users that exhibit elevated privileges or unusual activity patterns.",
-      "tanium_query_hint": "Get Installed Applications contains 'cPanel' or 'WHM' and Get File Version 'path to cPanel binary' less than 'patched version'; Get Process Activity with CommandLine 'mysql' or 'psql' by cPanel user accounts.",
-      "rapid7_query_hint": "Vulnerability: 'cPanel critical flaw' or 'SQL injection cPanel'; Software: 'cPanel' AND 'Version: < vulnerable_version>'; Event Source: 'Database Logs' AND 'User: root' AND 'Source: cPanel user' for anomalous activity.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Massive ChainDrop npm supply-chain attack infects hundreds of packages",
-      "tldr": "A self-propagating malware named 'ChainDrop' has launched a massive supply-chain attack, compromising more than 1,300 npm packages with a combined 2 billion monthly downloads. This introduces malicious code into popular JavaScript components, posing a severe risk to countless applications globally.",
-      "action": "Immediately audit all npm dependencies for known compromised packages associated with ChainDrop. Update to secure versions, remove affected packages, and conduct a full code review for any injected malicious code. Implement strict software supply chain security measures, including integrity checks and dependency scanning, and monitor for suspicious npm activity.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/massive-chaindrop-npm-supply-chain-attack-infects-hundreds-of-packages/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Over 1,300 npm packages compromised by the 'ChainDrop' malware. Developers should refer to updated advisories for a list of specific affected package names and versions.",
-      "how_to_determine_impact": "Use `npm audit` or third-party dependency scanners (e.g., Snyk, Dependabot) to identify compromised packages in your `package-lock.json` or `yarn.lock`. Inspect `node_modules` directories for unexpected files or code modifications, and review build logs for unusual scripts.",
-      "tanium_query_hint": "Get Installed Applications contains 'npm' AND Get Files '**/node_modules/**/package.json' where Content contains (known malicious indicators of ChainDrop); Get Running Processes with suspicious npm scripts.",
-      "rapid7_query_hint": "Vulnerability: 'ChainDrop npm supply chain attack'; Software: 'npm' AND 'PackageName: [known_malicious_packages]'; Threat Intelligence: 'ChainDrop'.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical"
+      "affected_versions": "Specific vulnerable cPanel versions are not detailed in the report, but implies recent versions. Check official cPanel advisories for affected versions.",
+      "how_to_determine_impact": "Check cPanel server versions against official cPanel security advisories. Review database logs for any suspicious SQL command execution by customer accounts or any unauthorized root-level database operations.",
+      "tanium_query_hint": "Get Installed Applications containing \"cPanel\". Review \"Running Processes\" for any unexpected root-level SQL processes or unauthorized database connections from customer accounts.",
+      "rapid7_query_hint": "Use asset search filters for installed software 'cPanel' to identify servers. Monitor for unusual database activity patterns or privilege escalation alerts within InsightIDR.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical"
     },
     {
       "title": "TP-Link Omada ZTP Vulnerabilities Chain Into Full Network Takeover",
-      "tldr": "Multiple vulnerabilities have been discovered in TP-Link Omada Zero-Touch Provisioning (ZTP) that can be chained together to achieve a full network takeover. This critical flaw allows attackers to compromise the network infrastructure managed by Omada, affecting numerous organizations relying on these devices.",
-      "action": "Immediately update all TP-Link Omada controllers and associated devices to the latest firmware versions that address the ZTP vulnerabilities. Review network configurations for Omada environments, implement network segmentation for management interfaces, and disable ZTP if it is not actively used. Monitor Omada controller logs for suspicious activity or unauthorized configuration changes.",
+      "tldr": "Multiple vulnerabilities in TP-Link Omada Zero-Touch Provisioning (ZTP) can be chained together to achieve a full network takeover. This is a critical risk for organizations using Omada networking gear, potentially allowing attackers complete control over network infrastructure.",
+      "action": "Consult TP-Link's official security advisories for patches or mitigation steps for Omada ZTP. Isolate Omada ZTP deployments from public internet if possible and implement strict network segmentation to limit the blast radius.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/tp-link-omada-ztp-vulnerabilities-chain-into-full-network-takeover/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "TP-Link Omada controllers and associated devices affected by ZTP vulnerabilities. Specific vulnerable versions would require consulting TP-Link's official security advisories.",
-      "how_to_determine_impact": "Check TP-Link Omada controller and device firmware versions against official security advisories for ZTP vulnerabilities. Inspect Omada network configurations for insecure ZTP settings or default credentials. Monitor network infrastructure logs for unauthorized access or configuration changes initiated via Omada.",
-      "tanium_query_hint": "Get Installed Applications contains 'TP-Link Omada Controller' and Get File Version 'path to Omada software' less than 'patched version'; Network sensors for suspicious traffic to/from Omada devices on management ports.",
-      "rapid7_query_hint": "Vulnerability: 'TP-Link Omada ZTP vulnerabilities' or 'network takeover Omada'; Software: 'TP-Link Omada' AND 'Firmware Version: < vulnerable_version>'; Network Insight: 'unusual configuration changes on network devices managed by Omada'.",
+      "affected_versions": "TP-Link Omada devices with Zero-Touch Provisioning (ZTP) enabled. Specific vulnerable firmware versions require checking TP-Link's official security bulletins.",
+      "how_to_determine_impact": "Identify all TP-Link Omada devices in the network, particularly those utilizing ZTP. Cross-reference their firmware versions against TP-Link's security bulletins for known vulnerabilities. Review network configurations for ZTP exposure.",
+      "tanium_query_hint": "Get Network Interfaces and filter by known TP-Link MAC addresses or Omada device types. Utilize network discovery sensors to identify Omada devices and their firmware versions. Check open ports for ZTP services.",
+      "rapid7_query_hint": "Scan networks for TP-Link Omada devices and identify exposed ZTP management interfaces. Use asset inventory to track Omada device types and firmware versions. Look for vulnerability detections related to Omada ZTP.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.5 Critical"
+    },
+    {
+      "title": "Gemini Agent-to-Agent Attack Method Exposed Secrets, Enabled Pull Request Tampering",
+      "tldr": "A novel \"agent-to-agent\" attack method against Gemini AI models has been demonstrated, capable of exposing sensitive secrets and enabling tampering with pull requests. This highlights a critical flaw in AI model interaction security, allowing unauthorized data access and integrity compromise.",
+      "action": "Organizations using Gemini or similar multi-agent AI systems should review inter-agent communication protocols and implement robust input/output validation. Enhance access controls to prevent unauthorized data exposure and tampering within AI agent interactions.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/gemini-agent-to-agent-attack-exposed-secrets-enabled-pull-request-tampering/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "Gemini AI models, or potentially other multi-agent AI systems with similar interaction architectures. Specific versions or configurations are not detailed in the report.",
+      "how_to_determine_impact": "Identify all deployments utilizing Gemini or other AI models in an agent-to-agent communication setup. Review their security configurations, data flow between agents, and logging for anomalous behavior or unauthorized data access.",
+      "tanium_query_hint": "Get Running Processes for AI agent instances. Inspect log files for unusual inter-process communication, unauthorized data access patterns, or indications of tampering with external repositories (e.g., GitHub).",
+      "rapid7_query_hint": "Monitor API calls and network traffic between AI agents for anomalous behavior. Look for specific vulnerability findings related to AI model interaction in security scans and review audit logs for unexpected pull request modifications.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.8 High"
     }
   ],
   "insurance": [],
@@ -8325,6 +8300,40 @@
         "rapid7_query_hint": "Vulnerability: 'TP-Link Omada ZTP vulnerabilities' or 'network takeover Omada'; Software: 'TP-Link Omada' AND 'Firmware Version: < vulnerable_version>'; Network Insight: 'unusual configuration changes on network devices managed by Omada'.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA Adds Exploited N-able N-central Flaw to KEV After Customer Compromises",
+        "tldr": "CISA has added an actively exploited authentication bypass vulnerability (CVE-2026-18577) in N-able N-central to its KEV catalog. The flaw affects both hosted and on-premises servers and is being exploited in the wild, leading to customer compromises and unauthorized access.",
+        "action": "Immediately apply available patches or mitigation steps provided by N-able. Isolate affected N-central servers from the network until remediation is complete and perform a thorough compromise assessment.",
+        "cve_ids": [
+          "CVE-2026-18577"
+        ],
+        "source_url": "https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "N-able N-central servers (both hosted and on-premises). Refer to official N-able security advisories for specific vulnerable versions and patch information.",
+        "how_to_determine_impact": "Check N-able N-central server versions against official N-able security advisories. Look for signs of unauthorized access, unusual administrative activity, or unexpected remote connections from N-central servers or managed endpoints.",
+        "tanium_query_hint": "Get Installed Applications containing \"N-able N-central\". For network presence, use \"Get Open Ports showing 443\" or \"Get Listening Ports showing 443\" on known N-central server IPs. Review recent \"Process Hashes\" or \"DNS Lookups\" for suspicious activity.",
+        "rapid7_query_hint": "Search for Vulnerability ID 'CVE-2026-18577' in InsightVM. Use an asset query for installed software containing 'N-able N-central' to identify potential targets. Monitor InsightIDR logs for authentication anomalies on N-central servers.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Gemini Agent-to-Agent Attack Method Exposed Secrets, Enabled Pull Request Tampering",
+        "tldr": "A novel \"agent-to-agent\" attack method against Gemini AI models has been demonstrated, capable of exposing sensitive secrets and enabling tampering with pull requests. This highlights a critical flaw in AI model interaction security, allowing unauthorized data access and integrity compromise.",
+        "action": "Organizations using Gemini or similar multi-agent AI systems should review inter-agent communication protocols and implement robust input/output validation. Enhance access controls to prevent unauthorized data exposure and tampering within AI agent interactions.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/gemini-agent-to-agent-attack-exposed-secrets-enabled-pull-request-tampering/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Gemini AI models, or potentially other multi-agent AI systems with similar interaction architectures. Specific versions or configurations are not detailed in the report.",
+        "how_to_determine_impact": "Identify all deployments utilizing Gemini or other AI models in an agent-to-agent communication setup. Review their security configurations, data flow between agents, and logging for anomalous behavior or unauthorized data access.",
+        "tanium_query_hint": "Get Running Processes for AI agent instances. Inspect log files for unusual inter-process communication, unauthorized data access patterns, or indications of tampering with external repositories (e.g., GitHub).",
+        "rapid7_query_hint": "Monitor API calls and network traffic between AI agents for anomalous behavior. Look for specific vulnerability findings related to AI model interaction in security scans and review audit logs for unexpected pull request modifications.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High",
         "category": "vulns"
       }
     ]
