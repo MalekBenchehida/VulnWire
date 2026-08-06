@@ -1,99 +1,108 @@
 {
   "breaches": [
     {
-      "title": "Poison Claude Sells Discounted Claude Access While Its Operator Sees Every Customer Prompt",
-      "tldr": "A service called \"Poison Claude\" offers discounted access to Claude AI, but its operator logs all customer prompts. This exposes sensitive user data and intellectual property to an untrusted third party.",
-      "action": "Warn users about unofficial AI access points. Review and block access to unauthorized third-party AI interfaces, and educate users about the risks of entering sensitive data into untrusted AI services.",
+      "title": "Swiss government SharePoint breach compromised 200 accounts",
+      "tldr": "Switzerland's federal IT office reported a breach of its Microsoft SharePoint servers. Attackers exploited vulnerabilities to compromise approximately 200 accounts, potentially leading to unauthorized data access and data exfiltration.",
+      "action": "Immediately review SharePoint server logs for unusual access patterns. Force password resets for all affected accounts and implement multi-factor authentication. Apply all available security updates and patches for SharePoint servers without delay.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/poison-claude-sells-discounted-claude.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Leaked n8n API Tokens Exposed Live Instances to Credential Theft",
-      "tldr": "Leaked n8n API tokens have compromised live instances of the workflow automation platform. This directly leads to potential credential theft and unauthorized access to integrated systems and sensitive data.",
-      "action": "Immediately revoke all n8n API tokens, rotate credentials for all integrated services, and conduct a thorough audit of n8n instance logs for any unauthorized activity or data access.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/leaked-n8n-api-tokens-exposed-live.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/",
+      "source": "BleepingComputer"
     },
     {
       "title": "Canadian pleads guilty to Snowflake cloud data-theft attacks",
-      "tldr": "A Canadian man pleaded guilty to accessing company accounts at cloud storage provider Snowflake and stealing data from at least 165 organizations. This scheme aimed to extort millions of dollars from victims, confirming significant data theft from numerous entities.",
-      "action": "Organizations using Snowflake should immediately implement all recommended security best practices, including strong MFA, network segmentation, and continuous monitoring for unusual access patterns. Audit past Snowflake access logs for any unauthorized activity.",
+      "tldr": "A Canadian individual pleaded guilty to accessing company accounts at cloud storage provider Snowflake. The scheme involved stealing data from at least 165 organizations with the intent to extort millions of dollars from victims.",
+      "action": "Organizations using Snowflake should review access logs for suspicious activity, enforce strong, unique credentials, and implement multi-factor authentication (MFA) on all accounts. Audit existing user permissions and roles for least privilege.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/canadian-pleads-guilty-to-snowflake-cloud-data-theft-attacks/",
       "source": "BleepingComputer"
     },
     {
-      "title": "311,000 Impacted by Brown Health Medical Group-MA Data Breach",
-      "tldr": "Brown Health Medical Group-MA experienced a data breach impacting 311,000 individuals. This incident suggests the exposure of sensitive personal health information (PHI) and requires immediate attention.",
-      "action": "Affected individuals must be notified immediately. Organizations should review their data protection policies, access controls, and incident response plans, especially for healthcare data, and conduct a forensic investigation.",
+      "title": "CryptoJS Weak RNG Behind $5.7 Million in Drains Affects Five Crypto Wallet Apps",
+      "tldr": "A critical weakness in the random number generator (RNG) used by the popular CryptoJS library has enabled attackers to drain $5.7 million. Five cryptocurrency wallet applications were impacted, as the predictable RNG allowed for the compromise of private keys.",
+      "action": "Users of crypto wallet applications identified as leveraging vulnerable CryptoJS versions should immediately transfer all assets to a new, securely generated wallet. Developers utilizing CryptoJS should update to a patched version or migrate to a cryptographically secure alternative for RNG functions.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/311000-impacted-by-brown-health-medical-group-ma-data-breach/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/08/cryptojs-weak-rng-behind-57-million-in.html",
+      "source": "The Hacker News"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Hedge fund cyberattacks tied to BlackFile-linked UNC6671 extortion group",
+      "tldr": "A recent wave of cyberattacks targeting hedge funds, private-equity firms, and other financial organizations has been linked to UNC6671, an extortion group reportedly associated with the BlackFile ransomware actors. This indicates a heightened threat of data exfiltration followed by encryption or direct extortion.",
+      "action": "Financial organizations must enhance their detection and prevention capabilities for known BlackFile/UNC6671 Tactics, Techniques, and Procedures (TTPs). Strengthen network segmentation, enforce robust backup strategies, and conduct tabletop exercises for ransomware and extortion scenarios.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Ransom Cartel ransomware creator sentenced to 16 years in prison",
+      "tldr": "Maksim Silnikau, identified as the creator and administrator of the Ransom Cartel ransomware operation, was sentenced to 16 years in prison. His criminal activities included ransomware attacks against at least 18 companies worldwide.",
+      "action": "While this news pertains to law enforcement action, it underscores the persistent threat of ransomware. Organizations should ensure robust ransomware defenses are in place, including regular backups, network segmentation, strong endpoint protection, and incident response planning.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/ransom-cartel-ransomware-creator-sentenced-to-16-years-in-prison/",
+      "source": "BleepingComputer"
+    }
+  ],
   "vulns": [
     {
-      "title": "Veeam, Terraform MCP, Django Patch Critical Flaws, Led by CVSS 10.0 Cross-Tenant Bug",
-      "tldr": "Veeam, Terraform MCP, and Django have released patches for critical vulnerabilities, including a CVSS 10.0 cross-tenant bug. This indicates severe potential for remote compromise and unauthorized access across different tenants.",
-      "action": "Immediately apply all available security patches for Veeam, Terraform MCP, and Django installations. Prioritize these updates, especially for the CVSS 10.0 vulnerability, and verify successful deployment.",
+      "title": "Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs",
+      "tldr": "Cisco has released patches for 12 vulnerabilities affecting its SD-WAN and IOS XE products, three of which are rated with a critical CVSS score of 9.8. These high-severity flaws could allow unauthenticated remote attackers to execute arbitrary code or gain elevated privileges on affected devices.",
+      "action": "Immediately apply all available Cisco security updates for affected SD-WAN and IOS XE devices. Prioritize patching systems exposed to the internet or managing critical infrastructure.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/veeam-terraform-mcp-django-patch.html",
+      "source_url": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Veeam, Terraform MCP, Django (Consult official vendor advisories for specific vulnerable versions and patch levels for CVE-XXXX-XXXX and the CVSS 10.0 bug.)",
-      "how_to_determine_impact": "Identify all installations of Veeam Backup & Replication, Terraform Cloud/Enterprise, and Django applications. Verify current software versions against vendor security advisories. Review system logs for signs of unauthorized access or activity.",
-      "tanium_query_hint": "Get Installed Applications from all machines with ('Veeam' or 'Terraform' or 'Django'); Get Software Version[Name equals 'Veeam Backup & Replication']",
-      "rapid7_query_hint": "Search for Vulnerability ID 'Veeam', 'Terraform MCP', or 'Django' related to recent critical patches; Use asset search filters for 'Software Name' containing these products.",
+      "affected_versions": "Cisco SD-WAN and IOS XE (specific versions not provided in feed, refer to Cisco advisories for details)",
+      "how_to_determine_impact": "Consult Cisco's official security advisories for a complete list of affected product models and software versions. Verify installed versions on all Cisco SD-WAN and IOS XE devices across your environment.",
+      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name starts with 'Cisco SD-WAN' or Application Name starts with 'Cisco IOS XE') then check reported versions against Cisco advisories.",
+      "rapid7_query_hint": "In InsightVM, search for vulnerabilities affecting 'Cisco SD-WAN' or 'Cisco IOS XE' and filter by CVSS score '9.8'. Use an asset search to identify relevant devices.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Hackers run khunt post-exploitation toolkit from Oracle database",
-      "tldr": "Hackers exploited a SQL injection vulnerability to install and run the 'khunt' post-exploitation toolkit directly within an Oracle database. This allowed for a broader breach of the corporate network and persistent access.",
-      "action": "Review all applications interacting with Oracle databases for SQL injection vulnerabilities and apply patches. Implement strong input validation and parameterized queries. Monitor Oracle database activity for unusual command execution or process creation.",
+      "title": "Hackers Start Exploiting Recent JetBrains TeamCity Vulnerability",
+      "tldr": "A recently disclosed critical vulnerability in JetBrains TeamCity is now being actively exploited by attackers in the wild. This flaw can lead to remote code execution or unauthorized access, allowing threat actors to compromise build environments and potentially sensitive codebases.",
+      "action": "Immediately identify and patch all JetBrains TeamCity instances to the latest secure version. If patching is not immediately feasible, isolate TeamCity servers from public networks and implement strict access controls. Monitor logs for any indicators of compromise.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-run-khunt-post-exploitation-toolkit-from-oracle-database/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Oracle database (specific versions not provided, depends on underlying SQL Injection vulnerability. Consult Oracle and application vendor advisories.)",
-      "how_to_determine_impact": "Perform thorough security audits on all applications interacting with Oracle databases to identify SQL Injection vulnerabilities. Monitor Oracle database servers for unusual processes ('khunt' or other unknown binaries), network connections, or unauthorized activity in audit logs.",
-      "tanium_query_hint": "Get Running Processes contains 'khunt' on Oracle database servers; Get File Hash for suspicious binaries in Oracle directories; Audit Oracle database logs for unusual commands.",
-      "rapid7_query_hint": "Search Vulnerability ID for 'SQL Injection' on Oracle assets; Use InsightAgent to scan Oracle database servers for file hashes or process names associated with 'khunt'. Monitor database activity logs in InsightIDR.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated based on active SQLi leading to post-exploitation toolkit deployment)"
-    },
-    {
-      "title": "CISA warns of hackers exploiting Langflow, N-central, Apache Tomcat flaws",
-      "tldr": "CISA has issued an alert warning federal agencies to mitigate actively exploited vulnerabilities in IBM Langflow, N-central, and Apache Tomcat. This emphasizes the urgent need for immediate patching due to ongoing exploitation in the wild.",
-      "action": "Immediately apply all available security patches for IBM Langflow, N-central, and Apache Tomcat installations. Prioritize these updates given the active exploitation and CISA warning, and conduct a thorough scan for compromise.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-langflow-n-central-apache-tomcat-flaws/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "IBM Langflow, N-central, Apache Tomcat (Consult CISA KEV and vendor advisories for specific CVEs and vulnerable versions.)",
-      "how_to_determine_impact": "Identify all instances of IBM Langflow, N-central, and Apache Tomcat. Cross-reference installed versions with CISA's Known Exploited Vulnerabilities (KEV) catalog and vendor advisories. Review application and system logs for indicators of compromise.",
-      "tanium_query_hint": "Get Installed Applications from all machines with ('Langflow' or 'N-central' or 'Apache Tomcat'); Get Running Processes where (Name contains 'tomcat' or 'n-central').",
-      "rapid7_query_hint": "Search Vulnerability ID for 'CISA KEV' and 'Langflow', 'N-central', or 'Apache Tomcat' related CVEs; Use InsightVM's 'Vulnerability Check' results for these products.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated based on CISA KEV inclusion)"
-    },
-    {
-      "title": "Over 400 NPM Packages Infected in ChainDrop Supply Chain Attack",
-      "tldr": "The \"ChainDrop\" supply chain attack has compromised over 400 npm packages. This indicates widespread infection and potential for malicious code distribution through popular open-source dependencies, posing a severe risk to development pipelines.",
-      "action": "Audit all npm package dependencies for known malicious packages associated with the \"ChainDrop\" attack. Implement strict supply chain security measures and software composition analysis (SCA) tools to detect and remediate compromised dependencies.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/over-400-npm-packages-infected-in-chaindrop-supply-chain-attack/",
+      "source_url": "https://www.securityweek.com/hackers-start-exploiting-recent-jetbrains-teamcity-vulnerability/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Over 400 npm packages (Consult official security advisories and supply chain security vendors for a definitive list of compromised packages under the 'ChainDrop' attack.)",
-      "how_to_determine_impact": "Utilize Software Composition Analysis (SCA) tools to scan all project dependencies for the affected 'ChainDrop' npm packages. Review package-lock.json or yarn.lock files for suspicious entries. Monitor build systems and production environments for anomalous network traffic or file modifications.",
-      "tanium_query_hint": "Get Files with Pattern '**/node_modules/**/*.js' for known malicious patterns; Get Process Network Connections from build agents or application servers for unusual outbound traffic related to npm dependencies.",
-      "rapid7_query_hint": "Integrate SCA tools with your CI/CD pipeline and scan results into InsightVM. Use Asset Software filters for 'npm' and look for known malicious package names or versions. Monitor network traffic in InsightIDR for C2 communications.",
+      "affected_versions": "JetBrains TeamCity (specific versions not provided in feed, refer to JetBrains advisories for details)",
+      "how_to_determine_impact": "Verify the version of all JetBrains TeamCity installations against official JetBrains security advisories. Check server logs for unauthorized access attempts or suspicious process execution indicative of compromise.",
+      "tanium_query_hint": "Get Running Processes from all machines with (Process Name contains 'TeamCity') AND Get Installed Applications from all machines with (Application Name contains 'JetBrains TeamCity'). Collect version information for comparison.",
+      "rapid7_query_hint": "In InsightVM, search for vulnerabilities affecting 'JetBrains TeamCity' and filter by 'exploitable' or 'active exploitation'. Use asset search to target servers running TeamCity.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical (Estimated based on widespread supply chain attack)"
+      "cvss_score": "Critical (Estimate - likely 9.0+ due to active exploitation)"
+    },
+    {
+      "title": "Attackers Compile khunt Inside Oracle to Turn SQL Injection Into Windows SYSTEM Access",
+      "tldr": "Attackers are leveraging a SQL injection vulnerability within an application that interacts with an Oracle database. This vulnerability allows them to compile and execute a post-exploitation toolkit named 'khunt' directly from within the Oracle database, ultimately achieving Windows SYSTEM-level access on the underlying host operating system.",
+      "action": "Conduct a comprehensive security audit of all applications interacting with Oracle databases for SQL injection vulnerabilities. Ensure Oracle databases are hardened according to best practices, with no unnecessary privileges. Implement stringent monitoring for unusual processes or activities originating from the Oracle database process, and apply all available security patches for Oracle and the host OS.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Applications vulnerable to SQL injection connecting to Oracle databases; specific Oracle database configurations facilitating SYSTEM access (details not specified in feed)",
+      "how_to_determine_impact": "Perform code reviews and penetration testing for SQL injection vulnerabilities in all applications that connect to Oracle databases. Audit Oracle database configurations for insecure settings, excessive privileges, or any unauthorized stored procedures or executables. Monitor server processes for 'khunt' or other suspicious executables.",
+      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Oracle Database') AND Get Running Processes from all machines with (Process Name contains 'khunt' or known malicious filenames).",
+      "rapid7_query_hint": "In InsightVM, search for 'SQL Injection' vulnerabilities in web application scan results. For InsightIDR, configure alerts for unusual process execution or file creation on servers hosting Oracle databases, particularly those originating from the Oracle user context.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical (Estimate - likely 9.0+ due to SQLi leading to SYSTEM access)"
+    },
+    {
+      "title": "New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts",
+      "tldr": "A newly discovered vulnerability, dubbed 'Zapscape,' affects KVM (Kernel-based Virtual Machine) and allows privileged L1 guest code to escape to the underlying Linux host. This hypervisor escape flaw enables a malicious virtual machine to compromise the integrity and confidentiality of the entire hypervisor environment.",
+      "action": "Monitor for official security advisories and patches from your Linux distribution vendors regarding the 'Zapscape' KVM flaw. Apply kernel and KVM package updates as soon as they become available. Implement strict guest isolation policies and ensure KVM hosts run minimal services and are hardened.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "KVM on Linux hosts; specific kernel versions or KVM packages (details not specified in feed, refer to vendor advisories)",
+      "how_to_determine_impact": "Verify KVM versions and the Linux kernel version on all hypervisor hosts against vendor security advisories once they are released. Ensure that host operating systems are kept up-to-date with all security patches.",
+      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'KVM' or 'QEMU') AND Get Kernel Version from all machines with (Operating System equals 'Linux').",
+      "rapid7_query_hint": "In InsightVM, search for 'KVM' or 'Hypervisor Escape' vulnerabilities, filtering by assets identified as Linux hypervisor hosts. Monitor for unusual activity or new processes on KVM hosts.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "High/Critical (Estimate - likely 9.0+ due to guest-to-host escape)"
     }
   ],
   "insurance": [],
@@ -8627,6 +8636,117 @@
         "rapid7_query_hint": "Integrate SCA tools with your CI/CD pipeline and scan results into InsightVM. Use Asset Software filters for 'npm' and look for known malicious package names or versions. Monitor network traffic in InsightIDR for C2 communications.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.5 Critical (Estimated based on widespread supply chain attack)",
+        "category": "vulns"
+      }
+    ],
+    "2026-08-06": [
+      {
+        "title": "Swiss government SharePoint breach compromised 200 accounts",
+        "tldr": "Switzerland's federal IT office reported a breach of its Microsoft SharePoint servers. Attackers exploited vulnerabilities to compromise approximately 200 accounts, potentially leading to unauthorized data access and data exfiltration.",
+        "action": "Immediately review SharePoint server logs for unusual access patterns. Force password resets for all affected accounts and implement multi-factor authentication. Apply all available security updates and patches for SharePoint servers without delay.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Canadian pleads guilty to Snowflake cloud data-theft attacks",
+        "tldr": "A Canadian individual pleaded guilty to accessing company accounts at cloud storage provider Snowflake. The scheme involved stealing data from at least 165 organizations with the intent to extort millions of dollars from victims.",
+        "action": "Organizations using Snowflake should review access logs for suspicious activity, enforce strong, unique credentials, and implement multi-factor authentication (MFA) on all accounts. Audit existing user permissions and roles for least privilege.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/canadian-pleads-guilty-to-snowflake-cloud-data-theft-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "CryptoJS Weak RNG Behind $5.7 Million in Drains Affects Five Crypto Wallet Apps",
+        "tldr": "A critical weakness in the random number generator (RNG) used by the popular CryptoJS library has enabled attackers to drain $5.7 million. Five cryptocurrency wallet applications were impacted, as the predictable RNG allowed for the compromise of private keys.",
+        "action": "Users of crypto wallet applications identified as leveraging vulnerable CryptoJS versions should immediately transfer all assets to a new, securely generated wallet. Developers utilizing CryptoJS should update to a patched version or migrate to a cryptographically secure alternative for RNG functions.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/cryptojs-weak-rng-behind-57-million-in.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hedge fund cyberattacks tied to BlackFile-linked UNC6671 extortion group",
+        "tldr": "A recent wave of cyberattacks targeting hedge funds, private-equity firms, and other financial organizations has been linked to UNC6671, an extortion group reportedly associated with the BlackFile ransomware actors. This indicates a heightened threat of data exfiltration followed by encryption or direct extortion.",
+        "action": "Financial organizations must enhance their detection and prevention capabilities for known BlackFile/UNC6671 Tactics, Techniques, and Procedures (TTPs). Strengthen network segmentation, enforce robust backup strategies, and conduct tabletop exercises for ransomware and extortion scenarios.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Ransom Cartel ransomware creator sentenced to 16 years in prison",
+        "tldr": "Maksim Silnikau, identified as the creator and administrator of the Ransom Cartel ransomware operation, was sentenced to 16 years in prison. His criminal activities included ransomware attacks against at least 18 companies worldwide.",
+        "action": "While this news pertains to law enforcement action, it underscores the persistent threat of ransomware. Organizations should ensure robust ransomware defenses are in place, including regular backups, network segmentation, strong endpoint protection, and incident response planning.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ransom-cartel-ransomware-creator-sentenced-to-16-years-in-prison/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs",
+        "tldr": "Cisco has released patches for 12 vulnerabilities affecting its SD-WAN and IOS XE products, three of which are rated with a critical CVSS score of 9.8. These high-severity flaws could allow unauthenticated remote attackers to execute arbitrary code or gain elevated privileges on affected devices.",
+        "action": "Immediately apply all available Cisco security updates for affected SD-WAN and IOS XE devices. Prioritize patching systems exposed to the internet or managing critical infrastructure.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Cisco SD-WAN and IOS XE (specific versions not provided in feed, refer to Cisco advisories for details)",
+        "how_to_determine_impact": "Consult Cisco's official security advisories for a complete list of affected product models and software versions. Verify installed versions on all Cisco SD-WAN and IOS XE devices across your environment.",
+        "tanium_query_hint": "Get Installed Applications from all machines with (Application Name starts with 'Cisco SD-WAN' or Application Name starts with 'Cisco IOS XE') then check reported versions against Cisco advisories.",
+        "rapid7_query_hint": "In InsightVM, search for vulnerabilities affecting 'Cisco SD-WAN' or 'Cisco IOS XE' and filter by CVSS score '9.8'. Use an asset search to identify relevant devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Start Exploiting Recent JetBrains TeamCity Vulnerability",
+        "tldr": "A recently disclosed critical vulnerability in JetBrains TeamCity is now being actively exploited by attackers in the wild. This flaw can lead to remote code execution or unauthorized access, allowing threat actors to compromise build environments and potentially sensitive codebases.",
+        "action": "Immediately identify and patch all JetBrains TeamCity instances to the latest secure version. If patching is not immediately feasible, isolate TeamCity servers from public networks and implement strict access controls. Monitor logs for any indicators of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/hackers-start-exploiting-recent-jetbrains-teamcity-vulnerability/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "JetBrains TeamCity (specific versions not provided in feed, refer to JetBrains advisories for details)",
+        "how_to_determine_impact": "Verify the version of all JetBrains TeamCity installations against official JetBrains security advisories. Check server logs for unauthorized access attempts or suspicious process execution indicative of compromise.",
+        "tanium_query_hint": "Get Running Processes from all machines with (Process Name contains 'TeamCity') AND Get Installed Applications from all machines with (Application Name contains 'JetBrains TeamCity'). Collect version information for comparison.",
+        "rapid7_query_hint": "In InsightVM, search for vulnerabilities affecting 'JetBrains TeamCity' and filter by 'exploitable' or 'active exploitation'. Use asset search to target servers running TeamCity.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (Estimate - likely 9.0+ due to active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Compile khunt Inside Oracle to Turn SQL Injection Into Windows SYSTEM Access",
+        "tldr": "Attackers are leveraging a SQL injection vulnerability within an application that interacts with an Oracle database. This vulnerability allows them to compile and execute a post-exploitation toolkit named 'khunt' directly from within the Oracle database, ultimately achieving Windows SYSTEM-level access on the underlying host operating system.",
+        "action": "Conduct a comprehensive security audit of all applications interacting with Oracle databases for SQL injection vulnerabilities. Ensure Oracle databases are hardened according to best practices, with no unnecessary privileges. Implement stringent monitoring for unusual processes or activities originating from the Oracle database process, and apply all available security patches for Oracle and the host OS.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Applications vulnerable to SQL injection connecting to Oracle databases; specific Oracle database configurations facilitating SYSTEM access (details not specified in feed)",
+        "how_to_determine_impact": "Perform code reviews and penetration testing for SQL injection vulnerabilities in all applications that connect to Oracle databases. Audit Oracle database configurations for insecure settings, excessive privileges, or any unauthorized stored procedures or executables. Monitor server processes for 'khunt' or other suspicious executables.",
+        "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Oracle Database') AND Get Running Processes from all machines with (Process Name contains 'khunt' or known malicious filenames).",
+        "rapid7_query_hint": "In InsightVM, search for 'SQL Injection' vulnerabilities in web application scan results. For InsightIDR, configure alerts for unusual process execution or file creation on servers hosting Oracle databases, particularly those originating from the Oracle user context.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (Estimate - likely 9.0+ due to SQLi leading to SYSTEM access)",
+        "category": "vulns"
+      },
+      {
+        "title": "New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts",
+        "tldr": "A newly discovered vulnerability, dubbed 'Zapscape,' affects KVM (Kernel-based Virtual Machine) and allows privileged L1 guest code to escape to the underlying Linux host. This hypervisor escape flaw enables a malicious virtual machine to compromise the integrity and confidentiality of the entire hypervisor environment.",
+        "action": "Monitor for official security advisories and patches from your Linux distribution vendors regarding the 'Zapscape' KVM flaw. Apply kernel and KVM package updates as soon as they become available. Implement strict guest isolation policies and ensure KVM hosts run minimal services and are hardened.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "KVM on Linux hosts; specific kernel versions or KVM packages (details not specified in feed, refer to vendor advisories)",
+        "how_to_determine_impact": "Verify KVM versions and the Linux kernel version on all hypervisor hosts against vendor security advisories once they are released. Ensure that host operating systems are kept up-to-date with all security patches.",
+        "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'KVM' or 'QEMU') AND Get Kernel Version from all machines with (Operating System equals 'Linux').",
+        "rapid7_query_hint": "In InsightVM, search for 'KVM' or 'Hypervisor Escape' vulnerabilities, filtering by assets identified as Linux hypervisor hosts. Monitor for unusual activity or new processes on KVM hosts.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "High/Critical (Estimate - likely 9.0+ due to guest-to-host escape)",
         "category": "vulns"
       }
     ]
