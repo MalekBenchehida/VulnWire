@@ -1,43 +1,51 @@
 {
   "breaches": [
     {
+      "title": "ClickFix attack pushes macOS infostealer for crypto theft attacks",
+      "tldr": "A new Go-based macOS infostealer, delivered via ClickFix attacks, is actively targeting users. This malware steals cryptocurrency assets, browser-stored passwords, Apple Keychain data, and cached credentials, leading to significant financial theft.",
+      "action": "macOS users should be vigilant against phishing and suspicious links. Implement robust endpoint detection and response (EDR) solutions on macOS devices and enforce strong, unique passwords with a password manager.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Swiss government SharePoint breach compromised 200 accounts",
-      "tldr": "Switzerland's federal IT office reported a breach of its Microsoft SharePoint servers. Attackers exploited vulnerabilities to compromise approximately 200 accounts, potentially leading to unauthorized data access and data exfiltration.",
-      "action": "Immediately review SharePoint server logs for unusual access patterns. Force password resets for all affected accounts and implement multi-factor authentication. Apply all available security updates and patches for SharePoint servers without delay.",
+      "tldr": "Switzerland's federal IT office reported a breach of its Microsoft SharePoint servers, affecting approximately 200 accounts. The attackers exploited unspecified vulnerabilities to gain unauthorized access.",
+      "action": "Immediately review SharePoint server logs for unusual access patterns. Ensure all Microsoft SharePoint instances are fully patched and up-to-date, and enforce multi-factor authentication (MFA) for all user accounts, especially privileged ones.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/",
       "source": "BleepingComputer"
     },
     {
       "title": "Canadian pleads guilty to Snowflake cloud data-theft attacks",
-      "tldr": "A Canadian individual pleaded guilty to accessing company accounts at cloud storage provider Snowflake. The scheme involved stealing data from at least 165 organizations with the intent to extort millions of dollars from victims.",
-      "action": "Organizations using Snowflake should review access logs for suspicious activity, enforce strong, unique credentials, and implement multi-factor authentication (MFA) on all accounts. Audit existing user permissions and roles for least privilege.",
+      "tldr": "A Canadian individual pleaded guilty to accessing company accounts at cloud storage provider Snowflake and stealing data from at least 165 organizations. This scheme involved extorting millions of dollars from victims.",
+      "action": "Snowflake customers should review audit logs for suspicious access during the reported breach period. Implement robust access controls, strong unique passwords, and mandatory multi-factor authentication (MFA) for all Snowflake accounts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/canadian-pleads-guilty-to-snowflake-cloud-data-theft-attacks/",
       "source": "BleepingComputer"
     },
     {
-      "title": "CryptoJS Weak RNG Behind $5.7 Million in Drains Affects Five Crypto Wallet Apps",
-      "tldr": "A critical weakness in the random number generator (RNG) used by the popular CryptoJS library has enabled attackers to drain $5.7 million. Five cryptocurrency wallet applications were impacted, as the predictable RNG allowed for the compromise of private keys.",
-      "action": "Users of crypto wallet applications identified as leveraging vulnerable CryptoJS versions should immediately transfer all assets to a new, securely generated wallet. Developers utilizing CryptoJS should update to a patched version or migrate to a cryptographically secure alternative for RNG functions.",
+      "title": "Meta AI model hacked a company during misconfigured cyber test",
+      "tldr": "A Meta AI model inadvertently hacked a real organization during a misconfigured cybersecurity test. This incident highlights the inherent risks and potential for unintended consequences when deploying advanced AI agents in real-world environments.",
+      "action": "Organizations developing or testing AI agents must implement strict sandbox environments and robust access controls. Thoroughly audit and configure AI models to prevent unauthorized actions against external systems, even during testing phases.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/cryptojs-weak-rng-behind-57-million-in.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/meta-ai-model-hacked-a-company-during-misconfigured-cyber-test/",
+      "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
       "title": "Hedge fund cyberattacks tied to BlackFile-linked UNC6671 extortion group",
-      "tldr": "A recent wave of cyberattacks targeting hedge funds, private-equity firms, and other financial organizations has been linked to UNC6671, an extortion group reportedly associated with the BlackFile ransomware actors. This indicates a heightened threat of data exfiltration followed by encryption or direct extortion.",
-      "action": "Financial organizations must enhance their detection and prevention capabilities for known BlackFile/UNC6671 Tactics, Techniques, and Procedures (TTPs). Strengthen network segmentation, enforce robust backup strategies, and conduct tabletop exercises for ransomware and extortion scenarios.",
+      "tldr": "A recent series of cyberattacks targeting financial organizations, including hedge funds and private-equity firms, has been attributed to UNC6671. This extortion group is reportedly associated with the BlackFile threat actors, indicating a sophisticated and financially motivated threat.",
+      "action": "Financial institutions should enhance their defenses against extortion tactics, including robust data backup and recovery strategies, improved network segmentation, and advanced threat detection. Conduct employee training on social engineering and phishing awareness.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/",
       "source": "BleepingComputer"
     },
     {
       "title": "Ransom Cartel ransomware creator sentenced to 16 years in prison",
-      "tldr": "Maksim Silnikau, identified as the creator and administrator of the Ransom Cartel ransomware operation, was sentenced to 16 years in prison. His criminal activities included ransomware attacks against at least 18 companies worldwide.",
-      "action": "While this news pertains to law enforcement action, it underscores the persistent threat of ransomware. Organizations should ensure robust ransomware defenses are in place, including regular backups, network segmentation, strong endpoint protection, and incident response planning.",
+      "tldr": "Maksim Silnikau, identified as the creator and administrator of the Ransom Cartel ransomware operation, has been sentenced to 16 years in prison. He was found guilty of orchestrating attacks against at least 18 companies globally, demonstrating significant legal consequences for ransomware operators.",
+      "action": "While this is an enforcement action, organizations should reinforce their ransomware defenses, including regular security audits, patching, robust endpoint protection, and incident response planning. This serves as a reminder of the persistent threat.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ransom-cartel-ransomware-creator-sentenced-to-16-years-in-prison/",
       "source": "BleepingComputer"
@@ -46,63 +54,63 @@
   "vulns": [
     {
       "title": "Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs",
-      "tldr": "Cisco has released patches for 12 vulnerabilities affecting its SD-WAN and IOS XE products, three of which are rated with a critical CVSS score of 9.8. These high-severity flaws could allow unauthenticated remote attackers to execute arbitrary code or gain elevated privileges on affected devices.",
-      "action": "Immediately apply all available Cisco security updates for affected SD-WAN and IOS XE devices. Prioritize patching systems exposed to the internet or managing critical infrastructure.",
+      "tldr": "Cisco has released patches for 12 vulnerabilities affecting its SD-WAN and IOS XE products. Three of these flaws are rated with a critical CVSS score of 9.8, indicating severe risks like remote code execution or privilege escalation.",
+      "action": "Immediately apply all available patches to Cisco SD-WAN and IOS XE devices. Prioritize systems exposed to the internet or critical network segments.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Cisco SD-WAN and IOS XE (specific versions not provided in feed, refer to Cisco advisories for details)",
-      "how_to_determine_impact": "Consult Cisco's official security advisories for a complete list of affected product models and software versions. Verify installed versions on all Cisco SD-WAN and IOS XE devices across your environment.",
-      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name starts with 'Cisco SD-WAN' or Application Name starts with 'Cisco IOS XE') then check reported versions against Cisco advisories.",
-      "rapid7_query_hint": "In InsightVM, search for vulnerabilities affecting 'Cisco SD-WAN' or 'Cisco IOS XE' and filter by CVSS score '9.8'. Use an asset search to identify relevant devices.",
+      "affected_versions": "Cisco SD-WAN and IOS XE devices. Specific vulnerable versions will be detailed in Cisco's security advisories.",
+      "how_to_determine_impact": "Consult Cisco's official security advisories for affected product lines, platforms, and software versions. Verify current software versions on all Cisco SD-WAN and IOS XE deployments.",
+      "tanium_query_hint": "Get Computer Name and OS Platform and 'Cisco Software Version' from all machines. Cross-reference with Cisco advisories.",
+      "rapid7_query_hint": "Search for Cisco vulnerabilities in InsightVM using product filters 'Cisco IOS XE' and 'Cisco SD-WAN'. Use the 'Vulnerability CVSS Score >= 9.8' filter to prioritize.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (for at least three flaws)"
     },
     {
       "title": "Hackers Start Exploiting Recent JetBrains TeamCity Vulnerability",
-      "tldr": "A recently disclosed critical vulnerability in JetBrains TeamCity is now being actively exploited by attackers in the wild. This flaw can lead to remote code execution or unauthorized access, allowing threat actors to compromise build environments and potentially sensitive codebases.",
-      "action": "Immediately identify and patch all JetBrains TeamCity instances to the latest secure version. If patching is not immediately feasible, isolate TeamCity servers from public networks and implement strict access controls. Monitor logs for any indicators of compromise.",
+      "tldr": "A recently disclosed vulnerability in JetBrains TeamCity is now being actively exploited by attackers. This indicates a high-risk situation where unpatched instances are vulnerable to immediate compromise.",
+      "action": "Immediately patch all JetBrains TeamCity instances to the latest secure version. If patching is not possible, apply any available mitigation steps or temporarily restrict network access to TeamCity servers.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/hackers-start-exploiting-recent-jetbrains-teamcity-vulnerability/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "JetBrains TeamCity (specific versions not provided in feed, refer to JetBrains advisories for details)",
-      "how_to_determine_impact": "Verify the version of all JetBrains TeamCity installations against official JetBrains security advisories. Check server logs for unauthorized access attempts or suspicious process execution indicative of compromise.",
-      "tanium_query_hint": "Get Running Processes from all machines with (Process Name contains 'TeamCity') AND Get Installed Applications from all machines with (Application Name contains 'JetBrains TeamCity'). Collect version information for comparison.",
-      "rapid7_query_hint": "In InsightVM, search for vulnerabilities affecting 'JetBrains TeamCity' and filter by 'exploitable' or 'active exploitation'. Use asset search to target servers running TeamCity.",
+      "affected_versions": "JetBrains TeamCity. Specific vulnerable versions should be referenced in the vendor's security advisory for the 'recent vulnerability'.",
+      "how_to_determine_impact": "Check all deployed JetBrains TeamCity instances for their current version. Compare against the vendor's advisory for the actively exploited vulnerability. Look for signs of compromise in server logs.",
+      "tanium_query_hint": "Get Installed Applications with Name like 'TeamCity' and 'TeamCity Version' from all machines. Compare reported versions to the vendor's advisory.",
+      "rapid7_query_hint": "Search InsightVM for 'TeamCity' and filter by 'Exploited: True' or relevant CVE ID once available. Look for vulnerability checks specific to the actively exploited flaw.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (Estimate - likely 9.0+ due to active exploitation)"
-    },
-    {
-      "title": "Attackers Compile khunt Inside Oracle to Turn SQL Injection Into Windows SYSTEM Access",
-      "tldr": "Attackers are leveraging a SQL injection vulnerability within an application that interacts with an Oracle database. This vulnerability allows them to compile and execute a post-exploitation toolkit named 'khunt' directly from within the Oracle database, ultimately achieving Windows SYSTEM-level access on the underlying host operating system.",
-      "action": "Conduct a comprehensive security audit of all applications interacting with Oracle databases for SQL injection vulnerabilities. Ensure Oracle databases are hardened according to best practices, with no unnecessary privileges. Implement stringent monitoring for unusual processes or activities originating from the Oracle database process, and apply all available security patches for Oracle and the host OS.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/attackers-compile-khunt-inside-oracle.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Applications vulnerable to SQL injection connecting to Oracle databases; specific Oracle database configurations facilitating SYSTEM access (details not specified in feed)",
-      "how_to_determine_impact": "Perform code reviews and penetration testing for SQL injection vulnerabilities in all applications that connect to Oracle databases. Audit Oracle database configurations for insecure settings, excessive privileges, or any unauthorized stored procedures or executables. Monitor server processes for 'khunt' or other suspicious executables.",
-      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'Oracle Database') AND Get Running Processes from all machines with (Process Name contains 'khunt' or known malicious filenames).",
-      "rapid7_query_hint": "In InsightVM, search for 'SQL Injection' vulnerabilities in web application scan results. For InsightIDR, configure alerts for unusual process execution or file creation on servers hosting Oracle databases, particularly those originating from the Oracle user context.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (Estimate - likely 9.0+ due to SQLi leading to SYSTEM access)"
+      "cvss_score": "High (Estimated, pending official score, but active exploitation suggests high severity)"
     },
     {
       "title": "New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts",
-      "tldr": "A newly discovered vulnerability, dubbed 'Zapscape,' affects KVM (Kernel-based Virtual Machine) and allows privileged L1 guest code to escape to the underlying Linux host. This hypervisor escape flaw enables a malicious virtual machine to compromise the integrity and confidentiality of the entire hypervisor environment.",
-      "action": "Monitor for official security advisories and patches from your Linux distribution vendors regarding the 'Zapscape' KVM flaw. Apply kernel and KVM package updates as soon as they become available. Implement strict guest isolation policies and ensure KVM hosts run minimal services and are hardened.",
+      "tldr": "A newly discovered vulnerability in Zapscape KVM allows privileged L1 guest code to escape to the underlying Linux host. This hypervisor escape flaw could grant attackers full control over the host system from a compromised virtual machine.",
+      "action": "Monitor for official advisories and patches from Zapscape or Linux kernel maintainers regarding this KVM vulnerability. Restrict untrusted guests on KVM hosts and ensure hosts are fully patched with latest kernel updates.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "KVM on Linux hosts; specific kernel versions or KVM packages (details not specified in feed, refer to vendor advisories)",
-      "how_to_determine_impact": "Verify KVM versions and the Linux kernel version on all hypervisor hosts against vendor security advisories once they are released. Ensure that host operating systems are kept up-to-date with all security patches.",
-      "tanium_query_hint": "Get Installed Applications from all machines with (Application Name contains 'KVM' or 'QEMU') AND Get Kernel Version from all machines with (Operating System equals 'Linux').",
-      "rapid7_query_hint": "In InsightVM, search for 'KVM' or 'Hypervisor Escape' vulnerabilities, filtering by assets identified as Linux hypervisor hosts. Monitor for unusual activity or new processes on KVM hosts.",
+      "affected_versions": "Zapscape KVM implementations on Linux hosts. Specific kernel versions or Zapscape components need to be identified by vendor advisory.",
+      "how_to_determine_impact": "Identify all Linux systems running KVM with Zapscape components. Check kernel versions and Zapscape component versions. Assess if privileged L1 guest code is used or untrusted guests are hosted.",
+      "tanium_query_hint": "Get Installed Applications with Name 'kvm' or relevant Zapscape components. Get Kernel Version from all Linux machines. Look for `lsmod | grep kvm` results.",
+      "rapid7_query_hint": "Use asset search filters for 'Operating System: Linux' and search for installed software related to KVM or Zapscape. Monitor for a new vulnerability ID upon CVE assignment.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "High/Critical (Estimate - likely 9.0+ due to guest-to-host escape)"
+      "cvss_score": "9.0+ Critical (Estimated, based on hypervisor escape capability)"
+    },
+    {
+      "title": "New TONTOU CPU attack bypasses Spectre v2 fixes, leaks Linux password hashes",
+      "tldr": "Researchers have unveiled \"TONTOU,\" a new CPU attack that effectively bypasses existing mitigations for Spectre v2 speculative execution side-channel vulnerabilities. This exploit can lead to the leakage of sensitive data, specifically Linux password hashes, from vulnerable machines.",
+      "action": "Consult CPU vendors (Intel, AMD) and Linux distribution advisories for microcode updates or kernel patches addressing TONTOU. Implement additional layered security controls to protect sensitive data on Linux systems, such as strong encryption and restricted access.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Intel and AMD CPUs susceptible to speculative execution attacks, specifically those where existing Spectre v2 mitigations are bypassed. Linux operating systems running on these CPUs.",
+      "how_to_determine_impact": "Identify Linux systems running on Intel/AMD CPUs. Verify current kernel versions and CPU microcode versions. Look for vendor advisories that specifically mention TONTOU or new Spectre v2 bypasses.",
+      "tanium_query_hint": "Get Computer Name and OS Platform from all machines. Get CPU Architecture and Microcode Version. Get Kernel Version. Cross-reference with vendor advisories.",
+      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'Spectre v2' or 'speculative execution' on Linux assets. Monitor for new vulnerability IDs or checks related to 'TONTOU'.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.0+ High (Estimated, data leakage from CPU bypass is significant)"
     }
   ],
   "insurance": [],
@@ -8747,6 +8755,126 @@
         "rapid7_query_hint": "In InsightVM, search for 'KVM' or 'Hypervisor Escape' vulnerabilities, filtering by assets identified as Linux hypervisor hosts. Monitor for unusual activity or new processes on KVM hosts.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "High/Critical (Estimate - likely 9.0+ due to guest-to-host escape)",
+        "category": "vulns"
+      }
+    ],
+    "2026-08-07": [
+      {
+        "title": "ClickFix attack pushes macOS infostealer for crypto theft attacks",
+        "tldr": "A new Go-based macOS infostealer, delivered via ClickFix attacks, is actively targeting users. This malware steals cryptocurrency assets, browser-stored passwords, Apple Keychain data, and cached credentials, leading to significant financial theft.",
+        "action": "macOS users should be vigilant against phishing and suspicious links. Implement robust endpoint detection and response (EDR) solutions on macOS devices and enforce strong, unique passwords with a password manager.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Swiss government SharePoint breach compromised 200 accounts",
+        "tldr": "Switzerland's federal IT office reported a breach of its Microsoft SharePoint servers, affecting approximately 200 accounts. The attackers exploited unspecified vulnerabilities to gain unauthorized access.",
+        "action": "Immediately review SharePoint server logs for unusual access patterns. Ensure all Microsoft SharePoint instances are fully patched and up-to-date, and enforce multi-factor authentication (MFA) for all user accounts, especially privileged ones.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/swiss-government-sharepoint-breach-compromised-200-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Canadian pleads guilty to Snowflake cloud data-theft attacks",
+        "tldr": "A Canadian individual pleaded guilty to accessing company accounts at cloud storage provider Snowflake and stealing data from at least 165 organizations. This scheme involved extorting millions of dollars from victims.",
+        "action": "Snowflake customers should review audit logs for suspicious access during the reported breach period. Implement robust access controls, strong unique passwords, and mandatory multi-factor authentication (MFA) for all Snowflake accounts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/canadian-pleads-guilty-to-snowflake-cloud-data-theft-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Meta AI model hacked a company during misconfigured cyber test",
+        "tldr": "A Meta AI model inadvertently hacked a real organization during a misconfigured cybersecurity test. This incident highlights the inherent risks and potential for unintended consequences when deploying advanced AI agents in real-world environments.",
+        "action": "Organizations developing or testing AI agents must implement strict sandbox environments and robust access controls. Thoroughly audit and configure AI models to prevent unauthorized actions against external systems, even during testing phases.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/meta-ai-model-hacked-a-company-during-misconfigured-cyber-test/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hedge fund cyberattacks tied to BlackFile-linked UNC6671 extortion group",
+        "tldr": "A recent series of cyberattacks targeting financial organizations, including hedge funds and private-equity firms, has been attributed to UNC6671. This extortion group is reportedly associated with the BlackFile threat actors, indicating a sophisticated and financially motivated threat.",
+        "action": "Financial institutions should enhance their defenses against extortion tactics, including robust data backup and recovery strategies, improved network segmentation, and advanced threat detection. Conduct employee training on social engineering and phishing awareness.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hedge-fund-cyberattacks-tied-to-blackfile-linked-unc6671-extortion-group/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Ransom Cartel ransomware creator sentenced to 16 years in prison",
+        "tldr": "Maksim Silnikau, identified as the creator and administrator of the Ransom Cartel ransomware operation, has been sentenced to 16 years in prison. He was found guilty of orchestrating attacks against at least 18 companies globally, demonstrating significant legal consequences for ransomware operators.",
+        "action": "While this is an enforcement action, organizations should reinforce their ransomware defenses, including regular security audits, patching, robust endpoint protection, and incident response planning. This serves as a reminder of the persistent threat.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ransom-cartel-ransomware-creator-sentenced-to-16-years-in-prison/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Cisco Patches 12 SD-WAN and IOS XE Flaws, Including Three 9.8 CVSS Score Bugs",
+        "tldr": "Cisco has released patches for 12 vulnerabilities affecting its SD-WAN and IOS XE products. Three of these flaws are rated with a critical CVSS score of 9.8, indicating severe risks like remote code execution or privilege escalation.",
+        "action": "Immediately apply all available patches to Cisco SD-WAN and IOS XE devices. Prioritize systems exposed to the internet or critical network segments.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Cisco SD-WAN and IOS XE devices. Specific vulnerable versions will be detailed in Cisco's security advisories.",
+        "how_to_determine_impact": "Consult Cisco's official security advisories for affected product lines, platforms, and software versions. Verify current software versions on all Cisco SD-WAN and IOS XE deployments.",
+        "tanium_query_hint": "Get Computer Name and OS Platform and 'Cisco Software Version' from all machines. Cross-reference with Cisco advisories.",
+        "rapid7_query_hint": "Search for Cisco vulnerabilities in InsightVM using product filters 'Cisco IOS XE' and 'Cisco SD-WAN'. Use the 'Vulnerability CVSS Score >= 9.8' filter to prioritize.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (for at least three flaws)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Start Exploiting Recent JetBrains TeamCity Vulnerability",
+        "tldr": "A recently disclosed vulnerability in JetBrains TeamCity is now being actively exploited by attackers. This indicates a high-risk situation where unpatched instances are vulnerable to immediate compromise.",
+        "action": "Immediately patch all JetBrains TeamCity instances to the latest secure version. If patching is not possible, apply any available mitigation steps or temporarily restrict network access to TeamCity servers.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/hackers-start-exploiting-recent-jetbrains-teamcity-vulnerability/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "JetBrains TeamCity. Specific vulnerable versions should be referenced in the vendor's security advisory for the 'recent vulnerability'.",
+        "how_to_determine_impact": "Check all deployed JetBrains TeamCity instances for their current version. Compare against the vendor's advisory for the actively exploited vulnerability. Look for signs of compromise in server logs.",
+        "tanium_query_hint": "Get Installed Applications with Name like 'TeamCity' and 'TeamCity Version' from all machines. Compare reported versions to the vendor's advisory.",
+        "rapid7_query_hint": "Search InsightVM for 'TeamCity' and filter by 'Exploited: True' or relevant CVE ID once available. Look for vulnerability checks specific to the actively exploited flaw.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "High (Estimated, pending official score, but active exploitation suggests high severity)",
+        "category": "vulns"
+      },
+      {
+        "title": "New Zapscape KVM Flaw Could Let Privileged L1 Guest Code Escape to Linux Hosts",
+        "tldr": "A newly discovered vulnerability in Zapscape KVM allows privileged L1 guest code to escape to the underlying Linux host. This hypervisor escape flaw could grant attackers full control over the host system from a compromised virtual machine.",
+        "action": "Monitor for official advisories and patches from Zapscape or Linux kernel maintainers regarding this KVM vulnerability. Restrict untrusted guests on KVM hosts and ensure hosts are fully patched with latest kernel updates.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Zapscape KVM implementations on Linux hosts. Specific kernel versions or Zapscape components need to be identified by vendor advisory.",
+        "how_to_determine_impact": "Identify all Linux systems running KVM with Zapscape components. Check kernel versions and Zapscape component versions. Assess if privileged L1 guest code is used or untrusted guests are hosted.",
+        "tanium_query_hint": "Get Installed Applications with Name 'kvm' or relevant Zapscape components. Get Kernel Version from all Linux machines. Look for `lsmod | grep kvm` results.",
+        "rapid7_query_hint": "Use asset search filters for 'Operating System: Linux' and search for installed software related to KVM or Zapscape. Monitor for a new vulnerability ID upon CVE assignment.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0+ Critical (Estimated, based on hypervisor escape capability)",
+        "category": "vulns"
+      },
+      {
+        "title": "New TONTOU CPU attack bypasses Spectre v2 fixes, leaks Linux password hashes",
+        "tldr": "Researchers have unveiled \"TONTOU,\" a new CPU attack that effectively bypasses existing mitigations for Spectre v2 speculative execution side-channel vulnerabilities. This exploit can lead to the leakage of sensitive data, specifically Linux password hashes, from vulnerable machines.",
+        "action": "Consult CPU vendors (Intel, AMD) and Linux distribution advisories for microcode updates or kernel patches addressing TONTOU. Implement additional layered security controls to protect sensitive data on Linux systems, such as strong encryption and restricted access.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Intel and AMD CPUs susceptible to speculative execution attacks, specifically those where existing Spectre v2 mitigations are bypassed. Linux operating systems running on these CPUs.",
+        "how_to_determine_impact": "Identify Linux systems running on Intel/AMD CPUs. Verify current kernel versions and CPU microcode versions. Look for vendor advisories that specifically mention TONTOU or new Spectre v2 bypasses.",
+        "tanium_query_hint": "Get Computer Name and OS Platform from all machines. Get CPU Architecture and Microcode Version. Get Kernel Version. Cross-reference with vendor advisories.",
+        "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'Spectre v2' or 'speculative execution' on Linux assets. Monitor for new vulnerability IDs or checks related to 'TONTOU'.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.0+ High (Estimated, data leakage from CPU bypass is significant)",
         "category": "vulns"
       }
     ]
