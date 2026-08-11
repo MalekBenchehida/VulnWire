@@ -1,126 +1,128 @@
 {
   "breaches": [
     {
-      "title": "Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Wesco confirms security incident after ExfilSquad claims data theft",
+      "tldr": "Global supply chain and distribution company Wesco is investigating a cybersecurity incident after the ExfilSquad group claimed data theft. This potentially involves sensitive corporate and customer information, raising concerns about supply chain integrity.",
+      "action": "Monitor network traffic for suspicious exfiltration attempts, review access logs for unauthorized access, and conduct a thorough forensic investigation if Wesco data is relevant to your supply chain.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Hackers Breach Polish Power Plant Controls via Private Cellular Network and Shut Turbine",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/hackers-breach-polish-power-plant.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/wesco-confirms-security-incident-after-exfilsquad-claims-data-theft/",
+      "source": "BleepingComputer"
     },
     {
       "title": "Hackers breached a small Polish energy plant via private APN last year",
-      "tldr": "Hackers breached a heat-and-power plant facility in Poland, which supplies heat to about 50,000 residents, using a private APN (Access Point Name) to access an OT (Operational Technology) network. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A heat-and-power plant in Poland, supplying heat to 50,000 residents, was breached by hackers last year. The attackers gained access to the Operational Technology (OT) network via a private Access Point Name (APN), enabling them to shut down a turbine.",
+      "action": "Review and harden private APN configurations and access controls, especially for critical infrastructure and OT networks. Implement strict segmentation between IT and OT networks and conduct regular penetration testing on external access points.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-breached-a-small-polish-energy-plant-via-private-apn-last-year/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "BdThemes plugins supply-chain hack creates rogue WordPress admins",
+      "tldr": "The upstream infrastructure of BdThemes, a WordPress plugin developer, was compromised in a supply-chain attack. This allowed attackers to modify a remote JSON feed, leading to the creation of unauthorized administrative accounts on websites using BdThemes plugins.",
+      "action": "Immediately check WordPress installations using BdThemes plugins for newly created or suspicious administrator accounts. Remove any unauthorized accounts and ensure all plugins and themes are updated from trusted sources. Implement robust supply chain security checks for third-party components.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Extension Banned for Stealing AI Chats Returns to Chrome Store, Resumes Malicious Activities",
+      "tldr": "A malicious browser extension, previously banned for stealing AI chat data, has reappeared in the Chrome Web Store and resumed its nefarious activities. Users who install this extension risk having their sensitive AI conversations exfiltrated by attackers.",
+      "action": "Audit installed browser extensions, particularly those related to AI services, and remove any suspicious or unknown extensions. Educate users about the risks of installing extensions from unverified sources and implement browser security policies where applicable.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/extension-banned-for-stealing-ai-chats-returns-to-chrome-store-resumes-malicious-activities/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "CISA: Microsoft SharePoint flaw now exploited in ransomware attacks",
-      "tldr": "CISA confirmed today that ransomware gangs have begun abusing a high-severity Microsoft SharePoint remote code execution vulnerability, which has been flagged as actively exploited since early July. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt",
+      "tldr": "The DeadLock ransomware group is leveraging Polygon smart contracts to manage its extortion infrastructure, making it more resilient to takedowns by law enforcement. This novel approach allows them to store payment addresses and victim data in a decentralized manner.",
+      "action": "Enhance network monitoring for indicators of DeadLock ransomware activity. Implement robust backups, network segmentation, and endpoint detection and response (EDR) solutions. Educate incident response teams on decentralized payment mechanisms.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-flaw-now-exploited-in-ransomware-attacks/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "US and South Korea warn of Gunra ransomware targeting govt agencies",
-      "tldr": "U.S. federal agencies and South Korea's National Policy Agency warned government and critical infrastructure organizations worldwide to secure their systems against Gunra ransomware attacks. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks",
+      "tldr": "The Gunra ransomware group is actively exploiting vulnerabilities in Fortinet and Schneider Electric products to gain initial access and breach target networks. US and South Korean authorities have issued warnings about Gunra targeting government and critical infrastructure.",
+      "action": "Immediately patch all Fortinet and Schneider Electric products to their latest versions. Conduct a thorough audit for indicators of compromise related to Gunra ransomware, especially on FortiGate and Schneider Electric systems, and reinforce network segmentation.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/us-warns-of-gunra-ransomware-attacks-against-government-critical-infrastructure/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "New StormEncryptor ransomware used by former Medusa affiliate",
-      "tldr": "A financially motivated threat actor previously associated with the Medusa ransomware operation is now deploying a new ransomware strain called StormEncryptor. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-stormencryptor-ransomware-used-by-former-medusa-affiliate/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html",
+      "source": "The Hacker News"
     }
   ],
   "vulns": [
     {
-      "title": "OpenAI Launches GPT-5.6-Cyber with Reduced Safeguards for Exploit Development",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA: Microsoft SharePoint flaw now exploited in ransomware attacks",
+      "tldr": "CISA has confirmed that a high-severity Microsoft SharePoint remote code execution (RCE) vulnerability is being actively exploited by ransomware gangs. This flaw was flagged as actively exploited since early July, posing a critical risk to unpatched SharePoint environments.",
+      "action": "Immediately apply the latest security updates for Microsoft SharePoint to mitigate this actively exploited RCE vulnerability. Prioritize patching internet-facing SharePoint servers and conduct an urgent scan for signs of compromise, including ransomware activity.",
+      "cve_ids": [
+        "CVE-2023-29357"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-flaw-now-exploited-in-ransomware-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Microsoft SharePoint Server Subscription Edition, SharePoint Server 2019, SharePoint Server 2016, and SharePoint Server 2013. Apply the latest Cumulative Updates.",
+      "how_to_determine_impact": "Verify SharePoint patch levels. Check for logs indicating suspicious activity, unexpected PowerShell execution, or files encrypted by ransomware. Review IIS logs for unusual access patterns to SharePoint resources.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Microsoft SharePoint Server' from all machines; Get Registry Value 'CurrentVersion' for 'HKLM:\\SOFTWARE\\Microsoft\\Office Server\\16.0\\InstallRoot' (or relevant versions) from all machines to check patch levels. Look for processes like w3wp.exe running with unusual child processes.",
+      "rapid7_query_hint": "Search for vulnerability ID 'microsoft-sharepoint-server-cve-2023-29357' (or similar based on specific CVE). Use InsightAgent queries to look for specific file hashes or process names associated with ransomware post-exploitation.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Zoom Patches Zero-Click Code Execution Vulnerability",
+      "tldr": "Zoom has released a security patch addressing a critical zero-click code execution vulnerability. This flaw could allow an attacker to execute arbitrary code on a user's system without any interaction, simply by receiving a specially crafted message or file.",
+      "action": "Update all Zoom client applications, including desktop and mobile versions, to the latest patched release immediately. Verify that automatic updates are enabled for all Zoom installations.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/openai-launches-gpt-56-cyber-with.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/zoom-patches-zero-click-code-execution-vulnerability/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "affected_versions": "Zoom Client for Meetings on Windows, macOS, Linux, and mobile platforms. Specific vulnerable versions precede the patch.",
+      "how_to_determine_impact": "Check the version of all installed Zoom clients. Any version prior to the patch release is vulnerable. Look for update notifications within the Zoom application itself.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Zoom' and Version < '5.X.X' (specific patched version) from all machines.",
+      "rapid7_query_hint": "Search for assets with installed software 'Zoom Client for Meetings' and filter by version to identify vulnerable installations. Look for specific vulnerability IDs related to 'Zoom RCE' once published.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "A Malicious SIM Card Can Run Attacker Code Inside the Modems Behind Cellular IoT Devices",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Adobe Urges Immediate Patching of Critical ColdFusion, Campaign Classic Flaws",
+      "tldr": "Adobe has released security updates for multiple critical vulnerabilities in ColdFusion and Campaign Classic, urging immediate patching. These flaws could lead to arbitrary code execution, privilege escalation, or information disclosure, posing significant risks to affected systems.",
+      "action": "Immediately apply all available security updates and patches for Adobe ColdFusion and Adobe Campaign Classic installations. Prioritize systems that are publicly accessible.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/a-malicious-sim-card-can-run-attacker.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/adobe-urges-immediate-patching-of-critical-coldfusion-campaign-classic-flaws/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Adobe ColdFusion (multiple versions, check Adobe Security Bulletins for specifics), Adobe Campaign Classic (check Adobe Security Bulletins for specifics).",
+      "how_to_determine_impact": "Consult the official Adobe Security Bulletins for the specific CVEs and affected product versions. Verify installed versions of ColdFusion and Campaign Classic against the vulnerability advisories.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Adobe ColdFusion' or 'Adobe Campaign Classic' and retrieve version details. Cross-reference with Adobe's advisories for vulnerable versions.",
+      "rapid7_query_hint": "Search for assets with installed software 'Adobe ColdFusion' or 'Adobe Campaign Classic' and filter by version. Look for vulnerability IDs published by Rapid7 related to these products.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.1 Critical"
     },
     {
-      "title": "Mozilla Revokes Firefox and Thunderbird Linux Signing Key After Key Lands in Private Repo",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Windows 11 KB5121003 & KB5120240 cumulative updates released",
+      "tldr": "Microsoft has issued cumulative updates KB5121003 and KB5120240 for Windows 11 versions 25H2/24H2 and 23H2 respectively. These updates address various security vulnerabilities, fix bugs, and introduce new features crucial for system stability and security.",
+      "action": "Apply the latest cumulative updates (KB5121003 for 25H2/24H2, KB5120240 for 23H2) to all Windows 11 machines. Ensure all systems are regularly updated via Windows Update or WSUS.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/mozilla-revokes-firefox-and-thunderbird.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5121003-and-kb5120240-cumulative-updates-released/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "affected_versions": "Windows 11 versions 25H2, 24H2, and 23H2 prior to the installation of KB5121003 or KB5120240.",
+      "how_to_determine_impact": "Check the Windows Update history or system information to confirm if KB5121003 or KB5120240 (or superseding updates) have been installed on Windows 11 machines.",
+      "tanium_query_hint": "Get Installed Patches with KBID 'KB5121003' or 'KB5120240' from all machines. Alternatively, Get OS Build Number from all machines and compare to post-update build numbers.",
+      "rapid7_query_hint": "Use InsightAgent to query for installed KBs or check the operating system build version. Look for specific vulnerability IDs related to Windows 11 security updates that are not yet applied.",
       "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Researchers Built a Fake Crypto Startup and Hired Three Suspected North Korean IT Workers",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/researchers-built-fake-crypto-startup.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "cvss_score": "Varies"
     }
   ],
   "insurance": [
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "US Water Systems Get Cyber Boost From New Senate Bill and 'Water Watch Center'",
+      "tldr": "A new Senate bill aims to enhance the cybersecurity of US water systems, establishing a 'Water Watch Center' to monitor and protect against cyber threats. This legislative effort signals increased focus on critical infrastructure security, potentially impacting compliance and cyber insurance requirements for the sector.",
+      "action": "For organizations involved with US water systems or critical infrastructure, monitor developments related to this Senate bill and the 'Water Watch Center' for new compliance obligations, security guidelines, and potential impacts on cyber insurance policy requirements and premiums.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://www.securityweek.com/us-water-systems-get-cyber-boost-from-new-senate-bill-and-water-watch-center/",
+      "source": "SecurityWeek"
     }
   ],
   "history": {
@@ -9798,6 +9800,99 @@
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
         "category": "vulns"
+      },
+      {
+        "title": "Wesco confirms security incident after ExfilSquad claims data theft",
+        "tldr": "Global supply chain and distribution company Wesco is investigating a cybersecurity incident after the ExfilSquad group claimed data theft. This potentially involves sensitive corporate and customer information, raising concerns about supply chain integrity.",
+        "action": "Monitor network traffic for suspicious exfiltration attempts, review access logs for unauthorized access, and conduct a thorough forensic investigation if Wesco data is relevant to your supply chain.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/wesco-confirms-security-incident-after-exfilsquad-claims-data-theft/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "BdThemes plugins supply-chain hack creates rogue WordPress admins",
+        "tldr": "The upstream infrastructure of BdThemes, a WordPress plugin developer, was compromised in a supply-chain attack. This allowed attackers to modify a remote JSON feed, leading to the creation of unauthorized administrative accounts on websites using BdThemes plugins.",
+        "action": "Immediately check WordPress installations using BdThemes plugins for newly created or suspicious administrator accounts. Remove any unauthorized accounts and ensure all plugins and themes are updated from trusted sources. Implement robust supply chain security checks for third-party components.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/bdthemes-plugins-supply-chain-hack-creates-rogue-wordpress-admins/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Extension Banned for Stealing AI Chats Returns to Chrome Store, Resumes Malicious Activities",
+        "tldr": "A malicious browser extension, previously banned for stealing AI chat data, has reappeared in the Chrome Web Store and resumed its nefarious activities. Users who install this extension risk having their sensitive AI conversations exfiltrated by attackers.",
+        "action": "Audit installed browser extensions, particularly those related to AI services, and remove any suspicious or unknown extensions. Educate users about the risks of installing extensions from unverified sources and implement browser security policies where applicable.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/extension-banned-for-stealing-ai-chats-returns-to-chrome-store-resumes-malicious-activities/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt",
+        "tldr": "The DeadLock ransomware group is leveraging Polygon smart contracts to manage its extortion infrastructure, making it more resilient to takedowns by law enforcement. This novel approach allows them to store payment addresses and victim data in a decentralized manner.",
+        "action": "Enhance network monitoring for indicators of DeadLock ransomware activity. Implement robust backups, network segmentation, and endpoint detection and response (EDR) solutions. Educate incident response teams on decentralized payment mechanisms.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "Zoom Patches Zero-Click Code Execution Vulnerability",
+        "tldr": "Zoom has released a security patch addressing a critical zero-click code execution vulnerability. This flaw could allow an attacker to execute arbitrary code on a user's system without any interaction, simply by receiving a specially crafted message or file.",
+        "action": "Update all Zoom client applications, including desktop and mobile versions, to the latest patched release immediately. Verify that automatic updates are enabled for all Zoom installations.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/zoom-patches-zero-click-code-execution-vulnerability/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Zoom Client for Meetings on Windows, macOS, Linux, and mobile platforms. Specific vulnerable versions precede the patch.",
+        "how_to_determine_impact": "Check the version of all installed Zoom clients. Any version prior to the patch release is vulnerable. Look for update notifications within the Zoom application itself.",
+        "tanium_query_hint": "Get Installed Applications with Name 'Zoom' and Version < '5.X.X' (specific patched version) from all machines.",
+        "rapid7_query_hint": "Search for assets with installed software 'Zoom Client for Meetings' and filter by version to identify vulnerable installations. Look for specific vulnerability IDs related to 'Zoom RCE' once published.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Adobe Urges Immediate Patching of Critical ColdFusion, Campaign Classic Flaws",
+        "tldr": "Adobe has released security updates for multiple critical vulnerabilities in ColdFusion and Campaign Classic, urging immediate patching. These flaws could lead to arbitrary code execution, privilege escalation, or information disclosure, posing significant risks to affected systems.",
+        "action": "Immediately apply all available security updates and patches for Adobe ColdFusion and Adobe Campaign Classic installations. Prioritize systems that are publicly accessible.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/adobe-urges-immediate-patching-of-critical-coldfusion-campaign-classic-flaws/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Adobe ColdFusion (multiple versions, check Adobe Security Bulletins for specifics), Adobe Campaign Classic (check Adobe Security Bulletins for specifics).",
+        "how_to_determine_impact": "Consult the official Adobe Security Bulletins for the specific CVEs and affected product versions. Verify installed versions of ColdFusion and Campaign Classic against the vulnerability advisories.",
+        "tanium_query_hint": "Get Installed Applications with Name 'Adobe ColdFusion' or 'Adobe Campaign Classic' and retrieve version details. Cross-reference with Adobe's advisories for vulnerable versions.",
+        "rapid7_query_hint": "Search for assets with installed software 'Adobe ColdFusion' or 'Adobe Campaign Classic' and filter by version. Look for vulnerability IDs published by Rapid7 related to these products.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.1 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Windows 11 KB5121003 & KB5120240 cumulative updates released",
+        "tldr": "Microsoft has issued cumulative updates KB5121003 and KB5120240 for Windows 11 versions 25H2/24H2 and 23H2 respectively. These updates address various security vulnerabilities, fix bugs, and introduce new features crucial for system stability and security.",
+        "action": "Apply the latest cumulative updates (KB5121003 for 25H2/24H2, KB5120240 for 23H2) to all Windows 11 machines. Ensure all systems are regularly updated via Windows Update or WSUS.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5121003-and-kb5120240-cumulative-updates-released/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Windows 11 versions 25H2, 24H2, and 23H2 prior to the installation of KB5121003 or KB5120240.",
+        "how_to_determine_impact": "Check the Windows Update history or system information to confirm if KB5121003 or KB5120240 (or superseding updates) have been installed on Windows 11 machines.",
+        "tanium_query_hint": "Get Installed Patches with KBID 'KB5121003' or 'KB5120240' from all machines. Alternatively, Get OS Build Number from all machines and compare to post-update build numbers.",
+        "rapid7_query_hint": "Use InsightAgent to query for installed KBs or check the operating system build version. Look for specific vulnerability IDs related to Windows 11 security updates that are not yet applied.",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "Varies",
+        "category": "vulns"
+      },
+      {
+        "title": "US Water Systems Get Cyber Boost From New Senate Bill and 'Water Watch Center'",
+        "tldr": "A new Senate bill aims to enhance the cybersecurity of US water systems, establishing a 'Water Watch Center' to monitor and protect against cyber threats. This legislative effort signals increased focus on critical infrastructure security, potentially impacting compliance and cyber insurance requirements for the sector.",
+        "action": "For organizations involved with US water systems or critical infrastructure, monitor developments related to this Senate bill and the 'Water Watch Center' for new compliance obligations, security guidelines, and potential impacts on cyber insurance policy requirements and premiums.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/us-water-systems-get-cyber-boost-from-new-senate-bill-and-water-watch-center/",
+        "source": "SecurityWeek",
+        "category": "insurance"
       }
     ]
   }
