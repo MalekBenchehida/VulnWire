@@ -1,25 +1,33 @@
 {
   "breaches": [
     {
-      "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
-      "tldr": "Malicious LiteLLM releases, potentially linked to the Trivy hack, have impacted over 2,100 organizations. This supply chain attack likely exposed sensitive data or provided unauthorized access due to compromised software components within the AI development ecosystem.",
-      "action": "Immediately review all instances of LiteLLM in your environment, verify their integrity, and investigate logs for any unusual activity originating from or communicating with LiteLLM components. Isolate any suspicious systems and ensure supply chain security best practices are in place.",
+      "title": "Over 2,500 Organizations Impacted by LiteLLM Supply Chain Attack",
+      "tldr": "A malicious supply chain attack involving tainted releases of the LiteLLM library has impacted over 2,500 organizations, leading to potential data exposure and credential compromise. Organizations utilizing affected LiteLLM versions risk unauthorized access to their integrated systems and data.",
+      "action": "Immediately audit all dependencies for LiteLLM, identify and remove any compromised versions. Revoke all API keys and credentials that could have been exposed through the malicious library and conduct a thorough review of logs for unauthorized data access or suspicious activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.securityweek.com/over-2500-organizations-impacted-by-litellm-supply-chain-attack/",
+      "source": "SecurityWeek"
     },
     {
       "title": "FBI: Hackers target online accounts to steal nude photos",
-      "tldr": "The FBI warns that cybercriminals are actively targeting individuals' social media and other online accounts to steal sexually explicit images or videos. This constitutes a direct breach of personal data and privacy, with potential for extortion or further abuse.",
-      "action": "Advise users to implement strong, unique passwords and multi-factor authentication (MFA) on all online accounts, especially social media. Conduct user awareness training on phishing and social engineering tactics to prevent account compromise.",
+      "tldr": "The FBI warns that cybercriminals are actively targeting social media and various online accounts belonging to both adults and children with the intent to steal explicit images and videos. These attacks represent severe privacy violations and often precede extortion attempts against victims.",
+      "action": "Users should implement strong, unique passwords and enable multi-factor authentication (MFA) on all online accounts. Review and tighten privacy settings across all social media platforms and avoid sharing explicit content online. Educate all users, especially children, about phishing, social engineering, and the dangers of online oversharing.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/fbi-warns-of-hackers-targeting-online-accounts-to-steal-explicit-photos/",
       "source": "BleepingComputer"
     },
     {
+      "title": "The Threat Hiding in Your Hiring Process: How Fake Remote Workers Get In",
+      "tldr": "A new threat vector involves fake remote workers exploiting vulnerabilities in the hiring process, such as gaps between background checks, device delivery, and initial account access. These imposters gain unauthorized entry into organizations under false identities, posing a significant insider threat for data access and exfiltration.",
+      "action": "Implement robust identity verification protocols throughout the entire hiring and onboarding process for remote workers, including advanced document verification and biometric liveness checks. Strengthen access controls based on the principle of least privilege and enhance audit trails for new accounts. Conduct security awareness training focusing on insider threats and identity verification best practices.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/the-threat-hiding-in-your-hiring-process-how-fake-remote-workers-get-in/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Stealthy 'City-Forum' Attacks Target Salesforce and ServiceNow With Custom Toolset",
-      "tldr": "A stealthy threat actor, 'City-Forum,' is launching targeted attacks against Salesforce and ServiceNow platforms using a custom toolset. These attacks aim to compromise business-critical cloud services, likely for data exfiltration, unauthorized access, or system manipulation.",
-      "action": "Review audit logs for Salesforce and ServiceNow instances for any anomalous logins, data access patterns, or configuration changes. Ensure strong access controls, MFA, and continuous monitoring are implemented for these critical platforms.",
+      "tldr": "A new, stealthy campaign dubbed 'City-Forum' is actively targeting high-value Salesforce and ServiceNow platforms using a custom toolset. These attacks aim to gain unauthorized access to critical business applications, likely for data exfiltration, manipulation, or persistent access within enterprise environments.",
+      "action": "Salesforce and ServiceNow administrators must immediately review activity logs for any unusual access patterns, API calls, or unauthorized configuration changes. Implement and enforce strong multi-factor authentication (MFA) across all user accounts. Monitor for indicators of compromise (IOCs) specifically associated with 'City-Forum' attacks and enhance security configurations for integrated applications.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/stealthy-city-forum-attacks-target-salesforce-and-servicenow-with-custom-toolset/",
       "source": "SecurityWeek"
@@ -28,16 +36,16 @@
   "ransomware": [
     {
       "title": "DeadLock ransomware uses blockchain to resist infrastructure takedown",
-      "tldr": "The DeadLock ransomware operation is employing a decentralized infrastructure, leveraging blockchain-backed services, to manage communication with victims and maintain data-leak sites. This strategy makes their command and control infrastructure more resilient against law enforcement takedowns.",
-      "action": "Enhance network monitoring for unusual outbound connections and cryptocurrency-related traffic. Implement robust data backup and recovery strategies, and educate users on ransomware prevention, including phishing awareness and secure browsing practices.",
+      "tldr": "The DeadLock ransomware operation has adopted a sophisticated decentralized infrastructure, leveraging blockchain-backed services to maintain persistent communication with victims and conduct data-leak activities. This novel approach significantly enhances the ransomware group's resilience against traditional law enforcement takedown efforts and infrastructure disruption.",
+      "action": "Enhance network monitoring for unusual outbound connections from internal systems to known blockchain networks or decentralized services. Implement robust, immutable backup and recovery strategies, and conduct regular security awareness training for all users on identifying and preventing ransomware attacks. Review existing incident response plans to account for decentralized threat actor infrastructure.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/deadlock-ransomware-uses-blockchain-to-resist-infrastructure-takedown/",
       "source": "BleepingComputer"
     },
     {
       "title": "Ceva Logistics Operations Disrupted by Cyberattack",
-      "tldr": "Ceva Logistics has experienced significant operational disruptions due to a recent cyberattack. While specific details are not provided, such widespread disruptions in logistics operations often indicate ransomware or destructive wiper attacks impacting critical IT and OT systems.",
-      "action": "Review incident response plans, particularly for supply chain partners, and verify the integrity of critical operational technology (OT) and information technology (IT) systems. Ensure robust segmentation and recovery capabilities are in place to minimize downtime from disruptive attacks.",
+      "tldr": "Ceva Logistics, a global supply chain management company, has experienced operational disruptions due to a cyberattack affecting its services worldwide. While the specific nature of the attack is not detailed, such disruptions often indicate ransomware or wiper attacks, severely impacting business continuity and critical logistics infrastructure.",
+      "action": "Organizations should review and test their incident response plans, focusing on recovery from severe operational disruptions. Enhance network segmentation, implement robust endpoint detection and response (EDR) solutions, and ensure offline, immutable backups are in place and regularly verified. Monitor systems diligently for any unusual activity or unauthorized access attempts that could precede or accompany such attacks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/ceva-logistics-operations-disrupted-by-cyberattack/",
       "source": "SecurityWeek"
@@ -45,64 +53,66 @@
   ],
   "vulns": [
     {
+      "title": "Lazarus hackers exploited Windows zero-day to target defense firms",
+      "tldr": "The North Korean state-sponsored Lazarus Group has been actively exploiting a critical Windows zero-day vulnerability, identified as CVE-2026-68820, to target defense-sector companies. This advanced persistent threat (APT) activity, part of 'Operation Dream Job,' aims to gain unauthorized access and persist within sensitive networks.",
+      "action": "Immediately apply all available security patches for CVE-2026-68820 on all Windows systems, prioritizing assets within the defense sector. Enhance monitoring for indicators of compromise (IOCs) associated with Lazarus Group and 'Operation Dream Job.' Review access controls and implement network segmentation to limit lateral movement.",
+      "cve_ids": [
+        "CVE-2026-68820"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Windows operating systems (specific versions covered by CVE-2026-68820).",
+      "how_to_determine_impact": "Use vulnerability scanners to identify the presence of CVE-2026-68820 on Windows systems. Review system logs, endpoint detection and response (EDR) alerts, and network traffic for known Lazarus Group IOCs or suspicious activity related to 'Operation Dream Job.'",
+      "tanium_query_hint": "Get Missing KBs for CVE-2026-68820. For IOCs: Get Running Processes with 'known_malicious_hash' or 'Get Open Network Connections' filtering by 'known_malicious_IP'.",
+      "rapid7_query_hint": "Scan for vulnerability ID 'CVE-2026-68820' in InsightVM. In InsightIDR, search for alerts related to Lazarus Group activity or known malware hashes/IPs associated with 'Operation Dream Job'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
+      "tldr": "Microsoft's August 2026 Patch Tuesday addressed a total of 398 vulnerabilities, prominently including a critical Windows driver zero-day that is actively being exploited in the wild. This extensive security update requires immediate attention to protect systems from various forms of compromise, including privilege escalation and remote code execution.",
+      "action": "Apply all Microsoft August 2026 Patch Tuesday updates to all Windows systems without delay. Prioritize systems affected by the actively exploited Windows driver zero-day. Conduct thorough testing in non-production environments before broad deployment, especially for critical systems.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Various Windows operating systems and components affected by the August 2026 Patch Tuesday, including a critical Windows driver vulnerability (specific driver/versions not detailed).",
+      "how_to_determine_impact": "Verify that all Windows systems have successfully installed the August 2026 Patch Tuesday security updates. Use system management tools to check the status of installed KBs and confirm the absence of missing patches.",
+      "tanium_query_hint": "Get Installed Patch Status. Alternatively, 'Get Missing KBs' to identify systems lacking August 2026 updates. For specific driver checks, 'Get Driver Information' if a CVE for the driver is released.",
+      "rapid7_query_hint": "Run vulnerability scans using InsightVM to detect missing August 2026 patches. Utilize InsightVM's 'Installed Patches' query or search for vulnerability IDs associated with this Patch Tuesday.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
       "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
-      "tldr": "Adobe has released patches for three critical vulnerabilities, each rated with a CVSS score of 10.0, affecting ColdFusion and Campaign Classic products. These flaws likely allow for unauthenticated remote code execution (RCE), posing an extreme risk to affected systems.",
-      "action": "Immediately apply all available security updates from Adobe for ColdFusion and Campaign Classic products. Prioritize patching systems exposed to the internet or accessible from untrusted networks.",
+      "tldr": "Adobe has released urgent security patches to address three critical vulnerabilities, all rated with a maximum CVSS score of 10.0, affecting its ColdFusion and Campaign Classic products. These severe flaws likely enable unauthenticated remote code execution or arbitrary file upload, posing an immediate and extreme risk to affected servers.",
+      "action": "Immediately apply the latest security patches provided by Adobe for all affected ColdFusion and Campaign Classic installations. Prioritize these updates given the maximum CVSS score and potential for complete system compromise. Review logs for any signs of exploitation prior to patching.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Adobe ColdFusion and Campaign Classic, specific vulnerable versions as detailed in Adobe's official security advisories.",
-      "how_to_determine_impact": "Verify installed versions of Adobe ColdFusion and Campaign Classic against vendor advisories. Check system logs for signs of compromise or unusual activity prior to applying patches, such as unauthorized file creation or process execution.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'ColdFusion' or 'Campaign Classic' then compare versions to Adobe's advisory. Check process lists for any unknown or suspicious processes on these servers.",
-      "rapid7_query_hint": "Search for vulnerability ID matching 'Adobe ColdFusion' or 'Adobe Campaign Classic' in InsightVM, filtering for critical vulnerabilities (CVSS 10.0). Use asset search with software name contains 'ColdFusion' or 'Campaign Classic'.",
+      "affected_versions": "Adobe ColdFusion (specific versions not provided) and Adobe Campaign Classic (specific versions not provided). Refer to Adobe's official security bulletin for exact vulnerable versions.",
+      "how_to_determine_impact": "Check the installed versions of Adobe ColdFusion and Adobe Campaign Classic against the official Adobe security bulletin for August 2026. Verify that the current version is equal to or greater than the patched versions.",
+      "tanium_query_hint": "Get Installed Applications with 'Adobe ColdFusion' or 'Adobe Campaign Classic'. Use 'Get File Version' for relevant application executables (e.g., 'coldfusion.exe') to check version numbers.",
+      "rapid7_query_hint": "Scan assets for installed Adobe ColdFusion and Campaign Classic software using InsightVM. Search for specific vulnerability IDs related to the Adobe August 2026 patches within InsightVM/InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
       "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
-      "tldr": "A critical vulnerability in VMware vCenter is being actively exploited by attackers to achieve persistent remote access. This flaw allows unauthorized control over virtual infrastructure, posing a severe risk to an organization's entire virtualized environment.",
-      "action": "Immediately identify and patch all VMware vCenter instances. Isolate unpatched systems and monitor for any signs of compromise, including unusual administrative activity, new unauthorized virtual machines or accounts, or suspicious network connections.",
+      "tldr": "Attackers are actively exploiting a newly discovered vulnerability in VMware vCenter, leveraging it to gain persistent remote access to affected virtualized environments. This active exploitation poses a severe risk, potentially leading to compromise of entire virtual infrastructures, including virtual machines and data.",
+      "action": "Immediately identify and apply all available security patches and updates for VMware vCenter. Implement stringent network segmentation for vCenter instances and enforce strong access controls, including multi-factor authentication. Thoroughly investigate vCenter logs and endpoint telemetry for any signs of compromise or unauthorized persistent access.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "VMware vCenter Server, specific vulnerable versions as per VMware's official advisory regarding active exploitation.",
-      "how_to_determine_impact": "Check VMware vCenter version against official advisories. Review vCenter audit logs for suspicious logins, changes to user accounts or permissions, or the deployment of new virtual machines. Look for any established persistence mechanisms.",
-      "tanium_query_hint": "Get VMware vCenter Version from all machines. Check logs for unusual processes, network connections, or unauthorized file modifications on vCenter hosts. Use 'Get Running Processes' and 'Get Established Connections'.",
-      "rapid7_query_hint": "Search for vulnerability ID matching 'VMware vCenter' in InsightVM, specifically for actively exploited vulnerabilities. Check InsightIDR for alerts related to vCenter anomalies, new user creation, or unusual activity originating from vCenter.",
+      "affected_versions": "VMware vCenter (specific vulnerable versions not detailed, refer to VMware security advisories).",
+      "how_to_determine_impact": "Check the installed version of VMware vCenter Server against the latest VMware security advisories. Look for unexpected user accounts, modified configurations, suspicious services, or unusual network connections from vCenter appliances or servers. Review ESXi and vCenter logs for signs of compromise.",
+      "tanium_query_hint": "Get Installed Applications with 'VMware vCenter'. On vCenter servers, 'Get Running Processes' and 'Get Open Network Connections' for anomalies. Monitor 'Get Event Log' for suspicious vCenter events or account changes.",
+      "rapid7_query_hint": "Scan network for VMware vCenter instances. Search InsightVM for associated vulnerability IDs. Monitor vCenter logs in InsightIDR for suspicious activity, new user accounts, or unusual logins.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
-    },
-    {
-      "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
-      "tldr": "Microsoft's latest Patch Tuesday addresses 398 vulnerabilities, notably including a Windows driver zero-day that is currently under active attack. This critical zero-day is reportedly being exploited by North Korean state-sponsored groups to gain unauthorized access and escalate privileges.",
-      "action": "Apply Microsoft's August 2026 Patch Tuesday updates to all Windows systems immediately. Prioritize servers, domain controllers, and critical endpoints. Monitor systems for any unusual driver installations or privilege escalation attempts.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft Windows operating systems, specific driver component details should be referenced in Microsoft's August 2026 Security Update Guide.",
-      "how_to_determine_impact": "Ensure all Windows systems have applied the latest August 2026 Patch Tuesday updates. Check event logs (System, Security) for unusual driver installations (Event ID 7045) or privilege escalation attempts prior to patching.",
-      "tanium_query_hint": "Get Missing Patches from all machines, specifically looking for August 2026 updates. Inspect 'Driver File Details' for any anomalies or recently installed suspicious drivers. Use 'Get Event Log' for relevant IDs.",
-      "rapid7_query_hint": "Run a vulnerability scan in InsightVM to identify missing August 2026 Microsoft patches. Look for InsightIDR alerts on driver-related activity, privilege escalation, or unusual process execution on Windows endpoints.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (Estimated)"
-    },
-    {
-      "title": "Hackers leverage new Microsoft SharePoint exploit in attacks",
-      "tldr": "Hackers have begun actively exploiting a critical Microsoft SharePoint vulnerability using a recently published proof-of-concept (PoC) exploit. This flaw could lead to significant compromise of SharePoint data, unauthorized access, and disruption of collaboration services.",
-      "action": "Immediately apply any available patches or workarounds for the identified Microsoft SharePoint vulnerability as per Microsoft's advisory. Conduct thorough integrity checks on SharePoint servers and monitor for any suspicious activity.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/microsoft/hackers-leverage-new-microsoft-sharepoint-exploit-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint, specific versions as detailed in Microsoft's advisory for the vulnerability exploited by the Rapid7 PoC.",
-      "how_to_determine_impact": "Verify SharePoint server versions against Microsoft's security advisories. Check SharePoint logs, IIS logs, and Windows event logs for unauthorized access attempts, modifications to sites or documents, or unusual process execution on SharePoint servers.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'SharePoint' then compare versions. Check 'Get Running Processes' and 'Get Services' for unusual activity on SharePoint servers. Use 'Get File Content' to inspect configuration files for tampering.",
-      "rapid7_query_hint": "Search for vulnerability ID matching 'Microsoft SharePoint' in InsightVM, specifically for recently disclosed critical issues with available PoC. Use asset search with software name contains 'SharePoint' and review recent scan results for affected systems.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -10016,6 +10026,42 @@
         "rapid7_query_hint": "Search for vulnerability ID matching 'Microsoft SharePoint' in InsightVM, specifically for recently disclosed critical issues with available PoC. Use asset search with software name contains 'SharePoint' and review recent scan results for affected systems.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Over 2,500 Organizations Impacted by LiteLLM Supply Chain Attack",
+        "tldr": "A malicious supply chain attack involving tainted releases of the LiteLLM library has impacted over 2,500 organizations, leading to potential data exposure and credential compromise. Organizations utilizing affected LiteLLM versions risk unauthorized access to their integrated systems and data.",
+        "action": "Immediately audit all dependencies for LiteLLM, identify and remove any compromised versions. Revoke all API keys and credentials that could have been exposed through the malicious library and conduct a thorough review of logs for unauthorized data access or suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/over-2500-organizations-impacted-by-litellm-supply-chain-attack/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "The Threat Hiding in Your Hiring Process: How Fake Remote Workers Get In",
+        "tldr": "A new threat vector involves fake remote workers exploiting vulnerabilities in the hiring process, such as gaps between background checks, device delivery, and initial account access. These imposters gain unauthorized entry into organizations under false identities, posing a significant insider threat for data access and exfiltration.",
+        "action": "Implement robust identity verification protocols throughout the entire hiring and onboarding process for remote workers, including advanced document verification and biometric liveness checks. Strengthen access controls based on the principle of least privilege and enhance audit trails for new accounts. Conduct security awareness training focusing on insider threats and identity verification best practices.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/the-threat-hiding-in-your-hiring-process-how-fake-remote-workers-get-in/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Lazarus hackers exploited Windows zero-day to target defense firms",
+        "tldr": "The North Korean state-sponsored Lazarus Group has been actively exploiting a critical Windows zero-day vulnerability, identified as CVE-2026-68820, to target defense-sector companies. This advanced persistent threat (APT) activity, part of 'Operation Dream Job,' aims to gain unauthorized access and persist within sensitive networks.",
+        "action": "Immediately apply all available security patches for CVE-2026-68820 on all Windows systems, prioritizing assets within the defense sector. Enhance monitoring for indicators of compromise (IOCs) associated with Lazarus Group and 'Operation Dream Job.' Review access controls and implement network segmentation to limit lateral movement.",
+        "cve_ids": [
+          "CVE-2026-68820"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Windows operating systems (specific versions covered by CVE-2026-68820).",
+        "how_to_determine_impact": "Use vulnerability scanners to identify the presence of CVE-2026-68820 on Windows systems. Review system logs, endpoint detection and response (EDR) alerts, and network traffic for known Lazarus Group IOCs or suspicious activity related to 'Operation Dream Job.'",
+        "tanium_query_hint": "Get Missing KBs for CVE-2026-68820. For IOCs: Get Running Processes with 'known_malicious_hash' or 'Get Open Network Connections' filtering by 'known_malicious_IP'.",
+        "rapid7_query_hint": "Scan for vulnerability ID 'CVE-2026-68820' in InsightVM. In InsightIDR, search for alerts related to Lazarus Group activity or known malware hashes/IPs associated with 'Operation Dream Job'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
