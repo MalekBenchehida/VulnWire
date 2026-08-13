@@ -1,112 +1,103 @@
 {
   "breaches": [
     {
-      "title": "Over 2,500 Organizations Impacted by LiteLLM Supply Chain Attack",
-      "tldr": "A malicious LiteLLM release, linked to the Trivy hack, has potentially exposed over 2,500 organizations through a supply chain attack. This incident involved unauthorized data access or manipulation due to compromised software components.",
-      "action": "Immediately identify if LiteLLM is used in your environment. If so, review recent deployments and associated logs for indicators of compromise and ensure all LiteLLM instances are updated to verified, legitimate versions.",
+      "title": "737 Chrome VPN Extensions Caught Routing Traffic Through Proxies. Check If You Have One",
+      "tldr": "Over 737 fake Chrome VPN extensions have been discovered routing user traffic through attacker-controlled SOCKS5 proxies. This poses a significant risk of data interception, privacy compromise, and potential credential theft.",
+      "action": "Users should immediately review all installed Chrome extensions, specifically removing any suspicious, unrecognized, or untrusted VPN/proxy extensions. Ensure all legitimate extensions are from verified developers and sources.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/over-2500-organizations-impacted-by-litellm-supply-chain-attack/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/08/737-chrome-vpn-extensions-caught.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "FBI: Hackers target online accounts to steal nude photos",
-      "tldr": "The FBI has issued a warning about cybercriminals actively targeting social media and other online accounts of both adults and children. Their objective is to steal sexually explicit images or videos, indicating a significant privacy and extortion threat.",
-      "action": "Advise users to enable multi-factor authentication (MFA) on all online accounts, review privacy settings, and be vigilant against phishing attempts. Educate on the risks of sharing sensitive personal content online.",
+      "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
+      "tldr": "Malicious versions of the LiteLLM library, potentially linked to the Trivy supply chain compromise, have been identified that could have exposed data from over 2,100 organizations. This indicates a widespread software supply chain attack leading to data leakage.",
+      "action": "Organizations using LiteLLM or Trivy should conduct an immediate audit of their installations to identify any malicious or tampered versions. All potentially exposed API keys, credentials, and sensitive data should be considered compromised and rotated or revoked.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-warns-of-hackers-targeting-online-accounts-to-steal-explicit-photos/",
+      "source_url": "https://thehackernews.com/2026/08/malicious-litelllm-releases-tied-to.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "\"City-Forum\" data-theft attacks target Salesforce, ServiceNow portals",
+      "tldr": "An ongoing data theft campaign, dubbed \"City-Forum,\" is exploiting publicly exposed data on Salesforce Experience Cloud and ServiceNow customer portals. Attackers are using custom tools to scrape sensitive information accessible to anonymous users.",
+      "action": "Review and harden configurations of Salesforce Experience Cloud and ServiceNow customer portals to restrict anonymous access to sensitive data. Monitor portal access logs for unusual data access patterns, large data exports, or queries from unfamiliar IP addresses.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/city-forum-data-theft-attacks-target-salesforce-servicenow-portals/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hundreds of fake Chrome VPN extensions route traffic through a proxy",
-      "tldr": "Over 737 malicious Chrome VPN extensions were found routing user traffic through SOCKS5 proxies controlled by a single provider. These extensions impersonate legitimate VPN services and pose a significant risk of data interception and privacy compromise.",
-      "action": "Audit all installed Chrome extensions, particularly VPN or proxy services. Immediately remove any suspicious or unverified VPN extensions. Advise users to only install extensions from reputable developers after careful review.",
+      "title": "Android malware combo takes out loans and relays victims' credit cards",
+      "tldr": "A new sophisticated Android malware combination, consisting of the WindRelay NFC relay malware and the SpyNote remote administration tool (RAT), is being used to steal live credit card data and facilitate unauthorized loan applications, leading to significant financial fraud.",
+      "action": "Android users must exercise extreme caution when downloading apps, only using official app stores and verifying developer authenticity. Organizations should implement mobile device management (MDM) solutions and educate users on the risks of suspicious app installations and phishing attempts to protect against mobile malware.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hundreds-of-fake-chrome-vpn-extensions-route-traffic-through-a-proxy/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/android-malware-combo-takes-out-loans-and-relays-victims-credit-cards/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Stealthy ‘City-Forum’ Attacks Target Salesforce and ServiceNow With Custom Toolset",
-      "tldr": "A new campaign, dubbed 'City-Forum,' is employing a sophisticated custom toolset to conduct stealthy attacks against Salesforce and ServiceNow platforms. These attacks indicate a focused effort to gain unauthorized access and potentially exfiltrate sensitive data from critical business applications.",
-      "action": "Enhance monitoring and logging for Salesforce and ServiceNow environments, specifically looking for unusual API calls, login patterns from unrecognized IPs, or deployment of custom scripts/tools. Review access logs for suspicious activity.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/stealthy-city-forum-attacks-target-salesforce-and-servicenow-with-custom-toolset/",
-      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Ceva Logistics Operations Disrupted by Cyberattack",
-      "tldr": "Ceva Logistics has reported significant disruptions to its operations following a cyberattack. While specific details of the attack type are not fully disclosed, such disruptions in logistics often indicate a ransomware incident targeting operational technology or critical business systems.",
-      "action": "Review and test incident response plans, focusing on business continuity and operational technology resilience. Ensure robust backups are in place and isolated from the network. Strengthen endpoint detection and response capabilities across the enterprise.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/ceva-logistics-operations-disrupted-by-cyberattack/",
-      "source": "SecurityWeek"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "Lazarus hackers exploited Windows zero-day to target defense firms",
-      "tldr": "The North Korean-backed Lazarus group is actively exploiting a Windows zero-day vulnerability (CVE-2026-68820) to target defense sector companies. This exploitation grants attackers SYSTEM privileges, allowing for extensive compromise and backdoor deployment.",
-      "action": "Immediately apply the latest Windows security updates released by Microsoft. Scan systems for indicators of compromise (IOCs) associated with Lazarus group activities, particularly focusing on defense sector networks.",
+      "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
+      "tldr": "The Lazarus group is actively exploiting a Windows zero-day vulnerability, CVE-2026-68820, to gain SYSTEM-level access and deploy backdoors, primarily targeting defense-sector organizations. This allows for full system compromise and persistent presence.",
+      "action": "Immediately apply any available out-of-band patches from Microsoft for CVE-2026-68820. Conduct proactive threat hunting for known Lazarus IoCs and suspicious activity on Windows endpoints, especially within defense-sector networks.",
       "cve_ids": [
         "CVE-2026-68820"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Windows operating systems. Specific affected components are related to an unnamed Windows kernel driver vulnerability. Refer to Microsoft's advisory for CVE-2026-68820 for precise details.",
-      "how_to_determine_impact": "Check Windows Update history for the latest patches for CVE-2026-68820. Look for unusual process creation, unauthorized file modifications in system directories, or network connections to known Lazarus infrastructure. Monitor for any newly installed services or drivers.",
-      "tanium_query_hint": "Get Installed Patches from all machines where 'Patch Name' contains 'KBXXXXXXX' (replace with actual KB for CVE-2026-68820). Check 'Running Processes' for suspicious executables. Investigate 'Loaded Modules' for unsigned or unusual drivers.",
-      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-68820' in InsightVM. For InsightIDR, search logs for 'Lazarus' or 'Operation Dream Job' associated IOCs, unusual SYSTEM process activity, or unauthorized kernel module loads.",
+      "affected_versions": "Microsoft Windows operating systems (refer to Microsoft's official advisory for CVE-2026-68820 for specific versions impacted)",
+      "how_to_determine_impact": "Examine system logs for unusual process creation, privilege escalation attempts (Event IDs 4624, 4672, 4688), or unauthorized network connections. Look for indicators of compromise (IoCs) associated with Lazarus group activity and CVE-2026-68820 specific exploitation patterns.",
+      "tanium_query_hint": "Detect 'Lazarus IoCs' using 'Get Running Processes' and 'Get File Hash' on potentially affected systems. Investigate suspicious SYSTEM-level processes or network connections using 'Get Connections'. Query 'Get Windows Event Log' for privilege escalation attempts or unusual security events.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-68820'. Monitor InsightIDR/EDR for endpoint behaviors indicative of Lazarus group TTPs, such as process injection, backdoor deployment, or unusual network communications. Prioritize assets in the defense sector.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate)"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Hackers exploit critical Adobe Commerce flaw to hijack customer accounts",
-      "tldr": "A critical vulnerability (CVE-2026-71362) in Adobe Commerce and Magento e-commerce platforms is being actively exploited in the wild. This flaw allows unauthenticated attackers to execute arbitrary code and hijack customer accounts, posing a severe risk to online stores and user data.",
-      "action": "Prioritize patching all Adobe Commerce and Magento instances to the latest secure versions. Review web server logs for indicators of exploitation, especially related to CVE-2026-71362. Implement strong input validation and web application firewall (WAF) rules.",
+      "tldr": "Attackers are actively exploiting CVE-2026-71362, a critical vulnerability in Adobe Commerce and Magento, to gain unauthorized access and hijack customer accounts. This could lead to data theft, financial fraud, and reputational damage.",
+      "action": "Immediately apply the latest security patches from Adobe that address CVE-2026-71362 for all Adobe Commerce and Magento installations. Conduct an audit of customer accounts for any signs of unauthorized access or suspicious activity since the disclosure.",
       "cve_ids": [
         "CVE-2026-71362"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Adobe Commerce and Magento e-commerce platforms. Specific affected versions should be confirmed via Adobe's official advisory for CVE-2026-71362.",
-      "how_to_determine_impact": "Check Adobe Commerce/Magento version against Adobe's security bulletin for CVE-2026-71362. Review application logs for HTTP requests attempting to exploit this CVE. Monitor for unauthorized administrative actions or account compromises within the e-commerce platform.",
-      "tanium_query_hint": "Get Installed Applications from all machines where 'Application Name' contains 'Adobe Commerce' or 'Magento'. Check web server logs for anomalous requests or POST data patterns. Look for unexpected file modifications in web directories.",
-      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-71362' in InsightVM. In InsightIDR, look for suspicious activity originating from web servers running Adobe Commerce/Magento, such as RCE attempts or unauthorized account access.",
+      "affected_versions": "Adobe Commerce and Magento (specific vulnerable versions are detailed in Adobe's official security advisory for CVE-2026-71362)",
+      "how_to_determine_impact": "Check the version numbers of all deployed Adobe Commerce and Magento instances to confirm if the patch for CVE-2026-71362 has been applied. Review web server and application logs for unusual POST requests, unauthorized API calls, or suspicious login attempts on customer accounts.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to identify machines running 'Adobe Commerce' or 'Magento'. Inspect relevant application files for versions and modifications using 'Get File Version' or 'Get File Hash'. Search web server logs via 'Get Tanium Client Log' for exploitation patterns.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-71362'. Perform authenticated web application scans against Adobe Commerce/Magento instances. Monitor web server access logs and application logs in InsightIDR for indicators of exploitation or account takeover attempts.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "New Microsoft Defender 'ShieldBreak' zero-day grants SYSTEM privileges",
-      "tldr": "A new Microsoft Defender zero-day exploit, dubbed 'ShieldBreak,' has been publicly disclosed, claiming to bypass August 2026 Patch Tuesday updates and grant SYSTEM privileges. This indicates a severe local privilege escalation vulnerability affecting endpoint security.",
-      "action": "Monitor official Microsoft advisories for a patch addressing 'ShieldBreak.' Deploy EDR solutions with advanced behavioral detection to identify anomalous activity related to privilege escalation. Review endpoint logs for signs of suspicious SYSTEM-level processes.",
+      "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
+      "tldr": "A critical VMware vCenter vulnerability is under active exploitation by attackers to establish persistent remote access to virtualized environments. This compromise can grant broad control over virtual infrastructure.",
+      "action": "Immediately apply all available security patches and updates for VMware vCenter to mitigate the vulnerability. Review vCenter logs, including event logs and audit trails, for signs of compromise, unauthorized access, or the establishment of persistence mechanisms.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldbreak-zero-day-grants-system-privileges/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft Defender. Specific versions affected are those that have received the August 2026 Patch Tuesday updates, as the vulnerability claims to bypass them. Refer to Microsoft for official scope.",
-      "how_to_determine_impact": "Ensure Microsoft Defender is updated. Monitor endpoint security logs for attempts to disable Defender components or for privilege escalation activity. Specifically look for unusual process launches with SYSTEM privileges.",
-      "tanium_query_hint": "Get Microsoft Defender Version. Check 'Running Processes' for unusual child processes of Defender or SYSTEM. Look for attempts to modify Defender registry keys or service configurations.",
-      "rapid7_query_hint": "Search InsightVM for 'Microsoft Defender' vulnerabilities or configurations. In InsightIDR, monitor for successful privilege escalations on Windows endpoints, especially if originating from processes related to Microsoft Defender.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (Estimate)"
-    },
-    {
-      "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
-      "tldr": "Adobe has released critical security patches addressing three vulnerabilities with a CVSS score of 10.0 in ColdFusion and Campaign Classic. These flaws are extremely severe, likely allowing unauthenticated remote code execution, and require immediate attention.",
-      "action": "Immediately update all Adobe ColdFusion and Campaign Classic installations to the latest patched versions. Conduct a thorough review of these systems for any signs of compromise prior to patching, given the critical nature of the vulnerabilities.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
+      "source_url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Adobe ColdFusion and Adobe Campaign Classic. Specific affected versions must be confirmed via Adobe's official security advisories for these patches.",
-      "how_to_determine_impact": "Identify all instances of Adobe ColdFusion and Adobe Campaign Classic. Check their current version numbers against Adobe's security bulletins. Examine system logs for any anomalous activity or crashes prior to patching.",
-      "tanium_query_hint": "Get Installed Applications from all machines where 'Application Name' contains 'Adobe ColdFusion' or 'Adobe Campaign Classic'. Get 'File Version' for core executables of these products to determine patch status.",
-      "rapid7_query_hint": "Search InsightVM for known vulnerabilities related to 'Adobe ColdFusion' and 'Adobe Campaign Classic'. Filter by CVSS score 10.0. Use asset inventory to identify all instances of these applications.",
+      "active_exploitation": true,
+      "affected_versions": "VMware vCenter Server (specific vulnerable versions are detailed in VMware's official security advisory, not explicitly provided in headlines)",
+      "how_to_determine_impact": "Verify current VMware vCenter patch levels. Review vCenter task logs, event logs, and 'Recent Tasks' for any unauthorized administrative actions, suspicious user logins, new user accounts/roles, or unexpected configuration changes. Check for unusual outbound connections from vCenter.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to identify machines running 'VMware vCenter Server'. Check for specific file versions, registry keys, or process names mentioned in VMware advisories. Search 'Get Windows Event Log' (or equivalent for vCenter Appliance) for suspicious access or privilege changes.",
+      "rapid7_query_hint": "Search InsightVM for recent critical 'VMware vCenter' vulnerabilities. Perform authenticated scans against vCenter servers. Monitor network traffic to/from vCenter for anomalous connections. Review SIEM logs for vCenter-related alerts indicating compromise.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
+      "tldr": "Attackers are actively exploiting a SharePoint authentication bypass vulnerability shortly after a public Proof-of-Concept (PoC) was released. This flaw allows unauthorized access to SharePoint resources without proper authentication.",
+      "action": "Immediately apply all available security patches from Microsoft for SharePoint to address this authentication bypass vulnerability. Monitor SharePoint and IIS logs meticulously for any suspicious authentication attempts, unauthorized access, or unusual activity.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Microsoft SharePoint Server (specific vulnerable versions are detailed in Microsoft's official security advisory, not explicitly provided in headlines)",
+      "how_to_determine_impact": "Verify SharePoint server patch levels. Review SharePoint ULS logs, IIS logs, and Windows Security event logs for anomalous authentication successes or failures, especially those that appear to bypass normal authentication mechanisms. Look for unexpected access to sensitive SharePoint sites or data.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to check SharePoint server versions. Utilize 'Get Tanium Client Log' or 'Get Windows Event Log' to search for suspicious authentication events (e.g., Event ID 4624 with unusual logon types or source IPs) on SharePoint servers.",
+      "rapid7_query_hint": "Scan SharePoint servers for known authentication bypass vulnerabilities. Monitor web server logs (IIS) and SIEM for patterns indicative of exploitation attempts or unauthorized access to SharePoint sites. Query for assets running SharePoint services.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -10099,6 +10090,112 @@
         "rapid7_query_hint": "Search InsightVM for 'Microsoft Defender' vulnerabilities or configurations. In InsightIDR, monitor for successful privilege escalations on Windows endpoints, especially if originating from processes related to Microsoft Defender.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical (Estimate)",
+        "category": "vulns"
+      }
+    ],
+    "2026-08-13": [
+      {
+        "title": "737 Chrome VPN Extensions Caught Routing Traffic Through Proxies. Check If You Have One",
+        "tldr": "Over 737 fake Chrome VPN extensions have been discovered routing user traffic through attacker-controlled SOCKS5 proxies. This poses a significant risk of data interception, privacy compromise, and potential credential theft.",
+        "action": "Users should immediately review all installed Chrome extensions, specifically removing any suspicious, unrecognized, or untrusted VPN/proxy extensions. Ensure all legitimate extensions are from verified developers and sources.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/737-chrome-vpn-extensions-caught.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
+        "tldr": "Malicious versions of the LiteLLM library, potentially linked to the Trivy supply chain compromise, have been identified that could have exposed data from over 2,100 organizations. This indicates a widespread software supply chain attack leading to data leakage.",
+        "action": "Organizations using LiteLLM or Trivy should conduct an immediate audit of their installations to identify any malicious or tampered versions. All potentially exposed API keys, credentials, and sensitive data should be considered compromised and rotated or revoked.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/malicious-litelllm-releases-tied-to.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "\"City-Forum\" data-theft attacks target Salesforce, ServiceNow portals",
+        "tldr": "An ongoing data theft campaign, dubbed \"City-Forum,\" is exploiting publicly exposed data on Salesforce Experience Cloud and ServiceNow customer portals. Attackers are using custom tools to scrape sensitive information accessible to anonymous users.",
+        "action": "Review and harden configurations of Salesforce Experience Cloud and ServiceNow customer portals to restrict anonymous access to sensitive data. Monitor portal access logs for unusual data access patterns, large data exports, or queries from unfamiliar IP addresses.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/city-forum-data-theft-attacks-target-salesforce-servicenow-portals/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Android malware combo takes out loans and relays victims' credit cards",
+        "tldr": "A new sophisticated Android malware combination, consisting of the WindRelay NFC relay malware and the SpyNote remote administration tool (RAT), is being used to steal live credit card data and facilitate unauthorized loan applications, leading to significant financial fraud.",
+        "action": "Android users must exercise extreme caution when downloading apps, only using official app stores and verifying developer authenticity. Organizations should implement mobile device management (MDM) solutions and educate users on the risks of suspicious app installations and phishing attempts to protect against mobile malware.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/android-malware-combo-takes-out-loans-and-relays-victims-credit-cards/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
+        "tldr": "The Lazarus group is actively exploiting a Windows zero-day vulnerability, CVE-2026-68820, to gain SYSTEM-level access and deploy backdoors, primarily targeting defense-sector organizations. This allows for full system compromise and persistent presence.",
+        "action": "Immediately apply any available out-of-band patches from Microsoft for CVE-2026-68820. Conduct proactive threat hunting for known Lazarus IoCs and suspicious activity on Windows endpoints, especially within defense-sector networks.",
+        "cve_ids": [
+          "CVE-2026-68820"
+        ],
+        "source_url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft Windows operating systems (refer to Microsoft's official advisory for CVE-2026-68820 for specific versions impacted)",
+        "how_to_determine_impact": "Examine system logs for unusual process creation, privilege escalation attempts (Event IDs 4624, 4672, 4688), or unauthorized network connections. Look for indicators of compromise (IoCs) associated with Lazarus group activity and CVE-2026-68820 specific exploitation patterns.",
+        "tanium_query_hint": "Detect 'Lazarus IoCs' using 'Get Running Processes' and 'Get File Hash' on potentially affected systems. Investigate suspicious SYSTEM-level processes or network connections using 'Get Connections'. Query 'Get Windows Event Log' for privilege escalation attempts or unusual security events.",
+        "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-68820'. Monitor InsightIDR/EDR for endpoint behaviors indicative of Lazarus group TTPs, such as process injection, backdoor deployment, or unusual network communications. Prioritize assets in the defense sector.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers exploit critical Adobe Commerce flaw to hijack customer accounts",
+        "tldr": "Attackers are actively exploiting CVE-2026-71362, a critical vulnerability in Adobe Commerce and Magento, to gain unauthorized access and hijack customer accounts. This could lead to data theft, financial fraud, and reputational damage.",
+        "action": "Immediately apply the latest security patches from Adobe that address CVE-2026-71362 for all Adobe Commerce and Magento installations. Conduct an audit of customer accounts for any signs of unauthorized access or suspicious activity since the disclosure.",
+        "cve_ids": [
+          "CVE-2026-71362"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-adobe-commerce-flaw-to-hijack-customer-accounts/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Adobe Commerce and Magento (specific vulnerable versions are detailed in Adobe's official security advisory for CVE-2026-71362)",
+        "how_to_determine_impact": "Check the version numbers of all deployed Adobe Commerce and Magento instances to confirm if the patch for CVE-2026-71362 has been applied. Review web server and application logs for unusual POST requests, unauthorized API calls, or suspicious login attempts on customer accounts.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to identify machines running 'Adobe Commerce' or 'Magento'. Inspect relevant application files for versions and modifications using 'Get File Version' or 'Get File Hash'. Search web server logs via 'Get Tanium Client Log' for exploitation patterns.",
+        "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-71362'. Perform authenticated web application scans against Adobe Commerce/Magento instances. Monitor web server access logs and application logs in InsightIDR for indicators of exploitation or account takeover attempts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
+        "tldr": "A critical VMware vCenter vulnerability is under active exploitation by attackers to establish persistent remote access to virtualized environments. This compromise can grant broad control over virtual infrastructure.",
+        "action": "Immediately apply all available security patches and updates for VMware vCenter to mitigate the vulnerability. Review vCenter logs, including event logs and audit trails, for signs of compromise, unauthorized access, or the establishment of persistence mechanisms.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "VMware vCenter Server (specific vulnerable versions are detailed in VMware's official security advisory, not explicitly provided in headlines)",
+        "how_to_determine_impact": "Verify current VMware vCenter patch levels. Review vCenter task logs, event logs, and 'Recent Tasks' for any unauthorized administrative actions, suspicious user logins, new user accounts/roles, or unexpected configuration changes. Check for unusual outbound connections from vCenter.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to identify machines running 'VMware vCenter Server'. Check for specific file versions, registry keys, or process names mentioned in VMware advisories. Search 'Get Windows Event Log' (or equivalent for vCenter Appliance) for suspicious access or privilege changes.",
+        "rapid7_query_hint": "Search InsightVM for recent critical 'VMware vCenter' vulnerabilities. Perform authenticated scans against vCenter servers. Monitor network traffic to/from vCenter for anomalous connections. Review SIEM logs for vCenter-related alerts indicating compromise.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
+        "tldr": "Attackers are actively exploiting a SharePoint authentication bypass vulnerability shortly after a public Proof-of-Concept (PoC) was released. This flaw allows unauthorized access to SharePoint resources without proper authentication.",
+        "action": "Immediately apply all available security patches from Microsoft for SharePoint to address this authentication bypass vulnerability. Monitor SharePoint and IIS logs meticulously for any suspicious authentication attempts, unauthorized access, or unusual activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft SharePoint Server (specific vulnerable versions are detailed in Microsoft's official security advisory, not explicitly provided in headlines)",
+        "how_to_determine_impact": "Verify SharePoint server patch levels. Review SharePoint ULS logs, IIS logs, and Windows Security event logs for anomalous authentication successes or failures, especially those that appear to bypass normal authentication mechanisms. Look for unexpected access to sensitive SharePoint sites or data.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to check SharePoint server versions. Utilize 'Get Tanium Client Log' or 'Get Windows Event Log' to search for suspicious authentication events (e.g., Event ID 4624 with unusual logon types or source IPs) on SharePoint servers.",
+        "rapid7_query_hint": "Scan SharePoint servers for known authentication bypass vulnerabilities. Monitor web server logs (IIS) and SIEM for patterns indicative of exploitation attempts or unauthorized access to SharePoint sites. Query for assets running SharePoint services.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
