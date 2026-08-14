@@ -1,51 +1,51 @@
 {
   "breaches": [
     {
-      "title": "Hackers arrested over €30M bank fraud exploiting service provider flaw",
-      "tldr": "Four cybercriminals were arrested for exploiting a vulnerability at a service provider, allowing them to fraudulently withdraw €30 million from Commerzbank customer accounts. This highlights the severe financial impact of supply chain vulnerabilities.",
-      "action": "Review third-party vendor security practices and access to sensitive financial systems. Implement robust monitoring for unusual financial transactions and account activity. Enhance vulnerability management for external service providers.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "RingCentral data breach exposed info of 1.6 million accounts",
-      "tldr": "The ShinyHunters extortion group stole personal information from 1.6 million RingCentral accounts in July. This incident, now confirmed by Have I Been Pwned, represents a significant data breach impacting a large user base.",
-      "action": "Advise affected users to immediately change passwords and enable multi-factor authentication (MFA). Organizations using RingCentral should monitor for suspicious activity, review access logs, and educate employees on potential phishing attempts.",
+      "tldr": "The ShinyHunters extortion group stole personal information from 1.6 million RingCentral accounts in July. This data breach resulted in the exposure of sensitive user data, confirmed by Have I Been Pwned.",
+      "action": "Advise all RingCentral users to immediately reset passwords and enable multi-factor authentication. Organizations leveraging RingCentral should monitor for suspicious activity related to affected accounts and credential stuffing.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/",
       "source": "BleepingComputer"
     },
     {
       "title": "Over 1,000 Charities Hit by Beacon CRM Data Breach",
-      "tldr": "More than 1,000 charities have been affected by a data breach involving the Beacon CRM platform. This incident underscores the risks associated with third-party software and highlights the potential impact on non-profit organizations and their donors.",
-      "action": "Charities utilizing Beacon CRM should immediately review their exposure, inform potentially affected donors and users, and monitor for suspicious activity within their CRM and financial systems. Evaluate third-party vendor security contracts and practices.",
+      "tldr": "More than 1,000 charities have been affected by a data breach impacting Beacon CRM. This compromise likely exposed sensitive donor and operational data for these non-profit organizations.",
+      "action": "Charities using Beacon CRM should immediately investigate their accounts for unauthorized access or data exfiltration. Implement incident response procedures and notify affected individuals as per regulatory requirements.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/over-1000-charities-hit-by-beacon-crm-data-breach/",
       "source": "SecurityWeek"
     },
     {
       "title": "14,000 Trezor Customers Impacted by Data Breach at ShipMonk",
-      "tldr": "Approximately 14,000 customers of Trezor, a cryptocurrency hardware wallet manufacturer, have been impacted by a data breach at ShipMonk, a third-party logistics provider. This breach likely exposed customer data, increasing phishing and social engineering risks.",
-      "action": "Trezor customers should be highly vigilant for phishing attempts or other social engineering attacks that leverage leaked personal information. Review all communications for legitimacy. Organizations should reassess the security posture and data access of all third-party logistics and service providers.",
+      "tldr": "Approximately 14,000 Trezor customers were impacted by a data breach at ShipMonk, a third-party service provider for Trezor. This supply chain incident exposed customer information of the cryptocurrency wallet users.",
+      "action": "Advise Trezor customers to be highly vigilant for phishing attempts using the exposed data. Organizations relying on third-party logistics or fulfillment services must review vendor security practices and data handling agreements.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Trivy, Not LiteLLM Behind the 2,500 Org Compromise",
+      "tldr": "A malicious supply chain attack involving Trivy, not LiteLLM, led to the compromise and data exposure of over 2,500 organizations. This clarification highlights the critical dangers of compromised open-source components in the software supply chain.",
+      "action": "Organizations using Trivy should immediately audit their deployments for signs of compromise and verify the integrity of their Trivy installations. Ensure all instances are updated to verified, legitimate versions and review logs for suspicious activity.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/trivy-not-litellm-behind-the-2500-org-compromise/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Shell investigates 'potential incident' after Clop data theft claims",
-      "tldr": "Oil giant Shell has confirmed it is investigating a potential security incident after the Clop ransomware gang claimed to have stolen 89GB of data. This indicates a significant data breach likely tied to extortion, a common tactic for Clop.",
-      "action": "Enhance monitoring for known Clop ransomware Tactics, Techniques, and Procedures (TTPs), especially data exfiltration activities. Review security measures around sensitive data and critical infrastructure for vulnerabilities exploited by Clop.",
+      "tldr": "Oil giant Shell is investigating a potential security incident following claims by the Clop ransomware gang that they stole 89GB of data. This incident suggests a possible data breach and extortion attempt targeting Shell.",
+      "action": "Organizations should review defenses against Clop ransomware tactics, emphasizing data exfiltration detection and third-party vendor security. Strengthen monitoring for unusual data transfers and access.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-teft-claims/",
       "source": "BleepingComputer"
     },
     {
       "title": "Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt",
-      "tldr": "An Akira ransomware affiliate successfully disabled an endpoint detection and response (EDR) solution by restarting a compromised machine into Safe Mode with Networking. This allowed them to steal data, though they failed to encrypt it.",
-      "action": "Review and harden EDR configurations to ensure resilience against Safe Mode bypasses and service manipulation. Enhance detection capabilities for restarts into Safe Mode with Networking and monitor for suspicious data exfiltration attempts from such states.",
+      "tldr": "An Akira ransomware affiliate successfully bypassed endpoint detection and response (EDR) by rebooting the compromised system into Safe Mode with Networking. They managed to steal data, demonstrating sophisticated evasion techniques, though encryption failed.",
+      "action": "Configure EDR solutions to protect against Safe Mode restarts and enforce strong authentication for Safe Mode access. Implement robust data backup and recovery strategies, alongside enhanced data exfiltration detection mechanisms.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/",
       "source": "BleepingComputer"
@@ -54,63 +54,63 @@
   "vulns": [
     {
       "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
-      "tldr": "The Lazarus group is actively exploiting an unpatched Windows zero-day vulnerability to achieve SYSTEM-level access and deploy backdoors. This indicates a severe privilege escalation risk with ongoing active exploitation by an advanced persistent threat (APT) group.",
-      "action": "Implement strong endpoint detection and response (EDR) solutions with robust behavior monitoring. Enhance monitoring for indicators of compromise (IoCs) related to Lazarus group activity. Prioritize patching Windows systems immediately once a fix is released. Isolate critical systems.",
+      "tldr": "The Lazarus group is actively exploiting a Windows zero-day vulnerability to gain SYSTEM-level access and deploy backdoors. This represents a severe, ongoing threat from an advanced persistent threat actor.",
+      "action": "Monitor all Windows systems for indicators of compromise associated with Lazarus group activity. Implement enhanced endpoint detection and response (EDR) rules to detect unusual process execution and backdoor deployment. Await official Microsoft patch and apply immediately.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Windows (specific versions not publicly detailed due to zero-day nature, but all supported versions are potentially at risk).",
-      "how_to_determine_impact": "Monitor for known Indicators of Compromise (IoCs) associated with the Lazarus group. Look for unexpected SYSTEM-level process creation, suspicious DLL sideloading, or unknown executables in common system directories. Analyze endpoint telemetry for unusual privilege escalation attempts or backdoor deployment patterns.",
-      "tanium_query_hint": "Get Running Processes with Parent Name matches * and Process Name matches * and User Name matches *SYSTEM*. Search for IoCs (file hashes, process names) using 'Get File Hash' or 'Get Process Command Line'. Monitor for new services installed or unusual modifications to system files.",
-      "rapid7_query_hint": "Use InsightIDR to monitor for suspicious process activity and privilege escalation events, especially those impacting SYSTEM accounts. Search for known Lazarus TTPs and IoCs in endpoint data via InsightAgent. Configure alerts for unexpected file modifications in system directories or new service installations.",
+      "affected_versions": "All supported versions of Microsoft Windows are potentially affected due to a zero-day. Refer to Microsoft's official advisories for specific version impacts once disclosed.",
+      "how_to_determine_impact": "Monitor Windows event logs for unusual SYSTEM-level process creation, unauthorized network connections, or unknown files in system directories. Check for known Lazarus TTPs (e.g., specific file hashes, registry modifications, service creations).",
+      "tanium_query_hint": "Get Running Processes with Parent Process 'svchost.exe' and Reputation 'Unknown'. Get File Hash from File Path 'C:\\Windows\\System32\\*.*' with Hash Type 'SHA256'. Look for unusual network connections or newly created services.",
+      "rapid7_query_hint": "Search InsightIDR for 'Lazarus Group' or 'Windows Zero-Day exploit'. Monitor for SYSTEM process anomalies, unauthorized network connections, and new file creations. Review endpoint logs for suspicious activity and known C2 domains/IPs.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Likely 9.8 Critical"
+      "cvss_score": "Estimate: 9.8 Critical"
     },
     {
-      "title": "Max severity SAP Commerce Cloud flaw now targeted in attacks",
-      "tldr": "A maximum-severity remote code execution (RCE) vulnerability in SAP Commerce Cloud, which was patched three days ago, is now being actively targeted in attacks. This confirms rapid weaponization and active exploitation of a critical RCE flaw.",
-      "action": "Urgently apply all available patches for SAP Commerce Cloud instances. Review application and web server logs for signs of compromise, specifically looking for RCE attempts, unauthorized file uploads, or unusual process execution by the web server user.",
+      "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
+      "tldr": "Attackers are actively exploiting a SharePoint authentication bypass vulnerability following the public release of a Proof-of-Concept (PoC). This vulnerability allows unauthorized access to SharePoint resources.",
+      "action": "Immediately apply all available security patches for Microsoft SharePoint. Monitor SharePoint server logs for unusual authentication attempts, unauthorized access, and any suspicious activity indicative of compromise.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "SAP Commerce Cloud (specific vulnerable versions for RCE vulnerability, consult SAP Security Notes for exact details, typically recent versions prior to patch).",
-      "how_to_determine_impact": "Verify all SAP Commerce Cloud installations have the latest security patches. Examine web server and application logs for HTTP requests indicative of RCE attempts, especially unusual POST requests to administrative or application endpoints, or error messages hinting at code execution failures. Monitor for unauthorized file uploads or modifications.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches *SAP Commerce Cloud*. Check for missing SAP Security Notes using 'Get Patch Status' or 'Get Vulnerability Information'. Inspect web server logs for suspicious access patterns and process spawning from web server accounts.",
-      "rapid7_query_hint": "Search InsightVM for 'SAP Commerce Cloud' vulnerabilities and filter by maximum severity (e.g., CVSS 9.8+). Identify assets running these applications and check their current patch level. Configure InsightIDR to alert on RCE exploit attempts against SAP Commerce Cloud web server logs and monitor for unexpected process creation by the web server user.",
+      "affected_versions": "Specific versions of Microsoft SharePoint Server. Refer to Microsoft's official SharePoint security advisories for precise affected versions and associated CVEs.",
+      "how_to_determine_impact": "Check SharePoint server logs for suspicious authentication bypass attempts, unusual access patterns to sensitive content, or unauthorized account creations. Verify that relevant security patches are installed on all SharePoint instances.",
+      "tanium_query_hint": "Get Installed Patches with Name 'SharePoint' and Patch Status from all relevant machines. Check for suspicious process activity related to SharePoint services (e.g., w3wp.exe) or unusual network connections.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Microsoft SharePoint authentication bypass' or 'SharePoint exploit' in InsightVM. Filter assets by relevant installed software and scan for unpatched systems. Inspect SharePoint server logs for unusual access.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
-      "title": "Hackers Exploiting Unpatched GeoServer Zero-Day",
-      "tldr": "Hackers are actively exploiting an unpatched zero-day vulnerability in GeoServer, a popular open-source server for sharing geospatial data. This means systems running GeoServer are at immediate risk of compromise, likely leading to remote code execution.",
-      "action": "Implement network segmentation for GeoServer instances. Monitor for suspicious activity, unexpected network connections, or unusual process execution originating from GeoServer. Prepare to apply patches as soon as they are released. Consider temporary disablement or removal of public access if feasible and critical.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/hackers-exploiting-unpatched-geoserver-zero-day/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "GeoServer (specific versions not provided, but all unpatched installations are at risk).",
-      "how_to_determine_impact": "Inspect GeoServer application logs for unusual requests, especially those indicating attempts to execute commands or upload malicious files. Monitor for unexpected network connections originating from the GeoServer process or unusual CPU/memory spikes. Check for unauthorized file system changes within the GeoServer installation directory.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches *GeoServer*. Get Running Processes and Network Connections from these machines to detect suspicious activity. Use 'Get File Hash' for critical GeoServer files to check for integrity.",
-      "rapid7_query_hint": "Identify GeoServer installations using InsightVM asset searches. Monitor network traffic to/from GeoServer for anomalies (e.g., unusual ports, large outbound data transfers). Configure InsightIDR to alert on suspicious process activity or unusual access patterns within GeoServer application logs.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Likely 9.8 Critical"
+      "cvss_score": "Estimate: 9.8 Critical"
     },
     {
       "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
-      "tldr": "Adobe has released critical security patches for three vulnerabilities, each with a CVSS score of 10.0, affecting ColdFusion and Campaign Classic products. These flaws typically represent unauthenticated remote code execution or other severe impacts.",
-      "action": "Immediately apply all available patches for Adobe ColdFusion and Campaign Classic instances. Prioritize systems accessible from the internet. Verify patch installation and review logs for any signs of exploitation attempts prior to patching.",
+      "tldr": "Adobe has released critical patches for three maximum severity vulnerabilities (CVSS 10.0) affecting its ColdFusion and Campaign Classic products. These flaws pose a severe risk, including potential for remote code execution.",
+      "action": "Immediately apply all available security updates for Adobe ColdFusion and Campaign Classic installations. Prioritize these updates due to the maximum severity CVSS score and potential for full system compromise.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Adobe ColdFusion (e.g., ColdFusion 2023 Update 5 and earlier, ColdFusion 2018 Update 19 and earlier) and Adobe Campaign Classic (e.g., v8 and v7). Consult Adobe's official security bulletins for exact affected versions.",
-      "how_to_determine_impact": "Check the installed versions of Adobe ColdFusion and Campaign Classic against Adobe's official security advisories. Ensure that all listed critical patches have been successfully applied. Review application logs for any signs of exploitation attempts that may have occurred before patching.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches *Adobe ColdFusion* or *Adobe Campaign Classic*. Use 'Get Patch Status' or 'Get Hotfixes' to verify the presence of the latest Adobe security updates. Check 'Get File Version' for core application binaries to confirm updates.",
-      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'Adobe ColdFusion' and 'Adobe Campaign Classic', specifically filtering for CVSS 10.0. Identify assets running these applications and their current patch level. Use InsightAgent to check application file versions and configurations against vendor best practices.",
+      "affected_versions": "Adobe ColdFusion and Campaign Classic. Refer to Adobe's official security advisories for specific affected versions and patch details, which will include associated CVEs.",
+      "how_to_determine_impact": "Identify all instances of Adobe ColdFusion and Campaign Classic within the environment. Verify the installed version and ensure all critical patches specified in Adobe's advisories have been successfully applied.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Adobe ColdFusion' or 'Adobe Campaign Classic' and Version. Check for the presence of specific patch files or registry keys as indicated in Adobe's advisory.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Adobe ColdFusion' or 'Adobe Campaign Classic' with a CVSS score of 10.0. Filter assets by relevant installed software and scan for unpatched systems using a vulnerability scanner.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
+    },
+    {
+      "title": "Max severity SAP Commerce Cloud flaw now targeted in attacks",
+      "tldr": "A maximum-severity remote code execution vulnerability in SAP Commerce Cloud, recently patched, is now actively being targeted in attacks. Threat intelligence indicates immediate exploitation post-disclosure, demanding urgent attention.",
+      "action": "Urgently apply all available patches for SAP Commerce Cloud. Conduct an immediate forensic investigation for any signs of compromise if patches were not applied promptly after disclosure.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Specific versions of SAP Commerce Cloud affected by the maximum severity RCE flaw. Refer to SAP's security advisories for precise details on affected versions and the associated CVE.",
+      "how_to_determine_impact": "Identify all SAP Commerce Cloud deployments and verify if the latest security patches have been applied. Check system logs for unauthorized access attempts, unusual process execution, or file modifications immediately after the patch disclosure.",
+      "tanium_query_hint": "N/A (SAP Commerce Cloud is typically a cloud-hosted or complex web application environment; direct endpoint queries may not apply. Focus on platform-level monitoring and vendor-specific tools.)",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'SAP Commerce Cloud' and 'arbitrary code execution' in InsightVM. Scan relevant cloud instances if applicable via cloud integration and check for signs of active compromise using web application scanning.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Estimate: 9.8 Critical"
     }
   ],
   "insurance": [],
@@ -10431,6 +10431,31 @@
         "rapid7_query_hint": "Identify GeoServer installations using InsightVM asset searches. Monitor network traffic to/from GeoServer for anomalies (e.g., unusual ports, large outbound data transfers). Configure InsightIDR to alert on suspicious process activity or unusual access patterns within GeoServer application logs.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Likely 9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Trivy, Not LiteLLM Behind the 2,500 Org Compromise",
+        "tldr": "A malicious supply chain attack involving Trivy, not LiteLLM, led to the compromise and data exposure of over 2,500 organizations. This clarification highlights the critical dangers of compromised open-source components in the software supply chain.",
+        "action": "Organizations using Trivy should immediately audit their deployments for signs of compromise and verify the integrity of their Trivy installations. Ensure all instances are updated to verified, legitimate versions and review logs for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/trivy-not-litellm-behind-the-2500-org-compromise/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
+        "tldr": "Attackers are actively exploiting a SharePoint authentication bypass vulnerability following the public release of a Proof-of-Concept (PoC). This vulnerability allows unauthorized access to SharePoint resources.",
+        "action": "Immediately apply all available security patches for Microsoft SharePoint. Monitor SharePoint server logs for unusual authentication attempts, unauthorized access, and any suspicious activity indicative of compromise.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Specific versions of Microsoft SharePoint Server. Refer to Microsoft's official SharePoint security advisories for precise affected versions and associated CVEs.",
+        "how_to_determine_impact": "Check SharePoint server logs for suspicious authentication bypass attempts, unusual access patterns to sensitive content, or unauthorized account creations. Verify that relevant security patches are installed on all SharePoint instances.",
+        "tanium_query_hint": "Get Installed Patches with Name 'SharePoint' and Patch Status from all relevant machines. Check for suspicious process activity related to SharePoint services (e.g., w3wp.exe) or unusual network connections.",
+        "rapid7_query_hint": "Search for vulnerabilities related to 'Microsoft SharePoint authentication bypass' or 'SharePoint exploit' in InsightVM. Filter assets by relevant installed software and scan for unpatched systems. Inspect SharePoint server logs for unusual access.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Estimate: 9.8 Critical",
         "category": "vulns"
       }
     ]
