@@ -1,43 +1,51 @@
 {
   "breaches": [
     {
-      "title": "737 Chrome VPN Extensions Caught Routing Traffic Through Proxies. Check If You Have One",
-      "tldr": "Over 700 malicious Chrome VPN extensions have been discovered covertly routing user traffic through unauthorized proxies. This practice bypasses privacy and security, potentially exposing sensitive user data and internet activity.",
-      "action": "Users must immediately audit and remove all suspicious or untrusted VPN extensions from their Chrome browsers. Rely only on reputable VPN services and scrutinize permissions granted to any new browser extensions.",
+      "title": "RingCentral data breach exposed info of 1.6 million accounts",
+      "tldr": "The ShinyHunters extortion group breached RingCentral in July, stealing personal information from 1.6 million accounts. The data breach notification service Have I Been Pwned confirmed the incident.",
+      "action": "Organizations using RingCentral should monitor for credential stuffing attacks or phishing attempts targeting their users. Advise affected users to reset passwords and enable MFA.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/737-chrome-vpn-extensions-caught.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Over 1,000 Charities Hit by Beacon CRM Data Breach",
+      "tldr": "A data breach impacting Beacon CRM has affected over 1,000 charities. Details on the type of data stolen were not immediately available, but CRM breaches typically expose donor and constituent information.",
+      "action": "Organizations using Beacon CRM should urgently contact the vendor for details on the breach, identify if their data was compromised, and notify affected constituents as required by law.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/over-1000-charities-hit-by-beacon-crm-data-breach/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "14,000 Trezor Customers Impacted by Data Breach at ShipMonk",
+      "tldr": "A data breach at third-party logistics provider ShipMonk has impacted 14,000 customers of hardware wallet maker Trezor. The breach likely exposed customer shipping information.",
+      "action": "Trezor customers should be alert for phishing attempts using their shipping details. Organizations using ShipMonk should assess their third-party risk management and data sharing agreements.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/",
+      "source": "SecurityWeek"
     },
     {
       "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
-      "tldr": "Malicious versions of the LiteLLM library, implicated in a supply chain attack targeting Trivy, are believed to have compromised data from over 2,100 organizations. This indicates a severe software supply chain integrity breach leading to widespread data exposure.",
-      "action": "Conduct an urgent audit of all development projects for the presence and versions of the LiteLLM library. Verify the cryptographic signatures and integrity of all software dependencies, sourcing them only from trusted and verified repositories.",
+      "tldr": "Malicious releases of the LiteLLM library, linked to a compromise involving Trivy, may have led to data exposure for over 2,100 organizations. This indicates a supply chain attack scenario.",
+      "action": "Organizations using LiteLLM or Trivy should audit their supply chain dependencies, verify the integrity of installed packages, and review logs for suspicious activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Hackers breach govt webmail while running parallel crypto fraud",
-      "tldr": "The Jewelbug hacker group has compromised government webmail systems for espionage purposes, while simultaneously engaging in cryptocurrency fraud. This demonstrates a multi-pronged attack strategy targeting both sensitive information and financial gain.",
-      "action": "All government and critical infrastructure webmail portals must enforce multi-factor authentication (MFA) and strict access control policies. Implement advanced threat detection to monitor for unusual login patterns, data exfiltration, and suspicious financial transaction activities.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-breach-govt-webmail-while-running-parallel-crypto-fraud/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Trezor discloses data breach affecting nearly 14,000 customers",
-      "tldr": "Hardware wallet provider Trezor announced a data breach affecting approximately 14,000 customers, originating from a compromise at their shipping partner, ShipMonk. This highlights the critical importance of third-party vendor security in the supply chain.",
-      "action": "Trezor customers should be immediately vigilant for phishing attempts leveraging their shipping or personal information. Organizations must rigorously assess and monitor the cybersecurity posture of all third-party suppliers and logistics providers.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/trezor-discloses-data-breach-affecting-nearly-14-000-customers/",
-      "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
+      "title": "Shell investigates 'potential incident' after Clop data theft claims",
+      "tldr": "Oil giant Shell is investigating a security incident following claims by the Clop ransomware gang that they stole 89GB of data. This suggests a potential MOVEit-related incident or similar data exfiltration.",
+      "action": "Organizations should review their network logs for suspicious data exfiltration, ensure robust endpoint detection, and confirm backup integrity. Prepare incident response plans for potential extortion.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt",
-      "tldr": "An Akira ransomware affiliate successfully bypassed endpoint detection and response (EDR) solutions by rebooting a compromised system into Safe Mode with Networking. Although data was exfiltrated, the encryption payload failed to execute, preventing full ransomware impact.",
-      "action": "Enhance EDR configurations to prevent bypass techniques, specifically those involving Safe Mode restarts or system alterations. Ensure robust network segmentation, immutable offline backups, and continuous monitoring for unusual boot modes and data egress.",
+      "tldr": "An Akira ransomware affiliate bypassed endpoint detection and response (EDR) by rebooting systems into Safe Mode with Networking to steal data. While encryption failed, data exfiltration occurred.",
+      "action": "Review EDR configurations to ensure effectiveness in Safe Mode environments. Implement robust network segmentation and enforce least privilege access to prevent unauthorized reboots and data exfiltration.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/",
       "source": "BleepingComputer"
@@ -46,65 +54,63 @@
   "vulns": [
     {
       "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
-      "tldr": "The Lazarus group is actively exploiting a previously unknown Windows zero-day vulnerability to achieve SYSTEM-level privileges and deploy persistent backdoors. This allows for complete control and long-term espionage capabilities on affected systems.",
-      "action": "Immediately apply all available Microsoft security patches, prioritizing any out-of-band releases. Deploy advanced endpoint detection and response (EDR) rules to detect and block suspicious processes with SYSTEM access and unexpected backdoor-like network communications.",
+      "tldr": "The Lazarus group is actively exploiting a Windows zero-day vulnerability to achieve SYSTEM-level privileges and deploy backdoors. This allows for full control over compromised systems.",
+      "action": "Immediately identify and patch all Windows systems, especially servers and critical workstations, as soon as a patch is available. Monitor for suspicious processes running with SYSTEM privileges.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Windows (all unpatched versions are likely vulnerable until a specific advisory is released, consult Microsoft for details).",
-      "how_to_determine_impact": "Monitor for unusual process creation with SYSTEM privileges, unexpected outbound network connections from system processes, and the presence of new executables or DLLs in system directories. Perform memory forensics for injected code.",
-      "tanium_query_hint": "Get running processes with parent process matches 'svchost.exe' and reputation is unknown",
-      "rapid7_query_hint": "Use InsightIDR to query for unusual SYSTEM process creations, unexpected network connections, or file modifications in sensitive Windows directories. Monitor for IOCs associated with Lazarus Group activity.",
+      "affected_versions": "Windows operating systems (specific versions not specified in headline, assume broad impact until patch details emerge)",
+      "how_to_determine_impact": "Monitor for unusual process execution, especially those attempting privilege escalation or deploying new services. Look for indicators of compromise (IoCs) related to Lazarus group activity.",
+      "tanium_query_hint": "Get Running Processes with 'Parent Process Name' equals 'explorer.exe' and 'User Name' equals 'SYSTEM' for anomalous entries; Get 'DLLs Loaded by Process' for common backdoor filenames.",
+      "rapid7_query_hint": "Search for 'process.parent_process.name='explorer.exe' AND process.user.name='SYSTEM'' in InsightIDR for anomalies. Check for new services or scheduled tasks created post-compromise.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
-      "title": "Critical VMware vCenter RCE flaw exploited for reverse SSH access",
-      "tldr": "A critical remote code execution (RCE) vulnerability, identified as CVE-2026-59310, in VMware vCenter Syslog Server is under active exploitation. Attackers are leveraging this flaw to deploy reverse SSH tunnels, gaining persistent remote access to compromised environments.",
-      "action": "Apply the patch for CVE-2026-59310 to all VMware vCenter Syslog Server instances without delay. Implement strict network segmentation for vCenter, monitor network traffic for outbound SSH connections, and review logs for signs of compromise.",
-      "cve_ids": [
-        "CVE-2026-59310"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/",
+      "title": "Max severity SAP Commerce Cloud flaw now targeted in attacks",
+      "tldr": "A maximum-severity remote code execution (RCE) vulnerability in SAP Commerce Cloud, recently patched, is now actively being exploited in the wild. Unauthenticated attackers can execute arbitrary code.",
+      "action": "Immediately apply the latest security patches for SAP Commerce Cloud. Isolate vulnerable systems from the internet if patching is not possible immediately. Scan for signs of compromise.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "VMware vCenter Syslog Server (specific vulnerable versions should be identified via VMware's official security advisory for CVE-2026-59310).",
-      "how_to_determine_impact": "Verify the patch status for CVE-2026-59310 on all vCenter Syslog Servers. Inspect server logs for unexpected process execution, unauthorized modifications, or unusual outbound network connections (especially to port 22).",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches 'VMware vCenter Syslog Server'",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-59310'. In InsightIDR, query for outbound SSH connections originating from vCenter Syslog Servers or suspicious user activity on these systems.",
+      "affected_versions": "SAP Commerce Cloud (specific vulnerable versions not detailed, but refers to a recently patched flaw)",
+      "how_to_determine_impact": "Check SAP Commerce Cloud instance patch levels. Review server logs for unusual requests to sensitive endpoints or unexpected process execution from the web server.",
+      "tanium_query_hint": "Get 'Installed Applications' with 'Application Name' like 'SAP Commerce Cloud' and check 'Version'. Look for suspicious files in web server directories or unexpected outbound connections from the SAP server.",
+      "rapid7_query_hint": "Search for 'vulnerability.id' containing 'SAP Commerce Cloud RCE' (or specific CVE if available). Query asset inventory for SAP Commerce Cloud installations and their patch status.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "10.0 Critical"
     },
     {
-      "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
-      "tldr": "Attackers are actively exploiting a critical authentication bypass vulnerability in Microsoft SharePoint, following the public release of a Proof-of-Concept (PoC). This allows unauthorized access to SharePoint environments, potentially leading to data exfiltration or further system compromise.",
-      "action": "Immediately apply all available security patches for Microsoft SharePoint, prioritizing any out-of-band releases addressing authentication bypass flaws. Implement stringent network access controls, limiting access to SharePoint servers from untrusted networks and monitoring for unusual authentication attempts.",
+      "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
+      "tldr": "Adobe has released patches for three critical vulnerabilities, all with a CVSS score of 10.0, affecting ColdFusion and Campaign Classic products. These flaws could allow remote code execution.",
+      "action": "Apply all available security updates for Adobe ColdFusion and Campaign Classic immediately. Prioritize systems exposed to the internet.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+      "source_url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint (all unpatched versions are likely vulnerable; refer to Microsoft's official security advisories for specific impacted versions and patches).",
-      "how_to_determine_impact": "Review SharePoint server logs for unusual authentication patterns, unauthenticated access attempts to sensitive resources, or unexpected modifications by unprivileged users. Verify SharePoint version against vendor advisories.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'SharePoint'",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID related to 'Microsoft SharePoint Authentication Bypass'. In InsightIDR, monitor SharePoint logs for signs of successful authentication bypass or suspicious file access.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "active_exploitation": false,
+      "affected_versions": "Adobe ColdFusion and Adobe Campaign Classic (specific vulnerable versions not detailed in headline, consult Adobe security bulletins)",
+      "how_to_determine_impact": "Check Adobe ColdFusion and Campaign Classic installation versions against Adobe's official security advisories to determine if affected versions are present.",
+      "tanium_query_hint": "Get 'Installed Applications' with 'Application Name' contains 'Adobe ColdFusion' or 'Adobe Campaign Classic' and check 'Version' against Adobe's patches.",
+      "rapid7_query_hint": "Search for 'vulnerability.title' containing 'Adobe ColdFusion' or 'Adobe Campaign Classic' and filter by 'severity=critical' in InsightVM. Check asset inventory for affected software versions.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "10.0 Critical"
     },
     {
-      "title": "Adobe Commerce Bug Targeted Immediately After Disclosure",
-      "tldr": "A critical vulnerability in Adobe Commerce is being actively targeted by threat actors immediately after its public disclosure. This rapid weaponization poses an imminent threat to e-commerce platforms using Adobe Commerce, potentially leading to data theft or website defacement.",
-      "action": "Apply the latest security patches for Adobe Commerce without delay. Implement and configure Web Application Firewall (WAF) rules to mitigate known exploitation patterns and monitor web server logs for suspicious requests indicative of this vulnerability's exploitation.",
+      "title": "Microsoft patches LegacyHive Windows zero-day vulnerability",
+      "tldr": "Microsoft has released security patches for a Windows zero-day vulnerability named \"LegacyHive\" following its disclosure after the July 2026 Patch Tuesday. The nature of the vulnerability is likely privilege escalation or remote code execution.",
+      "action": "Immediately deploy the latest Microsoft security updates to all Windows systems to mitigate the \"LegacyHive\" zero-day vulnerability.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/adobe-commerce-bug-targeted-immediately-after-disclosure/",
-      "source": "SecurityWeek",
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Adobe Commerce (specific vulnerable versions should be identified via Adobe's official security bulletin; assume all unpatched versions).",
-      "how_to_determine_impact": "Check Adobe Commerce system versions against Adobe's latest security advisories. Inspect web server and application logs for unusual HTTP requests, error messages, or unauthorized command execution attempts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches 'Adobe Commerce'",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID related to 'Adobe Commerce RCE'. Deploy WAF rules based on vendor guidance and monitor web access logs in InsightIDR for signs of exploitation.",
+      "affected_versions": "Windows operating systems (specific versions not detailed in headline, consult Microsoft's advisory for affected OS versions)",
+      "how_to_determine_impact": "Verify that all Windows systems have applied the latest July 2026 (or subsequent, if applicable) security updates. Unpatched systems are vulnerable.",
+      "tanium_query_hint": "Get 'Installed Patches' from all Windows endpoints and check for the presence of the patch related to 'LegacyHive' (by KB number, once available from Microsoft).",
+      "rapid7_query_hint": "Search for 'vulnerability.title' containing 'LegacyHive' or filter by recent Microsoft Patch Tuesday vulnerabilities (July 2026). Check patch status of Windows assets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.0 High (Estimated for a zero-day allowing SYSTEM access)"
     }
   ],
   "insurance": [],
@@ -10280,6 +10286,126 @@
         "rapid7_query_hint": "Search InsightVM for vulnerability ID related to 'Adobe Commerce RCE'. Deploy WAF rules based on vendor guidance and monitor web access logs in InsightIDR for signs of exploitation.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-08-14": [
+      {
+        "title": "RingCentral data breach exposed info of 1.6 million accounts",
+        "tldr": "The ShinyHunters extortion group breached RingCentral in July, stealing personal information from 1.6 million accounts. The data breach notification service Have I Been Pwned confirmed the incident.",
+        "action": "Organizations using RingCentral should monitor for credential stuffing attacks or phishing attempts targeting their users. Advise affected users to reset passwords and enable MFA.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Over 1,000 Charities Hit by Beacon CRM Data Breach",
+        "tldr": "A data breach impacting Beacon CRM has affected over 1,000 charities. Details on the type of data stolen were not immediately available, but CRM breaches typically expose donor and constituent information.",
+        "action": "Organizations using Beacon CRM should urgently contact the vendor for details on the breach, identify if their data was compromised, and notify affected constituents as required by law.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/over-1000-charities-hit-by-beacon-crm-data-breach/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "14,000 Trezor Customers Impacted by Data Breach at ShipMonk",
+        "tldr": "A data breach at third-party logistics provider ShipMonk has impacted 14,000 customers of hardware wallet maker Trezor. The breach likely exposed customer shipping information.",
+        "action": "Trezor customers should be alert for phishing attempts using their shipping details. Organizations using ShipMonk should assess their third-party risk management and data sharing agreements.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
+        "tldr": "Malicious releases of the LiteLLM library, linked to a compromise involving Trivy, may have led to data exposure for over 2,100 organizations. This indicates a supply chain attack scenario.",
+        "action": "Organizations using LiteLLM or Trivy should audit their supply chain dependencies, verify the integrity of installed packages, and review logs for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Shell investigates 'potential incident' after Clop data theft claims",
+        "tldr": "Oil giant Shell is investigating a security incident following claims by the Clop ransomware gang that they stole 89GB of data. This suggests a potential MOVEit-related incident or similar data exfiltration.",
+        "action": "Organizations should review their network logs for suspicious data exfiltration, ensure robust endpoint detection, and confirm backup integrity. Prepare incident response plans for potential extortion.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Akira hackers disable EDR with Safe Mode, steal data but fail to encrypt",
+        "tldr": "An Akira ransomware affiliate bypassed endpoint detection and response (EDR) by rebooting systems into Safe Mode with Networking to steal data. While encryption failed, data exfiltration occurred.",
+        "action": "Review EDR configurations to ensure effectiveness in Safe Mode environments. Implement robust network segmentation and enforce least privilege access to prevent unauthorized reboots and data exfiltration.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/akira-hackers-disable-edr-with-safe-mode-steal-data-but-fail-to-encrypt/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
+        "tldr": "The Lazarus group is actively exploiting a Windows zero-day vulnerability to achieve SYSTEM-level privileges and deploy backdoors. This allows for full control over compromised systems.",
+        "action": "Immediately identify and patch all Windows systems, especially servers and critical workstations, as soon as a patch is available. Monitor for suspicious processes running with SYSTEM privileges.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Windows operating systems (specific versions not specified in headline, assume broad impact until patch details emerge)",
+        "how_to_determine_impact": "Monitor for unusual process execution, especially those attempting privilege escalation or deploying new services. Look for indicators of compromise (IoCs) related to Lazarus group activity.",
+        "tanium_query_hint": "Get Running Processes with 'Parent Process Name' equals 'explorer.exe' and 'User Name' equals 'SYSTEM' for anomalous entries; Get 'DLLs Loaded by Process' for common backdoor filenames.",
+        "rapid7_query_hint": "Search for 'process.parent_process.name='explorer.exe' AND process.user.name='SYSTEM'' in InsightIDR for anomalies. Check for new services or scheduled tasks created post-compromise.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Max severity SAP Commerce Cloud flaw now targeted in attacks",
+        "tldr": "A maximum-severity remote code execution (RCE) vulnerability in SAP Commerce Cloud, recently patched, is now actively being exploited in the wild. Unauthenticated attackers can execute arbitrary code.",
+        "action": "Immediately apply the latest security patches for SAP Commerce Cloud. Isolate vulnerable systems from the internet if patching is not possible immediately. Scan for signs of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "SAP Commerce Cloud (specific vulnerable versions not detailed, but refers to a recently patched flaw)",
+        "how_to_determine_impact": "Check SAP Commerce Cloud instance patch levels. Review server logs for unusual requests to sensitive endpoints or unexpected process execution from the web server.",
+        "tanium_query_hint": "Get 'Installed Applications' with 'Application Name' like 'SAP Commerce Cloud' and check 'Version'. Look for suspicious files in web server directories or unexpected outbound connections from the SAP server.",
+        "rapid7_query_hint": "Search for 'vulnerability.id' containing 'SAP Commerce Cloud RCE' (or specific CVE if available). Query asset inventory for SAP Commerce Cloud installations and their patch status.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
+        "tldr": "Adobe has released patches for three critical vulnerabilities, all with a CVSS score of 10.0, affecting ColdFusion and Campaign Classic products. These flaws could allow remote code execution.",
+        "action": "Apply all available security updates for Adobe ColdFusion and Campaign Classic immediately. Prioritize systems exposed to the internet.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Adobe ColdFusion and Adobe Campaign Classic (specific vulnerable versions not detailed in headline, consult Adobe security bulletins)",
+        "how_to_determine_impact": "Check Adobe ColdFusion and Campaign Classic installation versions against Adobe's official security advisories to determine if affected versions are present.",
+        "tanium_query_hint": "Get 'Installed Applications' with 'Application Name' contains 'Adobe ColdFusion' or 'Adobe Campaign Classic' and check 'Version' against Adobe's patches.",
+        "rapid7_query_hint": "Search for 'vulnerability.title' containing 'Adobe ColdFusion' or 'Adobe Campaign Classic' and filter by 'severity=critical' in InsightVM. Check asset inventory for affected software versions.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Microsoft patches LegacyHive Windows zero-day vulnerability",
+        "tldr": "Microsoft has released security patches for a Windows zero-day vulnerability named \"LegacyHive\" following its disclosure after the July 2026 Patch Tuesday. The nature of the vulnerability is likely privilege escalation or remote code execution.",
+        "action": "Immediately deploy the latest Microsoft security updates to all Windows systems to mitigate the \"LegacyHive\" zero-day vulnerability.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Windows operating systems (specific versions not detailed in headline, consult Microsoft's advisory for affected OS versions)",
+        "how_to_determine_impact": "Verify that all Windows systems have applied the latest July 2026 (or subsequent, if applicable) security updates. Unpatched systems are vulnerable.",
+        "tanium_query_hint": "Get 'Installed Patches' from all Windows endpoints and check for the presence of the patch related to 'LegacyHive' (by KB number, once available from Microsoft).",
+        "rapid7_query_hint": "Search for 'vulnerability.title' containing 'LegacyHive' or filter by recent Microsoft Patch Tuesday vulnerabilities (July 2026). Check patch status of Windows assets.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 High (Estimated for a zero-day allowing SYSTEM access)",
         "category": "vulns"
       }
     ]
