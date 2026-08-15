@@ -2,42 +2,42 @@
   "breaches": [
     {
       "title": "RingCentral data breach exposed info of 1.6 million accounts",
-      "tldr": "The ShinyHunters extortion group breached RingCentral in July, compromising personal information from 1.6 million accounts. This data breach has led to the exposure of sensitive user information.",
-      "action": "Organizations and individuals using RingCentral should be aware of potential phishing attempts targeting exposed data. RingCentral users should reset passwords and enable multi-factor authentication. Organizations should monitor for any use of RingCentral credentials in other breaches.",
+      "tldr": "The ShinyHunters extortion group breached RingCentral in July, stealing personal information from 1.6 million accounts. This data exposure was confirmed by Have I Been Pwned.",
+      "action": "RingCentral users should immediately change passwords for their accounts and any reused credentials. Enable multi-factor authentication (MFA) on all critical services. Organizations using RingCentral should assess the impact on their users and inform them accordingly.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/",
       "source": "BleepingComputer"
     },
     {
+      "title": "Trivy, Not LiteLLM Behind the 2,500 Org Compromise",
+      "tldr": "It has been clarified that Trivy, a popular open-source vulnerability scanner, not LiteLLM, was the software behind a recent supply chain compromise that impacted approximately 2,500 organizations. This indicates that malicious versions of Trivy were distributed, leading to data exposure or system compromise.",
+      "action": "Organizations using Trivy should immediately verify the integrity and authenticity of their Trivy installations, ensuring they are not running compromised versions. Audit systems that have used affected Trivy versions for potential data exfiltration or compromise. Consult official Trivy advisories for specific indicators of compromise (IOCs) and remediation steps.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/trivy-not-litellm-behind-the-2500-org-compromise/",
+      "source": "SecurityWeek"
+    },
+    {
       "title": "Over 1,000 Charities Hit by Beacon CRM Data Breach",
-      "tldr": "Over 1,000 charities have been affected by a data breach impacting Beacon CRM. This incident likely resulted in the exposure of donor and operational data for these non-profit organizations.",
-      "action": "Charities using Beacon CRM should contact the vendor for details on the breach, identify affected data, and notify impacted individuals as required. Implement enhanced monitoring for suspicious activity related to donor information and financial transactions.",
+      "tldr": "More than 1,000 charities have been affected by a data breach impacting Beacon CRM, a customer relationship management platform. This incident likely exposed sensitive donor and operational data belonging to these non-profit organizations.",
+      "action": "Charities utilizing Beacon CRM should immediately contact the vendor for full details regarding the breach, including the scope and nature of the exposed data. Prepare to notify affected individuals (donors, volunteers, staff) as required by data protection regulations. Review and enhance their overall cybersecurity posture, especially regarding third-party vendor access and data handling.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/over-1000-charities-hit-by-beacon-crm-data-breach/",
       "source": "SecurityWeek"
     },
     {
-      "title": "14,000 Trezor Customers Impacted by Data Breach at ShipMonk",
-      "tldr": "Approximately 14,000 customers of the cryptocurrency hardware wallet provider Trezor have been impacted by a data breach at ShipMonk, a third-party fulfillment partner. This likely exposed shipping and contact information.",
-      "action": "Trezor customers who used ShipMonk for orders should be vigilant against phishing and social engineering attacks. Trezor should communicate transparently with affected customers and review third-party vendor security practices.",
+      "title": "Hackers arrested over €30M bank fraud exploiting service provider flaw",
+      "tldr": "Four cybercriminals were arrested in Brazil, and three others were charged in Europe, over allegations that they exploited a vulnerability at a service provider. This flaw allowed them to illegally withdraw over €30 million from Commerzbank customers' bank accounts, highlighting significant financial fraud potential through supply chain compromise.",
+      "action": "Organizations, especially financial institutions, must conduct rigorous security audits of all third-party service providers. Implement strict access controls and continuous monitoring for suspicious activity on systems connected to third-party services. Enhance fraud detection mechanisms and transaction monitoring systems to identify and prevent similar large-scale financial breaches.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Trivy, Not LiteLLM Behind the 2,500 Org Compromise",
-      "tldr": "It has been clarified that Trivy, not LiteLLM, was behind a software supply chain compromise that impacted approximately 2,500 organizations. This indicates a broader and more significant supply chain breach through the Trivy security scanner.",
-      "action": "Immediately review all development and CI/CD pipelines for the presence of Trivy. Verify the integrity of installed Trivy versions. If a compromised version is detected, quarantine affected systems, investigate for data exposure or further infection, and roll back to a known clean state.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/trivy-not-litellm-behind-the-2500-org-compromise/",
-      "source": "SecurityWeek"
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/",
+      "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
       "title": "Shell investigates 'potential incident' after Clop data theft claims",
-      "tldr": "Oil giant Shell is investigating a potential security incident following claims by the Clop ransomware gang that they stole 89GB of data. This indicates a likely data exfiltration incident, possibly as part of an extortion attempt.",
-      "action": "Review all systems and data repositories for signs of unauthorized access or data exfiltration. Enhance data loss prevention (DLP) monitoring. Implement robust backups and incident response plans.",
+      "tldr": "Oil giant Shell has confirmed it is investigating a potential security incident after the notorious Clop ransomware gang claimed it stole 89GB of data from the company. While a full ransomware encryption attack is not explicitly stated, data theft by Clop typically precedes extortion demands.",
+      "action": "Organizations should reinforce their defenses against common ransomware attack vectors, including patching critical vulnerabilities, enforcing multi-factor authentication (MFA), and maintaining robust, segmented backups. Review logs for any indicators of compromise (IOCs) associated with Clop operations and monitor for signs of data exfiltration or unusual network activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/",
       "source": "BleepingComputer"
@@ -46,61 +46,61 @@
   "vulns": [
     {
       "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
-      "tldr": "The Lazarus group is actively exploiting a Windows zero-day vulnerability to achieve SYSTEM-level access on compromised machines. This exploitation allows them to deploy backdoors, establishing persistent unauthorized control.",
-      "action": "Immediately apply any emergency patches released by Microsoft for Windows. Implement enhanced endpoint detection and response (EDR) monitoring for unusual process creation, privilege escalation, and network connections from Windows systems. Review system logs for signs of backdoor deployment.",
+      "tldr": "The Lazarus group, a state-sponsored threat actor, is actively exploiting a previously unknown Windows zero-day vulnerability. This allows them to achieve SYSTEM-level access on compromised machines and deploy persistent backdoors, enabling full control over affected systems.",
+      "action": "Immediately monitor official Microsoft security advisories for patches related to this zero-day. Until patches are available, implement robust endpoint detection and response (EDR) solutions, enable attack surface reduction rules, and actively monitor for suspicious processes or network connections originating from Windows systems, especially those attempting to gain SYSTEM privileges.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Windows - specific vulnerable versions and components need to be identified based on official Microsoft advisories for the exploited zero-day.",
-      "how_to_determine_impact": "Monitor Windows systems for unusual privilege escalation events, new services, or suspicious network connections. Check for indicators of compromise (IOCs) released by threat intelligence providers related to Lazarus group activity and the specific zero-day. Use EDR solutions to detect backdoor deployment.",
-      "tanium_query_hint": "Get running processes from all machines with Computer Name matches 'Windows' and filter for suspicious parent-child relationships or unknown executables. Check Tanium Threat Response for Lazarus group IOCs.",
-      "rapid7_query_hint": "Search InsightIDR for privilege escalation alerts or suspicious process activity on Windows assets. Run an authenticated scan against Windows hosts for any new vulnerabilities related to recent zero-days.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
-      "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
-      "tldr": "Attackers are actively exploiting a critical vulnerability in VMware vCenter, allowing them to gain persistent remote access to compromised systems. This provides a significant foothold within virtualized environments.",
-      "action": "Immediately identify all VMware vCenter servers. Apply relevant patches from VMware as a matter of urgency. Isolate vulnerable systems and investigate for signs of compromise, including unauthorized accounts, persistent backdoors, or unusual network connections.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "VMware vCenter - specific vulnerable versions need to be identified from VMware's official security advisories.",
-      "how_to_determine_impact": "Check all VMware vCenter servers for patch levels. Review vCenter logs for suspicious activity, including new user accounts, modified configurations, or unauthorized access attempts. Look for IOCs released by threat intelligence providers related to this exploit.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'VMware vCenter' then filter by version. Get Tanium Comply Results for VMware products. Check network connections from vCenter servers for unusual outbound traffic.",
-      "rapid7_query_hint": "Scan assets for VMware vCenter vulnerabilities. Search InsightVM for vulnerability IDs related to recent VMware exploits. Monitor network traffic from vCenter servers for anomalous behavior.",
+      "affected_versions": "Undisclosed Windows versions affected by the zero-day; monitor official Microsoft advisories for specific patch information and affected build numbers.",
+      "how_to_determine_impact": "Review endpoint logs for indicators of compromise (IOCs) associated with Lazarus group activities, such as specific file hashes, process behaviors (e.g., unexpected SYSTEM-level processes), or unusual network connections. Ensure all Windows systems are up-to-date with security patches as soon as they are released.",
+      "tanium_query_hint": "Get Windows Security Patch Status from all machines. Search 'Get Running Processes' for unusual processes. Deploy EDR sensors to all Windows endpoints for real-time monitoring of process execution and file system changes. Investigate 'Get Process Ancestry' for suspicious parent-child relationships.",
+      "rapid7_query_hint": "Monitor InsightIDR for alerts on new SYSTEM-level processes, unusual program executions, or lateral movement attempts. Perform credential compromise checks. Scan endpoints with InsightAgent for known Lazarus IOCs, anomalous user behavior, and privilege escalation attempts.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Max severity SAP Commerce Cloud flaw now targeted in attacks",
-      "tldr": "A maximum-severity remote code execution (RCE) vulnerability in SAP Commerce Cloud, recently patched, is now actively being targeted in attacks. Threat intelligence company Defused confirmed this immediate exploitation.",
-      "action": "Immediately verify all SAP Commerce Cloud instances are patched to the latest secure versions. If patching was recent, conduct a forensic investigation for signs of compromise *before* the patch was applied. Implement strict network segmentation and WAF rules.",
+      "tldr": "A maximum-severity remote code execution (RCE) vulnerability in SAP Commerce Cloud, which was patched just three days ago, is now being actively targeted in attacks. This vulnerability could allow unauthenticated attackers to execute arbitrary code on affected e-commerce platforms, leading to severe compromise.",
+      "action": "Immediately apply all available security patches for SAP Commerce Cloud. Prioritize patching internet-facing instances. Until patched, isolate vulnerable SAP Commerce Cloud instances from public access or implement strong network access controls. Review web server logs, application logs, and system logs for any signs of attempted exploitation or compromise, such as unusual HTTP requests or unexpected process execution.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SAP Commerce Cloud - specific vulnerable versions need to be identified from SAP's official security advisories for the maximum-severity RCE vulnerability.",
-      "how_to_determine_impact": "Check SAP Commerce Cloud patch levels. Review application and system logs for unauthorized access, unusual process execution, or file modifications. Consult SAP's security notes for detection methods and IOCs released by Defused or other threat intelligence providers.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'SAP Commerce Cloud' then filter by version. Check process lists for unknown or suspicious processes on SAP servers. Monitor network connections from SAP servers for unusual outbound traffic.",
-      "rapid7_query_hint": "Scan assets for SAP Commerce Cloud vulnerabilities. Search InsightVM for vulnerability IDs related to recent SAP advisories. Monitor logs for unauthenticated access attempts to critical SAP services and any associated Indicators of Compromise.",
+      "affected_versions": "SAP Commerce Cloud; specific vulnerable versions should be obtained from SAP's official security advisories. This is a follow-up to a patch released 'three days ago' prior to this report.",
+      "how_to_determine_impact": "Identify all SAP Commerce Cloud deployments within your environment. Confirm the installed version and patch level against SAP's security notes to verify vulnerability status. Look for indicators of compromise (IOCs) such as web shell deployment, unexpected file modifications, unusual process execution, or unauthorized data access on Commerce servers.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches SAP Commerce Cloud. Check 'Get Open Ports' for unexpected listeners. Use 'Get Running Processes' to detect unusual processes or web shells. Investigate 'Get File Details' for recently modified or suspicious files in web directories.",
+      "rapid7_query_hint": "Perform authenticated scans of SAP Commerce Cloud instances to confirm patch status. Search InsightVM for vulnerability checks related to SAP Commerce Cloud RCE. Monitor web server logs and application logs for suspicious activity, including requests to unusual paths, command execution attempts, or unauthorized access attempts.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
+      "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
+      "tldr": "Attackers are actively exploiting a critical vulnerability in VMware vCenter Server to gain persistent remote access to affected virtualization infrastructure. This compromise can provide attackers with control over virtual machines and underlying host systems.",
+      "action": "Immediately apply all available security patches for VMware vCenter Server. Review vCenter logs for suspicious activity, including unusual login attempts, unauthorized access from unknown IP addresses, or unexpected configuration changes. Ensure strong access controls and multi-factor authentication are enforced for all vCenter administrators.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "VMware vCenter Server; specific vulnerable versions need to be confirmed via VMware's official security advisories. Consult VMware's knowledge base for the latest patch information.",
+      "how_to_determine_impact": "Identify all VMware vCenter Server instances in your environment. Check current patch levels against VMware's security bulletins. Review vCenter access logs, task and event logs for unauthorized activity, unexpected configuration changes, new user accounts, or modified permissions. Look for unusual network connections originating from vCenter.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches VMware vCenter. Check 'Get Network Connections' for unusual outgoing connections from vCenter servers. Review 'Get User Accounts' and 'Get Local Group Memberships' for new or modified privileged accounts on vCenter servers. 'Get Event Log' for login failures or security events.",
+      "rapid7_query_hint": "Perform an authenticated scan on vCenter servers to identify missing patches or known vulnerabilities. Monitor InsightIDR for alerts on suspicious vCenter activity, new user creations, unusual logins, or privilege escalation attempts. Review firewall and IDS/IPS logs for inbound connections to vCenter on non-standard ports.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
       "title": "Hackers Exploiting Unpatched GeoServer Zero-Day",
-      "tldr": "Hackers are actively exploiting an unpatched zero-day vulnerability in GeoServer. This presents an immediate and severe risk for organizations using GeoServer, as attackers can compromise the system without a publicly available patch.",
-      "action": "Identify all GeoServer installations immediately. Implement temporary mitigation strategies such as network segmentation, strict access controls, or Web Application Firewall (WAF) rules to protect GeoServer instances. Monitor for IOCs and prepare for an emergency patch.",
+      "tldr": "Hackers are actively exploiting an unpatched zero-day vulnerability in GeoServer, a popular open-source server for sharing geospatial data. This poses a significant and immediate risk to organizations using GeoServer, potentially allowing unauthorized access or data manipulation.",
+      "action": "Organizations using GeoServer should immediately apply any available vendor patches or follow recommended mitigation steps provided by the GeoServer project or relevant security advisories. Until a patch is released, restrict public access to GeoServer instances as much as possible and monitor for signs of compromise, such as unusual file access, unauthorized data changes, or suspicious process execution.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/hackers-exploiting-unpatched-geoserver-zero-day/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "GeoServer - specific vulnerable versions affected by the unpatched zero-day. Consult vendor advisories or threat intelligence for specific details as they emerge.",
-      "how_to_determine_impact": "Check all GeoServer deployments for signs of compromise, including unauthorized access, unusual process activity, or unexpected file modifications. Monitor network traffic for anomalous connections to or from GeoServer instances.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'GeoServer' then filter by version. Get Running Processes from GeoServer hosts and look for suspicious activity. Get Tanium Threat Response for IOCs related to GeoServer exploits.",
-      "rapid7_query_hint": "Scan assets for GeoServer installations. Monitor network and host logs for any signs of exploitation, such as unusual process execution or outbound connections. Leverage threat intelligence for IOCs related to the GeoServer zero-day.",
+      "affected_versions": "GeoServer; specific vulnerable versions should be identified from official GeoServer advisories once a patch or CVE is released. Assume recent versions are at risk until proven otherwise.",
+      "how_to_determine_impact": "Identify all GeoServer instances within your infrastructure. Review GeoServer application logs, web server logs, and underlying operating system logs for unusual process execution, unexpected new files, or outbound network connections to unknown destinations. Monitor for unexpected data access or modification within the geospatial data stores.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Application Name matches GeoServer. Check 'Get Network Connections' and 'Get Running Processes' for anomalies on GeoServer hosts, looking for unusual processes or outbound connections. Investigate 'Get File Details' for recently modified or suspicious files in GeoServer directories.",
+      "rapid7_query_hint": "Perform authenticated scans of GeoServer instances to identify potential compromise (e.g., presence of web shells or malicious files). Monitor InsightIDR for alerts related to GeoServer hosts, looking for unusual activity, unauthorized file modifications, or suspicious network flows.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     }
@@ -10560,6 +10560,15 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
         "category": "vulns"
+      },
+      {
+        "title": "Hackers arrested over €30M bank fraud exploiting service provider flaw",
+        "tldr": "Four cybercriminals were arrested in Brazil, and three others were charged in Europe, over allegations that they exploited a vulnerability at a service provider. This flaw allowed them to illegally withdraw over €30 million from Commerzbank customers' bank accounts, highlighting significant financial fraud potential through supply chain compromise.",
+        "action": "Organizations, especially financial institutions, must conduct rigorous security audits of all third-party service providers. Implement strict access controls and continuous monitoring for suspicious activity on systems connected to third-party services. Enhance fraud detection mechanisms and transaction monitoring systems to identify and prevent similar large-scale financial breaches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-arrested-over-30m-bank-fraud-exploiting-service-provider-flaw/",
+        "source": "BleepingComputer",
+        "category": "breaches"
       }
     ]
   }
