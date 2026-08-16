@@ -1,43 +1,43 @@
 {
   "breaches": [
     {
+      "title": "Trivy, Not LiteLLM Behind the 2,500 Org Compromise",
+      "tldr": "It has been clarified that a supply chain compromise involving Trivy, rather than LiteLLM, is responsible for exposing over 2,500 organizations. Malicious packages within Trivy led to widespread data exposure and potential further compromise.",
+      "action": "If your organization uses Trivy, immediately verify the integrity of your installations and scan for any malicious packages. Conduct a thorough investigation on systems that have used Trivy for signs of compromise or data exfiltration.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/trivy-not-litellm-behind-the-2500-org-compromise/",
+      "source": "SecurityWeek"
+    },
+    {
       "title": "RingCentral data breach exposed info of 1.6 million accounts",
-      "tldr": "The ShinyHunters extortion group compromised RingCentral in July, leading to the theft of personal information from 1.6 million accounts. This data breach has been confirmed by Have I Been Pwned.",
-      "action": "Users of RingCentral should immediately reset their passwords and enable multi-factor authentication. Organizations should review their use of RingCentral and monitor for account takeover attempts and suspicious activity.",
+      "tldr": "The ShinyHunters extortion group successfully breached RingCentral, leading to the exposure of personal information belonging to 1.6 million customer accounts. This incident highlights the ongoing risk of third-party breaches impacting user data.",
+      "action": "Advise all affected users to immediately reset their passwords for RingCentral and any other accounts where credentials may have been reused. Actively monitor for sophisticated phishing attempts leveraging this exposed data. Review access controls and security logs for any integrations with RingCentral services.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/",
       "source": "BleepingComputer"
     },
     {
       "title": "Over 1,000 Charities Hit by Beacon CRM Data Breach",
-      "tldr": "More than 1,000 charitable organizations have been affected by a data breach targeting Beacon CRM. This compromise likely exposed sensitive donor and operational data, posing risks for affected non-profits.",
-      "action": "Organizations using Beacon CRM should immediately contact the vendor for breach details, assess the extent of their data exposure, and prepare to notify affected constituents. Implement stronger access controls and review third-party security.",
+      "tldr": "More than 1,000 charitable organizations have been affected by a data breach related to Beacon CRM. This incident likely resulted in the exposure of sensitive donor and operational data for a significant number of non-profit entities.",
+      "action": "Organizations utilizing Beacon CRM should monitor for official breach notifications from the vendor and review their security posture, paying close attention to data access logs. All organizations should assess the security risks associated with their third-party CRM providers.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/over-1000-charities-hit-by-beacon-crm-data-breach/",
       "source": "SecurityWeek"
     },
     {
       "title": "14,000 Trezor Customers Impacted by Data Breach at ShipMonk",
-      "tldr": "Approximately 14,000 customers of Trezor, a hardware wallet provider, have been impacted by a data breach at ShipMonk, a third-party logistics partner. This breach likely exposed customer shipping and contact information.",
-      "action": "Trezor customers should be highly vigilant for phishing attempts or other social engineering scams targeting their personal information. Organizations should review the security posture of their third-party logistics partners.",
+      "tldr": "A data breach at ShipMonk, a third-party logistics provider, has impacted approximately 14,000 customers of the cryptocurrency hardware wallet manufacturer, Trezor. This incident could expose affected individuals to targeted phishing attempts, especially concerning their cryptocurrency assets.",
+      "action": "Trezor customers who used ShipMonk for order fulfillment should be extremely vigilant against phishing scams, particularly those related to cryptocurrency. Organizations relying on third-party logistics or fulfillment services must conduct thorough security assessments of their vendors to mitigate supply chain risks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/14000-trezor-customers-impacted-by-data-breach-at-shipmonk/",
       "source": "SecurityWeek"
-    },
-    {
-      "title": "Trivy, Not LiteLLM Behind the 2,500 Org Compromise",
-      "tldr": "Malicious releases related to a supply chain attack involving Trivy, not LiteLLM as initially reported, may have resulted in the exposure of data from over 2,100 organizations. This indicates a significant compromise affecting downstream users.",
-      "action": "Organizations using Trivy or affected components should immediately assess their deployments for signs of compromise, verify the integrity of their installed packages, and review logs for unauthorized data access or unusual activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
-      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
       "title": "Shell investigates 'potential incident' after Clop data theft claims",
-      "tldr": "Oil giant Shell is investigating a potential security incident following claims by the Clop ransomware gang that they stole 89GB of data. This suggests a significant data exfiltration event, likely part of an extortion campaign.",
-      "action": "Organizations should review their data exfiltration detection and prevention capabilities. Ensure robust data backup and recovery strategies are in place and monitor for similar claims from ransomware groups targeting their industry peers.",
+      "tldr": "Oil and gas giant Shell is currently investigating a potential security incident following claims by the Clop ransomware group that they stole 89GB of data from the company. This indicates a high likelihood of a significant data breach resulting from an extortion or ransomware-related attack.",
+      "action": "Enhance monitoring for Indicators of Compromise (IOCs) and Tactics, Techniques, and Procedures (TTPs) associated with the Clop ransomware group. Review third-party vendor access and security, as Clop frequently exploits supply chain vulnerabilities. Ensure robust data backup and recovery strategies are in place and regularly tested.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/shell-investigates-potential-incident-after-clop-data-theft-claims/",
       "source": "BleepingComputer"
@@ -46,63 +46,63 @@
   "vulns": [
     {
       "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
-      "tldr": "The Lazarus group is actively exploiting a newly discovered Windows zero-day vulnerability to achieve SYSTEM-level access on compromised systems. This zero-day allows them to deploy backdoors, indicating sophisticated and targeted attacks with severe implications.",
-      "action": "Monitor systems for indicators of compromise associated with Lazarus group activities. Prepare for an out-of-band patch release from Microsoft and apply all available Windows security updates immediately. Implement EDR solutions to detect advanced threats.",
+      "tldr": "The North Korean-backed Lazarus group is actively exploiting a previously unknown Windows zero-day vulnerability to achieve SYSTEM-level privileges on compromised systems. This allows them to deploy persistent backdoors, posing an extreme threat to affected environments.",
+      "action": "Implement immediate and aggressive threat hunting across all Windows endpoints for any indicators of compromise related to Lazarus group TTPs or known backdoor signatures. Prepare for emergency patching as soon as Microsoft releases an official fix for this zero-day vulnerability.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Windows (specific vulnerable versions not provided, assume widely affected; apply all latest security updates)",
-      "how_to_determine_impact": "Scrutinize Windows event logs for unusual process creation, privilege escalation attempts, or network connections to known Lazarus infrastructure. Use EDR solutions to detect backdoor deployment and C2 communications.",
-      "tanium_query_hint": "Get Running Processes with Parent Process Name equals 'explorer.exe' and Process Name not in known_legitimate_processes or Get Registry Value[HKLM\\SYSTEM\\CurrentControlSet\\Services\\*\\ImagePath] to look for suspicious services.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Windows Zero-Day SYSTEM Access' or monitor for privilege escalation activity via InsightIDR. Utilize custom alerts for suspicious process execution patterns or file modifications.",
+      "affected_versions": "Microsoft Windows (specific vulnerable versions not specified, as it's a zero-day)",
+      "how_to_determine_impact": "Monitor Windows event logs for unusual SYSTEM-level process creation, suspicious network connections to unknown IP addresses, or the presence of new, unrecognized executables. Utilize EDR/XDR solutions to detect Lazarus group activity or known backdoor deployment patterns.",
+      "tanium_query_hint": "Get Running Processes from all machines with 'Parent Process Name' contains 'SYSTEM' and 'Command Line' not contains legitimate Windows executables. Get Network Connections where 'Remote IP Address' is suspicious or matches known Lazarus IOCs.",
+      "rapid7_query_hint": "Perform an InsightVM scan for critical Windows vulnerabilities, even if not yet formally disclosed. Query InsightIDR for any alerts related to SYSTEM-level privilege escalation, suspicious process execution, or known Lazarus group indicators of compromise (IOCs).",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
-      "tldr": "Adobe has released critical security patches for three vulnerabilities in ColdFusion and Campaign Classic, all rated with a maximum CVSS score of 10.0. These flaws are extremely severe and could allow for arbitrary code execution, requiring immediate attention.",
-      "action": "Immediately apply the latest security patches from Adobe for all ColdFusion and Campaign Classic installations. Prioritize these updates due to the maximum CVSS score and potential for unauthenticated remote code execution.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Adobe ColdFusion and Campaign Classic (specific vulnerable versions not provided, apply all latest patches)",
-      "how_to_determine_impact": "Check current patch levels of all Adobe ColdFusion and Adobe Campaign Classic instances against Adobe's official security bulletins. Verify that the latest cumulative updates and hotfixes are applied.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name contains 'Adobe ColdFusion' or 'Adobe Campaign Classic' and compare versions against Adobe's security advisories.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Adobe ColdFusion' or 'Adobe Campaign Classic' with CVSS score 10.0 in InsightVM. Utilize vulnerability assessments to identify unpatched assets.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
-      "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
-      "tldr": "Attackers are actively exploiting a VMware vCenter vulnerability to establish persistent remote access to affected systems. This allows for long-term control of critical virtual infrastructure and potential data exfiltration or further compromise.",
-      "action": "Immediately identify and patch all VMware vCenter installations. Review vCenter logs for signs of unauthorized access, unusual activity, new user accounts, or backdoors. Restrict network exposure of vCenter instances.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "VMware vCenter Server (specific vulnerable versions not provided, apply latest security updates)",
-      "how_to_determine_impact": "Check vCenter server patch levels against official VMware security advisories. Look for suspicious activity in vCenter logs, such as new users, unauthorized configuration changes, or unusual network connections emanating from vCenter.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name contains 'VMware vCenter Server' and verify patch status. Look for unexpected processes or network connections on vCenter hosts.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'VMware vCenter Remote Access' or identify unpatched vCenter assets in InsightVM. Monitor vCenter servers via InsightAgent for suspicious process activity or network flows.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated, given zero-day, SYSTEM access, and active exploitation by an APT group)"
     },
     {
       "title": "Max severity SAP Commerce Cloud flaw now targeted in attacks",
-      "tldr": "A maximum-severity remote code execution vulnerability in SAP Commerce Cloud, which was recently patched, is now actively being targeted by attackers. This confirms the critical need for immediate patching for all affected instances.",
-      "action": "Immediately apply the latest security patches from SAP for all SAP Commerce Cloud installations. Prioritize this update, as active exploitation has been confirmed. Review logs for any signs of compromise or unauthorized activity.",
+      "tldr": "A critical, maximum-severity remote code execution (RCE) vulnerability in SAP Commerce Cloud, for which a patch was recently released, is now actively being targeted in real-world attacks. This rapid exploitation underscores the extreme urgency of applying the available patch.",
+      "action": "IMMEDIATELY apply all available patches for SAP Commerce Cloud. Conduct an urgent, thorough scan for compromise on all SAP Commerce Cloud instances and other SAP systems, looking for any signs of RCE or unauthorized activity. Monitor SAP system logs continuously for suspicious behavior.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SAP Commerce Cloud (specific vulnerable versions not provided, apply latest patches)",
-      "how_to_determine_impact": "Check SAP Commerce Cloud systems for patch levels against SAP security advisories. Review system and application logs for unusual activity, unauthorized file creation, or unexpected process execution, particularly from web-facing components.",
-      "tanium_query_hint": "Get Installed Applications with Application Name contains 'SAP Commerce Cloud' and verify current version/patch level. Monitor for unusual process activity or network connections from SAP servers.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'SAP Commerce Cloud arbitrary code execution' or unpatched SAP assets in InsightVM. Monitor web server logs and application logs for indicators of active exploitation attempts.",
+      "affected_versions": "SAP Commerce Cloud (specific vulnerable versions not specified; patch released)",
+      "how_to_determine_impact": "Identify all SAP Commerce Cloud deployments within your environment. Verify that the latest patches have been successfully applied. Check SAP system logs and application server logs for any indicators of compromise, such as unexpected process creation, unauthorized file modifications, or unusual network connections.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'SAP Commerce Cloud'. Review system logs for unauthorized executables or services. Monitor network activity for unusual outbound connections from SAP servers.",
+      "rapid7_query_hint": "Scan SAP Commerce Cloud instances for known vulnerabilities and ensure all critical patches are applied. Monitor InsightIDR for any alerts related to RCE attempts or suspicious activity on SAP systems.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "10.0 Critical (As stated 'Max severity')"
+    },
+    {
+      "title": "Hackers Exploiting Unpatched GeoServer Zero-Day",
+      "tldr": "Hackers are actively exploiting an unpatched zero-day vulnerability in GeoServer. This poses a significant and immediate risk for organizations using GeoServer, as it could lead to system compromise and unauthorized data access.",
+      "action": "Identify all GeoServer instances within your infrastructure. Implement network segmentation and strict access controls around GeoServer deployments to limit potential exploitation. Monitor continuously for any signs of exploitation and prepare for emergency patching once a fix becomes available from the vendor.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/hackers-exploiting-unpatched-geoserver-zero-day/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "GeoServer (specific vulnerable versions not specified, affects an unpatched zero-day)",
+      "how_to_determine_impact": "Check GeoServer application logs and underlying server logs for suspicious activity, unauthorized file access, or unusual process execution. Monitor network connections to and from GeoServer for signs of data exfiltration or command-and-control communication.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'GeoServer'. Review process activity and network connections on GeoServer hosts for anomalies, particularly unexpected outbound connections or high CPU/memory usage.",
+      "rapid7_query_hint": "Scan GeoServer instances for known vulnerabilities. Monitor InsightIDR for any alerts related to GeoServer compromise, suspicious process activity, or unauthorized network traffic patterns.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, given unpatched zero-day and active exploitation)"
+    },
+    {
+      "title": "Adobe Commerce Bug Targeted Immediately After Disclosure",
+      "tldr": "A critical vulnerability in Adobe Commerce is being actively targeted by attackers almost immediately after its disclosure. This rapid exploitation highlights the severe risk and the urgent need for organizations to apply patches to protect their e-commerce platforms.",
+      "action": "Apply all available patches for Adobe Commerce without delay. Conduct a thorough and immediate investigation for any signs of compromise or unauthorized access on affected systems. Pay close attention to web server logs and application logs for unusual activity.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/adobe-commerce-bug-targeted-immediately-after-disclosure/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Adobe Commerce (specific vulnerable versions not specified; affects a recently disclosed bug)",
+      "how_to_determine_impact": "Identify all Adobe Commerce deployments within your environment. Verify that all applicable patches have been installed. Check web server access logs and application logs for suspicious requests, unusual activity, unauthorized file modifications, or new user accounts created immediately following the disclosure date.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Adobe Commerce'. Review web server access logs (e.g., Apache, Nginx) and application logs for indicators of exploitation, such as unexpected POST requests or file uploads.",
+      "rapid7_query_hint": "Scan Adobe Commerce instances for known vulnerabilities. Monitor web application firewalls (WAFs) and IDS/IPS for exploitation attempts. Check for unauthorized changes in application directories or database entries.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, given immediate targeting after disclosure, likely RCE or similar critical impact)"
     }
   ],
   "insurance": [],
@@ -10695,6 +10695,38 @@
         "rapid7_query_hint": "Search for vulnerabilities related to 'SAP Commerce Cloud arbitrary code execution' or unpatched SAP assets in InsightVM. Monitor web server logs and application logs for indicators of active exploitation attempts.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Exploiting Unpatched GeoServer Zero-Day",
+        "tldr": "Hackers are actively exploiting an unpatched zero-day vulnerability in GeoServer. This poses a significant and immediate risk for organizations using GeoServer, as it could lead to system compromise and unauthorized data access.",
+        "action": "Identify all GeoServer instances within your infrastructure. Implement network segmentation and strict access controls around GeoServer deployments to limit potential exploitation. Monitor continuously for any signs of exploitation and prepare for emergency patching once a fix becomes available from the vendor.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/hackers-exploiting-unpatched-geoserver-zero-day/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "GeoServer (specific vulnerable versions not specified, affects an unpatched zero-day)",
+        "how_to_determine_impact": "Check GeoServer application logs and underlying server logs for suspicious activity, unauthorized file access, or unusual process execution. Monitor network connections to and from GeoServer for signs of data exfiltration or command-and-control communication.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'GeoServer'. Review process activity and network connections on GeoServer hosts for anomalies, particularly unexpected outbound connections or high CPU/memory usage.",
+        "rapid7_query_hint": "Scan GeoServer instances for known vulnerabilities. Monitor InsightIDR for any alerts related to GeoServer compromise, suspicious process activity, or unauthorized network traffic patterns.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, given unpatched zero-day and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Adobe Commerce Bug Targeted Immediately After Disclosure",
+        "tldr": "A critical vulnerability in Adobe Commerce is being actively targeted by attackers almost immediately after its disclosure. This rapid exploitation highlights the severe risk and the urgent need for organizations to apply patches to protect their e-commerce platforms.",
+        "action": "Apply all available patches for Adobe Commerce without delay. Conduct a thorough and immediate investigation for any signs of compromise or unauthorized access on affected systems. Pay close attention to web server logs and application logs for unusual activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/adobe-commerce-bug-targeted-immediately-after-disclosure/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Adobe Commerce (specific vulnerable versions not specified; affects a recently disclosed bug)",
+        "how_to_determine_impact": "Identify all Adobe Commerce deployments within your environment. Verify that all applicable patches have been installed. Check web server access logs and application logs for suspicious requests, unusual activity, unauthorized file modifications, or new user accounts created immediately following the disclosure date.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Adobe Commerce'. Review web server access logs (e.g., Apache, Nginx) and application logs for indicators of exploitation, such as unexpected POST requests or file uploads.",
+        "rapid7_query_hint": "Scan Adobe Commerce instances for known vulnerabilities. Monitor web application firewalls (WAFs) and IDS/IPS for exploitation attempts. Check for unauthorized changes in application directories or database entries.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, given immediate targeting after disclosure, likely RCE or similar critical impact)",
         "category": "vulns"
       }
     ]
