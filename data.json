@@ -2,50 +2,50 @@
   "breaches": [
     {
       "title": "French tax authority data breach affects 678,000 individuals",
-      "tldr": "The French Ministry of the Economy and Finance disclosed a data breach affecting 678,000 individuals. An attacker accessed the General Directorate of Public Finances (DGFiP) systems and stole personal data.",
-      "action": "Monitor dark web for data associated with French citizens' tax information. Review access logs for DGFiP systems if applicable to your organization's interactions with them. Educate users on potential phishing campaigns leveraging this data.",
+      "tldr": "The French Ministry of the Economy and Finance has disclosed a data breach after an attacker accessed the General Directorate of Public Finances (DGFiP) systems and stole data belonging to 678,000 individuals. This incident highlights the need for robust security measures in government institutions handling sensitive citizen data.",
+      "action": "Review and enhance data loss prevention (DLP) strategies for sensitive personal identifiable information (PII). Implement stricter access controls and continuous monitoring for government-related data systems. Conduct regular penetration testing and vulnerability assessments to identify potential entry points.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/french-tax-authority-data-breach-affects-678-000-individuals/",
       "source": "BleepingComputer"
     },
     {
       "title": "SafePal data breach impacts 39,798 customers, stolen info for sale",
-      "tldr": "Cryptocurrency hardware wallet provider SafePal reported a data breach impacting approximately 39,798 customers. A flaw was exploited to steal customer order information, which is now being offered for sale by a threat actor.",
-      "action": "Customers of SafePal should be alerted to potential phishing attempts and scams leveraging their order information. Monitor relevant dark web forums for the sale of this data. Review security protocols for customer order systems.",
+      "tldr": "Cryptocurrency hardware wallet provider SafePal is warning of a data breach affecting about 39,798 customers after a flaw was exploited to steal customer order information. A threat actor is now claiming to be selling the stolen data, raising concerns about potential phishing or further exploitation of affected individuals.",
+      "action": "Customers should be advised to monitor for suspicious activity, particularly if they had order information with SafePal. Organizations should review third-party vendor security posture, especially for those handling customer PII and financial data. Implement multi-factor authentication and strong password policies across all customer-facing platforms.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/safepal-data-breach-impacts-39-798-customers-stolen-info-for-sale/",
       "source": "BleepingComputer"
     },
     {
       "title": "Fortune 500 Companies Hit in Azure Data Theft Campaign",
-      "tldr": "A data theft campaign has targeted Fortune 500 companies, compromising data stored within Azure environments. Specific details on the nature of the data or the attack vector are not immediately available.",
-      "action": "Review Azure environment security configurations, focusing on access controls, logging, and monitoring for suspicious activity. Ensure multi-factor authentication is enforced for all Azure access. Conduct a thorough audit of Azure-stored data.",
+      "tldr": "Multiple Fortune 500 companies have been impacted by a data theft campaign targeting their Azure environments. While specific vulnerabilities are not detailed, this indicates a significant compromise of corporate data stored within Microsoft's cloud infrastructure.",
+      "action": "Organizations utilizing Azure should immediately review access logs for unusual activity and strengthen Identity and Access Management (IAM) policies. Implement robust data loss prevention (DLP) controls and enhance monitoring for suspicious data egress within their Azure tenants. Regularly audit cloud configurations and adhere to least privilege principles.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/fortune-500-companies-hit-in-azure-data-theft-campaign/",
       "source": "SecurityWeek"
     },
     {
-      "title": "1.6 Million Likely Impacted by RingCentral Data Breach",
-      "tldr": "Communication platform provider RingCentral is believed to have suffered a data breach affecting approximately 1.6 million individuals. Details regarding the type of data stolen and the breach method are currently emerging.",
-      "action": "If your organization uses RingCentral, assess potential exposure and notify users to be vigilant against phishing and social engineering attacks. Review any integrations with RingCentral for unusual activity.",
+      "title": "How MCP Servers Can Expose Enterprise Secrets",
+      "tldr": "Model Context Protocol (MCP) servers can inadvertently expose enterprise secrets due to issues like plaintext configuration files, over-permissioned access, and prompt injection vulnerabilities. This risk is exacerbated as organizations integrate more AI agents, creating significant security gaps that often go unnoticed.",
+      "action": "Audit MCP server configurations for plaintext credentials and sensitive data exposure. Review and enforce least privilege principles for access to MCP servers and related resources. Implement prompt injection defenses for AI agents and conduct regular security assessments of AI-integrated systems to identify and mitigate these risks.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/1-6-million-likely-impacted-by-ringcentral-data-breach/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/08/how-mcp-servers-can-expose-enterprise.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
       "title": "Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware",
-      "tldr": "A suspected China-nexus threat actor is exploiting a VMware vCenter vulnerability to deploy a Babuk-derived ransomware variant. This indicates sophisticated attackers leveraging known or zero-day flaws for ransomware operations.",
-      "action": "Immediately identify and patch all VMware vCenter installations. Implement strong network segmentation for vCenter servers and restrict access to management interfaces. Review for indicators of compromise related to Babuk ransomware.",
+      "tldr": "A suspected China-nexus threat actor is exploiting a VMware vCenter vulnerability to deploy a Babuk-derived ransomware variant. This sophisticated attack chain involves initial access through a critical flaw, leading to the widespread deployment of ransomware across affected environments.",
+      "action": "Immediately patch all VMware vCenter instances to the latest secure versions to remediate known vulnerabilities. Implement stringent network segmentation to isolate vCenter servers and other critical infrastructure. Enhance endpoint detection and response (EDR) monitoring for suspicious activity, especially any signs of ransomware deployment or lateral movement from vCenter servers.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html",
       "source": "The Hacker News"
     },
     {
       "title": "Philips and GE investigating Clop ransomware data theft claims",
-      "tldr": "Tech giants General Electric (GE) and Philips are actively investigating claims made by the Clop ransomware gang. Clop claims to have breached their systems and exfiltrated sensitive data, indicating a potential supply chain impact.",
-      "action": "Organizations that are customers or partners of Philips or GE should monitor for unusual activity stemming from these connections. Implement strict data access policies and regularly audit third-party access to sensitive systems.",
+      "tldr": "Tech giants General Electric (GE) and Philips are actively investigating claims made by the Clop ransomware gang regarding breaches of their systems and subsequent data theft. This suggests a potential double extortion ransomware attack, where data exfiltration precedes or accompanies encryption demands.",
+      "action": "Companies should review their incident response plans for ransomware and data exfiltration, especially if they use software known to be vulnerable to Clop's typical attack vectors. Implement robust data backup and recovery strategies, alongside enhanced network monitoring for signs of data exfiltration. Strengthen perimeter defenses and continuously train employees on phishing and social engineering threats.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/",
       "source": "BleepingComputer"
@@ -53,68 +53,70 @@
   ],
   "vulns": [
     {
-      "title": "Critical SAP Commerce Cloud Vulnerability Exploited 3 Days After Disclosure",
-      "tldr": "A critical vulnerability, CVE-2026-58231, in SAP Commerce Cloud is being actively exploited in the wild, mere days after its patch was released. Attackers are quickly leveraging this flaw for illicit access.",
-      "action": "Immediately apply the latest security patches for SAP Commerce Cloud to address CVE-2026-58231. Scan your environment for any indicators of compromise related to this exploitation, especially if patches were not applied promptly.",
-      "cve_ids": [
-        "CVE-2026-58231"
-      ],
-      "source_url": "https://www.securityweek.com/critical-sap-commerce-cloud-vulnerability-exploited-3-days-after-disclosure/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "SAP Commerce Cloud versions affected by CVE-2026-58231. Consult SAP security advisories for exact version ranges.",
-      "how_to_determine_impact": "Check SAP Commerce Cloud patch levels. Review application logs for unusual activity, unauthorized access attempts, or new user accounts/modifications around the time of the vulnerability disclosure.",
-      "tanium_query_hint": "Get Tanium Patch Compliance Status for 'SAP Commerce Cloud' or 'Get Installed Applications' filtering for 'SAP Commerce Cloud' versions against known vulnerable ranges. Look for unusual network connections from SAP servers.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-58231' in InsightVM. Use InsightIDR to query for suspicious logins or process executions on assets running SAP Commerce Cloud.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Recent macOS Screen Sharing Vulnerability Exploited in Attacks",
-      "tldr": "A recently disclosed vulnerability in Apple macOS Screen Sharing is actively being exploited on internet-exposed Macs. Attackers are leveraging this flaw to install Monero cryptocurrency miners, indicating resource hijacking.",
-      "action": "Disable macOS Screen Sharing on all internet-exposed Macs unless absolutely necessary. If required, restrict access to trusted IP ranges and use strong, unique passwords. Patch macOS to the latest available version.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/recent-macos-screen-sharing-vulnerability-exploited-in-attacks/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Specific vulnerable versions of macOS and Screen Sharing service. Users should update to the latest macOS version released after the vulnerability disclosure.",
-      "how_to_determine_impact": "Check if macOS Screen Sharing (System Settings > General > Sharing) is enabled. Look for unexpected processes (e.g., Monero miners), unusual CPU usage, or outgoing connections from Macs.",
-      "tanium_query_hint": "Get Running Processes[name contains 'miner'] on 'Mac'. Get Network Connections with established 'Mac' and port '3333' (common Monero mining port). Check 'Get macOS Sharing Status' sensor.",
-      "rapid7_query_hint": "Search for assets with open VNC/Screen Sharing ports (e.g., 5900) on macOS devices. Look for high CPU usage or known Monero mining process names in InsightIDR endpoint activity.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.8 High"
-    },
-    {
       "title": "Microsoft working on Defender patch for ShieldBreak zero-day",
-      "tldr": "Microsoft is developing a security patch for the \"ShieldBreak\" zero-day vulnerability (CVE-2026-69414) affecting Defender. This zero-day was recently disclosed and poses a significant risk to systems using Defender.",
-      "action": "Monitor Microsoft's security advisories closely for the release of the patch. Ensure Defender is configured to receive automatic updates. Implement additional endpoint protection layers as a temporary measure if possible.",
+      "tldr": "Microsoft is actively working on a security patch for a newly disclosed 'ShieldBreak' zero-day vulnerability (CVE-2026-69414) affecting Microsoft Defender. This critical flaw was publicly revealed by security researcher 'Nightmare Eclipse', demanding immediate attention from organizations.",
+      "action": "Monitor official Microsoft security advisories closely for the release of the patch for CVE-2026-69414 and apply it promptly. Ensure Microsoft Defender definitions are kept up-to-date across all endpoints and consider implementing additional endpoint detection and response (EDR) capabilities. Isolate any systems suspected of exploitation until the patch can be applied.",
       "cve_ids": [
         "CVE-2026-69414"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft/windows-server-2022-reaches-end-of-mainstream-support-in-60-days/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-working-on-defender-patch-for-shieldbreak-zero-day/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Defender installations vulnerable to CVE-2026-69414. Specific version ranges will be detailed by Microsoft upon patch release.",
-      "how_to_determine_impact": "Ensure Microsoft Defender is running and check its version. Await Microsoft's official guidance on detecting exploitation or determining if the current version is vulnerable.",
-      "tanium_query_hint": "Get Endpoint Security Tools Status['Microsoft Defender']. Get File Version['C:Program FilesWindows DefenderMsMpEng.exe'] to check Defender engine versions. Check 'Get Windows Patch Compliance Status' for relevant KBs.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-69414' in InsightVM once available. Use InsightIDR to look for suspicious activity bypassing Defender or unusual Defender service behavior.",
+      "affected_versions": "Microsoft Defender, specific versions to be confirmed upon patch release. Likely affects recent Windows client/server OS with Defender enabled.",
+      "how_to_determine_impact": "Monitor Microsoft's official security advisories for specifics on affected versions and detection methods. Check Defender client versions on endpoints.",
+      "tanium_query_hint": "Get Tanium System Details matching 'Operating System' contains 'Windows' and 'Tanium Client Version' >= '7.4' and 'Has Microsoft Defender Installed' equals 'True'",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-69414' in InsightVM. For InsightIDR, look for suspicious activity related to Defender processes or reported vulnerabilities.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.0 Critical (Estimated based on zero-day impact on security software)"
     },
     {
-      "title": "Unisoc VoLTE Video Call Exploit Chain Can Give Attackers Full Android Kernel Access",
-      "tldr": "A severe exploit chain targeting Unisoc's VoLTE video call functionality has been discovered. This vulnerability allows attackers to gain full kernel access on affected Android devices, posing a critical security risk.",
-      "action": "Users of Android devices with Unisoc chipsets should apply all available security updates promptly. Device manufacturers should prioritize releasing patches for this critical exploit. Avoid answering video calls from unknown contacts.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html",
-      "source": "The Hacker News",
+      "title": "Certighost and the Privilege Hiding in Your Certificate Authority",
+      "tldr": "A vulnerability, dubbed 'Certighost' (CVE-2026-54121), enables a standard domain user to escalate privileges and compromise an Enterprise Certificate Authority (CA), effectively turning it into a Domain Controller. This exposes critical issues with standing privilege and implicit trust models within PKI.",
+      "action": "Patch all Enterprise Certificate Authorities (CA) immediately for CVE-2026-54121 as per Microsoft's guidance. Review and audit PKI configurations for any excessive or implicit trust and enforce the principle of least privilege for all accounts. Treat PKI infrastructure as Tier 0 identity infrastructure, securing it with the highest possible controls.",
+      "cve_ids": [
+        "CVE-2026-54121"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Android devices utilizing Unisoc chipsets with vulnerable VoLTE video call implementations. Consult device manufacturer and Unisoc advisories for specific models and software versions.",
-      "how_to_determine_impact": "Identify Android devices running Unisoc chipsets. Check system logs for unusual VoLTE module activity or unexpected kernel panics/reboots. Ensure the latest Android security patches are installed.",
-      "tanium_query_hint": "This is primarily a mobile device vulnerability, not directly manageable by Tanium for Android endpoints. For organizational context, track mobile device inventory by chipset and OS version.",
-      "rapid7_query_hint": "For mobile device management, check MDM solutions for device inventory (Unisoc chipsets, Android versions). Monitor network traffic from affected devices for suspicious communication patterns if compromised.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.5 Critical"
+      "affected_versions": "Microsoft Windows Server configured as an Enterprise Certificate Authority (CA), specific versions linked to CVE-2026-54121.",
+      "how_to_determine_impact": "Identify all systems acting as Enterprise Certificate Authorities within your domain. Verify if the patch for CVE-2026-54121 has been applied. Review CA configurations for excessive privileges granted to standard users.",
+      "tanium_query_hint": "Get Computer Name and OS Platform from all machines where 'Service Name' equals 'CertSvc' and 'Installed Patches' does not contain 'KBXXXXXXX' (replace with actual patch KB for CVE-2026-54121)",
+      "rapid7_query_hint": "Search vulnerability results in InsightVM for 'CVE-2026-54121'. Use asset search filters for 'Operating System' contains 'Windows Server' AND 'Installed Software' contains 'Active Directory Certificate Services'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated based on privilege escalation to Domain Controller)"
+    },
+    {
+      "title": "SAP Commerce Cloud CVE-2026-58231 Targeted in Exploitation Attempts Days After Patch",
+      "tldr": "A critical vulnerability, CVE-2026-58231, affecting SAP Commerce Cloud is currently being actively targeted in exploitation attempts just days after a patch was released. This rapid exploitation underscores the urgency for organizations to apply available security updates promptly to mitigate risk.",
+      "action": "Immediately apply the available patch for CVE-2026-58231 to all SAP Commerce Cloud instances within your environment. Enhance logging and monitor diligently for any signs of exploitation attempts, unusual activity, or unauthorized access to these critical systems. Isolate vulnerable systems from public networks until remediation is complete.",
+      "cve_ids": [
+        "CVE-2026-58231"
+      ],
+      "source_url": "https://thehackernews.com/2026/08/sap-commerce-cloud-cve-2026-58231.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "SAP Commerce Cloud, specific vulnerable versions as per SAP Security Note related to CVE-2026-58231.",
+      "how_to_determine_impact": "Check the version of SAP Commerce Cloud deployed. Consult SAP's official security notes for CVE-2026-58231 to confirm vulnerable versions and patching status. Review access logs for suspicious activity post-patch release.",
+      "tanium_query_hint": "Get Installed Applications matching 'Name' contains 'SAP Commerce Cloud' and 'Version' not in (patched_versions) to identify vulnerable instances. Review Web Server Access Logs for unusual requests.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-58231' in InsightVM. Use asset search filters for 'Software Name' contains 'SAP Commerce Cloud' and filter by detected vulnerability instances.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, given active exploitation post-disclosure)"
+    },
+    {
+      "title": "Apple macOS Screen Sharing Flaw Exploited on Internet-Exposed Macs to Install Monero Miner",
+      "tldr": "An existing flaw in Apple macOS Screen Sharing is being actively exploited on internet-exposed Macs, allowing attackers to install Monero cryptocurrency miners. This leads to unauthorized access, resource abuse, and potential further compromise of affected systems.",
+      "action": "Disable macOS Screen Sharing if it is not strictly required. For systems where it is necessary, ensure strong authentication is enforced and limit network exposure to trusted sources only. Immediately apply all available macOS security updates and perform scans for cryptocurrency miners on macOS endpoints.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/apple-macos-screen-sharing-flaw.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "macOS systems with exposed Screen Sharing service, specific vulnerable versions would be covered by recent Apple security updates. Check for macOS versions that have not received the latest patches.",
+      "how_to_determine_impact": "Identify macOS systems with Screen Sharing enabled. Verify if these systems are internet-exposed (e.g., direct public IP or port forwarding). Check system logs for unauthorized access attempts or suspicious processes (e.g., XMRig, Monero miner binaries).",
+      "tanium_query_hint": "Get Running Processes matching 'Name' contains 'xmrig' or 'monerod' from all machines with 'OS Platform' equals 'macOS'. Also check 'Installed Applications' for suspicious entries. Use 'Get Network Connections' to see if Screen Sharing (port 5900) is openly accessible.",
+      "rapid7_query_hint": "Search for indicators of compromise (IOCs) related to Monero miners on macOS assets in InsightIDR. In InsightVM, query for macOS assets with detected vulnerabilities related to Screen Sharing or general unpatched macOS versions. Look for asset 'Service' equals 'VNC' or 'Screen Sharing' with external access.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "8.5 High (Estimated, given active exploitation for resource abuse and unauthorized access)"
     }
   ],
   "insurance": [],
@@ -10863,6 +10865,67 @@
         "rapid7_query_hint": "For mobile device management, check MDM solutions for device inventory (Unisoc chipsets, Android versions). Monitor network traffic from affected devices for suspicious communication patterns if compromised.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.5 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "How MCP Servers Can Expose Enterprise Secrets",
+        "tldr": "Model Context Protocol (MCP) servers can inadvertently expose enterprise secrets due to issues like plaintext configuration files, over-permissioned access, and prompt injection vulnerabilities. This risk is exacerbated as organizations integrate more AI agents, creating significant security gaps that often go unnoticed.",
+        "action": "Audit MCP server configurations for plaintext credentials and sensitive data exposure. Review and enforce least privilege principles for access to MCP servers and related resources. Implement prompt injection defenses for AI agents and conduct regular security assessments of AI-integrated systems to identify and mitigate these risks.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/how-mcp-servers-can-expose-enterprise.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Certighost and the Privilege Hiding in Your Certificate Authority",
+        "tldr": "A vulnerability, dubbed 'Certighost' (CVE-2026-54121), enables a standard domain user to escalate privileges and compromise an Enterprise Certificate Authority (CA), effectively turning it into a Domain Controller. This exposes critical issues with standing privilege and implicit trust models within PKI.",
+        "action": "Patch all Enterprise Certificate Authorities (CA) immediately for CVE-2026-54121 as per Microsoft's guidance. Review and audit PKI configurations for any excessive or implicit trust and enforce the principle of least privilege for all accounts. Treat PKI infrastructure as Tier 0 identity infrastructure, securing it with the highest possible controls.",
+        "cve_ids": [
+          "CVE-2026-54121"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Microsoft Windows Server configured as an Enterprise Certificate Authority (CA), specific versions linked to CVE-2026-54121.",
+        "how_to_determine_impact": "Identify all systems acting as Enterprise Certificate Authorities within your domain. Verify if the patch for CVE-2026-54121 has been applied. Review CA configurations for excessive privileges granted to standard users.",
+        "tanium_query_hint": "Get Computer Name and OS Platform from all machines where 'Service Name' equals 'CertSvc' and 'Installed Patches' does not contain 'KBXXXXXXX' (replace with actual patch KB for CVE-2026-54121)",
+        "rapid7_query_hint": "Search vulnerability results in InsightVM for 'CVE-2026-54121'. Use asset search filters for 'Operating System' contains 'Windows Server' AND 'Installed Software' contains 'Active Directory Certificate Services'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated based on privilege escalation to Domain Controller)",
+        "category": "vulns"
+      },
+      {
+        "title": "SAP Commerce Cloud CVE-2026-58231 Targeted in Exploitation Attempts Days After Patch",
+        "tldr": "A critical vulnerability, CVE-2026-58231, affecting SAP Commerce Cloud is currently being actively targeted in exploitation attempts just days after a patch was released. This rapid exploitation underscores the urgency for organizations to apply available security updates promptly to mitigate risk.",
+        "action": "Immediately apply the available patch for CVE-2026-58231 to all SAP Commerce Cloud instances within your environment. Enhance logging and monitor diligently for any signs of exploitation attempts, unusual activity, or unauthorized access to these critical systems. Isolate vulnerable systems from public networks until remediation is complete.",
+        "cve_ids": [
+          "CVE-2026-58231"
+        ],
+        "source_url": "https://thehackernews.com/2026/08/sap-commerce-cloud-cve-2026-58231.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "SAP Commerce Cloud, specific vulnerable versions as per SAP Security Note related to CVE-2026-58231.",
+        "how_to_determine_impact": "Check the version of SAP Commerce Cloud deployed. Consult SAP's official security notes for CVE-2026-58231 to confirm vulnerable versions and patching status. Review access logs for suspicious activity post-patch release.",
+        "tanium_query_hint": "Get Installed Applications matching 'Name' contains 'SAP Commerce Cloud' and 'Version' not in (patched_versions) to identify vulnerable instances. Review Web Server Access Logs for unusual requests.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-58231' in InsightVM. Use asset search filters for 'Software Name' contains 'SAP Commerce Cloud' and filter by detected vulnerability instances.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, given active exploitation post-disclosure)",
+        "category": "vulns"
+      },
+      {
+        "title": "Apple macOS Screen Sharing Flaw Exploited on Internet-Exposed Macs to Install Monero Miner",
+        "tldr": "An existing flaw in Apple macOS Screen Sharing is being actively exploited on internet-exposed Macs, allowing attackers to install Monero cryptocurrency miners. This leads to unauthorized access, resource abuse, and potential further compromise of affected systems.",
+        "action": "Disable macOS Screen Sharing if it is not strictly required. For systems where it is necessary, ensure strong authentication is enforced and limit network exposure to trusted sources only. Immediately apply all available macOS security updates and perform scans for cryptocurrency miners on macOS endpoints.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/apple-macos-screen-sharing-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "macOS systems with exposed Screen Sharing service, specific vulnerable versions would be covered by recent Apple security updates. Check for macOS versions that have not received the latest patches.",
+        "how_to_determine_impact": "Identify macOS systems with Screen Sharing enabled. Verify if these systems are internet-exposed (e.g., direct public IP or port forwarding). Check system logs for unauthorized access attempts or suspicious processes (e.g., XMRig, Monero miner binaries).",
+        "tanium_query_hint": "Get Running Processes matching 'Name' contains 'xmrig' or 'monerod' from all machines with 'OS Platform' equals 'macOS'. Also check 'Installed Applications' for suspicious entries. Use 'Get Network Connections' to see if Screen Sharing (port 5900) is openly accessible.",
+        "rapid7_query_hint": "Search for indicators of compromise (IOCs) related to Monero miners on macOS assets in InsightIDR. In InsightVM, query for macOS assets with detected vulnerabilities related to Screen Sharing or general unpatched macOS versions. Look for asset 'Service' equals 'VNC' or 'Screen Sharing' with external access.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "8.5 High (Estimated, given active exploitation for resource abuse and unauthorized access)",
         "category": "vulns"
       }
     ]
