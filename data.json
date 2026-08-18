@@ -1,128 +1,121 @@
 {
   "breaches": [
     {
+      "title": "One Attacker Has Scraped Both Salesforce and ServiceNow Portals Since 2025",
+      "tldr": "A single threat actor has been observed systematically scraping data from both Salesforce and ServiceNow portals since 2025. This sustained effort suggests a high risk of sensitive information collection from widely used enterprise platforms. Organizations utilizing these platforms are potentially impacted by this ongoing data exfiltration.",
+      "action": "Review access logs for Salesforce and ServiceNow instances for unusual or bulk data export activities. Implement stricter rate limiting and enforce multi-factor authentication (MFA) on all portal access points to prevent unauthorized access and data scraping.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/one-attacker-has-scraped-both.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "SafePal Hardware Wallet Maker Says Flaw Exposed Data of Nearly 40,000 Customers",
+      "tldr": "SafePal, a hardware wallet manufacturer, has disclosed a flaw that resulted in the exposure of data belonging to approximately 40,000 customers. The exposed information likely includes personal details, which could lead to increased risks of phishing attacks or identity theft for affected individuals. Customers are advised to remain vigilant.",
+      "action": "Users of SafePal hardware wallets should be informed to monitor their financial accounts for suspicious activity and exercise extreme caution with any unsolicited communications. Organizations should reassess the supply chain security of any third-party hardware wallet providers used internally or by their employees.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/safepal-hardware-wallet-maker-says-flaw.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Hacker claims 3.6 million Azure account records stolen from major companies",
-      "tldr": "A threat actor is selling employee databases allegedly stolen from the Microsoft Azure infrastructure of multiple Fortune 500 companies after gaining access using compromised credentials. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A threat actor claims to be selling databases containing 3.6 million employee account records, allegedly stolen from the Microsoft Azure infrastructure of multiple Fortune 500 companies. The initial access vector was reportedly compromised credentials, highlighting a critical risk for cloud environments. This widespread theft affects a significant number of corporate accounts.",
+      "action": "Immediately rotate credentials for all Azure accounts, especially those belonging to Fortune 500 companies or with elevated privileges. Enforce robust multi-factor authentication (MFA) across all Azure access points and audit for suspicious login attempts and data exfiltration activities.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/",
       "source": "BleepingComputer"
     },
     {
       "title": "Pokémon Center data breach exposes customer info, cancels some orders",
-      "tldr": "Pokémon Center is notifying customers in the United Kingdom and Germany that it suffered a third-party data breach after hackers stole customer personal and order information from third-party logistics provider CEVA Logistics. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Pokémon Center is notifying customers in the United Kingdom and Germany about a data breach. This incident occurred at a third-party logistics provider, CEVA Logistics, resulting in the theft of customer personal and order information. The compromise of a third-party vendor underscores supply chain risks.",
+      "action": "Customers impacted by the breach should be advised to monitor their financial statements and be highly suspicious of phishing emails or calls. Companies must review third-party vendor security agreements and conduct thorough audits on all third-party access to customer data to prevent similar incidents.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/pokemon-center-data-breach-exposes-customer-info-cancels-some-orders/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Heights Finance Data Breach Impacts at Least 1.2 Million Individuals",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/heights-finance-data-breach-impacts-at-least-1-2-million-individuals/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "680,000 Impacted by French Tax Authority Data Breach",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/680000-impacted-by-french-tax-authority-data-breach/",
-      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "CISA: Windows Task Host flaw now exploited by ransomware gangs",
-      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has confirmed that ransomware gangs are also exploiting a high-severity Windows Task Host vulnerability that was flagged as actively exploited in April. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Clop created custom web shell for Windchill data theft attacks",
+      "tldr": "The Clop ransomware gang has developed a custom Java web shell specifically designed for PTC Windchill and FlexPLM servers. This sophisticated web shell includes built-in features to decrypt credentials, enumerate file repositories, and steal sensitive files. Its purpose is to facilitate data theft, often preceding or accompanying ransomware deployment.",
+      "action": "Inspect all PTC Windchill and FlexPLM servers for unauthorized Java web shells, paying close attention to common web server directories. Review server logs for unusual file access, deployment activities, or anomalous user behavior. Apply all available security updates and patches to these platforms immediately.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/clop-created-custom-web-shell-for-windchill-data-thft-attacks/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Philips and GE investigating Clop ransomware data theft claims",
-      "tldr": "Tech giants General Electric (GE) and Philips have also confirmed they're investigating claims that the Clop ransomware gang breached their systems and stole data. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA: Windows Task Host flaw now exploited by ransomware gangs",
+      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has confirmed that ransomware gangs are actively exploiting a high-severity Windows Task Host vulnerability. This flaw, which was initially flagged as actively exploited in April, is now a critical target for ransomware groups seeking to establish persistence and escalate privileges within compromised networks. Immediate action is required.",
+      "action": "Patch the high-severity Windows Task Host vulnerability by applying the latest security updates for all affected Windows operating systems immediately. Implement robust endpoint detection and response (EDR) to detect and block suspicious activity related to Task Host. Review systems for any signs of compromise or early-stage ransomware deployment.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/",
       "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
-      "title": "AI \"Mind Viruses\" Can Spread Between Agents Through Persistent Prompt Files",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE",
+      "tldr": "CISA has issued a warning regarding an actively exploited vulnerability in Ray, an open-source unified framework for AI/ML applications. This critical flaw allows for browser-based Remote Code Execution (RCE) and poses a significant risk to systems using Ray. Its active exploitation by attackers necessitates immediate remediation.",
+      "action": "Immediately update all Ray installations to the latest patched version to address this critical RCE vulnerability. Implement network segmentation and firewall rules to restrict access to Ray dashboards and services. Continuously monitor for any unusual network activity originating from or targeting Ray instances.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/ai-mind-viruses-can-spread-between.html",
+      "source_url": "https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "Ray (specific versions affected are not detailed in the snippet)",
+      "how_to_determine_impact": "Identify all systems and environments running Ray or using Ray dashboards/services. Verify the patch status of all Ray installations and check for accessible Ray dashboards or ports exposed to untrusted networks. Review logs for any suspicious RCE attempts or unusual process execution.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to identify machines with 'Ray'. Use 'Get Listening Ports' to find systems exposing Ray dashboard ports. For specific patch validation, deploy custom sensors or use 'Get File Version' on key Ray executables if patch details are available.",
+      "rapid7_query_hint": "Perform authenticated scans on assets to identify Ray installations and look for vulnerability checks related to RCE in Ray (if available in database). Use InsightAgent to query for 'Ray' processes, associated versions, and network listening ports. Filter asset searches for 'Ray' software.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "TWINLOOT Abuses SharePoint and Teams to Steal Credentials and Move Across Networks",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA: Windows Task Host flaw now exploited by ransomware gangs",
+      "tldr": "CISA has confirmed a high-severity Windows Task Host vulnerability is actively being exploited by ransomware groups. This flaw, previously identified as exploited in April, presents a critical security risk by allowing attackers to gain escalated privileges or execute arbitrary code. Its exploitation by sophisticated threat actors like ransomware gangs highlights the urgency for patching.",
+      "action": "Apply the latest cumulative security updates for all Windows operating systems immediately to patch the Task Host vulnerability. Implement application whitelisting policies and restrict administrative privileges to significantly mitigate the impact of successful exploitation. Conduct a thorough forensic analysis if any signs of compromise are detected.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/twinloot-abuses-sharepoint-and-teams-to.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Windows operating systems (specific versions are not detailed in the snippet, but refers to a 'Windows Task Host vulnerability')",
+      "how_to_determine_impact": "Verify that all Windows endpoints have the absolute latest cumulative security updates installed. Refer to the CISA Known Exploited Vulnerabilities (KEV) catalog for the specific vulnerability details and patch guidance. Inspect system logs for unauthorized task creation, modification, or suspicious processes initiated by the Task Scheduler.",
+      "tanium_query_hint": "Use 'Get Installed Patches' to verify the presence of relevant Windows security updates. Monitor 'Get Windows Event Log[\"System\", \"Error\", \"TaskScheduler\"]' for suspicious activity. Use 'Get Running Processes' and 'Get Process CommandLine' to detect unusual processes initiated by the Task Scheduler or related to taskhost.exe.",
+      "rapid7_query_hint": "Run authenticated scans against all Windows assets to identify missing security updates related to the Task Host vulnerability. Search InsightVM for vulnerability checks covering 'Windows Task Host' or 'Task Scheduler' with high severity. Leverage InsightIDR to monitor for suspicious Task Scheduler events and process activity.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "One Attacker Has Scraped Both Salesforce and ServiceNow Portals Since 2025",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/one-attacker-has-scraped-both.html",
-      "source": "The Hacker News",
+      "title": "Certighost and the Privilege Hiding in Your Certificate Authority",
+      "tldr": "A new vulnerability, identified as CVE-2026-54121 (dubbed Certighost), enables a standard domain user to escalate privileges. This flaw can effectively transform an Enterprise Certificate Authority (CA) into a Domain Controller. The vulnerability highlights critical issues with standing privilege and implicit trust models within Public Key Infrastructure (PKI) environments, posing a severe threat to Active Directory.",
+      "action": "Patch the Enterprise CA immediately to address CVE-2026-54121. Review and rigorously enforce the principle of least privilege for all PKI-related accounts and services. Treat PKI infrastructure as Tier 0 identity infrastructure and ensure stringent security controls are in place to prevent unauthorized access and privilege escalation.",
+      "cve_ids": [
+        "CVE-2026-54121"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Enterprise Certificate Authority (specific versions may vary depending on vendor, but applies to the CA setup capable of issuing certificates to domain users)",
+      "how_to_determine_impact": "Verify if your organization operates an Enterprise Certificate Authority (CA) within your Active Directory environment. Review the current patch status of all CA servers for CVE-2026-54121. Check for any non-administrative domain user accounts that possess undue privileges or enrollment permissions within the CA configuration.",
+      "tanium_query_hint": "Use 'Get Installed Patches' from all machines identified as Certificate Authorities to confirm patch presence. Utilize 'Get Registry Value[\"HKLM\\SYSTEM\\CurrentControlSet\\Services\\CertSvc\\Parameters\\\", \"LogLevel\"]' to check CA configuration. If a custom sensor exists, use 'Get Certificate Authority Configuration' to inspect settings.",
+      "rapid7_query_hint": "Perform authenticated scans against CA servers for vulnerability CVE-2026-54121. Use InsightAgent queries to check for specific configuration settings or file versions on CA servers that indicate vulnerability. Search InsightVM for vulnerability checks related to 'Enterprise CA' privilege escalation and review PKI configuration assessments.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "16 Typosquatted RubyGems Packages Steal Browser Credentials and Crypto Wallets",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects",
+      "tldr": "A critical vulnerability has been discovered in GitLab's GraphQL API that could allow unauthenticated attackers to delete public projects. This flaw poses a significant risk to data integrity and availability for organizations and individuals utilizing GitLab for project management and code hosting. The ability to delete projects without authentication is a severe security lapse.",
+      "action": "Immediately update all GitLab instances to the latest patched version to mitigate this critical GraphQL API vulnerability. Implement robust access controls and closely monitor GitLab logs for any suspicious activity, particularly related to project deletion events or unauthenticated GraphQL API calls. Review public project settings.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html",
+      "source_url": "https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "GitLab (specific versions affected by the GraphQL API flaw are not detailed in the snippet)",
+      "how_to_determine_impact": "Identify all GitLab instances running within your environment. Check the installed version of GitLab to determine if it falls within the vulnerable range. Review GitLab API access logs for any unauthenticated GraphQL requests, especially those related to project modification or deletion events. Verify integrity of public projects.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to identify machines with 'GitLab' installed. Use 'Get Listening Ports' to determine if GitLab instances are running. Review web server access logs for specific GraphQL endpoint access patterns, filtering for unauthenticated or suspicious requests. Look for signs of unusual project activity.",
+      "rapid7_query_hint": "Perform authenticated scans against GitLab servers to identify specific vulnerability IDs related to GitLab GraphQL or unauthenticated deletion. Use InsightAgent to query GitLab process versions, configuration files, and relevant logs for indicators of compromise or vulnerability. Filter asset searches for GitLab installations.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -11067,6 +11060,74 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "SafePal Hardware Wallet Maker Says Flaw Exposed Data of Nearly 40,000 Customers",
+        "tldr": "SafePal, a hardware wallet manufacturer, has disclosed a flaw that resulted in the exposure of data belonging to approximately 40,000 customers. The exposed information likely includes personal details, which could lead to increased risks of phishing attacks or identity theft for affected individuals. Customers are advised to remain vigilant.",
+        "action": "Users of SafePal hardware wallets should be informed to monitor their financial accounts for suspicious activity and exercise extreme caution with any unsolicited communications. Organizations should reassess the supply chain security of any third-party hardware wallet providers used internally or by their employees.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/safepal-hardware-wallet-maker-says-flaw.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Clop created custom web shell for Windchill data theft attacks",
+        "tldr": "The Clop ransomware gang has developed a custom Java web shell specifically designed for PTC Windchill and FlexPLM servers. This sophisticated web shell includes built-in features to decrypt credentials, enumerate file repositories, and steal sensitive files. Its purpose is to facilitate data theft, often preceding or accompanying ransomware deployment.",
+        "action": "Inspect all PTC Windchill and FlexPLM servers for unauthorized Java web shells, paying close attention to common web server directories. Review server logs for unusual file access, deployment activities, or anomalous user behavior. Apply all available security updates and patches to these platforms immediately.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/clop-created-custom-web-shell-for-windchill-data-thft-attacks/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE",
+        "tldr": "CISA has issued a warning regarding an actively exploited vulnerability in Ray, an open-source unified framework for AI/ML applications. This critical flaw allows for browser-based Remote Code Execution (RCE) and poses a significant risk to systems using Ray. Its active exploitation by attackers necessitates immediate remediation.",
+        "action": "Immediately update all Ray installations to the latest patched version to address this critical RCE vulnerability. Implement network segmentation and firewall rules to restrict access to Ray dashboards and services. Continuously monitor for any unusual network activity originating from or targeting Ray instances.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Ray (specific versions affected are not detailed in the snippet)",
+        "how_to_determine_impact": "Identify all systems and environments running Ray or using Ray dashboards/services. Verify the patch status of all Ray installations and check for accessible Ray dashboards or ports exposed to untrusted networks. Review logs for any suspicious RCE attempts or unusual process execution.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to identify machines with 'Ray'. Use 'Get Listening Ports' to find systems exposing Ray dashboard ports. For specific patch validation, deploy custom sensors or use 'Get File Version' on key Ray executables if patch details are available.",
+        "rapid7_query_hint": "Perform authenticated scans on assets to identify Ray installations and look for vulnerability checks related to RCE in Ray (if available in database). Use InsightAgent to query for 'Ray' processes, associated versions, and network listening ports. Filter asset searches for 'Ray' software.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Certighost and the Privilege Hiding in Your Certificate Authority",
+        "tldr": "A new vulnerability, identified as CVE-2026-54121 (dubbed Certighost), enables a standard domain user to escalate privileges. This flaw can effectively transform an Enterprise Certificate Authority (CA) into a Domain Controller. The vulnerability highlights critical issues with standing privilege and implicit trust models within Public Key Infrastructure (PKI) environments, posing a severe threat to Active Directory.",
+        "action": "Patch the Enterprise CA immediately to address CVE-2026-54121. Review and rigorously enforce the principle of least privilege for all PKI-related accounts and services. Treat PKI infrastructure as Tier 0 identity infrastructure and ensure stringent security controls are in place to prevent unauthorized access and privilege escalation.",
+        "cve_ids": [
+          "CVE-2026-54121"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Enterprise Certificate Authority (specific versions may vary depending on vendor, but applies to the CA setup capable of issuing certificates to domain users)",
+        "how_to_determine_impact": "Verify if your organization operates an Enterprise Certificate Authority (CA) within your Active Directory environment. Review the current patch status of all CA servers for CVE-2026-54121. Check for any non-administrative domain user accounts that possess undue privileges or enrollment permissions within the CA configuration.",
+        "tanium_query_hint": "Use 'Get Installed Patches' from all machines identified as Certificate Authorities to confirm patch presence. Utilize 'Get Registry Value[\"HKLM\\SYSTEM\\CurrentControlSet\\Services\\CertSvc\\Parameters\\\", \"LogLevel\"]' to check CA configuration. If a custom sensor exists, use 'Get Certificate Authority Configuration' to inspect settings.",
+        "rapid7_query_hint": "Perform authenticated scans against CA servers for vulnerability CVE-2026-54121. Use InsightAgent queries to check for specific configuration settings or file versions on CA servers that indicate vulnerability. Search InsightVM for vulnerability checks related to 'Enterprise CA' privilege escalation and review PKI configuration assessments.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects",
+        "tldr": "A critical vulnerability has been discovered in GitLab's GraphQL API that could allow unauthenticated attackers to delete public projects. This flaw poses a significant risk to data integrity and availability for organizations and individuals utilizing GitLab for project management and code hosting. The ability to delete projects without authentication is a severe security lapse.",
+        "action": "Immediately update all GitLab instances to the latest patched version to mitigate this critical GraphQL API vulnerability. Implement robust access controls and closely monitor GitLab logs for any suspicious activity, particularly related to project deletion events or unauthenticated GraphQL API calls. Review public project settings.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "GitLab (specific versions affected by the GraphQL API flaw are not detailed in the snippet)",
+        "how_to_determine_impact": "Identify all GitLab instances running within your environment. Check the installed version of GitLab to determine if it falls within the vulnerable range. Review GitLab API access logs for any unauthenticated GraphQL requests, especially those related to project modification or deletion events. Verify integrity of public projects.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to identify machines with 'GitLab' installed. Use 'Get Listening Ports' to determine if GitLab instances are running. Review web server access logs for specific GraphQL endpoint access patterns, filtering for unauthenticated or suspicious requests. Look for signs of unusual project activity.",
+        "rapid7_query_hint": "Perform authenticated scans against GitLab servers to identify specific vulnerability IDs related to GitLab GraphQL or unauthenticated deletion. Use InsightAgent to query GitLab process versions, configuration files, and relevant logs for indicators of compromise or vulnerability. Filter asset searches for GitLab installations.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical",
         "category": "vulns"
       }
     ]
