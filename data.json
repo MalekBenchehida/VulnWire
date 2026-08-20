@@ -1,17 +1,25 @@
 {
   "breaches": [
     {
-      "title": "Sakura Internet hack exposes data of up to 1.36 million accounts",
-      "tldr": "Japanese cloud and data center service provider Sakura Internet disclosed that hackers accessed its sales management system, leading to the exposure of customer contract and membership information for up to 1.36 million accounts. The breach involves sensitive customer data.",
-      "action": "Customers of Sakura Internet should be vigilant for phishing attempts and monitor their accounts for suspicious activity. Organizations using Sakura Internet services should assess their exposure and review security logs.",
+      "title": "Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts",
+      "tldr": "Suspected Russian state-sponsored hackers are exploiting Google OAuth and WhatsApp linking to hijack user accounts. This method bypasses traditional password protections by leveraging trust relationships between linked services to gain unauthorized access.",
+      "action": "Users should review all third-party application permissions for their Google accounts and linked devices/sessions in WhatsApp. Enable strong multi-factor authentication (MFA) on all critical accounts, and be cautious of unsolicited linking requests.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/sakura-internet-hack-exposes-data-of-up-to-136-million-accounts/",
+      "source_url": "https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "New Manic Android malware can exfiltrate data through nearby devices",
+      "tldr": "A novel Android malware named \"Manic\" has emerged, primarily targeting users in multiple European countries. This malware features a unique fallback data exfiltration mechanism, allowing it to steal data by communicating with nearby infected devices, enhancing its persistence and data theft capabilities.",
+      "action": "Android users should strictly avoid installing apps from untrusted sources, keep their operating system and applications updated, and utilize reputable mobile security solutions. Regularly review app permissions and disable Bluetooth/Wi-Fi when not actively in use to mitigate potential lateral exfiltration.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/",
       "source": "BleepingComputer"
     },
     {
       "title": "Threat Actor Hacks 14,000 IP Cameras in Ukraine and Russia",
-      "tldr": "A threat actor has reportedly hacked approximately 14,000 IP cameras across Ukraine and Russia, gaining unauthorized access to the video feeds. The motivation and full impact are currently unclear, but this could lead to widespread privacy violations or further exploitation.",
-      "action": "Organizations and individuals using IP cameras, especially in the affected regions, should ensure strong, unique passwords are used, default credentials are changed, and firmware is up-to-date. Network segmentation for IoT devices is highly recommended.",
+      "tldr": "A malicious actor has compromised approximately 14,000 IP cameras across Ukraine and Russia, gaining unauthorized access to live feeds and potentially device control. This large-scale breach highlights inadequate security practices for IoT devices and the widespread vulnerability of default or weak credentials.",
+      "action": "Organizations and individuals deploying IP cameras must enforce strong, unique passwords, disable default credentials, and ensure firmware is consistently updated. Implement strict network segmentation for IoT devices and monitor camera logs for suspicious access attempts.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/threat-actor-hacks-14000-ip-cameras-in-ukraine-and-russia/",
       "source": "SecurityWeek"
@@ -20,8 +28,8 @@
   "ransomware": [
     {
       "title": "Rogue ransomware affiliate poses as recovery firm to steal payments",
-      "tldr": "A suspected ransomware affiliate is posing as a ransomware recovery service called 'Ransom Busters,' contacting victims before their attacks become public. This tactic aims to steal additional payments by falsely claiming to provide decryption keys and delete stolen data for a fee.",
-      "action": "Organizations affected by ransomware should only engage with reputable, verified incident response and recovery firms. Be highly suspicious of unsolicited offers for decryption or data recovery, especially those that pre-empt public disclosure of a breach.",
+      "tldr": "A ransomware affiliate operating under the guise of \"Ransom Busters\" is deceptively contacting victims before their attacks are publicly known. This group claims to offer decryption keys and data deletion for a fee, effectively double-extorting affected organizations by posing as a legitimate recovery service.",
+      "action": "Organizations impacted by ransomware should only engage with verified and trusted cybersecurity incident response and recovery firms. Exercise extreme caution and verify the legitimacy of any party offering recovery services, especially if they reach out unsolicited or before public disclosure.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/rogue-ransomware-affiliate-ransom-busters-poses-as-recovery-firm/",
       "source": "BleepingComputer"
@@ -30,61 +38,61 @@
   "vulns": [
     {
       "title": "Critical Zimbra RCE flaw now actively exploited in attacks",
-      "tldr": "A critical vulnerability in Zimbra Collaboration Suite (ZCS), specifically an SNMP flaw, is being actively exploited by attackers for unauthenticated remote code execution. CERT Polska has issued a warning, urging immediate patching due to the high risk.",
-      "action": "Immediately apply all available security updates for Zimbra Collaboration Suite to address the SNMP flaw. Monitor Zimbra servers for any signs of compromise, including unusual process activity or network connections.",
+      "tldr": "CERT Polska has warned that a critical Remote Code Execution (RCE) vulnerability within Zimbra Collaboration Suite (ZCS) is actively being exploited in attacks. This severe flaw allows unauthenticated attackers to execute arbitrary code on vulnerable ZCS servers, leading to full system compromise.",
+      "action": "Zimbra Collaboration Suite administrators must immediately apply all available security patches. Proactively hunt for indicators of compromise (IOCs) on all ZCS servers, including unusual processes, unauthorized file modifications, or suspicious network connections.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Zimbra Collaboration Suite (ZCS) versions impacted by unauthenticated SNMP remote code execution flaw. Specific vulnerable versions should be verified against vendor advisories.",
-      "how_to_determine_impact": "Check Zimbra Collaboration Suite installations for installed versions. Inspect system logs for suspicious SNMP activity, unexpected processes, or unauthorized file modifications. Look for outbound connections from Zimbra servers that are not typically observed.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Zimbra*' AND Operating System matches 'Linux' (or relevant OS). Use 'Get Open Ports' or 'Get Running Processes' to identify unusual activity. Check for file hashes associated with known malware on Zimbra installations.",
-      "rapid7_query_hint": "Search for vulnerability ID 'Zimbra SNMP RCE' (or similar term once assigned CVE) in InsightVM. Filter assets by 'Operating System: Linux' AND 'Software Name: Zimbra Collaboration Suite'. Use InsightIDR to look for unusual user logins, process execution, or network connections originating from Zimbra servers.",
+      "affected_versions": "Zimbra Collaboration Suite (ZCS) - specific vulnerable versions for the RCE flaw should be confirmed with Zimbra advisories.",
+      "how_to_determine_impact": "Identify all deployed Zimbra Collaboration Suite (ZCS) instances. Verify current ZCS version numbers against CERT Polska or Zimbra security advisories. Check server logs for suspicious SNMP activity or unauthorized shell commands indicating compromise.",
+      "tanium_query_hint": "Get Installed Applications with Name \"Zimbra Collaboration Suite\" to locate instances. Get Network Connections where destination port = 161 (SNMP) from Process Name \"zcs.exe\" (or relevant ZCS process) for suspicious activity.",
+      "rapid7_query_hint": "Search Assets WHERE Software.Name CONTAINS 'Zimbra Collaboration Suite'. Filter vulnerabilities by 'Zimbra' and 'RCE', prioritizing those with active exploitation tags.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "10.0 Critical"
     },
     {
-      "title": "CISA warns of hackers exploiting critical MLflow vulnerability",
-      "tldr": "CISA has issued a warning regarding a critical vulnerability in the MLflow open-source AI engineering platform that is actively being exploited by threat actors. Exploitation can lead to cloud credential theft and potentially broader cloud environment compromise.",
-      "action": "Organizations using MLflow should immediately apply patches and follow CISA's guidance. Review MLflow deployments for signs of compromise, paying close attention to cloud credential access logs and unusual activity within cloud environments linked to MLflow.",
+      "title": "Hackers poison arrayref Rust crate to push infostealer malware",
+      "tldr": "Hackers successfully compromised the maintainer account of the widely used `arrayref` Rust crate, injecting infostealer malware into it. This malicious code executes during the build process on developers' systems, posing a significant risk of sensitive information theft from development environments.",
+      "action": "Rust developers should immediately audit their `Cargo.toml` and `Cargo.lock` files to verify `arrayref` usage. If present, consult official Rust security advisories for compromised versions and apply mitigations. Conduct a thorough scan of development environments for indicators of compromise.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-mlflow-vulnerability/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-poison-arrayref-rust-crate-to-push-infostealer-malware/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "MLflow open-source AI engineering platform. Consult vendor advisories for specific vulnerable versions and patch information.",
-      "how_to_determine_impact": "Identify all instances of MLflow deployment. Check for indicators of compromise (IOCs) provided by CISA or security researchers. Monitor cloud environment logs for unauthorized access to credentials or suspicious activity originating from MLflow-related services.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'MLflow*' or where MLflow components are known to reside. Use 'Get Running Processes' to check for unusual commands or scripts executed by MLflow user accounts. 'Get Cloud Account Audit Events' if applicable.",
-      "rapid7_query_hint": "Search InsightVM for 'MLflow vulnerability' (or associated CVE). In InsightIDR, monitor cloud service logs for suspicious API calls, especially related to credential access, originating from MLflow service accounts. Look for abnormal resource provisioning or data exfiltration attempts.",
+      "affected_versions": "`arrayref` Rust crate - specific compromised versions need to be confirmed via official Rust/crate.io advisories.",
+      "how_to_determine_impact": "Scan Rust projects for `Cargo.toml` or `Cargo.lock` files that include `arrayref`. Compare the version of `arrayref` against known malicious versions. Monitor build processes for unusual network connections or process executions indicating compromise.",
+      "tanium_query_hint": "Get File Content matching \"arrayref\" from Path \"**/Cargo.toml\" on developer workstations. Get Running Processes for any suspicious executables observed during Rust builds.",
+      "rapid7_query_hint": "Search Assets WHERE Software.Name = 'Rust' AND Software.Dependency.Name = 'arrayref'. Implement endpoint detection and response (EDR) rules to detect known infostealer malware signatures.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Citrix urges admins to patch new NetScaler flaws as soon as possible",
-      "tldr": "Citrix has issued an urgent warning to administrators to patch two new critical vulnerabilities affecting NetScaler Gateway secure remote access solutions and NetScaler ADC networking appliances. These flaws could allow authentication bypass and potential system compromise.",
-      "action": "Immediately review Citrix NetScaler Gateway and NetScaler ADC deployments. Apply all available patches from Citrix without delay. Implement strong authentication measures and network segmentation to mitigate potential impact.",
+      "title": "MLflow Vulnerability Exploited for Cloud Credential Theft",
+      "tldr": "A critical vulnerability in the MLflow open-source AI engineering platform is being actively exploited by threat actors to steal cloud credentials. This exploitation grants attackers unauthorized access to an organization's cloud resources, leading to potential data exfiltration and further system compromise.",
+      "action": "Organizations utilizing MLflow must immediately apply all available patches or workarounds for the critical vulnerability. It is imperative to rotate any cloud credentials that were potentially exposed through MLflow instances and meticulously review cloud audit logs for any signs of unauthorized activity.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/citrix-urges-admins-to-patch-new-netscaler-flaws-as-soon-as-possible/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Citrix NetScaler Gateway and NetScaler ADC. Specific vulnerable versions should be checked against official Citrix security bulletins.",
-      "how_to_determine_impact": "Identify all NetScaler Gateway and ADC appliances in your environment. Verify their current software versions against Citrix's security advisories to determine if they are vulnerable. Check access logs for unusual authentication attempts or successful bypasses.",
-      "tanium_query_hint": "Get Installed Applications with 'Citrix NetScaler Gateway' or 'Citrix NetScaler ADC' from all relevant machines. Use 'Get Configuration File Text' to check version numbers in config files. Monitor network connections to/from NetScaler devices for anomalies.",
-      "rapid7_query_hint": "Search InsightVM for 'Citrix NetScaler authentication bypass' or associated CVEs (if available). Filter assets by 'Vendor: Citrix' and 'Product: NetScaler'. Review authentication logs in InsightIDR for any suspicious successful logins without proper credentials.",
+      "source_url": "https://www.securityweek.com/mlflow-vulnerability-exploited-for-cloud-credential-theft/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "MLflow open-source AI engineering platform - specific vulnerable versions should be confirmed with official MLflow and CISA advisories.",
+      "how_to_determine_impact": "Identify all deployed MLflow instances. Verify the software version against vendor and CISA advisories. Monitor associated cloud environments for unauthorized API calls, creation of new resources, or changes in access policies stemming from MLflow-managed credentials.",
+      "tanium_query_hint": "Get Installed Applications with Name \"MLflow\" or Get Running Processes with Name \"mlflow\" to identify relevant systems. Investigate outbound network connections for suspicious cloud API endpoints.",
+      "rapid7_query_hint": "Search Assets WHERE Software.Name = 'MLflow'. Configure cloud security posture management (CSPM) and cloud detection and response (CDR) tools to alert on suspicious credential usage or activities originating from MLflow service principals.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Critical GitLab Flaw Exploited Shortly After Disclosure",
-      "tldr": "A critical vulnerability in GitLab has been identified and is being actively exploited by attackers shortly after its disclosure. This rapid exploitation timeframe indicates a significant risk for unpatched GitLab instances, potentially leading to unauthorized access or code execution.",
-      "action": "Immediately apply the latest security updates for all GitLab instances. Conduct a thorough audit of GitLab server logs for any signs of compromise post-disclosure and prior to patching. Review user activity and repository changes.",
+      "tldr": "A critical vulnerability within GitLab was rapidly exploited by attackers almost immediately after its public disclosure. This zero-day exploitation window underscores the severe risk to unpatched GitLab instances, potentially leading to unauthorized access, code manipulation, or data exfiltration.",
+      "action": "GitLab administrators must immediately update their GitLab instances to the latest secure version. Conduct an immediate forensic analysis of all GitLab servers for any indicators of compromise that may have occurred during the brief window of exploitation.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/critical-gitlab-flaw-exploited-shortly-after-disclosure/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "GitLab. Consult the official GitLab security advisory for precise vulnerable versions and necessary updates.",
-      "how_to_determine_impact": "Identify all GitLab deployments (self-hosted, cloud). Check their versions against the official advisory. Examine GitLab application logs, web server logs, and system logs for unauthorized access attempts, unusual commands, or indications of code injection or execution.",
-      "tanium_query_hint": "Get Installed Applications with 'GitLab' from all relevant servers. Use 'Get File Version' or 'Get Registry Value' to determine specific GitLab versions. Look for suspicious processes or network connections originating from the GitLab server. Use 'Get Process Blacklist Status' for known exploit payloads.",
-      "rapid7_query_hint": "Search InsightVM for 'GitLab vulnerability' (or associated CVE). Filter assets by 'Software Name: GitLab'. In InsightIDR, monitor GitLab audit logs for unusual repository changes, unauthorized user additions, or elevated privileges. Check web server logs for suspicious requests.",
+      "affected_versions": "GitLab - specific vulnerable versions need to be confirmed via official GitLab security advisories.",
+      "how_to_determine_impact": "Identify all GitLab server deployments and verify their current version against official GitLab security advisories. Review GitLab audit logs for unauthorized access, repository changes, or suspicious user activity that predates patching.",
+      "tanium_query_hint": "Get Installed Applications with Name \"GitLab\" to identify all GitLab servers. Get Running Processes and Get Network Connections for unusual activity on GitLab hosts, especially processes launched by the web server user.",
+      "rapid7_query_hint": "Search Assets WHERE Software.Name = 'GitLab'. Prioritize vulnerability scans for GitLab instances and review UBA (User Behavior Analytics) logs for suspicious administrator or user activity.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     }
@@ -11520,6 +11528,56 @@
         "source_url": "https://www.securityweek.com/threat-actor-hacks-14000-ip-cameras-in-ukraine-and-russia/",
         "source": "SecurityWeek",
         "category": "breaches"
+      },
+      {
+        "title": "Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts",
+        "tldr": "Suspected Russian state-sponsored hackers are exploiting Google OAuth and WhatsApp linking to hijack user accounts. This method bypasses traditional password protections by leveraging trust relationships between linked services to gain unauthorized access.",
+        "action": "Users should review all third-party application permissions for their Google accounts and linked devices/sessions in WhatsApp. Enable strong multi-factor authentication (MFA) on all critical accounts, and be cautious of unsolicited linking requests.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "New Manic Android malware can exfiltrate data through nearby devices",
+        "tldr": "A novel Android malware named \"Manic\" has emerged, primarily targeting users in multiple European countries. This malware features a unique fallback data exfiltration mechanism, allowing it to steal data by communicating with nearby infected devices, enhancing its persistence and data theft capabilities.",
+        "action": "Android users should strictly avoid installing apps from untrusted sources, keep their operating system and applications updated, and utilize reputable mobile security solutions. Regularly review app permissions and disable Bluetooth/Wi-Fi when not actively in use to mitigate potential lateral exfiltration.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-manic-android-malware-can-exfiltrate-data-through-nearby-devices/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers poison arrayref Rust crate to push infostealer malware",
+        "tldr": "Hackers successfully compromised the maintainer account of the widely used `arrayref` Rust crate, injecting infostealer malware into it. This malicious code executes during the build process on developers' systems, posing a significant risk of sensitive information theft from development environments.",
+        "action": "Rust developers should immediately audit their `Cargo.toml` and `Cargo.lock` files to verify `arrayref` usage. If present, consult official Rust security advisories for compromised versions and apply mitigations. Conduct a thorough scan of development environments for indicators of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-poison-arrayref-rust-crate-to-push-infostealer-malware/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "`arrayref` Rust crate - specific compromised versions need to be confirmed via official Rust/crate.io advisories.",
+        "how_to_determine_impact": "Scan Rust projects for `Cargo.toml` or `Cargo.lock` files that include `arrayref`. Compare the version of `arrayref` against known malicious versions. Monitor build processes for unusual network connections or process executions indicating compromise.",
+        "tanium_query_hint": "Get File Content matching \"arrayref\" from Path \"**/Cargo.toml\" on developer workstations. Get Running Processes for any suspicious executables observed during Rust builds.",
+        "rapid7_query_hint": "Search Assets WHERE Software.Name = 'Rust' AND Software.Dependency.Name = 'arrayref'. Implement endpoint detection and response (EDR) rules to detect known infostealer malware signatures.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "MLflow Vulnerability Exploited for Cloud Credential Theft",
+        "tldr": "A critical vulnerability in the MLflow open-source AI engineering platform is being actively exploited by threat actors to steal cloud credentials. This exploitation grants attackers unauthorized access to an organization's cloud resources, leading to potential data exfiltration and further system compromise.",
+        "action": "Organizations utilizing MLflow must immediately apply all available patches or workarounds for the critical vulnerability. It is imperative to rotate any cloud credentials that were potentially exposed through MLflow instances and meticulously review cloud audit logs for any signs of unauthorized activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/mlflow-vulnerability-exploited-for-cloud-credential-theft/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "MLflow open-source AI engineering platform - specific vulnerable versions should be confirmed with official MLflow and CISA advisories.",
+        "how_to_determine_impact": "Identify all deployed MLflow instances. Verify the software version against vendor and CISA advisories. Monitor associated cloud environments for unauthorized API calls, creation of new resources, or changes in access policies stemming from MLflow-managed credentials.",
+        "tanium_query_hint": "Get Installed Applications with Name \"MLflow\" or Get Running Processes with Name \"mlflow\" to identify relevant systems. Investigate outbound network connections for suspicious cloud API endpoints.",
+        "rapid7_query_hint": "Search Assets WHERE Software.Name = 'MLflow'. Configure cloud security posture management (CSPM) and cloud detection and response (CDR) tools to alert on suspicious credential usage or activities originating from MLflow service principals.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
       }
     ]
   }
