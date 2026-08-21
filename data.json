@@ -2,112 +2,103 @@
   "breaches": [
     {
       "title": "Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts",
-      "tldr": "Suspected Russian threat actors are exploiting weaknesses in Google OAuth and WhatsApp linking mechanisms to hijack user accounts. This allows them to gain unauthorized access to various services tied to these accounts, potentially leading to widespread data compromise.",
-      "action": "Users should enable multi-factor authentication (MFA) on all Google and WhatsApp accounts, regularly review linked applications, and be extremely wary of suspicious linking requests. Organizations should educate users on phishing attacks related to OAuth and account linking.",
+      "tldr": "Suspected Russian state-sponsored hackers are reportedly exploiting vulnerabilities or misconfigurations in Google OAuth and WhatsApp linking processes to hijack user accounts. This allows them to gain unauthorized access and potentially exfiltrate data or impersonate users.",
+      "action": "Users should review their Google account security settings, specifically linked applications via OAuth, and WhatsApp linked devices. Enable multi-factor authentication (MFA) on all accounts. Organizations should monitor for suspicious OAuth grant requests or unusual account linking activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html",
       "source": "The Hacker News"
     },
     {
-      "title": "New Cryptographic Context Injection Attack Could Let Web Pages Steal Grok Chat Data",
-      "tldr": "A novel cryptographic context injection attack has been discovered that could allow malicious web pages to steal sensitive Grok chat data. This advanced attack technique can bypass standard web security measures, posing a direct threat to user privacy.",
-      "action": "Users of Grok Chat should be vigilant about the websites they visit and avoid clicking on suspicious links. Grok Chat developers should immediately investigate and patch this vulnerability, focusing on the integrity of their cryptographic implementations.",
+      "title": "Hundreds of leaked AWS keys give full control over corporate accounts",
+      "tldr": "Over 9,300 Amazon Web Services (AWS) access keys, publicly exposed between August 2022 and August 2026, remain active and valid. These leaked keys provide full control over corporate AWS accounts, posing an extreme risk of data compromise, resource manipulation, and financial loss.",
+      "action": "Immediately identify if any of your organization's AWS access keys have been publicly exposed. Rotate all AWS access keys, especially those older than 2022. Implement automated scanning for exposed credentials and enforce least privilege in AWS IAM.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/new-cryptographic-context-injection.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/",
+      "source": "BleepingComputer"
     },
     {
       "title": "SickKids data breach exposes employee and job applicant info",
-      "tldr": "Toronto's Hospital for Sick Children (SickKids) experienced a data breach that exposed the personal information of some current and former employees and job applicants. The incident stemmed from a vulnerability in third-party software, although clinical systems and patient records were reportedly unaffected.",
-      "action": "Organizations should conduct thorough security audits of all third-party software and vendors. Affected individuals should be notified promptly and advised to monitor their financial accounts and credit reports for signs of identity theft.",
+      "tldr": "Toronto's Hospital for Sick Children (SickKids) experienced a cybersecurity incident that exposed the personal information of current and former employees and job applicants. This breach stemmed from a flaw in third-party software, though clinical systems and patient records were reportedly unaffected.",
+      "action": "Affected individuals should be notified and offered identity protection services. Organizations should thoroughly audit third-party software dependencies and their security posture, ensuring vendor contracts include clear data protection clauses and incident response plans.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Threat Actor Hacks 14,000 IP Cameras in Ukraine and Russia",
-      "tldr": "A threat actor has successfully hacked over 14,000 IP cameras across Ukraine and Russia, gaining unauthorized access to these devices. This large-scale compromise could enable surveillance, be leveraged for denial-of-service attacks, or be integrated into a botnet for further malicious activities.",
-      "action": "Users and organizations with IP cameras, particularly in the affected regions, should immediately secure their devices. This includes changing all default credentials, applying the latest firmware updates, and implementing network segmentation to isolate cameras from critical internal networks.",
+      "title": "In Other News: Zombie Card Attack, T-Mobile Cut Cable to Stop Hackers, GitHub Denies AI Caused Bug",
+      "tldr": "A 'Zombie Card Attack' highlights ongoing financial fraud exploiting payment card weaknesses. Separately, T-Mobile reportedly severed a network cable to thwart an active hacker intrusion attempt, indicating a severe breach in progress. GitHub denied AI was the cause of a recent bug, addressing concerns about AI in development.",
+      "action": "For the 'Zombie Card Attack,' review financial transaction monitoring systems for unusual card usage patterns and implement stronger card verification methods. For T-Mobile, it underscores the need for robust network defense and incident response capabilities, including physical segmentation options.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/threat-actor-hacks-14000-ip-cameras-in-ukraine-and-russia/",
+      "source_url": "https://www.securityweek.com/in-other-news-zombie-card-attack-t-mobile-cut-cable-to-stop-hackers-github-denies-ai-caused-bug/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
+      "title": "Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution",
+      "tldr": "A critical vulnerability in Microsoft Entra ID (formerly Azure Active Directory) with a CVSS score of 10.0 is being actively exploited in attacks. This flaw allows for remote code execution, posing an extreme risk to identity and access management infrastructure by enabling attackers to gain control.",
+      "action": "Immediately apply all available security updates released by Microsoft for Entra ID. Organizations must monitor Entra ID audit logs for any unusual activity, suspicious sign-ins, or unauthorized changes to user permissions, especially those affecting privileged accounts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Microsoft Entra ID (formerly Azure Active Directory) components. Specific details require consulting Microsoft's official security advisory, which should be prioritized.",
+      "how_to_determine_impact": "Consult Microsoft's official security advisory for the actively exploited Entra ID flaw to identify affected configurations or services. Review Entra ID sign-in and audit logs for indicators of compromise, such as unusual access patterns or privilege escalation attempts.",
+      "tanium_query_hint": "This is a cloud service vulnerability. No direct Tanium query for Entra ID itself. Focus on endpoints interacting with Entra ID; monitor for unusual authentication attempts or access from suspicious IP addresses reported by Microsoft's advisories.",
+      "rapid7_query_hint": "Monitor InsightIDR for anomalous Entra ID login activity, privilege escalation, or access from unusual geographic locations or user agents. Search for specific Microsoft vulnerability IDs related to Entra ID in InsightVM once available and confirmed.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical"
+    },
+    {
       "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
-      "tldr": "A critical vulnerability identified as CVE-2026-19478 in GitLab has come under active exploitation in the wild, mere days after its disclosure. This rapid weaponization highlights the severe risk posed to unpatched GitLab instances.",
-      "action": "Immediately update all GitLab instances to the latest patched versions as provided by GitLab to mitigate active exploitation. Review logs for any indicators of compromise preceding the patch deployment.",
+      "tldr": "GitLab vulnerability CVE-2026-19478 has come under active exploitation in the wild, just days after its public disclosure. This rapid weaponization emphasizes the critical urgency for organizations utilizing GitLab to apply security patches without delay to prevent compromise.",
+      "action": "Immediately patch all GitLab instances to the latest secure version addressing CVE-2026-19478. Review GitLab access and audit logs for any signs of compromise prior to patching, specifically looking for unexpected user activity, unauthorized repository changes, or system command execution.",
       "cve_ids": [
         "CVE-2026-19478"
       ],
       "source_url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "GitLab (specific vulnerable versions need to be checked against official GitLab advisories for CVE-2026-19478)",
-      "how_to_determine_impact": "Check the version of all GitLab installations against the vendor's security advisory for CVE-2026-19478 to identify vulnerable instances. Look for any suspicious activity or unauthorized access attempts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name contains 'GitLab' ) and ( Application Version < 'VULNERABLE_VERSION_THRESHOLD' )",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-19478' in InsightVM. Use Asset Search to filter assets with installed 'GitLab' software.",
+      "affected_versions": "Specific GitLab versions affected by CVE-2026-19478. Refer to GitLab's official security advisory for precise vulnerable version ranges and the corresponding patch levels.",
+      "how_to_determine_impact": "Check the exact version of all GitLab instances deployed within your environment. Consult the official GitLab security advisory for CVE-2026-19478 to determine if your specific version is vulnerable and requires immediate attention.",
+      "tanium_query_hint": "Get Installed Applications matches 'GitLab' and Get Running Processes matches 'gitlab-web'. Compare installed versions against known vulnerable ranges from official GitLab advisories. Scan for indicators of compromise mentioned in the advisory.",
+      "rapid7_query_hint": "Search InsightVM for 'CVE-2026-19478' or 'GitLab' vulnerabilities. Use asset search filters to identify GitLab installations and verify their installed software versions. Monitor for associated exploit indicators in InsightIDR from GitLab endpoints.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical"
+    },
+    {
+      "title": "Rust Supply Chain Attack Linked to North Korean Hackers",
+      "tldr": "An ongoing and sophisticated supply chain attack targeting the Rust ecosystem has been linked to North Korean state-sponsored hackers. This attack injects build-time infostealer malware into popular crates, compromising developer workstations and potentially enabling wider espionage and data exfiltration.",
+      "action": "Organizations should aggressively audit all Rust projects for dependencies on potentially compromised crates, ensuring all dependency versions are explicitly pinned to known secure versions. Implement robust network segmentation for build environments and enhance monitoring for suspicious activity on developer workstations, including IOCs associated with North Korean threat actors.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/rust-supply-chain-attack-linked-to-north-korean-hackers/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Rust projects depending on compromised crates (e.g., 'arrayref'). Refer to official Rust/crate community advisories for a list of affected packages and malicious versions. This is a supply chain attack, not a single software vulnerability.",
+      "how_to_determine_impact": "Developers should audit their `Cargo.lock` files to identify usage of specific affected crates. Monitor build pipelines and developer workstations for suspicious network connections, unusual process execution, unexpected file modifications, or known infostealer malware signatures.",
+      "tanium_query_hint": "Get Running Processes matches 'cargo' and Get Network Connections from all devices on developer workstations and build servers. Look for unusual network activity during Rust build processes. Scan developer workstations for known malware signatures or IOCs from relevant threat intelligence.",
+      "rapid7_query_hint": "Monitor developer workstations and build servers for indicators of compromise related to the Rust supply chain attack. Search for known malicious crate names or file hashes if available. Prioritize security scans of developer environments and integrate threat intelligence on North Korean activities into your SIEM/EDR.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution",
-      "tldr": "A maximum-severity vulnerability in Microsoft Entra ID, rated CVSS 10.0, is being actively exploited in the wild, allowing remote code execution (RCE). This critical flaw poses an immediate and severe risk to identity and access management systems.",
-      "action": "Immediately apply all available security updates from Microsoft for Entra ID to address this actively exploited RCE vulnerability. Conduct a thorough review of Entra ID logs for any signs of compromise or unauthorized activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft Entra ID (specific affected components and versions need to be referenced in official Microsoft security advisories)",
-      "how_to_determine_impact": "Review Microsoft Entra ID configurations and audit logs for indicators of compromise and ensure all components are updated to the latest secure versions as per Microsoft's guidance.",
-      "tanium_query_hint": "Consult Microsoft documentation for specific registry keys, file versions, or configuration settings to identify vulnerable Entra ID deployments. Look for any active alerts on Entra ID services.",
-      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'Microsoft Entra ID' and filter by CVSS 10.0. Review InsightIDR logs for unusual activity or signs of compromise within Entra ID.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
       "title": "CISA orders feds to patch actively exploited TrueConf Server flaws",
-      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has issued a directive ordering federal agencies to immediately patch two actively exploited vulnerabilities in the TrueConf Server self-hosted communications platform. These flaws are being actively leveraged by threat actors.",
-      "action": "Immediately apply all available security updates for TrueConf Server to address the actively exploited vulnerabilities. Prioritize systems based on CISA's directive and conduct a compromise assessment.",
+      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has issued an emergency directive ordering U.S. federal agencies to prioritize patching two actively exploited vulnerabilities in the TrueConf Server self-hosted communications platform. These flaws pose a significant risk of compromise to secure communication channels.",
+      "action": "Immediately identify all TrueConf Server installations within your organization. Apply all available security patches provided by TrueConf to address these actively exploited flaws. Enhance monitoring of TrueConf Server logs for any signs of compromise, unusual access patterns, or unexpected activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-trueconf-server-flaws/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "TrueConf Server (specific versions listed in CISA's directive for the exploited flaws)",
-      "how_to_determine_impact": "Check all TrueConf Server installations for their version numbers and compare against CISA's Emergency Directive or TrueConf's security advisories for the identified exploited flaws.",
-      "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name contains 'TrueConf Server' ). Then, retrieve file versions of key TrueConf executables.",
-      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'TrueConf Server' and CISA KEV list. Scan relevant servers for the presence of TrueConf software.",
+      "affected_versions": "TrueConf Server self-hosted communications platform. Refer to TrueConf's official security advisories and CISA's Known Exploited Vulnerabilities (KEV) catalog for specific vulnerable versions and patch details.",
+      "how_to_determine_impact": "Check the exact version of your TrueConf Server installations. Consult CISA's KEV catalog and TrueConf's official advisories for the specific vulnerabilities and affected versions to confirm your exposure.",
+      "tanium_query_hint": "Get Installed Applications matches 'TrueConf Server' and Get File Version of 'path/to/trueconf_server_executable.exe'. Compare installed versions against CISA KEV entries and TrueConf advisories for vulnerability status.",
+      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'TrueConf Server' and look for matching CVEs or vulnerability IDs. Use asset search to identify TrueConf installations and verify their versions. Monitor for associated exploit indicators in InsightIDR from TrueConf Server endpoints.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
-      "tldr": "A significant supply chain attack has targeted popular Rust crates, injecting build-time malware into packages that collectively have over 245 million downloads. This malware can compromise developer systems during the compilation process, leading to potential infostealer infections.",
-      "action": "Developers using Rust should immediately audit their project dependencies for compromised versions, particularly the `arrayref` crate. Rebuild projects after verifying the integrity of all used crates and monitor build systems for suspicious activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific Rust crates affected by the supply chain attack (e.g., 'arrayref'). Developers should check their dependency trees for compromised versions.",
-      "how_to_determine_impact": "Audit Rust projects by inspecting `Cargo.lock` files for the presence of compromised crates like `arrayref`. Check build logs for unusual commands or network connections during compilation. Implement supply chain security checks.",
-      "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name contains 'Rust' ) or ( Application Name contains 'cargo' ). Look for suspicious files or processes in build environments related to compromised crates.",
-      "rapid7_query_hint": "Scan developer workstations and build servers for indicators of compromise related to this supply chain attack. Review network logs for unusual outbound connections from build processes or the presence of known malware associated with the attack.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical"
+      "cvss_score": "Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Contractors' CMMC Confidence Rises as Ability to Prove It Falls Behind",
-      "tldr": "Defense contractors are expressing increased confidence in their adherence to Cybersecurity Maturity Model Certification (CMMC) requirements, yet their actual capability to provide verifiable proof of compliance is lagging. This disparity could jeopardize their eligibility for government contracts and indicates a gap between perceived and actual security posture.",
-      "action": "Defense contractors should move beyond self-assessment and prioritize the generation and retention of verifiable documentation and evidence for CMMC compliance. Investing in third-party pre-assessments and auditing processes can accurately gauge readiness and prevent future contractual issues.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/contractors-cmmc-confidence-rises-as-ability-to-prove-it-falls-behind/",
-      "source": "SecurityWeek"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -11701,6 +11692,40 @@
         "source_url": "https://www.securityweek.com/contractors-cmmc-confidence-rises-as-ability-to-prove-it-falls-behind/",
         "source": "SecurityWeek",
         "category": "insurance"
+      },
+      {
+        "title": "Hundreds of leaked AWS keys give full control over corporate accounts",
+        "tldr": "Over 9,300 Amazon Web Services (AWS) access keys, publicly exposed between August 2022 and August 2026, remain active and valid. These leaked keys provide full control over corporate AWS accounts, posing an extreme risk of data compromise, resource manipulation, and financial loss.",
+        "action": "Immediately identify if any of your organization's AWS access keys have been publicly exposed. Rotate all AWS access keys, especially those older than 2022. Implement automated scanning for exposed credentials and enforce least privilege in AWS IAM.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "In Other News: Zombie Card Attack, T-Mobile Cut Cable to Stop Hackers, GitHub Denies AI Caused Bug",
+        "tldr": "A 'Zombie Card Attack' highlights ongoing financial fraud exploiting payment card weaknesses. Separately, T-Mobile reportedly severed a network cable to thwart an active hacker intrusion attempt, indicating a severe breach in progress. GitHub denied AI was the cause of a recent bug, addressing concerns about AI in development.",
+        "action": "For the 'Zombie Card Attack,' review financial transaction monitoring systems for unusual card usage patterns and implement stronger card verification methods. For T-Mobile, it underscores the need for robust network defense and incident response capabilities, including physical segmentation options.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/in-other-news-zombie-card-attack-t-mobile-cut-cable-to-stop-hackers-github-denies-ai-caused-bug/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Rust Supply Chain Attack Linked to North Korean Hackers",
+        "tldr": "An ongoing and sophisticated supply chain attack targeting the Rust ecosystem has been linked to North Korean state-sponsored hackers. This attack injects build-time infostealer malware into popular crates, compromising developer workstations and potentially enabling wider espionage and data exfiltration.",
+        "action": "Organizations should aggressively audit all Rust projects for dependencies on potentially compromised crates, ensuring all dependency versions are explicitly pinned to known secure versions. Implement robust network segmentation for build environments and enhance monitoring for suspicious activity on developer workstations, including IOCs associated with North Korean threat actors.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/rust-supply-chain-attack-linked-to-north-korean-hackers/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Rust projects depending on compromised crates (e.g., 'arrayref'). Refer to official Rust/crate community advisories for a list of affected packages and malicious versions. This is a supply chain attack, not a single software vulnerability.",
+        "how_to_determine_impact": "Developers should audit their `Cargo.lock` files to identify usage of specific affected crates. Monitor build pipelines and developer workstations for suspicious network connections, unusual process execution, unexpected file modifications, or known infostealer malware signatures.",
+        "tanium_query_hint": "Get Running Processes matches 'cargo' and Get Network Connections from all devices on developer workstations and build servers. Look for unusual network activity during Rust build processes. Scan developer workstations for known malware signatures or IOCs from relevant threat intelligence.",
+        "rapid7_query_hint": "Monitor developer workstations and build servers for indicators of compromise related to the Rust supply chain attack. Search for known malicious crate names or file hashes if available. Prioritize security scans of developer environments and integrate threat intelligence on North Korean activities into your SIEM/EDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
       }
     ]
   }
