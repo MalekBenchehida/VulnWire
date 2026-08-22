@@ -1,101 +1,126 @@
 {
   "breaches": [
     {
+      "title": "TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit",
+      "tldr": "TikTok has agreed to a $400 million settlement in a U.S. child privacy lawsuit. This settlement addresses allegations of violating child privacy laws through the platform's data collection and handling practices regarding underage users.",
+      "action": "Review and update data privacy policies, especially concerning the collection and processing of data from minors. Ensure strict compliance with all relevant child privacy regulations (e.g., COPPA) and conduct regular privacy impact assessments.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/tiktok-agrees-to-400-million-settlement.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Hundreds of leaked AWS keys give full control over corporate accounts",
-      "tldr": "Over 9,300 AWS access keys publicly exposed between August 2022 and August 2026 remain active and valid. These leaked keys grant full control over affected corporate AWS accounts, posing a severe security risk.",
-      "action": "Immediately identify and revoke all potentially compromised AWS access keys. Implement automated scanning for exposed credentials and enforce strict credential rotation policies.",
+      "tldr": "Over 9,300 Amazon Web Services (AWS) access keys, publicly exposed between August 2022 and August 2026, remain active and valid. These leaked credentials grant attackers full control over the associated corporate AWS accounts, posing a severe ongoing security risk.",
+      "action": "Immediately rotate all AWS access keys, prioritizing those older than three months. Implement automated scanning for exposed credentials in public repositories. Enforce the principle of least privilege and mandatory multi-factor authentication (MFA) for all AWS accounts. Regularly audit access key usage and permissions.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/",
       "source": "BleepingComputer"
     },
     {
       "title": "Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts",
-      "tldr": "Suspected Russian threat actors are exploiting weaknesses in Google OAuth and WhatsApp linking mechanisms to hijack user accounts. This tactic allows attackers to gain unauthorized access and potentially exfiltrate data from compromised accounts.",
-      "action": "Educate users on identifying and avoiding sophisticated phishing attempts. Implement stronger multi-factor authentication (MFA) and monitor for unusual account activity or authentication anomalies, especially related to third-party integrations.",
+      "tldr": "Suspected Russian hackers are exploiting weaknesses in Google OAuth and WhatsApp linking mechanisms to hijack user accounts. This attack chain involves tricking users into granting malicious third-party access, bypassing traditional authentication methods for persistent access.",
+      "action": "Educate users about sophisticated phishing attacks related to OAuth consent and WhatsApp linking. Implement stronger phishing-resistant multi-factor authentication (MFA) and regularly monitor OAuth grants and linked accounts for suspicious activity. Review and tighten security policies around third-party application access.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html",
       "source": "The Hacker News"
     },
     {
-      "title": "SickKids data breach exposes employee and job applicant info",
-      "tldr": "Toronto's Hospital for Sick Children (SickKids) experienced a cybersecurity incident that led to the exposure of personal information belonging to current and former employees and job applicants. The breach originated from a flaw in third-party software, though clinical systems and patient records were unaffected.",
-      "action": "Review the security posture of all third-party software and vendors. Ensure robust vulnerability management and patching processes for external services processing sensitive employee data. Notify affected individuals in accordance with regulations.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "New Phishing Toolkit Uses Passkeys to Maintain Access After Password Resets",
-      "tldr": "A novel phishing toolkit is being used to leverage passkeys to maintain persistent access to user accounts, even after victims reset their passwords. This sophisticated method bypasses traditional password-based remediation, allowing attackers to retain control.",
-      "action": "Implement strong anti-phishing controls, including email gateway protections and user training. Educate users on the secure use of passkeys and monitor for passkey-related anomalies in authentication logs to detect unauthorized persistence.",
+      "tldr": "A new, sophisticated phishing toolkit is leveraging passkeys to maintain persistent unauthorized access to user accounts, even after victims reset their passwords. This bypasses a crucial security control, making account recovery difficult and extending the duration of a breach.",
+      "action": "Educate users on the risks of passkey phishing and the importance of verifying legitimate passkey requests. Implement strong phishing-resistant MFA across all services. Regularly audit and revoke old session tokens and passkey registrations for suspicious accounts, and ensure passkey implementations are robust against re-enrollment attacks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/new-phishing-toolkit-uses-passkeys-to-maintain-access-after-password-resets/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "New SynkLoader malware pushed in Microsoft Teams phishing campaign",
+      "tldr": "A previously unknown malware family, dubbed SynkLoader, is being distributed through Microsoft Teams phishing campaigns. The malware aims to steal user credentials via a fake lock screen, which can lead to broader network compromise and potentially ransomware deployment.",
+      "action": "Alert users about potential Microsoft Teams phishing campaigns. Implement robust email and Teams security policies, including DMARC, SPF, DKIM, and advanced threat protection solutions. Enforce multi-factor authentication (MFA) and monitor for suspicious activity within Microsoft Teams environments.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Hackers abuse FTP server banners to deliver new Windows malware",
+      "tldr": "Threat actors are employing a novel technique by abusing FTP server banners to hide commands that deliver two new, previously undocumented remote access trojans (RATs) named E4del and PINHOLE. This allows for covert malware distribution and potential system compromise, which can precede ransomware attacks.",
+      "action": "Restrict external access to FTP servers to only necessary entities. Implement strict monitoring of FTP server logs and outgoing network connections. Scan systems for the presence of E4del and PINHOLE RATs and their associated indicators of compromise. Review and secure FTP server configurations to prevent banner abuse.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-ftp-server-banners-to-deliver-new-windows-malware/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the Spotlight",
+      "tldr": "Multiple banking trojans, including Manic, Grandoreiro, and ToxicPanda 2.0, are actively targeting financial institutions and users. These trojans are designed to steal banking credentials and facilitate fraudulent transactions, often serving as an initial vector for broader cybercrime, including ransomware campaigns.",
+      "action": "Deploy robust endpoint detection and response (EDR) solutions across all endpoints. Enhance email security to effectively block phishing attempts distributing these banking trojans. Educate users about financial scams and suspicious banking-related communications. Implement strict monitoring of banking application access and transaction anomalies.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/banking-trojans-manic-grandoreiro-toxicpanda-2-0-in-the-spotlight/",
+      "source": "SecurityWeek"
+    }
+  ],
   "vulns": [
     {
       "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
-      "tldr": "A critical vulnerability, CVE-2026-19478, in GitLab is being actively exploited in the wild shortly after its disclosure. This vulnerability likely allows unauthorized access or other severe impacts.",
-      "action": "Immediately identify and patch all GitLab instances to the latest secure version. Review logs for any signs of compromise prior to patching.",
+      "tldr": "A critical vulnerability, CVE-2026-19478, in GitLab is actively being exploited shortly after its public disclosure. This vulnerability could lead to unauthorized access, remote code execution, or other severe impacts on vulnerable GitLab instances.",
+      "action": "Immediately apply the latest security patches for all GitLab instances. Inspect GitLab environments for indicators of compromise related to CVE-2026-19478 and thoroughly review access logs for any suspicious activity or unauthorized changes.",
       "cve_ids": [
         "CVE-2026-19478"
       ],
       "source_url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "GitLab versions affected by CVE-2026-19478. Refer to official GitLab security advisories for specific version ranges.",
-      "how_to_determine_impact": "Check GitLab instance versions against official advisories. Look for suspicious activity in GitLab logs, especially related to user authentication, repository access, and system commands.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'GitLab' and Version less than 'PATCHED_VERSION'; Get Running Processes with 'gitlab-rails' and 'suspicious_activity_pattern'",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-19478' in InsightVM. Use InsightAgent queries for 'software_name LIKE %GitLab%' and 'software_version < PATCHED_VERSION'.",
+      "affected_versions": "GitLab (Consult GitLab's official security advisory for CVE-2026-19478 for specific vulnerable versions. Version details are not provided in the headline/description.)",
+      "how_to_determine_impact": "Identify all running GitLab instances. Check their installed versions against the official advisory for CVE-2026-19478. Look for unauthorized changes to configurations, new user accounts, or unusual process execution on affected servers. Review web server logs for exploitation attempts.",
+      "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name matches 'GitLab' ) and ( Installed Applications contains 'version_number_from_advisory' )",
+      "rapid7_query_hint": "Search for assets with 'GitLab' installed and filter by vulnerability ID 'CVE-2026-19478' in InsightVM. Use InsightIDR to search for anomalous activity originating from GitLab servers, such as unusual commands or file modifications.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (Score not provided, but active exploitation of a recently disclosed CVE implies high severity, likely 9.0+)"
+      "cvss_score": "Likely 9.8 Critical"
     },
     {
-      "title": "Microsoft patches max severity code execution, privilege escalation flaws",
-      "tldr": "Microsoft has released patches for a maximum-severity vulnerability in Entra ID (formerly Azure Active Directory) that enables remote code execution and privilege escalation. This flaw has been actively exploited in attacks.",
-      "action": "Apply all available Microsoft security updates for Entra ID immediately. Verify Entra ID configurations and monitor for unusual activity related to authentication or access.",
+      "title": "Microsoft Patches Exploited Entra ID Flaw (CVSS 10.0) Allowing Remote Code Execution",
+      "tldr": "Microsoft has patched a maximum-severity vulnerability in its Entra ID (formerly Azure AD) identity and access management platform, rated with a CVSS score of 10.0. This critical flaw allowed remote code execution and has been actively exploited in attacks against organizations.",
+      "action": "Verify that all Microsoft Entra ID services are updated by Microsoft (as it is a cloud service). Immediately review Entra ID audit logs for any suspicious activity, especially unauthorized access, privilege escalations, or configuration changes that might have occurred prior to or during the exploitation window. Ensure any connected on-premises components are also patched as per Microsoft's guidance.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Entra ID. Specific affected components or versions require consulting the official Microsoft security advisory associated with this max-severity patch.",
-      "how_to_determine_impact": "Ensure all Microsoft Entra ID components are up-to-date. Review Entra ID sign-in logs, audit logs, and diagnostic settings for any unauthorized access attempts, unusual privilege grants, or RCE-like activity.",
-      "tanium_query_hint": "Check 'Microsoft Entra ID Health Status' via relevant Tanium sensors. Query for 'Installed Updates' with 'Microsoft' and recent patch dates for identity services.",
-      "rapid7_query_hint": "Search InsightVM for Microsoft Entra ID vulnerabilities or relevant KBs. Monitor InsightIDR for suspicious activity in Azure AD/Entra ID logs, especially related to RCE or privilege escalation.",
+      "affected_versions": "Microsoft Entra ID cloud service (Microsoft typically handles patching for the cloud service). Consult Microsoft's official security advisories for any client-side components that might require updates, as specific CVEs were not listed in the provided text.",
+      "how_to_determine_impact": "As Entra ID is a managed cloud service, Microsoft applies the patches. Your primary action is to monitor your Entra ID tenant's audit logs for indicators of compromise (IOCs) such as unusual sign-ins, privilege escalations, or unauthorized application registrations that might have occurred prior to or during the exploitation. Look for Microsoft-specific IOCs in their advisory.",
+      "tanium_query_hint": "N/A for direct cloud service patching. For linked on-premises systems, use 'Get Installed Applications' or 'Get File Version' for any components mentioned in Microsoft's advisory that interact with Entra ID.",
+      "rapid7_query_hint": "Leverage InsightIDR for monitoring Entra ID logs for anomalous authentication, identity changes, or access patterns. Search for related vulnerability checks in InsightVM if on-premises components are affected.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
-      "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
-      "tldr": "A supply chain attack targeting the Rust ecosystem has embedded malicious code into widely used crates.io packages, impacting potentially 245 million downloads. This malware is introduced during the build process.",
-      "action": "Immediately review all Rust projects for compromised dependencies. Verify the integrity of crates.io packages used in your build pipelines and consider pinning exact versions or using private registries.",
+      "title": "Cisco Patches Nine Crosswork and Secure Workload Flaws, Five Scoring CVSS 10.0",
+      "tldr": "Cisco has released patches for nine vulnerabilities affecting its Crosswork and Secure Workload products, with five of these flaws rated as critical with a CVSS score of 10.0. These vulnerabilities could allow for severe impacts, including remote code execution or privilege escalation.",
+      "action": "Immediately identify all Cisco Crosswork and Secure Workload installations within your environment. Apply the latest security patches provided by Cisco without delay to mitigate these critical vulnerabilities.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+      "source_url": "https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Numerous crates.io packages in the Rust ecosystem. Specific affected crate names and versions would require consulting the official advisory from crates.io or security researchers.",
-      "how_to_determine_impact": "Scan Rust project dependencies for known malicious crates. Inspect Cargo.lock files for unexpected changes. Monitor build environments for unusual network connections or file modifications during the build process.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'Rust' or 'Cargo'; Get File Hash of 'cargo.exe'; Monitor 'Running Processes' for suspicious activity during Rust builds.",
-      "rapid7_query_hint": "Utilize SCA tools to scan Rust project dependencies. Monitor build servers for anomalous network traffic or process execution. Look for known indicators of compromise related to this supply chain attack.",
+      "active_exploitation": false,
+      "affected_versions": "Cisco Crosswork and Secure Workload products (Consult Cisco's official security advisories for specific vulnerable versions and affected components. Version details are not provided in the headline/description).",
+      "how_to_determine_impact": "Identify all instances of Cisco Crosswork and Secure Workload. Compare their installed versions against the vendor's security advisory. Check system logs for any signs of exploitation attempts or unauthorized access post-patching.",
+      "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name matches 'Cisco Crosswork' or 'Cisco Secure Workload' ) and ( Installed Applications contains 'version_number_from_advisory' )",
+      "rapid7_query_hint": "Search for assets identified as 'Cisco Crosswork' or 'Cisco Secure Workload' in InsightVM. Use vulnerability checks corresponding to the latest Cisco advisories for these products.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "High (Estimating severity due to widespread impact and active malware delivery. Specific CVSS not available for the overall attack.)"
+      "cvss_score": "10.0 Critical"
     },
     {
       "title": "CISA orders feds to patch actively exploited TrueConf Server flaws",
-      "tldr": "CISA has issued an emergency directive for federal agencies to patch two actively exploited vulnerabilities in the TrueConf Server self-hosted communications platform. These flaws pose significant risk due to active exploitation.",
-      "action": "Immediately identify all TrueConf Server instances and apply the vendor-provided security patches. Prioritize systems exposed to the internet.",
+      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has issued an emergency directive for federal agencies to immediately patch two actively exploited vulnerabilities in the TrueConf Server self-hosted communications platform. These flaws pose a significant and immediate risk due to ongoing exploitation in the wild.",
+      "action": "Immediately identify all TrueConf Server installations within your infrastructure. Apply the latest security patches provided by TrueConf as per CISA's directive. Investigate logs for any signs of compromise or unauthorized access, as these vulnerabilities are actively being exploited.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-trueconf-server-flaws/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "TrueConf Server self-hosted communications platform. Specific vulnerable versions should be detailed in TrueConf's official security advisories and CISA's directive.",
-      "how_to_determine_impact": "Check TrueConf Server installations for vulnerable versions. Review server logs for signs of unauthorized access, unusual processes, or data exfiltration consistent with the exploited flaws.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'TrueConf Server' and Version less than 'PATCHED_VERSION'. Monitor 'Network Connections' from TrueConf server for suspicious outbound traffic.",
-      "rapid7_query_hint": "Search InsightVM for 'TrueConf Server' vulnerabilities. Check for asset tags indicating TrueConf Server presence. Monitor network traffic on TrueConf server assets for Indicators of Compromise.",
+      "affected_versions": "TrueConf Server self-hosted communications platform (Consult CISA's alert or TrueConf's official security advisories for specific vulnerable versions. Version details are not provided in the headline/description).",
+      "how_to_determine_impact": "Identify all TrueConf Server instances within your infrastructure. Cross-reference their versions with TrueConf's official security advisories and CISA's alert to determine vulnerability. Inspect server logs for unusual connections, unauthorized user activity, or process anomalies indicative of compromise.",
+      "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name matches 'TrueConf Server' ) and ( Installed Applications contains 'version_number_from_advisory' )",
+      "rapid7_query_hint": "Search for assets running 'TrueConf Server' and look for vulnerability IDs associated with the CISA alert in InsightVM. Use InsightIDR to monitor TrueConf server logs for indicators of active exploitation.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (CISA directive for active exploitation implies a CVSS 9.0+ score. Exact score needs to be confirmed from CISA/TrueConf advisories.)"
+      "cvss_score": "Likely 9.8 Critical"
     }
   ],
   "insurance": [],
@@ -11870,6 +11895,74 @@
         "rapid7_query_hint": "Search InsightVM for 'TrueConf Server' vulnerabilities. Check for asset tags indicating TrueConf Server presence. Monitor network traffic on TrueConf server assets for Indicators of Compromise.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Critical (CISA directive for active exploitation implies a CVSS 9.0+ score. Exact score needs to be confirmed from CISA/TrueConf advisories.)",
+        "category": "vulns"
+      },
+      {
+        "title": "TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit",
+        "tldr": "TikTok has agreed to a $400 million settlement in a U.S. child privacy lawsuit. This settlement addresses allegations of violating child privacy laws through the platform's data collection and handling practices regarding underage users.",
+        "action": "Review and update data privacy policies, especially concerning the collection and processing of data from minors. Ensure strict compliance with all relevant child privacy regulations (e.g., COPPA) and conduct regular privacy impact assessments.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/tiktok-agrees-to-400-million-settlement.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "New SynkLoader malware pushed in Microsoft Teams phishing campaign",
+        "tldr": "A previously unknown malware family, dubbed SynkLoader, is being distributed through Microsoft Teams phishing campaigns. The malware aims to steal user credentials via a fake lock screen, which can lead to broader network compromise and potentially ransomware deployment.",
+        "action": "Alert users about potential Microsoft Teams phishing campaigns. Implement robust email and Teams security policies, including DMARC, SPF, DKIM, and advanced threat protection solutions. Enforce multi-factor authentication (MFA) and monitor for suspicious activity within Microsoft Teams environments.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Hackers abuse FTP server banners to deliver new Windows malware",
+        "tldr": "Threat actors are employing a novel technique by abusing FTP server banners to hide commands that deliver two new, previously undocumented remote access trojans (RATs) named E4del and PINHOLE. This allows for covert malware distribution and potential system compromise, which can precede ransomware attacks.",
+        "action": "Restrict external access to FTP servers to only necessary entities. Implement strict monitoring of FTP server logs and outgoing network connections. Scan systems for the presence of E4del and PINHOLE RATs and their associated indicators of compromise. Review and secure FTP server configurations to prevent banner abuse.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-ftp-server-banners-to-deliver-new-windows-malware/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the Spotlight",
+        "tldr": "Multiple banking trojans, including Manic, Grandoreiro, and ToxicPanda 2.0, are actively targeting financial institutions and users. These trojans are designed to steal banking credentials and facilitate fraudulent transactions, often serving as an initial vector for broader cybercrime, including ransomware campaigns.",
+        "action": "Deploy robust endpoint detection and response (EDR) solutions across all endpoints. Enhance email security to effectively block phishing attempts distributing these banking trojans. Educate users about financial scams and suspicious banking-related communications. Implement strict monitoring of banking application access and transaction anomalies.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/banking-trojans-manic-grandoreiro-toxicpanda-2-0-in-the-spotlight/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Microsoft Patches Exploited Entra ID Flaw (CVSS 10.0) Allowing Remote Code Execution",
+        "tldr": "Microsoft has patched a maximum-severity vulnerability in its Entra ID (formerly Azure AD) identity and access management platform, rated with a CVSS score of 10.0. This critical flaw allowed remote code execution and has been actively exploited in attacks against organizations.",
+        "action": "Verify that all Microsoft Entra ID services are updated by Microsoft (as it is a cloud service). Immediately review Entra ID audit logs for any suspicious activity, especially unauthorized access, privilege escalations, or configuration changes that might have occurred prior to or during the exploitation window. Ensure any connected on-premises components are also patched as per Microsoft's guidance.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft Entra ID cloud service (Microsoft typically handles patching for the cloud service). Consult Microsoft's official security advisories for any client-side components that might require updates, as specific CVEs were not listed in the provided text.",
+        "how_to_determine_impact": "As Entra ID is a managed cloud service, Microsoft applies the patches. Your primary action is to monitor your Entra ID tenant's audit logs for indicators of compromise (IOCs) such as unusual sign-ins, privilege escalations, or unauthorized application registrations that might have occurred prior to or during the exploitation. Look for Microsoft-specific IOCs in their advisory.",
+        "tanium_query_hint": "N/A for direct cloud service patching. For linked on-premises systems, use 'Get Installed Applications' or 'Get File Version' for any components mentioned in Microsoft's advisory that interact with Entra ID.",
+        "rapid7_query_hint": "Leverage InsightIDR for monitoring Entra ID logs for anomalous authentication, identity changes, or access patterns. Search for related vulnerability checks in InsightVM if on-premises components are affected.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Cisco Patches Nine Crosswork and Secure Workload Flaws, Five Scoring CVSS 10.0",
+        "tldr": "Cisco has released patches for nine vulnerabilities affecting its Crosswork and Secure Workload products, with five of these flaws rated as critical with a CVSS score of 10.0. These vulnerabilities could allow for severe impacts, including remote code execution or privilege escalation.",
+        "action": "Immediately identify all Cisco Crosswork and Secure Workload installations within your environment. Apply the latest security patches provided by Cisco without delay to mitigate these critical vulnerabilities.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/cisco-patches-nine-crosswork-and-secure.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Cisco Crosswork and Secure Workload products (Consult Cisco's official security advisories for specific vulnerable versions and affected components. Version details are not provided in the headline/description).",
+        "how_to_determine_impact": "Identify all instances of Cisco Crosswork and Secure Workload. Compare their installed versions against the vendor's security advisory. Check system logs for any signs of exploitation attempts or unauthorized access post-patching.",
+        "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name matches 'Cisco Crosswork' or 'Cisco Secure Workload' ) and ( Installed Applications contains 'version_number_from_advisory' )",
+        "rapid7_query_hint": "Search for assets identified as 'Cisco Crosswork' or 'Cisco Secure Workload' in InsightVM. Use vulnerability checks corresponding to the latest Cisco advisories for these products.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
         "category": "vulns"
       }
     ]
