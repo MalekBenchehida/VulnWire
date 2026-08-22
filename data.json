@@ -2,100 +2,100 @@
   "breaches": [
     {
       "title": "Hundreds of leaked AWS keys give full control over corporate accounts",
-      "tldr": "Over 9,300 AWS access keys publicly exposed between Aug 2022 and Aug 2026 remain active, granting full control over associated corporate accounts. This ongoing exposure poses a severe risk of data theft and infrastructure compromise.",
-      "action": "Immediately identify and revoke any active AWS access keys found to be publicly exposed. Implement automated key rotation and strictly enforce least privilege access controls.",
+      "tldr": "Over 9,300 AWS access keys publicly exposed between August 2022 and August 2026 remain active and valid. These leaked keys grant full control over affected corporate AWS accounts, posing a severe security risk.",
+      "action": "Immediately identify and revoke all potentially compromised AWS access keys. Implement automated scanning for exposed credentials and enforce strict credential rotation policies.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/",
       "source": "BleepingComputer"
     },
     {
-      "title": "SickKids data breach exposes employee and job applicant info",
-      "tldr": "Toronto's Hospital for Sick Children (SickKids) experienced a cybersecurity incident exposing personal information of current and former employees and job applicants. The breach was attributed to a flaw in third-party software, though clinical systems and patient records were unaffected.",
-      "action": "Affected individuals should monitor for signs of identity theft. Organizations, especially in healthcare, must rigorously vet third-party software and vendors, and ensure robust security controls for HR-related data.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts",
-      "tldr": "Suspected Russian threat actors are exploiting Google OAuth and WhatsApp linking mechanisms to hijack user accounts. This technique allows attackers to bypass traditional authentication methods and gain unauthorized access to personal and potentially corporate data.",
-      "action": "Users should review and unlink any suspicious third-party applications connected via Google OAuth. Enable strong multi-factor authentication (MFA) on all Google and WhatsApp accounts, and be vigilant against phishing attempts.",
+      "tldr": "Suspected Russian threat actors are exploiting weaknesses in Google OAuth and WhatsApp linking mechanisms to hijack user accounts. This tactic allows attackers to gain unauthorized access and potentially exfiltrate data from compromised accounts.",
+      "action": "Educate users on identifying and avoiding sophisticated phishing attempts. Implement stronger multi-factor authentication (MFA) and monitor for unusual account activity or authentication anomalies, especially related to third-party integrations.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html",
       "source": "The Hacker News"
     },
     {
-      "title": "New SynkLoader malware pushed in Microsoft Teams phishing campaign",
-      "tldr": "A novel malware, SynkLoader, is being distributed via Microsoft Teams phishing campaigns. It aims to steal credentials through deceptive fake lock screens, leading to potential account compromise and unauthorized access to organizational data.",
-      "action": "Enhance Microsoft Teams security policies, educate users about sophisticated phishing tactics, and enforce strict multi-factor authentication (MFA). Monitor for unusual activity or external links shared within Teams.",
+      "title": "SickKids data breach exposes employee and job applicant info",
+      "tldr": "Toronto's Hospital for Sick Children (SickKids) experienced a cybersecurity incident that led to the exposure of personal information belonging to current and former employees and job applicants. The breach originated from a flaw in third-party software, though clinical systems and patient records were unaffected.",
+      "action": "Review the security posture of all third-party software and vendors. Ensure robust vulnerability management and patching processes for external services processing sensitive employee data. Notify affected individuals in accordance with regulations.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "New Phishing Toolkit Uses Passkeys to Maintain Access After Password Resets",
+      "tldr": "A novel phishing toolkit is being used to leverage passkeys to maintain persistent access to user accounts, even after victims reset their passwords. This sophisticated method bypasses traditional password-based remediation, allowing attackers to retain control.",
+      "action": "Implement strong anti-phishing controls, including email gateway protections and user training. Educate users on the secure use of passkeys and monitor for passkey-related anomalies in authentication logs to detect unauthorized persistence.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/new-phishing-toolkit-uses-passkeys-to-maintain-access-after-password-resets/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
       "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
-      "tldr": "A critical vulnerability, CVE-2026-19478, in GitLab is being actively exploited in the wild shortly after its disclosure. This represents a significant risk for unpatched GitLab instances, potentially leading to unauthorized access or remote code execution.",
-      "action": "Immediately apply the latest security patches released by GitLab for CVE-2026-19478. Conduct a thorough forensic analysis for any signs of compromise if patches could not be applied promptly.",
+      "tldr": "A critical vulnerability, CVE-2026-19478, in GitLab is being actively exploited in the wild shortly after its disclosure. This vulnerability likely allows unauthorized access or other severe impacts.",
+      "action": "Immediately identify and patch all GitLab instances to the latest secure version. Review logs for any signs of compromise prior to patching.",
       "cve_ids": [
         "CVE-2026-19478"
       ],
       "source_url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "GitLab installations affected by CVE-2026-19478 (refer to official GitLab security advisory for specific versions).",
-      "how_to_determine_impact": "Check GitLab instance version against the official security advisory. Look for unusual activity in system logs, user accounts, and repository changes that may indicate compromise.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'GitLab' or 'git-lab' to check version. Review Running Processes for suspicious processes indicating post-exploitation.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-19478' in InsightVM. Use Asset Search with filter 'Software Name' contains 'GitLab' and 'Vulnerability ID' equals 'CVE-2026-19478'.",
+      "affected_versions": "GitLab versions affected by CVE-2026-19478. Refer to official GitLab security advisories for specific version ranges.",
+      "how_to_determine_impact": "Check GitLab instance versions against official advisories. Look for suspicious activity in GitLab logs, especially related to user authentication, repository access, and system commands.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'GitLab' and Version less than 'PATCHED_VERSION'; Get Running Processes with 'gitlab-rails' and 'suspicious_activity_pattern'",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-19478' in InsightVM. Use InsightAgent queries for 'software_name LIKE %GitLab%' and 'software_version < PATCHED_VERSION'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (refer to GitLab advisory for exact CVSS score)"
+      "cvss_score": "Critical (Score not provided, but active exploitation of a recently disclosed CVE implies high severity, likely 9.0+)"
     },
     {
-      "title": "Microsoft warns of max severity Entra ID flaw exploited in attacks",
-      "tldr": "Microsoft has patched a maximum-severity vulnerability in its Entra ID (formerly Azure Active Directory) platform that is actively being exploited in attacks. This flaw could allow remote code execution or unauthorized access to critical identity infrastructure.",
-      "action": "Immediately apply all available security updates for Microsoft Entra ID. Review Entra ID audit logs for suspicious sign-ins, privilege escalations, or unauthorized modifications to configurations and user accounts.",
+      "title": "Microsoft patches max severity code execution, privilege escalation flaws",
+      "tldr": "Microsoft has released patches for a maximum-severity vulnerability in Entra ID (formerly Azure Active Directory) that enables remote code execution and privilege escalation. This flaw has been actively exploited in attacks.",
+      "action": "Apply all available Microsoft security updates for Entra ID immediately. Verify Entra ID configurations and monitor for unusual activity related to authentication or access.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Entra ID (specific affected components and versions are detailed in Microsoft's security advisory).",
-      "how_to_determine_impact": "Verify all Entra ID services are up-to-date. Review Entra ID sign-in logs, audit logs, and risk reports for anomalous activities such as unusual locations, impossible travel, or suspicious application consent grants.",
-      "tanium_query_hint": "As Entra ID is a cloud service, Tanium queries will focus on client-side components. 'Get Windows Update Status' and 'Get Hotfixes' for relevant systems. Review 'Get Azure AD Connect Version' on sync servers if applicable.",
-      "rapid7_query_hint": "Within InsightIDR, monitor for 'Azure AD Anomalous Sign-in' or 'Azure AD Risk Events'. In InsightVM, search for relevant Microsoft update vulnerabilities or check cloud configuration assessments for Entra ID related misconfigurations.",
+      "affected_versions": "Microsoft Entra ID. Specific affected components or versions require consulting the official Microsoft security advisory associated with this max-severity patch.",
+      "how_to_determine_impact": "Ensure all Microsoft Entra ID components are up-to-date. Review Entra ID sign-in logs, audit logs, and diagnostic settings for any unauthorized access attempts, unusual privilege grants, or RCE-like activity.",
+      "tanium_query_hint": "Check 'Microsoft Entra ID Health Status' via relevant Tanium sensors. Query for 'Installed Updates' with 'Microsoft' and recent patch dates for identity services.",
+      "rapid7_query_hint": "Search InsightVM for Microsoft Entra ID vulnerabilities or relevant KBs. Monitor InsightIDR for suspicious activity in Azure AD/Entra ID logs, especially related to RCE or privilege escalation.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
+      "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
+      "tldr": "A supply chain attack targeting the Rust ecosystem has embedded malicious code into widely used crates.io packages, impacting potentially 245 million downloads. This malware is introduced during the build process.",
+      "action": "Immediately review all Rust projects for compromised dependencies. Verify the integrity of crates.io packages used in your build pipelines and consider pinning exact versions or using private registries.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Numerous crates.io packages in the Rust ecosystem. Specific affected crate names and versions would require consulting the official advisory from crates.io or security researchers.",
+      "how_to_determine_impact": "Scan Rust project dependencies for known malicious crates. Inspect Cargo.lock files for unexpected changes. Monitor build environments for unusual network connections or file modifications during the build process.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'Rust' or 'Cargo'; Get File Hash of 'cargo.exe'; Monitor 'Running Processes' for suspicious activity during Rust builds.",
+      "rapid7_query_hint": "Utilize SCA tools to scan Rust project dependencies. Monitor build servers for anomalous network traffic or process execution. Look for known indicators of compromise related to this supply chain attack.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "High (Estimating severity due to widespread impact and active malware delivery. Specific CVSS not available for the overall attack.)"
+    },
+    {
       "title": "CISA orders feds to patch actively exploited TrueConf Server flaws",
-      "tldr": "CISA has issued an urgent directive for federal agencies to patch two actively exploited vulnerabilities in the TrueConf Server self-hosted communications platform. These flaws pose a significant risk, indicating potential for unauthorized access or compromise of sensitive communications.",
-      "action": "Immediately apply all available security patches for TrueConf Server. Follow CISA's guidance for detection and mitigation. Audit TrueConf Server logs for any signs of compromise or unusual access.",
+      "tldr": "CISA has issued an emergency directive for federal agencies to patch two actively exploited vulnerabilities in the TrueConf Server self-hosted communications platform. These flaws pose significant risk due to active exploitation.",
+      "action": "Immediately identify all TrueConf Server instances and apply the vendor-provided security patches. Prioritize systems exposed to the internet.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-trueconf-server-flaws/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "TrueConf Server (specific versions are detailed in CISA's advisory).",
-      "how_to_determine_impact": "Check the version of TrueConf Server installed. Review TrueConf Server logs for suspicious connections, unauthorized user creation, or unusual activity patterns as per CISA's guidance.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'TrueConf' or 'True Conf Server' to check version. Query 'Running Processes' for suspicious processes associated with TrueConf service accounts.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'TrueConf Server' in InsightVM. Use Asset Search with 'Software Name' contains 'TrueConf' and check for relevant vulnerability checks.",
+      "affected_versions": "TrueConf Server self-hosted communications platform. Specific vulnerable versions should be detailed in TrueConf's official security advisories and CISA's directive.",
+      "how_to_determine_impact": "Check TrueConf Server installations for vulnerable versions. Review server logs for signs of unauthorized access, unusual processes, or data exfiltration consistent with the exploited flaws.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'TrueConf Server' and Version less than 'PATCHED_VERSION'. Monitor 'Network Connections' from TrueConf server for suspicious outbound traffic.",
+      "rapid7_query_hint": "Search InsightVM for 'TrueConf Server' vulnerabilities. Check for asset tags indicating TrueConf Server presence. Monitor network traffic on TrueConf server assets for Indicators of Compromise.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (refer to CISA's KEV or TrueConf advisory for exact CVSS score)"
-    },
-    {
-      "title": "Hackers Target Zimbra Servers in Active Exploitation Campaign",
-      "tldr": "Threat actors are actively exploiting vulnerabilities in Zimbra collaboration suite servers. Organizations running unpatched Zimbra instances are at high risk of compromise, which could lead to email and data exfiltration, or further network penetration.",
-      "action": "Immediately update Zimbra servers to the latest patched version. Implement strong network segmentation for Zimbra instances and monitor for suspicious network traffic or unusual access patterns. Conduct a thorough compromise assessment.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/hackers-target-zimbra-servers-in-active-exploitation-campaign/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Zimbra Collaboration Suite (ZCS) (refer to official Zimbra security advisories for specific vulnerable versions).",
-      "how_to_determine_impact": "Check the version of Zimbra Collaboration Suite installed. Review Zimbra server logs for signs of unauthorized access, suspicious processes, or web shell activity.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Zimbra' to identify versions. Search for common web shell filenames in Zimbra web directories using 'File Exists' sensor.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Zimbra Collaboration Suite' in InsightVM. Use Asset Search with 'Software Name' contains 'Zimbra' and filter by vulnerability checks related to active exploitation.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (estimate based on active exploitation and impact on collaboration suites)"
+      "cvss_score": "Critical (CISA directive for active exploitation implies a CVSS 9.0+ score. Exact score needs to be confirmed from CISA/TrueConf advisories.)"
     }
   ],
   "insurance": [],
@@ -11766,6 +11766,110 @@
         "rapid7_query_hint": "Search for vulnerabilities related to 'Zimbra Collaboration Suite' in InsightVM. Use Asset Search with 'Software Name' contains 'Zimbra' and filter by vulnerability checks related to active exploitation.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Critical (estimate based on active exploitation and impact on collaboration suites)",
+        "category": "vulns"
+      }
+    ],
+    "2026-08-22": [
+      {
+        "title": "Hundreds of leaked AWS keys give full control over corporate accounts",
+        "tldr": "Over 9,300 AWS access keys publicly exposed between August 2022 and August 2026 remain active and valid. These leaked keys grant full control over affected corporate AWS accounts, posing a severe security risk.",
+        "action": "Immediately identify and revoke all potentially compromised AWS access keys. Implement automated scanning for exposed credentials and enforce strict credential rotation policies.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hundreds-of-leaked-aws-keys-give-full-control-over-corporate-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Suspected Russian Hackers Abuse Google OAuth and WhatsApp Linking to Hijack Accounts",
+        "tldr": "Suspected Russian threat actors are exploiting weaknesses in Google OAuth and WhatsApp linking mechanisms to hijack user accounts. This tactic allows attackers to gain unauthorized access and potentially exfiltrate data from compromised accounts.",
+        "action": "Educate users on identifying and avoiding sophisticated phishing attempts. Implement stronger multi-factor authentication (MFA) and monitor for unusual account activity or authentication anomalies, especially related to third-party integrations.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/suspected-russian-hackers-abuse-google.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "SickKids data breach exposes employee and job applicant info",
+        "tldr": "Toronto's Hospital for Sick Children (SickKids) experienced a cybersecurity incident that led to the exposure of personal information belonging to current and former employees and job applicants. The breach originated from a flaw in third-party software, though clinical systems and patient records were unaffected.",
+        "action": "Review the security posture of all third-party software and vendors. Ensure robust vulnerability management and patching processes for external services processing sensitive employee data. Notify affected individuals in accordance with regulations.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/sickkids-data-breach-exposes-employee-and-job-applicant-info/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "New Phishing Toolkit Uses Passkeys to Maintain Access After Password Resets",
+        "tldr": "A novel phishing toolkit is being used to leverage passkeys to maintain persistent access to user accounts, even after victims reset their passwords. This sophisticated method bypasses traditional password-based remediation, allowing attackers to retain control.",
+        "action": "Implement strong anti-phishing controls, including email gateway protections and user training. Educate users on the secure use of passkeys and monitor for passkey-related anomalies in authentication logs to detect unauthorized persistence.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/new-phishing-toolkit-uses-passkeys-to-maintain-access-after-password-resets/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
+        "tldr": "A critical vulnerability, CVE-2026-19478, in GitLab is being actively exploited in the wild shortly after its disclosure. This vulnerability likely allows unauthorized access or other severe impacts.",
+        "action": "Immediately identify and patch all GitLab instances to the latest secure version. Review logs for any signs of compromise prior to patching.",
+        "cve_ids": [
+          "CVE-2026-19478"
+        ],
+        "source_url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "GitLab versions affected by CVE-2026-19478. Refer to official GitLab security advisories for specific version ranges.",
+        "how_to_determine_impact": "Check GitLab instance versions against official advisories. Look for suspicious activity in GitLab logs, especially related to user authentication, repository access, and system commands.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'GitLab' and Version less than 'PATCHED_VERSION'; Get Running Processes with 'gitlab-rails' and 'suspicious_activity_pattern'",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-19478' in InsightVM. Use InsightAgent queries for 'software_name LIKE %GitLab%' and 'software_version < PATCHED_VERSION'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (Score not provided, but active exploitation of a recently disclosed CVE implies high severity, likely 9.0+)",
+        "category": "vulns"
+      },
+      {
+        "title": "Microsoft patches max severity code execution, privilege escalation flaws",
+        "tldr": "Microsoft has released patches for a maximum-severity vulnerability in Entra ID (formerly Azure Active Directory) that enables remote code execution and privilege escalation. This flaw has been actively exploited in attacks.",
+        "action": "Apply all available Microsoft security updates for Entra ID immediately. Verify Entra ID configurations and monitor for unusual activity related to authentication or access.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft Entra ID. Specific affected components or versions require consulting the official Microsoft security advisory associated with this max-severity patch.",
+        "how_to_determine_impact": "Ensure all Microsoft Entra ID components are up-to-date. Review Entra ID sign-in logs, audit logs, and diagnostic settings for any unauthorized access attempts, unusual privilege grants, or RCE-like activity.",
+        "tanium_query_hint": "Check 'Microsoft Entra ID Health Status' via relevant Tanium sensors. Query for 'Installed Updates' with 'Microsoft' and recent patch dates for identity services.",
+        "rapid7_query_hint": "Search InsightVM for Microsoft Entra ID vulnerabilities or relevant KBs. Monitor InsightIDR for suspicious activity in Azure AD/Entra ID logs, especially related to RCE or privilege escalation.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
+        "tldr": "A supply chain attack targeting the Rust ecosystem has embedded malicious code into widely used crates.io packages, impacting potentially 245 million downloads. This malware is introduced during the build process.",
+        "action": "Immediately review all Rust projects for compromised dependencies. Verify the integrity of crates.io packages used in your build pipelines and consider pinning exact versions or using private registries.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Numerous crates.io packages in the Rust ecosystem. Specific affected crate names and versions would require consulting the official advisory from crates.io or security researchers.",
+        "how_to_determine_impact": "Scan Rust project dependencies for known malicious crates. Inspect Cargo.lock files for unexpected changes. Monitor build environments for unusual network connections or file modifications during the build process.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'Rust' or 'Cargo'; Get File Hash of 'cargo.exe'; Monitor 'Running Processes' for suspicious activity during Rust builds.",
+        "rapid7_query_hint": "Utilize SCA tools to scan Rust project dependencies. Monitor build servers for anomalous network traffic or process execution. Look for known indicators of compromise related to this supply chain attack.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "High (Estimating severity due to widespread impact and active malware delivery. Specific CVSS not available for the overall attack.)",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA orders feds to patch actively exploited TrueConf Server flaws",
+        "tldr": "CISA has issued an emergency directive for federal agencies to patch two actively exploited vulnerabilities in the TrueConf Server self-hosted communications platform. These flaws pose significant risk due to active exploitation.",
+        "action": "Immediately identify all TrueConf Server instances and apply the vendor-provided security patches. Prioritize systems exposed to the internet.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-trueconf-server-flaws/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "TrueConf Server self-hosted communications platform. Specific vulnerable versions should be detailed in TrueConf's official security advisories and CISA's directive.",
+        "how_to_determine_impact": "Check TrueConf Server installations for vulnerable versions. Review server logs for signs of unauthorized access, unusual processes, or data exfiltration consistent with the exploited flaws.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'TrueConf Server' and Version less than 'PATCHED_VERSION'. Monitor 'Network Connections' from TrueConf server for suspicious outbound traffic.",
+        "rapid7_query_hint": "Search InsightVM for 'TrueConf Server' vulnerabilities. Check for asset tags indicating TrueConf Server presence. Monitor network traffic on TrueConf server assets for Indicators of Compromise.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (CISA directive for active exploitation implies a CVSS 9.0+ score. Exact score needs to be confirmed from CISA/TrueConf advisories.)",
         "category": "vulns"
       }
     ]
