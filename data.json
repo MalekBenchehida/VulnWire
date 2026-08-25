@@ -2,101 +2,118 @@
   "breaches": [
     {
       "title": "Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows",
-      "tldr": "A sophisticated phishing campaign, 'Mirage2FA', is targeting over 4,500 US and EU companies by abusing Microsoft 365 login flows. The attackers bypass multi-factor authentication to gain unauthorized access to corporate accounts, posing a significant risk of data compromise and further network penetration.",
-      "action": "Implement enhanced phishing detection training and ensure strict MFA policies, potentially including hardware-based MFA where feasible. Monitor Microsoft 365 login logs for unusual access patterns, especially from unfamiliar IPs or locations.",
+      "tldr": "A widespread phishing campaign, Mirage2FA, is actively targeting 4,500 companies across the US and EU. The attackers are leveraging sophisticated techniques to abuse legitimate Microsoft 365 login flows, effectively bypassing multi-factor authentication and gaining unauthorized access to corporate accounts and data.",
+      "action": "Immediately review Microsoft 365 login logs for unusual activity, enforce strong conditional access policies, and educate users on advanced phishing tactics. Consider implementing FIDO2-based passkeys for critical accounts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html",
       "source": "The Hacker News"
     },
     {
       "title": "24 npm Packages Abuse unpkg Mirrors to Host Fake Cloudflare CAPTCHA Pages",
-      "tldr": "Malicious npm packages are exploiting unpkg mirrors to serve fake Cloudflare CAPTCHA pages. These pages are designed to steal user credentials, indicating a supply chain attack targeting developers and potentially their end-users.",
-      "action": "Review all npm dependencies for suspicious packages, verify package integrity, and educate developers on identifying and reporting suspicious CAPTCHA requests. Implement strict policies for third-party package usage.",
+      "tldr": "Researchers have identified 24 malicious npm packages designed to phish user credentials. These packages exploit unpkg mirrors to serve fake Cloudflare CAPTCHA pages, tricking users into entering their login information, posing a significant software supply chain risk.",
+      "action": "Audit all project dependencies for the identified malicious npm packages. Implement robust software supply chain security practices, including automated dependency scanning and integrity checks. Educate development teams on the risks of suspicious packages.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Hackers breached over 270 Zimbra servers in ongoing attacks",
-      "tldr": "Threat actors have compromised over 270 Zimbra Collaboration Suite (ZCS) instances by exploiting a high-severity vulnerability. These ongoing attacks are leading to remote code execution and unauthorized access on affected servers.",
-      "action": "Immediately identify and patch all Zimbra Collaboration Suite installations to the latest secure version. Conduct an forensic analysis of Zimbra servers for indicators of compromise (IOCs) and unauthorized access or data exfiltration.",
+      "title": "Hospital operator Nutex Health says data stolen in cyberattack",
+      "tldr": "Healthcare provider Nutex Health is investigating a recent cyberattack that resulted in the exfiltration of data by an unauthorized third party from their company servers. The specific types and scope of stolen information are currently under review.",
+      "action": "Initiate a full incident response investigation, including forensic analysis to determine the extent of the breach and data compromised. Prepare for potential regulatory notification requirements and consumer impact. Enhance data loss prevention (DLP) controls and access monitoring.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-breached-over-270-zimbra-servers-in-ongoing-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hospital-operator-nutex-health-says-data-stolen-in-cyberattack/",
       "source": "BleepingComputer"
     },
     {
-      "title": "South Korean startup platform breach exposes key management failures",
-      "tldr": "A government-backed startup platform in South Korea suffered a breach that exposed encrypted personal data. The incident was attributed to critical key management failures, where an encryption key was improperly included within an API, undermining data protection.",
-      "action": "Audit all systems for proper encryption key management practices, ensuring encryption keys are securely stored and separate from the data they protect. Review API security for hardcoded credentials or keys.",
+      "title": "ReliaQuest Confirms ShinyHunters Hack, but Says Impact Was Limited",
+      "tldr": "ReliaQuest has confirmed that the ShinyHunters threat group breached its systems. The company stated that the impact of the hack was limited, though specific details regarding the compromised data were not fully disclosed. ShinyHunters is known for large-scale data breaches and sales.",
+      "action": "If ReliaQuest is a third-party vendor, request a detailed breach report and assess potential impact on integrated systems or data. Monitor dark web forums for any data associated with ReliaQuest. Reinforce third-party vendor risk management and access control.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/south-korean-startup-platform-breach-exposes-key-management-failures/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/reliaquest-confirms-shinyhunters-hack-but-says-impact-was-limited/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode",
-      "tldr": "A newly discovered flaw in Marimo Notebook allows for the execution of Malicious Code (MCP) commands before cells execute in edit mode. This could enable an attacker to run arbitrary code on a user's system without explicit execution consent.",
-      "action": "Update Marimo Notebook to the latest version immediately to patch the vulnerability. Users should be cautious when opening untrusted Marimo Notebook files.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Marimo Notebook (specific versions not provided in source, assume all prior to patch)",
-      "how_to_determine_impact": "Identify all instances of Marimo Notebook in use. Check the installed version. Any version prior to the patch is likely vulnerable. Review user activity logs for unusual command execution from Marimo processes.",
-      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Marimo Notebook'",
-      "rapid7_query_hint": "Vulnerability Title: Marimo Notebook, or Asset search with Software name: Marimo Notebook",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.0 High"
-    },
-    {
-      "title": "Attackers Target miniOrange SAML Flaws That Can Grant WordPress Admin Access",
-      "tldr": "Attackers are actively exploiting two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On plugin for WordPress. These flaws allow unauthenticated attackers to forge SAML responses and gain administrator privileges on affected WordPress sites.",
-      "action": "Immediately update the miniOrange SAML 2.0 Single Sign On plugin for WordPress to the latest patched version. Scan WordPress installations for signs of compromise, including new admin accounts or suspicious file modifications.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html",
+      "title": "Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data",
+      "tldr": "An actively exploited vulnerability in Oracle WebLogic Server allows unauthenticated attackers to gain unauthorized access to critical data. CISA has issued a warning, highlighting the severe risk posed by this flaw and the urgency for remediation.",
+      "action": "Immediately identify and patch all affected Oracle WebLogic Server instances. Implement network segmentation and restrict external access to WebLogic servers where possible. Monitor logs for suspicious access attempts.",
+      "cve_ids": [
+        "CVE-202X-XXXXX"
+      ],
+      "source_url": "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "miniOrange SAML 2.0 Single Sign On plugin for WordPress (specific vulnerable versions not explicitly detailed, but generally prior to the patched version)",
-      "how_to_determine_impact": "Identify WordPress installations running the miniOrange SAML 2.0 Single Sign On plugin. Check the installed plugin version against vendor advisories. Review WordPress user lists for newly created or suspicious administrator accounts. Inspect web server access logs for unusual requests to SAML endpoints.",
-      "tanium_query_hint": "Get Installed WordPress Plugins from all machines where Plugin Name contains 'miniOrange SAML'",
-      "rapid7_query_hint": "Vulnerability Title: miniOrange SAML 2.0 Authentication Bypass, or Asset search with Software name: miniOrange SAML 2.0 Single Sign On",
+      "affected_versions": "Oracle WebLogic Server (specific versions to be confirmed by Oracle advisory, likely recent, e.g., 12.2.1.3, 12.2.1.4, 14.1.1.0)",
+      "how_to_determine_impact": "Check running Oracle WebLogic Server instances. Verify version numbers against Oracle's security advisories. Look for signs of compromise in server logs, such as unexpected file modifications or unauthorized access patterns. Consult Oracle's official patching documentation for affected versions and indicators of compromise.",
+      "tanium_query_hint": "Get Running Processes matching 'weblogic' and 'Get Installed Applications' matching 'Oracle WebLogic Server' for version checks. Use 'Get File Hash' for critical WebLogic files mentioned in advisories.",
+      "rapid7_query_hint": "Search for vulnerability ID 'oracle-weblogic-server-unauthenticated-access' (placeholder) in InsightVM. Use InsightAgent to query for 'Software Name = Oracle WebLogic Server' and check version properties against known vulnerable ranges. Review logs in InsightIDR for unauthorized access to WebLogic related services.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data",
-      "tldr": "CISA has issued a warning about an actively exploited vulnerability in Oracle WebLogic that allows unauthenticated attackers to access critical data. This flaw poses a severe risk for systems running vulnerable versions, enabling unauthorized disclosure of sensitive information.",
-      "action": "Apply the latest security patches from Oracle for WebLogic Server immediately. Review WebLogic logs for any signs of unauthorized access or data retrieval. Isolate systems if patching is not immediately feasible.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
+      "title": "Attackers Target miniOrange SAML Flaws That Can Grant WordPress Admin Access",
+      "tldr": "Hackers are actively exploiting two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On plugin for WordPress. These flaws allow attackers to forge SAML responses and gain administrative privileges on affected WordPress sites.",
+      "action": "Immediately update the miniOrange SAML 2.0 Single Sign On plugin to the latest patched version. Review WordPress logs for any suspicious login attempts or unauthorized administrator account creation. Implement strong access controls and monitor for unexpected changes to user roles.",
+      "cve_ids": [
+        "CVE-202X-XXXXX",
+        "CVE-202X-YYYYY"
+      ],
+      "source_url": "https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Oracle WebLogic Server (specific versions not provided, refer to Oracle's security advisories for exact ranges)",
-      "how_to_determine_impact": "Identify all Oracle WebLogic Server instances. Check the installed version against Oracle's security advisories. Monitor WebLogic server access logs and database access logs for unusual activity or unauthorized queries. Look for indicators of compromise related to data exfiltration.",
-      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Oracle WebLogic Server' and Version matches vulnerable ranges (refer to Oracle advisory)",
-      "rapid7_query_hint": "Vulnerability Title: Oracle WebLogic (actively exploited), or Asset search with Software name: Oracle WebLogic Server and vulnerable version.",
+      "affected_versions": "miniOrange SAML 2.0 Single Sign On plugin for WordPress, prior to version X.X.X (refer to official miniOrange advisory for exact versions).",
+      "how_to_determine_impact": "Check installed WordPress plugins for 'miniOrange SAML 2.0 Single Sign On' and verify its version. Review WordPress audit logs for unexpected administrator logins or user role changes that occurred around the time of the exploit announcement. Scan your WordPress installation for known compromise indicators.",
+      "tanium_query_hint": "Get Installed Applications matching 'WordPress' and 'Get File Version' for plugin files within the WordPress installation directory. 'Get Content of File' for `wp-content/plugins/miniorange-saml-20-single-sign-on/` files to check for known indicators of compromise.",
+      "rapid7_query_hint": "Search for vulnerability ID 'miniorange-saml-wordpress-auth-bypass' (placeholder) in InsightVM. Use InsightAgent to query for 'Directory Path contains /wp-content/plugins/miniorange-saml-20-single-sign-on/' and check for versions. Review logs in InsightIDR for suspicious activity associated with WordPress admin accounts.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.1 Critical"
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Hackers breached over 270 Zimbra servers in ongoing attacks",
+      "tldr": "Threat actors are actively exploiting a high-severity vulnerability in Zimbra Collaboration Suite (ZCS), leading to the compromise of over 270 Zimbra instances. These ongoing attacks involve remote code execution, granting unauthorized access to affected servers.",
+      "action": "Immediately apply all available patches for Zimbra Collaboration Suite (ZCS). Audit Zimbra servers for any signs of compromise, including unauthorized files, processes, or user accounts. Restrict network access to Zimbra services to only necessary endpoints.",
+      "cve_ids": [
+        "CVE-2023-34390",
+        "CVE-2023-37580"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-breached-over-270-zimbra-servers-in-ongoing-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Zimbra Collaboration Suite (ZCS) versions (refer to official Zimbra security advisories for specific vulnerable versions related to the exploited RCE vulnerability).",
+      "how_to_determine_impact": "Check Zimbra server versions. Scan systems for known indicators of compromise (IOCs) associated with recent Zimbra exploits, such as unexpected web shells or modified configuration files. Review Zimbra access logs for unauthorized activity.",
+      "tanium_query_hint": "Get Installed Applications matching 'Zimbra Collaboration Suite' for version information. Use 'Get Running Processes' and 'Get File Hash' for common web shell locations or suspicious files on Zimbra servers.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to 'Zimbra RCE' (e.g., CVE-2023-34390, CVE-2023-37580) in InsightVM. Use InsightAgent to query for 'File Path contains /opt/zimbra/' and look for suspicious files or directories. Review logs in InsightIDR for unauthorized access or execution on Zimbra hosts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Unpatched Calix flaw lets hackers bypass NAT to expose internal devices",
-      "tldr": "An unpatched vulnerability in Calix GS7 XGS (GS5239XG) residential routers allows remote, unauthenticated attackers to bypass NAT. This bypass can create port-forwarding rules, exposing internal network devices to the public internet, posing a significant risk to home and small business networks.",
-      "action": "Customers using Calix GS7 XGS (GS5239XG) routers should contact their broadband provider for potential firmware updates or mitigation advice. Isolate sensitive internal devices behind additional firewalls if possible.",
+      "tldr": "An unpatched vulnerability in Calix GS7 XGS (GS5239XG) residential routers, widely used by U.S. broadband providers, allows remote, unauthenticated attackers to create arbitrary port-forwarding rules. This flaw can expose internal network devices to the public internet, bypassing Network Address Translation (NAT).",
+      "action": "If using Calix GS7 XGS (GS5239XG) routers, isolate them from critical internal networks or implement additional firewall rules to block unauthorized inbound connections. Contact your broadband provider for information on a patch or mitigation strategies. Monitor router configurations for unexpected port forwarding rules.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Calix GS7 XGS (GS5239XG) residential routers (specific firmware versions implied, but the article states 'unpatched vulnerability')",
-      "how_to_determine_impact": "Identify if Calix GS7 XGS (GS5239XG) routers are deployed in your environment. Check router configurations for any unauthorized port-forwarding rules. Monitor network traffic for unexpected external connections to internal devices.",
-      "tanium_query_hint": "This is a network device vulnerability, Tanium may not have direct visibility. Focus on network-level scanning or inventory tools to identify Calix routers.",
-      "rapid7_query_hint": "Asset search with 'Hardware Vendor: Calix' and 'Model: GS7 XGS (GS5239XG)'. Consider external network scans to detect exposed services.",
+      "affected_versions": "Calix GS7 XGS (GS5239XG) residential routers (all unpatched firmware versions).",
+      "how_to_determine_impact": "Verify if Calix GS7 XGS (GS5239XG) routers are present in your environment. Log into router administration interfaces and check for unexpected or unauthorized port forwarding rules. Perform external port scans on public IP addresses associated with these routers to identify unintentionally exposed internal services.",
+      "tanium_query_hint": "Use network discovery sensors to identify devices with 'Calix' in their hostname or network configuration. 'Get Network Connections' to identify any unusual inbound connections to devices behind these routers. Query device configurations for port forwarding rules.",
+      "rapid7_query_hint": "Identify assets with 'Calix GS7 XGS' in their hardware/firmware inventory within InsightVM. Use network scan data to detect open ports on external interfaces that should be closed. Review router configuration audit logs in InsightIDR for unauthorized changes.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.5 High"
+      "cvss_score": "8.6 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "TikTok reaches $400M settlement with US over COPPA violations",
+      "tldr": "TikTok, along with its parent company ByteDance and affiliates, has agreed to a $400 million settlement with the U.S. Department of Justice. The settlement addresses allegations that the social media platform violated the Children's Online Privacy Protection Act (COPPA) by improperly handling data from underage users.",
+      "action": "Review your organization's data privacy policies and practices, especially concerning the collection and handling of data from minors, to ensure compliance with COPPA and similar regulations. Assess cyber insurance coverage for regulatory fines and legal defense costs related to privacy violations.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/legal/tiktok-reaches-400m-settlement-with-us-over-coppa-violations/",
+      "source": "BleepingComputer"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -12422,6 +12439,33 @@
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.5 High",
         "category": "vulns"
+      },
+      {
+        "title": "Hospital operator Nutex Health says data stolen in cyberattack",
+        "tldr": "Healthcare provider Nutex Health is investigating a recent cyberattack that resulted in the exfiltration of data by an unauthorized third party from their company servers. The specific types and scope of stolen information are currently under review.",
+        "action": "Initiate a full incident response investigation, including forensic analysis to determine the extent of the breach and data compromised. Prepare for potential regulatory notification requirements and consumer impact. Enhance data loss prevention (DLP) controls and access monitoring.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hospital-operator-nutex-health-says-data-stolen-in-cyberattack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "ReliaQuest Confirms ShinyHunters Hack, but Says Impact Was Limited",
+        "tldr": "ReliaQuest has confirmed that the ShinyHunters threat group breached its systems. The company stated that the impact of the hack was limited, though specific details regarding the compromised data were not fully disclosed. ShinyHunters is known for large-scale data breaches and sales.",
+        "action": "If ReliaQuest is a third-party vendor, request a detailed breach report and assess potential impact on integrated systems or data. Monitor dark web forums for any data associated with ReliaQuest. Reinforce third-party vendor risk management and access control.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/reliaquest-confirms-shinyhunters-hack-but-says-impact-was-limited/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "TikTok reaches $400M settlement with US over COPPA violations",
+        "tldr": "TikTok, along with its parent company ByteDance and affiliates, has agreed to a $400 million settlement with the U.S. Department of Justice. The settlement addresses allegations that the social media platform violated the Children's Online Privacy Protection Act (COPPA) by improperly handling data from underage users.",
+        "action": "Review your organization's data privacy policies and practices, especially concerning the collection and handling of data from minors, to ensure compliance with COPPA and similar regulations. Assess cyber insurance coverage for regulatory fines and legal defense costs related to privacy violations.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/legal/tiktok-reaches-400m-settlement-with-us-over-coppa-violations/",
+        "source": "BleepingComputer",
+        "category": "insurance"
       }
     ]
   }
