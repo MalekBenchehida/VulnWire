@@ -1,120 +1,102 @@
 {
   "breaches": [
     {
-      "title": "⚡ Weekly Recap: AI-Powered PLC Attacks, GitLab Attacks, Stripe Key Leaks and More",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows",
+      "tldr": "A sophisticated phishing campaign, 'Mirage2FA', is targeting over 4,500 US and EU companies by abusing Microsoft 365 login flows. The attackers bypass multi-factor authentication to gain unauthorized access to corporate accounts, posing a significant risk of data compromise and further network penetration.",
+      "action": "Implement enhanced phishing detection training and ensure strict MFA policies, potentially including hardware-based MFA where feasible. Monitor Microsoft 365 login logs for unusual access patterns, especially from unfamiliar IPs or locations.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/weekly-recap-ai-powered-plc-attacks.html",
+      "source_url": "https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html",
       "source": "The Hacker News"
     },
     {
-      "title": "ReliaQuest confirms failed data-theft attack after ShinyHunters breach",
-      "tldr": "Cybersecurity company ReliaQuest has confirmed that one of its employees was targeted in a social engineering attack after hackers impersonated a member of the security team. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "24 npm Packages Abuse unpkg Mirrors to Host Fake Cloudflare CAPTCHA Pages",
+      "tldr": "Malicious npm packages are exploiting unpkg mirrors to serve fake Cloudflare CAPTCHA pages. These pages are designed to steal user credentials, indicating a supply chain attack targeting developers and potentially their end-users.",
+      "action": "Review all npm dependencies for suspicious packages, verify package integrity, and educate developers on identifying and reporting suspicious CAPTCHA requests. Implement strict policies for third-party package usage.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/reliaquest-confirms-failed-data-theft-attack-after-shinyhunters-breach/",
+      "source_url": "https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Hackers breached over 270 Zimbra servers in ongoing attacks",
+      "tldr": "Threat actors have compromised over 270 Zimbra Collaboration Suite (ZCS) instances by exploiting a high-severity vulnerability. These ongoing attacks are leading to remote code execution and unauthorized access on affected servers.",
+      "action": "Immediately identify and patch all Zimbra Collaboration Suite installations to the latest secure version. Conduct an forensic analysis of Zimbra servers for indicators of compromise (IOCs) and unauthorized access or data exfiltration.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-breached-over-270-zimbra-servers-in-ongoing-attacks/",
       "source": "BleepingComputer"
     },
     {
       "title": "South Korean startup platform breach exposes key management failures",
-      "tldr": "A breach at South Korea's government-backed startup platform exposed encrypted personal data after an encryption key was included in an API. Penta Security explains why encryption keys must be securely managed and kept separate from the data they protect. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A government-backed startup platform in South Korea suffered a breach that exposed encrypted personal data. The incident was attributed to critical key management failures, where an encryption key was improperly included within an API, undermining data protection.",
+      "action": "Audit all systems for proper encryption key management practices, ensuring encryption keys are securely stored and separate from the data they protect. Review API security for hardcoded credentials or keys.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/south-korean-startup-platform-breach-exposes-key-management-failures/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Personal Information Exposed in Apollo Global Data Breach",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/personal-information-exposed-in-apollo-global-data-breach/",
-      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "WordlistLoader Delivers Amatera via ClickFix, SynkLoader Phishes Windows Passwords",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode",
+      "tldr": "A newly discovered flaw in Marimo Notebook allows for the execution of Malicious Code (MCP) commands before cells execute in edit mode. This could enable an attacker to run arbitrary code on a user's system without explicit execution consent.",
+      "action": "Update Marimo Notebook to the latest version immediately to patch the vulnerability. Users should be cautious when opening untrusted Marimo Notebook files.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/wordlistloader-delivers-amatera-via.html",
+      "source_url": "https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Marimo Notebook (specific versions not provided in source, assume all prior to patch)",
+      "how_to_determine_impact": "Identify all instances of Marimo Notebook in use. Check the installed version. Any version prior to the patch is likely vulnerable. Review user activity logs for unusual command execution from Marimo processes.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Marimo Notebook'",
+      "rapid7_query_hint": "Vulnerability Title: Marimo Notebook, or Asset search with Software name: Marimo Notebook",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.0 High"
     },
     {
-      "title": "Shipping More AI Code Than You Can Secure? Watch How to Control Remediation Debt",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Attackers Target miniOrange SAML Flaws That Can Grant WordPress Admin Access",
+      "tldr": "Attackers are actively exploiting two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On plugin for WordPress. These flaws allow unauthenticated attackers to forge SAML responses and gain administrator privileges on affected WordPress sites.",
+      "action": "Immediately update the miniOrange SAML 2.0 Single Sign On plugin for WordPress to the latest patched version. Scan WordPress installations for signs of compromise, including new admin accounts or suspicious file modifications.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/shipping-more-ai-code-than-you-can.html",
+      "source_url": "https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "miniOrange SAML 2.0 Single Sign On plugin for WordPress (specific vulnerable versions not explicitly detailed, but generally prior to the patched version)",
+      "how_to_determine_impact": "Identify WordPress installations running the miniOrange SAML 2.0 Single Sign On plugin. Check the installed plugin version against vendor advisories. Review WordPress user lists for newly created or suspicious administrator accounts. Inspect web server access logs for unusual requests to SAML endpoints.",
+      "tanium_query_hint": "Get Installed WordPress Plugins from all machines where Plugin Name contains 'miniOrange SAML'",
+      "rapid7_query_hint": "Vulnerability Title: miniOrange SAML 2.0 Authentication Bypass, or Asset search with Software name: miniOrange SAML 2.0 Single Sign On",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Critical Keycloak Password Reset Flaw Could Let Unauthenticated Attackers Take Over Any Account",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data",
+      "tldr": "CISA has issued a warning about an actively exploited vulnerability in Oracle WebLogic that allows unauthenticated attackers to access critical data. This flaw poses a severe risk for systems running vulnerable versions, enabling unauthorized disclosure of sensitive information.",
+      "action": "Apply the latest security patches from Oracle for WebLogic Server immediately. Review WebLogic logs for any signs of unauthorized access or data retrieval. Isolate systems if patching is not immediately feasible.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html",
+      "source_url": "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "Oracle WebLogic Server (specific versions not provided, refer to Oracle's security advisories for exact ranges)",
+      "how_to_determine_impact": "Identify all Oracle WebLogic Server instances. Check the installed version against Oracle's security advisories. Monitor WebLogic server access logs and database access logs for unusual activity or unauthorized queries. Look for indicators of compromise related to data exfiltration.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Oracle WebLogic Server' and Version matches vulnerable ranges (refer to Oracle advisory)",
+      "rapid7_query_hint": "Vulnerability Title: Oracle WebLogic (actively exploited), or Asset search with Software name: Oracle WebLogic Server and vulnerable version.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.1 Critical"
     },
     {
-      "title": "Operation QUICSILVER Targets Myanmar Government and IT with QUICAgent Backdoor",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Unpatched Calix flaw lets hackers bypass NAT to expose internal devices",
+      "tldr": "An unpatched vulnerability in Calix GS7 XGS (GS5239XG) residential routers allows remote, unauthenticated attackers to bypass NAT. This bypass can create port-forwarding rules, exposing internal network devices to the public internet, posing a significant risk to home and small business networks.",
+      "action": "Customers using Calix GS7 XGS (GS5239XG) routers should contact their broadband provider for potential firmware updates or mitigation advice. Isolate sensitive internal devices behind additional firewalls if possible.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/operation-quicsilver-targets-myanmar.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Calix GS7 XGS (GS5239XG) residential routers (specific firmware versions implied, but the article states 'unpatched vulnerability')",
+      "how_to_determine_impact": "Identify if Calix GS7 XGS (GS5239XG) routers are deployed in your environment. Check router configurations for any unauthorized port-forwarding rules. Monitor network traffic for unexpected external connections to internal devices.",
+      "tanium_query_hint": "This is a network device vulnerability, Tanium may not have direct visibility. Focus on network-level scanning or inventory tools to identify Calix routers.",
+      "rapid7_query_hint": "Asset search with 'Hardware Vendor: Calix' and 'Model: GS7 XGS (GS5239XG)'. Consider external network scans to detect exposed services.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.5 High"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -12337,6 +12319,108 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-08-25": [
+      {
+        "title": "Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows",
+        "tldr": "A sophisticated phishing campaign, 'Mirage2FA', is targeting over 4,500 US and EU companies by abusing Microsoft 365 login flows. The attackers bypass multi-factor authentication to gain unauthorized access to corporate accounts, posing a significant risk of data compromise and further network penetration.",
+        "action": "Implement enhanced phishing detection training and ensure strict MFA policies, potentially including hardware-based MFA where feasible. Monitor Microsoft 365 login logs for unusual access patterns, especially from unfamiliar IPs or locations.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "24 npm Packages Abuse unpkg Mirrors to Host Fake Cloudflare CAPTCHA Pages",
+        "tldr": "Malicious npm packages are exploiting unpkg mirrors to serve fake Cloudflare CAPTCHA pages. These pages are designed to steal user credentials, indicating a supply chain attack targeting developers and potentially their end-users.",
+        "action": "Review all npm dependencies for suspicious packages, verify package integrity, and educate developers on identifying and reporting suspicious CAPTCHA requests. Implement strict policies for third-party package usage.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers breached over 270 Zimbra servers in ongoing attacks",
+        "tldr": "Threat actors have compromised over 270 Zimbra Collaboration Suite (ZCS) instances by exploiting a high-severity vulnerability. These ongoing attacks are leading to remote code execution and unauthorized access on affected servers.",
+        "action": "Immediately identify and patch all Zimbra Collaboration Suite installations to the latest secure version. Conduct an forensic analysis of Zimbra servers for indicators of compromise (IOCs) and unauthorized access or data exfiltration.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-breached-over-270-zimbra-servers-in-ongoing-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "South Korean startup platform breach exposes key management failures",
+        "tldr": "A government-backed startup platform in South Korea suffered a breach that exposed encrypted personal data. The incident was attributed to critical key management failures, where an encryption key was improperly included within an API, undermining data protection.",
+        "action": "Audit all systems for proper encryption key management practices, ensuring encryption keys are securely stored and separate from the data they protect. Review API security for hardcoded credentials or keys.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/south-korean-startup-platform-breach-exposes-key-management-failures/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Marimo Notebook Flaw Could Run MCP Commands Before Cells Execute in Edit Mode",
+        "tldr": "A newly discovered flaw in Marimo Notebook allows for the execution of Malicious Code (MCP) commands before cells execute in edit mode. This could enable an attacker to run arbitrary code on a user's system without explicit execution consent.",
+        "action": "Update Marimo Notebook to the latest version immediately to patch the vulnerability. Users should be cautious when opening untrusted Marimo Notebook files.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/marimo-notebook-flaw-could-run-mcp.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Marimo Notebook (specific versions not provided in source, assume all prior to patch)",
+        "how_to_determine_impact": "Identify all instances of Marimo Notebook in use. Check the installed version. Any version prior to the patch is likely vulnerable. Review user activity logs for unusual command execution from Marimo processes.",
+        "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Marimo Notebook'",
+        "rapid7_query_hint": "Vulnerability Title: Marimo Notebook, or Asset search with Software name: Marimo Notebook",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Target miniOrange SAML Flaws That Can Grant WordPress Admin Access",
+        "tldr": "Attackers are actively exploiting two critical authentication bypass vulnerabilities in the miniOrange SAML 2.0 Single Sign On plugin for WordPress. These flaws allow unauthenticated attackers to forge SAML responses and gain administrator privileges on affected WordPress sites.",
+        "action": "Immediately update the miniOrange SAML 2.0 Single Sign On plugin for WordPress to the latest patched version. Scan WordPress installations for signs of compromise, including new admin accounts or suspicious file modifications.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/attackers-target-miniorange-saml-flaws.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "miniOrange SAML 2.0 Single Sign On plugin for WordPress (specific vulnerable versions not explicitly detailed, but generally prior to the patched version)",
+        "how_to_determine_impact": "Identify WordPress installations running the miniOrange SAML 2.0 Single Sign On plugin. Check the installed plugin version against vendor advisories. Review WordPress user lists for newly created or suspicious administrator accounts. Inspect web server access logs for unusual requests to SAML endpoints.",
+        "tanium_query_hint": "Get Installed WordPress Plugins from all machines where Plugin Name contains 'miniOrange SAML'",
+        "rapid7_query_hint": "Vulnerability Title: miniOrange SAML 2.0 Authentication Bypass, or Asset search with Software name: miniOrange SAML 2.0 Single Sign On",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data",
+        "tldr": "CISA has issued a warning about an actively exploited vulnerability in Oracle WebLogic that allows unauthenticated attackers to access critical data. This flaw poses a severe risk for systems running vulnerable versions, enabling unauthorized disclosure of sensitive information.",
+        "action": "Apply the latest security patches from Oracle for WebLogic Server immediately. Review WebLogic logs for any signs of unauthorized access or data retrieval. Isolate systems if patching is not immediately feasible.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Oracle WebLogic Server (specific versions not provided, refer to Oracle's security advisories for exact ranges)",
+        "how_to_determine_impact": "Identify all Oracle WebLogic Server instances. Check the installed version against Oracle's security advisories. Monitor WebLogic server access logs and database access logs for unusual activity or unauthorized queries. Look for indicators of compromise related to data exfiltration.",
+        "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Oracle WebLogic Server' and Version matches vulnerable ranges (refer to Oracle advisory)",
+        "rapid7_query_hint": "Vulnerability Title: Oracle WebLogic (actively exploited), or Asset search with Software name: Oracle WebLogic Server and vulnerable version.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.1 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Unpatched Calix flaw lets hackers bypass NAT to expose internal devices",
+        "tldr": "An unpatched vulnerability in Calix GS7 XGS (GS5239XG) residential routers allows remote, unauthenticated attackers to bypass NAT. This bypass can create port-forwarding rules, exposing internal network devices to the public internet, posing a significant risk to home and small business networks.",
+        "action": "Customers using Calix GS7 XGS (GS5239XG) routers should contact their broadband provider for potential firmware updates or mitigation advice. Isolate sensitive internal devices behind additional firewalls if possible.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/unpatched-calix-flaw-lets-hackers-bypass-nat-to-expose-internal-devices/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Calix GS7 XGS (GS5239XG) residential routers (specific firmware versions implied, but the article states 'unpatched vulnerability')",
+        "how_to_determine_impact": "Identify if Calix GS7 XGS (GS5239XG) routers are deployed in your environment. Check router configurations for any unauthorized port-forwarding rules. Monitor network traffic for unexpected external connections to internal devices.",
+        "tanium_query_hint": "This is a network device vulnerability, Tanium may not have direct visibility. Focus on network-level scanning or inventory tools to identify Calix routers.",
+        "rapid7_query_hint": "Asset search with 'Hardware Vendor: Calix' and 'Model: GS7 XGS (GS5239XG)'. Consider external network scans to detect exposed services.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.5 High",
         "category": "vulns"
       }
     ]
