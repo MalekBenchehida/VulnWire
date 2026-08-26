@@ -1,120 +1,102 @@
 {
   "breaches": [
     {
-      "title": "Fake Apple Support AI Calls Target Stolen-Device Owners for Passcodes and 2FA Codes",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "FBI Disrupts China-Linked QTFY Infrastructure Used to Steal Data From U.S. Organizations",
+      "tldr": "The FBI has successfully dismantled infrastructure associated with the China-linked QTFY cyber espionage group. This infrastructure was utilized to facilitate data theft from various U.S. organizations. This action aims to curb ongoing state-sponsored cyber espionage.",
+      "action": "Review network logs for indicators of compromise related to QTFY or known Chinese state-sponsored activities. Enhance perimeter defenses and monitor for suspicious outbound connections.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/fake-apple-support-ai-calls-target.html",
+      "source_url": "https://thehackernews.com/2026/08/fbi-disrupts-china-linked-qtfy.html",
       "source": "The Hacker News"
     },
     {
-      "title": "U.S. Sanctions Iran-Linked Hackers Behind Critical Infrastructure Breaches",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "NovaCookies Campaigns Abuse Genuine Docusign Notifications to Steal Microsoft 365 Sessions",
+      "tldr": "The NovaCookies campaign is actively leveraging legitimate Docusign notification emails as a lure in phishing attacks. These campaigns aim to trick users into providing credentials, thereby enabling the theft of Microsoft 365 user sessions. This allows attackers to bypass multi-factor authentication and gain unauthorized access.",
+      "action": "Educate users on identifying sophisticated phishing attempts, particularly those impersonating trusted services like Docusign. Implement robust email security gateways and enforce strict conditional access policies for Microsoft 365. Monitor for unusual login patterns or session activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/us-sanctions-iran-linked-hackers-behind.html",
+      "source_url": "https://thehackernews.com/2026/08/novacookies-campaigns-abuse-genuine.html",
       "source": "The Hacker News"
     },
     {
-      "title": "LACMA data breach last year exposed social security and medical data",
-      "tldr": "The Los Angeles County Museum of Art (LACMA) has announced that a breach last year exposed customer and employee information. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Boston Scientific says cyberattack disrupted operations globally",
+      "tldr": "Medical technology giant Boston Scientific has confirmed it was hit by a cyberattack that caused widespread disruption to its IT systems and global operations. The nature of the attack is not fully disclosed, but it led to significant operational impact.",
+      "action": "Review incident response plans for operational disruption scenarios. Conduct tabletop exercises simulating similar attacks to ensure preparedness. Monitor critical infrastructure and operational technology (OT) systems for signs of compromise or unusual activity.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/lacma-data-breach-last-year-exposed-social-security-and-medical-data/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/boston-scientific-says-cyberattack-disrupted-operations-globally/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hospital operator Nutex Health says data stolen in cyberattack",
-      "tldr": "Healthcare and services provider Nutex is investigating a data breach incident where an unauthorized third party exfiltrated information from company servers. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Sensitive Information Exposed in Nutex Health Data Breach",
+      "tldr": "Nutex Health has announced a data breach that resulted in the exposure of sensitive patient and operational information. The breach compromised critical data, potentially including personally identifiable information (PII) and protected health information (PHI), posing significant privacy and security risks.",
+      "action": "If your organization handles healthcare data, reinforce data encryption, access controls, and network segmentation. Conduct regular security audits and employee training on data handling. Notify affected individuals and offer credit monitoring as appropriate.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hospital-operator-nutex-health-says-data-stolen-in-cyberattack/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/sensitive-information-exposed-in-nutex-health-data-breach/",
+      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "Unpatched Kaltura mwEmbed Flaws Could Let Remote Attackers Read Files and Run Code",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Hackers target Microsoft SharePoint RCE chain with PoC exploit",
+      "tldr": "Attackers are actively targeting a chain of two Microsoft SharePoint vulnerabilities that could lead to remote code execution (RCE) on unpatched servers. Proof-of-concept exploits are now available, increasing the urgency for organizations to apply patches.",
+      "action": "Immediately identify all Microsoft SharePoint servers within your environment. Apply the latest security updates and patches from Microsoft to address these vulnerabilities. Monitor SharePoint logs for any signs of exploitation or unusual activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/unpatched-kaltura-mwembed-flaws-could.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-sharepoint-rce-chain-with-poc-exploit/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "All unpatched Microsoft SharePoint servers vulnerable to the specified RCE chain. Consult Microsoft's official security advisories for precise version ranges and specific CVEs.",
+      "how_to_determine_impact": "Identify all Microsoft SharePoint server instances within your environment. Check the installed version and patch level against Microsoft's latest security updates, specifically those addressing remote code execution. Additionally, inspect SharePoint logs and file systems for indicators of compromise such as newly created web shells, suspicious processes, or unusual file modifications.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name contains \"Microsoft SharePoint Server\" and IsService = \"true\" | Get Hotfixes from all machines with Name contains \"SharePoint Server\"",
+      "rapid7_query_hint": "Vulnerability.title contains \"Microsoft SharePoint Remote Code Execution\" AND Vulnerability.status = \"Vulnerable\"",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate based on active exploitation of RCE chain)"
     },
     {
-      "title": "Imagine the SOC Without a Queue: From Alert Backlog to AI Hypothesis Engine",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Hackers now exploit critical Gitea flaw in code injection attacks",
+      "tldr": "A critical-severity vulnerability in the Gitea self-hosted Git service is now being actively exploited by attackers for code injection. CISA has issued a warning, underscoring the urgency for users to patch their Gitea instances to prevent compromise.",
+      "action": "Immediately identify all Gitea instances within your infrastructure. Apply the latest security patches available for Gitea to remediate the critical code injection vulnerability. Monitor Gitea logs for any signs of unusual activity or unauthorized code execution.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/imagine-soc-without-queue-from-alert.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Vulnerable Gitea self-hosted Git service instances. Consult Gitea's official security advisories for specific affected versions and the corresponding patches. It is crucial to identify all running Gitea instances.",
+      "how_to_determine_impact": "Identify all Gitea installations. Verify the version number of Gitea running against official security advisories to determine if it is vulnerable. Inspect Gitea repositories, hooks, and configuration files for any unauthorized modifications or injected code that could indicate compromise. Check system logs for unusual process execution originating from the Gitea application.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name contains \"Gitea\" | Get Running Processes from all machines with Process Name contains \"gitea\"",
+      "rapid7_query_hint": "Vulnerability.title contains \"Gitea Code Injection\" AND Vulnerability.status = \"Vulnerable\"",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate based on active exploitation of critical code injection flaw with CISA warning)"
     },
     {
-      "title": "Claude Opus 4.6 Bypasses Gym Booking Limit, Cancels Other Users' Reservations in Tests",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Ubiquiti patches three max severity security vulnerabilities",
+      "tldr": "Ubiquiti has released critical security patches for three maximum-severity vulnerabilities. These flaws could allow threat actors to exploit devices remotely without needing any privileges, indicating a high risk of compromise for unpatched Ubiquiti products.",
+      "action": "Immediately identify all Ubiquiti devices in your environment. Apply the latest firmware and software updates released by Ubiquiti to address these critical vulnerabilities. Prioritize devices exposed to the internet.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/claude-opus-46-bypasses-gym-booking.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Affected Ubiquiti devices running firmware/software versions prior to the latest security updates addressing these three maximum-severity vulnerabilities. Users must consult Ubiquiti's official security advisories for specific affected device models and precise firmware/software version ranges.",
+      "how_to_determine_impact": "Conduct an inventory of all Ubiquiti networking equipment (e.g., UniFi access points, EdgeRouters, AmpliFi devices). Check the current firmware version installed on each device. Compare these versions against the security advisories published by Ubiquiti to identify vulnerable assets. Prioritize devices exposed directly to the internet.",
+      "tanium_query_hint": "Get Firmware Version from all machines with Manufacturer equals \"Ubiquiti Networks\" | Get Installed Applications from all machines with Name contains \"UniFi\"",
+      "rapid7_query_hint": "Vulnerability.vendor = \"Ubiquiti Networks\" AND Vulnerability.severity = \"Critical\"",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate based on 'max severity' and remote, unprivileged exploitation)"
     },
     {
-      "title": "OpenAI Bans Russian ChatGPT Accounts Used to Run Influence Operation",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "WordPress Websites Targeted via MiniOrange Plugin Vulnerabilities",
+      "tldr": "WordPress websites are being actively targeted through vulnerabilities discovered in the MiniOrange plugin. These flaws could allow attackers to compromise affected websites, potentially leading to data theft, defacement, or further malicious activity.",
+      "action": "Immediately identify all WordPress websites using the MiniOrange plugin. Update the MiniOrange plugin to its latest secure version without delay. Review WordPress security logs for any signs of compromise or unusual plugin activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/openai-bans-russian-chatgpt-accounts.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.securityweek.com/wordpress-websites-targeted-via-miniorange-plugin-vulnerabilities/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "WordPress websites utilizing vulnerable versions of the MiniOrange plugin. Consult MiniOrange's official security advisories or the WordPress plugin repository for specific affected version ranges and the updated secure versions.",
+      "how_to_determine_impact": "On all WordPress installations, check for the presence and version number of the MiniOrange plugin. This can typically be found in the WordPress admin panel under 'Plugins' or by inspecting the plugin's readme.txt or main plugin file. Additionally, review WordPress logs for unusual activity, new user accounts, or unauthorized file modifications in the wp-content directory.",
+      "tanium_query_hint": "Get File Content[\"wp-content/plugins/miniorange/*/readme.txt\"] from all machines with Path contains \"wordpress\"",
+      "rapid7_query_hint": "Software.name = \"WordPress\" AND Software.plugin.name = \"MiniOrange\" AND Vulnerability.status = \"Vulnerable\"",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 High (Estimate based on active exploitation leading to potential website compromise and code injection)"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -12577,6 +12559,106 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "FBI Disrupts China-Linked QTFY Infrastructure Used to Steal Data From U.S. Organizations",
+        "tldr": "The FBI has successfully dismantled infrastructure associated with the China-linked QTFY cyber espionage group. This infrastructure was utilized to facilitate data theft from various U.S. organizations. This action aims to curb ongoing state-sponsored cyber espionage.",
+        "action": "Review network logs for indicators of compromise related to QTFY or known Chinese state-sponsored activities. Enhance perimeter defenses and monitor for suspicious outbound connections.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/fbi-disrupts-china-linked-qtfy.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "NovaCookies Campaigns Abuse Genuine Docusign Notifications to Steal Microsoft 365 Sessions",
+        "tldr": "The NovaCookies campaign is actively leveraging legitimate Docusign notification emails as a lure in phishing attacks. These campaigns aim to trick users into providing credentials, thereby enabling the theft of Microsoft 365 user sessions. This allows attackers to bypass multi-factor authentication and gain unauthorized access.",
+        "action": "Educate users on identifying sophisticated phishing attempts, particularly those impersonating trusted services like Docusign. Implement robust email security gateways and enforce strict conditional access policies for Microsoft 365. Monitor for unusual login patterns or session activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/novacookies-campaigns-abuse-genuine.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Boston Scientific says cyberattack disrupted operations globally",
+        "tldr": "Medical technology giant Boston Scientific has confirmed it was hit by a cyberattack that caused widespread disruption to its IT systems and global operations. The nature of the attack is not fully disclosed, but it led to significant operational impact.",
+        "action": "Review incident response plans for operational disruption scenarios. Conduct tabletop exercises simulating similar attacks to ensure preparedness. Monitor critical infrastructure and operational technology (OT) systems for signs of compromise or unusual activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/boston-scientific-says-cyberattack-disrupted-operations-globally/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Sensitive Information Exposed in Nutex Health Data Breach",
+        "tldr": "Nutex Health has announced a data breach that resulted in the exposure of sensitive patient and operational information. The breach compromised critical data, potentially including personally identifiable information (PII) and protected health information (PHI), posing significant privacy and security risks.",
+        "action": "If your organization handles healthcare data, reinforce data encryption, access controls, and network segmentation. Conduct regular security audits and employee training on data handling. Notify affected individuals and offer credit monitoring as appropriate.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/sensitive-information-exposed-in-nutex-health-data-breach/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers target Microsoft SharePoint RCE chain with PoC exploit",
+        "tldr": "Attackers are actively targeting a chain of two Microsoft SharePoint vulnerabilities that could lead to remote code execution (RCE) on unpatched servers. Proof-of-concept exploits are now available, increasing the urgency for organizations to apply patches.",
+        "action": "Immediately identify all Microsoft SharePoint servers within your environment. Apply the latest security updates and patches from Microsoft to address these vulnerabilities. Monitor SharePoint logs for any signs of exploitation or unusual activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-sharepoint-rce-chain-with-poc-exploit/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All unpatched Microsoft SharePoint servers vulnerable to the specified RCE chain. Consult Microsoft's official security advisories for precise version ranges and specific CVEs.",
+        "how_to_determine_impact": "Identify all Microsoft SharePoint server instances within your environment. Check the installed version and patch level against Microsoft's latest security updates, specifically those addressing remote code execution. Additionally, inspect SharePoint logs and file systems for indicators of compromise such as newly created web shells, suspicious processes, or unusual file modifications.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Name contains \"Microsoft SharePoint Server\" and IsService = \"true\" | Get Hotfixes from all machines with Name contains \"SharePoint Server\"",
+        "rapid7_query_hint": "Vulnerability.title contains \"Microsoft SharePoint Remote Code Execution\" AND Vulnerability.status = \"Vulnerable\"",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on active exploitation of RCE chain)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers now exploit critical Gitea flaw in code injection attacks",
+        "tldr": "A critical-severity vulnerability in the Gitea self-hosted Git service is now being actively exploited by attackers for code injection. CISA has issued a warning, underscoring the urgency for users to patch their Gitea instances to prevent compromise.",
+        "action": "Immediately identify all Gitea instances within your infrastructure. Apply the latest security patches available for Gitea to remediate the critical code injection vulnerability. Monitor Gitea logs for any signs of unusual activity or unauthorized code execution.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Vulnerable Gitea self-hosted Git service instances. Consult Gitea's official security advisories for specific affected versions and the corresponding patches. It is crucial to identify all running Gitea instances.",
+        "how_to_determine_impact": "Identify all Gitea installations. Verify the version number of Gitea running against official security advisories to determine if it is vulnerable. Inspect Gitea repositories, hooks, and configuration files for any unauthorized modifications or injected code that could indicate compromise. Check system logs for unusual process execution originating from the Gitea application.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Name contains \"Gitea\" | Get Running Processes from all machines with Process Name contains \"gitea\"",
+        "rapid7_query_hint": "Vulnerability.title contains \"Gitea Code Injection\" AND Vulnerability.status = \"Vulnerable\"",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on active exploitation of critical code injection flaw with CISA warning)",
+        "category": "vulns"
+      },
+      {
+        "title": "Ubiquiti patches three max severity security vulnerabilities",
+        "tldr": "Ubiquiti has released critical security patches for three maximum-severity vulnerabilities. These flaws could allow threat actors to exploit devices remotely without needing any privileges, indicating a high risk of compromise for unpatched Ubiquiti products.",
+        "action": "Immediately identify all Ubiquiti devices in your environment. Apply the latest firmware and software updates released by Ubiquiti to address these critical vulnerabilities. Prioritize devices exposed to the internet.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ubiquiti-patches-three-max-severity-security-vulnerabilities/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Affected Ubiquiti devices running firmware/software versions prior to the latest security updates addressing these three maximum-severity vulnerabilities. Users must consult Ubiquiti's official security advisories for specific affected device models and precise firmware/software version ranges.",
+        "how_to_determine_impact": "Conduct an inventory of all Ubiquiti networking equipment (e.g., UniFi access points, EdgeRouters, AmpliFi devices). Check the current firmware version installed on each device. Compare these versions against the security advisories published by Ubiquiti to identify vulnerable assets. Prioritize devices exposed directly to the internet.",
+        "tanium_query_hint": "Get Firmware Version from all machines with Manufacturer equals \"Ubiquiti Networks\" | Get Installed Applications from all machines with Name contains \"UniFi\"",
+        "rapid7_query_hint": "Vulnerability.vendor = \"Ubiquiti Networks\" AND Vulnerability.severity = \"Critical\"",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on 'max severity' and remote, unprivileged exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "WordPress Websites Targeted via MiniOrange Plugin Vulnerabilities",
+        "tldr": "WordPress websites are being actively targeted through vulnerabilities discovered in the MiniOrange plugin. These flaws could allow attackers to compromise affected websites, potentially leading to data theft, defacement, or further malicious activity.",
+        "action": "Immediately identify all WordPress websites using the MiniOrange plugin. Update the MiniOrange plugin to its latest secure version without delay. Review WordPress security logs for any signs of compromise or unusual plugin activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/wordpress-websites-targeted-via-miniorange-plugin-vulnerabilities/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "WordPress websites utilizing vulnerable versions of the MiniOrange plugin. Consult MiniOrange's official security advisories or the WordPress plugin repository for specific affected version ranges and the updated secure versions.",
+        "how_to_determine_impact": "On all WordPress installations, check for the presence and version number of the MiniOrange plugin. This can typically be found in the WordPress admin panel under 'Plugins' or by inspecting the plugin's readme.txt or main plugin file. Additionally, review WordPress logs for unusual activity, new user accounts, or unauthorized file modifications in the wp-content directory.",
+        "tanium_query_hint": "Get File Content[\"wp-content/plugins/miniorange/*/readme.txt\"] from all machines with Path contains \"wordpress\"",
+        "rapid7_query_hint": "Software.name = \"WordPress\" AND Software.plugin.name = \"MiniOrange\" AND Vulnerability.status = \"Vulnerable\"",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 High (Estimate based on active exploitation leading to potential website compromise and code injection)",
         "category": "vulns"
       }
     ]
