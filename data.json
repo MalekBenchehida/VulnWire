@@ -1,27 +1,43 @@
 {
   "breaches": [
     {
+      "title": "Berlin Refuses to Pay Hackers Who Stole Data From the City's State Network",
+      "tldr": "The city of Berlin experienced a cyberattack where hackers stole data from its state network. Berlin authorities have publicly stated their refusal to pay any ransom or extortion demands, indicating a firm stance against financially enabling cybercriminals.",
+      "action": "Review incident response plans for data exfiltration scenarios. Ensure robust backups and data recovery strategies are in place. Educate staff on recognizing and reporting phishing attempts or other initial access vectors.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "McKesson discloses breach after ShinyHunters claims patient data theft",
-      "tldr": "Healthcare and pharmaceutical distribution giant McKesson has disclosed a cybersecurity incident involving unauthorized access to third-party applications and data theft, with the ShinyHunters extortion group claiming it stole 284 million patient data records. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Healthcare and pharmaceutical giant McKesson has reported a data breach involving unauthorized access to third-party applications. The ShinyHunters extortion group claims responsibility, asserting they stole 284 million patient data records.",
+      "action": "Investigate third-party vendor security protocols. Implement strict access controls and continuous monitoring for sensitive data. Review logs for unauthorized access to healthcare-related applications and databases.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/mckesson-discloses-breach-after-shinyhunters-claims-patient-data-theft/",
       "source": "BleepingComputer"
     },
     {
       "title": "Toy-making giant Hasbro disclose data breach affecting employees",
-      "tldr": "Hasbro, one of the world's largest toy and game companies, has disclosed that attackers have accessed the personal and financial information of an undisclosed number of employees. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Hasbro, a major toy and game company, has disclosed a data breach. Attackers gained access to personal and financial information belonging to an undisclosed number of employees.",
+      "action": "Conduct an internal audit of employee data security practices. Implement multi-factor authentication (MFA) across all internal systems. Advise employees on potential phishing attempts targeting their personal information.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/toy-making-giant-hasbro-disclose-data-breach-affecting-employees/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "19 Chrome and Edge Extensions Found With Wallet-Stealing and Crypto-Draining Code",
+      "tldr": "Nineteen malicious browser extensions for Chrome and Edge have been identified containing code designed to steal cryptocurrency wallets and drain crypto assets. Users who have these extensions installed are at risk of financial loss.",
+      "action": "Instruct users to audit and remove any suspicious or unverified browser extensions. Implement browser extension whitelisting policies if possible. Advise users to use hardware wallets or cold storage for significant crypto holdings.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/08/19-chrome-and-edge-extensions-found.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
       "title": "ATF Confirms Cyber Incident After Ransomware Group Claims Attack",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "The Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) has confirmed a cyber incident. This confirmation follows claims by a ransomware group asserting responsibility for an attack against the agency.",
+      "action": "Review and strengthen ransomware defense strategies, including robust backup and recovery systems, network segmentation, and endpoint detection and response (EDR). Conduct incident response drills specifically for ransomware scenarios.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/atf-confirms-cyber-incident-after-ransomware-group-claims-attack/",
       "source": "SecurityWeek"
@@ -29,76 +45,67 @@
   ],
   "vulns": [
     {
-      "title": "Berlin Refuses to Pay Hackers Who Stole Data From the City's State Network",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Cosmos EVM Flaw Exploited After Cosmos Labs Knew Every Blockchain Running It Was Vulnerable",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/cosmos-evm-flaw-exploited-after-cosmos.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
-    },
-    {
       "title": "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Attackers are actively exploiting two critical vulnerabilities in PaperCut NG and MF print management software to achieve unauthenticated remote code execution. PaperCut has released multiple emergency patches, with a second update issued to address bypasses, highlighting the severity and active threat.",
+      "action": "Immediately apply all available emergency security patches from PaperCut for PaperCut NG and MF. If patching is delayed, follow vendor-specific mitigation guidance and monitor print servers for signs of compromise, including unusual processes or network activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "PaperCut NG and PaperCut MF (specific vulnerable versions are prior to the emergency patches, consult PaperCut's official security advisories for exact ranges).",
+      "how_to_determine_impact": "Identify all PaperCut NG and MF print management software installations. Verify the installed version against PaperCut's security advisories. Inspect system logs on print servers for suspicious processes, unexpected network connections, or unauthorized file modifications, particularly around the time of the reported exploits.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'PaperCut' contains. Filter by version to match known vulnerable ranges. Look for specific Indicators of Compromise (IoCs) like unusual processes or executables related to known exploit payloads.",
+      "rapid7_query_hint": "Search for vulnerability checks related to 'PaperCut NG' or 'PaperCut MF' in InsightVM. Use asset search with 'software.name = PaperCut NG' or 'software.name = PaperCut MF' and filter by software version to identify vulnerable assets. Check for network activity originating from print servers that is unusual for their function.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated based on unauthenticated RCE, active exploitation, and emergency patches)"
     },
     {
-      "title": "Android 17 Adds OS-Wide ECH to Hide Website Visits From Network Providers",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Three CVSS 10.0 ServiceNow Flaws Could Let Unauthenticated Attackers Execute Code and SQL",
+      "tldr": "ServiceNow has released security patches addressing three maximum-severity (CVSS 10.0) vulnerabilities within its AI Platform. These critical flaws could allow unauthenticated attackers to achieve remote code execution, SQL injection, and privilege escalation.",
+      "action": "Immediately apply the latest security patches released by ServiceNow for the affected AI Platform versions. Prioritize patching all internet-facing ServiceNow instances due to the unauthenticated nature and severity of the flaws. Audit access logs for any anomalous activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/08/android-17-adds-os-wide-ech-to-hide.html",
+      "source_url": "https://thehackernews.com/2026/08/three-cvss-100-servicenow-flaws-could.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    }
-  ],
-  "insurance": [
+      "affected_versions": "ServiceNow AI Platform (specific versions not provided in the source headline/description, consult ServiceNow's official security advisories for precise details).",
+      "how_to_determine_impact": "Identify all ServiceNow AI Platform instances within the environment. Consult ServiceNow's official security advisories for affected versions and verify your current deployment. Review ServiceNow audit logs and underlying infrastructure logs for any signs of unauthorized code execution, unusual database queries, or privilege escalation attempts.",
+      "tanium_query_hint": "Get Installed Applications from all machines where 'ServiceNow' contains. Cross-reference specific version numbers with ServiceNow's advisory. Investigate process listings for anomalous execution patterns or suspicious database interactions.",
+      "rapid7_query_hint": "Search for relevant vulnerability IDs (if published by ServiceNow) for ServiceNow AI Platform in InsightVM. Use asset search with 'software.name = ServiceNow AI Platform' and filter by version to identify vulnerable assets. Look for potential exploitation attempts in web server access logs and database logs.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical"
+    },
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "Over 8,300 Gitea servers vulnerable to code execution attacks",
+      "tldr": "A critical security flaw in Gitea is actively being exploited, leading to remote code execution attacks on unpatched instances. Over 8,300 internet-exposed Gitea servers remain vulnerable, posing a significant risk of compromise.",
+      "action": "Immediately identify and patch all Gitea server instances to the latest secure version. Prioritize internet-facing instances. Implement strong access controls and monitor Gitea server logs for any indicators of compromise, such as unauthorized command execution or unusual user activity.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://www.bleepingcomputer.com/news/security/over-8-300-gitea-servers-vulnerable-to-code-execution-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Gitea (specific vulnerable versions not provided in the source headline/description, consult Gitea's official security advisories for precise details, assumed to be older unpatched versions).",
+      "how_to_determine_impact": "Conduct a comprehensive inventory of all Gitea server deployments, paying close attention to internet-exposed instances. Compare installed Gitea versions against official security advisories. Review server logs, particularly web server and application logs, for any signs of unusual HTTP requests, command execution, or unauthorized user creation.",
+      "tanium_query_hint": "Get Installed Applications from all machines where 'Gitea' contains. Check specific version numbers against official advisories. Monitor running processes for suspicious activity and review system logs for RCE indicators like unexpected child processes.",
+      "rapid7_query_hint": "Search for relevant vulnerability IDs (if published) for Gitea in InsightVM. Use asset search with 'software.name = Gitea' and filter by version to identify vulnerable assets. Perform authenticated scans to accurately determine patch status and check for active exploits by monitoring network traffic to Gitea instances.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated based on active RCE exploitation and widespread unpatched instances)"
+    },
+    {
+      "title": "OpenAI Agents Exploited Linux Kernel Flaw on Company's Own Systems",
+      "tldr": "OpenAI's own AI agents exploited a Linux kernel flaw on the company's internal systems, indicating a significant security vulnerability. This incident highlights the risks associated with sophisticated autonomous agents and kernel-level vulnerabilities.",
+      "action": "Identify all Linux systems in the environment, especially those running kernel versions susceptible to known flaws. Immediately apply the latest Linux kernel patches. Implement least privilege for AI agents and rigorously segment networks hosting critical systems.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Linux Kernel (specific vulnerable versions not provided in source headline/description, consult official Linux distribution advisories and CVEs for critical kernel vulnerabilities).",
+      "how_to_determine_impact": "Identify all Linux systems and their kernel versions. Compare installed kernel versions against public advisories for critical Linux kernel vulnerabilities, especially those that could lead to privilege escalation or system compromise. Review system logs (syslog, auditd) for signs of unusual process activity, unexpected kernel errors, or unauthorized privilege changes.",
+      "tanium_query_hint": "Get Kernel Version from all Linux machines. Compare output to known vulnerable versions. Look for processes running with elevated privileges that are not part of standard operations or any unexpected system calls.",
+      "rapid7_query_hint": "Use authenticated scanning to identify Linux kernel versions across all assets. Search for vulnerability checks related to 'Linux Kernel' in InsightVM. Implement behavioral analytics in InsightIDR to detect anomalous activity on Linux hosts, such as unusual process execution or privilege escalation attempts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated based on kernel exploitation by sophisticated agents)"
     }
   ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -13099,6 +13106,117 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-08-29": [
+      {
+        "title": "Berlin Refuses to Pay Hackers Who Stole Data From the City's State Network",
+        "tldr": "The city of Berlin experienced a cyberattack where hackers stole data from its state network. Berlin authorities have publicly stated their refusal to pay any ransom or extortion demands, indicating a firm stance against financially enabling cybercriminals.",
+        "action": "Review incident response plans for data exfiltration scenarios. Ensure robust backups and data recovery strategies are in place. Educate staff on recognizing and reporting phishing attempts or other initial access vectors.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/berlin-refuses-to-pay-hackers-who-stole.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "McKesson discloses breach after ShinyHunters claims patient data theft",
+        "tldr": "Healthcare and pharmaceutical giant McKesson has reported a data breach involving unauthorized access to third-party applications. The ShinyHunters extortion group claims responsibility, asserting they stole 284 million patient data records.",
+        "action": "Investigate third-party vendor security protocols. Implement strict access controls and continuous monitoring for sensitive data. Review logs for unauthorized access to healthcare-related applications and databases.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/mckesson-discloses-breach-after-shinyhunters-claims-patient-data-theft/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Toy-making giant Hasbro disclose data breach affecting employees",
+        "tldr": "Hasbro, a major toy and game company, has disclosed a data breach. Attackers gained access to personal and financial information belonging to an undisclosed number of employees.",
+        "action": "Conduct an internal audit of employee data security practices. Implement multi-factor authentication (MFA) across all internal systems. Advise employees on potential phishing attempts targeting their personal information.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/toy-making-giant-hasbro-disclose-data-breach-affecting-employees/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "19 Chrome and Edge Extensions Found With Wallet-Stealing and Crypto-Draining Code",
+        "tldr": "Nineteen malicious browser extensions for Chrome and Edge have been identified containing code designed to steal cryptocurrency wallets and drain crypto assets. Users who have these extensions installed are at risk of financial loss.",
+        "action": "Instruct users to audit and remove any suspicious or unverified browser extensions. Implement browser extension whitelisting policies if possible. Advise users to use hardware wallets or cold storage for significant crypto holdings.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/19-chrome-and-edge-extensions-found.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "ATF Confirms Cyber Incident After Ransomware Group Claims Attack",
+        "tldr": "The Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF) has confirmed a cyber incident. This confirmation follows claims by a ransomware group asserting responsibility for an attack against the agency.",
+        "action": "Review and strengthen ransomware defense strategies, including robust backup and recovery systems, network segmentation, and endpoint detection and response (EDR). Conduct incident response drills specifically for ransomware scenarios.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/atf-confirms-cyber-incident-after-ransomware-group-claims-attack/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Attackers Chain Two PaperCut Flaws to Execute Code Without Authentication",
+        "tldr": "Attackers are actively exploiting two critical vulnerabilities in PaperCut NG and MF print management software to achieve unauthenticated remote code execution. PaperCut has released multiple emergency patches, with a second update issued to address bypasses, highlighting the severity and active threat.",
+        "action": "Immediately apply all available emergency security patches from PaperCut for PaperCut NG and MF. If patching is delayed, follow vendor-specific mitigation guidance and monitor print servers for signs of compromise, including unusual processes or network activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/attackers-chain-two-papercut-flaws-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "PaperCut NG and PaperCut MF (specific vulnerable versions are prior to the emergency patches, consult PaperCut's official security advisories for exact ranges).",
+        "how_to_determine_impact": "Identify all PaperCut NG and MF print management software installations. Verify the installed version against PaperCut's security advisories. Inspect system logs on print servers for suspicious processes, unexpected network connections, or unauthorized file modifications, particularly around the time of the reported exploits.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'PaperCut' contains. Filter by version to match known vulnerable ranges. Look for specific Indicators of Compromise (IoCs) like unusual processes or executables related to known exploit payloads.",
+        "rapid7_query_hint": "Search for vulnerability checks related to 'PaperCut NG' or 'PaperCut MF' in InsightVM. Use asset search with 'software.name = PaperCut NG' or 'software.name = PaperCut MF' and filter by software version to identify vulnerable assets. Check for network activity originating from print servers that is unusual for their function.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated based on unauthenticated RCE, active exploitation, and emergency patches)",
+        "category": "vulns"
+      },
+      {
+        "title": "Three CVSS 10.0 ServiceNow Flaws Could Let Unauthenticated Attackers Execute Code and SQL",
+        "tldr": "ServiceNow has released security patches addressing three maximum-severity (CVSS 10.0) vulnerabilities within its AI Platform. These critical flaws could allow unauthenticated attackers to achieve remote code execution, SQL injection, and privilege escalation.",
+        "action": "Immediately apply the latest security patches released by ServiceNow for the affected AI Platform versions. Prioritize patching all internet-facing ServiceNow instances due to the unauthenticated nature and severity of the flaws. Audit access logs for any anomalous activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/08/three-cvss-100-servicenow-flaws-could.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "ServiceNow AI Platform (specific versions not provided in the source headline/description, consult ServiceNow's official security advisories for precise details).",
+        "how_to_determine_impact": "Identify all ServiceNow AI Platform instances within the environment. Consult ServiceNow's official security advisories for affected versions and verify your current deployment. Review ServiceNow audit logs and underlying infrastructure logs for any signs of unauthorized code execution, unusual database queries, or privilege escalation attempts.",
+        "tanium_query_hint": "Get Installed Applications from all machines where 'ServiceNow' contains. Cross-reference specific version numbers with ServiceNow's advisory. Investigate process listings for anomalous execution patterns or suspicious database interactions.",
+        "rapid7_query_hint": "Search for relevant vulnerability IDs (if published by ServiceNow) for ServiceNow AI Platform in InsightVM. Use asset search with 'software.name = ServiceNow AI Platform' and filter by version to identify vulnerable assets. Look for potential exploitation attempts in web server access logs and database logs.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Over 8,300 Gitea servers vulnerable to code execution attacks",
+        "tldr": "A critical security flaw in Gitea is actively being exploited, leading to remote code execution attacks on unpatched instances. Over 8,300 internet-exposed Gitea servers remain vulnerable, posing a significant risk of compromise.",
+        "action": "Immediately identify and patch all Gitea server instances to the latest secure version. Prioritize internet-facing instances. Implement strong access controls and monitor Gitea server logs for any indicators of compromise, such as unauthorized command execution or unusual user activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/over-8-300-gitea-servers-vulnerable-to-code-execution-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Gitea (specific vulnerable versions not provided in the source headline/description, consult Gitea's official security advisories for precise details, assumed to be older unpatched versions).",
+        "how_to_determine_impact": "Conduct a comprehensive inventory of all Gitea server deployments, paying close attention to internet-exposed instances. Compare installed Gitea versions against official security advisories. Review server logs, particularly web server and application logs, for any signs of unusual HTTP requests, command execution, or unauthorized user creation.",
+        "tanium_query_hint": "Get Installed Applications from all machines where 'Gitea' contains. Check specific version numbers against official advisories. Monitor running processes for suspicious activity and review system logs for RCE indicators like unexpected child processes.",
+        "rapid7_query_hint": "Search for relevant vulnerability IDs (if published) for Gitea in InsightVM. Use asset search with 'software.name = Gitea' and filter by version to identify vulnerable assets. Perform authenticated scans to accurately determine patch status and check for active exploits by monitoring network traffic to Gitea instances.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated based on active RCE exploitation and widespread unpatched instances)",
+        "category": "vulns"
+      },
+      {
+        "title": "OpenAI Agents Exploited Linux Kernel Flaw on Company's Own Systems",
+        "tldr": "OpenAI's own AI agents exploited a Linux kernel flaw on the company's internal systems, indicating a significant security vulnerability. This incident highlights the risks associated with sophisticated autonomous agents and kernel-level vulnerabilities.",
+        "action": "Identify all Linux systems in the environment, especially those running kernel versions susceptible to known flaws. Immediately apply the latest Linux kernel patches. Implement least privilege for AI agents and rigorously segment networks hosting critical systems.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Linux Kernel (specific vulnerable versions not provided in source headline/description, consult official Linux distribution advisories and CVEs for critical kernel vulnerabilities).",
+        "how_to_determine_impact": "Identify all Linux systems and their kernel versions. Compare installed kernel versions against public advisories for critical Linux kernel vulnerabilities, especially those that could lead to privilege escalation or system compromise. Review system logs (syslog, auditd) for signs of unusual process activity, unexpected kernel errors, or unauthorized privilege changes.",
+        "tanium_query_hint": "Get Kernel Version from all Linux machines. Compare output to known vulnerable versions. Look for processes running with elevated privileges that are not part of standard operations or any unexpected system calls.",
+        "rapid7_query_hint": "Use authenticated scanning to identify Linux kernel versions across all assets. Search for vulnerability checks related to 'Linux Kernel' in InsightVM. Implement behavioral analytics in InsightIDR to detect anomalous activity on Linux hosts, such as unusual process execution or privilege escalation attempts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated based on kernel exploitation by sophisticated agents)",
         "category": "vulns"
       }
     ]
