@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Aesto Health says data breach affects over 9.5 million patients",
-      "tldr": "Aesto LLC, operating as Aesto Health, disclosed a data breach that impacts more than 9.5 million individuals. The breach was recently discovered and involves sensitive patient information.",
-      "action": "Organizations handling patient data should review third-party vendor security, conduct thorough risk assessments, and ensure robust data encryption and access controls are in place for all sensitive information.",
+      "tldr": "Aesto Health has disclosed a significant data breach impacting over 9.5 million individuals. The breach involves patient data, raising concerns about the privacy and security of sensitive personal and health information.",
+      "action": "Patients affected should monitor their credit reports and healthcare statements for suspicious activity. Organizations should review third-party vendor security and enhance data protection measures for patient information.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/aesto-health-says-data-breach-affects-over-95-million-patients/",
       "source": "BleepingComputer"
     },
     {
       "title": "Novocure data breach affects more than 1,400 cancer patients",
-      "tldr": "Healthtech company Novocure reported a cyberattack in mid-August that led to a data breach. The incident exposed the data of over 1,400 U.S. cancer patients and an undisclosed number of employees.",
-      "action": "Healthcare organizations must enhance their incident response capabilities, ensure critical patient data is segmented, and protect sensitive information with strong access controls and encryption.",
+      "tldr": "Healthtech company Novocure experienced a cyberattack in mid-August, resulting in a data breach that exposed information belonging to over 1,400 U.S. cancer patients and an undisclosed number of employees. This incident highlights the ongoing threat to sensitive healthcare data.",
+      "action": "Impacted patients should be notified promptly, and credit monitoring services should be offered. Organizations must strengthen their cyber defenses, conduct thorough vulnerability assessments, and implement robust incident response plans to protect highly sensitive patient data.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/novocure-data-breach-affects-more-than-1-400-cancer-patients/",
       "source": "BleepingComputer"
     },
     {
       "title": "Attackers Steal METR API Key and Consume AI Credits Worth About $600,000",
-      "tldr": "Attackers stole an API key belonging to METR, a security research company. This unauthorized access resulted in the consumption of approximately $600,000 worth of AI credits, indicating credential theft and financial fraud.",
-      "action": "Implement robust API key management including regular rotation, adherence to the principle of least privilege, and continuous monitoring for unusual usage patterns. Enforce MFA for all accounts, particularly those with access to sensitive API keys or billing.",
+      "tldr": "Attackers have successfully stolen a METR API key, subsequently using it to consume approximately $600,000 worth of AI credits. This incident indicates a compromise of critical API credentials leading to significant financial impact and unauthorized resource usage.",
+      "action": "Immediately rotate all API keys, especially those related to AI services or cloud platforms. Implement API key rotation policies, enforce strict access controls and least privilege, and monitor API usage for any anomalous or excessive activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/attackers-steal-metr-api-key-and.html",
       "source": "The Hacker News"
     },
     {
       "title": "Cronos blockchain restarts after $74 million Tectonic exploit",
-      "tldr": "The Cronos blockchain network resumed trading after experiencing a $74 million loss due to a price-manipulation attack on the Tectonic cryptocurrency lending platform. The exploit allowed an attacker to borrow a significant sum through market manipulation.",
-      "action": "Cryptocurrency platforms and users should remain vigilant against price manipulation and flash loan attacks. Implement stringent smart contract audits and continuously monitor for abnormal market activities.",
+      "tldr": "The Cronos blockchain network has resumed trading activity following a price-manipulation attack on the Tectonic cryptocurrency lending platform. This exploit allowed an attacker to illicitly borrow $74 million, leading to significant financial losses and a temporary shutdown of the network.",
+      "action": "Users of Tectonic and Cronos should review their transaction history for anomalies. Blockchain platforms and DeFi protocols must enhance their smart contract security audits, implement robust price oracle mechanisms, and establish rapid incident response procedures to mitigate similar financial exploits.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cronos-blockchain-restarts-after-74-million-tectonic-exploit/",
       "source": "BleepingComputer"
@@ -36,8 +36,8 @@
   "ransomware": [
     {
       "title": "Ransomware Gang Claims Nutex Health Data Breach",
-      "tldr": "A ransomware gang has claimed responsibility for a data breach at Nutex Health. This typically involves the exfiltration and encryption of sensitive organizational data, followed by extortion demands.",
-      "action": "Enhance endpoint detection and response (EDR) capabilities, implement strong network segmentation, and maintain immutable backups. Review and test incident response plans specifically for ransomware attacks.",
+      "tldr": "A ransomware gang has claimed responsibility for a data breach at Nutex Health, indicating a likely extortion attempt involving compromised patient and organizational data. This suggests that sensitive information may have been exfiltrated prior to or during a ransomware attack.",
+      "action": "Nutex Health must investigate the extent of the data breach and prepare for potential data leaks. All organizations, particularly in healthcare, should enhance their ransomware defenses, implement strong data backup and recovery strategies, and educate staff on phishing awareness to prevent initial compromise.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/ransomware-gang-claims-nutex-health-data-breach/",
       "source": "SecurityWeek"
@@ -45,66 +45,66 @@
   ],
   "vulns": [
     {
+      "title": "Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure",
+      "tldr": "Attackers are actively exploiting a critical vulnerability in JFrog Artifactory, allowing them to mint unauthorized admin tokens. This enables full control over the Artifactory instance, leading to potential data compromise and complete system takeover.",
+      "action": "Immediately update JFrog Artifactory to the latest patched version. Review Artifactory logs for any suspicious token generation or unauthorized administrative activity. Rotate all API keys and credentials associated with compromised or potentially compromised Artifactory instances.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "JFrog Artifactory versions prior to the latest security update. Refer to official JFrog advisories for specific vulnerable versions and patches.",
+      "how_to_determine_impact": "Identify all JFrog Artifactory instances. Check if the Artifactory server is running the latest patched version. Review Artifactory server logs for unusual administrative token minting events, unexpected API calls, or unauthorized access attempts immediately following the vulnerability disclosure date.",
+      "tanium_query_hint": "Get Installed Applications with 'JFrog Artifactory' contains 'Yes' from all machines to check versions. Inspect 'Running Processes' for suspicious commands executed by the Artifactory service account. Review 'File Content' of Artifactory logs for keywords like 'token generated' or 'admin access'.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability checks related to 'JFrog Artifactory'. Use InsightIDR to look for unusual login patterns, new admin accounts created, or suspicious network activity originating from Artifactory servers. Query asset inventory for Artifactory installations and their patch status.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
       "title": "Critical Langflow flaw exploited to steal OpenAI and AWS keys",
-      "tldr": "An unauthenticated remote code execution (RCE) vulnerability (CVE-2026-0768) in Langflow, an open-source AI application framework, is under active exploitation. Threat actors are leveraging this flaw to steal credentials, tokens, and API keys for services like OpenAI and AWS.",
-      "action": "Immediately apply the latest security patches for all Langflow installations. Conduct a thorough review of logs for signs of compromise, paying close attention to unauthorized access to OpenAI/AWS keys or unusual activity originating from Langflow instances.",
+      "tldr": "An unauthenticated remote code execution vulnerability (CVE-2026-0768) in Langflow, an open-source AI application framework, is being actively exploited. Threat actors are leveraging this flaw to steal sensitive credentials, including OpenAI and AWS API keys, which can lead to unauthorized cloud resource access and significant financial implications.",
+      "action": "Immediately update all Langflow instances to the latest patched version. Rotate any OpenAI and AWS API keys that were configured or potentially exposed via Langflow deployments. Review cloud audit logs for any unauthorized API calls or suspicious resource usage originating from Langflow-related accounts.",
       "cve_ids": [
         "CVE-2026-0768"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/critical-langflow-flaw-exploited-to-steal-openai-and-aws-keys/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Langflow versions prior to the patched release. Refer to official vendor advisories for specific vulnerable version ranges.",
-      "how_to_determine_impact": "Identify all instances of Langflow running in your environment. Check system and application logs for indications of unauthenticated RCE attempts, unusual outbound connections, or unauthorized access to sensitive files/credentials. Verify if any OpenAI or AWS API keys were exposed or used maliciously.",
-      "tanium_query_hint": "Get Running Processes matches 'langflow' from all machines. Check 'Get Installed Applications' for Langflow versions. Search for files containing 'openai_api_key' or 'aws_access_key_id' on identified Langflow servers. Monitor 'Get Network Connections' for suspicious outbound activity.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-0768' in InsightVM. Look for assets with 'Langflow' installed. Utilize InsightIDR to search for 'Langflow' related logs indicating RCE activity or suspicious API calls to OpenAI/AWS from Langflow hosts.",
+      "affected_versions": "Langflow versions prior to the patch addressing CVE-2026-0768. Consult official Langflow advisories for precise vulnerable version ranges.",
+      "how_to_determine_impact": "Identify all instances of Langflow deployed in the environment and verify their version. Check application logs for any signs of remote code execution, unexpected process spawns, or unauthorized file access. Specifically, look for attempts to access configuration files or environment variables containing API keys.",
+      "tanium_query_hint": "Get Installed Applications with 'Langflow' contains 'Yes' to retrieve versions. Search 'File Content' for 'AWS_ACCESS_KEY_ID' or 'OPENAI_API_KEY' within Langflow directories. Monitor 'Running Processes' for unusual command-line arguments or executable paths associated with the Langflow service.",
+      "rapid7_query_hint": "Search for 'CVE-2026-0768' in InsightVM. Use InsightIDR to monitor for unusual API key usage in AWS and OpenAI from IP addresses linked to Langflow deployments. Query asset inventory for 'Langflow' installations and their associated network activity.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Recently patched PaperCut zero-days used in data theft attacks",
-      "tldr": "Two recently patched zero-day vulnerabilities affecting PaperCut NG and MF print management software are now being actively exploited in the wild. Attackers are leveraging these flaws to facilitate data theft attacks.",
-      "action": "Immediately apply the latest security patches released by PaperCut for NG and MF. Conduct a thorough forensic analysis on all PaperCut servers for any signs of compromise, unauthorized access, or data exfiltration.",
+      "tldr": "Two zero-day vulnerabilities in PaperCut NG and MF print management software, which were patched last week, are now being actively exploited in data theft attacks. Attackers are leveraging these flaws to gain unauthorized access and exfiltrate sensitive data from affected systems.",
+      "action": "Ensure all PaperCut NG and MF installations are immediately updated to the latest patched versions. Review print server logs for any unusual activity, unauthorized access attempts, or large data transfers that may indicate data exfiltration. Investigate any instances that were unpatched during the exploitation window.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/recently-patched-papercut-zero-days-used-in-data-teft-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/recently-patched-papercut-zero-days-used-in-data-theft-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "PaperCut NG and MF versions identified as vulnerable to the recently patched zero-days. Refer to PaperCut's official security advisories for specific version details.",
-      "how_to_determine_impact": "Identify all PaperCut NG/MF installations across your network. Review server logs for any unusual activity, unauthorized file access, or connections to suspicious external IP addresses. Look for evidence of data exfiltration or the presence of unknown processes.",
-      "tanium_query_hint": "Get Installed Applications contains 'PaperCut'. Check 'Get File Hash' for PaperCut executables against known good hashes post-patch. Examine 'Get Running Processes' for any anomalous processes running on PaperCut servers.",
-      "rapid7_query_hint": "Search for 'PaperCut' vulnerabilities in InsightVM (check recent Rapid7 advisories for new IDs). Use InsightIDR to monitor PaperCut server logs for anomalies, especially concerning data transfer or process creation.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure",
-      "tldr": "A critical vulnerability in JFrog Artifactory is actively being exploited in the wild. Attackers are leveraging this flaw to mint administrative tokens, granting them elevated privileges and potentially full control within affected Artifactory environments.",
-      "action": "Immediately apply the latest security patches and updates for JFrog Artifactory. Review Artifactory logs for any unauthorized token generation or suspicious administrative activity that could indicate compromise.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "JFrog Artifactory versions affected by the critical token-minting vulnerability. Refer to JFrog's official security advisories for specific vulnerable version ranges.",
-      "how_to_determine_impact": "Identify all JFrog Artifactory instances deployed within your infrastructure. Examine Artifactory logs for events related to token creation or modification, particularly for administrative tokens, that do not correspond to legitimate actions. Check for unexpected new users or privilege escalations.",
-      "tanium_query_hint": "Get Installed Applications contains 'JFrog Artifactory'. Query 'Get File Version' for Artifactory binaries to confirm the current patch level. Monitor 'Get Event Log['Security']' for suspicious login attempts or privilege changes on Artifactory hosts.",
-      "rapid7_query_hint": "Search for 'JFrog Artifactory' vulnerabilities in InsightVM. Monitor InsightIDR for anomalous activity on Artifactory servers, specifically new administrative accounts or unusual API calls related to token management.",
+      "affected_versions": "PaperCut NG and MF versions prior to the security updates released last week. Consult official PaperCut advisories for precise vulnerable and patched version numbers.",
+      "how_to_determine_impact": "Verify the version of all PaperCut NG/MF installations across the environment. Check system and application logs on PaperCut servers for unusual processes, unexpected network connections, or unauthorized file access/data transfers that occurred before applying the patch. Look for signs of compromise in associated user directories or print queues.",
+      "tanium_query_hint": "Get Installed Applications with 'PaperCut' contains 'Yes' to identify versions. Search 'Event Logs' for 'Security' or 'Application' logs related to PaperCut service anomalies. Review 'Network Connections' from PaperCut servers for outbound connections to suspicious IP addresses.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability checks related to 'PaperCut NG' or 'PaperCut MF'. Use InsightIDR to detect suspicious activity on print servers, including unauthorized file access or exfiltration patterns. Query asset inventory for PaperCut installations to confirm patch status.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Nearly 22,000 Microsoft Exchange servers vulnerable to hijack attacks",
-      "tldr": "Approximately 22,000 Microsoft Exchange servers exposed online remain unpatched against a high-severity authentication bypass vulnerability. This critical flaw allows attackers to hijack all user mailboxes on affected servers if exploited.",
-      "action": "Immediately apply all available and relevant security updates for Microsoft Exchange Server. Implement strong network segmentation and ensure Exchange servers are not directly exposed to the internet, or are protected by robust perimeter security.",
+      "tldr": "An estimated 22,000 Microsoft Exchange servers exposed online remain unpatched against a high-severity authentication bypass vulnerability. This critical flaw allows attackers to completely hijack all user mailboxes, leading to unauthorized access to sensitive communications and potential broader network compromise.",
+      "action": "Immediately identify and patch all Microsoft Exchange servers, prioritizing internet-facing instances, to address the high-severity authentication bypass vulnerability. Implement strong network segmentation for Exchange servers and enforce multi-factor authentication for all access paths.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/nearly-22-000-microsoft-exchange-servers-vulnerable-to-hijack-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Microsoft Exchange Server (specific versions vulnerable to the high-severity authentication bypass. Consult Microsoft's security advisories for detailed version information).",
-      "how_to_determine_impact": "Identify all internet-facing Microsoft Exchange servers within your organization. Verify that all security updates, especially those addressing authentication bypass vulnerabilities, have been successfully applied. Check for any indicators of compromise such as unauthorized mailbox access or unusual login patterns.",
-      "tanium_query_hint": "Execute 'Get Exchange Vulnerability status'. Use 'Get Installed Patches' filtered for 'Microsoft Exchange Server'. Check 'Get Listen Ports' to identify internet exposure. Analyze 'Get Mailbox Statistics' for abnormal access patterns.",
-      "rapid7_query_hint": "Search for Microsoft Exchange vulnerabilities in InsightVM (e.g., specific CVEs for authentication bypass if known). Conduct scans on Exchange servers for missing patches. Monitor InsightIDR for suspicious activity related to Exchange authentication or mailbox access.",
+      "affected_versions": "Microsoft Exchange Server (specific versions depend on the particular authentication bypass vulnerability; consult Microsoft's security advisories for details).",
+      "how_to_determine_impact": "Scan external-facing IP addresses for unpatched Microsoft Exchange servers. Internally, verify all Exchange servers are running the latest security updates. Check for the presence of the specific patch addressing the authentication bypass vulnerability by querying installed updates or running Microsoft's Exchange Health Checker script.",
+      "tanium_query_hint": "Get Windows Patch History containing 'Exchange Server' and 'Security Update'. Run 'Get Listen Ports' to identify internet-facing Exchange servers. Use 'Get File Version' for Exchange binaries (e.g., 'C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Bin\\Microsoft.Exchange.Store.Service.exe') to confirm update status.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability checks related to 'Microsoft Exchange authentication bypass' or specific CVEs if known. Utilize the 'Microsoft Exchange Health Checker' integration in InsightVM/IDR. Query asset inventory for Exchange servers with open external ports (e.g., 443, 80) and their patch levels.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
