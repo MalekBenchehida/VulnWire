@@ -1,114 +1,90 @@
 {
   "breaches": [
     {
-      "title": "Aesto Health says data breach affects over 9.5 million patients",
-      "tldr": "Aesto LLC, operating as Aesto Health, disclosed a data breach discovered recently that affects more than 9.5 million individuals. This breach indicates unauthorized access to sensitive patient information. Organizations handling patient data should ensure robust security controls and incident response.",
-      "action": "Organizations handling patient data should ensure robust security controls, regular audits, and incident response plans. Affected individuals should be notified and advised to monitor for identity theft and potential fraud.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/aesto-health-says-data-breach-affects-over-95-million-patients/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Dropbox accounts breached through Lenovo email verification flaw",
-      "tldr": "Dropbox has warned some users that an unauthorized party accessed their accounts. This was accomplished by exploiting a flaw in Lenovo's email verification process, allowing attackers to register fraudulent Lenovo IDs and link them to Dropbox accounts.",
-      "action": "Dropbox users should immediately review their account activity for any suspicious logins and enable multi-factor authentication (MFA) on Dropbox and all other critical accounts. Lenovo users should also verify their account security.",
+      "tldr": "An unauthorized party accessed some Dropbox user accounts by exploiting a flaw in Lenovo's email verification process. This allowed attackers to register fraudulent Lenovo IDs, which were then used to gain access to linked Dropbox accounts.",
+      "action": "Dropbox users who linked their accounts via Lenovo should immediately enable multi-factor authentication (MFA) on their Dropbox account and review recent account activity for any suspicious actions. Lenovo users should also review their account security settings.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/",
       "source": "BleepingComputer"
     },
     {
       "title": "Malicious Apache Modules Hijack Brazilian Government Site Traffic to Push Betting Pages",
-      "tldr": "Malicious Apache modules were used to hijack traffic from Brazilian government websites, redirecting visitors to betting pages. This indicates a compromise of web server infrastructure. The attack vector allowed unauthorized content injection and traffic diversion.",
-      "action": "Conduct a thorough compromise assessment of all web servers, especially those running Apache. Inspect Apache configurations and modules for unauthorized additions or modifications, and implement strong integrity monitoring for critical system files.",
+      "tldr": "Attackers compromised a Brazilian government website by deploying malicious Apache modules. These modules hijacked legitimate traffic, redirecting users to push betting pages, indicating a breach of the website's integrity and control.",
+      "action": "Organizations, especially those running Apache web servers, should regularly audit their server configurations, module installations, and monitor for unauthorized modifications. Implement robust intrusion detection and prevention systems.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/malicious-apache-modules-hijack.html",
       "source": "The Hacker News"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Ransomware protection for MSPs: A 6-point checklist for faster recovery",
-      "tldr": "Acronis outlines a 6-point checklist for Managed Service Providers (MSPs) to enhance ransomware resilience. This guide emphasizes the need for a comprehensive strategy beyond just backups, focusing on reducing exposure, detecting attacks, and ensuring rapid recovery. It underscores that effective ransomware protection requires a multi-faceted approach.",
-      "action": "MSPs should review and implement the recommended 6-point checklist to improve ransomware protection and recovery capabilities for their clients. This includes hardening systems, improving detection, and regularly testing recovery procedures to minimize downtime.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ransomware-protection-for-msps-a-6-point-checklist-for-faster-recovery/",
-      "source": "BleepingComputer"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
+      "title": "SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks",
+      "tldr": "Threat actors are actively exploiting two unpatched zero-day vulnerabilities in SonicWall SMA 1000 series appliances. These critical flaws can be chained together to achieve remote code execution (RCE) on affected systems.",
+      "action": "Organizations utilizing SonicWall SMA 1000 series appliances must immediately apply all available security patches or implement vendor-recommended mitigations. Proactively monitor for any indicators of compromise and isolate potentially affected systems.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "SonicWall SMA 1000 series appliances. Specific vulnerable versions are not detailed in the provided text; refer to SonicWall's official advisories.",
+      "how_to_determine_impact": "Check SonicWall SMA 1000 appliances for unpatched status. Review device logs for unusual activity, error messages, or suspicious outbound connections. Consult SonicWall's official security advisory for detailed detection methods and IOCs.",
+      "tanium_query_hint": "Use 'Get Computer Name and Running Processes from all machines with Running Processes matching 'smacontrolservice' or 'smadataservice' to identify SMA 1000 appliances. Follow up with 'Get File Version['<path_to_relevant_executable>']' to check patch levels.",
+      "rapid7_query_hint": "Asset search for 'SonicWall SMA 1000' appliances. Once CVEs are assigned, search InsightVM for associated vulnerability IDs. Monitor network traffic from these devices for anomalous patterns.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, due to active RCE zero-day exploitation)"
+    },
+    {
+      "title": "Hackers exploit Sangoma Switchvox flaw to deploy reverse shells",
+      "tldr": "Attackers are actively exploiting CVE-2026-9586, an unauthenticated SQL injection vulnerability affecting the Sangoma Switchvox VoIP platform. Successful exploitation of this flaw can lead to remote code execution (RCE), allowing attackers to deploy reverse shells.",
+      "action": "Organizations running Sangoma Switchvox should immediately apply the latest security patches provided by Sangoma. If patching is not feasible, isolate the device and conduct a forensic analysis for potential compromise.",
+      "cve_ids": [
+        "CVE-2026-9586"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Sangoma Switchvox VoIP platform. Specific vulnerable versions are not detailed in the provided text; refer to Sangoma's official advisories for CVE-2026-9586.",
+      "how_to_determine_impact": "Verify the installed version of Sangoma Switchvox against vendor advisories for CVE-2026-9586. Inspect system logs and network traffic for unusual connections, process spawns, or indicators of reverse shell activity from the Switchvox server.",
+      "tanium_query_hint": "Use 'Get Installed Applications matching 'Sangoma Switchvox'' to identify instances. Then 'Get Running Processes matching 'nc' or 'bash -i'' from these endpoints to detect potential reverse shells.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-9586'. Use asset search to filter for 'Sangoma Switchvox' installations and check their scan results for this vulnerability. Monitor logs in InsightIDR for suspicious activity originating from these assets.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, due to active RCE exploitation)"
+    },
+    {
       "title": "Hackers exploit critical JFrog Artifactory flaw to forge admin tokens",
-      "tldr": "A critical authentication bypass vulnerability (CVE-2026-82329) in JFrog Artifactory is actively being exploited in attacks. Threat actors are leveraging this flaw to create tokens that provide administrative access, leading to full control over affected instances. Immediate patching is required due to active exploitation.",
-      "action": "Immediately patch JFrog Artifactory to the recommended secure versions as per vendor advisory. Investigate Artifactory logs for any signs of token forging or unauthorized administrative access, and rotate all administrative credentials and API keys.",
+      "tldr": "A critical authentication bypass vulnerability (CVE-2026-82329) in JFrog Artifactory is under active exploitation. This flaw allows attackers to forge administrative tokens, granting them full administrative control over affected Artifactory instances.",
+      "action": "Immediately update all JFrog Artifactory instances to the latest secure version to mitigate CVE-2026-82329. Review Artifactory access logs and audit trails for any suspicious authentication attempts or unauthorized creation of administrator-level tokens.",
       "cve_ids": [
         "CVE-2026-82329"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-jfrog-artifactory-flaw-to-forge-admin-tokens/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "JFrog Artifactory, specific vulnerable versions as per vendor advisory (e.g., versions prior to 7.x.x).",
-      "how_to_determine_impact": "Verify current JFrog Artifactory version against vendor advisory. Review Artifactory access logs for unusual administrative logins, token creation events, or unauthorized package modifications. Look for any Indicators of Compromise (IOCs) released by JFrog.",
-      "tanium_query_hint": "Get Installed Applications from all machines where Application Name contains 'JFrog Artifactory' and compare version. Search specific Artifactory log paths for entries related to token forging or suspicious authentication.",
-      "rapid7_query_hint": "Scan for assets running JFrog Artifactory. Search vulnerability assessment reports for 'CVE-2026-82329' or related checks. Monitor Artifactory logs and network traffic for suspicious authentication or administrative actions.",
+      "affected_versions": "JFrog Artifactory. Specific vulnerable versions are not detailed in the provided text; refer to JFrog's official advisories for CVE-2026-82329.",
+      "how_to_determine_impact": "Check the installed version of JFrog Artifactory against vendor advisories for CVE-2026-82329. Review Artifactory's security logs for indicators of unauthorized token generation, anomalous administrator activity, or login attempts from unknown sources.",
+      "tanium_query_hint": "Identify 'JFrog Artifactory' installations using 'Get Installed Applications'. Query 'Get File Contents['<path_to_config_file>']' to check configuration related to authentication or 'Get Running Processes' for unusual Artifactory child processes.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-82329'. Use asset search to locate 'JFrog Artifactory' instances and review their scan data. Monitor InsightIDR for suspicious authentication events on these assets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "SonicWall warns of actively exploited SMA1000 zero-day flaws",
-      "tldr": "SonicWall has issued a warning about two new SMA1000 zero-day vulnerabilities that are being actively exploited in the wild. Attackers are chaining these flaws to achieve remote code execution (RCE) on affected appliances. This poses an immediate and severe risk to organizations using these devices.",
-      "action": "Customers must immediately apply any available patches or workarounds provided by SonicWall to SMA1000 devices. It is crucial to monitor these devices for signs of compromise and implement network segmentation to limit potential impact and lateral movement.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "SonicWall SMA 1000 series appliances. Consult SonicWall's official security advisory for specific vulnerable firmware versions and recommended updates.",
-      "how_to_determine_impact": "Examine SonicWall SMA 1000 device logs for unauthorized access attempts, unusual administrative activity, or any indicators of compromise provided by SonicWall. Verify the appliance's firmware version against the latest security guidance and known vulnerable versions.",
-      "tanium_query_hint": "If Tanium has visibility into network appliances or logs, search for specific log patterns indicative of exploitation. Otherwise, rely on external vulnerability scanning tools and vendor advisories for detection and verification.",
-      "rapid7_query_hint": "Perform authenticated scans on SonicWall SMA 1000 devices to check for identified vulnerabilities. Review network and system logs for suspicious activity originating from or targeting these devices, looking for RCE payloads or anomalous connections.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "BGP Hijack Delivers Malicious Virtualizor Update That Establishes Persistent Root Access",
-      "tldr": "A BGP hijack was utilized to deliver a malicious update for Virtualizor software, which, upon installation, establishes persistent root access on compromised systems. This incident represents a significant supply chain attack vector, allowing attackers deep and lasting control over affected virtualization platforms.",
-      "action": "Verify the authenticity and integrity of all software updates, especially for critical infrastructure like virtualization platforms. Implement robust BGP monitoring and ensure all software update mechanisms are secured. Conduct a thorough forensic analysis on any Virtualizor systems that received recent updates.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/bgp-hijack-delivers-malicious.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Virtualizor software installations that received updates via compromised BGP routes.",
-      "how_to_determine_impact": "Inspect Virtualizor update logs and verify the source IP addresses and cryptographic signatures of all received updates. Look for unexpected root-level persistence mechanisms, suspicious processes running with high privileges, or unauthorized network connections on Virtualizor hosts.",
-      "tanium_query_hint": "Get Running Processes with CommandLine contains 'virtualizor' and compare against known good processes. Get File Hash of Virtualizor binaries and compare against vendor hashes. Search for newly created services or scheduled tasks with root privileges.",
-      "rapid7_query_hint": "Search for assets running Virtualizor software. Monitor for new or unusual persistent services, root access attempts, or network connections from Virtualizor hosts to unknown external IPs. Deploy EDR to detect suspicious process behavior.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated, based on authentication bypass leading to admin access)"
     },
     {
       "title": "WordPress backup plugin flaw exposes millions of sites to takeover attacks",
-      "tldr": "An SQL injection vulnerability in the All-in-One WP Migration and Backup plugin for WordPress could allow unauthenticated attackers to execute remote code and take control of millions of affected websites. This critical flaw allows for complete site compromise without prior authentication, posing a severe threat to web administrators.",
-      "action": "Immediately update the All-in-One WP Migration and Backup plugin for WordPress to the latest patched version. Scan all WordPress sites for signs of compromise and conduct a thorough review of web server and WordPress application logs for suspicious activity or exploitation attempts.",
+      "tldr": "An unauthenticated SQL injection vulnerability found in the 'All-in-One WP Migration and Backup' plugin for WordPress could allow remote code execution. This critical flaw could enable attackers to completely take over millions of affected WordPress websites.",
+      "action": "WordPress site administrators using the 'All-in-One WP Migration and Backup' plugin must update it to the latest patched version immediately. Review website and server logs for any indicators of compromise, such as unusual SQL queries or modified files.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-backup-plugin-flaw-exposes-millions-of-sites-to-takeover-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "All-in-One WP Migration and Backup plugin for WordPress. Specific vulnerable versions need to be confirmed from the vendor's official advisory.",
-      "how_to_determine_impact": "Identify all WordPress installations within the environment. Check if the 'All-in-One WP Migration and Backup' plugin is installed and verify its exact version number. Review web server and WordPress logs for unauthenticated SQL injection attempts or unauthorized administrative access.",
-      "tanium_query_hint": "Get File Version from all machines where File Path contains 'wp-content/plugins/all-in-one-wp-migration/' to identify plugin versions. Check web server access logs (e.g., Apache/Nginx) for SQLi patterns or suspicious requests.",
-      "rapid7_query_hint": "Scan web servers hosting WordPress sites. Look for vulnerability checks specifically targeting the 'All-in-One WP Migration and Backup' plugin. Monitor web application firewalls (WAF) and server logs for SQL injection attempts and anomalous activities.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "All-in-One WP Migration and Backup plugin for WordPress. Specific vulnerable versions are not detailed in the provided text; administrators should update to the latest version.",
+      "how_to_determine_impact": "Identify all WordPress installations running the 'All-in-One WP Migration and Backup' plugin. Check the plugin's installed version against the vendor's security announcements. Inspect WordPress error logs, access logs, and database for anomalous entries or unauthorized changes.",
+      "tanium_query_hint": "On web servers, use 'Get Files matching '*wp-content/plugins/all-in-one-wp-migration*/readme.txt'' to identify the plugin and its version. Check for recently modified PHP files within the WordPress installation.",
+      "rapid7_query_hint": "Scan web servers for known WordPress vulnerabilities and specific plugin versions if InsightVM has signatures. Use asset search to identify 'WordPress' assets and manually verify the plugin's version or look for relevant vulnerability checks once available.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical (Estimated, due to unauthenticated RCE leading to full site takeover)"
     }
   ],
-  "insurance": [
-    {
-      "title": "UK Moves to Block High-Risk Tech Suppliers From Critical Infrastructure",
-      "tldr": "The UK government is implementing measures to block high-risk technology suppliers from involvement in critical national infrastructure projects. This move aims to enhance national security by reducing supply chain vulnerabilities and protecting essential services from potential foreign interference or cyber threats. The legislation will empower the government to intervene where suppliers pose a risk.",
-      "action": "Organizations involved with critical infrastructure in the UK should review their supply chain for compliance with new government regulations regarding high-risk tech suppliers. Conduct thorough vendor risk assessments and ensure procurement policies align with national security guidelines to mitigate future operational impacts.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/uk-moves-to-block-high-risk-tech-suppliers-from-critical-infrastructure/",
-      "source": "SecurityWeek"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -14142,6 +14118,40 @@
         "source_url": "https://www.securityweek.com/uk-moves-to-block-high-risk-tech-suppliers-from-critical-infrastructure/",
         "source": "SecurityWeek",
         "category": "insurance"
+      },
+      {
+        "title": "SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks",
+        "tldr": "Threat actors are actively exploiting two unpatched zero-day vulnerabilities in SonicWall SMA 1000 series appliances. These critical flaws can be chained together to achieve remote code execution (RCE) on affected systems.",
+        "action": "Organizations utilizing SonicWall SMA 1000 series appliances must immediately apply all available security patches or implement vendor-recommended mitigations. Proactively monitor for any indicators of compromise and isolate potentially affected systems.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "SonicWall SMA 1000 series appliances. Specific vulnerable versions are not detailed in the provided text; refer to SonicWall's official advisories.",
+        "how_to_determine_impact": "Check SonicWall SMA 1000 appliances for unpatched status. Review device logs for unusual activity, error messages, or suspicious outbound connections. Consult SonicWall's official security advisory for detailed detection methods and IOCs.",
+        "tanium_query_hint": "Use 'Get Computer Name and Running Processes from all machines with Running Processes matching 'smacontrolservice' or 'smadataservice' to identify SMA 1000 appliances. Follow up with 'Get File Version['<path_to_relevant_executable>']' to check patch levels.",
+        "rapid7_query_hint": "Asset search for 'SonicWall SMA 1000' appliances. Once CVEs are assigned, search InsightVM for associated vulnerability IDs. Monitor network traffic from these devices for anomalous patterns.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, due to active RCE zero-day exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers exploit Sangoma Switchvox flaw to deploy reverse shells",
+        "tldr": "Attackers are actively exploiting CVE-2026-9586, an unauthenticated SQL injection vulnerability affecting the Sangoma Switchvox VoIP platform. Successful exploitation of this flaw can lead to remote code execution (RCE), allowing attackers to deploy reverse shells.",
+        "action": "Organizations running Sangoma Switchvox should immediately apply the latest security patches provided by Sangoma. If patching is not feasible, isolate the device and conduct a forensic analysis for potential compromise.",
+        "cve_ids": [
+          "CVE-2026-9586"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Sangoma Switchvox VoIP platform. Specific vulnerable versions are not detailed in the provided text; refer to Sangoma's official advisories for CVE-2026-9586.",
+        "how_to_determine_impact": "Verify the installed version of Sangoma Switchvox against vendor advisories for CVE-2026-9586. Inspect system logs and network traffic for unusual connections, process spawns, or indicators of reverse shell activity from the Switchvox server.",
+        "tanium_query_hint": "Use 'Get Installed Applications matching 'Sangoma Switchvox'' to identify instances. Then 'Get Running Processes matching 'nc' or 'bash -i'' from these endpoints to detect potential reverse shells.",
+        "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-9586'. Use asset search to filter for 'Sangoma Switchvox' installations and check their scan results for this vulnerability. Monitor logs in InsightIDR for suspicious activity originating from these assets.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, due to active RCE exploitation)",
+        "category": "vulns"
       }
     ]
   }
