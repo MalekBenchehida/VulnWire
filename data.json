@@ -1,43 +1,35 @@
 {
   "breaches": [
     {
-      "title": "Dropbox accounts breached through Lenovo email verification flaw",
-      "tldr": "An unauthorized party gained access to some Dropbox user accounts. This was achieved by exploiting a flaw in Lenovo's email verification process, which allowed attackers to register fraudulent Lenovo IDs and subsequently access associated Dropbox accounts.",
-      "action": "Dropbox users should immediately enable two-factor authentication (2FA) if not already active, review recent account activity for suspicious logins or changes, and be vigilant against phishing attempts that might leverage this incident.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Aesto Health says data breach affects over 9.5 million patients",
-      "tldr": "Aesto LLC, operating as Aesto Health, has disclosed a significant data breach. The incident impacts more than 9.5 million individuals, though specific details about the types of compromised data were not provided in the initial report.",
-      "action": "Individuals who are or were patients of Aesto Health should closely monitor their credit reports and financial statements for any suspicious activity. Be alert to potential identity theft and review any official notifications from Aesto Health regarding this breach.",
+      "tldr": "Aesto LLC, operating as Aesto Health, disclosed a data breach discovered recently that affects more than 9.5 million individuals. This breach indicates unauthorized access to sensitive patient information. Organizations handling patient data should ensure robust security controls and incident response.",
+      "action": "Organizations handling patient data should ensure robust security controls, regular audits, and incident response plans. Affected individuals should be notified and advised to monitor for identity theft and potential fraud.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/aesto-health-says-data-breach-affects-over-95-million-patients/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Extradited Russian Hacker Faces Charges Over Excel Malware Campaign That Infected Thousands",
-      "tldr": "A Russian hacker has been extradited to the US to face charges related to a widespread Excel malware campaign. This campaign infected thousands of users, likely leading to data compromise and unauthorized access to systems through malicious spreadsheets.",
-      "action": "Organizations should reinforce email security protocols, implement advanced endpoint detection, and conduct regular user training on identifying and avoiding phishing attacks, especially those involving malicious document attachments.",
+      "title": "Dropbox accounts breached through Lenovo email verification flaw",
+      "tldr": "Dropbox has warned some users that an unauthorized party accessed their accounts. This was accomplished by exploiting a flaw in Lenovo's email verification process, allowing attackers to register fraudulent Lenovo IDs and link them to Dropbox accounts.",
+      "action": "Dropbox users should immediately review their account activity for any suspicious logins and enable multi-factor authentication (MFA) on Dropbox and all other critical accounts. Lenovo users should also verify their account security.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/extradited-russian-hacker-faces-charges.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/",
+      "source": "BleepingComputer"
     },
     {
-      "title": "US charges Russian for infecting 80,000 freelancers with malware",
-      "tldr": "A Russian national has been indicted in the US for his role in a phishing campaign that infected approximately 80,000 freelancers. The campaign delivered TVRAT and DarkVNC malware, providing attackers with remote control and potentially leading to data theft.",
-      "action": "Prioritize and reinforce security awareness training for all users, particularly those handling external communications or engaging with freelance platforms. Ensure robust endpoint protection and network monitoring are in place to detect and prevent malware infections.",
+      "title": "Malicious Apache Modules Hijack Brazilian Government Site Traffic to Push Betting Pages",
+      "tldr": "Malicious Apache modules were used to hijack traffic from Brazilian government websites, redirecting visitors to betting pages. This indicates a compromise of web server infrastructure. The attack vector allowed unauthorized content injection and traffic diversion.",
+      "action": "Conduct a thorough compromise assessment of all web servers, especially those running Apache. Inspect Apache configurations and modules for unauthorized additions or modifications, and implement strong integrity monitoring for critical system files.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/us-charges-russian-for-infecting-80-000-freelancers-with-malware/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/09/malicious-apache-modules-hijack.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
       "title": "Ransomware protection for MSPs: A 6-point checklist for faster recovery",
-      "tldr": "Acronis has published a 6-point checklist for Managed Service Providers (MSPs) to enhance ransomware protection. The guidance emphasizes moving beyond basic backups and endpoint detection, focusing on comprehensive strategies for reducing exposure, improving detection, preserving recovery points, and ensuring rapid restoration capabilities.",
-      "action": "MSPs and organizations should evaluate their current ransomware resilience against the provided checklist. Implement a holistic strategy that includes robust data backup and recovery, strong network segmentation, user training, and a well-tested incident response plan.",
+      "tldr": "Acronis outlines a 6-point checklist for Managed Service Providers (MSPs) to enhance ransomware resilience. This guide emphasizes the need for a comprehensive strategy beyond just backups, focusing on reducing exposure, detecting attacks, and ensuring rapid recovery. It underscores that effective ransomware protection requires a multi-faceted approach.",
+      "action": "MSPs should review and implement the recommended 6-point checklist to improve ransomware protection and recovery capabilities for their clients. This includes hardening systems, improving detection, and regularly testing recovery procedures to minimize downtime.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ransomware-protection-for-msps-a-6-point-checklist-for-faster-recovery/",
       "source": "BleepingComputer"
@@ -46,70 +38,77 @@
   "vulns": [
     {
       "title": "Hackers exploit critical JFrog Artifactory flaw to forge admin tokens",
-      "tldr": "A critical authentication bypass vulnerability, identified as CVE-2026-82329, in JFrog Artifactory is being actively exploited. Attackers are using this flaw to forge administrative tokens, granting them unauthorized administrative access to affected instances.",
-      "action": "Organizations must immediately apply security patches for CVE-2026-82329 released by JFrog. Additionally, review Artifactory logs for any signs of unauthorized token creation, suspicious administrative activity, or anomalous access patterns that might indicate compromise.",
+      "tldr": "A critical authentication bypass vulnerability (CVE-2026-82329) in JFrog Artifactory is actively being exploited in attacks. Threat actors are leveraging this flaw to create tokens that provide administrative access, leading to full control over affected instances. Immediate patching is required due to active exploitation.",
+      "action": "Immediately patch JFrog Artifactory to the recommended secure versions as per vendor advisory. Investigate Artifactory logs for any signs of token forging or unauthorized administrative access, and rotate all administrative credentials and API keys.",
       "cve_ids": [
         "CVE-2026-82329"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-jfrog-artifactory-flaw-to-forge-admin-tokens/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "JFrog Artifactory versions impacted by CVE-2026-82329. Consult vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Identify all JFrog Artifactory instances. Check Artifactory logs for unauthorized token creation, administrative actions by unknown users, or any indications of authentication bypass. Review vendor's security advisory for specific indicators of compromise (IoCs).",
-      "tanium_query_hint": "Get Installed Applications matching 'JFrog Artifactory' from all machines to identify instances. Use 'Get Process List' and 'Get File Hash' to look for suspicious activity or modified files per vendor IoCs.",
-      "rapid7_query_hint": "Perform an authenticated scan on all servers running JFrog Artifactory to detect CVE-2026-82329. Search InsightVM for vulnerability ID 'CVE-2026-82329'. Review InsightIDR logs for suspicious authentication events on Artifactory servers.",
+      "affected_versions": "JFrog Artifactory, specific vulnerable versions as per vendor advisory (e.g., versions prior to 7.x.x).",
+      "how_to_determine_impact": "Verify current JFrog Artifactory version against vendor advisory. Review Artifactory access logs for unusual administrative logins, token creation events, or unauthorized package modifications. Look for any Indicators of Compromise (IOCs) released by JFrog.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Application Name contains 'JFrog Artifactory' and compare version. Search specific Artifactory log paths for entries related to token forging or suspicious authentication.",
+      "rapid7_query_hint": "Scan for assets running JFrog Artifactory. Search vulnerability assessment reports for 'CVE-2026-82329' or related checks. Monitor Artifactory logs and network traffic for suspicious authentication or administrative actions.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "SonicWall warns of actively exploited SMA1000 zero-day flaws",
-      "tldr": "SonicWall has issued an urgent warning regarding active exploitation of two zero-day vulnerabilities affecting its SMA 1000 series appliances. These flaws can be chained together by threat actors to achieve remote code execution (RCE) and gain unauthorized access.",
-      "action": "Organizations using SonicWall SMA 1000 series appliances must immediately apply all available patches and mitigations released by SonicWall. It is crucial to monitor these devices for any unusual activity or indicators of compromise as advised by the vendor.",
+      "tldr": "SonicWall has issued a warning about two new SMA1000 zero-day vulnerabilities that are being actively exploited in the wild. Attackers are chaining these flaws to achieve remote code execution (RCE) on affected appliances. This poses an immediate and severe risk to organizations using these devices.",
+      "action": "Customers must immediately apply any available patches or workarounds provided by SonicWall to SMA1000 devices. It is crucial to monitor these devices for signs of compromise and implement network segmentation to limit potential impact and lateral movement.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SMA 1000 series appliances. Consult SonicWall advisories for precise models and firmware versions affected.",
-      "how_to_determine_impact": "Review SonicWall SMA 1000 appliance logs for any suspicious activity, unauthorized access attempts, or indicators of compromise (IoCs) provided by SonicWall. Verify firmware versions against vendor advisories.",
-      "tanium_query_hint": "Given this is a network appliance, direct Tanium queries may be limited. Use 'Get Network Connection' to monitor traffic to/from SMA 1000 devices. Monitor system logs for unusual process execution or file changes via syslog integration if available.",
-      "rapid7_query_hint": "Scan network devices for SonicWall SMA 1000 vulnerabilities. Check InsightVM's vulnerability database for new advisories related to SMA 1000 zero-days. Review network logs for outbound connections from SMA 1000 devices to unknown IPs.",
+      "affected_versions": "SonicWall SMA 1000 series appliances. Consult SonicWall's official security advisory for specific vulnerable firmware versions and recommended updates.",
+      "how_to_determine_impact": "Examine SonicWall SMA 1000 device logs for unauthorized access attempts, unusual administrative activity, or any indicators of compromise provided by SonicWall. Verify the appliance's firmware version against the latest security guidance and known vulnerable versions.",
+      "tanium_query_hint": "If Tanium has visibility into network appliances or logs, search for specific log patterns indicative of exploitation. Otherwise, rely on external vulnerability scanning tools and vendor advisories for detection and verification.",
+      "rapid7_query_hint": "Perform authenticated scans on SonicWall SMA 1000 devices to check for identified vulnerabilities. Review network and system logs for suspicious activity originating from or targeting these devices, looking for RCE payloads or anomalous connections.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Critical Langflow flaw exploited to steal OpenAI and AWS keys",
-      "tldr": "A critical, unauthenticated remote code execution (RCE) vulnerability, CVE-2026-0768, in Langflow is being actively exploited. This flaw allows threat actors to steal sensitive credentials, including OpenAI and AWS API keys, from affected open-source AI application frameworks.",
-      "action": "Immediately patch all Langflow instances to address CVE-2026-0768. Promptly rotate all OpenAI and AWS API keys and any other credentials that were potentially exposed by vulnerable Langflow deployments. Conduct a thorough forensic analysis for signs of compromise.",
-      "cve_ids": [
-        "CVE-2026-0768"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/critical-langflow-flaw-exploited-to-steal-openai-and-aws-keys/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Langflow versions vulnerable to CVE-2026-0768. Refer to Langflow project documentation or security advisories for specific impacted versions.",
-      "how_to_determine_impact": "Identify all Langflow deployments. Check application logs for unauthenticated remote code execution attempts, unauthorized access to credential storage, or suspicious process spawns. Verify the integrity of Langflow configurations and deployed code.",
-      "tanium_query_hint": "Use 'Get Installed Applications' matching 'Langflow' to locate instances. Employ 'Get File Content' on configuration files to check for compromised credentials. Use 'Get Running Processes' and 'Get Process CommandLine' to detect unauthorized code execution.",
-      "rapid7_query_hint": "Scan servers hosting Langflow for CVE-2026-0768 using authenticated scans. Search InsightVM for vulnerability ID 'CVE-2026-0768'. Review InsightIDR logs for any suspicious activity on Langflow servers, especially related to file access or process creation.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Chrome and Firefox Updates Patch Dozens of Vulnerabilities",
-      "tldr": "Google Chrome and Mozilla Firefox have released new updates to address numerous vulnerabilities. These updates are crucial for maintaining browser security, as they patch dozens of flaws, some of which may be critical and could lead to various security risks if left unpatched.",
-      "action": "All users and organizations should immediately update their Google Chrome and Mozilla Firefox browsers to the latest available stable versions across all endpoints. Implement automated update mechanisms where possible to ensure timely patching.",
+      "title": "BGP Hijack Delivers Malicious Virtualizor Update That Establishes Persistent Root Access",
+      "tldr": "A BGP hijack was utilized to deliver a malicious update for Virtualizor software, which, upon installation, establishes persistent root access on compromised systems. This incident represents a significant supply chain attack vector, allowing attackers deep and lasting control over affected virtualization platforms.",
+      "action": "Verify the authenticity and integrity of all software updates, especially for critical infrastructure like virtualization platforms. Implement robust BGP monitoring and ensure all software update mechanisms are secured. Conduct a thorough forensic analysis on any Virtualizor systems that received recent updates.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/chrome-and-firefox-updates-patch-dozens-of-vulnerabilities/",
-      "source": "SecurityWeek",
+      "source_url": "https://thehackernews.com/2026/09/bgp-hijack-delivers-malicious.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Virtualizor software installations that received updates via compromised BGP routes.",
+      "how_to_determine_impact": "Inspect Virtualizor update logs and verify the source IP addresses and cryptographic signatures of all received updates. Look for unexpected root-level persistence mechanisms, suspicious processes running with high privileges, or unauthorized network connections on Virtualizor hosts.",
+      "tanium_query_hint": "Get Running Processes with CommandLine contains 'virtualizor' and compare against known good processes. Get File Hash of Virtualizor binaries and compare against vendor hashes. Search for newly created services or scheduled tasks with root privileges.",
+      "rapid7_query_hint": "Search for assets running Virtualizor software. Monitor for new or unusual persistent services, root access attempts, or network connections from Virtualizor hosts to unknown external IPs. Deploy EDR to detect suspicious process behavior.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "WordPress backup plugin flaw exposes millions of sites to takeover attacks",
+      "tldr": "An SQL injection vulnerability in the All-in-One WP Migration and Backup plugin for WordPress could allow unauthenticated attackers to execute remote code and take control of millions of affected websites. This critical flaw allows for complete site compromise without prior authentication, posing a severe threat to web administrators.",
+      "action": "Immediately update the All-in-One WP Migration and Backup plugin for WordPress to the latest patched version. Scan all WordPress sites for signs of compromise and conduct a thorough review of web server and WordPress application logs for suspicious activity or exploitation attempts.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-backup-plugin-flaw-exposes-millions-of-sites-to-takeover-attacks/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Google Chrome and Mozilla Firefox versions prior to the latest security updates. Users should update to the most recent stable versions.",
-      "how_to_determine_impact": "Verify the version number of Google Chrome and Mozilla Firefox installed on all endpoints. Ensure they match or exceed the latest secure versions published by Google and Mozilla.",
-      "tanium_query_hint": "Get Installed Applications matching 'Google Chrome' or 'Mozilla Firefox' from all machines. Filter results by version number to identify outdated browsers.",
-      "rapid7_query_hint": "Use InsightVM to scan endpoints for outdated versions of Google Chrome and Mozilla Firefox. Utilize InsightAgent's software inventory capabilities to list installed browser versions.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.5 High"
+      "affected_versions": "All-in-One WP Migration and Backup plugin for WordPress. Specific vulnerable versions need to be confirmed from the vendor's official advisory.",
+      "how_to_determine_impact": "Identify all WordPress installations within the environment. Check if the 'All-in-One WP Migration and Backup' plugin is installed and verify its exact version number. Review web server and WordPress logs for unauthenticated SQL injection attempts or unauthorized administrative access.",
+      "tanium_query_hint": "Get File Version from all machines where File Path contains 'wp-content/plugins/all-in-one-wp-migration/' to identify plugin versions. Check web server access logs (e.g., Apache/Nginx) for SQLi patterns or suspicious requests.",
+      "rapid7_query_hint": "Scan web servers hosting WordPress sites. Look for vulnerability checks specifically targeting the 'All-in-One WP Migration and Backup' plugin. Monitor web application firewalls (WAF) and server logs for SQL injection attempts and anomalous activities.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "UK Moves to Block High-Risk Tech Suppliers From Critical Infrastructure",
+      "tldr": "The UK government is implementing measures to block high-risk technology suppliers from involvement in critical national infrastructure projects. This move aims to enhance national security by reducing supply chain vulnerabilities and protecting essential services from potential foreign interference or cyber threats. The legislation will empower the government to intervene where suppliers pose a risk.",
+      "action": "Organizations involved with critical infrastructure in the UK should review their supply chain for compliance with new government regulations regarding high-risk tech suppliers. Conduct thorough vendor risk assessments and ensure procurement policies align with national security guidelines to mitigate future operational impacts.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/uk-moves-to-block-high-risk-tech-suppliers-from-critical-infrastructure/",
+      "source": "SecurityWeek"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -14093,6 +14092,56 @@
         "remediation_priority": "High next patch cycle",
         "cvss_score": "7.5 High",
         "category": "vulns"
+      },
+      {
+        "title": "Malicious Apache Modules Hijack Brazilian Government Site Traffic to Push Betting Pages",
+        "tldr": "Malicious Apache modules were used to hijack traffic from Brazilian government websites, redirecting visitors to betting pages. This indicates a compromise of web server infrastructure. The attack vector allowed unauthorized content injection and traffic diversion.",
+        "action": "Conduct a thorough compromise assessment of all web servers, especially those running Apache. Inspect Apache configurations and modules for unauthorized additions or modifications, and implement strong integrity monitoring for critical system files.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/malicious-apache-modules-hijack.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "BGP Hijack Delivers Malicious Virtualizor Update That Establishes Persistent Root Access",
+        "tldr": "A BGP hijack was utilized to deliver a malicious update for Virtualizor software, which, upon installation, establishes persistent root access on compromised systems. This incident represents a significant supply chain attack vector, allowing attackers deep and lasting control over affected virtualization platforms.",
+        "action": "Verify the authenticity and integrity of all software updates, especially for critical infrastructure like virtualization platforms. Implement robust BGP monitoring and ensure all software update mechanisms are secured. Conduct a thorough forensic analysis on any Virtualizor systems that received recent updates.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/bgp-hijack-delivers-malicious.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Virtualizor software installations that received updates via compromised BGP routes.",
+        "how_to_determine_impact": "Inspect Virtualizor update logs and verify the source IP addresses and cryptographic signatures of all received updates. Look for unexpected root-level persistence mechanisms, suspicious processes running with high privileges, or unauthorized network connections on Virtualizor hosts.",
+        "tanium_query_hint": "Get Running Processes with CommandLine contains 'virtualizor' and compare against known good processes. Get File Hash of Virtualizor binaries and compare against vendor hashes. Search for newly created services or scheduled tasks with root privileges.",
+        "rapid7_query_hint": "Search for assets running Virtualizor software. Monitor for new or unusual persistent services, root access attempts, or network connections from Virtualizor hosts to unknown external IPs. Deploy EDR to detect suspicious process behavior.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "WordPress backup plugin flaw exposes millions of sites to takeover attacks",
+        "tldr": "An SQL injection vulnerability in the All-in-One WP Migration and Backup plugin for WordPress could allow unauthenticated attackers to execute remote code and take control of millions of affected websites. This critical flaw allows for complete site compromise without prior authentication, posing a severe threat to web administrators.",
+        "action": "Immediately update the All-in-One WP Migration and Backup plugin for WordPress to the latest patched version. Scan all WordPress sites for signs of compromise and conduct a thorough review of web server and WordPress application logs for suspicious activity or exploitation attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-backup-plugin-flaw-exposes-millions-of-sites-to-takeover-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "All-in-One WP Migration and Backup plugin for WordPress. Specific vulnerable versions need to be confirmed from the vendor's official advisory.",
+        "how_to_determine_impact": "Identify all WordPress installations within the environment. Check if the 'All-in-One WP Migration and Backup' plugin is installed and verify its exact version number. Review web server and WordPress logs for unauthenticated SQL injection attempts or unauthorized administrative access.",
+        "tanium_query_hint": "Get File Version from all machines where File Path contains 'wp-content/plugins/all-in-one-wp-migration/' to identify plugin versions. Check web server access logs (e.g., Apache/Nginx) for SQLi patterns or suspicious requests.",
+        "rapid7_query_hint": "Scan web servers hosting WordPress sites. Look for vulnerability checks specifically targeting the 'All-in-One WP Migration and Backup' plugin. Monitor web application firewalls (WAF) and server logs for SQL injection attempts and anomalous activities.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "UK Moves to Block High-Risk Tech Suppliers From Critical Infrastructure",
+        "tldr": "The UK government is implementing measures to block high-risk technology suppliers from involvement in critical national infrastructure projects. This move aims to enhance national security by reducing supply chain vulnerabilities and protecting essential services from potential foreign interference or cyber threats. The legislation will empower the government to intervene where suppliers pose a risk.",
+        "action": "Organizations involved with critical infrastructure in the UK should review their supply chain for compliance with new government regulations regarding high-risk tech suppliers. Conduct thorough vendor risk assessments and ensure procurement policies align with national security guidelines to mitigate future operational impacts.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/uk-moves-to-block-high-risk-tech-suppliers-from-critical-infrastructure/",
+        "source": "SecurityWeek",
+        "category": "insurance"
       }
     ]
   }
