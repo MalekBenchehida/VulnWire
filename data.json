@@ -1,112 +1,115 @@
 {
   "breaches": [
     {
-      "title": "BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Thomson Reuters Court Software Breach May Have Exposed SSNs and Sealed Data",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A breach in Thomson Reuters court software has potentially exposed sensitive data, including Social Security Numbers (SSNs) and sealed court records. This compromise could have significant legal and privacy implications.",
+      "action": "If your organization uses Thomson Reuters court software, monitor for official breach notifications and follow their recommended security actions. Implement enhanced data loss prevention for sensitive PII.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/thomson-reuters-court-software-breach.html",
       "source": "The Hacker News"
     },
     {
+      "title": "ThreatsDay: CEO Phishing Kits, 5K Dropbox Account Hacks, OAuth Traps + 17 More Stories",
+      "tldr": "This report highlights multiple cyber threats, prominently featuring 5,000 Dropbox account hacks, the deployment of CEO phishing kits, and OAuth traps. These indicate widespread credential compromise and account takeover attempts across various platforms.",
+      "action": "Enforce strong multi-factor authentication (MFA) across all cloud services, especially Dropbox, and critical internal accounts. Conduct user awareness training specifically targeting CEO impersonation and OAuth phishing.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/threatsday-ceo-phishing-kits-5k-dropbox.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "153 Million Driver License Images Offered on Dark Web",
+      "tldr": "A massive dataset containing images of 153 million driver's licenses is reportedly being sold on the dark web. This represents a significant and widespread exposure of personally identifiable information (PII).",
+      "action": "If your organization handles or stores driver's license data, immediately assess your data security posture and conduct thorough audits. Monitor dark web channels for any mentions related to your organization's data.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/153-million-driver-license-images-offered-on-dark-web/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Your Employee’s Password Appeared in an Infostealer Log. Now What?",
+      "tldr": "Infostealer logs are revealing compromised employee passwords and authenticated sessions, posing a risk of account takeover and MFA bypass. This widespread threat requires proactive measures to protect organizational accounts.",
+      "action": "Implement continuous monitoring for leaked credentials. For any identified compromised accounts, force immediate password resets, revoke existing session tokens, and ensure robust MFA is in place for all critical services.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/your-employees-password-appeared-in-an-infostealer-log-now-what/",
+      "source": "BleepingComputer"
+    }
+  ],
+  "ransomware": [
+    {
       "title": "Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "The Manchester Airports Group has suffered a data leak impacting 8.8 million individuals, following the organization's refusal to pay a ransom. This incident highlights a double extortion ransomware attack strategy.",
+      "action": "Assume data related to 8.8 million people is compromised. Activate your incident response plan, including data breach notification procedures, and review your organization's ransomware response and data recovery strategies.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
   "vulns": [
     {
+      "title": "Critical Elementor Pro flaw exploited to take over WordPress sites",
+      "tldr": "A critical vulnerability, CVE-2026-32475, in the Elementor Pro plugin for WordPress is being actively exploited in the wild. Attackers are leveraging this flaw to install webshells and execute arbitrary commands, leading to full site compromise.",
+      "action": "Immediately update Elementor Pro plugin on all WordPress sites to the latest patched version. Conduct a thorough scan for webshells and other Indicators of Compromise (IoCs) on all affected servers.",
+      "cve_ids": [
+        "CVE-2026-32475"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/critical-elementor-pro-flaw-exploited-to-take-over-wordpress-sites/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Elementor Pro plugin for WordPress, specifically versions vulnerable to CVE-2026-32475. Consult Elementor's official advisory for exact vulnerable version ranges.",
+      "how_to_determine_impact": "Check the version of the Elementor Pro plugin installed on all WordPress sites. Additionally, look for newly created or modified suspicious files (potential webshells) in WordPress directories, particularly 'wp-content'.",
+      "tanium_query_hint": "For Windows/Linux servers hosting WordPress: Get Installed Applications 'Elementor Pro' OR Get File Version 'wp-content/plugins/elementor-pro/elementor-pro.php'. Also, Get File System Details 'wp-content/uploads/' for suspicious recent files.",
+      "rapid7_query_hint": "Run vulnerability scans using InsightVM or Nexpose with checks for CVE-2026-32475. In InsightIDR, search for file modifications in WordPress directories or suspicious process execution by web server accounts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Hackers exploit Sangoma Switchvox flaw to deploy reverse shells",
+      "tldr": "Attackers are actively exploiting CVE-2026-9586, an unauthenticated SQL injection vulnerability in the Sangoma Switchvox VoIP platform. This critical flaw can lead to remote code execution and allows the deployment of reverse shells for persistent access.",
+      "action": "Immediately patch all Sangoma Switchvox VoIP platforms to the version that remediates CVE-2026-9586. Conduct a post-patch compromise assessment to check for any deployed reverse shells or persistent unauthorized access.",
+      "cve_ids": [
+        "CVE-2026-9586"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Sangoma Switchvox VoIP platform, specifically versions vulnerable to CVE-2026-9586. Refer to Sangoma's official security advisory for precise details.",
+      "how_to_determine_impact": "Identify all Sangoma Switchvox VoIP appliances within your network. Verify their installed firmware or software versions against the vendor's security advisory for CVE-2026-9586. Monitor network traffic from these devices for unusual outbound connections.",
+      "tanium_query_hint": "(Requires Tanium Appliance Management or direct access) Query 'Get System Information' or 'Get Installed Packages' for Switchvox version. If agents can be deployed on management servers: 'Get Network Connections' to monitor outbound connections from Switchvox IP.",
+      "rapid7_query_hint": "Run targeted vulnerability scans using InsightVM to detect CVE-2026-9586 on Sangoma Switchvox devices. In InsightIDR, monitor network traffic from Switchvox appliances for suspicious outbound connections and reverse shell signatures.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Pegasus Zero-Click Spyware Exploit Infects Serbian Student Movement Member's iPhone",
+      "tldr": "The sophisticated Pegasus zero-click spyware has been used to infect an iPhone, indicating the exploitation of a highly critical and likely unpatched vulnerability in iOS. This attack method requires no user interaction.",
+      "action": "Ensure all Apple iPhones and other iOS devices are updated to the absolute latest available operating system version immediately. Implement enhanced mobile threat defense (MTD) solutions for high-risk users.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Apple iOS. Specific vulnerable versions are not publicly disclosed, but zero-click exploits typically target unpatched or recently discovered flaws in current or slightly older versions.",
+      "how_to_determine_impact": "Verify all iOS devices are running the latest patched version. For critical users, consider forensic analysis for Indicators of Compromise. Monitor network traffic for suspicious connections to known Pegasus command-and-control infrastructure.",
+      "tanium_query_hint": "(Requires integration with MDM or specific mobile device sensors) Use 'Get OS Version' for iOS devices. Look for unauthorized profiles or suspicious application installations on managed devices.",
+      "rapid7_query_hint": "(Requires mobile device management integration) Focus on ensuring all managed iOS devices are updated to the latest OS versions. Monitor network activity from mobile devices for suspicious connections or data exfiltration attempts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated)"
+    },
+    {
       "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A critical vulnerability has been discovered in Cisco Nexus 9000 series switches, allowing unauthenticated remote attackers to execute arbitrary code with root privileges. This flaw poses a severe risk to network infrastructure.",
+      "action": "Immediately identify all Cisco Nexus 9000 series switches within your network infrastructure. Consult Cisco's official security advisory for specific affected versions and apply patches or recommended mitigations without delay.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "US Becomes Top Target in RMM Phishing Campaign Spanning 46 Countries",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Attackers Turn Trusted Node.js Runtime Into Malware Delivery Tool in Targeted Attacks",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/attackers-turn-trusted-nodejs-runtime.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Shai-Hulud's Reach Just Grew to 469 Credential Locations. Here's What That Means",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/shai-huluds-reach-just-grew-to-469.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Cisco Nexus 9000 Series Switches running specific versions of NX-OS. Refer to Cisco's official security advisory for exact vulnerable versions.",
+      "how_to_determine_impact": "Identify all Cisco Nexus 9000 devices in your network infrastructure. Check the NX-OS version running on each device against Cisco's official security advisory for this vulnerability.",
+      "tanium_query_hint": "(Requires Tanium Network Sensor or direct network device management) Query 'Get Firmware Version' or 'Get OS Version' from Cisco Nexus devices. Alternatively, use 'Get Device Information' if integrated.",
+      "rapid7_query_hint": "Run network vulnerability scans using InsightVM to identify Cisco Nexus 9000 devices and detect the presence of this vulnerability. Search for assets with 'Cisco Nexus 9000' in inventory.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -14266,6 +14269,85 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "ThreatsDay: CEO Phishing Kits, 5K Dropbox Account Hacks, OAuth Traps + 17 More Stories",
+        "tldr": "This report highlights multiple cyber threats, prominently featuring 5,000 Dropbox account hacks, the deployment of CEO phishing kits, and OAuth traps. These indicate widespread credential compromise and account takeover attempts across various platforms.",
+        "action": "Enforce strong multi-factor authentication (MFA) across all cloud services, especially Dropbox, and critical internal accounts. Conduct user awareness training specifically targeting CEO impersonation and OAuth phishing.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/threatsday-ceo-phishing-kits-5k-dropbox.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "153 Million Driver License Images Offered on Dark Web",
+        "tldr": "A massive dataset containing images of 153 million driver's licenses is reportedly being sold on the dark web. This represents a significant and widespread exposure of personally identifiable information (PII).",
+        "action": "If your organization handles or stores driver's license data, immediately assess your data security posture and conduct thorough audits. Monitor dark web channels for any mentions related to your organization's data.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/153-million-driver-license-images-offered-on-dark-web/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Your Employee’s Password Appeared in an Infostealer Log. Now What?",
+        "tldr": "Infostealer logs are revealing compromised employee passwords and authenticated sessions, posing a risk of account takeover and MFA bypass. This widespread threat requires proactive measures to protect organizational accounts.",
+        "action": "Implement continuous monitoring for leaked credentials. For any identified compromised accounts, force immediate password resets, revoke existing session tokens, and ensure robust MFA is in place for all critical services.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/your-employees-password-appeared-in-an-infostealer-log-now-what/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Critical Elementor Pro flaw exploited to take over WordPress sites",
+        "tldr": "A critical vulnerability, CVE-2026-32475, in the Elementor Pro plugin for WordPress is being actively exploited in the wild. Attackers are leveraging this flaw to install webshells and execute arbitrary commands, leading to full site compromise.",
+        "action": "Immediately update Elementor Pro plugin on all WordPress sites to the latest patched version. Conduct a thorough scan for webshells and other Indicators of Compromise (IoCs) on all affected servers.",
+        "cve_ids": [
+          "CVE-2026-32475"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/critical-elementor-pro-flaw-exploited-to-take-over-wordpress-sites/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Elementor Pro plugin for WordPress, specifically versions vulnerable to CVE-2026-32475. Consult Elementor's official advisory for exact vulnerable version ranges.",
+        "how_to_determine_impact": "Check the version of the Elementor Pro plugin installed on all WordPress sites. Additionally, look for newly created or modified suspicious files (potential webshells) in WordPress directories, particularly 'wp-content'.",
+        "tanium_query_hint": "For Windows/Linux servers hosting WordPress: Get Installed Applications 'Elementor Pro' OR Get File Version 'wp-content/plugins/elementor-pro/elementor-pro.php'. Also, Get File System Details 'wp-content/uploads/' for suspicious recent files.",
+        "rapid7_query_hint": "Run vulnerability scans using InsightVM or Nexpose with checks for CVE-2026-32475. In InsightIDR, search for file modifications in WordPress directories or suspicious process execution by web server accounts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers exploit Sangoma Switchvox flaw to deploy reverse shells",
+        "tldr": "Attackers are actively exploiting CVE-2026-9586, an unauthenticated SQL injection vulnerability in the Sangoma Switchvox VoIP platform. This critical flaw can lead to remote code execution and allows the deployment of reverse shells for persistent access.",
+        "action": "Immediately patch all Sangoma Switchvox VoIP platforms to the version that remediates CVE-2026-9586. Conduct a post-patch compromise assessment to check for any deployed reverse shells or persistent unauthorized access.",
+        "cve_ids": [
+          "CVE-2026-9586"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Sangoma Switchvox VoIP platform, specifically versions vulnerable to CVE-2026-9586. Refer to Sangoma's official security advisory for precise details.",
+        "how_to_determine_impact": "Identify all Sangoma Switchvox VoIP appliances within your network. Verify their installed firmware or software versions against the vendor's security advisory for CVE-2026-9586. Monitor network traffic from these devices for unusual outbound connections.",
+        "tanium_query_hint": "(Requires Tanium Appliance Management or direct access) Query 'Get System Information' or 'Get Installed Packages' for Switchvox version. If agents can be deployed on management servers: 'Get Network Connections' to monitor outbound connections from Switchvox IP.",
+        "rapid7_query_hint": "Run targeted vulnerability scans using InsightVM to detect CVE-2026-9586 on Sangoma Switchvox devices. In InsightIDR, monitor network traffic from Switchvox appliances for suspicious outbound connections and reverse shell signatures.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Pegasus Zero-Click Spyware Exploit Infects Serbian Student Movement Member's iPhone",
+        "tldr": "The sophisticated Pegasus zero-click spyware has been used to infect an iPhone, indicating the exploitation of a highly critical and likely unpatched vulnerability in iOS. This attack method requires no user interaction.",
+        "action": "Ensure all Apple iPhones and other iOS devices are updated to the absolute latest available operating system version immediately. Implement enhanced mobile threat defense (MTD) solutions for high-risk users.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Apple iOS. Specific vulnerable versions are not publicly disclosed, but zero-click exploits typically target unpatched or recently discovered flaws in current or slightly older versions.",
+        "how_to_determine_impact": "Verify all iOS devices are running the latest patched version. For critical users, consider forensic analysis for Indicators of Compromise. Monitor network traffic for suspicious connections to known Pegasus command-and-control infrastructure.",
+        "tanium_query_hint": "(Requires integration with MDM or specific mobile device sensors) Use 'Get OS Version' for iOS devices. Look for unauthorized profiles or suspicious application installations on managed devices.",
+        "rapid7_query_hint": "(Requires mobile device management integration) Focus on ensuring all managed iOS devices are updated to the latest OS versions. Monitor network activity from mobile devices for suspicious connections or data exfiltration attempts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
         "category": "vulns"
       }
     ]
