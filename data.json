@@ -1,90 +1,112 @@
 {
   "breaches": [
     {
-      "title": "Dropbox accounts breached through Lenovo email verification flaw",
-      "tldr": "An unauthorized party accessed some Dropbox user accounts by exploiting a flaw in Lenovo's email verification process. This allowed attackers to register fraudulent Lenovo IDs, which were then used to gain access to linked Dropbox accounts.",
-      "action": "Dropbox users who linked their accounts via Lenovo should immediately enable multi-factor authentication (MFA) on their Dropbox account and review recent account activity for any suspicious actions. Lenovo users should also review their account security settings.",
+      "title": "BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/dropbox-accounts-breached-through-lenovo-email-verification-flaw/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "Malicious Apache Modules Hijack Brazilian Government Site Traffic to Push Betting Pages",
-      "tldr": "Attackers compromised a Brazilian government website by deploying malicious Apache modules. These modules hijacked legitimate traffic, redirecting users to push betting pages, indicating a breach of the website's integrity and control.",
-      "action": "Organizations, especially those running Apache web servers, should regularly audit their server configurations, module installations, and monitor for unauthorized modifications. Implement robust intrusion detection and prevention systems.",
+      "title": "Thomson Reuters Court Software Breach May Have Exposed SSNs and Sealed Data",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/malicious-apache-modules-hijack.html",
+      "source_url": "https://thehackernews.com/2026/09/thomson-reuters-court-software-breach.html",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/",
+      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
-      "title": "SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks",
-      "tldr": "Threat actors are actively exploiting two unpatched zero-day vulnerabilities in SonicWall SMA 1000 series appliances. These critical flaws can be chained together to achieve remote code execution (RCE) on affected systems.",
-      "action": "Organizations utilizing SonicWall SMA 1000 series appliances must immediately apply all available security patches or implement vendor-recommended mitigations. Proactively monitor for any indicators of compromise and isolate potentially affected systems.",
+      "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "SonicWall SMA 1000 series appliances. Specific vulnerable versions are not detailed in the provided text; refer to SonicWall's official advisories.",
-      "how_to_determine_impact": "Check SonicWall SMA 1000 appliances for unpatched status. Review device logs for unusual activity, error messages, or suspicious outbound connections. Consult SonicWall's official security advisory for detailed detection methods and IOCs.",
-      "tanium_query_hint": "Use 'Get Computer Name and Running Processes from all machines with Running Processes matching 'smacontrolservice' or 'smadataservice' to identify SMA 1000 appliances. Follow up with 'Get File Version['<path_to_relevant_executable>']' to check patch levels.",
-      "rapid7_query_hint": "Asset search for 'SonicWall SMA 1000' appliances. Once CVEs are assigned, search InsightVM for associated vulnerability IDs. Monitor network traffic from these devices for anomalous patterns.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, due to active RCE zero-day exploitation)"
-    },
-    {
-      "title": "Hackers exploit Sangoma Switchvox flaw to deploy reverse shells",
-      "tldr": "Attackers are actively exploiting CVE-2026-9586, an unauthenticated SQL injection vulnerability affecting the Sangoma Switchvox VoIP platform. Successful exploitation of this flaw can lead to remote code execution (RCE), allowing attackers to deploy reverse shells.",
-      "action": "Organizations running Sangoma Switchvox should immediately apply the latest security patches provided by Sangoma. If patching is not feasible, isolate the device and conduct a forensic analysis for potential compromise.",
-      "cve_ids": [
-        "CVE-2026-9586"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Sangoma Switchvox VoIP platform. Specific vulnerable versions are not detailed in the provided text; refer to Sangoma's official advisories for CVE-2026-9586.",
-      "how_to_determine_impact": "Verify the installed version of Sangoma Switchvox against vendor advisories for CVE-2026-9586. Inspect system logs and network traffic for unusual connections, process spawns, or indicators of reverse shell activity from the Switchvox server.",
-      "tanium_query_hint": "Use 'Get Installed Applications matching 'Sangoma Switchvox'' to identify instances. Then 'Get Running Processes matching 'nc' or 'bash -i'' from these endpoints to detect potential reverse shells.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-9586'. Use asset search to filter for 'Sangoma Switchvox' installations and check their scan results for this vulnerability. Monitor logs in InsightIDR for suspicious activity originating from these assets.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, due to active RCE exploitation)"
-    },
-    {
-      "title": "Hackers exploit critical JFrog Artifactory flaw to forge admin tokens",
-      "tldr": "A critical authentication bypass vulnerability (CVE-2026-82329) in JFrog Artifactory is under active exploitation. This flaw allows attackers to forge administrative tokens, granting them full administrative control over affected Artifactory instances.",
-      "action": "Immediately update all JFrog Artifactory instances to the latest secure version to mitigate CVE-2026-82329. Review Artifactory access logs and audit trails for any suspicious authentication attempts or unauthorized creation of administrator-level tokens.",
-      "cve_ids": [
-        "CVE-2026-82329"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-jfrog-artifactory-flaw-to-forge-admin-tokens/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "JFrog Artifactory. Specific vulnerable versions are not detailed in the provided text; refer to JFrog's official advisories for CVE-2026-82329.",
-      "how_to_determine_impact": "Check the installed version of JFrog Artifactory against vendor advisories for CVE-2026-82329. Review Artifactory's security logs for indicators of unauthorized token generation, anomalous administrator activity, or login attempts from unknown sources.",
-      "tanium_query_hint": "Identify 'JFrog Artifactory' installations using 'Get Installed Applications'. Query 'Get File Contents['<path_to_config_file>']' to check configuration related to authentication or 'Get Running Processes' for unusual Artifactory child processes.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-82329'. Use asset search to locate 'JFrog Artifactory' instances and review their scan data. Monitor InsightIDR for suspicious authentication events on these assets.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, based on authentication bypass leading to admin access)"
-    },
-    {
-      "title": "WordPress backup plugin flaw exposes millions of sites to takeover attacks",
-      "tldr": "An unauthenticated SQL injection vulnerability found in the 'All-in-One WP Migration and Backup' plugin for WordPress could allow remote code execution. This critical flaw could enable attackers to completely take over millions of affected WordPress websites.",
-      "action": "WordPress site administrators using the 'All-in-One WP Migration and Backup' plugin must update it to the latest patched version immediately. Review website and server logs for any indicators of compromise, such as unusual SQL queries or modified files.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-backup-plugin-flaw-exposes-millions-of-sites-to-takeover-attacks/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html",
+      "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "All-in-One WP Migration and Backup plugin for WordPress. Specific vulnerable versions are not detailed in the provided text; administrators should update to the latest version.",
-      "how_to_determine_impact": "Identify all WordPress installations running the 'All-in-One WP Migration and Backup' plugin. Check the plugin's installed version against the vendor's security announcements. Inspect WordPress error logs, access logs, and database for anomalous entries or unauthorized changes.",
-      "tanium_query_hint": "On web servers, use 'Get Files matching '*wp-content/plugins/all-in-one-wp-migration*/readme.txt'' to identify the plugin and its version. Check for recently modified PHP files within the WordPress installation.",
-      "rapid7_query_hint": "Scan web servers for known WordPress vulnerabilities and specific plugin versions if InsightVM has signatures. Use asset search to identify 'WordPress' assets and manually verify the plugin's version or look for relevant vulnerability checks once available.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical (Estimated, due to unauthenticated RCE leading to full site takeover)"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "US Becomes Top Target in RMM Phishing Campaign Spanning 46 Countries",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Attackers Turn Trusted Node.js Runtime Into Malware Delivery Tool in Targeted Attacks",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/attackers-turn-trusted-nodejs-runtime.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Shai-Hulud's Reach Just Grew to 469 Credential Locations. Here's What That Means",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/shai-huluds-reach-just-grew-to-469.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -14151,6 +14173,99 @@
         "rapid7_query_hint": "Search InsightVM for vulnerability ID 'CVE-2026-9586'. Use asset search to filter for 'Sangoma Switchvox' installations and check their scan results for this vulnerability. Monitor logs in InsightIDR for suspicious activity originating from these assets.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (Estimated, due to active RCE exploitation)",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-03": [
+      {
+        "title": "BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Thomson Reuters Court Software Breach May Have Exposed SSNs and Sealed Data",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/thomson-reuters-court-software-breach.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "US Becomes Top Target in RMM Phishing Campaign Spanning 46 Countries",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Turn Trusted Node.js Runtime Into Malware Delivery Tool in Targeted Attacks",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/attackers-turn-trusted-nodejs-runtime.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Shai-Hulud's Reach Just Grew to 469 Credential Locations. Here's What That Means",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/shai-huluds-reach-just-grew-to-469.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
