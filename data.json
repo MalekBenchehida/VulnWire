@@ -1,118 +1,120 @@
 {
   "breaches": [
     {
-      "title": "BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "IDScan sued over alleged data breach affecting 153 million drivers",
+      "tldr": "Identity verification company IDScan is facing multiple lawsuits after an alleged data breach exposed over 153 million driver's licenses. Hackers reportedly offered the stolen data for sale on underground forums.",
+      "action": "Review third-party vendor risk with IDScan or similar identity verification services, ensure appropriate data handling agreements are in place, and monitor for exposure of personal data for any affected individuals.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html",
+      "source_url": "https://www.bleepingcomputer.com/news/security/idscan-sued-over-alleged-data-breach-affecting-153-million-drivers/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "ThreatsDay: CEO Phishing Kits, 5K Dropbox Account Hacks, OAuth Traps + 17 More Stories",
+      "tldr": "A broader threat intelligence report highlighted that 5,000 Dropbox accounts were compromised. This indicates a significant breach of user credentials for the cloud storage platform, likely through phishing or credential stuffing attacks.",
+      "action": "Advise users to review Dropbox account activity, immediately enable multi-factor authentication (MFA) on all cloud services including Dropbox, and reset passwords, especially if password reuse is suspected across platforms. Organizations should monitor for suspicious activity related to Dropbox accounts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/threatsday-ceo-phishing-kits-5k-dropbox.html",
       "source": "The Hacker News"
     },
     {
       "title": "French hospital fined €500,000 after breach exposes data of 727,000",
-      "tldr": "France's data protection authority (CNIL) has fined Hôpital privé de la Loire €500,000 ($580,000) for failing to adequately protect patients' and their relatives' data. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "France's data protection authority (CNIL) fined Hôpital privé de la Loire €500,000 for failing to adequately protect patients' and their relatives' data, which was exposed in a breach affecting 727,000 individuals.",
+      "action": "Conduct a thorough review of data protection policies, access controls, and incident response procedures, especially for sensitive personal or health information (PHI). Ensure robust data encryption, strict access management, and compliance with relevant data protection regulations (e.g., GDPR, HIPAA).",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/french-hospital-fined-500-000-after-breach-exposes-data-of-727-000/",
       "source": "BleepingComputer"
     },
     {
       "title": "Coder's registry infrastructure compromised to push malicious modules",
-      "tldr": "Attackers compromised Coder's Cloudflare infrastructure and added unauthorized registry servers that delivered malicious Terraform modules containing credential-stealing code. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Attackers compromised Coder's Cloudflare infrastructure, subsequently adding unauthorized registry servers that delivered malicious Terraform modules. These modules contained credential-stealing code, posing a significant supply chain risk to developers and organizations using Coder's services.",
+      "action": "Immediately assess reliance on Coder's registry or similar third-party module sources. Scan existing deployments for indicators of compromise related to the malicious Terraform modules. Implement strict supply chain security measures, software composition analysis (SCA), and strong integrity checks for third-party dependencies.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/",
       "source": "BleepingComputer"
-    },
+    }
+  ],
+  "ransomware": [
     {
       "title": "Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Data belonging to 8.8 million customers of Manchester Airports Group was leaked online after the organization refused to pay a ransom demand. This incident highlights a ransomware attack that escalated to data exfiltration and public exposure due to non-payment.",
+      "action": "Enhance data exfiltration detection capabilities and ensure robust data loss prevention (DLP) measures are in place. Review and strengthen incident response plans for ransomware attacks, specifically including scenarios where ransom is refused and data is subsequently leaked. Implement robust data backup and recovery strategies, and educate staff on phishing and social engineering tactics often preceding ransomware deployment.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
   "vulns": [
     {
-      "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Google warns of new Chrome zero-day flaw exploited in attacks",
+      "tldr": "Google has released an urgent Chrome browser update to address a high-severity zero-day vulnerability in the V8 engine, which is actively being exploited in the wild. This marks the sixth Chrome zero-day patched in 2026, underscoring the persistent threat to browser security.",
+      "action": "Immediately update all Google Chrome browsers to the latest stable version (e.g., 120.0.6099.129 or later) across all endpoints and servers within your environment. Prioritize workstations used by privileged users or those frequently accessing external websites. Verify updates have successfully applied.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
+      "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Google Chrome versions prior to the latest stable release (e.g., 120.0.6099.129 for desktop). Consult official Google Chrome release notes for the precise affected version ranges.",
+      "how_to_determine_impact": "Check the installed version of Google Chrome on all endpoints. Users can typically find this by navigating to 'chrome://version/' in the browser's address bar or by going to 'Help > About Google Chrome' from the menu.",
+      "tanium_query_hint": "Get Computer Name and Installed Applications and Application Version from all machines where Installed Applications contains \"Google Chrome\" and Application Version is less than \"120.0.6099.129\"",
+      "rapid7_query_hint": "Asset search query: vulnerability.software_name = \"Google Chrome\" AND vulnerability.title CONTAINS \"V8 Zero-Day\" OR vulnerability.solution.title CONTAINS \"Chrome Update\"",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
+      "tldr": "A critical-severity authentication bypass flaw (CVE-2026-19490) in Citrix NetScaler (formerly ADC and Gateway) is now being actively exploited in the wild. This vulnerability allows unauthenticated attackers to bypass authentication and gain unauthorized access to vulnerable systems.",
+      "action": "Immediately apply the vendor-provided patch or mitigation for CVE-2026-19490 to all affected Citrix NetScaler ADC and Gateway appliances. Isolate potentially affected systems and conduct a thorough compromise assessment, reviewing logs for suspicious activity, unauthorized access, or configuration changes.",
+      "cve_ids": [
+        "CVE-2026-19490"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Citrix NetScaler ADC and Gateway. Refer to the official Citrix security bulletin for CVE-2026-19490 for precise affected version ranges and build numbers.",
+      "how_to_determine_impact": "Verify the installed version of Citrix NetScaler ADC/Gateway appliances. Consult the official Citrix security advisory for CVE-2026-19490 for detailed version checks, Indicators of Compromise (IoCs), and specific detection methods.",
+      "tanium_query_hint": "If a custom sensor for Citrix NetScaler version exists, use that. Otherwise, query 'Get Running Processes' for Citrix processes and inspect configuration files on devices, if accessible via Tanium.",
+      "rapid7_query_hint": "Asset search query: vulnerability.id = \"CVE-2026-19490\" OR vulnerability.title CONTAINS \"Citrix NetScaler authentication bypass\" AND status = \"Active\"",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
+      "tldr": "A critical vulnerability in Cisco Nexus 9000 series switches allows unauthenticated remote attackers to execute arbitrary code as root. This flaw poses a severe risk to network infrastructure, potentially leading to full device compromise.",
+      "action": "Apply the latest security updates provided by Cisco for Nexus 9000 series switches as soon as patches become available. Implement stringent network segmentation and strong access controls to limit exposure of management interfaces to untrusted networks.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Cisco Nexus 9000 series switches. Consult Cisco's official security advisory for this vulnerability for specific vulnerable NX-OS versions and platforms.",
+      "how_to_determine_impact": "Check the operating system (NX-OS) version on all deployed Cisco Nexus 9000 switches. Compare these versions against the Cisco security advisory to identify vulnerable assets.",
+      "tanium_query_hint": "For Cisco network devices, a custom sensor might be needed to retrieve device model and NX-OS version. Otherwise, rely on network device inventory systems and out-of-band checks.",
+      "rapid7_query_hint": "Asset search query: vulnerability.software_name = \"Cisco Nexus 9000\" AND vulnerability.severity = \"Critical\" AND vulnerability.title CONTAINS \"Remote Code Execution\"",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "PostgreSQL has patched a 12-year-old logical decoding vulnerability that could allow attackers with 'replication-role' privileges to execute arbitrary code. This long-standing flaw highlights the risk of privilege escalation and server compromise in database environments.",
+      "action": "Update all PostgreSQL database instances to the patched versions immediately. Review existing user privileges, particularly those assigned the 'replication' role, to ensure least privilege principles are strictly enforced and unnecessary permissions are revoked.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "New Ted Backdoor Hides Inside Victims' Own HAProxy Builds to Intercept Web Traffic",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/new-ted-backdoor-hides-inside-victims.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Over 440,000 Exploit Attempts Target Super Forms and Elementor Pro RCE Flaws",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/over-440000-exploit-attempts-target.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "affected_versions": "PostgreSQL versions that support logical decoding and have not yet been updated with the patch for this 12-year-old vulnerability. Refer to official PostgreSQL security advisories for specific version ranges.",
+      "how_to_determine_impact": "Check the installed version of all PostgreSQL database servers. Consult the official PostgreSQL documentation and release notes for the specific patch addressing the logical decoding flaw and the corresponding fixed versions.",
+      "tanium_query_hint": "Get Installed Applications and Application Version from all machines where Installed Applications contains \"PostgreSQL\" and Application Version is less than the patched version. Also query for users with 'replication' role if custom sensors are available.",
+      "rapid7_query_hint": "Asset search query: vulnerability.software_name = \"PostgreSQL\" AND vulnerability.title CONTAINS \"Logical Decoding Flaw\" OR vulnerability.title CONTAINS \"Replication-Role Code Execution\"",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
+      "cvss_score": "8.8 High"
     }
   ],
   "insurance": [
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "OpenAI Pledges $1 Billion to Bring Frontier AI to Critical Infrastructure Defenders",
+      "tldr": "OpenAI has committed $1 billion to a new initiative aimed at leveraging advanced AI capabilities to enhance the cybersecurity defenses of critical infrastructure. This initiative seeks to provide cutting-edge AI tools and resources to help protect essential services from sophisticated cyber threats.",
+      "action": "Stay informed about the developments and offerings from this OpenAI initiative. Evaluate how AI-driven defense mechanisms and tools could be integrated into existing critical infrastructure security strategies. Assess whether current cyber insurance policies adequately cover AI-related risks or provide benefits for implementing AI-enhanced security defenses.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://www.securityweek.com/openai-pledges-1-billion-to-bring-frontier-ai-to-critical-infrastructure-defenders/",
+      "source": "SecurityWeek"
     }
   ],
   "history": {
@@ -14481,6 +14483,83 @@
         "remediation_priority": "High next patch cycle",
         "cvss_score": "7.8 High",
         "category": "vulns"
+      },
+      {
+        "title": "IDScan sued over alleged data breach affecting 153 million drivers",
+        "tldr": "Identity verification company IDScan is facing multiple lawsuits after an alleged data breach exposed over 153 million driver's licenses. Hackers reportedly offered the stolen data for sale on underground forums.",
+        "action": "Review third-party vendor risk with IDScan or similar identity verification services, ensure appropriate data handling agreements are in place, and monitor for exposure of personal data for any affected individuals.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/idscan-sued-over-alleged-data-breach-affecting-153-million-drivers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "ThreatsDay: CEO Phishing Kits, 5K Dropbox Account Hacks, OAuth Traps + 17 More Stories",
+        "tldr": "A broader threat intelligence report highlighted that 5,000 Dropbox accounts were compromised. This indicates a significant breach of user credentials for the cloud storage platform, likely through phishing or credential stuffing attacks.",
+        "action": "Advise users to review Dropbox account activity, immediately enable multi-factor authentication (MFA) on all cloud services including Dropbox, and reset passwords, especially if password reuse is suspected across platforms. Organizations should monitor for suspicious activity related to Dropbox accounts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/threatsday-ceo-phishing-kits-5k-dropbox.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Google warns of new Chrome zero-day flaw exploited in attacks",
+        "tldr": "Google has released an urgent Chrome browser update to address a high-severity zero-day vulnerability in the V8 engine, which is actively being exploited in the wild. This marks the sixth Chrome zero-day patched in 2026, underscoring the persistent threat to browser security.",
+        "action": "Immediately update all Google Chrome browsers to the latest stable version (e.g., 120.0.6099.129 or later) across all endpoints and servers within your environment. Prioritize workstations used by privileged users or those frequently accessing external websites. Verify updates have successfully applied.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Google Chrome versions prior to the latest stable release (e.g., 120.0.6099.129 for desktop). Consult official Google Chrome release notes for the precise affected version ranges.",
+        "how_to_determine_impact": "Check the installed version of Google Chrome on all endpoints. Users can typically find this by navigating to 'chrome://version/' in the browser's address bar or by going to 'Help > About Google Chrome' from the menu.",
+        "tanium_query_hint": "Get Computer Name and Installed Applications and Application Version from all machines where Installed Applications contains \"Google Chrome\" and Application Version is less than \"120.0.6099.129\"",
+        "rapid7_query_hint": "Asset search query: vulnerability.software_name = \"Google Chrome\" AND vulnerability.title CONTAINS \"V8 Zero-Day\" OR vulnerability.solution.title CONTAINS \"Chrome Update\"",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
+        "tldr": "A critical-severity authentication bypass flaw (CVE-2026-19490) in Citrix NetScaler (formerly ADC and Gateway) is now being actively exploited in the wild. This vulnerability allows unauthenticated attackers to bypass authentication and gain unauthorized access to vulnerable systems.",
+        "action": "Immediately apply the vendor-provided patch or mitigation for CVE-2026-19490 to all affected Citrix NetScaler ADC and Gateway appliances. Isolate potentially affected systems and conduct a thorough compromise assessment, reviewing logs for suspicious activity, unauthorized access, or configuration changes.",
+        "cve_ids": [
+          "CVE-2026-19490"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Citrix NetScaler ADC and Gateway. Refer to the official Citrix security bulletin for CVE-2026-19490 for precise affected version ranges and build numbers.",
+        "how_to_determine_impact": "Verify the installed version of Citrix NetScaler ADC/Gateway appliances. Consult the official Citrix security advisory for CVE-2026-19490 for detailed version checks, Indicators of Compromise (IoCs), and specific detection methods.",
+        "tanium_query_hint": "If a custom sensor for Citrix NetScaler version exists, use that. Otherwise, query 'Get Running Processes' for Citrix processes and inspect configuration files on devices, if accessible via Tanium.",
+        "rapid7_query_hint": "Asset search query: vulnerability.id = \"CVE-2026-19490\" OR vulnerability.title CONTAINS \"Citrix NetScaler authentication bypass\" AND status = \"Active\"",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
+        "tldr": "A critical vulnerability in Cisco Nexus 9000 series switches allows unauthenticated remote attackers to execute arbitrary code as root. This flaw poses a severe risk to network infrastructure, potentially leading to full device compromise.",
+        "action": "Apply the latest security updates provided by Cisco for Nexus 9000 series switches as soon as patches become available. Implement stringent network segmentation and strong access controls to limit exposure of management interfaces to untrusted networks.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Cisco Nexus 9000 series switches. Consult Cisco's official security advisory for this vulnerability for specific vulnerable NX-OS versions and platforms.",
+        "how_to_determine_impact": "Check the operating system (NX-OS) version on all deployed Cisco Nexus 9000 switches. Compare these versions against the Cisco security advisory to identify vulnerable assets.",
+        "tanium_query_hint": "For Cisco network devices, a custom sensor might be needed to retrieve device model and NX-OS version. Otherwise, rely on network device inventory systems and out-of-band checks.",
+        "rapid7_query_hint": "Asset search query: vulnerability.software_name = \"Cisco Nexus 9000\" AND vulnerability.severity = \"Critical\" AND vulnerability.title CONTAINS \"Remote Code Execution\"",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "OpenAI Pledges $1 Billion to Bring Frontier AI to Critical Infrastructure Defenders",
+        "tldr": "OpenAI has committed $1 billion to a new initiative aimed at leveraging advanced AI capabilities to enhance the cybersecurity defenses of critical infrastructure. This initiative seeks to provide cutting-edge AI tools and resources to help protect essential services from sophisticated cyber threats.",
+        "action": "Stay informed about the developments and offerings from this OpenAI initiative. Evaluate how AI-driven defense mechanisms and tools could be integrated into existing critical infrastructure security strategies. Assess whether current cyber insurance policies adequately cover AI-related risks or provide benefits for implementing AI-enhanced security defenses.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/openai-pledges-1-billion-to-bring-frontier-ai-to-critical-infrastructure-defenders/",
+        "source": "SecurityWeek",
+        "category": "insurance"
       }
     ]
   }
