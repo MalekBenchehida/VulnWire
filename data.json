@@ -1,113 +1,120 @@
 {
   "breaches": [
     {
-      "title": "ThreatsDay: CEO Phishing Kits, 5K Dropbox Account Hacks, OAuth Traps + 17 More Stories",
-      "tldr": "A summary of recent cyber threats highlights 5,000 Dropbox account hacks and the prevalence of CEO phishing kits and OAuth traps. These incidents indicate widespread credential compromise and targeted social engineering campaigns.",
-      "action": "Implement strong multi-factor authentication (MFA) across all corporate accounts, especially for executives. Conduct regular phishing awareness training and review email security configurations to detect and block phishing attempts.",
+      "title": "BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/threatsday-ceo-phishing-kits-5k-dropbox.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Thomson Reuters Court Software Breach May Have Exposed SSNs and Sealed Data",
-      "tldr": "A breach involving Thomson Reuters' court software is suspected of exposing highly sensitive information, including Social Security Numbers (SSNs) and sealed court records. This compromise poses a severe risk of identity theft and exposure of confidential legal proceedings.",
-      "action": "Organizations using Thomson Reuters court software should monitor for official advisories, assume potential compromise of sensitive data, and activate incident response plans. Review access logs for anomalous activity and implement credit monitoring for affected individuals.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/thomson-reuters-court-software-breach.html",
+      "source_url": "https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html",
       "source": "The Hacker News"
     },
     {
       "title": "French hospital fined €500,000 after breach exposes data of 727,000",
-      "tldr": "Hôpital privé de la Loire in France has been fined €500,000 by the CNIL, the French data protection authority, following a data breach that exposed the personal data of 727,000 individuals. The fine was imposed due to inadequate protection of patient and relative data.",
-      "action": "Conduct an immediate review of data protection policies, access controls, and data handling practices. Ensure robust technical and organizational measures are in place to comply with GDPR and local data protection regulations to prevent similar breaches and avoid regulatory penalties.",
+      "tldr": "France's data protection authority (CNIL) has fined Hôpital privé de la Loire €500,000 ($580,000) for failing to adequately protect patients' and their relatives' data. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/french-hospital-fined-500-000-after-breach- exposes-data-of-727-000/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/french-hospital-fined-500-000-after-breach-exposes-data-of-727-000/",
       "source": "BleepingComputer"
     },
     {
-      "title": "153 Million Driver License Images Offered on Dark Web",
-      "tldr": "A massive collection of 153 million driver's license images is being circulated and offered for sale on the dark web. While the origin of this breach is not specified, it represents a significant compromise of personal identification information, escalating risks for identity theft.",
-      "action": "Alert employees and stakeholders about the increased risk of identity theft and advise vigilance for phishing scams. Implement enhanced identity verification processes and consider informing potentially affected individuals if the source of the leak can be identified.",
+      "title": "Coder's registry infrastructure compromised to push malicious modules",
+      "tldr": "Attackers compromised Coder's Cloudflare infrastructure and added unauthorized registry servers that delivered malicious Terraform modules containing credential-stealing code. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/153-million-driver-license-images-offered-on-dark-web/",
-      "source": "SecurityWeek"
-    }
-  ],
-  "ransomware": [
+      "source_url": "https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/",
+      "source": "BleepingComputer"
+    },
     {
       "title": "Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal",
-      "tldr": "Data belonging to 8.8 million individuals associated with the Manchester Airports Group has been leaked on the dark web. This exfiltration and public disclosure occurred after the organization reportedly refused to pay a ransom demand, indicating a double-extortion ransomware attack.",
-      "action": "Review and strengthen incident response plans specifically for ransomware and data extortion scenarios. Ensure comprehensive, immutable backups are in place. Implement proactive dark web monitoring for any organizational or customer data linked to your enterprise.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/",
       "source": "SecurityWeek"
     }
   ],
-  "vulns": [
+  "ransomware": [
     {
-      "title": "Critical Cisco Nexus 9000 Flaw Lets Unauthenticated Remote Attackers Run Code as Root",
-      "tldr": "A critical vulnerability exists in Cisco Nexus 9000 switches that allows unauthenticated remote attackers to execute arbitrary code with root privileges. This flaw poses a severe risk to network infrastructure integrity and availability.",
-      "action": "Immediately identify and apply patches to all affected Cisco Nexus 9000 series devices. Consult Cisco's official security advisories (PSIRT) for specific vulnerable versions and patching instructions.",
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/critical-cisco-nexus-9000-flaw-lets.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Cisco Nexus 9000 series switches running specific vulnerable Cisco IOS XE versions. Refer to Cisco's official security advisory for exact versions and product lines.",
-      "how_to_determine_impact": "Consult Cisco's official advisory (PSIRT) to identify vulnerable models and IOS XE versions. Use network device management tools or CLI commands ('show version') to check the firmware versions of all Cisco Nexus 9000 devices in your inventory.",
-      "tanium_query_hint": "Use network device management sensors (if integrated) or query associated management servers for firmware versions of Cisco Nexus 9000 devices. Alternatively, review network access logs for unusual activity on Nexus interfaces.",
-      "rapid7_query_hint": "Perform authenticated network scans on Cisco Nexus 9000 devices with InsightVM to detect known vulnerabilities. Search InsightVM for 'Cisco Nexus 9000 RCE' or relevant Cisco PSIRT IDs as they become available.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, based on unauthenticated remote code execution as root privilege)"
-    },
-    {
-      "title": "Pegasus Zero-Click Spyware Exploit Infects Serbian Student Movement Member's iPhone",
-      "tldr": "The highly sophisticated Pegasus zero-click spyware has been used to infect an iPhone belonging to a Serbian student movement member. This indicates active exploitation of a critical, likely unknown or recently patched, iOS vulnerability without any user interaction.",
-      "action": "All users, especially high-risk individuals, should immediately update iOS devices to the latest available stable version. Enable Apple's Lockdown Mode for enhanced protection and remain vigilant for any unusual device behavior or network traffic anomalies.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/pegasus-zero-click-spyware-exploit.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific iOS versions for iPhone devices. Users should update all iOS devices to the latest available stable version immediately to mitigate unknown or recently patched zero-day exploits.",
-      "how_to_determine_impact": "Active compromise detection for zero-click exploits is extremely difficult without specialized forensic tools. Monitor network traffic for known Pegasus Indicators of Compromise (IOCs) or unusual device behavior. For high-risk individuals, consider professional forensic analysis.",
-      "tanium_query_hint": "Not directly applicable for iOS devices. For endpoints connected to the network, monitor network logs for connections to known Pegasus C2 infrastructure or unusual data transfers from mobile devices connected to corporate resources.",
-      "rapid7_query_hint": "Not directly applicable for iOS devices. Monitor network logs from InsightIDR for suspicious outbound connections from mobile devices or activity matching known Pegasus IOCs. Integrate mobile device management (MDM) logs for unusual configurations.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical (Estimated, due to zero-click, persistent, state-sponsored spyware capabilities)"
-    },
-    {
-      "title": "CISA Adds Seven Exploited Flaws as Attackers Deploy Reverse Shells and Crypto Miners",
-      "tldr": "CISA has updated its Known Exploited Vulnerabilities (KEV) catalog by adding seven new flaws that are being actively exploited in the wild. Attackers are leveraging these vulnerabilities to deploy reverse shells for remote access and to install crypto miners on compromised systems.",
-      "action": "Organizations must immediately review the CISA KEV catalog for the specific CVEs. Prioritize and apply patches for all systems affected by these seven actively exploited vulnerabilities, focusing first on internet-facing assets.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific products and versions corresponding to the seven vulnerabilities listed in the CISA Known Exploited Vulnerabilities (KEV) catalog. Refer to cisa.gov/known-exploited-vulnerabilities for the full details of each CVE.",
-      "how_to_determine_impact": "Cross-reference your asset inventory against the specific CVEs and affected product/versions detailed in the CISA KEV catalog. Utilize vulnerability scanners to detect the presence of these CVEs across your infrastructure.",
-      "tanium_query_hint": "Utilize Tanium's 'Get Installed Applications', 'Get File Version', or 'Get Registry Value' sensors to identify affected software or system configurations corresponding to the CVEs listed in the CISA KEV. Search for indicators of compromise like suspicious processes or network connections.",
-      "rapid7_query_hint": "Search InsightVM for the specific CVEs found in the CISA KEV catalog. Prioritize assets with these vulnerabilities, especially those exposed to the internet, using InsightVM's risk scoring and remediation projects. Leverage InsightIDR to detect related attacker activity.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Varies (Scores for each of the seven CVEs would range from High to Critical. Refer to specific CVE entries in CISA KEV for details.)"
-    },
-    {
-      "title": "Critical Elementor Pro flaw exploited to take over WordPress sites",
-      "tldr": "A critical vulnerability, identified as CVE-2026-32475, in the popular Elementor Pro plugin for WordPress is under active exploitation. Attackers are leveraging this flaw to upload webshells and execute arbitrary commands, leading to full compromise of vulnerable WordPress sites.",
-      "action": "Immediately update all Elementor Pro plugin installations on WordPress sites to the latest patched version. Scan WordPress directories for webshells or other indicators of compromise and review web server logs for suspicious activity.",
-      "cve_ids": [
-        "CVE-2026-32475"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/critical-elementor-pro-flaw-exploited-to-take-over-wordpress-sites/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Elementor Pro plugin for WordPress, specific versions vulnerable to CVE-2026-32475. Refer to Elementor's official security advisories or WPScan vulnerability database for precise affected versions.",
-      "how_to_determine_impact": "Check the installed version of the Elementor Pro plugin on all WordPress sites. Look for suspicious files (e.g., webshells) in WordPress plugin and upload directories, and review web server access and error logs for signs of exploitation attempts or unauthorized file uploads.",
-      "tanium_query_hint": "Not directly for web plugins. On web servers hosting WordPress, use 'Get File Version' for Elementor Pro files or 'Get File Content' to scan for known webshell signatures in WordPress directories like `wp-content/plugins/elementor-pro/` or `wp-content/uploads/`.",
-      "rapid7_query_hint": "Scan WordPress sites with a web application scanner capable of detecting CVE-2026-32475. In InsightVM, search for 'CVE-2026-32475' or 'Elementor Pro vulnerabilities' to identify affected assets and prioritize remediation.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, based on active exploitation leading to remote code execution and site takeover)"
+      "source_url": "",
+      "source": "System"
     }
   ],
-  "insurance": [],
+  "vulns": [
+    {
+      "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "New Ted Backdoor Hides Inside Victims' Own HAProxy Builds to Intercept Web Traffic",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/new-ted-backdoor-hides-inside-victims.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Over 440,000 Exploit Attempts Target Super Forms and Elementor Pro RCE Flaws",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/over-440000-exploit-attempts-target.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.8 High"
+    }
+  ],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -14371,6 +14378,108 @@
         "rapid7_query_hint": "Search InsightVM for the specific CVEs found in the CISA KEV catalog. Prioritize assets with these vulnerabilities, especially those exposed to the internet, using InsightVM's risk scoring and remediation projects. Leverage InsightIDR to detect related attacker activity.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Varies (Scores for each of the seven CVEs would range from High to Critical. Refer to specific CVE entries in CISA KEV for details.)",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-04": [
+      {
+        "title": "BraZetsu Malware Turns Compromised Windows Hosts Into Criminal Marketplace Inventory",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/brazetsu-malware-turns-compromised.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "French hospital fined €500,000 after breach exposes data of 727,000",
+        "tldr": "France's data protection authority (CNIL) has fined Hôpital privé de la Loire €500,000 ($580,000) for failing to adequately protect patients' and their relatives' data. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/french-hospital-fined-500-000-after-breach-exposes-data-of-727-000/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Coder's registry infrastructure compromised to push malicious modules",
+        "tldr": "Attackers compromised Coder's Cloudflare infrastructure and added unauthorized registry servers that delivered malicious Terraform modules containing credential-stealing code. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/coders-registry-infrastructure-compromised-to-push-malicious-modules/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Manchester Airports Group Data on 8.8 Million People Leaked After Ransom Refusal",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/manchester-airports-group-data-on-8-8-million-people-leaked-after-ransom-refusal/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "PostgreSQL Fixes 12-Year-Old Logical Decoding Flaw Enabling Replication-Role Code Execution",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/postgresql-fixes-12-year-old-logical.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "New Ted Backdoor Hides Inside Victims' Own HAProxy Builds to Intercept Web Traffic",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/new-ted-backdoor-hides-inside-victims.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Over 440,000 Exploit Attempts Target Super Forms and Elementor Pro RCE Flaws",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/over-440000-exploit-attempts-target.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
         "category": "vulns"
       }
     ]
