@@ -2,103 +2,111 @@
   "breaches": [
     {
       "title": "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials",
-      "tldr": "Threat actors successfully breached JetBrains' internal Cadence instance, leveraging an unpatched TeamCity server. This allowed them to extract critical AWS credentials, gaining access to sensitive internal infrastructure. The incident highlights supply chain risks via developer tools.",
-      "action": "Immediately review all internal and external TeamCity instances for critical updates and ensure robust access controls and monitoring are in place for CI/CD pipelines. Rotate any AWS credentials potentially exposed through development environments and conduct a compromise assessment.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
       "source": "The Hacker News"
     },
     {
       "title": "Trezor Says ShipMonk Breach Exposed 67,000 U.S. Customers' Data It Said Was Deleted",
-      "tldr": "Trezor confirmed that a breach at its third-party fulfillment partner, ShipMonk, led to the exposure of personal data belonging to 67,000 U.S. customers. This sensitive information, which Trezor believed had been securely deleted, included customer names, addresses, and email contacts.",
-      "action": "Customers affected should be notified immediately and advised to be vigilant against phishing attacks. Organizations must re-evaluate data retention policies with third-party vendors and verify data deletion processes, especially for sensitive customer information held by partners.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html",
       "source": "The Hacker News"
     },
     {
       "title": "IDScan sued over alleged data breach affecting 153 million drivers",
-      "tldr": "Identity verification company IDScan is facing multiple lawsuits following an alleged data breach where hackers claimed to have stolen and offered to sell data from over 153 million driver's licenses. This incident underscores the severe implications of breaches on identity verification services and consumer trust.",
-      "action": "Companies utilizing IDScan for identity verification services should immediately assess their exposure and consider alternative or supplementary verification methods. Individuals should monitor their credit reports and be alert for potential identity theft attempts.",
+      "tldr": "Multiple lawsuits have been filed against identity verification company IDScan after hackers allegedly breached the service and offered to sell more than 153 million driver's licenses. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/idscan-sued-over-alleged-data-breach-affecting-153-million-drivers/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "French hospital fined €500,000 after breach exposes data of 727,000",
-      "tldr": "France's data protection authority (CNIL) imposed a €500,000 ($580,000) fine on Hôpital privé de la Loire for failing to adequately protect patient data, resulting in a breach that exposed information for 727,000 individuals and their relatives. The penalty highlights regulatory consequences for lax data security in healthcare.",
-      "action": "Healthcare organizations must prioritize robust data protection measures, conduct regular security audits, and ensure strict compliance with data privacy regulations such as GDPR. Implement strong access controls, encryption, and comprehensive incident response plans.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/french-hospital-fined-500-000-after-breach-exposes-data-of-727-000/",
-      "source": "BleepingComputer"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
+      "title": "Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
       "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
-      "tldr": "An unpatched zero-day vulnerability in Magento and Adobe Commerce is currently being actively exploited in the wild. Attackers are leveraging this flaw to inject backdoors into online stores, potentially leading to unauthorized data theft, payment skimming, or full compromise of the e-commerce platform.",
-      "action": "Immediately apply any available patches or vendor-provided workarounds from Adobe. Implement and review Web Application Firewall (WAF) rules to detect and block suspicious requests targeting known Magento/Adobe Commerce attack vectors. Conduct a thorough compromise assessment for all existing installations.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Magento and Adobe Commerce. Specific vulnerable versions were not explicitly detailed, but the vulnerability is described as an 'unpatched zero-day' actively exploited.",
-      "how_to_determine_impact": "Review Magento and Adobe Commerce logs for unusual administrative activity, unauthorized file modifications (especially in core directories or extensions), and suspicious external connections. Check for newly created administrative accounts or persistent backdoors within the application code or database.",
-      "tanium_query_hint": "Use 'Get File Content['/path/to/magento/app/etc/config.php']' to check configuration integrity, or 'Get Running Processes matching \"php\" with \"magento\" in command line' for suspicious entries. Use 'Get Installed Applications' to identify affected platforms and versions.",
-      "rapid7_query_hint": "Search for assets running Magento or Adobe Commerce. Analyze web server access logs for unusual POST requests to obscure paths or indicators of web shell uploads. Implement vulnerability scans tailored for web application attacks and look for web shell presence.",
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Google warns of new Chrome zero-day flaw exploited in attacks",
-      "tldr": "Google has issued an emergency update for the Chrome browser to address a high-severity zero-day vulnerability located in the V8 JavaScript engine. This flaw is actively being exploited in the wild, posing a significant risk of remote code execution or data compromise to users' systems.",
-      "action": "Update Google Chrome to the latest available version immediately (e.g., Version 123.0.6312.xxx or later as per Google's official security release). All users should restart their browsers to ensure the update is fully applied and the patch takes effect.",
+      "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Google Chrome browser, all versions prior to the latest security patch (e.g., 123.0.6312.xxx). Specifically impacts the V8 JavaScript engine component.",
-      "how_to_determine_impact": "Check the Chrome browser version numbers across all endpoint devices. Any browser instance running a version older than the latest security update released by Google is considered vulnerable. The current version can be found via Chrome's 'About Chrome' page.",
-      "tanium_query_hint": "Use 'Get Installed Applications matching 'Google Chrome'' to list installed versions. For more granular detail, use 'Get File Version[\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\"]' to identify the exact executable version.",
-      "rapid7_query_hint": "Search for assets with 'Google Chrome' installed in your InsightVM or InsightIDR inventory. Filter results by software version to identify any instances that do not match the latest patched version. Utilize InsightAgent for comprehensive installed software inventory queries.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.8 High"
-    },
-    {
-      "title": "Critical Citrix NetScaler auth bypass now leveraged in attacks",
-      "tldr": "A critical-severity authentication bypass vulnerability, identified as CVE-2026-19490, in Citrix NetScaler (formerly ADC and Gateway) is now being actively exploited in the wild. This flaw enables unauthorized access by bypassing authentication mechanisms on affected appliances, leading to potential complete system compromise.",
-      "action": "Apply the latest security updates and patches for Citrix NetScaler (ADC and Gateway) appliances immediately. Implement strict network segmentation and ensure that NetScaler appliances are not directly exposed to the internet without proper protective measures such as Web Application Firewalls (WAFs) or IP address restrictions.",
-      "cve_ids": [
-        "CVE-2026-19490"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Citrix NetScaler (ADC and Gateway) appliances. Specific vulnerable versions should be referenced in the official Citrix security advisory for CVE-2026-19490.",
-      "how_to_determine_impact": "Check the firmware version of all deployed Citrix NetScaler (ADC) and Gateway appliances. Consult the official Citrix security bulletin for CVE-2026-19490 for the exact list of affected product lines and version ranges. Inspect device logs for unusual authentication attempts or unauthorized access events.",
-      "tanium_query_hint": "As Tanium agents are not typically installed on network appliances, use network-based scanner tools to identify Citrix NetScaler versions or check management interfaces for firmware versions. Monitor network traffic to/from NetScaler for suspicious activity.",
-      "rapid7_query_hint": "Utilize network-based vulnerability scans (e.g., Nexpose) targeting Citrix NetScaler appliances specifically for CVE-2026-19490. Filter assets by product 'Citrix NetScaler' and scan for the presence of the vulnerability ID within InsightVM.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges",
-      "tldr": "A security researcher has publicly disclosed a new zero-day exploit named 'FalconFlank' affecting CrowdStrike Falcon. This exploit enables attackers to escalate privileges to SYSTEM on up-to-date Windows systems, posing a significant local privilege escalation (LPE) risk if an attacker has already gained initial access.",
-      "action": "Monitor official CrowdStrike communications closely for urgent patches or mitigation guidance regarding the 'FalconFlank' zero-day vulnerability. Implement and strictly enforce least privilege principles for all users and restrict the execution of unauthorized executables on endpoints.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "CrowdStrike Falcon Sensor on up-to-date Windows systems. The specific sensor versions vulnerable are likely the latest as of the public disclosure.",
-      "how_to_determine_impact": "Identify all Windows endpoints within the environment that are running the CrowdStrike Falcon Sensor. Monitor endpoint security logs and CrowdStrike console for any unauthorized privilege escalation attempts, especially those originating from lower-privileged processes attempting to interact with the Falcon sensor.",
-      "tanium_query_hint": "Use 'Get Running Processes with 'crowdstrike' in name' or 'Get Installed Applications' for Falcon Sensor details. Monitor 'Get Event Log['Security']' for privilege escalation events (e.g., Event ID 4624 login type 10, or suspicious process creation with elevated privileges).",
-      "rapid7_query_hint": "Query InsightIDR for privilege escalation alerts that involve CrowdStrike Falcon processes or the Falcon sensor. Search the asset inventory for systems with the CrowdStrike Falcon sensor installed. Monitor for suspicious process creations from low integrity levels attempting to escalate to SYSTEM privileges.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "7.8 High"
+      "source_url": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -14686,6 +14694,99 @@
         "rapid7_query_hint": "Search for assets running Magento or Adobe Commerce. Analyze web server access logs for unusual POST requests to obscure paths or indicators of web shell uploads. Implement vulnerability scans tailored for web application attacks and look for web shell presence.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-06": [
+      {
+        "title": "Attackers Breached JetBrains Cadence via Unpatched TeamCity, Extracting AWS Credentials",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/attackers-breached-jetbrains-cadence.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Trezor Says ShipMonk Breach Exposed 67,000 U.S. Customers' Data It Said Was Deleted",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/trezor-says-shipmonk-breach-exposed.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "IDScan sued over alleged data breach affecting 153 million drivers",
+        "tldr": "Multiple lawsuits have been filed against identity verification company IDScan after hackers allegedly breached the service and offered to sell more than 153 million driver's licenses. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/idscan-sued-over-alleged-data-breach-affecting-153-million-drivers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Attackers Hijack MikroTik Routers Through Internet-Exposed SSH Without Authentication",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/attackers-hijack-mikrotik-routers.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical VMware Workstation and Fusion Flaw Lets VM Admins Execute Host Code",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/critical-vmware-workstation-and-fusion.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
