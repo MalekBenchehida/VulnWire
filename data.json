@@ -2,98 +2,107 @@
   "breaches": [
     {
       "title": "Fake IT Calls Target Executives in Microsoft 365 Data Theft and Extortion Attacks",
-      "tldr": "Phishing attacks utilizing fake IT support calls are targeting executives to steal Microsoft 365 credentials and data. This social engineering tactic aims to bypass security measures for data theft and subsequent extortion attempts.",
-      "action": "Implement enhanced user awareness training for executives on social engineering tactics. Strengthen Microsoft 365 conditional access policies and consider phishing-resistant MFA solutions.",
+      "tldr": "Threat actors are employing social engineering tactics, specifically fake IT calls, to target executives. The goal is to facilitate Microsoft 365 data theft and subsequent extortion, indicating a significant risk of credential compromise and data loss for targeted organizations.",
+      "action": "Conduct immediate security awareness training for all employees, especially executives, on social engineering, phishing, and verifying IT requests. Enforce strict verification protocols for all remote support requests and monitor Microsoft 365 logs for unusual access patterns.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/microsoft-365-attackers-use-help-desk.html",
       "source": "The Hacker News"
     },
     {
+      "title": "JSCeal Malware Can Bypass Google Authentication Using Stolen Session Cookies",
+      "tldr": "The JSCeal malware is capable of bypassing Google authentication by leveraging stolen session cookies. This method allows attackers to maintain access to user accounts without needing passwords or multi-factor authentication, posing a severe threat to account security.",
+      "action": "Implement continuous monitoring for unusual account activity and enforce strict session management policies, including frequent re-authentication for sensitive actions. Educate users on the risks of malware that steals session cookies and deploy advanced endpoint protection.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/jsceal-malware-can-bypass-google.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "BigBear Microsoft 365 phishing service bypassed MFA at 258 organizations",
-      "tldr": "The 'BigBear 2.0' phishing-as-a-service framework has been extensively used to bypass multi-factor authentication (MFA) across 258 organizations. This resulted in the theft of over 5,000 Microsoft 365 credentials, enabling unauthorized access to corporate accounts.",
-      "action": "Review Microsoft 365 sign-in logs and MFA settings for any signs of bypass or compromise. Enhance endpoint detection and response capabilities and enforce strict session revocation policies for suspicious activity.",
+      "tldr": "A phishing-as-a-service framework called BigBear 2.0 has successfully bypassed multi-factor authentication (MFA) in 258 organizations. This resulted in the theft of over 5,000 Microsoft 365 credentials, indicating a significant compromise and highlighting MFA bypass techniques.",
+      "action": "Implement advanced phishing detection and email security solutions. Conduct urgent security awareness training on sophisticated phishing techniques. Review Microsoft 365 logs for signs of MFA bypass or compromised accounts and force password resets for affected users.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/bigbear-microsoft-365-phishing-service-bypassed-mfa-at-258-organizations/",
       "source": "BleepingComputer"
     },
     {
       "title": "Mathspace discloses data breach affecting over 1 million people",
-      "tldr": "The online learning platform Mathspace has disclosed a data breach that exposed data from over 1 million students, staff, and parents. Attackers gained access by breaching their Metabase internal reporting system and exfiltrating sensitive information.",
-      "action": "Organizations should ensure internal reporting systems are highly isolated, securely configured, and protected with robust access controls and monitoring. Mathspace users should monitor for suspicious activity or phishing attempts.",
+      "tldr": "Online learning platform Mathspace has disclosed a data breach that exposed data from over 1 million students, staff, and parents. The breach occurred through a compromise of their Metabase internal reporting system, highlighting supply chain and internal system risks.",
+      "action": "Immediately assess if any internal reporting systems used by your organization have internet exposure or known vulnerabilities. Implement strict access controls, conduct regular penetration testing, and monitor logs for unauthorized access to internal systems.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/mathspace-discloses-data-breach-affecting-over-1-million-people/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Trezor data breach impact now reaches 81,000 customers",
-      "tldr": "The data breach at ShipMonk, a shipping and logistics provider for cryptocurrency hardware wallet maker Trezor, now affects an additional 67,000 U.S. customers. This expands the total impact to 81,000 customers and highlights significant supply chain risks.",
-      "action": "Trezor customers should remain vigilant against phishing and social engineering scams. Organizations must thoroughly assess and manage cybersecurity risks associated with third-party vendors, especially those handling sensitive customer data.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/trezor-data-breach-impact-now-reaches-81-000-customers/",
-      "source": "BleepingComputer"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
+      "tldr": "A new crypto miner, linked to REVSTEALER, uses four modules to disable critical Windows security features like Windows Update and Defender. This allows it to run undetected and mine cryptocurrency, impacting system performance and integrity while evading detection.",
+      "action": "Deploy advanced endpoint protection with behavioral monitoring to detect and block malicious cryptocurrency miners and attempts to disable security features. Conduct a forensic investigation for any systems exhibiting these behaviors and restore security services.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+      "source": "The Hacker News"
+    }
+  ],
   "vulns": [
     {
+      "title": "⚡ Weekly Recap: Chrome 0-Day, Router Hijacks, Coder Supply Chain Attack and More",
+      "tldr": "This weekly recap highlights several critical security events including a Chrome zero-day vulnerability, multiple router hijacks, and a supply chain attack targeting developers. These represent high-impact threats requiring immediate attention across multiple vectors.",
+      "action": "Review all associated security advisories for the Chrome zero-day and router vulnerabilities mentioned. Prioritize patching for Chrome and network devices, and implement robust supply chain security best practices for all software dependencies.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/weekly-recap-chrome-0-day-router.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Google Chrome (specific vulnerable versions not provided, assume most recent prior to patch) and various MikroTik RouterOS versions (specific versions not provided)",
+      "how_to_determine_impact": "For Chrome: Ensure browser is updated to the latest version. For routers: Check for internet-exposed SSH services and review router logs for unauthorized access. Consult vendor advisories for specific indicators of compromise (IOCs).",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'Chrome'; Get Network Connections from all machines with Destination Port = '22' and Source Process Name contains 'chrome.exe' or 'msedge.exe' (for related threats).",
+      "rapid7_query_hint": "Vulnerability search: 'Chrome zero-day' OR 'MikroTik RouterOS vulnerability'; Log search: 'unusual outbound connections from router IPs' OR 'suspicious processes originating from browser applications'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate for 0-day in widely used software)"
+    },
+    {
       "title": "Magento StyleSmuggler zero-day exploited to deploy Linux backdoor",
-      "tldr": "A zero-day vulnerability dubbed 'StyleSmuggler' affecting all versions of Magento and Adobe Commerce is actively exploited to deploy Linux backdoors on online stores. This allows attackers persistent control and potential for data exfiltration.",
-      "action": "Immediately apply any available patches or temporary mitigations from Adobe. Conduct a thorough forensic investigation of all Magento/Adobe Commerce instances for signs of compromise, including unexpected files or modifications in web directories.",
+      "tldr": "A zero-day vulnerability dubbed 'StyleSmuggler' affecting all versions of Magento and Adobe Commerce is actively being exploited in attacks. Attackers are using this flaw to deploy a Linux backdoor, posing a severe threat to e-commerce platforms and potentially leading to data theft.",
+      "action": "Immediately apply the emergency patch from Adobe/Magento for all affected instances. Conduct a thorough forensic analysis of all Magento and Adobe Commerce servers for signs of compromise, including unexpected files, modified legitimate files, or unusual processes.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/magento-stylesmuggler-zero-day-exploited-to-deploy-linux-backdoor/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "All versions of Magento and Adobe Commerce",
-      "how_to_determine_impact": "Inspect Magento/Adobe Commerce environments for unauthorized file modifications, new user accounts, or unusual outbound connections. Check server logs for indicators of compromise related to 'StyleSmuggler' and known backdoor patterns.",
-      "tanium_query_hint": "Get File Content['<Magento_root_path>/app/design/*'] for 'StyleSmuggler' indicators or recent modifications. Get Listening Ports on web servers for unknown processes and suspicious network activity.",
-      "rapid7_query_hint": "Search vulnerability scans for 'Magento StyleSmuggler zero-day' or related vulnerability IDs. Use InsightIDR to search logs for signs of backdoor files and unexpected outbound connections from web servers using endpoint agent data.",
+      "affected_versions": "All versions of Magento and Adobe Commerce (specific patched versions to be confirmed by Adobe's advisory)",
+      "how_to_determine_impact": "Check Magento/Adobe Commerce logs for unusual activity, especially POST requests to administrative interfaces. Scan the filesystem for unexpected files or modified legitimate files in theme, extension, or core directories.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'Magento' or 'Adobe Commerce'; Get File Hash from all files in '/path/to/magento_root' where last modified time is recent (e.g., within 7 days); Get Running Processes from all Linux machines for suspicious processes.",
+      "rapid7_query_hint": "Vulnerability search: 'Magento StyleSmuggler zero-day' OR 'Adobe Commerce zero-day'; Software search: 'Magento AND Adobe Commerce AND all versions'; Log search: 'web_server_access_log AND POST /admin AND suspicious_payload'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated for actively exploited zero-day RCE)"
+      "cvss_score": "9.8 Critical (Estimate for zero-day RCE on e-commerce platforms)"
     },
     {
       "title": "N-able patches max severity N-central flaw amid ongoing attacks",
-      "tldr": "N-able has released an emergency hotfix for a maximum-severity Remote Code Execution (RCE) flaw in its N-central remote monitoring and management (RMM) platform. This vulnerability is actively being exploited, necessitating immediate patching.",
-      "action": "Immediately apply the emergency hotfix to all N-able N-central installations. Conduct a post-patch forensic review for any signs of compromise that may have occurred during the ongoing attacks prior to patching.",
+      "tldr": "N-able has released an emergency hotfix for a maximum-severity Remote Code Execution (RCE) flaw in its N-central remote monitoring and management (RMM) platform. This patch is critical as the vulnerability is actively being exploited amid ongoing attacks.",
+      "action": "Immediately apply the emergency hotfix to all N-able N-central installations. Conduct an incident response investigation for any N-central servers that may have been compromised prior to patching, looking for unauthorized access or suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/n-able-patches-max-severity-n-central-flaw-amid-ongoing-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "N-able N-central (specific vulnerable versions require emergency hotfix, refer to vendor advisory)",
-      "how_to_determine_impact": "Verify the applied hotfix version on N-central servers. Thoroughly review N-central logs for unauthorized RCE attempts or successful exploitation indicators prior to patching, looking for unusual process creation or network connections.",
-      "tanium_query_hint": "Get Installed Applications contains 'N-able N-central' AND Get File Version['<N-central_install_path>\\*'] to confirm patch. Monitor for suspicious processes originating from N-central directories or unexpected network connections.",
-      "rapid7_query_hint": "Search vulnerability scans for 'N-able N-central RCE' or relevant vulnerability IDs. Use InsightIDR to search logs for process creation or network connections from N-central servers that are anomalous.",
+      "affected_versions": "N-able N-central (specific vulnerable versions before the emergency hotfix, refer to N-able's advisory for exact details)",
+      "how_to_determine_impact": "Verify the N-central version installed against N-able's official emergency hotfix advisory. Review N-central server logs for suspicious activity, unauthorized access attempts, or unexpected process execution.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'N-able N-central'; Get File Version['C:\\Program Files (x86)\\N-able Technologies\\N-central Server\\*'] from all machines; Get Running Processes from all machines with Parent Process Name contains 'N-able'.",
+      "rapid7_query_hint": "Vulnerability search: 'N-able N-central RCE' OR 'N-central max severity flaw'; Software search: 'N-able N-central AND vulnerable version'; Log search: 'N-central server logs for RCE indicators' OR 'unusual outbound connections from N-central server'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (max severity RCE, ongoing attacks)"
+      "cvss_score": "9.8 Critical (Maximum-severity RCE, actively exploited)"
     },
     {
-      "title": "Telerik UI Padding-Oracle Bug Chained to Unauthenticated RCE — Public Exploit Released",
-      "tldr": "A padding-oracle vulnerability in Telerik UI can be chained to achieve unauthenticated Remote Code Execution (RCE). A public exploit has been released, significantly increasing the risk of widespread exploitation.",
-      "action": "Immediately patch all Telerik UI installations to the latest secure version. Review web server access logs and application logs for any exploitation attempts or suspicious activity.",
+      "title": "Nightmare Eclipse Drops CrowdStrike, Nvidia, Avast Zero-Day Exploits",
+      "tldr": "'Nightmare Eclipse' has reportedly released or is exploiting zero-day vulnerabilities affecting products from major security vendors including CrowdStrike, Nvidia, and Avast. This represents a highly critical and impactful security event, potentially bypassing established defenses.",
+      "action": "Immediately monitor vendor advisories from CrowdStrike, Nvidia, and Avast for details on these zero-day exploits. Update affected products as patches become available and conduct proactive threat hunting for signs of exploitation on endpoints and systems utilizing these products.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/telerik-ui-padding-oracle-bug-chained.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/nightmare-eclipse-drops-crowdstrike-nvidia-avast-zero-day-exploits/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Telerik UI (specific vulnerable versions, refer to vendor advisory for patches)",
-      "how_to_determine_impact": "Identify all web applications utilizing Telerik UI components. Inspect web server access logs for suspicious requests indicative of padding-oracle exploitation attempts or unexpected process execution from the web server.",
-      "tanium_query_hint": "Get Installed Applications contains 'Telerik UI'. Monitor web server logs via Tanium for suspicious requests patterns or unexpected process launches.",
-      "rapid7_query_hint": "Search vulnerability scans for 'Telerik UI RCE' or related vulnerability IDs. Asset search: web_application.component CONTAINS 'Telerik UI'. Monitor web server logs for exploitation attempts via InsightIDR.",
+      "affected_versions": "CrowdStrike, Nvidia, and Avast products (specific vulnerable versions to be determined from vendor advisories, likely recent versions prior to patch)",
+      "how_to_determine_impact": "Refer to official advisories from CrowdStrike, Nvidia, and Avast for specific detection methods and indicators of compromise (IOCs). Update security tools' threat intelligence feeds and conduct system-wide scans for known exploit signatures.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'CrowdStrike' OR 'Nvidia' OR 'Avast'; Get Running Processes from all machines with Name contains 'CrowdStrike' OR 'Nvidia' OR 'Avast' and look for unusual child processes or network connections.",
+      "rapid7_query_hint": "Vulnerability search: 'CrowdStrike zero-day' OR 'Nvidia zero-day' OR 'Avast zero-day'; Log search: 'endpoint_security_logs AND suspicious_activity AND (CrowdStrike OR Nvidia OR Avast)' OR 'asset_name=endpoint AND process_name=suspicious.exe'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (unauthenticated RCE with public exploit)"
-    },
-    {
-      "title": "Hackers exploit new MikroTik RouterOS flaws to hijack routers",
-      "tldr": "Hackers are actively exploiting a chain of two newly disclosed vulnerabilities in MikroTik RouterOS to hijack devices. This attack targets routers with SSH services exposed to the internet, allowing attackers to gain full control.",
-      "action": "Immediately update all MikroTik RouterOS devices to the latest patched version. Restrict SSH access to only trusted internal networks and disable public exposure. Review router configurations and logs for compromise indicators.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-new-mikrotik-routeros-flaws-to-hijack-routers/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "MikroTik RouterOS (specific vulnerable versions, refer to vendor advisory for patched versions)",
-      "how_to_determine_impact": "Check MikroTik router configurations to identify internet-exposed SSH services. Verify RouterOS version and apply latest patches. Inspect router logs for unauthorized access, unexpected configuration changes, or suspicious outbound connections.",
-      "tanium_query_hint": "Not directly applicable for network devices without agents. Utilize network discovery tools to identify MikroTik devices and their exposed services. Monitor network traffic for suspicious activity to/from MikroTik IPs.",
-      "rapid7_query_hint": "Search vulnerability scans for 'MikroTik RouterOS SSH vulnerabilities' or related vulnerability IDs. Use InsightVM to identify MikroTik assets with exposed SSH services. Monitor network traffic from MikroTik devices for anomalies via network sensors.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (actively exploited, unauthenticated router hijack)"
+      "cvss_score": "9.8 Critical (Estimate for zero-day exploits against security products)"
     }
   ],
   "insurance": [],
@@ -14954,6 +14963,56 @@
         "rapid7_query_hint": "Search vulnerability scans for 'MikroTik RouterOS SSH vulnerabilities' or related vulnerability IDs. Use InsightVM to identify MikroTik assets with exposed SSH services. Monitor network traffic from MikroTik devices for anomalies via network sensors.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (actively exploited, unauthenticated router hijack)",
+        "category": "vulns"
+      },
+      {
+        "title": "JSCeal Malware Can Bypass Google Authentication Using Stolen Session Cookies",
+        "tldr": "The JSCeal malware is capable of bypassing Google authentication by leveraging stolen session cookies. This method allows attackers to maintain access to user accounts without needing passwords or multi-factor authentication, posing a severe threat to account security.",
+        "action": "Implement continuous monitoring for unusual account activity and enforce strict session management policies, including frequent re-authentication for sensitive actions. Educate users on the risks of malware that steals session cookies and deploy advanced endpoint protection.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/jsceal-malware-can-bypass-google.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
+        "tldr": "A new crypto miner, linked to REVSTEALER, uses four modules to disable critical Windows security features like Windows Update and Defender. This allows it to run undetected and mine cryptocurrency, impacting system performance and integrity while evading detection.",
+        "action": "Deploy advanced endpoint protection with behavioral monitoring to detect and block malicious cryptocurrency miners and attempts to disable security features. Conduct a forensic investigation for any systems exhibiting these behaviors and restore security services.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "⚡ Weekly Recap: Chrome 0-Day, Router Hijacks, Coder Supply Chain Attack and More",
+        "tldr": "This weekly recap highlights several critical security events including a Chrome zero-day vulnerability, multiple router hijacks, and a supply chain attack targeting developers. These represent high-impact threats requiring immediate attention across multiple vectors.",
+        "action": "Review all associated security advisories for the Chrome zero-day and router vulnerabilities mentioned. Prioritize patching for Chrome and network devices, and implement robust supply chain security best practices for all software dependencies.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/weekly-recap-chrome-0-day-router.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Google Chrome (specific vulnerable versions not provided, assume most recent prior to patch) and various MikroTik RouterOS versions (specific versions not provided)",
+        "how_to_determine_impact": "For Chrome: Ensure browser is updated to the latest version. For routers: Check for internet-exposed SSH services and review router logs for unauthorized access. Consult vendor advisories for specific indicators of compromise (IOCs).",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'Chrome'; Get Network Connections from all machines with Destination Port = '22' and Source Process Name contains 'chrome.exe' or 'msedge.exe' (for related threats).",
+        "rapid7_query_hint": "Vulnerability search: 'Chrome zero-day' OR 'MikroTik RouterOS vulnerability'; Log search: 'unusual outbound connections from router IPs' OR 'suspicious processes originating from browser applications'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate for 0-day in widely used software)",
+        "category": "vulns"
+      },
+      {
+        "title": "Nightmare Eclipse Drops CrowdStrike, Nvidia, Avast Zero-Day Exploits",
+        "tldr": "'Nightmare Eclipse' has reportedly released or is exploiting zero-day vulnerabilities affecting products from major security vendors including CrowdStrike, Nvidia, and Avast. This represents a highly critical and impactful security event, potentially bypassing established defenses.",
+        "action": "Immediately monitor vendor advisories from CrowdStrike, Nvidia, and Avast for details on these zero-day exploits. Update affected products as patches become available and conduct proactive threat hunting for signs of exploitation on endpoints and systems utilizing these products.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/nightmare-eclipse-drops-crowdstrike-nvidia-avast-zero-day-exploits/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "CrowdStrike, Nvidia, and Avast products (specific vulnerable versions to be determined from vendor advisories, likely recent versions prior to patch)",
+        "how_to_determine_impact": "Refer to official advisories from CrowdStrike, Nvidia, and Avast for specific detection methods and indicators of compromise (IOCs). Update security tools' threat intelligence feeds and conduct system-wide scans for known exploit signatures.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'CrowdStrike' OR 'Nvidia' OR 'Avast'; Get Running Processes from all machines with Name contains 'CrowdStrike' OR 'Nvidia' OR 'Avast' and look for unusual child processes or network connections.",
+        "rapid7_query_hint": "Vulnerability search: 'CrowdStrike zero-day' OR 'Nvidia zero-day' OR 'Avast zero-day'; Log search: 'endpoint_security_logs AND suspicious_activity AND (CrowdStrike OR Nvidia OR Avast)' OR 'asset_name=endpoint AND process_name=suspicious.exe'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate for zero-day exploits against security products)",
         "category": "vulns"
       }
     ]
