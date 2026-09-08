@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Slim Spider Steals Crypto Custody Secrets From Brazilian Financial Institution",
-      "tldr": "A sophisticated threat actor, dubbed \"Slim Spider,\" has successfully infiltrated a Brazilian financial institution, compromising systems to steal sensitive crypto custody secrets. The breach likely grants access to digital asset management and potentially customer crypto holdings.",
-      "action": "Immediately review security logs for unauthorized access patterns, especially related to crypto custody systems and financial platforms. Implement enhanced monitoring and multi-factor authentication for critical financial accounts. Engage incident response if indicators of compromise are found.",
+      "tldr": "A sophisticated threat actor, dubbed \"Slim Spider,\" successfully breached a Brazilian financial institution. The attackers managed to steal critical crypto custody secrets, potentially exposing sensitive digital assets and financial data.",
+      "action": "Financial institutions should review their security posture around crypto asset management, enhance monitoring for unusual network activity, and implement multi-factor authentication for all critical systems. Conduct an immediate forensic investigation to identify the intrusion vector and extent of compromise.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/slim-spider-steals-crypto-custody.html",
       "source": "The Hacker News"
     },
     {
       "title": "ShinyHunters hackers claim breach of Florida \"DAVID\" DMV database",
-      "tldr": "The ShinyHunters extortion group claims to have breached the Florida Department of Motor Vehicles (DMV) \"DAVID\" database, stealing over 200,000 driver records. The stolen data likely includes personally identifiable information (PII) of Florida residents.",
-      "action": "If operating in or with Florida DMV data, monitor for unusual activity related to this dataset. Advise potentially affected individuals to be vigilant against identity theft and phishing attempts. Review access controls and data protection measures for similar public sector databases.",
+      "tldr": "The ShinyHunters extortion group claims to have breached the Florida Department of Motor Vehicles' \"DAVID\" database. They allege the theft of over 200,000 driver records, which could include personal identifiable information.",
+      "action": "Florida DMV and potentially affected individuals should monitor for identity theft and fraudulent activity. Organizations holding similar sensitive citizen data should review their database security, access controls, and data exfiltration detection mechanisms. Implement robust monitoring for dark web mentions of their data.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hackers-claim-breach-of-florida-david-dmv-database/",
       "source": "BleepingComputer"
     },
     {
-      "title": "220 million traveler records exposed in Vietnam-linked APIS leak",
-      "tldr": "An exposed Advance Passenger Information System (APIS) database, linked to Vietnam, contained 220 million passenger and crew records. The leak, accessible via default cloud credentials, exposed names, passport numbers, dates of birth, nationalities, and flight details from 2017 to 2026.",
-      "action": "Organizations handling passenger data or operating cloud-based systems should immediately audit default credentials and access policies. Implement stringent access controls and review public cloud storage configurations. Advise affected individuals to monitor for identity theft and passport fraud.",
+      "title": "Grindr to Pay \n26 Million to Settle U.K. Claims Over HIV Status Data Sharing",
+      "tldr": "Grindr faces a \n26 million settlement in the U.K. due to claims of illegally sharing users' sensitive HIV status data. This action highlights severe privacy breaches through unauthorized data handling and potential regulatory non-compliance.",
+      "action": "Organizations handling sensitive personal data, especially health information, must rigorously review their data privacy policies and ensure strict compliance with GDPR and similar regulations. Conduct regular privacy impact assessments and secure explicit user consent for data sharing.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/220-million-traveler-records-exposed-in-vietnam-linked-apis-leak/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/09/grindr-to-pay-26-million-to-settle-uk.html",
+      "source": "The Hacker News"
     },
     {
       "title": "Mathspace Data Breach Exposes Over 1 Million People",
-      "tldr": "Mathspace, an educational technology platform, has experienced a data breach exposing the personal information of over 1 million individuals. The specifics of the exposed data are not detailed, but typically include user credentials, names, and potentially educational progress data.",
-      "action": "If you are a Mathspace user, change your password immediately and enable multi-factor authentication if available. Organizations should review their vendor security assessments for educational technology providers and ensure robust data protection agreements are in place.",
+      "tldr": "Mathspace, an online learning platform, has experienced a data breach impacting over 1 million users. The breach likely exposed personal information of students and educators registered with the service.",
+      "action": "Users of Mathspace should be advised to change their passwords and remain vigilant against phishing attempts. Organizations using Mathspace should assess the impact on their users and consider multi-factor authentication enforcement where possible. Mathspace should conduct a thorough post-incident analysis and notify affected parties per regulations.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/mathspace-data-breach-exposes-over-1-million-people/",
       "source": "SecurityWeek"
@@ -36,66 +36,66 @@
   "ransomware": [],
   "vulns": [
     {
+      "title": "Microsoft September 2026 Patch Tuesday fixes 966 flaws, 2 zero-days",
+      "tldr": "Microsoft's September 2026 Patch Tuesday addresses a record-breaking 966 vulnerabilities across various products, including two actively exploited zero-day flaws. These updates are critical for maintaining system security and preventing active exploitation.",
+      "action": "Immediately apply all available Microsoft September 2026 Patch Tuesday updates to all Windows systems, Office products, and other affected Microsoft software. Prioritize systems with exposed services or high-value data.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Multiple Microsoft Windows versions, Office products, and other software components (specifics available in Microsoft's official September 2026 Security Release Notes)",
+      "how_to_determine_impact": "Verify update installation status via Windows Update history or system management tools. Consult Microsoft's official security bulletin for detailed affected product lists and specific CVEs.",
+      "tanium_query_hint": "Get Installed Updates from all machines with ( Is Windows ) or Get Computer Name and OS Platform from all machines with ( Not ( Is Windows ) and ( Is Linux or Is Mac ) ) then query specific software versions. Utilize 'Get Installed Applications' to check versions of affected Microsoft software.",
+      "rapid7_query_hint": "Run a vulnerability scan for all Microsoft-related vulnerabilities published in September 2026. Use InsightVM's 'Vulnerability Search' to filter by 'Vendor: Microsoft' and 'Published Date: September 2026'. Ensure agents are up-to-date for comprehensive coverage.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Varies; at least two zero-days are actively exploited, likely with Critical (9.0+) or High (7.0-8.9) CVSS scores"
+    },
+    {
       "title": "Adobe fixes critical Magento zero-day exploited to backdoor servers",
-      "tldr": "Adobe has issued an emergency patch for CVE-2026-75650, a critical zero-day vulnerability dubbed \"StyleSmuggler\" impacting multiple versions of Magento and Adobe Commerce. This flaw is actively being exploited in the wild to deploy backdoors and web shells on compromised servers.",
-      "action": "Apply the emergency patch from Adobe immediately to all affected Magento and Adobe Commerce installations. Conduct a thorough forensic analysis for signs of compromise, including the presence of Rust backdoors or PHP web shells, as active exploitation is confirmed.",
+      "tldr": "Adobe has released an emergency patch for CVE-2026-75650, a critical zero-day vulnerability in Magento and Adobe Commerce dubbed 'StyleSmuggler'. This flaw is actively being exploited to deploy backdoors and web shells on vulnerable servers.",
+      "action": "Immediately apply the emergency fix provided by Adobe for CVE-2026-75650. Conduct an immediate forensic scan of all Magento/Adobe Commerce installations for signs of compromise, backdoors, or web shells.",
       "cve_ids": [
         "CVE-2026-75650"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/adobe-fixes-critical-magento-zero-day-exploited-to-backdoor-servers/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Adobe Magento and Adobe Commerce, multiple versions are impacted. Specific versions should be checked against Adobe's official advisory for CVE-2026-75650.",
-      "how_to_determine_impact": "Review Adobe Commerce/Magento server logs for suspicious activity, unexpected file creations (e.g., PHP web shells, Rust binaries), and unauthorized access. Check for indicators of compromise (IoCs) provided by Adobe's security advisory related to 'StyleSmuggler' and CVE-2026-75650.",
-      "tanium_query_hint": "Get File Exists['/path/to/web/root/*.php.suspect'] from all machines with IsWindows equals true and 'Get Running Processes' from all machines with IsWindows equals true to detect suspicious web shells or rust binaries. Use 'Get Installed Applications' to identify vulnerable Magento/Adobe Commerce versions.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-75650' in InsightVM. For InsightIDR, look for alerts on unusual file modifications in web server directories, suspicious process execution on Magento servers, or web shell activity. Use InsightAgent to search for specific file hashes or process names mentioned in IoCs.",
+      "affected_versions": "Multiple versions of Magento and Adobe Commerce (specifics should be detailed in Adobe's advisory for CVE-2026-75650)",
+      "how_to_determine_impact": "Check Adobe's official advisory for CVE-2026-75650 for exact affected versions. Verify the installed version of Magento/Adobe Commerce. Look for indicators of compromise such as unauthorized files, web shells (.php, .asp), or suspicious processes on affected servers.",
+      "tanium_query_hint": "Get File Version['/path/to/magento/app/etc/config.php'] from all machines with ( OS Type contains 'Linux' or OS Type contains 'Windows' ) to identify Magento installations. Search for suspicious file names or known backdoor hashes in Magento directories.",
+      "rapid7_query_hint": "Scan all web servers hosting Magento/Adobe Commerce. Search InsightVM for vulnerability 'CVE-2026-75650'. Look for web shell detections or suspicious process activity via InsightIDR on these servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate based on actively exploited zero-day, remote code execution potential)"
+      "cvss_score": "9.8 Critical (Estimated due to active exploitation and zero-day status)"
     },
     {
       "title": "SAP warns of maximum severity 'OVERPASS' kernel vulnerability",
-      "tldr": "SAP has released security updates addressing 20 vulnerabilities, including a maximum-severity memory corruption flaw, dubbed 'OVERPASS', in the SAP Kernel code. This critical vulnerability could lead to arbitrary code execution or denial of service if exploited.",
-      "action": "Immediately apply the latest SAP security updates to all affected SAP products, prioritizing those running the SAP Kernel. Follow SAP's official patch management guidance for the September 2026 security updates.",
+      "tldr": "SAP has released security updates for 20 vulnerabilities, including a maximum-severity memory corruption flaw, 'OVERPASS', in its Kernel code. This critical vulnerability could lead to severe system compromise.",
+      "action": "Immediately apply all available SAP September 2026 security updates, prioritizing patches for the SAP Kernel. Review system logs for any unusual activity or crashes post-patching.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "SAP Kernel, specific versions affected by the 'OVERPASS' memory corruption vulnerability. Refer to SAP's September 2026 security advisory for precise version details.",
-      "how_to_determine_impact": "Identify all SAP systems running the SAP Kernel component. Cross-reference their installed versions with SAP's official security advisory for September 2026 to determine vulnerability status. Check for any unusual system behavior or crashes that might indicate exploitation attempts, although not actively exploited yet.",
-      "tanium_query_hint": "Utilize 'Get Installed Applications' or specific SAP-related sensors to identify SAP Kernel versions across your estate. Consult SAP documentation for exact file paths or registry keys to determine component versions. Custom sensors may be needed for specific SAP inventory.",
-      "rapid7_query_hint": "Scan SAP systems with InsightVM for relevant SAP vulnerabilities. Look for SAP-specific vulnerability checks or product versioning. For InsightIDR, monitor SAP system logs for anomalies or uncharacteristic process activity post-patch.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical (Estimate based on 'maximum severity' and memory corruption in kernel)"
-    },
-    {
-      "title": "WeChat Zero-Click Worm Took Over Accounts on iPhone and Android via Incoming Calls",
-      "tldr": "A zero-click worm has been discovered exploiting a vulnerability in WeChat, allowing attackers to take over user accounts on both iPhone and Android devices simply by an incoming call. This highly potent flaw requires no user interaction to compromise devices.",
-      "action": "Immediately update WeChat to the latest available version on all iPhone and Android devices. Users should also restart their devices. Monitor for any suspicious activity on WeChat accounts or associated devices.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/wechat-zero-click-worm-took-over.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "WeChat application on iPhone and Android devices. Specific vulnerable versions should be referenced in an official WeChat or vendor advisory, which is not provided in the snippet.",
-      "how_to_determine_impact": "Check WeChat application versions on all mobile devices. Ensure users are running the latest patched version. Monitor device logs for unusual network connections or app behavior following incoming WeChat calls.",
-      "tanium_query_hint": "Use mobile device management (MDM) tools integrated with Tanium to query 'Get Mobile Device Applications' for WeChat version numbers on managed devices. Alert on outdated versions.",
-      "rapid7_query_hint": "For mobile device management, use integrations that provide application inventory. Look for a vulnerability check specific to WeChat if available, or manually verify application versions against known vulnerable ranges. Monitor network traffic for suspicious connections from mobile devices.",
+      "affected_versions": "SAP Kernel (specific versions to be detailed in SAP's official security advisory)",
+      "how_to_determine_impact": "Consult SAP's official security notes for September 2026 to identify specific affected Kernel versions. Check installed SAP Kernel versions on all SAP systems using `sapcontrol -nr <instance_number> -function GetSystemInstanceList` or similar SAP tools.",
+      "tanium_query_hint": "Use 'Get Installed Applications' or specific file version sensors on SAP application servers to identify SAP Kernel versions. Query for presence of specific patch files or registry keys indicating the update.",
+      "rapid7_query_hint": "Scan SAP systems for 'SAP Kernel' vulnerabilities published in September 2026. Use InsightVM's 'Software Search' for SAP components and verify installed versions against known vulnerable ranges from SAP advisories.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate based on zero-click, account takeover on mobile devices)"
+      "cvss_score": "9.8 Critical (Explicitly stated as 'maximum severity')"
     },
     {
-      "title": "Nightmare Eclipse Drops CrowdStrike, Nvidia, Avast Zero-Day Exploits",
-      "tldr": "A threat group named \"Nightmare Eclipse\" has reportedly released or is actively exploiting zero-day vulnerabilities affecting products from major cybersecurity vendors CrowdStrike, Nvidia, and Avast. These exploits could bypass security controls or gain unauthorized access.",
-      "action": "Organizations using CrowdStrike, Nvidia, or Avast products should immediately check for official advisories and patches from these vendors. Implement enhanced monitoring for any unusual activity related to these products and prepare for potential emergency updates.",
+      "title": "N-able Patches Critical Zero-Day in N-central",
+      "tldr": "N-able has released an urgent patch for a critical zero-day vulnerability found in its N-central remote monitoring and management (RMM) software. The flaw, if exploited, could allow unauthorized access or control over managed systems.",
+      "action": "Immediately update all N-central deployments to the latest patched version. Review N-central logs for any signs of unauthorized access or suspicious activity prior to and immediately following the patch.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/nightmare-eclipse-drops-crowdstrike-nvidia-avast-zero-day-exploits/",
+      "source_url": "https://www.securityweek.com/n-able-patches-critical-zero-day-in-n-central/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Specific CrowdStrike, Nvidia, and Avast products and their versions are affected. Organizations must refer to official vendor advisories from CrowdStrike, Nvidia, and Avast for precise details as they become available.",
-      "how_to_determine_impact": "Monitor vendor security advisories from CrowdStrike, Nvidia, and Avast for new vulnerability disclosures and patches. Check installed versions of these products against any announced vulnerable ranges. Implement enhanced logging and anomaly detection for these critical security tools and drivers.",
-      "tanium_query_hint": "Use 'Get Installed Applications', 'Get Drivers with Version' (for Nvidia), and vendor-specific sensors (if available for CrowdStrike/Avast) to inventory all instances of these products. Monitor security agent health and suspicious process activity related to these applications.",
-      "rapid7_query_hint": "Perform an authenticated scan with InsightVM to identify versions of CrowdStrike, Nvidia, and Avast products. Continuously monitor for new vulnerability checks associated with these vendors. For InsightIDR, look for alerts on security agent tampering, driver manipulation, or unexpected process execution related to these tools.",
+      "affected_versions": "N-able N-central (specific vulnerable versions will be detailed in N-able's security advisory)",
+      "how_to_determine_impact": "Check the version of N-able N-central installed on your RMM servers. Refer to N-able's official security bulletin for the exact vulnerable versions and the patched release.",
+      "tanium_query_hint": "Get Installed Applications from all machines with ( Installed Application Name contains 'N-central' ) to identify N-central server installations and their versions. Check for specific process names or open ports associated with N-central.",
+      "rapid7_query_hint": "Scan all systems where N-able N-central is deployed. Search InsightVM's 'Vulnerability Search' for N-able N-central related vulnerabilities with a recent publish date. Look for indicators of compromise via InsightIDR on these servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate based on zero-day exploits against security products, high impact)"
+      "cvss_score": "9.8 Critical (Estimated due to critical zero-day status)"
     }
   ],
   "insurance": [],
@@ -15110,6 +15110,47 @@
         "rapid7_query_hint": "Perform an authenticated scan with InsightVM to identify versions of CrowdStrike, Nvidia, and Avast products. Continuously monitor for new vulnerability checks associated with these vendors. For InsightIDR, look for alerts on security agent tampering, driver manipulation, or unexpected process execution related to these tools.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (Estimate based on zero-day exploits against security products, high impact)",
+        "category": "vulns"
+      },
+      {
+        "title": "Grindr to Pay \n26 Million to Settle U.K. Claims Over HIV Status Data Sharing",
+        "tldr": "Grindr faces a \n26 million settlement in the U.K. due to claims of illegally sharing users' sensitive HIV status data. This action highlights severe privacy breaches through unauthorized data handling and potential regulatory non-compliance.",
+        "action": "Organizations handling sensitive personal data, especially health information, must rigorously review their data privacy policies and ensure strict compliance with GDPR and similar regulations. Conduct regular privacy impact assessments and secure explicit user consent for data sharing.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/grindr-to-pay-26-million-to-settle-uk.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Microsoft September 2026 Patch Tuesday fixes 966 flaws, 2 zero-days",
+        "tldr": "Microsoft's September 2026 Patch Tuesday addresses a record-breaking 966 vulnerabilities across various products, including two actively exploited zero-day flaws. These updates are critical for maintaining system security and preventing active exploitation.",
+        "action": "Immediately apply all available Microsoft September 2026 Patch Tuesday updates to all Windows systems, Office products, and other affected Microsoft software. Prioritize systems with exposed services or high-value data.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Multiple Microsoft Windows versions, Office products, and other software components (specifics available in Microsoft's official September 2026 Security Release Notes)",
+        "how_to_determine_impact": "Verify update installation status via Windows Update history or system management tools. Consult Microsoft's official security bulletin for detailed affected product lists and specific CVEs.",
+        "tanium_query_hint": "Get Installed Updates from all machines with ( Is Windows ) or Get Computer Name and OS Platform from all machines with ( Not ( Is Windows ) and ( Is Linux or Is Mac ) ) then query specific software versions. Utilize 'Get Installed Applications' to check versions of affected Microsoft software.",
+        "rapid7_query_hint": "Run a vulnerability scan for all Microsoft-related vulnerabilities published in September 2026. Use InsightVM's 'Vulnerability Search' to filter by 'Vendor: Microsoft' and 'Published Date: September 2026'. Ensure agents are up-to-date for comprehensive coverage.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Varies; at least two zero-days are actively exploited, likely with Critical (9.0+) or High (7.0-8.9) CVSS scores",
+        "category": "vulns"
+      },
+      {
+        "title": "N-able Patches Critical Zero-Day in N-central",
+        "tldr": "N-able has released an urgent patch for a critical zero-day vulnerability found in its N-central remote monitoring and management (RMM) software. The flaw, if exploited, could allow unauthorized access or control over managed systems.",
+        "action": "Immediately update all N-central deployments to the latest patched version. Review N-central logs for any signs of unauthorized access or suspicious activity prior to and immediately following the patch.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/n-able-patches-critical-zero-day-in-n-central/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "N-able N-central (specific vulnerable versions will be detailed in N-able's security advisory)",
+        "how_to_determine_impact": "Check the version of N-able N-central installed on your RMM servers. Refer to N-able's official security bulletin for the exact vulnerable versions and the patched release.",
+        "tanium_query_hint": "Get Installed Applications from all machines with ( Installed Application Name contains 'N-central' ) to identify N-central server installations and their versions. Check for specific process names or open ports associated with N-central.",
+        "rapid7_query_hint": "Scan all systems where N-able N-central is deployed. Search InsightVM's 'Vulnerability Search' for N-able N-central related vulnerabilities with a recent publish date. Look for indicators of compromise via InsightIDR on these servers.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated due to critical zero-day status)",
         "category": "vulns"
       }
     ]
