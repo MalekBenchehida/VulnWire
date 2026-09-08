@@ -2,103 +2,110 @@
   "breaches": [
     {
       "title": "Slim Spider Steals Crypto Custody Secrets From Brazilian Financial Institution",
-      "tldr": "A sophisticated threat actor, dubbed \"Slim Spider,\" successfully breached a Brazilian financial institution. The attackers managed to steal critical crypto custody secrets, potentially exposing sensitive digital assets and financial data.",
-      "action": "Financial institutions should review their security posture around crypto asset management, enhance monitoring for unusual network activity, and implement multi-factor authentication for all critical systems. Conduct an immediate forensic investigation to identify the intrusion vector and extent of compromise.",
+      "tldr": "A threat actor, \"Slim Spider,\" compromised a Brazilian financial institution, exfiltrating sensitive crypto custody secrets. This unauthorized access directly impacts the integrity and confidentiality of financial data.",
+      "action": "Immediately review access logs for unusual activity on systems related to crypto custody, implement enhanced monitoring, and enforce multi-factor authentication for all sensitive accounts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/slim-spider-steals-crypto-custody.html",
       "source": "The Hacker News"
     },
     {
-      "title": "ShinyHunters hackers claim breach of Florida \"DAVID\" DMV database",
-      "tldr": "The ShinyHunters extortion group claims to have breached the Florida Department of Motor Vehicles' \"DAVID\" database. They allege the theft of over 200,000 driver records, which could include personal identifiable information.",
-      "action": "Florida DMV and potentially affected individuals should monitor for identity theft and fraudulent activity. Organizations holding similar sensitive citizen data should review their database security, access controls, and data exfiltration detection mechanisms. Implement robust monitoring for dark web mentions of their data.",
+      "title": "Autonomous AI Agents Compromise Thousands of Credentials in Under Six Hours",
+      "tldr": "Autonomous AI agents demonstrated the ability to compromise thousands of user credentials rapidly, within six hours. This highlights the growing threat of AI-driven attacks for credential harvesting and account takeover.",
+      "action": "Implement robust multi-factor authentication (MFA) across all systems. Strengthen password policies and enforce regular password rotations. Deploy advanced threat detection systems capable of identifying AI-driven attack patterns.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hackers-claim-breach-of-florida-david-dmv-database/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Grindr to Pay \n26 Million to Settle U.K. Claims Over HIV Status Data Sharing",
-      "tldr": "Grindr faces a \n26 million settlement in the U.K. due to claims of illegally sharing users' sensitive HIV status data. This action highlights severe privacy breaches through unauthorized data handling and potential regulatory non-compliance.",
-      "action": "Organizations handling sensitive personal data, especially health information, must rigorously review their data privacy policies and ensure strict compliance with GDPR and similar regulations. Conduct regular privacy impact assessments and secure explicit user consent for data sharing.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/grindr-to-pay-26-million-to-settle-uk.html",
+      "source_url": "https://thehackernews.com/2026/09/autonomous-ai-agents-compromise.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Mathspace Data Breach Exposes Over 1 Million People",
-      "tldr": "Mathspace, an online learning platform, has experienced a data breach impacting over 1 million users. The breach likely exposed personal information of students and educators registered with the service.",
-      "action": "Users of Mathspace should be advised to change their passwords and remain vigilant against phishing attempts. Organizations using Mathspace should assess the impact on their users and consider multi-factor authentication enforcement where possible. Mathspace should conduct a thorough post-incident analysis and notify affected parties per regulations.",
+      "title": "DoppelCart fraud network uses 119,000 fake shops to steal credit cards",
+      "tldr": "The \"DoppelCart\" fraud network operates over 119,000 fake e-commerce sites designed to steal credit card details from unsuspecting shoppers. This extensive operation represents a significant threat to consumer financial data.",
+      "action": "Educate users about identifying phishing and fake e-commerce sites. Implement robust fraud detection systems. Monitor for unauthorized credit card transactions.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/mathspace-data-breach-exposes-over-1-million-people/",
-      "source": "SecurityWeek"
+      "source_url": "https://www.bleepingcomputer.com/news/security/doppelcart-fraud-network-uses-119-000-fake-shops-to-steal-credit-cards/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "ShinyHunters hackers claim breach of Florida \"DAVID\" DMV database",
+      "tldr": "The ShinyHunters extortion group claims to have breached Florida's \"DAVID\" DMV database, exfiltrating over 200,000 driver records. This represents a significant exposure of sensitive personal information.",
+      "action": "If operating systems handling DMV data, immediately conduct a comprehensive forensic investigation into the DAVID database and associated infrastructure. Implement enhanced monitoring for data exfiltration and unauthorized access.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hackers-claim-breach-of-florida-david-dmv-database/",
+      "source": "BleepingComputer"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Microsoft September 2026 Patch Tuesday fixes 966 flaws, 2 zero-days",
-      "tldr": "Microsoft's September 2026 Patch Tuesday addresses a record-breaking 966 vulnerabilities across various products, including two actively exploited zero-day flaws. These updates are critical for maintaining system security and preventing active exploitation.",
-      "action": "Immediately apply all available Microsoft September 2026 Patch Tuesday updates to all Windows systems, Office products, and other affected Microsoft software. Prioritize systems with exposed services or high-value data.",
+      "title": "Microsoft Patches Record 974 Vulnerabilities, Including Two Exploited Zero-Days",
+      "tldr": "Microsoft's latest Patch Tuesday addresses a record 974 vulnerabilities, including two actively exploited zero-day flaws. This comprehensive update is essential for mitigating widespread risks across Microsoft products.",
+      "action": "Prioritize and immediately deploy all Microsoft September 2026 Patch Tuesday updates across all Windows systems and other affected Microsoft products. Focus on critical patches, especially those addressing the two actively exploited zero-days.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/",
-      "source": "BleepingComputer",
+      "source_url": "https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Multiple Microsoft Windows versions, Office products, and other software components (specifics available in Microsoft's official September 2026 Security Release Notes)",
-      "how_to_determine_impact": "Verify update installation status via Windows Update history or system management tools. Consult Microsoft's official security bulletin for detailed affected product lists and specific CVEs.",
-      "tanium_query_hint": "Get Installed Updates from all machines with ( Is Windows ) or Get Computer Name and OS Platform from all machines with ( Not ( Is Windows ) and ( Is Linux or Is Mac ) ) then query specific software versions. Utilize 'Get Installed Applications' to check versions of affected Microsoft software.",
-      "rapid7_query_hint": "Run a vulnerability scan for all Microsoft-related vulnerabilities published in September 2026. Use InsightVM's 'Vulnerability Search' to filter by 'Vendor: Microsoft' and 'Published Date: September 2026'. Ensure agents are up-to-date for comprehensive coverage.",
+      "affected_versions": "Various Microsoft products, including Windows (specific versions depend on individual CVEs in the patch cycle)",
+      "how_to_determine_impact": "Utilize vulnerability scanners and patch management tools to identify systems missing the September 2026 Patch Tuesday updates. Focus on systems identified as having the zero-day vulnerabilities.",
+      "tanium_query_hint": "Get Computer Name and Get Missing Patches for \"September 2026\"",
+      "rapid7_query_hint": "Vulnerability-Microsoft-September-2026-Zero-Day or Microsoft-Patch-Tuesday-September-2026",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Varies; at least two zero-days are actively exploited, likely with Critical (9.0+) or High (7.0-8.9) CVSS scores"
+      "cvss_score": "Multiple, up to 9.8 Critical"
     },
     {
-      "title": "Adobe fixes critical Magento zero-day exploited to backdoor servers",
-      "tldr": "Adobe has released an emergency patch for CVE-2026-75650, a critical zero-day vulnerability in Magento and Adobe Commerce dubbed 'StyleSmuggler'. This flaw is actively being exploited to deploy backdoors and web shells on vulnerable servers.",
-      "action": "Immediately apply the emergency fix provided by Adobe for CVE-2026-75650. Conduct an immediate forensic scan of all Magento/Adobe Commerce installations for signs of compromise, backdoors, or web shells.",
-      "cve_ids": [
-        "CVE-2026-75650"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/adobe-fixes-critical-magento-zero-day-exploited-to-backdoor-servers/",
-      "source": "BleepingComputer",
+      "title": "Adobe Patches Over 170 Vulnerabilities, Including Commerce Zero-Day",
+      "tldr": "Adobe released patches for over 170 vulnerabilities across its product line, including a critical zero-day in Adobe Commerce (formerly Magento) that has been actively exploited. This update is crucial for securing Adobe deployments against current threats.",
+      "action": "Immediately apply all available security patches from Adobe, prioritizing those for Adobe Commerce and any other products with critical or actively exploited vulnerabilities. Conduct forensic checks on Adobe Commerce instances for signs of compromise.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/adobe-patches-over-170-vulnerabilities-including-commerce-zero-day/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Multiple versions of Magento and Adobe Commerce (specifics should be detailed in Adobe's advisory for CVE-2026-75650)",
-      "how_to_determine_impact": "Check Adobe's official advisory for CVE-2026-75650 for exact affected versions. Verify the installed version of Magento/Adobe Commerce. Look for indicators of compromise such as unauthorized files, web shells (.php, .asp), or suspicious processes on affected servers.",
-      "tanium_query_hint": "Get File Version['/path/to/magento/app/etc/config.php'] from all machines with ( OS Type contains 'Linux' or OS Type contains 'Windows' ) to identify Magento installations. Search for suspicious file names or known backdoor hashes in Magento directories.",
-      "rapid7_query_hint": "Scan all web servers hosting Magento/Adobe Commerce. Search InsightVM for vulnerability 'CVE-2026-75650'. Look for web shell detections or suspicious process activity via InsightIDR on these servers.",
+      "affected_versions": "Various Adobe products, including Adobe Commerce (specific versions depend on individual CVEs in the patch cycle)",
+      "how_to_determine_impact": "Check Adobe product versions against Adobe's security bulletins. For Adobe Commerce, inspect web server logs and file systems for suspicious activity or artifacts of exploitation.",
+      "tanium_query_hint": "Get Installed Applications matching \"Adobe\" and Get Installed Applications matching \"Adobe Commerce\" and Get File Existence[\"/path/to/adobe/commerce/web/root/*.php\"]",
+      "rapid7_query_hint": "Vulnerability-Adobe-Commerce-ZeroDay or Adobe-September-2026-Patches",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated due to active exploitation and zero-day status)"
+      "cvss_score": "Multiple, up to 9.8 Critical"
+    },
+    {
+      "title": "WeChat Zero-Click Worm Took Over Accounts on iPhone and Android via Incoming Calls",
+      "tldr": "A zero-click worm affecting WeChat on both iPhone and Android devices allowed attackers to take over user accounts simply by receiving an incoming call. This critical vulnerability requires no user interaction, making it highly dangerous for account compromise.",
+      "action": "Update WeChat applications to the latest version immediately. Users should be advised to ensure their apps are set to auto-update or to manually check for updates. Implement network segmentation to limit potential lateral movement.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/wechat-zero-click-worm-took-over.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "WeChat on iPhone and Android (specific vulnerable versions not specified, assume all prior to patch)",
+      "how_to_determine_impact": "Check WeChat application logs for unusual activity or unauthorized account access. Monitor network traffic for suspicious connections related to WeChat application.",
+      "tanium_query_hint": "Get Installed Applications matching \"WeChat\" and Get Running Processes matching \"WeChat\" and Get Open Network Connections from processes matching \"WeChat\"",
+      "rapid7_query_hint": "Vulnerability-WeChat-Zero-Click (if a relevant vulnerability definition exists). Asset search filter for mobile devices with WeChat installed.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "SAP warns of maximum severity 'OVERPASS' kernel vulnerability",
-      "tldr": "SAP has released security updates for 20 vulnerabilities, including a maximum-severity memory corruption flaw, 'OVERPASS', in its Kernel code. This critical vulnerability could lead to severe system compromise.",
-      "action": "Immediately apply all available SAP September 2026 security updates, prioritizing patches for the SAP Kernel. Review system logs for any unusual activity or crashes post-patching.",
+      "tldr": "SAP has patched 20 vulnerabilities, including a maximum-severity memory corruption flaw in its Kernel code, dubbed 'OVERPASS'. This critical vulnerability could lead to arbitrary code execution or system compromise.",
+      "action": "Immediately apply all September 2026 security updates for SAP products, prioritizing those affecting the Kernel. Conduct a thorough audit of SAP systems for any signs of compromise related to the 'OVERPASS' vulnerability.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/sap-warns-of-maximum-severity-overpass-kernel-vulnerability/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "SAP Kernel (specific versions to be detailed in SAP's official security advisory)",
-      "how_to_determine_impact": "Consult SAP's official security notes for September 2026 to identify specific affected Kernel versions. Check installed SAP Kernel versions on all SAP systems using `sapcontrol -nr <instance_number> -function GetSystemInstanceList` or similar SAP tools.",
-      "tanium_query_hint": "Use 'Get Installed Applications' or specific file version sensors on SAP application servers to identify SAP Kernel versions. Query for presence of specific patch files or registry keys indicating the update.",
-      "rapid7_query_hint": "Scan SAP systems for 'SAP Kernel' vulnerabilities published in September 2026. Use InsightVM's 'Software Search' for SAP components and verify installed versions against known vulnerable ranges from SAP advisories.",
+      "affected_versions": "SAP Kernel code and various SAP products (specific vulnerable versions not specified, assume all prior to patch)",
+      "how_to_determine_impact": "Check SAP system versions against SAP's security notes for September 2026. Review SAP logs for unusual kernel activity or crashes.",
+      "tanium_query_hint": "Get Installed Applications matching \"SAP\" and Get Running Processes matching \"SAP kernel\" and Get File Version[\"/path/to/sap/kernel\"]",
+      "rapid7_query_hint": "Vulnerability-SAP-OVERPASS-Kernel (if a relevant vulnerability definition exists). Search for SAP assets missing September 2026 patches.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Explicitly stated as 'maximum severity')"
-    },
-    {
-      "title": "N-able Patches Critical Zero-Day in N-central",
-      "tldr": "N-able has released an urgent patch for a critical zero-day vulnerability found in its N-central remote monitoring and management (RMM) software. The flaw, if exploited, could allow unauthorized access or control over managed systems.",
-      "action": "Immediately update all N-central deployments to the latest patched version. Review N-central logs for any signs of unauthorized access or suspicious activity prior to and immediately following the patch.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/n-able-patches-critical-zero-day-in-n-central/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "N-able N-central (specific vulnerable versions will be detailed in N-able's security advisory)",
-      "how_to_determine_impact": "Check the version of N-able N-central installed on your RMM servers. Refer to N-able's official security bulletin for the exact vulnerable versions and the patched release.",
-      "tanium_query_hint": "Get Installed Applications from all machines with ( Installed Application Name contains 'N-central' ) to identify N-central server installations and their versions. Check for specific process names or open ports associated with N-central.",
-      "rapid7_query_hint": "Scan all systems where N-able N-central is deployed. Search InsightVM's 'Vulnerability Search' for N-able N-central related vulnerabilities with a recent publish date. Look for indicators of compromise via InsightIDR on these servers.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated due to critical zero-day status)"
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "The EU CRA's Real Question: What Shipped, and When Did You Know?",
+      "tldr": "The EU Cyber Resilience Act (CRA) mandates stringent vulnerability reporting requirements for software vendors, including a 24-hour deadline for actively exploited flaws. This will significantly impact software development and incident response processes.",
+      "action": "Establish clear processes for tracking software components and versions, and for rapid vulnerability discovery and reporting. Develop an incident response plan compliant with the EU CRA's strict timelines.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/the-eu-cras-real-question-what-shipped-and-when-did-you-know/",
+      "source": "BleepingComputer"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -15152,6 +15159,65 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (Estimated due to critical zero-day status)",
         "category": "vulns"
+      },
+      {
+        "title": "Autonomous AI Agents Compromise Thousands of Credentials in Under Six Hours",
+        "tldr": "Autonomous AI agents demonstrated the ability to compromise thousands of user credentials rapidly, within six hours. This highlights the growing threat of AI-driven attacks for credential harvesting and account takeover.",
+        "action": "Implement robust multi-factor authentication (MFA) across all systems. Strengthen password policies and enforce regular password rotations. Deploy advanced threat detection systems capable of identifying AI-driven attack patterns.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/autonomous-ai-agents-compromise.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "DoppelCart fraud network uses 119,000 fake shops to steal credit cards",
+        "tldr": "The \"DoppelCart\" fraud network operates over 119,000 fake e-commerce sites designed to steal credit card details from unsuspecting shoppers. This extensive operation represents a significant threat to consumer financial data.",
+        "action": "Educate users about identifying phishing and fake e-commerce sites. Implement robust fraud detection systems. Monitor for unauthorized credit card transactions.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/doppelcart-fraud-network-uses-119-000-fake-shops-to-steal-credit-cards/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Microsoft Patches Record 974 Vulnerabilities, Including Two Exploited Zero-Days",
+        "tldr": "Microsoft's latest Patch Tuesday addresses a record 974 vulnerabilities, including two actively exploited zero-day flaws. This comprehensive update is essential for mitigating widespread risks across Microsoft products.",
+        "action": "Prioritize and immediately deploy all Microsoft September 2026 Patch Tuesday updates across all Windows systems and other affected Microsoft products. Focus on critical patches, especially those addressing the two actively exploited zero-days.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Various Microsoft products, including Windows (specific versions depend on individual CVEs in the patch cycle)",
+        "how_to_determine_impact": "Utilize vulnerability scanners and patch management tools to identify systems missing the September 2026 Patch Tuesday updates. Focus on systems identified as having the zero-day vulnerabilities.",
+        "tanium_query_hint": "Get Computer Name and Get Missing Patches for \"September 2026\"",
+        "rapid7_query_hint": "Vulnerability-Microsoft-September-2026-Zero-Day or Microsoft-Patch-Tuesday-September-2026",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Multiple, up to 9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Adobe Patches Over 170 Vulnerabilities, Including Commerce Zero-Day",
+        "tldr": "Adobe released patches for over 170 vulnerabilities across its product line, including a critical zero-day in Adobe Commerce (formerly Magento) that has been actively exploited. This update is crucial for securing Adobe deployments against current threats.",
+        "action": "Immediately apply all available security patches from Adobe, prioritizing those for Adobe Commerce and any other products with critical or actively exploited vulnerabilities. Conduct forensic checks on Adobe Commerce instances for signs of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/adobe-patches-over-170-vulnerabilities-including-commerce-zero-day/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Various Adobe products, including Adobe Commerce (specific versions depend on individual CVEs in the patch cycle)",
+        "how_to_determine_impact": "Check Adobe product versions against Adobe's security bulletins. For Adobe Commerce, inspect web server logs and file systems for suspicious activity or artifacts of exploitation.",
+        "tanium_query_hint": "Get Installed Applications matching \"Adobe\" and Get Installed Applications matching \"Adobe Commerce\" and Get File Existence[\"/path/to/adobe/commerce/web/root/*.php\"]",
+        "rapid7_query_hint": "Vulnerability-Adobe-Commerce-ZeroDay or Adobe-September-2026-Patches",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Multiple, up to 9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "The EU CRA's Real Question: What Shipped, and When Did You Know?",
+        "tldr": "The EU Cyber Resilience Act (CRA) mandates stringent vulnerability reporting requirements for software vendors, including a 24-hour deadline for actively exploited flaws. This will significantly impact software development and incident response processes.",
+        "action": "Establish clear processes for tracking software components and versions, and for rapid vulnerability discovery and reporting. Develop an incident response plan compliant with the EU CRA's strict timelines.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/the-eu-cras-real-question-what-shipped-and-when-did-you-know/",
+        "source": "BleepingComputer",
+        "category": "insurance"
       }
     ]
   }
