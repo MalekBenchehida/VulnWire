@@ -1,110 +1,94 @@
 {
   "breaches": [
     {
-      "title": "Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA",
-      "tldr": "Infostealer logs are being found to contain replayable AI tokens, allowing attackers to bypass multi-factor authentication (MFA). This enables unauthorized access to AI accounts and services despite MFA being enabled, posing a significant risk to AI system integrity.",
-      "action": "Review recent infostealer compromise reports for exposed credentials. Assess AI token handling and storage practices within your organization, enforcing token revocation policies and implementing continuous monitoring for suspicious API access patterns to AI services.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "U.S. Agencies Accuse China AI Firms of Distilling Claude, GPT, Gemini, and Grok",
-      "tldr": "U.S. agencies allege that Chinese AI firms have conducted 'industrial-scale distillation attacks' on leading American frontier AI models (Claude, GPT, Gemini, Grok) since late 2024. This suggests a systematic effort to extract billions of tokens and capabilities, constituting significant intellectual property theft and unauthorized data extraction.",
-      "action": "Organizations developing or utilizing frontier AI models should implement stringent API usage monitoring, rate limiting, and access controls. Review audit logs for unusual large-scale data extraction patterns or anomalous model interaction behavior, and enhance data loss prevention measures for AI assets.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/us-agencies-accuse-china-ai-firms-of.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "DoppelCart fraud network uses 119,000 fake shops to steal credit cards",
-      "tldr": "A large-scale fraud operation dubbed 'DoppelCart' is leveraging over 119,000 fake e-commerce domains to run fraudulent online shops. These fake shops are designed to steal payment card details from unsuspecting consumers, leading to widespread credit card data theft.",
-      "action": "Educate employees and customers about identifying fake e-commerce sites and phishing attempts. Implement robust web filtering and email security to block access to known malicious domains. Advise users to verify legitimate store URLs and use secure payment methods like virtual cards or payment processors with strong buyer protection.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/doppelcart-fraud-network-uses-119-000-fake-shops-to-steal-credit-cards/",
-      "source": "BleepingComputer"
-    }
-  ],
-  "ransomware": [
-    {
       "title": "Veradigm warns of patient data breach after ransomware gang claims attack",
-      "tldr": "Healthcare technology company Veradigm has disclosed a patient data breach stemming from a cybersecurity incident at one of its third-party vendors. A ransomware gang claimed responsibility for the attack, leading to the exposure of sensitive patient personal data.",
-      "action": "Conduct an immediate review of third-party vendor security agreements, especially those handling sensitive data like patient health information. Enhance incident response plans to include third-party breach scenarios. Ensure robust data backup and recovery strategies are in place, and conduct regular security assessments of all third-party integrations.",
+      "tldr": "Healthcare technology company Veradigm disclosed a data breach after a cybersecurity incident at one of its third-party vendors exposed patients' personal data. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/veradigm-discloses-patient-data-breach-after-gentlemen-gang-claims-attack/",
       "source": "BleepingComputer"
     }
   ],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
-      "title": "SAP Patches CVSS 10.0 Kernel Flaw Enabling Unauthenticated Remote Code Execution",
-      "tldr": "SAP has released critical patches for a severe kernel flaw, rated CVSS 10.0, which allows unauthenticated remote code execution (RCE). This vulnerability poses an extreme risk, as it enables attackers to execute arbitrary code on affected SAP systems without requiring any authentication.",
-      "action": "Immediately apply all available security patches from SAP for affected kernel components. Prioritize patching for all SAP systems, especially those that are internet-facing or critical to business operations. Verify patch installation and monitor systems for any signs of compromise.",
+      "title": "Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/sap-patches-cvss-100-kernel-flaw.html",
+      "source_url": "https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "SAP Kernel (refer to SAP's specific security advisories for exact vulnerable versions and patches)",
-      "how_to_determine_impact": "Check your SAP system's kernel version against official SAP security advisories. Any system running a vulnerable kernel version without the latest patches is impacted.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to identify SAP installations and 'Get Running Processes' or 'Get File Version' for kernel-related binaries to determine their versions. Cross-reference with SAP advisories.",
-      "rapid7_query_hint": "Search InsightVM for 'SAP Kernel' vulnerabilities, filtering by CVSS score 10.0. Conduct credentialed scans on SAP servers to accurately assess patch levels and configurations.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
-      "tldr": "A zero-day vulnerability in Google Chrome's V8 JavaScript engine is being actively exploited in the wild. This critical flaw allows attackers to execute arbitrary code within the browser's sandbox, potentially leading to further system compromise if chained with a sandbox escape.",
-      "action": "Immediately update all Google Chrome browsers to the latest available patched version. Enable automatic updates for all user endpoints. Advise users to restart their browsers promptly after updates to ensure patches are fully applied. Monitor for any unusual browser process activity.",
+      "title": "Webinar: Learn How to Answer “Are We Exposed?” Faster After a New CVE",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
+      "source_url": "https://thehackernews.com/2026/09/webinar-learn-how-to-answer-are-we.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Google Chrome (specific versions preceding the latest security update released on September 2026)",
-      "how_to_determine_impact": "Check the installed version of Google Chrome. If it is not the absolute latest version released on or after the September 2026 patch date, it is vulnerable.",
-      "tanium_query_hint": "Use the 'Get Chrome Version' sensor to identify all Chrome installations and their versions across your environment. Prioritize systems running older versions for immediate patching.",
-      "rapid7_query_hint": "In InsightVM, search for 'Google Chrome' vulnerabilities and filter by the latest patch date. Use the Insight Agent to query installed application versions on endpoints.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.8 High (Estimate)"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "New Microsoft Defender 'ShieldCrash' zero-day grants SYSTEM access",
-      "tldr": "A new Microsoft Defender zero-day exploit, named 'ShieldCrash,' has been publicly released, capable of granting SYSTEM-level access on Windows systems. This exploit bypasses recent patches from Microsoft, posing a severe local privilege escalation risk despite existing defenses.",
-      "action": "Monitor for official advisories and emergency out-of-band patches from Microsoft specifically addressing the 'ShieldCrash' bypass. Until a patch is available, implement enhanced Endpoint Detection and Response (EDR) rules to detect unusual process creation or privilege escalation attempts originating from Microsoft Defender processes.",
+      "title": "DeepSeek Harness Flaw Let AI Agents Disable Their Own File Sandbox Without Approval",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldcrash-zero-day-grants-system-access/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft Defender (specifically versions with the 'ShieldBreak' patch intended to fix a previous vulnerability, but which can be bypassed by ShieldCrash)",
-      "how_to_determine_impact": "Verify Microsoft Defender definition versions and review event logs for suspicious SYSTEM-level process creation not associated with legitimate Defender activities. Any system running a vulnerable version of Defender and susceptible to the bypass is impacted.",
-      "tanium_query_hint": "Use 'Get Microsoft Defender Definitions Version' and monitor for suspicious processes running with 'SYSTEM' privileges, especially those originating from Defender-related executables. Implement EDR alerts for known ShieldCrash indicators.",
-      "rapid7_query_hint": "Search InsightVM/InsightIDR for 'Microsoft Defender' zero-day or 'ShieldCrash' vulnerabilities. Configure alerts for local privilege escalation events and unusual process behavior on endpoints running Defender.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate)"
+      "source_url": "https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
       "title": "Alby Hub Critical Flaw Could Let Attackers Take Over Internet-Exposed Bitcoin Wallets",
-      "tldr": "A critical vulnerability in Alby Hub has been identified, which could allow attackers to fully take over internet-exposed Bitcoin Lightning wallets. This flaw presents a severe risk of direct financial loss for users whose wallets are publicly accessible.",
-      "action": "Immediately review all Alby Hub deployments to determine if they are internet-exposed. If so, apply any available security updates or disable public access to the wallet interface. Users should transfer funds from vulnerable wallets to secure, non-exposed alternatives until patches are confirmed and applied.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/alby-hub-critical-flaw-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Alby Hub (specific vulnerable versions not provided in the snippet, but affects instances that are internet-exposed)",
-      "how_to_determine_impact": "Check Alby Hub deployment configurations to determine if instances are directly accessible from the internet. Review access logs for any unauthorized login attempts or unusual activity related to wallet management.",
-      "tanium_query_hint": "Use 'Get Installed Applications' for 'Alby Hub' and 'Get Network Connections' to identify publicly accessible instances. Inspect firewall rules and network device configurations.",
-      "rapid7_query_hint": "Search InsightVM for 'Alby Hub' vulnerabilities and use external vulnerability scans to identify internet-facing Alby Hub services. Focus on assets with open ports (e.g., 80, 443) directly exposing Alby Hub interfaces.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate)"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
   "insurance": [
     {
-      "title": "The EU CRA's Real Question: What Shipped, and When Did You Know?",
-      "tldr": "The EU Cyber Resilience Act (CRA) introduces stringent vulnerability reporting requirements, effective September 11, mandating software vendors to report actively exploited flaws within 24 hours. This regulation significantly impacts vendors' liability and emphasizes the critical need for rapid, accurate vulnerability management and product inventory tracking to avoid legal and financial penalties.",
-      "action": "Software vendors must establish robust and audited processes for tracking all shipped software components and their versions. Develop and implement a rapid response system for discovering and reporting actively exploited vulnerabilities within the EU CRA's 24-hour window. Review and update incident response plans to ensure compliance with these new regulatory requirements, potentially impacting cyber insurance coverage and costs.",
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/the-eu-cras-real-question-what-shipped-and-when-did-you-know/",
-      "source": "BleepingComputer"
+      "source_url": "",
+      "source": "System"
     }
   ],
   "history": {
@@ -15330,6 +15314,38 @@
         "source_url": "https://www.bleepingcomputer.com/news/security/the-eu-cras-real-question-what-shipped-and-when-did-you-know/",
         "source": "BleepingComputer",
         "category": "insurance"
+      },
+      {
+        "title": "Webinar: Learn How to Answer “Are We Exposed?” Faster After a New CVE",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/webinar-learn-how-to-answer-are-we.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "DeepSeek Harness Flaw Let AI Agents Disable Their Own File Sandbox Without Approval",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
       }
     ]
   }
