@@ -1,96 +1,104 @@
 {
   "breaches": [
     {
+      "title": "Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA",
+      "tldr": "Infostealer logs are being found with replayable AI tokens, which can bypass multi-factor authentication (MFA). This allows attackers to gain unauthorized access to AI-powered services or systems, even with MFA enabled, by replaying compromised session tokens or credentials. This represents a significant risk to the integrity of AI interactions and data.",
+      "action": "Deploy advanced endpoint security to detect infostealer infections. Enforce regular password changes and forced re-authentication for critical AI services, especially those relying on token-based authentication. Investigate implementing token binding or context-aware MFA solutions.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "AdaptHealth confirms 4.1 million people exposed in July cyberattack",
+      "tldr": "Healthcare provider AdaptHealth has confirmed a data breach from a July cyberattack, exposing personal data of 4.1 million individuals. The breach, attributed to the ShinyHunters group, compromised protected health information (PHI), underlining severe privacy and regulatory risks in the healthcare sector. Affected individuals should be notified immediately, and security controls hardened.",
+      "action": "If your organization has ties to AdaptHealth or similar healthcare data processors, review third-party vendor risk assessments and data processing agreements. Enhance data encryption, access controls, and threat detection mechanisms for sensitive data environments. Prepare for potential regulatory inquiries and breach notification obligations.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/adapthealth-confirms-41-million-people-exposed-in-july-cyberattack/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "US says Chinese firms extracted billions of tokens from frontier AI models",
+      "tldr": "US intelligence agencies allege that six Chinese AI firms systematically extracted billions of tokens from American frontier AI models since late 2024. This industrial-scale \"distillation attack\" constitutes a major intellectual property breach, transferring proprietary AI capabilities and data to foreign entities. It highlights a concerted effort to gain strategic advantage through cyber espionage.",
+      "action": "Organizations developing or hosting advanced AI models must reinforce intellectual property protection strategies, including robust API security, enhanced access controls, and rigorous monitoring for unusual model interaction patterns or data exfiltration. Implement strong data egress controls and anomaly detection systems specific to AI development environments.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/us-says-chinese-firms-extracted-billions-of-tokens-from-frontier-ai-models/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Veradigm warns of patient data breach after ransomware gang claims attack",
-      "tldr": "Healthcare technology company Veradigm disclosed a data breach after a cybersecurity incident at one of its third-party vendors exposed patients' personal data. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Healthcare technology firm Veradigm disclosed a patient data breach stemming from a cybersecurity incident at a third-party vendor, linked to a ransomware gang's claims. This event exposed sensitive patient data, showcasing the critical supply chain risks inherent in the healthcare ecosystem. The incident underscores the ripple effect of vendor compromises.",
+      "action": "If your organization relies on Veradigm or similar third-party healthcare technology vendors, initiate an immediate review of their security assurances, incident response plans, and contractual obligations for data protection. Proactively assess your own systems for any linked compromises and ensure robust vendor risk management.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/veradigm-discloses-patient-data-breach-after-gentlemen-gang-claims-attack/",
       "source": "BleepingComputer"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "Infostealer Logs Expose Replayable AI Tokens That Can Bypass MFA",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/infostealer-logs-expose-replayable-ai.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "title": "Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks",
+      "tldr": "Cisco has confirmed that CVE-2026-20079, a maximum-severity authentication bypass vulnerability in its Secure Firewall Management Center (FMC), is actively exploited. This critical flaw allows attackers to bypass authentication and gain unauthorized access to FMC, threatening core network security infrastructure. Immediate patching is imperative to prevent compromise.",
+      "action": "Apply the latest Cisco Secure FMC software updates immediately to patch CVE-2026-20079. Conduct an in-depth audit of all FMC logs for any signs of unauthorized access or suspicious activity, especially prior to patching. Review and strengthen existing authentication mechanisms and network segmentation for FMC instances.",
+      "cve_ids": [
+        "CVE-2026-20079"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Cisco Secure Firewall Management Center (FMC) - all unpatched versions.",
+      "how_to_determine_impact": "Verify the patch level of all Cisco Secure FMC instances. Check authentication logs for any anomalous entries, unauthorized access attempts, or unusual administrative activity.",
+      "tanium_query_hint": "If a custom sensor for Cisco Secure FMC version exists, use that. Otherwise, query for installed software containing 'Cisco Secure Firewall Management Center' and review its version information.",
+      "rapid7_query_hint": "Search for 'CVE-2026-20079' in InsightVM. Utilize asset search filters to identify Cisco Secure FMC instances and their installed versions. Review InsightIDR logs for anomalous activity on FMC devices.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical (Estimation based on maximum severity, authentication bypass, and active exploitation)"
     },
     {
-      "title": "Webinar: Learn How to Answer “Are We Exposed?” Faster After a New CVE",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
+      "tldr": "A zero-day vulnerability in Google Chrome's V8 JavaScript engine is under active exploitation, allowing code execution within the browser's sandbox. This critical flaw could facilitate sandbox escape and subsequent system compromise. Users and organizations are at risk of drive-by attacks simply by visiting malicious websites.",
+      "action": "Immediately update all Google Chrome browsers to the latest stable version across all endpoints. Verify that automatic updates are enabled and functioning, and implement enterprise-wide browser management policies to ensure rapid patching. Consider deploying browser isolation or advanced endpoint protection for enhanced defense.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/webinar-learn-how-to-answer-are-we.html",
+      "source_url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "Google Chrome (versions prior to the latest security update addressing this zero-day).",
+      "how_to_determine_impact": "Verify the Google Chrome version on all endpoints. Any version older than the latest patched version is vulnerable. Inspect browser logs for crashes or unusual behavior.",
+      "tanium_query_hint": "Get Chrome Version from all machines. Compare reported versions against Google's official security advisory for the patched version.",
+      "rapid7_query_hint": "Search for the latest Chrome vulnerabilities in InsightVM. Use InsightAgent queries: `where(application.name contains \"Google Chrome\") select(application.version)` to identify vulnerable versions.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimation based on zero-day, active exploitation, and code execution capability)"
     },
     {
-      "title": "DeepSeek Harness Flaw Let AI Agents Disable Their Own File Sandbox Without Approval",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Google warns of new Chrome zero-day bug exploited in attacks",
+      "tldr": "Google has patched its seventh actively exploited Chrome zero-day vulnerability this year, underscoring persistent threats to browser security. This critical bug allows attackers to execute malicious code, making prompt patching essential to mitigate risks. Continuous exploitation of Chrome zero-days highlights the need for constant vigilance.",
+      "action": "Ensure all Google Chrome browsers on managed endpoints are updated to the very latest version as a matter of urgency. Prioritize these updates outside of regular patching cycles. Educate users on the risks of outdated browsers and the importance of timely updates.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/deepseek-harness-flaw-let-ai-agents.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.bleepingcomputer.com/news/security/google-patches-seventh-chrome-zero-day-exploited-in-attacks-this-year/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Google Chrome (versions prior to the latest security update addressing this zero-day).",
+      "how_to_determine_impact": "Check all endpoint Chrome browser versions. Any version prior to the patch addressing this seventh zero-day is vulnerable. Monitor for unusual browser activity or crashes.",
+      "tanium_query_hint": "Get Chrome Version from all machines. Compare versions against Google's published security advisories for the latest patched version.",
+      "rapid7_query_hint": "Search InsightVM for the latest Google Chrome vulnerabilities. Use InsightAgent queries: `where(application.name contains \"Google Chrome\") select(application.version)` to identify vulnerable endpoints.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimation based on zero-day, active exploitation, and code execution capability)"
     },
     {
-      "title": "Alby Hub Critical Flaw Could Let Attackers Take Over Internet-Exposed Bitcoin Wallets",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "New Microsoft Defender 'ShieldCrash' zero-day grants SYSTEM access",
+      "tldr": "A new Microsoft Defender zero-day exploit, \"ShieldCrash,\" has been publicly disclosed, enabling SYSTEM-level privilege escalation. This critical vulnerability poses a severe risk to Windows systems, potentially allowing full compromise even after recent Patch Tuesday updates. Its public release increases the likelihood of widespread exploitation.",
+      "action": "Monitor official Microsoft security advisories for an urgent out-of-band patch or specific mitigation guidance. Implement enhanced endpoint detection and response (EDR) rules to identify and block \"ShieldCrash\" exploitation attempts. Review and enforce strict least privilege principles for all system processes and user accounts.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/alby-hub-critical-flaw-could-let.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldcrash-zero-day-grants-system-access/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Microsoft Defender (specific vulnerable versions to be identified by Microsoft's advisory).",
+      "how_to_determine_impact": "Verify Microsoft Defender versions on all Windows endpoints. Closely monitor for any attempts to exploit privilege escalation within Defender's processes or related system calls. Check for unexpected processes running with SYSTEM privileges.",
+      "tanium_query_hint": "Get Microsoft Defender Version. Also, 'Get Running Processes' and filter for processes with SYSTEM context showing unusual parent-child relationships or unexpected file access.",
+      "rapid7_query_hint": "Deploy detection rules for \"ShieldCrash\" if available from security vendors. Search InsightVM for relevant Microsoft Defender vulnerabilities once a CVE is assigned. Use InsightIDR to monitor for privilege escalation attempts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimation based on zero-day, SYSTEM access privilege escalation, and public disclosure)"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -15345,6 +15353,58 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "AdaptHealth confirms 4.1 million people exposed in July cyberattack",
+        "tldr": "Healthcare provider AdaptHealth has confirmed a data breach from a July cyberattack, exposing personal data of 4.1 million individuals. The breach, attributed to the ShinyHunters group, compromised protected health information (PHI), underlining severe privacy and regulatory risks in the healthcare sector. Affected individuals should be notified immediately, and security controls hardened.",
+        "action": "If your organization has ties to AdaptHealth or similar healthcare data processors, review third-party vendor risk assessments and data processing agreements. Enhance data encryption, access controls, and threat detection mechanisms for sensitive data environments. Prepare for potential regulatory inquiries and breach notification obligations.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/adapthealth-confirms-41-million-people-exposed-in-july-cyberattack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "US says Chinese firms extracted billions of tokens from frontier AI models",
+        "tldr": "US intelligence agencies allege that six Chinese AI firms systematically extracted billions of tokens from American frontier AI models since late 2024. This industrial-scale \"distillation attack\" constitutes a major intellectual property breach, transferring proprietary AI capabilities and data to foreign entities. It highlights a concerted effort to gain strategic advantage through cyber espionage.",
+        "action": "Organizations developing or hosting advanced AI models must reinforce intellectual property protection strategies, including robust API security, enhanced access controls, and rigorous monitoring for unusual model interaction patterns or data exfiltration. Implement strong data egress controls and anomaly detection systems specific to AI development environments.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/us-says-chinese-firms-extracted-billions-of-tokens-from-frontier-ai-models/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Cisco confirms CVE-2026-20079 Secure FMC flaw exploited in attacks",
+        "tldr": "Cisco has confirmed that CVE-2026-20079, a maximum-severity authentication bypass vulnerability in its Secure Firewall Management Center (FMC), is actively exploited. This critical flaw allows attackers to bypass authentication and gain unauthorized access to FMC, threatening core network security infrastructure. Immediate patching is imperative to prevent compromise.",
+        "action": "Apply the latest Cisco Secure FMC software updates immediately to patch CVE-2026-20079. Conduct an in-depth audit of all FMC logs for any signs of unauthorized access or suspicious activity, especially prior to patching. Review and strengthen existing authentication mechanisms and network segmentation for FMC instances.",
+        "cve_ids": [
+          "CVE-2026-20079"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Secure Firewall Management Center (FMC) - all unpatched versions.",
+        "how_to_determine_impact": "Verify the patch level of all Cisco Secure FMC instances. Check authentication logs for any anomalous entries, unauthorized access attempts, or unusual administrative activity.",
+        "tanium_query_hint": "If a custom sensor for Cisco Secure FMC version exists, use that. Otherwise, query for installed software containing 'Cisco Secure Firewall Management Center' and review its version information.",
+        "rapid7_query_hint": "Search for 'CVE-2026-20079' in InsightVM. Utilize asset search filters to identify Cisco Secure FMC instances and their installed versions. Review InsightIDR logs for anomalous activity on FMC devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical (Estimation based on maximum severity, authentication bypass, and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Google warns of new Chrome zero-day bug exploited in attacks",
+        "tldr": "Google has patched its seventh actively exploited Chrome zero-day vulnerability this year, underscoring persistent threats to browser security. This critical bug allows attackers to execute malicious code, making prompt patching essential to mitigate risks. Continuous exploitation of Chrome zero-days highlights the need for constant vigilance.",
+        "action": "Ensure all Google Chrome browsers on managed endpoints are updated to the very latest version as a matter of urgency. Prioritize these updates outside of regular patching cycles. Educate users on the risks of outdated browsers and the importance of timely updates.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/google-patches-seventh-chrome-zero-day-exploited-in-attacks-this-year/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Google Chrome (versions prior to the latest security update addressing this zero-day).",
+        "how_to_determine_impact": "Check all endpoint Chrome browser versions. Any version prior to the patch addressing this seventh zero-day is vulnerable. Monitor for unusual browser activity or crashes.",
+        "tanium_query_hint": "Get Chrome Version from all machines. Compare versions against Google's published security advisories for the latest patched version.",
+        "rapid7_query_hint": "Search InsightVM for the latest Google Chrome vulnerabilities. Use InsightAgent queries: `where(application.name contains \"Google Chrome\") select(application.version)` to identify vulnerable endpoints.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimation based on zero-day, active exploitation, and code execution capability)",
         "category": "vulns"
       }
     ]
