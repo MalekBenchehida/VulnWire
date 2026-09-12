@@ -2,24 +2,16 @@
   "breaches": [
     {
       "title": "Florida confirms DMV database breached via stolen police account",
-      "tldr": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed a data breach of its DAVID driver database. Attackers gained access using compromised credentials belonging to a police department employee, highlighting the risk of insider threat vectors and weak credential management.",
-      "action": "Review and strengthen access control policies for sensitive databases. Implement multi-factor authentication (MFA) for all administrative and privileged accounts. Conduct a forensic analysis to determine the full extent of data compromise and identify any further compromised accounts.",
+      "tldr": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed that its DAVID driver database suffered a data breach, saying the attackers gained access using credentials belonging to a police department employee. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
-      "tldr": "Threat actors, including groups like ShinyHunters and Helix, are employing sophisticated passkey and single sign-on (SSO) themed social engineering tactics. These attacks aim to compromise corporate Microsoft accounts, specifically targeting Microsoft 365 services to steal sensitive data by deceiving users into revealing credentials or session tokens.",
-      "action": "Educate users on passkey/SSO phishing awareness, emphasizing vigilance against deceptive login pages. Implement advanced phishing detection and email security solutions. Enforce Conditional Access policies for Microsoft 365, requiring compliant devices and strong authentication for access, and monitor for unusual login patterns or data exfiltration.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data- theft/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Trezor: 347,000 users targeted in phishing attacks after Brevo breach",
-      "tldr": "Trezor reported that 347,000 email addresses of its users were targeted in phishing attacks following a data breach at its third-party email marketing provider, Brevo. Approximately 2,500 users clicked on malicious links embedded in these phishing emails, indicating a significant exposure and potential compromise of user credentials.",
-      "action": "Warn users about ongoing phishing attempts and advise caution with emails, especially those related to cryptocurrency wallets. Implement DMARC, SPF, and DKIM to prevent email spoofing. Review third-party vendor security protocols, particularly for those handling customer communication data.",
+      "tldr": "Trezor has revealed that phishing attacks against its customers earlier this week targeted 347,000 email addresses and affected 2,500 users who clicked an embedded malicious link. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/trezor-347-000-users-targeted-in-phishing-attacks-after-brevo-breach/",
       "source": "BleepingComputer"
@@ -28,81 +20,93 @@
   "ransomware": [
     {
       "title": "Conti ransomware gang member sentenced to 4 years in prison",
-      "tldr": "A Ukrainian national has been sentenced to four years in prison in the US for his involvement in Conti ransomware operations between 2021 and 2022. This sentence highlights ongoing international law enforcement efforts to disrupt and prosecute individuals associated with major ransomware groups, signaling a continued crackdown on cybercrime.",
-      "action": "Stay informed about legal actions against ransomware operators as this often provides insights into their tactics, techniques, and procedures (TTPs). Focus on implementing robust ransomware prevention strategies, including strong backups, network segmentation, and endpoint protection, as law enforcement actions alone do not stop attacks.",
+      "tldr": "A Ukrainian national has been sentenced to four years in prison for his role in Conti ransomware attacks between 2021 and 2022. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/conti-ransomware-gang-member-sentenced-to-four-years-in-prison/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Ukrainian Conti Ransomware Developer Sentenced to 4 Years in US Prison",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/ukrainian-conti-ransomware-developer-sentenced-to-4-years-in-us-prison/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV",
-      "tldr": "CISA has included five new vulnerabilities affecting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS into its Known Exploited Vulnerabilities (KEV) catalog. These flaws are actively being exploited in the wild, posing an immediate and critical threat to organizations using these products.",
-      "action": "Immediately identify and patch all instances of JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to the latest secure versions. Review logs for any signs of compromise related to these vulnerabilities, and apply network segmentation to limit potential impact.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS with unspecified vulnerable versions mentioned in CISA KEV. Refer to vendor advisories for specific impacted versions.",
-      "how_to_determine_impact": "Identify all assets running JFrog Artifactory, ConnectWise ScreenConnect, or MikroTik RouterOS. Check their installed versions against vendor security advisories and the CISA KEV list to confirm vulnerability status. Perform a thorough log review for indicators of compromise.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines. Filter for 'JFrog Artifactory', 'ConnectWise ScreenConnect', or 'MikroTik RouterOS'. Compare versions against vendor patch lists. Use 'Get Running Processes' or 'Get Open Ports' to identify suspicious activity.",
-      "rapid7_query_hint": "In InsightVM, search for assets with 'JFrog Artifactory', 'ConnectWise ScreenConnect', or 'MikroTik RouterOS' installed. If specific CVEs are available in the KEV, filter by those vulnerability IDs. Utilize InsightIDR for detection rules related to known exploitation techniques for these products.",
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (specific score not provided, but CISA KEV inclusion implies high to critical severity)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "GitLab Max Severity Path Traversal Flaw (CVE-2026-85706) Actively Exploited",
-      "tldr": "A maximum-severity path traversal vulnerability, tracked as CVE-2026-85706 and rated CVSS 10, was disclosed in GitLab and actively exploited in the wild within one day of disclosure. This critical flaw allows attackers to read arbitrary files, leading to sensitive data exposure and potential further system compromise.",
-      "action": "Immediately patch all GitLab instances to the latest secure version specified by GitLab to remediate CVE-2026-85706. Conduct a thorough audit of GitLab server logs for any signs of exploitation or unauthorized file access that may have occurred since the vulnerability disclosure.",
-      "cve_ids": [
-        "CVE-2026-85706"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "GitLab servers with versions prior to the patched releases (specific versions not provided in snippet, refer to GitLab's official advisory for CVE-2026-85706).",
-      "how_to_determine_impact": "Check the version of your GitLab instance and consult the official GitLab security advisory for CVE-2026-85706 to identify affected versions. Inspect GitLab server logs for unauthorized file access attempts, unusual process execution, or other suspicious activity, especially around the disclosure date.",
-      "tanium_query_hint": "Get Installed Applications from all machines. Filter for 'GitLab' and check the version numbers. For potential compromise, use 'Get File Content' on sensitive configuration or log files, or 'Get Running Processes' to identify unexpected processes.",
-      "rapid7_query_hint": "In InsightVM, search for assets with 'GitLab' installed and filter by vulnerability ID 'CVE-2026-85706'. Utilize InsightIDR to create alerts for suspicious activity on GitLab servers, such as unusual file access patterns, privilege escalation, or unauthorized network connections.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
-      "title": "Critical Check Point VPN Vulnerabilities (CVE-2026-85102, CVE-2026-85103) with Imminent Exploitation",
-      "tldr": "The Dutch NCSC has warned of imminent exploitation for two critical flaws in Check Point VPN, tracked as CVE-2026-85102 and CVE-2026-85103. Check Point has released patches for these vulnerabilities, which pose a significant risk of remote code execution or unauthorized access to unpatched VPN devices.",
-      "action": "Immediately apply all available patches from Check Point for VPN appliances to address CVE-2026-85102 and CVE-2026-85103. Monitor VPN logs for any unusual access attempts or suspicious activity, and ensure proper network segmentation of VPN devices from internal networks.",
-      "cve_ids": [
-        "CVE-2026-85102",
-        "CVE-2026-85103"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Check Point VPN appliances. Specific vulnerable versions are not provided in the snippet; refer to Check Point's official security advisories for CVE-2026-85102 and CVE-2026-85103.",
-      "how_to_determine_impact": "Check the firmware/software version of all Check Point VPN appliances. Consult Check Point's official security advisory for CVE-2026-85102 and CVE-2026-85103 to determine if your versions are affected. Review VPN logs for unauthorized access or suspicious connection attempts, particularly from external sources.",
-      "tanium_query_hint": "Use 'Get Network Interfaces' to identify Check Point devices. If a Tanium Agent is on the appliance, use 'Get Installed Applications' or 'Get File Version' to check software/firmware versions. Look for specific Indicators of Compromise (IOCs) if provided by Check Point for post-exploitation detection.",
-      "rapid7_query_hint": "In InsightVM, search for assets identified as 'Check Point VPN'. Filter by vulnerability IDs 'CVE-2026-85102' and 'CVE-2026-85103'. Configure alerts in InsightIDR for suspicious activity originating from or targeting VPN appliances, such as anomalous logins or unusual outbound connections.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (specific score not provided, but 'critical flaws' and 'imminent exploitation' imply a high CVSS score)"
-    },
-    {
-      "title": "China-Linked UNC3569 Exploited Sogou Input Method Flaw to Deploy GRAYRABBIT Backdoor",
-      "tldr": "The China-linked threat group UNC3569 has been observed exploiting an unspecified flaw in the Sogou Input Method to deploy the GRAYRABBIT backdoor. This indicates targeted attacks leveraging specific software vulnerabilities for persistent access, likely aimed at espionage or data exfiltration.",
-      "action": "Identify all systems with Sogou Input Method installed and ensure the software is updated to the latest secure version. Scan endpoints for the presence of the GRAYRABBIT backdoor or other indicators of compromise related to the UNC3569 threat group.",
+      "title": "When the Whole Company Adopts AI: What It Does to Your SOC",
+      "tldr": "Over the past year, we watched a new class of alert appear in enterprise security operations centers and grow faster than anything else in the stream: alerts that were triggered by AI tools and agents. Not attacks against AI, but the ordinary, everyday footprint of an organization using it, from developers running coding agents and non-technical staff signing consumer AI tools into corporate",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/china-linked-unc3569-exploited-sogou.html",
+      "source_url": "https://thehackernews.com/2026/09/when-whole-company-adopts-ai-what-it.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Sogou Input Method, unspecified vulnerable versions. Refer to Sogou's official advisories for patching details and indicators of compromise.",
-      "how_to_determine_impact": "Identify all endpoints running Sogou Input Method. Check for the specific version number and compare it against known vulnerable versions. Conduct endpoint detection and response (EDR) scans for the GRAYRABBIT backdoor or associated artifacts. Inspect network logs for communication to known UNC3569 command-and-control infrastructure.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines. Filter for 'Sogou Input Method' and check the version. Use 'Get Running Processes' and 'Get File Hash' to look for the GRAYRABBIT backdoor or other suspicious executables if IOCs are available.",
-      "rapid7_query_hint": "In InsightVM, search for assets with 'Sogou Input Method' installed. If a specific vulnerability ID is known, filter by it. Use InsightIDR to monitor for process anomalies, network connections to suspicious IPs associated with UNC3569, or file changes indicative of GRAYRABBIT deployment.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "High (Specific score not provided, but active exploitation by a state-linked group and backdoor deployment suggest high severity)"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -15960,6 +15964,63 @@
         "rapid7_query_hint": "In InsightVM, search for assets with 'Sogou Input Method' installed. If a specific vulnerability ID is known, filter by it. Use InsightIDR to monitor for process anomalies, network connections to suspicious IPs associated with UNC3569, or file changes indicative of GRAYRABBIT deployment.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "High (Specific score not provided, but active exploitation by a state-linked group and backdoor deployment suggest high severity)",
+        "category": "vulns"
+      },
+      {
+        "title": "Ukrainian Conti Ransomware Developer Sentenced to 4 Years in US Prison",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/ukrainian-conti-ransomware-developer-sentenced-to-4-years-in-us-prison/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "When the Whole Company Adopts AI: What It Does to Your SOC",
+        "tldr": "Over the past year, we watched a new class of alert appear in enterprise security operations centers and grow faster than anything else in the stream: alerts that were triggered by AI tools and agents. Not attacks against AI, but the ordinary, everyday footprint of an organization using it, from developers running coding agents and non-technical staff signing consumer AI tools into corporate",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/when-whole-company-adopts-ai-what-it.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
