@@ -1,126 +1,113 @@
 {
   "breaches": [
     {
+      "title": "Hackers abused Claude to extract secrets from 1.8M Android apps",
+      "tldr": "Threat actors, including state-sponsored and financially motivated groups, leveraged Anthropic's Claude AI to extract sensitive secrets from 1.8 million Android applications. This represents a significant exposure of sensitive data from a vast number of applications, highlighting the risk of AI model misuse for data exfiltration.",
+      "action": "Immediately audit all Android application repositories for exposed secrets (API keys, credentials). Implement automated secret scanning tools in CI/CD pipelines and revoke/rotate any compromised credentials. Review AI interaction policies and monitor AI platform usage to prevent similar abuses.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Florida confirms DMV database breached via stolen police account",
-      "tldr": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) suffered a data breach of its DAVID driver database. Attackers gained access using compromised credentials belonging to a police department employee. This incident highlights the risk of third-party credential compromise leading to significant data exposure.",
-      "action": "Implement multi-factor authentication for all privileged access to sensitive databases, especially for third-party accounts. Conduct an immediate audit of all police department accounts with access to the FLHSMV DAVID database for suspicious activity and credential compromise. Review and enforce strict access controls.",
+      "tldr": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) confirmed a data breach of its DAVID driver database. Attackers gained access using stolen credentials belonging to a police department employee, leading to unauthorized access to sensitive records.",
+      "action": "Review and strengthen credential management and access controls for all sensitive databases. Immediately implement multi-factor authentication (MFA) for all administrative and privileged accounts, especially those accessing critical databases like DMV records. Conduct a comprehensive audit of all user accounts and their access privileges.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
       "source": "BleepingComputer"
     },
     {
       "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
-      "tldr": "Threat actors, including groups like ShinyHunters and Helix, are using sophisticated passkey and single sign-on (SSO) themed social engineering to compromise corporate Microsoft accounts. These attacks aim to steal data from Microsoft 365 services, indicating a shift in phishing tactics to exploit modern authentication mechanisms.",
-      "action": "Educate users on sophisticated phishing tactics, especially those leveraging passkey/SSO themes. Implement robust anti-phishing solutions, ensure strong MFA (preferably FIDO2/hardware keys) is enforced for all M365 accounts, and monitor for unusual login patterns or data access from M365. Review conditional access policies.",
+      "tldr": "Microsoft reports that threat actors, including groups like ShinyHunters and Helix, are employing sophisticated passkey and single sign-on (SSO)-themed social engineering attacks. These campaigns aim to compromise corporate Microsoft accounts, leading to unauthorized access and data theft from Microsoft 365 services.",
+      "action": "Educate users on sophisticated phishing tactics, especially those related to passkeys and SSO prompts. Implement strong, phishing-resistant multi-factor authentication (MFA) for all Microsoft 365 accounts. Monitor M365 logs for unusual access patterns, data exfiltration, or anomalous activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
       "source": "BleepingComputer"
     },
     {
       "title": "Trezor: 347,000 users targeted in phishing attacks after Brevo breach",
-      "tldr": "Trezor revealed that 347,000 users were targeted in phishing attacks following a data breach at its third-party email marketing provider, Brevo. Approximately 2,500 users clicked malicious links embedded in the phishing emails, underscoring the supply chain risk posed by compromised third-party vendors.",
-      "action": "Advise users to be extremely wary of unsolicited communications, especially those prompting for credentials or sensitive information. Review third-party vendor security posture and data handling practices. Implement DMARC/SPF/DKIM for email security and consider alternative communication channels for critical security alerts.",
+      "tldr": "Trezor confirmed that 347,000 of its users were targeted in widespread phishing attacks following a data breach at its third-party marketing vendor, Brevo. Approximately 2,500 users clicked on embedded malicious links, demonstrating the significant impact of supply chain compromises on customer security.",
+      "action": "Users of Trezor hardware wallets should exercise extreme vigilance against all phishing emails. Organizations should audit their third-party vendor security practices, especially for vendors handling customer contact information. Implement robust email security and phishing awareness programs.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/trezor-347-000-users-targeted-in-phishing-attacks-after-brevo-breach/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Hackers abused Claude to extract secrets from 1.8M Android apps",
-      "tldr": "Multiple threat groups, including state-sponsored actors from Russia and China, abused Anthropic's Claude AI model to automate exploitation and extract sensitive secrets from 1.8 million Android applications. This highlights a new attack vector where AI platforms are weaponized for industrial-scale data theft and malware evasion.",
-      "action": "Implement strict data governance and access controls for AI platforms used within the organization. Audit any custom AI models or scripts for potential data exfiltration or malicious capabilities. Monitor AI platform usage for unusual activity or large-scale data processing that could indicate abuse.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
-      "title": "Cisco FMC Flaws Exploited to Steal Credentials and Deploy Qilin Ransomware",
-      "tldr": "Threat actors are actively exploiting vulnerabilities in Cisco Firepower Management Center (FMC) to steal credentials, gain initial access, and subsequently deploy the Qilin ransomware. This indicates a direct chain of exploitation leading to ransomware infection, underscoring the critical need for patching network infrastructure.",
-      "action": "Immediately patch all Cisco Firepower Management Center (FMC) instances to the latest secure versions. Conduct a thorough forensic analysis for signs of compromise, credential theft, or Qilin ransomware deployment on affected networks. Implement strong network segmentation and monitor for unusual outbound connections.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Conti ransomware gang member sentenced to 4 years in prison",
-      "tldr": "A Ukrainian national has been sentenced to four years in a US prison for his involvement in Conti ransomware attacks conducted between 2021 and 2022. This highlights ongoing efforts by law enforcement to disrupt ransomware operations and bring cybercriminals to justice, serving as a deterrent to other threat actors.",
-      "action": "Ensure robust backups are in place and regularly tested, following the 3-2-1 rule. Maintain an incident response plan specifically for ransomware attacks, including communication strategies and legal reporting requirements. Continuously monitor for TTPs associated with known ransomware groups like Conti.",
+      "tldr": "A Ukrainian national has been sentenced to four years in a U.S. prison for their active role in Conti ransomware attacks conducted between 2021 and 2022. This judicial action underscores ongoing efforts by law enforcement to pursue and prosecute individuals involved in ransomware operations globally.",
+      "action": "While not a direct technical action, this development reinforces the importance of collaborating with law enforcement in ransomware incidents. Organizations should continue to maintain robust backup and recovery strategies, and implement strong preventative measures to minimize ransomware attack surfaces.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/conti-ransomware-gang-member-sentenced-to-four-years-in-prison/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "New Android malware encrypts files, steals data, and harasses victims",
-      "tldr": "A novel Android malware, dubbed Mantax Otax, has emerged, combining the functionalities of ransomware and spyware. It encrypts files on infected devices, exfiltrates sensitive data, and further harasses victims, representing a multi-faceted threat to mobile users.",
-      "action": "Advise users to only download apps from official app stores, scrutinize app permissions, and keep Android devices and security software updated. Deploy mobile device management (MDM) solutions to enforce security policies and restrict app installations from unknown sources. Regularly back up important data from mobile devices.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-android-malware-encrypts-files-steals-data-and-harasses-victims/",
       "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
-      "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
-      "tldr": "A maximum-severity path traversal vulnerability in GitLab, tracked as CVE-2026-85706, has a CVSS score of 10.0 and is being actively probed in the wild shortly after disclosure. This critical flaw allows attackers to read arbitrary files, posing an immediate and severe risk to GitLab instances.",
-      "action": "Immediately patch all GitLab instances to the latest secure versions. Restrict network access to GitLab instances to only necessary IP ranges. Review GitLab logs for any suspicious file access or path traversal attempts.",
+      "title": "GitLab Max Severity Path Traversal Flaw (CVE-2026-85706) Exploited After Disclosure",
+      "tldr": "A maximum severity (CVSS 10) path traversal vulnerability, CVE-2026-85706, in GitLab allows attackers to read arbitrary files from the server. It was actively exploited one day after its disclosure and is currently subject to in-the-wild probes, making immediate patching critical.",
+      "action": "Immediately patch all GitLab instances to the latest secure version (refer to the official GitLab security advisory for specific patched versions for your release line). Monitor GitLab logs for unusual file access attempts, path traversal patterns (e.g., ../ or %2e%2e%2f), or any indicators of compromise.",
       "cve_ids": [
         "CVE-2026-85706"
       ],
-      "source_url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "GitLab versions prior to the latest patched releases (e.g., 16.x.x, 15.x.x, depending on patch cycle)",
-      "how_to_determine_impact": "Inspect GitLab server logs for unauthorized file access attempts, especially related to path traversal sequences. Check for unusual processes running under the GitLab user or service accounts. Verify installed GitLab version against vendor advisories.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications and Release and Version from all machines with (Installed Applications contains 'GitLab') Get File Version ['/opt/gitlab/version-manifest.txt'] from all machines",
-      "rapid7_query_hint": "Search for vulnerability ID 'gitlab_CVE-2026-85706' in InsightVM. For InsightAgent, query 'asset.software.name = \"GitLab\" AND asset.software.version < \"specific_patched_version\"'",
+      "affected_versions": "GitLab (specific vulnerable versions apply, refer to vendor advisory)",
+      "how_to_determine_impact": "Verify the exact version of your GitLab instance(s). Review GitLab application logs (e.g., gitlab-rails/logs/production.log, gitlab-rails/logs/api_json.log) for signs of unusual file access attempts, HTTP requests containing path traversal sequences (e.g., '../', '%2e%2e%2f'), or unauthorized access to sensitive endpoints.",
+      "tanium_query_hint": "Get Installed Applications with \"GitLab\" and check its 'Version' attribute against known vulnerable versions. Utilize 'Get File Content matching \"gitlab-rails/logs/*\"' with regex patterns to identify path traversal attempts or suspicious entries in logs.",
+      "rapid7_query_hint": "In InsightVM, perform a vulnerability search for \"CVE-2026-85706\". In InsightIDR, search logs for \"GitLab\" activity with keywords such as \"path traversal\", \"file read\", \"unauthorized access\", or unusual HTTP requests targeting sensitive system paths.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "10 Critical"
     },
     {
-      "title": "Attackers Chain JFrog Artifactory Flaws to Gain Admin Control and Plant Backdoors",
-      "tldr": "Threat actors are actively chaining critical and high-severity vulnerabilities in JFrog Artifactory to bypass authentication, escalate privileges to administrative control, and deploy Rust-based backdoors on self-hosted servers. This enables full control over the artifact repository and potential supply chain compromise.",
-      "action": "Immediately apply all available patches for JFrog Artifactory. Review Artifactory logs for unauthorized access, suspicious administrative actions, or deployment of unknown artifacts. Scan Artifactory servers for the presence of the Rust-based backdoor or other unauthorized binaries.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html",
-      "source": "The Hacker News",
+      "title": "Critical Check Point VPN Vulnerabilities (CVE-2026-85102, CVE-2026-85103) Under Imminent Exploitation",
+      "tldr": "The Dutch NCSC issued a warning about the imminent exploitation of two critical vulnerabilities, CVE-2026-85102 and CVE-2026-85103, affecting Check Point VPN products. Patches have been released by Check Point, making their immediate application essential to prevent system compromise.",
+      "action": "Immediately apply all available patches from Check Point for affected VPN appliances and software. Monitor VPN logs, firewall logs, and system audit trails on VPN gateways for any unusual access attempts, suspicious activity, or signs of compromise.",
+      "cve_ids": [
+        "CVE-2026-85102",
+        "CVE-2026-85103"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "JFrog Artifactory self-hosted servers running vulnerable versions (specific versions would need to be identified from vendor advisory).",
-      "how_to_determine_impact": "Check JFrog Artifactory application logs for signs of authentication bypass or privilege escalation. Look for unauthorized changes to repositories or user accounts. Scan server file systems for unknown or suspicious executables, particularly Rust-based binaries.",
-      "tanium_query_hint": "Get Installed Applications and Version from all machines with (Installed Applications contains 'JFrog Artifactory') and (Service Process Command Line contains 'artifactory')",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'JFrog Artifactory' in InsightVM. For InsightAgent, query 'asset.software.name = \"JFrog Artifactory\" AND asset.software.version < \"specific_patched_version\"'",
+      "affected_versions": "Check Point VPN products (specific vulnerable versions, refer to vendor advisory)",
+      "how_to_determine_impact": "Verify the exact version and patch level of all your Check Point VPN appliances. Check VPN connection logs, firewall logs, and system audit logs on VPN gateways for unauthorized login attempts, anomalous traffic patterns, or suspicious configuration changes.",
+      "tanium_query_hint": "Utilize 'Get Installed Applications' to determine the 'Version' of Check Point VPN software on relevant devices. Leverage 'Get Network Connections' to identify unusual outbound connections from VPN appliances, and 'Get Process Activity' for anomalous processes.",
+      "rapid7_query_hint": "In InsightVM, perform a vulnerability search for \"CVE-2026-85102\" or \"CVE-2026-85103\". In InsightIDR, search for \"Check Point VPN\" logs for indicators such as unauthorized access attempts, failed logins, or unusual traffic to/from VPN endpoints.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, due to admin control and backdoor deployment)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "PaperCut Replaces Emergency Patches With Fixes for Two Actively Exploited Flaws",
-      "tldr": "PaperCut has released updated patches for two actively exploited vulnerabilities, replacing previous emergency fixes. These flaws allow attackers to gain unauthorized access and potentially execute arbitrary code, highlighting a persistent threat to print management systems.",
-      "action": "Immediately apply the latest official patches from PaperCut to all affected systems. Verify that previous emergency patches were correctly applied and then superseded. Conduct a forensic review for signs of compromise, including unauthorized access or suspicious activity on PaperCut servers.",
+      "title": "Attackers Chaining JFrog Artifactory Flaws to Gain Admin Control and Deploy Backdoors",
+      "tldr": "Threat actors are actively exploiting a chain of critical and high-severity vulnerabilities in JFrog Artifactory to bypass authentication, elevate privileges to administrative control, and deploy persistent Rust-based backdoors on self-hosted servers. This poses a severe risk of persistent compromise and data theft.",
+      "action": "Immediately apply all available patches for JFrog Artifactory to mitigate these chained vulnerabilities. Conduct a thorough forensic analysis of all Artifactory instances for the presence of the Rust backdoor, unauthorized administrative accounts, or any other indicators of compromise.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/papercut-replaces-emergency-patches.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "PaperCut MF and PaperCut NG versions (specific ranges require vendor advisory lookup).",
-      "how_to_determine_impact": "Check PaperCut application logs for unusual authentication events, unauthorized access attempts, or execution of suspicious commands. Verify the integrity of PaperCut installation directories for unauthorized file modifications. Ensure the current installed version matches the latest patched versions.",
-      "tanium_query_hint": "Get Installed Applications and Version from all machines with (Installed Applications contains 'PaperCut') and (Process Name contains 'papercut')",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'PaperCut' in InsightVM. For InsightAgent, query 'asset.software.name = \"PaperCut\" AND asset.software.version < \"latest_patched_version\"'",
+      "affected_versions": "JFrog Artifactory (specific critical and high-severity vulnerable versions, refer to vendor advisories)",
+      "how_to_determine_impact": "Verify the exact version of your JFrog Artifactory instances. Review Artifactory access logs, system logs, and security event logs for unauthorized administrative activity, new user creation, authentication bypass attempts, or suspicious file modifications. Scan for unknown executables or processes, particularly those linked to Rust, on Artifactory servers.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to check the 'Version' of JFrog Artifactory. Employ 'Get Running Processes' and 'Get Open Ports' on Artifactory servers for anomalous processes or connections. Utilize 'Get File Hash' for core Artifactory components or suspicious executables.",
+      "rapid7_query_hint": "In InsightVM, perform a vulnerability search for \"JFrog Artifactory\" with critical/high severity filters. In InsightIDR, search for \"Artifactory\" logs for authentication bypasses, privilege escalation events, or the creation/execution of suspicious files (e.g., Rust binaries).",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 High (Estimated, given active exploitation and potential for RCE)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Check Point Patches Critical VPN Vulnerabilities",
-      "tldr": "Check Point has released patches addressing critical vulnerabilities in its VPN products. These flaws could potentially allow remote attackers to bypass authentication or gain unauthorized access, posing a significant risk to network perimeters secured by these devices.",
-      "action": "Immediately apply all available patches to Check Point VPN gateways and related security products. Verify that the patches are successfully installed and active. Monitor VPN access logs for any suspicious login attempts or unauthorized connections.",
+      "title": "BlueMoon Exploit Kit Chains Recent Chrome, Windows Zero-Days",
+      "tldr": "The sophisticated BlueMoon Exploit Kit is actively chaining recently discovered zero-day vulnerabilities in Google Chrome and Microsoft Windows. This indicates a high-level threat, leveraging unpatched flaws for system compromise and highlighting the urgency of immediate patching and robust security measures.",
+      "action": "Prioritize immediate installation of all available security updates for Google Chrome and Microsoft Windows, including any out-of-band patches. Deploy robust Endpoint Detection and Response (EDR) solutions to detect and block exploit kit activity and associated post-exploitation behaviors.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/check-point-patches-critical-vpn-vulnerabilities/",
+      "source_url": "https://www.securityweek.com/bluemoon-exploit-kit-chains-recent-chrome-windows-zero-days/",
       "source": "SecurityWeek",
-      "active_exploitation": false,
-      "affected_versions": "Check Point Quantum Security Gateways and other VPN products running vulnerable software versions (specific versions require vendor advisory lookup).",
-      "how_to_determine_impact": "Verify the installed firmware/software version on all Check Point VPN appliances against vendor advisories. Check system logs for signs of unauthorized access attempts or unusual configuration changes.",
-      "tanium_query_hint": "Get Configured Interfaces and IP Address and Check Point Version from all machines with (Operating System contains 'Check Point')",
-      "rapid7_query_hint": "Search for vulnerability ID 'checkpoint_vpn_critical_vulnerability' (or specific CVE if found) in InsightVM. Use network scans to identify vulnerable Check Point devices and their versions.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 High (Estimated, given 'critical VPN vulnerabilities' and potential for remote access)"
+      "active_exploitation": true,
+      "affected_versions": "Google Chrome, Microsoft Windows (specific zero-day vulnerable versions are not detailed; refer to vendor advisories for recent critical updates)",
+      "how_to_determine_impact": "Ensure all Chrome browsers and Windows operating systems are on the latest patch level. Monitor for unusual browser activity (e.g., unexpected redirects, pop-ups), suspicious process execution, or network connections originating from browser processes or system services. Check EDR alerts for exploit kit detections.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to determine the 'Version' of Google Chrome and Microsoft Windows and compare against current patch levels. Employ 'Get Running Processes with Parent Process' and 'Get Network Connections' to identify suspicious activity associated with browsers or system processes.",
+      "rapid7_query_hint": "In InsightVM, prioritize scans for recently disclosed Chrome and Windows vulnerabilities. In InsightIDR, search for \"BlueMoon Exploit Kit\" indicators, suspicious browser activity, or alerts related to new/unknown processes executing on Windows endpoints.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -15833,6 +15820,122 @@
         "rapid7_query_hint": "Search for vulnerability ID 'checkpoint_vpn_critical_vulnerability' (or specific CVE if found) in InsightVM. Use network scans to identify vulnerable Check Point devices and their versions.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.0 High (Estimated, given 'critical VPN vulnerabilities' and potential for remote access)",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-12": [
+      {
+        "title": "Hackers abused Claude to extract secrets from 1.8M Android apps",
+        "tldr": "Threat actors, including state-sponsored and financially motivated groups, leveraged Anthropic's Claude AI to extract sensitive secrets from 1.8 million Android applications. This represents a significant exposure of sensitive data from a vast number of applications, highlighting the risk of AI model misuse for data exfiltration.",
+        "action": "Immediately audit all Android application repositories for exposed secrets (API keys, credentials). Implement automated secret scanning tools in CI/CD pipelines and revoke/rotate any compromised credentials. Review AI interaction policies and monitor AI platform usage to prevent similar abuses.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Florida confirms DMV database breached via stolen police account",
+        "tldr": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) confirmed a data breach of its DAVID driver database. Attackers gained access using stolen credentials belonging to a police department employee, leading to unauthorized access to sensitive records.",
+        "action": "Review and strengthen credential management and access controls for all sensitive databases. Immediately implement multi-factor authentication (MFA) for all administrative and privileged accounts, especially those accessing critical databases like DMV records. Conduct a comprehensive audit of all user accounts and their access privileges.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
+        "tldr": "Microsoft reports that threat actors, including groups like ShinyHunters and Helix, are employing sophisticated passkey and single sign-on (SSO)-themed social engineering attacks. These campaigns aim to compromise corporate Microsoft accounts, leading to unauthorized access and data theft from Microsoft 365 services.",
+        "action": "Educate users on sophisticated phishing tactics, especially those related to passkeys and SSO prompts. Implement strong, phishing-resistant multi-factor authentication (MFA) for all Microsoft 365 accounts. Monitor M365 logs for unusual access patterns, data exfiltration, or anomalous activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Trezor: 347,000 users targeted in phishing attacks after Brevo breach",
+        "tldr": "Trezor confirmed that 347,000 of its users were targeted in widespread phishing attacks following a data breach at its third-party marketing vendor, Brevo. Approximately 2,500 users clicked on embedded malicious links, demonstrating the significant impact of supply chain compromises on customer security.",
+        "action": "Users of Trezor hardware wallets should exercise extreme vigilance against all phishing emails. Organizations should audit their third-party vendor security practices, especially for vendors handling customer contact information. Implement robust email security and phishing awareness programs.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/trezor-347-000-users-targeted-in-phishing-attacks-after-brevo-breach/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Conti ransomware gang member sentenced to 4 years in prison",
+        "tldr": "A Ukrainian national has been sentenced to four years in a U.S. prison for their active role in Conti ransomware attacks conducted between 2021 and 2022. This judicial action underscores ongoing efforts by law enforcement to pursue and prosecute individuals involved in ransomware operations globally.",
+        "action": "While not a direct technical action, this development reinforces the importance of collaborating with law enforcement in ransomware incidents. Organizations should continue to maintain robust backup and recovery strategies, and implement strong preventative measures to minimize ransomware attack surfaces.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/conti-ransomware-gang-member-sentenced-to-four-years-in-prison/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "GitLab Max Severity Path Traversal Flaw (CVE-2026-85706) Exploited After Disclosure",
+        "tldr": "A maximum severity (CVSS 10) path traversal vulnerability, CVE-2026-85706, in GitLab allows attackers to read arbitrary files from the server. It was actively exploited one day after its disclosure and is currently subject to in-the-wild probes, making immediate patching critical.",
+        "action": "Immediately patch all GitLab instances to the latest secure version (refer to the official GitLab security advisory for specific patched versions for your release line). Monitor GitLab logs for unusual file access attempts, path traversal patterns (e.g., ../ or %2e%2e%2f), or any indicators of compromise.",
+        "cve_ids": [
+          "CVE-2026-85706"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "GitLab (specific vulnerable versions apply, refer to vendor advisory)",
+        "how_to_determine_impact": "Verify the exact version of your GitLab instance(s). Review GitLab application logs (e.g., gitlab-rails/logs/production.log, gitlab-rails/logs/api_json.log) for signs of unusual file access attempts, HTTP requests containing path traversal sequences (e.g., '../', '%2e%2e%2f'), or unauthorized access to sensitive endpoints.",
+        "tanium_query_hint": "Get Installed Applications with \"GitLab\" and check its 'Version' attribute against known vulnerable versions. Utilize 'Get File Content matching \"gitlab-rails/logs/*\"' with regex patterns to identify path traversal attempts or suspicious entries in logs.",
+        "rapid7_query_hint": "In InsightVM, perform a vulnerability search for \"CVE-2026-85706\". In InsightIDR, search logs for \"GitLab\" activity with keywords such as \"path traversal\", \"file read\", \"unauthorized access\", or unusual HTTP requests targeting sensitive system paths.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical Check Point VPN Vulnerabilities (CVE-2026-85102, CVE-2026-85103) Under Imminent Exploitation",
+        "tldr": "The Dutch NCSC issued a warning about the imminent exploitation of two critical vulnerabilities, CVE-2026-85102 and CVE-2026-85103, affecting Check Point VPN products. Patches have been released by Check Point, making their immediate application essential to prevent system compromise.",
+        "action": "Immediately apply all available patches from Check Point for affected VPN appliances and software. Monitor VPN logs, firewall logs, and system audit trails on VPN gateways for any unusual access attempts, suspicious activity, or signs of compromise.",
+        "cve_ids": [
+          "CVE-2026-85102",
+          "CVE-2026-85103"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Check Point VPN products (specific vulnerable versions, refer to vendor advisory)",
+        "how_to_determine_impact": "Verify the exact version and patch level of all your Check Point VPN appliances. Check VPN connection logs, firewall logs, and system audit logs on VPN gateways for unauthorized login attempts, anomalous traffic patterns, or suspicious configuration changes.",
+        "tanium_query_hint": "Utilize 'Get Installed Applications' to determine the 'Version' of Check Point VPN software on relevant devices. Leverage 'Get Network Connections' to identify unusual outbound connections from VPN appliances, and 'Get Process Activity' for anomalous processes.",
+        "rapid7_query_hint": "In InsightVM, perform a vulnerability search for \"CVE-2026-85102\" or \"CVE-2026-85103\". In InsightIDR, search for \"Check Point VPN\" logs for indicators such as unauthorized access attempts, failed logins, or unusual traffic to/from VPN endpoints.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Chaining JFrog Artifactory Flaws to Gain Admin Control and Deploy Backdoors",
+        "tldr": "Threat actors are actively exploiting a chain of critical and high-severity vulnerabilities in JFrog Artifactory to bypass authentication, elevate privileges to administrative control, and deploy persistent Rust-based backdoors on self-hosted servers. This poses a severe risk of persistent compromise and data theft.",
+        "action": "Immediately apply all available patches for JFrog Artifactory to mitigate these chained vulnerabilities. Conduct a thorough forensic analysis of all Artifactory instances for the presence of the Rust backdoor, unauthorized administrative accounts, or any other indicators of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/artifactory-flaws-chained-in-attacks-deploying-backdoor-malware/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "JFrog Artifactory (specific critical and high-severity vulnerable versions, refer to vendor advisories)",
+        "how_to_determine_impact": "Verify the exact version of your JFrog Artifactory instances. Review Artifactory access logs, system logs, and security event logs for unauthorized administrative activity, new user creation, authentication bypass attempts, or suspicious file modifications. Scan for unknown executables or processes, particularly those linked to Rust, on Artifactory servers.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to check the 'Version' of JFrog Artifactory. Employ 'Get Running Processes' and 'Get Open Ports' on Artifactory servers for anomalous processes or connections. Utilize 'Get File Hash' for core Artifactory components or suspicious executables.",
+        "rapid7_query_hint": "In InsightVM, perform a vulnerability search for \"JFrog Artifactory\" with critical/high severity filters. In InsightIDR, search for \"Artifactory\" logs for authentication bypasses, privilege escalation events, or the creation/execution of suspicious files (e.g., Rust binaries).",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "BlueMoon Exploit Kit Chains Recent Chrome, Windows Zero-Days",
+        "tldr": "The sophisticated BlueMoon Exploit Kit is actively chaining recently discovered zero-day vulnerabilities in Google Chrome and Microsoft Windows. This indicates a high-level threat, leveraging unpatched flaws for system compromise and highlighting the urgency of immediate patching and robust security measures.",
+        "action": "Prioritize immediate installation of all available security updates for Google Chrome and Microsoft Windows, including any out-of-band patches. Deploy robust Endpoint Detection and Response (EDR) solutions to detect and block exploit kit activity and associated post-exploitation behaviors.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/bluemoon-exploit-kit-chains-recent-chrome-windows-zero-days/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Google Chrome, Microsoft Windows (specific zero-day vulnerable versions are not detailed; refer to vendor advisories for recent critical updates)",
+        "how_to_determine_impact": "Ensure all Chrome browsers and Windows operating systems are on the latest patch level. Monitor for unusual browser activity (e.g., unexpected redirects, pop-ups), suspicious process execution, or network connections originating from browser processes or system services. Check EDR alerts for exploit kit detections.",
+        "tanium_query_hint": "Use 'Get Installed Applications' to determine the 'Version' of Google Chrome and Microsoft Windows and compare against current patch levels. Employ 'Get Running Processes with Parent Process' and 'Get Network Connections' to identify suspicious activity associated with browsers or system processes.",
+        "rapid7_query_hint": "In InsightVM, prioritize scans for recently disclosed Chrome and Windows vulnerabilities. In InsightIDR, search for \"BlueMoon Exploit Kit\" indicators, suspicious browser activity, or alerts related to new/unknown processes executing on Windows endpoints.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
