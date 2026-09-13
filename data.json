@@ -1,112 +1,109 @@
 {
   "breaches": [
     {
+      "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
+      "tldr": "Microsoft says threat actors linked to ShinyHunters, Helix, and other extortion gangs are using passkey and single sign-on-themed social engineering attacks to compromise corporate Microsoft accounts and steal data from Microsoft 365 services. These sophisticated phishing attacks bypass traditional authentication methods. Immediate action is needed to prevent unauthorized access and data exfiltration.",
+      "action": "Strengthen phishing defenses and user education to identify passkey and SSO phishing. Implement FIDO2-compliant passkeys and multi-factor authentication, and monitor Microsoft 365 for unusual access patterns and data exfiltration attempts.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-teft/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Hackers abused Claude to extract secrets from 1.8M Android apps",
+      "tldr": "Multiple threat groups, including state-sponsored actors from Russia and China, abused Anthropic's Claude AI model to extract secrets from 1.8 million Android applications. This showcases how AI platforms can be weaponized for large-scale data exfiltration, highlighting a new attack vector against application data.",
+      "action": "Audit Android applications for exposed secrets, especially those accessible via public interfaces or processed by third-party AI models. Review AI usage policies and implement stricter controls on data processed by AI models to prevent similar misuse and data exposure.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Florida confirms DMV database breached via stolen police account",
-      "tldr": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed that its DAVID driver database suffered a data breach, saying the attackers gained access using credentials belonging to a police department employee. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed a data breach of its DAVID driver database. Attackers gained access using compromised credentials belonging to a police department employee, leading to unauthorized data access and potential exposure of sensitive driver information.",
+      "action": "Immediately implement multi-factor authentication for all administrative and sensitive access accounts, particularly those accessing critical databases. Conduct regular credential hygiene checks and enhance security awareness training for all employees, especially those with privileged access to sensitive systems.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
       "source": "BleepingComputer"
     },
     {
       "title": "Trezor: 347,000 users targeted in phishing attacks after Brevo breach",
-      "tldr": "Trezor has revealed that phishing attacks against its customers earlier this week targeted 347,000 email addresses and affected 2,500 users who clicked an embedded malicious link. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Trezor has revealed that phishing attacks against its customers earlier this week targeted 347,000 email addresses and affected 2,500 users who clicked an embedded malicious link. This incident stemmed from a data breach at Trezor's third-party email service provider, Brevo, compromising customer contact information.",
+      "action": "Advise users to be extremely vigilant of phishing emails, especially those purporting to be from Trezor or related financial services. Implement strong email security filters, enforce email authentication protocols (DMARC, SPF, DKIM), and educate users on identifying and reporting phishing attempts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/trezor-347-000-users-targeted-in-phishing-attacks-after-brevo-breach/",
       "source": "BleepingComputer"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Conti ransomware gang member sentenced to 4 years in prison",
-      "tldr": "A Ukrainian national has been sentenced to four years in prison for his role in Conti ransomware attacks between 2021 and 2022. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/conti-ransomware-gang-member-sentenced-to-four-years-in-prison/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Ukrainian Conti Ransomware Developer Sentenced to 4 Years in US Prison",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/ukrainian-conti-ransomware-developer-sentenced-to-4-years-in-us-prison/",
-      "source": "SecurityWeek"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Dutch NCSC: Critical Check Point VPN flaws exploitation is imminent",
+      "tldr": "The Dutch Nationaal Cyber Security Centrum (NCSC) is warning of imminent exploitation of two critical flaws in Check Point VPN, tracked as CVE-2026-85102 and CVE-2026-85103. Check Point has since released patches, making immediate remediation essential to prevent potential network compromise.",
+      "action": "Immediately apply all available patches from Check Point for VPN products to address CVE-2026-85102 and CVE-2026-85103. Monitor VPN logs for any unusual connection attempts or signs of compromise and review network access controls.",
+      "cve_ids": [
+        "CVE-2026-85102",
+        "CVE-2026-85103"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Check Point VPN products. Refer to Check Point advisories for specific affected versions related to CVE-2026-85102 and CVE-2026-85103.",
+      "how_to_determine_impact": "Identify all Check Point VPN appliances in your environment. Verify their software versions against vendor advisories for CVE-2026-85102 and CVE-2026-85103 to confirm vulnerability status. Check logs for unusual connection attempts.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'Check Point VPN' components; retrieve version information for relevant Check Point software to compare against patched versions.",
+      "rapid7_query_hint": "Scan network devices with InsightVM for vulnerability IDs 'CVE-2026-85102' and 'CVE-2026-85103'. Use asset inventory to locate Check Point VPN instances and their configuration.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical (CVE-2026-85102, CVE-2026-85103 - given the NCSC warning of imminent exploitation for critical flaws)"
+    },
+    {
+      "title": "GitLab urges users to patch max severity path traversal flaw",
+      "tldr": "GitLab has issued an urgent warning for users to immediately patch a maximum-severity path traversal vulnerability, CVE-2026-85706. This flaw allows attackers to bypass security controls and access unauthorized files, and it has been observed exploited in the wild shortly after disclosure.",
+      "action": "Immediately apply the latest security updates for GitLab, specifically addressing CVE-2026-85706. Prioritize patching all GitLab servers, especially those exposed to the internet, and conduct a forensic review for signs of compromise.",
+      "cve_ids": [
+        "CVE-2026-85706"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "GitLab. Refer to GitLab's official advisory for CVE-2026-85706 for specific affected versions.",
+      "how_to_determine_impact": "Verify installed GitLab versions and check if the patch for CVE-2026-85706 has been applied. Review GitLab server logs for indicators of path traversal attempts and unauthorized file access patterns.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'GitLab'; query for 'GitLab Version' and compare against vendor advisory for CVE-2026-85706. Look for suspicious file reads.",
+      "rapid7_query_hint": "Scan GitLab instances with InsightVM for vulnerability ID 'CVE-2026-85706'. Use asset inventory to identify all GitLab installations and their versions, then check for exploitation indicators.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical"
+    },
+    {
+      "title": "Hackers exploit Tencent app flaw to deploy GrayRabbit malware",
+      "tldr": "Threat actors linked to a China-aligned espionage group are actively exploiting a critical vulnerability (CVE-2026-51990) in Tencent's Sogou Input Method for Windows. This exploit facilitates the deployment of the GrayRabbit backdoor, indicating targeted attacks by sophisticated adversaries.",
+      "action": "Immediately patch Tencent's Sogou Input Method for Windows to the latest secure version addressing CVE-2026-51990. Conduct endpoint detection and response (EDR) scans for GrayRabbit malware on all systems where the input method is installed and remove any detected infections.",
+      "cve_ids": [
+        "CVE-2026-51990"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-tencent-app-flaw-to-deploy-grayrabbit-malware/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Tencent Sogou Input Method for Windows. Specific vulnerable versions not detailed; refer to vendor advisory for CVE-2026-51990.",
+      "how_to_determine_impact": "Check installed software for Tencent Sogou Input Method for Windows. Look for presence of GrayRabbit malware (e.g., specific file hashes, unusual processes, suspicious network connections) or unusual activity related to the input method.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'Tencent Sogou Input Method'; search for files or processes associated with 'GrayRabbit' malware indicators of compromise (IOCs).",
+      "rapid7_query_hint": "Scan systems with InsightVM for vulnerability ID 'CVE-2026-51990'. Search Endpoint Detection and Response (EDR) logs for 'GrayRabbit' indicators of compromise and suspicious process activity.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical (CVE-2026-51990, given its active exploitation by espionage groups and deployment of backdoors)"
+    },
+    {
+      "title": "Attackers Chain JFrog Artifactory Flaws to Gain Admin Control and Plant Backdoors",
+      "tldr": "Threat actors are actively exploiting critical and high-severity vulnerabilities in JFrog Artifactory, chaining them to bypass authentication, gain administrative privileges, and deploy persistent Rust backdoors on self-hosted servers. These flaws have also been added to CISA's KEV catalog, indicating widespread risk.",
+      "action": "Immediately apply all available patches for JFrog Artifactory. Conduct a comprehensive audit of Artifactory instances for signs of compromise, including unauthorized users, modified configurations, or backdoor presence, and review access logs for suspicious activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
+      "source_url": "https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "affected_versions": "JFrog Artifactory. Specific vulnerable versions not detailed; refer to vendor advisories for comprehensive patch information on critical and high-severity flaws.",
+      "how_to_determine_impact": "Perform a detailed audit of JFrog Artifactory servers, checking for unauthorized users, modified configurations, or the presence of unknown backdoors. Review access logs for suspicious activity and compare against baseline configurations.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'JFrog Artifactory'; check for suspicious files or processes in Artifactory installation directories. Look for unusual network connections originating from Artifactory servers.",
+      "rapid7_query_hint": "Scan JFrog Artifactory instances with InsightVM to identify known vulnerabilities. Search logs and asset inventory for indicators of compromise or backdoor installations, and review user activity for unauthorized privilege escalation.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "When the Whole Company Adopts AI: What It Does to Your SOC",
-      "tldr": "Over the past year, we watched a new class of alert appear in enterprise security operations centers and grow faster than anything else in the stream: alerts that were triggered by AI tools and agents. Not attacks against AI, but the ordinary, everyday footprint of an organization using it, from developers running coding agents and non-technical staff signing consumer AI tools into corporate",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/when-whole-company-adopts-ai-what-it.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "cvss_score": "Critical (Chaining multiple flaws for RCE and backdoor deployment implies multiple high/critical CVEs)"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -16021,6 +16018,115 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-13": [
+      {
+        "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
+        "tldr": "Microsoft says threat actors linked to ShinyHunters, Helix, and other extortion gangs are using passkey and single sign-on-themed social engineering attacks to compromise corporate Microsoft accounts and steal data from Microsoft 365 services. These sophisticated phishing attacks bypass traditional authentication methods. Immediate action is needed to prevent unauthorized access and data exfiltration.",
+        "action": "Strengthen phishing defenses and user education to identify passkey and SSO phishing. Implement FIDO2-compliant passkeys and multi-factor authentication, and monitor Microsoft 365 for unusual access patterns and data exfiltration attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-teft/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers abused Claude to extract secrets from 1.8M Android apps",
+        "tldr": "Multiple threat groups, including state-sponsored actors from Russia and China, abused Anthropic's Claude AI model to extract secrets from 1.8 million Android applications. This showcases how AI platforms can be weaponized for large-scale data exfiltration, highlighting a new attack vector against application data.",
+        "action": "Audit Android applications for exposed secrets, especially those accessible via public interfaces or processed by third-party AI models. Review AI usage policies and implement stricter controls on data processed by AI models to prevent similar misuse and data exposure.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-abused-claude-to-extract-secrets-from-18m-android-apps/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Florida confirms DMV database breached via stolen police account",
+        "tldr": "The Florida Department of Highway Safety and Motor Vehicles (FLHSMV) has confirmed a data breach of its DAVID driver database. Attackers gained access using compromised credentials belonging to a police department employee, leading to unauthorized data access and potential exposure of sensitive driver information.",
+        "action": "Immediately implement multi-factor authentication for all administrative and sensitive access accounts, particularly those accessing critical databases. Conduct regular credential hygiene checks and enhance security awareness training for all employees, especially those with privileged access to sensitive systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/florida-confirms-dmv-database-breached-via-stolen-police-account/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Trezor: 347,000 users targeted in phishing attacks after Brevo breach",
+        "tldr": "Trezor has revealed that phishing attacks against its customers earlier this week targeted 347,000 email addresses and affected 2,500 users who clicked an embedded malicious link. This incident stemmed from a data breach at Trezor's third-party email service provider, Brevo, compromising customer contact information.",
+        "action": "Advise users to be extremely vigilant of phishing emails, especially those purporting to be from Trezor or related financial services. Implement strong email security filters, enforce email authentication protocols (DMARC, SPF, DKIM), and educate users on identifying and reporting phishing attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/trezor-347-000-users-targeted-in-phishing-attacks-after-brevo-breach/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Dutch NCSC: Critical Check Point VPN flaws exploitation is imminent",
+        "tldr": "The Dutch Nationaal Cyber Security Centrum (NCSC) is warning of imminent exploitation of two critical flaws in Check Point VPN, tracked as CVE-2026-85102 and CVE-2026-85103. Check Point has since released patches, making immediate remediation essential to prevent potential network compromise.",
+        "action": "Immediately apply all available patches from Check Point for VPN products to address CVE-2026-85102 and CVE-2026-85103. Monitor VPN logs for any unusual connection attempts or signs of compromise and review network access controls.",
+        "cve_ids": [
+          "CVE-2026-85102",
+          "CVE-2026-85103"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Check Point VPN products. Refer to Check Point advisories for specific affected versions related to CVE-2026-85102 and CVE-2026-85103.",
+        "how_to_determine_impact": "Identify all Check Point VPN appliances in your environment. Verify their software versions against vendor advisories for CVE-2026-85102 and CVE-2026-85103 to confirm vulnerability status. Check logs for unusual connection attempts.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'Check Point VPN' components; retrieve version information for relevant Check Point software to compare against patched versions.",
+        "rapid7_query_hint": "Scan network devices with InsightVM for vulnerability IDs 'CVE-2026-85102' and 'CVE-2026-85103'. Use asset inventory to locate Check Point VPN instances and their configuration.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (CVE-2026-85102, CVE-2026-85103 - given the NCSC warning of imminent exploitation for critical flaws)",
+        "category": "vulns"
+      },
+      {
+        "title": "GitLab urges users to patch max severity path traversal flaw",
+        "tldr": "GitLab has issued an urgent warning for users to immediately patch a maximum-severity path traversal vulnerability, CVE-2026-85706. This flaw allows attackers to bypass security controls and access unauthorized files, and it has been observed exploited in the wild shortly after disclosure.",
+        "action": "Immediately apply the latest security updates for GitLab, specifically addressing CVE-2026-85706. Prioritize patching all GitLab servers, especially those exposed to the internet, and conduct a forensic review for signs of compromise.",
+        "cve_ids": [
+          "CVE-2026-85706"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "GitLab. Refer to GitLab's official advisory for CVE-2026-85706 for specific affected versions.",
+        "how_to_determine_impact": "Verify installed GitLab versions and check if the patch for CVE-2026-85706 has been applied. Review GitLab server logs for indicators of path traversal attempts and unauthorized file access patterns.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'GitLab'; query for 'GitLab Version' and compare against vendor advisory for CVE-2026-85706. Look for suspicious file reads.",
+        "rapid7_query_hint": "Scan GitLab instances with InsightVM for vulnerability ID 'CVE-2026-85706'. Use asset inventory to identify all GitLab installations and their versions, then check for exploitation indicators.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers exploit Tencent app flaw to deploy GrayRabbit malware",
+        "tldr": "Threat actors linked to a China-aligned espionage group are actively exploiting a critical vulnerability (CVE-2026-51990) in Tencent's Sogou Input Method for Windows. This exploit facilitates the deployment of the GrayRabbit backdoor, indicating targeted attacks by sophisticated adversaries.",
+        "action": "Immediately patch Tencent's Sogou Input Method for Windows to the latest secure version addressing CVE-2026-51990. Conduct endpoint detection and response (EDR) scans for GrayRabbit malware on all systems where the input method is installed and remove any detected infections.",
+        "cve_ids": [
+          "CVE-2026-51990"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-tencent-app-flaw-to-deploy-grayrabbit-malware/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Tencent Sogou Input Method for Windows. Specific vulnerable versions not detailed; refer to vendor advisory for CVE-2026-51990.",
+        "how_to_determine_impact": "Check installed software for Tencent Sogou Input Method for Windows. Look for presence of GrayRabbit malware (e.g., specific file hashes, unusual processes, suspicious network connections) or unusual activity related to the input method.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'Tencent Sogou Input Method'; search for files or processes associated with 'GrayRabbit' malware indicators of compromise (IOCs).",
+        "rapid7_query_hint": "Scan systems with InsightVM for vulnerability ID 'CVE-2026-51990'. Search Endpoint Detection and Response (EDR) logs for 'GrayRabbit' indicators of compromise and suspicious process activity.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (CVE-2026-51990, given its active exploitation by espionage groups and deployment of backdoors)",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Chain JFrog Artifactory Flaws to Gain Admin Control and Plant Backdoors",
+        "tldr": "Threat actors are actively exploiting critical and high-severity vulnerabilities in JFrog Artifactory, chaining them to bypass authentication, gain administrative privileges, and deploy persistent Rust backdoors on self-hosted servers. These flaws have also been added to CISA's KEV catalog, indicating widespread risk.",
+        "action": "Immediately apply all available patches for JFrog Artifactory. Conduct a comprehensive audit of Artifactory instances for signs of compromise, including unauthorized users, modified configurations, or backdoor presence, and review access logs for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "JFrog Artifactory. Specific vulnerable versions not detailed; refer to vendor advisories for comprehensive patch information on critical and high-severity flaws.",
+        "how_to_determine_impact": "Perform a detailed audit of JFrog Artifactory servers, checking for unauthorized users, modified configurations, or the presence of unknown backdoors. Review access logs for suspicious activity and compare against baseline configurations.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'JFrog Artifactory'; check for suspicious files or processes in Artifactory installation directories. Look for unusual network connections originating from Artifactory servers.",
+        "rapid7_query_hint": "Scan JFrog Artifactory instances with InsightVM to identify known vulnerabilities. Search logs and asset inventory for indicators of compromise or backdoor installations, and review user activity for unauthorized privilege escalation.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (Chaining multiple flaws for RCE and backdoor deployment implies multiple high/critical CVEs)",
         "category": "vulns"
       }
     ]
