@@ -2,106 +2,119 @@
   "breaches": [
     {
       "title": "Malicious Twitch Browser Extension Leaks OAuth Tokens From Nearly 31,000 Users",
-      "tldr": "A malicious browser extension targeting Twitch users has been found to steal OAuth tokens from approximately 31,000 users. These tokens could allow attackers to gain unauthorized access to user accounts.",
-      "action": "Twitch users should immediately review installed browser extensions for suspicious ones, uninstall them, and revoke OAuth tokens via Twitch security settings. Organizations should educate users on vetting browser extensions and monitoring for unauthorized OAuth grants.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/malicious-twitch-browser-extension.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate Data",
-      "tldr": "Threat actors are employing passkey phishing techniques to compromise Microsoft Cloud accounts. This allows them to bypass traditional authentication methods, hijack accounts, and subsequently exfiltrate sensitive data from cloud environments.",
-      "action": "Implement robust phishing-resistant MFA across all Microsoft Cloud accounts. Conduct user awareness training on passkey security and sophisticated phishing tactics. Monitor cloud environments for unusual access patterns or data egress.",
+      "title": "Webinar: How malicious OAuth apps can lead to Google Workspace breaches",
+      "tldr": "Attackers can combine social engineering with malicious OAuth applications to gain access to Google Workspace data without relying solely on stolen passwords. This webinar examines two attacks to show how these breaches unfold and which security controls can help stop them. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Hackers hijack HBO Max Reddit account to push malware in ClickFix ads",
-      "tldr": "Attackers compromised the official HBO Max Reddit account to distribute malicious ads containing ClickFix malware. This campaign targeted Windows and macOS devices, aiming to infect them with information-stealing malware.",
-      "action": "Users should exercise caution with ads and links, even from seemingly legitimate social media accounts. Organizations must secure all social media accounts with strong, unique passwords and multi-factor authentication (MFA) to prevent unauthorized access and content manipulation.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-hbo-max-reddit-account-to-push-malware-in-clickfix-ads/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/webinar-how-malicious-oauth-apps-can-lead-to-google-workspace-breaches/",
       "source": "BleepingComputer"
     },
     {
       "title": "Revolut discloses data breach exposing financial info, passports",
-      "tldr": "Fintech company Revolut has disclosed a data breach where customer data, including financial information and passport details, was shared with a threat actor impersonating a government agency. The number of affected customers remains undisclosed.",
-      "action": "If you are a Revolut customer, monitor financial statements and credit reports for suspicious activity. Consider enabling identity theft protection services. For organizations, reinforce strict verification processes for data sharing requests, especially from external entities.",
+      "tldr": "Fintech company Revolut has disclosed a data breach after sharing data from an undisclosed number of customers with a threat actor impersonating a government agency. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/revolut-discloses-data-breach-exposing-financial-info-passports/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Personal, Financial Info Exposed in Revolut Data Breach",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/personal-financial-info-exposed-in-revolut-data-breach/",
+      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
-      "title": "Hackers exploit Tencent app flaw to deploy GrayRabbit malware",
-      "tldr": "A China-aligned espionage group is actively exploiting a critical vulnerability, CVE-2026-51990, in Tencent's Sogou Input Method for Windows. This flaw is being used to deploy the GrayRabbit backdoor for espionage activities.",
-      "action": "Immediately patch Tencent's Sogou Input Method for Windows to the latest secure version. Scan systems for indicators of compromise related to GrayRabbit malware and the China-aligned threat group.",
-      "cve_ids": [
-        "CVE-2026-51990"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-tencent-app-flaw-to-deploy-grayrabbit-malware/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Tencent Sogou Input Method for Windows. Specific vulnerable versions should be confirmed via Tencent's official security advisories or CVE-2026-51990 details.",
-      "how_to_determine_impact": "Check for installed versions of Tencent Sogou Input Method. Review application logs for unusual activity or signs of GrayRabbit malware. Monitor network traffic for connections to known C2 infrastructure.",
-      "tanium_query_hint": "Get Installed Applications Contains 'Sogou Input Method' from all machines. Check 'Get File Version[C:\\Program Files\\SogouInput\\*]' for relevant executables.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-51990' or asset inventory for 'Sogou Input Method' software. Look for processes 'GrayRabbit.exe' or unusual network connections in InsightIDR.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Dutch NCSC: Critical Check Point VPN flaws exploitation is imminent",
-      "tldr": "The Dutch Nationaal Cyber Security Centrum (NCSC) has issued a warning regarding two critical vulnerabilities, CVE-2026-85102 and CVE-2026-85103, in Check Point VPN products. Exploitation of these flaws is deemed imminent.",
-      "action": "Apply vendor-provided patches or workarounds for Check Point VPN vulnerabilities CVE-2026-85102 and CVE-2026-85103 immediately. Review VPN access logs for suspicious activity and strengthen authentication mechanisms.",
-      "cve_ids": [
-        "CVE-2026-85102",
-        "CVE-2026-85103"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Check Point VPN products. Specific vulnerable versions should be confirmed by consulting Check Point's official security advisories for CVE-2026-85102 and CVE-2026-85103.",
-      "how_to_determine_impact": "Identify all Check Point VPN instances in your environment. Verify current patch levels against vendor advisories. Check VPN logs for unusual connection attempts or unauthorized access.",
-      "tanium_query_hint": "Get Check Point VPN version from all machines. Look for specific file versions related to VPN components as indicated in vendor patch notes.",
-      "rapid7_query_hint": "Search for vulnerability IDs 'CVE-2026-85102', 'CVE-2026-85103'. Use InsightVM to scan VPN appliances and endpoints for affected versions or missing patches.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV",
-      "tldr": "CISA has added five distinct vulnerabilities affecting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities (KEV) catalog. These flaws are under active exploitation by threat actors.",
-      "action": "Immediately identify and apply all available security patches for JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS. Consult the CISA KEV catalog for specific CVEs and associated advisories for detailed remediation guidance.",
+      "title": "New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
+      "source_url": "https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Multiple versions of JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS. Specific vulnerable CVEs and versions are detailed in the CISA Known Exploited Vulnerabilities (KEV) catalog.",
-      "how_to_determine_impact": "Consult the CISA KEV catalog for specific CVEs. Identify all assets running Artifactory, ScreenConnect, and RouterOS. Cross-reference their installed versions with vendor advisories associated with the KEV entries.",
-      "tanium_query_hint": "Get Installed Applications Contains 'Artifactory' or 'ConnectWise ScreenConnect'. For RouterOS, check network device inventory or SNMP data for MikroTik devices and their firmware versions.",
-      "rapid7_query_hint": "Search InsightVM for assets with vulnerabilities listed in CISA KEV. Specifically look for products 'JFrog Artifactory', 'ConnectWise ScreenConnect', or 'MikroTik RouterOS' and any associated actively exploited CVEs.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "High to Critical"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "CISA: Hackers now exploit max severity GitLab flaw in attacks",
-      "tldr": "CISA has issued a warning confirming that a maximum-severity vulnerability in GitLab is being actively exploited by hackers. This flaw allows attackers to compromise GitLab instances.",
-      "action": "Immediately update all GitLab instances to the latest patched version. Implement strong access controls and monitor GitLab environments for any signs of compromise, unusual activity, or unauthorized access.",
+      "title": "3BB Attacker Used MeshCentral Backdoor for Root Access, Targeted Subscriber Credentials",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploit-max-severity-gitlab-flaw-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "GitLab. Specific vulnerable versions should be identified by consulting official GitLab security advisories for recently patched 'max severity' vulnerabilities under active exploitation warned by CISA.",
-      "how_to_determine_impact": "Identify all GitLab instances in your environment. Verify their current version against official GitLab security advisories for any recently disclosed maximum-severity, actively exploited vulnerabilities. Check logs for suspicious activity.",
-      "tanium_query_hint": "Get Installed Applications Contains 'GitLab' from all machines. Examine configuration files or process listings for GitLab server components to determine version.",
-      "rapid7_query_hint": "Search InsightVM for assets running 'GitLab' and filter for critical or actively exploited vulnerabilities. Look for specific vulnerability IDs related to recent GitLab advisories. Query InsightIDR for suspicious activity on GitLab servers.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "source_url": "https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Telegram Desktop Flaw Lets Hidden JavaScript Exfiltrate Messages From HTML Exports",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.8 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -16319,6 +16332,88 @@
         "rapid7_query_hint": "Search InsightVM for assets running 'GitLab' and filter for critical or actively exploited vulnerabilities. Look for specific vulnerability IDs related to recent GitLab advisories. Query InsightIDR for suspicious activity on GitLab servers.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Webinar: How malicious OAuth apps can lead to Google Workspace breaches",
+        "tldr": "Attackers can combine social engineering with malicious OAuth applications to gain access to Google Workspace data without relying solely on stolen passwords. This webinar examines two attacks to show how these breaches unfold and which security controls can help stop them. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/webinar-how-malicious-oauth-apps-can-lead-to-google-workspace-breaches/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Personal, Financial Info Exposed in Revolut Data Breach",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/personal-financial-info-exposed-in-revolut-data-breach/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "3BB Attacker Used MeshCentral Backdoor for Root Access, Targeted Subscriber Credentials",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Telegram Desktop Flaw Lets Hidden JavaScript Exfiltrate Messages From HTML Exports",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
         "category": "vulns"
       }
     ]
