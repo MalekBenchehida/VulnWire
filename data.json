@@ -1,120 +1,102 @@
 {
   "breaches": [
     {
-      "title": "Malicious Twitch Browser Extension Leaks OAuth Tokens From Nearly 31,000 Users",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Japan's Digital Agency says VPN flaw exposed 246,000 personnel records",
+      "tldr": "Japan's Digital Agency reported a data breach impacting around 246,000 personnel records. The exposure was due to an unspecified VPN flaw, leading to the compromise of personal information belonging to government employees.",
+      "action": "Organizations should audit their VPN infrastructure for known vulnerabilities, ensure all VPN devices are patched to the latest versions, and review access logs for suspicious activity. Affected individuals should be notified.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/malicious-twitch-browser-extension.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Webinar: How malicious OAuth apps can lead to Google Workspace breaches",
-      "tldr": "Attackers can combine social engineering with malicious OAuth applications to gain access to Google Workspace data without relying solely on stolen passwords. This webinar examines two attacks to show how these breaches unfold and which security controls can help stop them. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/webinar-how-malicious-oauth-apps-can-lead-to-google-workspace-breaches/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/",
       "source": "BleepingComputer"
     },
     {
       "title": "Revolut discloses data breach exposing financial info, passports",
-      "tldr": "Fintech company Revolut has disclosed a data breach after sharing data from an undisclosed number of customers with a threat actor impersonating a government agency. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Fintech company Revolut disclosed a data breach where a threat actor, impersonating a government agency, obtained data from an undisclosed number of customers. The exposed information includes sensitive financial details and passport data.",
+      "action": "Revolut customers should be advised to monitor their financial accounts for suspicious activity, reset passwords, and consider the implications of exposed passport information. All organizations should enhance training against impersonation tactics.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/revolut-discloses-data-breach-exposing-financial-info-passports/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Personal, Financial Info Exposed in Revolut Data Breach",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Attackers Use Passkey Phishing to Hijack Microsoft Cloud Accounts and Exfiltrate Data",
+      "tldr": "Attackers are leveraging passkey phishing techniques to hijack Microsoft Cloud accounts, leading to data exfiltration. This method bypasses traditional password security by targeting passkeys, which typically offer stronger authentication.",
+      "action": "Implement strong multi-factor authentication (MFA) across all Microsoft Cloud accounts. Educate users about sophisticated passkey phishing tactics. Monitor cloud environments for unusual access patterns and data exfiltration attempts.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/personal-financial-info-exposed-in-revolut-data-breach/",
-      "source": "SecurityWeek"
-    }
-  ],
-  "ransomware": [
+      "source_url": "https://thehackernews.com/2026/09/attackers-use-passkey-phishing-to.html",
+      "source": "The Hacker News"
+    },
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "Malicious Twitch Browser Extension Leaks OAuth Tokens From Nearly 31,000 Users",
+      "tldr": "A malicious browser extension for Twitch, identified as 'Twitch Enhanced Viewer | JeetBot' and installed by approximately 30,000 users, has been leaking users' OAuth session tokens. This compromise allows attackers to potentially access and control affected Twitch accounts.",
+      "action": "Twitch users who installed this extension should immediately revoke all active Twitch OAuth tokens and change their passwords. Organizations should advise employees against installing unverified browser extensions and promote the use of official applications.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://thehackernews.com/2026/09/malicious-twitch-browser-extension.html",
+      "source": "The Hacker News"
     }
   ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "New DDRop Attack Breaks Intel TDX and AMD SEV-SNP Confidential Computing",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV",
+      "tldr": "CISA has added five vulnerabilities across JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities (KEV) catalog. These flaws are under active exploitation, with some used for backdoor deployment and worm-like attacks.",
+      "action": "Immediately patch all JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS instances. Refer to CISA KEV for specific CVEs and vendor advisories for detailed patching instructions and affected versions.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/new-ddrop-attack-breaks-intel-tdx-and.html",
+      "source_url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "JFrog Artifactory, ConnectWise ScreenConnect, MikroTik RouterOS (specific vulnerable versions need to be confirmed from vendor advisories or CISA KEV).",
+      "how_to_determine_impact": "Identify all instances of JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS within the environment. Compare their installed versions against vendor security advisories and the CISA KEV list for the specific CVEs.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name matches 'Artifactory|ScreenConnect', Get Hardware Information from all machines with Manufacturer matches 'MikroTik'. For RouterOS, Tanium may require network device discovery.",
+      "rapid7_query_hint": "Search vulnerabilities with severity 'critical' and title contains 'Artifactory' OR 'ScreenConnect' OR 'RouterOS' AND status 'active exploitation'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "3BB Attacker Used MeshCentral Backdoor for Root Access, Targeted Subscriber Credentials",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Chinese Hackers Exploit Critical Tencent Software Flaw for One-Click Code Execution",
+      "tldr": "Chinese hackers are actively exploiting a critical vulnerability in Tencent software, enabling one-click remote code execution (RCE). This flaw poses a severe risk to organizations using affected Tencent products, allowing attackers full system control.",
+      "action": "Immediately identify and update all Tencent software installations to the latest patched versions. Conduct a thorough audit for signs of compromise if vulnerable versions were exposed.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/3bb-attacker-used-meshcentral-backdoor.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Telegram Desktop Flaw Lets Hidden JavaScript Exfiltrate Messages From HTML Exports",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/telegram-desktop-flaw-lets-hidden.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "source_url": "https://www.securityweek.com/chinese-hackers-exploit-critical-tencent-software-flaw-for-one-click-code-execution/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Unspecified Tencent software (specifics need to be confirmed from vendor advisories).",
+      "how_to_determine_impact": "Inventory all Tencent software in use within the organization. Check installed versions against official Tencent security advisories regarding critical RCE flaws.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name matches 'Tencent'. Further investigation into specific Tencent product binaries may be needed.",
+      "rapid7_query_hint": "Search assets with software name 'Tencent' AND vulnerability title contains 'remote code execution'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Red Heron Exploits Gitea RCE to Compromise 13 Organizations Across Six Countries",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "The Red Heron threat actor group is actively exploiting a Remote Code Execution (RCE) vulnerability in Gitea to compromise at least 13 organizations spanning six countries. This highlights the critical need to patch Gitea installations to prevent further breaches.",
+      "action": "All organizations using Gitea must immediately update their instances to a patched version. Investigate Gitea servers for any signs of compromise or unauthorized access, especially given the active exploitation.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
-    }
-  ],
-  "insurance": [
+      "active_exploitation": true,
+      "affected_versions": "Gitea (specific vulnerable versions need to be confirmed from vendor advisories).",
+      "how_to_determine_impact": "Identify all Gitea instances within the environment. Verify the installed version against official Gitea security advisories detailing RCE vulnerabilities.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Name matches 'Gitea'.",
+      "rapid7_query_hint": "Search assets with software name 'Gitea' AND vulnerability title contains 'remote code execution'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "Microsoft releases emergency Windows updates to fix RDS failures",
+      "tldr": "Microsoft has released emergency out-of-band Windows updates to resolve critical Remote Desktop Services (RDS) failures. These failures were inadvertently caused by the September security updates and also address Hyper-V and USB audio issues on some Windows versions, impacting system stability and accessibility.",
+      "action": "Apply the newly released emergency Windows updates to all affected Windows Server systems immediately to restore RDS functionality and prevent further operational disruption. Prioritize these updates to minimize business impact.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-windows-updates-to-fix-rds-failures/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Windows Server versions affected by September 2026 security updates (e.g., specific Windows Server 2019, 2022 versions after installing certain KBs).",
+      "how_to_determine_impact": "Check Windows Server systems for recent installation of September 2026 security updates and confirm if Remote Desktop Services are experiencing failures or stability issues. Verify applied KBs against Microsoft's advisory.",
+      "tanium_query_hint": "Get Installed Patches from all machines with Name matches 'KB' and Operating System matches 'Windows Server'. Look for specific KBs mentioned in Microsoft's emergency advisory.",
+      "rapid7_query_hint": "Search assets with operating system 'Windows Server' and missing Microsoft out-of-band updates.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "N/A - Operational Criticality"
     }
   ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -16414,6 +16396,47 @@
         "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Japan's Digital Agency says VPN flaw exposed 246,000 personnel records",
+        "tldr": "Japan's Digital Agency reported a data breach impacting around 246,000 personnel records. The exposure was due to an unspecified VPN flaw, leading to the compromise of personal information belonging to government employees.",
+        "action": "Organizations should audit their VPN infrastructure for known vulnerabilities, ensure all VPN devices are patched to the latest versions, and review access logs for suspicious activity. Affected individuals should be notified.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/japans-digital-agency-says-vpn-flaw-exposed-246-000-personnel-records/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Chinese Hackers Exploit Critical Tencent Software Flaw for One-Click Code Execution",
+        "tldr": "Chinese hackers are actively exploiting a critical vulnerability in Tencent software, enabling one-click remote code execution (RCE). This flaw poses a severe risk to organizations using affected Tencent products, allowing attackers full system control.",
+        "action": "Immediately identify and update all Tencent software installations to the latest patched versions. Conduct a thorough audit for signs of compromise if vulnerable versions were exposed.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/chinese-hackers-exploit-critical-tencent-software-flaw-for-one-click-code-execution/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Unspecified Tencent software (specifics need to be confirmed from vendor advisories).",
+        "how_to_determine_impact": "Inventory all Tencent software in use within the organization. Check installed versions against official Tencent security advisories regarding critical RCE flaws.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Name matches 'Tencent'. Further investigation into specific Tencent product binaries may be needed.",
+        "rapid7_query_hint": "Search assets with software name 'Tencent' AND vulnerability title contains 'remote code execution'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Microsoft releases emergency Windows updates to fix RDS failures",
+        "tldr": "Microsoft has released emergency out-of-band Windows updates to resolve critical Remote Desktop Services (RDS) failures. These failures were inadvertently caused by the September security updates and also address Hyper-V and USB audio issues on some Windows versions, impacting system stability and accessibility.",
+        "action": "Apply the newly released emergency Windows updates to all affected Windows Server systems immediately to restore RDS functionality and prevent further operational disruption. Prioritize these updates to minimize business impact.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-windows-updates-to-fix-rds-failures/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Windows Server versions affected by September 2026 security updates (e.g., specific Windows Server 2019, 2022 versions after installing certain KBs).",
+        "how_to_determine_impact": "Check Windows Server systems for recent installation of September 2026 security updates and confirm if Remote Desktop Services are experiencing failures or stability issues. Verify applied KBs against Microsoft's advisory.",
+        "tanium_query_hint": "Get Installed Patches from all machines with Name matches 'KB' and Operating System matches 'Windows Server'. Look for specific KBs mentioned in Microsoft's emergency advisory.",
+        "rapid7_query_hint": "Search assets with operating system 'Windows Server' and missing Microsoft out-of-band updates.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "N/A - Operational Criticality",
         "category": "vulns"
       }
     ]
