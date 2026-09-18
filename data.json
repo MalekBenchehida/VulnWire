@@ -2,98 +2,90 @@
   "breaches": [
     {
       "title": "Gyazo server flaw exploited to steal 23.6 million user records",
-      "tldr": "The Gyazo image-sharing platform confirmed a data breach due to an exploited server vulnerability, leading to the theft of 23.6 million user records. This compromise includes sensitive personal information, requiring users to assume their data is exposed.",
-      "action": "Advise all Gyazo users to immediately change their passwords, especially if password reuse is a practice. Organizations should assess any internal use of Gyazo and potential employee data exposure.",
+      "tldr": "The Gyazo image-sharing platform confirmed a data breach affecting 23.6 million user records. Attackers exploited a server vulnerability to gain unauthorized access and exfiltrate sensitive user data.",
+      "action": "Users of Gyazo should immediately change their passwords and enable two-factor authentication if available. Organizations should review their use of Gyazo and consider the potential impact of leaked credentials.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Brevo Supply Chain Attack Injects Malware Into 100,000 Websites",
-      "tldr": "A significant supply chain attack targeting Brevo has injected malware into an estimated 100,000 websites. This widespread compromise enables attackers to potentially control sites, exfiltrate data, or deploy further malicious payloads.",
-      "action": "Identify if your organization uses Brevo services or if websites are hosted on/integrated with affected infrastructure. Immediately scan all potentially impacted websites for malware and indicators of compromise.",
+      "title": "AI-Built Exploit and Sign-In Flaw Opened Path to Internal OpenAI Code",
+      "tldr": "A sophisticated attack leveraging an AI-built exploit combined with a sign-in flaw granted unauthorized access to OpenAI's internal code repositories. This breach underscores vulnerabilities in authentication and the emerging threat of AI-assisted exploitation.",
+      "action": "Organizations should review and harden authentication for critical internal systems, implementing MFA and strict access controls. Monitor for AI-assisted exploitation attempts and ensure code repository security.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/brevo-supply-chain-attack-injects-malware-into-100000-websites/",
+      "source_url": "https://www.securityweek.com/ai-built-exploit-and-sign-in-flaw-opened-path-to-internal-openai-code/",
       "source": "SecurityWeek"
     },
     {
-      "title": "WeaselBiscuit Stealer Spreads via 13 npm Packages to Harvest Chrome Extension Storage",
-      "tldr": "The \"WeaselBiscuit Stealer\" malware is actively propagating through 13 malicious npm packages, targeting and harvesting sensitive data from Chrome browser extension storage. This compromises user credentials and confidential browser-stored information.",
-      "action": "Audit all npm package dependencies for suspicious entries, especially those linked to the identified malicious packages. Advise developers and users to remove untrusted Chrome extensions and reset critical credentials.",
+      "title": "Cyberattacks on Two Oil Tankers Prompt Coast Guard, FBI to Board Vessels",
+      "tldr": "Two oil tankers were subjected to cyberattacks, triggering immediate investigations by the Coast Guard and FBI. The exact nature of the attacks is not detailed, but incidents on critical maritime infrastructure can involve operational disruption, data compromise, or even sabotage.",
+      "action": "Critical infrastructure organizations, particularly in the maritime sector, must enhance their Operational Technology (OT) and Information Technology (IT) security postures. Implement robust incident response plans and conduct regular cybersecurity drills.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/weaselbiscuit-stealer-spreads-via-13.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Fake LastPass Authenticator GitHub repos push new Rapuncel infostealer",
-      "tldr": "An ongoing malware campaign utilizes SEO-optimized fake GitHub repositories, impersonating LastPass Authenticator, to distribute a new infostealer named Rapuncel. This malware aims to compromise user credentials and other sensitive data.",
-      "action": "Block access to known malicious GitHub repositories and educate users about verifying software sources. Advise users of LastPass Authenticator to download only from official channels and scan systems for Rapuncel IOCs.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fake-lastpass-authenticator-github-repos-push-new-rapuncel-infostealer/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
       "title": "Microsoft Patches CVSS 10.0 Azure AI Foundry Flaw Enabling Unauthorized Privilege Escalation",
-      "tldr": "Microsoft has patched a critical CVSS 10.0 vulnerability in Azure AI Foundry, allowing unauthorized privilege escalation. This severe flaw requires immediate attention to prevent attackers from gaining elevated access within cloud environments.",
-      "action": "Immediately apply all available security updates for Microsoft Azure AI Foundry services. Verify that all instances are running the latest patched versions as per Microsoft's security advisories.",
+      "tldr": "Microsoft has issued patches for a critical vulnerability (CVSS 10.0) in Azure AI Foundry, allowing unauthorized privilege escalation. This severe flaw poses a significant risk to cloud environments leveraging this AI service, potentially leading to full system compromise.",
+      "action": "Immediately apply all available security updates and patches for Microsoft Azure AI Foundry instances. Verify successful deployment across all cloud infrastructure utilizing this service to mitigate the critical risk.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Microsoft Azure AI Foundry (all unpatched versions).",
-      "how_to_determine_impact": "Verify patch status of all Azure AI Foundry instances; consult Microsoft's official security advisories for specific version remediation details.",
-      "tanium_query_hint": "Get Azure AI Foundry Version from all machines with Is Azure AI Foundry installed\" (Requires specific Azure integration sensors).",
-      "rapid7_query_hint": "Search for vulnerability ID matching 'Microsoft Azure AI Foundry privilege escalation' in InsightVM; filter by 'Azure Cloud Assets' and check patch status.",
+      "affected_versions": "Undisclosed specific versions of Microsoft Azure AI Foundry.",
+      "how_to_determine_impact": "Check Azure subscription health and security center for alerts related to AI Foundry services. Verify that all AI Foundry resources are running the latest patched versions as per Microsoft's advisory.",
+      "tanium_query_hint": "Check Azure Activity Log for 'Security/SecurityAdvisories' events related to AI Foundry. For relevant VMs/containers, 'Get Installed Updates' or 'Get Package Version' for AI components.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Azure AI Foundry' or 'Microsoft Azure Machine Learning' in InsightVM. Review cloud asset inventory in InsightCloudSec for affected AI services and unpatched instances.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
       "title": "Critical Check Point Management Flaw Lets Unauthenticated Attackers Run Code as Root",
-      "tldr": "A critical vulnerability in Check Point management systems allows unauthenticated attackers to execute arbitrary code with root privileges. This flaw enables full system compromise and necessitates immediate patching.",
-      "action": "Immediately apply all available security updates and patches released by Check Point for its management servers. Verify successful patch installation and diligently monitor systems for any signs of compromise.",
+      "tldr": "A critical vulnerability in Check Point Management Server allows unauthenticated attackers to execute arbitrary code with root privileges. This flaw represents an extreme risk, enabling complete compromise of the network security infrastructure managed by the affected server.",
+      "action": "Immediately apply all available security patches from Check Point for their management server products. Isolate management servers from direct internet access where possible and verify that patches have been successfully applied and systems are hardened.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/critical-check-point-management-server.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check Point management systems (all unpatched versions).",
-      "how_to_determine_impact": "Check the exact version of your Check Point management software; refer to official Check Point security advisories for vulnerable versions and detection methods.",
-      "tanium_query_hint": "Get Installed Applications matches 'Check Point Management' and Get Registry Value 'HKLM\\SOFTWARE\\Check Point\\Management\\Version'\" (Adjust registry path as per Check Point documentation).",
-      "rapid7_query_hint": "Search for vulnerability ID related to 'Check Point Management root RCE' in InsightVM; scan Check Point management servers for this specific vulnerability.",
+      "affected_versions": "Undisclosed specific versions of Check Point Management Server.",
+      "how_to_determine_impact": "Check the version of your Check Point Management Server. Review logs for any unauthorized access attempts or suspicious activity, especially on management interfaces.",
+      "tanium_query_hint": "Get Installed Applications with 'Application Name contains Check Point' and 'Application Name contains Management Server' and check 'Application Version'. Scan for open ports on management servers and review network configurations.",
+      "rapid7_query_hint": "Scan network devices for Check Point Management Server vulnerabilities using InsightVM. Search for 'Check Point' and 'Remote Code Execution' in the vulnerability database. Review firewall logs for suspicious connections to management interfaces.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Critical Docker Sandboxes Flaw Lets Malicious Guest Code Read and Modify macOS Host Files",
-      "tldr": "A critical vulnerability in Docker Sandboxes on macOS allows malicious guest code to bypass container isolation and read/modify host files. This severe flaw enables full compromise of the macOS host system from within a container.",
-      "action": "Immediately update Docker Desktop and Docker Sandboxes on all macOS systems to the latest patched versions. Review container configurations for least privilege and monitor host file integrity from containerized environments.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/critical-docker-sandboxes-flaw-lets.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Docker Sandboxes on macOS (all unpatched versions).",
-      "how_to_determine_impact": "Verify the installed version of Docker Desktop and Docker Sandboxes on all macOS hosts; consult Docker's official release notes for patched versions.",
-      "tanium_query_hint": "Get Installed Applications matches 'Docker Desktop' from all macOS machines\" and \"Get File Version of 'Docker.app'\" (Requires specific executable path).",
-      "rapid7_query_hint": "Scan macOS assets running Docker for known vulnerabilities related to Docker Sandboxes; search InsightVM for 'Docker macOS Sandbox escape' vulnerability IDs.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "10.0 Critical"
     },
     {
       "title": "Critical Orkes Conductor Vulnerability Exploited in Attacks",
-      "tldr": "A critical vulnerability within Orkes Conductor is actively being exploited, allowing unauthorized access or control over workflow orchestration. Due to active exploitation, immediate patching is imperative to prevent ongoing compromise of systems reliant on the platform.",
-      "action": "Immediately apply all available security patches for Orkes Conductor. If patching is not feasible, isolate Orkes Conductor instances from direct internet exposure. Monitor systems for indicators of compromise related to the active exploitation.",
+      "tldr": "A critical vulnerability affecting Orkes Conductor, a workflow orchestration platform, is being actively exploited in the wild. This flaw poses a severe and immediate risk, allowing threat actors to compromise systems and disrupt critical business processes.",
+      "action": "Urgently apply all available patches and security updates for Orkes Conductor deployments. Conduct an immediate investigation to determine if systems have already been compromised due to this active exploitation and implement containment measures.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/critical-orkes-conductor-vulnerability-exploited-in-attacks/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Orkes Conductor (all unpatched versions).",
-      "how_to_determine_impact": "Verify the version of all Orkes Conductor deployments; consult Orkes' official security advisories for specific vulnerable versions and detection methods.",
-      "tanium_query_hint": "Get Installed Applications matches 'Orkes Conductor' and Get Network Connections for unusual outbound activity\" (Requires specific sensor for application detection).",
-      "rapid7_query_hint": "Scan assets running Orkes Conductor for known vulnerabilities. Search InsightIDR for IOCs related to active exploitation of Orkes Conductor components.",
+      "affected_versions": "Undisclosed specific versions of Orkes Conductor vulnerable to active exploitation.",
+      "how_to_determine_impact": "Check the version of your Orkes Conductor instances. Review system logs, network traffic, and process activity for indicators of compromise or unauthorized access within the Conductor environment.",
+      "tanium_query_hint": "Get Installed Applications with 'Application Name contains Orkes Conductor' and check 'Application Version'. Monitor 'Get Running Processes' and 'Get Network Connections' for suspicious activity on servers hosting Conductor.",
+      "rapid7_query_hint": "Scan assets running Orkes Conductor for known vulnerabilities. Search for 'Orkes Conductor' and 'exploited' in InsightVM's vulnerability database. Implement continuous monitoring of logs for suspicious activity on affected systems.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical"
+      "cvss_score": "10.0 Critical"
+    },
+    {
+      "title": "Brevo Supply Chain Attack Injects Malware Into 100,000 Websites",
+      "tldr": "A significant supply chain attack targeting Brevo (formerly Sendinblue) has resulted in malware injection on approximately 100,000 websites. This widespread compromise could facilitate various malicious activities, including data theft, phishing, or further malware distribution to site visitors.",
+      "action": "Organizations utilizing Brevo or any related services must immediately audit their websites for unauthorized code injection. Review recent changes to website code and content management systems. Isolate and thoroughly investigate any affected sites to remove malicious payloads.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/brevo-supply-chain-attack-injects-malware-into-100000-websites/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Approximately 100,000 websites impacted by the Brevo (formerly Sendinblue) supply chain attack.",
+      "how_to_determine_impact": "Perform comprehensive website integrity checks using security scanners. Review web server access logs for unusual requests or uploads. Inspect website source code for injected scripts or unauthorized modifications, especially those related to Brevo integrations.",
+      "tanium_query_hint": "Get File Content on web server directories and search for suspicious script injections or unauthorized modifications. Monitor 'Get Network Connections' from web servers for unauthorized outbound communication to command-and-control servers.",
+      "rapid7_query_hint": "Perform regular web application scans and integrity checks on all hosted websites. Monitor web server logs and network traffic for indicators of compromise related to the Brevo attack. Use InsightVM to scan for web server vulnerabilities and misconfigurations.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -17105,6 +17097,24 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.5 Critical",
         "category": "vulns"
+      },
+      {
+        "title": "AI-Built Exploit and Sign-In Flaw Opened Path to Internal OpenAI Code",
+        "tldr": "A sophisticated attack leveraging an AI-built exploit combined with a sign-in flaw granted unauthorized access to OpenAI's internal code repositories. This breach underscores vulnerabilities in authentication and the emerging threat of AI-assisted exploitation.",
+        "action": "Organizations should review and harden authentication for critical internal systems, implementing MFA and strict access controls. Monitor for AI-assisted exploitation attempts and ensure code repository security.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/ai-built-exploit-and-sign-in-flaw-opened-path-to-internal-openai-code/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Cyberattacks on Two Oil Tankers Prompt Coast Guard, FBI to Board Vessels",
+        "tldr": "Two oil tankers were subjected to cyberattacks, triggering immediate investigations by the Coast Guard and FBI. The exact nature of the attacks is not detailed, but incidents on critical maritime infrastructure can involve operational disruption, data compromise, or even sabotage.",
+        "action": "Critical infrastructure organizations, particularly in the maritime sector, must enhance their Operational Technology (OT) and Information Technology (IT) security postures. Implement robust incident response plans and conduct regular cybersecurity drills.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/",
+        "source": "SecurityWeek",
+        "category": "breaches"
       }
     ]
   }
