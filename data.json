@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
-      "tldr": "Researchers leveraged Claude Opus 5 to chain multiple vulnerabilities, successfully compromising OpenAI staff accounts. This incident highlights sophisticated AI-assisted exploitation of internal systems.",
-      "action": "Strengthen internal account security with MFA and strict access controls. Conduct AI-augmented red team exercises to proactively identify complex attack paths.",
+      "tldr": "Researchers successfully compromised OpenAI staff accounts by exploiting a chain of vulnerabilities, with assistance from the Claude Opus 5 AI. This unauthorized access highlights the potential for sophisticated AI to aid in breach activities against advanced targets.",
+      "action": "Implement enhanced multi-factor authentication for all staff accounts, particularly those with access to sensitive systems. Conduct a thorough review of access logs for OpenAI-related services and internal systems for any signs of compromise or unusual activity, focusing on account takeovers and privilege escalation.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html",
       "source": "The Hacker News"
     },
     {
       "title": "CrowdSec Says TanStack npm Attack Led to Copy of 170 Private GitHub Repositories",
-      "tldr": "A supply chain attack on the TanStack npm ecosystem led to the unauthorized copying of 170 private GitHub repositories belonging to CrowdSec. This demonstrates a significant risk via third-party software dependencies.",
-      "action": "Audit npm dependencies for integrity. Rotate GitHub credentials and enforce least privilege. Implement supply chain security tools to monitor for malicious package injections.",
+      "tldr": "A supply chain attack targeting the TanStack npm ecosystem resulted in CrowdSec's private GitHub repositories being copied. This incident underscores the risks associated with third-party dependencies and the potential for code theft through compromised development tools.",
+      "action": "Immediately review all npm dependencies, especially those from popular or newly introduced libraries, for any signs of compromise. Implement stringent supply chain security practices, including integrity checks for packages and restricted access to development environments and code repositories. Rotate API keys and credentials that might have been exposed.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/crowdsec-says-tanstack-npm-attack-led.html",
       "source": "The Hacker News"
     },
     {
       "title": "North Korean WaterPlum hackers infected 30,000 devices worldwide",
-      "tldr": "The North Korean WaterPlum hacking group infected 30,000 devices globally between December 2025 and July 2026, stealing over $10.7 million in cryptocurrency. This was a large-scale, state-sponsored cybercrime operation.",
-      "action": "Deploy advanced EDR and network IDS/IPS. Implement robust cryptocurrency transaction monitoring and security protocols. Educate users on targeted phishing campaigns.",
+      "tldr": "The North Korean hacking group WaterPlum infected at least 30,000 devices globally from December 2025 to July 2026. This extensive campaign resulted in the theft of over $10.7 million in cryptocurrency, which was subsequently transferred to North Korea.",
+      "action": "Conduct a comprehensive scan of all endpoints for WaterPlum malware indicators of compromise (IOCs). Implement strict network segmentation and egress filtering to prevent unauthorized cryptocurrency transactions. Enhance security awareness training to educate users about phishing and malware threats.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/",
       "source": "BleepingComputer"
     },
     {
       "title": "Gyazo server flaw exploited to steal 23.6 million user records",
-      "tldr": "The Gyazo image-sharing platform confirmed a data breach resulting from an exploited server vulnerability, leading to the theft of 23.6 million user records. This emphasizes the impact of critical server-side flaws.",
-      "action": "Gyazo users should reset passwords, especially if reused. Organizations should review third-party service security postures and perform regular vulnerability assessments on web-facing applications.",
+      "tldr": "The Gyazo image-sharing platform confirmed a data breach affecting 23.6 million user records. Hackers exploited a server vulnerability to gain unauthorized access and exfiltrate sensitive user information.",
+      "action": "Review all web-facing applications and servers for known vulnerabilities, paying close attention to input validation and authentication mechanisms. Implement Web Application Firewalls (WAF) and conduct regular penetration testing. Advise users to change passwords and enable multi-factor authentication on all online accounts, especially if they used Gyazo.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/",
       "source": "BleepingComputer"
@@ -36,76 +36,81 @@
   "ransomware": [
     {
       "title": "ShinyHunters hacks Clop leak site, threatens to extort ransomware gang",
-      "tldr": "The ShinyHunters extortion group breached and defaced the Clop ransomware gang's data leak site, allegedly stealing server data and private keys. This unprecedented \"cyber-extortion\" highlights the evolving threat landscape even among criminal groups.",
-      "action": "While not directly impacting enterprise, this event underscores the capabilities of sophisticated threat actors. Organizations should maintain robust defenses against data extortion tactics, regardless of the attacker.",
+      "tldr": "The ShinyHunters extortion group successfully breached the Clop ransomware operation's data leak site, defacing its Tor presence and allegedly stealing server data and private keys. This unusual event involves one cybercriminal group targeting another, potentially disrupting Clop's operations.",
+      "action": "While this event is an inter-criminal dispute, organizations should remain vigilant regarding potential data exposure from both ShinyHunters and Clop. Continuously monitor dark web forums and leak sites for any mentions of organizational data. Strengthen defenses against extortion attempts, regardless of the threat actor.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "In Other News: Ransomware Developer Sentenced, Plugin4Shell AI Attack, Critical SAP Flaw",
+      "tldr": "A ransomware developer has been sentenced, indicating ongoing law enforcement efforts against cybercrime. This news highlights the legal consequences faced by individuals involved in developing and distributing ransomware, serving as a deterrent.",
+      "action": "Review internal legal and compliance frameworks regarding cybercrime. Ensure all security measures are robust to prevent ransomware attacks, as law enforcement actions do not eliminate the threat. Stay informed on the latest ransomware tactics, techniques, and procedures (TTPs) and ensure incident response plans are up-to-date.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/in-other-news-ransomware-developer-sentenced-plugin4shell-ai-attack-critical-sap-flaw/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "Critical Pre-Auth RCE in Orkes Conductor Workflow Platform Exploited in the Wild",
-      "tldr": "A critical pre-authentication remote code execution (RCE) vulnerability in Orkes Conductor Workflow Platform is actively being exploited in the wild, allowing unauthenticated attackers to execute arbitrary code.",
-      "action": "Immediately apply vendor patches for Orkes Conductor. If patching is delayed, implement strong network segmentation and access controls, and monitor for indicators of compromise.",
+      "tldr": "A critical pre-authentication Remote Code Execution (RCE) vulnerability has been identified in the Orkes Conductor Workflow Platform. This flaw is actively being exploited in the wild, allowing unauthenticated attackers to execute arbitrary code with high privileges.",
+      "action": "Immediately identify and patch all instances of Orkes Conductor Workflow Platform. If patching is not feasible, isolate affected systems from the internet and internal networks. Implement strict network segmentation and continuously monitor for signs of compromise, including unusual process execution or network connections.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Orkes Conductor Workflow Platform versions prior to the vendor-released patch. Refer to Orkes official security advisories for precise versioning.",
-      "how_to_determine_impact": "Identify all Orkes Conductor deployments. Check version numbers against vendor advisories. Inspect logs and running processes for unusual activity or unauthorized code execution on these systems.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Orkes' and check for 'Conductor' version. Use 'Get Running Processes' and 'Get Open Network Connections' for suspicious activity.",
-      "rapid7_query_hint": "Scan assets for 'Orkes Conductor' and filter by known vulnerable versions (once identified by vendor). Utilize InsightAgent to monitor for specific process executions or file modifications.",
+      "affected_versions": "Orkes Conductor Workflow Platform - specific versions likely vulnerable prior to vendor patch; consult official Orkes security advisories for precise version ranges.",
+      "how_to_determine_impact": "Identify all deployments of Orkes Conductor Workflow Platform within your environment. Check the installed version numbers and compare them against the official Orkes security advisory to determine if any assets are running vulnerable versions. Look for indicators of compromise such as unexpected processes, files, or network activity on Conductor servers.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Orkes Conductor' or 'Conductor Workflow'. For deeper inspection, use 'Get File Version['<path to Orkes Conductor executable>']'.",
+      "rapid7_query_hint": "Search for vulnerability ID matching 'Orkes Conductor RCE' or known CVEs once available. Use InsightAgent query 'Installed Software Name Contains \"Orkes Conductor\"' to identify installations.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "10.0 Critical (estimate)"
     },
     {
-      "title": "Public Exploits Released for Four Linux Kernel Flaws That Enable Local Root",
-      "tldr": "Public exploits are now available for four Linux Kernel flaws, enabling local attackers to achieve root privileges. This significantly escalates the risk of privilege escalation on unpatched Linux systems.",
-      "action": "Prioritize applying the latest security patches for all Linux Kernel instances. Implement strict least privilege on local user accounts and enhance system monitoring for privilege escalation attempts.",
+      "title": "CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild",
+      "tldr": "CISA has added three Linux Kernel vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, indicating active exploitation in the wild. These flaws could allow attackers to gain elevated privileges or execute arbitrary code on vulnerable Linux systems.",
+      "action": "Review CISA's KEV catalog for the specific CVEs associated with these Linux kernel vulnerabilities. Immediately apply the latest security updates and patches for the Linux kernel across all affected Linux systems. Prioritize systems exposed to the internet or processing sensitive data.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/public-exploits-released-for-four-linux.html",
+      "source_url": "https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Multiple Linux Kernel versions. Consult distribution-specific advisories (e.g., Red Hat, Ubuntu, Debian) for CVEs and exact vulnerable ranges.",
-      "how_to_determine_impact": "Run 'uname -r' on all Linux systems to identify kernel versions. Cross-reference with vendor advisories and CISA KEV. Monitor system logs for repeated login failures or suspicious privilege escalation attempts.",
-      "tanium_query_hint": "Get Kernel Version from all machines with OS Contains 'Linux'. Use 'Get Installed Packages' or distribution-specific sensors to verify patch status. Monitor 'Get Running Processes' for suspicious root-owned processes.",
-      "rapid7_query_hint": "Scan Linux assets for vulnerable Kernel versions. Utilize InsightAgent to monitor for local privilege escalation attempts or unusual process execution patterns.",
+      "affected_versions": "Various Linux kernel versions. Consult specific Linux distribution advisories and CISA KEV for precise details on affected versions and associated CVEs.",
+      "how_to_determine_impact": "On all Linux systems, use 'uname -r' to determine the running kernel version. Cross-reference this version with the specific CVEs listed in the CISA KEV catalog and official security advisories from your Linux distribution vendors to identify vulnerable hosts.",
+      "tanium_query_hint": "Get OS Platform and Get OS Major Version and Get OS Minor Version and Get OS Revision and Get OS Architecture and Get Kernel Version from all machines to identify Linux systems and their kernel versions.",
+      "rapid7_query_hint": "Search for vulnerability IDs listed in CISA KEV (e.g., 'cve-YYYY-XXXXX'). Use InsightAgent query 'Operating System Name Contains \"Linux\"' and 'OS Kernel Version' to filter and identify affected assets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Likely 7.8 High to 9.8 Critical"
+      "cvss_score": "9.0 Critical (estimate)"
     },
     {
       "title": "SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE",
-      "tldr": "SolarWinds patched a critical hard-coded key flaw in its Access Rights Manager (ARM) product, which allowed unauthenticated remote code execution (RCE). The vulnerability enabled attackers to gain full system control.",
-      "action": "Immediately apply the latest security patches from SolarWinds for Access Rights Manager. Verify successful installation and conduct post-patch validation.",
+      "tldr": "SolarWinds has released patches to address a critical hard-coded key vulnerability in its Access Rights Manager (ARM) product. This severe flaw allowed for unauthenticated Remote Code Execution (RCE), enabling attackers to take full control of affected systems without prior authentication.",
+      "action": "Immediately apply the latest security patches for SolarWinds Access Rights Manager (ARM) as recommended by SolarWinds. Verify that the patch installation was successful and that the vulnerable components, particularly any hard-coded keys, have been properly remediated.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "SolarWinds Access Rights Manager (ARM). Consult the official SolarWinds security advisory for the exact vulnerable version ranges and patch details.",
-      "how_to_determine_impact": "Inventory all SolarWinds ARM installations. Check the installed version against the official SolarWinds advisory. Look for unusual network activity or process execution on ARM servers.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'SolarWinds' and check version for 'Access Rights Manager'. Also, 'Get Running Processes' and 'Get Open Network Connections' on these machines for suspicious activity.",
-      "rapid7_query_hint": "Scan network assets for 'SolarWinds Access Rights Manager' and filter by vulnerable versions once available in InsightVM. Use InsightAgent to check for specific file versions or registry keys.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "SolarWinds Access Rights Manager (ARM) - specific versions vulnerable prior to the official patch. Refer to SolarWinds' official security advisory for exact vulnerable version ranges.",
+      "how_to_determine_impact": "Identify all installations of SolarWinds Access Rights Manager within your environment. Check the installed version number of ARM and compare it against the official SolarWinds security advisory to determine if the software is running a vulnerable version.",
+      "tanium_query_hint": "Get Installed Applications matching 'SolarWinds Access Rights Manager'. For deeper verification, use 'Get File Version['<path to ARM executable>']' on identified systems.",
+      "rapid7_query_hint": "Search for vulnerability ID related to 'SolarWinds ARM RCE' or any associated CVE once available. Use InsightAgent query 'Installed Software Name Contains \"SolarWinds Access Rights Manager\"'.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical (estimate)"
     },
     {
       "title": "BragJack attacks hijack AI browser agents through malicious extensions",
-      "tldr": "\"BragJack,\" a proof-of-concept attack, hijacks AI assistants in Chrome, Edge, and other browsers using malicious extensions via a \"Prompt Forcing\" technique, associated with two CVEs.",
-      "action": "Prohibit installation of untrusted browser extensions. Implement robust extension management policies and educate users on risks. Update browsers and deploy endpoint security to detect malicious extensions.",
-      "cve_ids": [
-        "CVE-2026-XXXX",
-        "CVE-2026-YYYY"
-      ],
+      "tldr": "The 'BragJack' proof-of-concept attack demonstrates how malicious browser extensions can hijack AI assistants in browsers like Chrome, Edge, and Claude. This 'Prompt Forcing' technique, which has earned bounties and led to two CVEs, allows attackers to manipulate AI agent behavior.",
+      "action": "Review and audit all installed browser extensions across enterprise endpoints, especially for browsers used with AI agents. Implement browser security policies to restrict the installation of unauthorized or untrusted extensions. Educate users on the risks of installing extensions from unverified sources and the potential for AI manipulation.",
+      "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Chrome, Edge, Opera Neon, Perplexity Comet, Claude in Chrome, and potentially other AI-integrated browsers or extensions. Vulnerability tied to browser extension interaction with AI agents.",
-      "how_to_determine_impact": "Conduct an audit of all installed browser extensions across endpoint devices. Monitor for unauthorized extensions, unusual browser process behavior, or AI assistant misconfigurations. Review browser security policies.",
-      "tanium_query_hint": "Get Browser Extensions from all machines. Create a whitelist/blacklist of allowed extensions. Monitor 'Get Running Processes' for suspicious browser helper processes or network activity originating from browser instances.",
-      "rapid7_query_hint": "Use InsightAgent to inventory installed browser extensions across endpoints. Configure InsightIDR to alert on suspicious network connections or processes initiated by browser components related to AI agents.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.5 High"
+      "affected_versions": "AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude are susceptible when malicious browser extensions exploiting 'Prompt Forcing' are installed.",
+      "how_to_determine_impact": "Conduct an inventory of all browser extensions installed on managed devices. Look for extensions that are not officially sanctioned or have elevated permissions. Review browser configuration policies to ensure unauthorized extension installation is blocked or heavily restricted.",
+      "tanium_query_hint": "Utilize 'Get Browser Extensions' sensor to list all installed extensions on endpoints for common browsers like Chrome and Edge. Filter for suspicious or unknown extensions.",
+      "rapid7_query_hint": "Use InsightAgent query 'Installed Browser Extensions' to identify extensions across endpoint browsers. Search for specific extension names or patterns that may be indicators of compromise related to this attack.",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.5 High (estimate)"
     }
   ],
   "insurance": [],
@@ -17345,6 +17350,126 @@
         "rapid7_query_hint": "Scan Linux assets for vulnerable Kernel versions. Utilize InsightAgent to monitor for local privilege escalation attempts or unusual process execution patterns.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Likely 7.8 High to 9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-20": [
+      {
+        "title": "Claude Opus 5 Helped Researchers Take Over OpenAI Staff Accounts via Chained Flaws",
+        "tldr": "Researchers successfully compromised OpenAI staff accounts by exploiting a chain of vulnerabilities, with assistance from the Claude Opus 5 AI. This unauthorized access highlights the potential for sophisticated AI to aid in breach activities against advanced targets.",
+        "action": "Implement enhanced multi-factor authentication for all staff accounts, particularly those with access to sensitive systems. Conduct a thorough review of access logs for OpenAI-related services and internal systems for any signs of compromise or unusual activity, focusing on account takeovers and privilege escalation.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/claude-opus-5-helped-researchers-take.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "CrowdSec Says TanStack npm Attack Led to Copy of 170 Private GitHub Repositories",
+        "tldr": "A supply chain attack targeting the TanStack npm ecosystem resulted in CrowdSec's private GitHub repositories being copied. This incident underscores the risks associated with third-party dependencies and the potential for code theft through compromised development tools.",
+        "action": "Immediately review all npm dependencies, especially those from popular or newly introduced libraries, for any signs of compromise. Implement stringent supply chain security practices, including integrity checks for packages and restricted access to development environments and code repositories. Rotate API keys and credentials that might have been exposed.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/crowdsec-says-tanstack-npm-attack-led.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "North Korean WaterPlum hackers infected 30,000 devices worldwide",
+        "tldr": "The North Korean hacking group WaterPlum infected at least 30,000 devices globally from December 2025 to July 2026. This extensive campaign resulted in the theft of over $10.7 million in cryptocurrency, which was subsequently transferred to North Korea.",
+        "action": "Conduct a comprehensive scan of all endpoints for WaterPlum malware indicators of compromise (IOCs). Implement strict network segmentation and egress filtering to prevent unauthorized cryptocurrency transactions. Enhance security awareness training to educate users about phishing and malware threats.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/north-korean-waterplum-hackers-infected-30-000-devices-worldwide/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Gyazo server flaw exploited to steal 23.6 million user records",
+        "tldr": "The Gyazo image-sharing platform confirmed a data breach affecting 23.6 million user records. Hackers exploited a server vulnerability to gain unauthorized access and exfiltrate sensitive user information.",
+        "action": "Review all web-facing applications and servers for known vulnerabilities, paying close attention to input validation and authentication mechanisms. Implement Web Application Firewalls (WAF) and conduct regular penetration testing. Advise users to change passwords and enable multi-factor authentication on all online accounts, especially if they used Gyazo.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "ShinyHunters hacks Clop leak site, threatens to extort ransomware gang",
+        "tldr": "The ShinyHunters extortion group successfully breached the Clop ransomware operation's data leak site, defacing its Tor presence and allegedly stealing server data and private keys. This unusual event involves one cybercriminal group targeting another, potentially disrupting Clop's operations.",
+        "action": "While this event is an inter-criminal dispute, organizations should remain vigilant regarding potential data exposure from both ShinyHunters and Clop. Continuously monitor dark web forums and leak sites for any mentions of organizational data. Strengthen defenses against extortion attempts, regardless of the threat actor.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "In Other News: Ransomware Developer Sentenced, Plugin4Shell AI Attack, Critical SAP Flaw",
+        "tldr": "A ransomware developer has been sentenced, indicating ongoing law enforcement efforts against cybercrime. This news highlights the legal consequences faced by individuals involved in developing and distributing ransomware, serving as a deterrent.",
+        "action": "Review internal legal and compliance frameworks regarding cybercrime. Ensure all security measures are robust to prevent ransomware attacks, as law enforcement actions do not eliminate the threat. Stay informed on the latest ransomware tactics, techniques, and procedures (TTPs) and ensure incident response plans are up-to-date.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/in-other-news-ransomware-developer-sentenced-plugin4shell-ai-attack-critical-sap-flaw/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Critical Pre-Auth RCE in Orkes Conductor Workflow Platform Exploited in the Wild",
+        "tldr": "A critical pre-authentication Remote Code Execution (RCE) vulnerability has been identified in the Orkes Conductor Workflow Platform. This flaw is actively being exploited in the wild, allowing unauthenticated attackers to execute arbitrary code with high privileges.",
+        "action": "Immediately identify and patch all instances of Orkes Conductor Workflow Platform. If patching is not feasible, isolate affected systems from the internet and internal networks. Implement strict network segmentation and continuously monitor for signs of compromise, including unusual process execution or network connections.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Orkes Conductor Workflow Platform - specific versions likely vulnerable prior to vendor patch; consult official Orkes security advisories for precise version ranges.",
+        "how_to_determine_impact": "Identify all deployments of Orkes Conductor Workflow Platform within your environment. Check the installed version numbers and compare them against the official Orkes security advisory to determine if any assets are running vulnerable versions. Look for indicators of compromise such as unexpected processes, files, or network activity on Conductor servers.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Orkes Conductor' or 'Conductor Workflow'. For deeper inspection, use 'Get File Version['<path to Orkes Conductor executable>']'.",
+        "rapid7_query_hint": "Search for vulnerability ID matching 'Orkes Conductor RCE' or known CVEs once available. Use InsightAgent query 'Installed Software Name Contains \"Orkes Conductor\"' to identify installations.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical (estimate)",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild",
+        "tldr": "CISA has added three Linux Kernel vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, indicating active exploitation in the wild. These flaws could allow attackers to gain elevated privileges or execute arbitrary code on vulnerable Linux systems.",
+        "action": "Review CISA's KEV catalog for the specific CVEs associated with these Linux kernel vulnerabilities. Immediately apply the latest security updates and patches for the Linux kernel across all affected Linux systems. Prioritize systems exposed to the internet or processing sensitive data.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Various Linux kernel versions. Consult specific Linux distribution advisories and CISA KEV for precise details on affected versions and associated CVEs.",
+        "how_to_determine_impact": "On all Linux systems, use 'uname -r' to determine the running kernel version. Cross-reference this version with the specific CVEs listed in the CISA KEV catalog and official security advisories from your Linux distribution vendors to identify vulnerable hosts.",
+        "tanium_query_hint": "Get OS Platform and Get OS Major Version and Get OS Minor Version and Get OS Revision and Get OS Architecture and Get Kernel Version from all machines to identify Linux systems and their kernel versions.",
+        "rapid7_query_hint": "Search for vulnerability IDs listed in CISA KEV (e.g., 'cve-YYYY-XXXXX'). Use InsightAgent query 'Operating System Name Contains \"Linux\"' and 'OS Kernel Version' to filter and identify affected assets.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (estimate)",
+        "category": "vulns"
+      },
+      {
+        "title": "SolarWinds Patches ARM Hard-Coded Key Flaw Enabling Unauthenticated RCE",
+        "tldr": "SolarWinds has released patches to address a critical hard-coded key vulnerability in its Access Rights Manager (ARM) product. This severe flaw allowed for unauthenticated Remote Code Execution (RCE), enabling attackers to take full control of affected systems without prior authentication.",
+        "action": "Immediately apply the latest security patches for SolarWinds Access Rights Manager (ARM) as recommended by SolarWinds. Verify that the patch installation was successful and that the vulnerable components, particularly any hard-coded keys, have been properly remediated.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "SolarWinds Access Rights Manager (ARM) - specific versions vulnerable prior to the official patch. Refer to SolarWinds' official security advisory for exact vulnerable version ranges.",
+        "how_to_determine_impact": "Identify all installations of SolarWinds Access Rights Manager within your environment. Check the installed version number of ARM and compare it against the official SolarWinds security advisory to determine if the software is running a vulnerable version.",
+        "tanium_query_hint": "Get Installed Applications matching 'SolarWinds Access Rights Manager'. For deeper verification, use 'Get File Version['<path to ARM executable>']' on identified systems.",
+        "rapid7_query_hint": "Search for vulnerability ID related to 'SolarWinds ARM RCE' or any associated CVE once available. Use InsightAgent query 'Installed Software Name Contains \"SolarWinds Access Rights Manager\"'.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical (estimate)",
+        "category": "vulns"
+      },
+      {
+        "title": "BragJack attacks hijack AI browser agents through malicious extensions",
+        "tldr": "The 'BragJack' proof-of-concept attack demonstrates how malicious browser extensions can hijack AI assistants in browsers like Chrome, Edge, and Claude. This 'Prompt Forcing' technique, which has earned bounties and led to two CVEs, allows attackers to manipulate AI agent behavior.",
+        "action": "Review and audit all installed browser extensions across enterprise endpoints, especially for browsers used with AI agents. Implement browser security policies to restrict the installation of unauthorized or untrusted extensions. Educate users on the risks of installing extensions from unverified sources and the potential for AI manipulation.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude are susceptible when malicious browser extensions exploiting 'Prompt Forcing' are installed.",
+        "how_to_determine_impact": "Conduct an inventory of all browser extensions installed on managed devices. Look for extensions that are not officially sanctioned or have elevated permissions. Review browser configuration policies to ensure unauthorized extension installation is blocked or heavily restricted.",
+        "tanium_query_hint": "Utilize 'Get Browser Extensions' sensor to list all installed extensions on endpoints for common browsers like Chrome and Edge. Filter for suspicious or unknown extensions.",
+        "rapid7_query_hint": "Use InsightAgent query 'Installed Browser Extensions' to identify extensions across endpoint browsers. Search for specific extension names or patterns that may be indicators of compromise related to this attack.",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.5 High (estimate)",
         "category": "vulns"
       }
     ]
