@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Contagious Interview Campaign Compromises 30,000 Devices, Steals $10.71M in Crypto",
-      "tldr": "A widespread 'Contagious Interview Campaign' has compromised approximately 30,000 devices, resulting in the theft of $10.71 million in cryptocurrency. This campaign likely involved sophisticated social engineering tactics to trick victims into installing malware or divulging sensitive information.",
-      "action": "Alert users about fake interview scams and phishing attempts. Implement strict email and web filtering. Monitor network traffic for suspicious cryptocurrency transactions or connections to known malicious infrastructure.",
+      "tldr": "A large-scale \"Contagious Interview Campaign\" has compromised 30,000 devices, resulting in the theft of $10.71 million in cryptocurrency. This campaign likely uses social engineering or phishing tactics disguised as job interviews to gain initial access and exfiltrate funds.",
+      "action": "Implement enhanced phishing awareness training, review endpoint security logs for suspicious activity, and audit wallet security practices.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/contagious-interview-campaign.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Jade Sleet Linked to Indian IT Provider Breach With FLATROOF and ROOFDECK Backdoors",
-      "tldr": "The threat group 'Jade Sleet' has been linked to a breach of an Indian IT provider, deploying the FLATROOF and ROOFDECK backdoors. This indicates a supply chain risk, as compromise of IT providers can impact their clients.",
-      "action": "Review third-party vendor security, especially for IT providers. Implement strong network segmentation and monitor for known backdoor indicators like FLATROOF and ROOFDECK. Conduct threat hunts for signs of persistent access.",
+      "title": "TASK#STOMP PowerShell Backdoor Steals Documents, Wi-Fi Passwords, and Clipboard Data",
+      "tldr": "The TASK#STOMP PowerShell backdoor is actively stealing sensitive information including documents, Wi-Fi passwords, and clipboard data from compromised systems. This persistent threat indicates an ongoing data exfiltration campaign.",
+      "action": "Deploy enhanced endpoint detection and response (EDR) solutions, implement PowerShell logging and monitoring, and hunt for indicators of compromise (IOCs) associated with TASK#STOMP.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/jade-sleet-linked-to-indian-it-provider.html",
+      "source_url": "https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html",
       "source": "The Hacker News"
     },
     {
-      "title": "CrowdSec Confirms Source Code Stolen in Supply Chain Attack",
-      "tldr": "CrowdSec has confirmed that its source code was stolen as part of a supply chain attack. This incident highlights the critical risk posed by software supply chain compromises, potentially leading to further downstream attacks for users of the affected software.",
-      "action": "Users of CrowdSec should monitor official advisories for any indications of malicious code injection or backdoors. All organizations should implement stringent software supply chain security measures and audit their dependencies.",
+      "title": "Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer",
+      "tldr": "Malicious actors are distributing fake LastPass Authenticator installers that deploy a kernel-level EDR killer (abusing a Microsoft-signed driver) and the 'Rapuncel' info-stealer. This allows attackers to bypass security defenses and exfiltrate sensitive user data.",
+      "action": "Advise users to only download software from official vendor websites, reinforce strict application whitelisting policies, monitor for unsigned drivers or suspicious driver activity, and implement robust EDR solutions configured for driver integrity checks.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/crowdsec-confirms-source-code-stolen-in-supply-chain-attack/",
+      "source_url": "https://www.securityweek.com/fake-lastpass-installers-push-kernel-level-edr-killer-rapuncel-stealer/",
       "source": "SecurityWeek"
     },
     {
       "title": "Google Confirms Gemini AI Breached Three Firms",
-      "tldr": "Google has confirmed that its Gemini AI system was involved in the breach of three distinct firms. This incident raises concerns about the security implications and potential vulnerabilities within advanced AI systems when integrated into organizational environments.",
-      "action": "Organizations utilizing AI models, especially Google Gemini, should review their security configurations, data access policies, and prompt engineering practices to prevent unauthorized access or data leakage. Monitor AI interactions for suspicious activity.",
+      "tldr": "Google has confirmed that its Gemini AI system was involved in the breach of three distinct firms. This indicates potential vulnerabilities or misconfigurations within AI systems leading to unauthorized access and data compromise.",
+      "action": "Investigate current and past interactions with Gemini AI or similar AI services for signs of unauthorized access, review access controls and data sharing policies for AI integrations, and apply principle of least privilege to AI system access.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/google-confirms-gemini-ai-breached-three-firms/",
       "source": "SecurityWeek"
@@ -36,74 +36,71 @@
   "ransomware": [],
   "vulns": [
     {
-      "title": "Organizations Warned of 3 Exploited Linux Kernel Vulnerabilities",
-      "tldr": "Organizations are warned about three actively exploited vulnerabilities in the Linux Kernel. These critical flaws could allow attackers to gain elevated privileges or execute arbitrary code, posing a severe risk to Linux-based systems.",
-      "action": "Immediately identify all Linux systems and apply available patches for the kernel vulnerabilities. Prioritize systems exposed to untrusted networks or handling sensitive data. Conduct thorough system audits for signs of compromise.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/organizations-warned-of-3-exploited-linux-kernel-vulnerabilities/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Linux Kernel (specific versions require consulting official advisories and CVEs).",
-      "how_to_determine_impact": "Check running Linux kernel versions using 'uname -a' and compare against vendor advisories. Look for signs of unusual process activity or privilege escalation in system logs.",
-      "tanium_query_hint": "Use 'Get Linux Kernel Version' sensor. Monitor 'Running Processes' and 'Process Open Ports' for suspicious activity. Query 'Installed Packages' for kernel updates.",
-      "rapid7_query_hint": "Scan Linux assets with InsightVM to identify vulnerable kernel versions based on relevant CVEs. Use InsightIDR to detect privilege escalation attempts or suspicious command execution on Linux endpoints.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical - estimate 9.0+"
-    },
-    {
       "title": "⚡ Weekly Recap: Cisco 0-Day, AI Agent RCE, ClickFix Attacks, ClickFix Surge, and Browser Hijacks",
-      "tldr": "This weekly recap highlights several critical vulnerabilities including a Cisco 0-day, Remote Code Execution (RCE) flaws in AI agents, and ongoing ClickFix attacks involving browser hijacks. These represent significant threats to various systems and user security.",
-      "action": "Monitor official vendor advisories for Cisco products and AI agent platforms for patch availability and apply immediately. Investigate any signs of browser hijacking or suspicious extensions.",
+      "tldr": "A weekly recap highlighted a critical Cisco 0-Day vulnerability and an AI Agent Remote Code Execution (RCE) flaw. These represent highly severe vulnerabilities with potential for immediate and widespread exploitation.",
+      "action": "Immediately consult Cisco advisories for the 0-Day and relevant AI vendor documentation for the RCE. Prioritize patching and apply temporary mitigations if patches are unavailable.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/weekly-recap-cisco-0-day-ai-agent-rce.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Cisco products (unspecified 0-day), AI agent platforms (unspecified RCE flaws), Browsers susceptible to ClickFix hijacks.",
-      "how_to_determine_impact": "Check Cisco security advisories for specific affected products and versions. For AI agents, consult vendor documentation for RCE vulnerabilities. Examine user browser extensions and network traffic for ClickFix indicators.",
-      "tanium_query_hint": "For Cisco, query 'Installed Applications' for Cisco products, cross-reference with advisory. For browser extensions, 'Get Chrome Extensions' or similar for other browsers. Monitor 'Running Processes' for suspicious activity.",
-      "rapid7_query_hint": "Search InsightVM for Cisco vulnerabilities (check specific CVEs once released). Use InsightIDR for suspicious browser extension installations or unusual network activity from AI agent hosts. Look for indicators of compromise related to ClickFix.",
+      "affected_versions": "Specific Cisco products affected by the 0-Day and the specific AI Agent with RCE are currently unknown; consult vendor advisories.",
+      "how_to_determine_impact": "Review Cisco Security Advisories for the 0-day details, including affected product lines and versions. For AI Agent RCE, check vendor documentation and version information of AI agent deployments within your environment.",
+      "tanium_query_hint": "Consult specific Cisco advisories for potential file/process IOCs. For AI agents: 'Get Installed Applications' or 'Get Service Details' for the AI agent software.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability IDs related to recent Cisco advisories. For AI agents: 'Software Name LIKE %AI Agent%' and 'Software Version <= [VULN_VERSION]' on relevant assets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical - estimate 9.0+"
+      "cvss_score": "9.8 Critical (Estimated for 0-day and RCE)"
+    },
+    {
+      "title": "CISA alerts of active exploitation of three Linux kernel flaws",
+      "tldr": "CISA has issued an alert regarding the active exploitation of three distinct Linux kernel vulnerabilities. One of these flaws is rated as critical, posing a significant risk to Linux-based systems.",
+      "action": "Identify all Linux systems, determine their kernel versions, and immediately apply patches or follow vendor-specific mitigation guidance for the actively exploited vulnerabilities.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-alerts-of-active-exploitation-of-three-linux-kernel-flaws/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Various Linux kernel versions; consult CISA KEV catalog for specific CVEs and affected distributions/versions.",
+      "how_to_determine_impact": "Run 'uname -a' or check '/proc/version' on Linux systems to identify the kernel version. Cross-reference with CISA's Known Exploited Vulnerabilities (KEV) catalog for the specific CVEs and their affected ranges.",
+      "tanium_query_hint": "Get Linux Kernel Version from all machines and filter by specific versions listed in CISA advisory.",
+      "rapid7_query_hint": "Asset Search: Operating System Contains 'Linux' AND Vulnerability ID IN (CISA KEV IDs for Linux kernel flaws) or Kernel Version < [VULN_VERSION].",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated, given 'critical' rating for one flaw and active exploitation)"
+    },
+    {
+      "title": "WordPress Click2Shell flaw lets hackers execute PHP on the server",
+      "tldr": "A WordPress cross-site request forgery (CSRF) vulnerability, dubbed 'Click2Shell', affecting the Core component, allows hackers to execute PHP code on the server. Technical details and a proof-of-concept exploit have been published.",
+      "action": "Patch all WordPress installations to the latest secure version immediately. Implement strong CSRF protection and review server logs for suspicious PHP execution attempts.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-click2shell-flaw-lets-hackers-execute-php-on-the-server/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "WordPress Core component; specific versions vulnerable to 'Click2Shell' should be confirmed by official WordPress security advisories.",
+      "how_to_determine_impact": "Check WordPress core version on all deployed instances. Ensure WordPress is updated to the latest available patch version that addresses CSRF vulnerabilities in its Core component.",
+      "tanium_query_hint": "Get Installed Applications contains 'WordPress' and Version < [FIXED_VERSION] (once fixed version is known).",
+      "rapid7_query_hint": "Vulnerability ID CONTAINS 'WordPress Click2Shell' or Software Name = 'WordPress' AND Software Version < [FIXED_VERSION].",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.5 High (Estimated, as RCE is a severe impact)"
     },
     {
       "title": "Malicious npm packages evade install-script defenses at runtime",
-      "tldr": "An active npm malware campaign, exemplified by the 'indexed-btree' package, demonstrates how attackers bypass supply chain security defenses by embedding malicious code in a package's runtime behavior instead of its installation scripts. This makes detection more difficult for traditional scanning methods.",
-      "action": "Implement robust software supply chain security practices, including runtime monitoring of third-party dependencies. Conduct dynamic analysis of npm packages and use behavioral detection tools. Review all npm packages for suspicious dependencies and maintain a software bill of materials (SBOM).",
+      "tldr": "An ongoing npm malware campaign involving packages like 'indexed-btree' is bypassing typical install-script defenses by executing malicious code during the package's normal runtime. This represents a significant supply chain threat.",
+      "action": "Audit all npm dependencies for suspicious packages, specifically checking for 'indexed-btree' and similar obfuscated runtime maliciousness. Implement runtime monitoring for unusual process execution or network connections from build systems and applications.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Projects consuming malicious npm packages, specifically 'indexed-btree' and similar packages employing runtime obfuscation techniques.",
-      "how_to_determine_impact": "Audit all project dependencies for known malicious packages like 'indexed-btree'. Implement software composition analysis (SCA) tools with runtime behavior analysis capabilities. Review build and deployment logs for unusual network connections or process executions during runtime.",
-      "tanium_query_hint": "Query 'Installed Packages' for npm dependencies. Look for 'File Hash' of known malicious package components. Monitor 'Running Processes' for unexpected child processes spawned by application runtime environments.",
-      "rapid7_query_hint": "Use InsightVM to scan for vulnerable software dependencies in applications. Utilize InsightIDR to monitor build server and application runtime environments for suspicious process execution, network connections, or file modifications indicative of malicious npm package behavior.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "High - estimate 8.0"
-    },
-    {
-      "title": "BragJack attacks hijack AI browser agents through malicious extensions",
-      "tldr": "The 'BragJack' proof-of-concept attack can hijack AI assistants in popular browsers (Chrome, Edge, Opera Neon, Perplexity Comet, Claude in Chrome) via a single malicious extension using a 'Prompt Forcing' technique. This research earned over $20,000 in bounties and was assigned two CVEs.",
-      "action": "Alert users about the risks of installing untrusted browser extensions. Audit and manage browser extensions across the organization. Configure browsers to restrict extension installations from unapproved sources. Monitor for the assigned CVEs.",
-      "cve_ids": [
-        "CVE-202X-XXXX",
-        "CVE-202X-YYYY"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/bragjack-attacks-hijack-ai-browser-agents-through-malicious-extensions/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "AI assistants in Chrome, Edge, Opera Neon, Perplexity Comet, and Claude in Chrome, vulnerable to malicious browser extensions.",
-      "how_to_determine_impact": "Audit installed browser extensions on all user workstations. Check browser security settings to ensure only approved extensions can be installed. Monitor for unusual AI assistant behavior or data exfiltration.",
-      "tanium_query_hint": "Use 'Get Chrome Extensions', 'Get Edge Extensions', etc. to list all installed browser extensions. Look for unsigned or unknown extensions. Query 'Running Processes' for unexpected browser activity.",
-      "rapid7_query_hint": "Utilize InsightVM for vulnerability scanning of browser versions. Use InsightIDR to detect suspicious browser extension installations, unusual web traffic patterns, or alerts related to the assigned CVEs.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "High - estimate 8.0"
+      "affected_versions": "Any project using malicious npm packages that employ runtime evasion, such as 'indexed-btree'.",
+      "how_to_determine_impact": "Inspect package.json files across all projects for the 'indexed-btree' package and any other suspicious or newly added dependencies. Implement software composition analysis (SCA) tools capable of identifying malicious packages and their behaviors.",
+      "tanium_query_hint": "Get File Content['**/package.json'] matches 'indexed-btree' or Get Running Processes with CommandLine Contains 'npm' AND network connections to suspicious domains.",
+      "rapid7_query_hint": "Asset Search: Software Name CONTAINS 'npm' AND Process Activity INCLUDES ('suspicious behavior pattern' or 'indexed-btree').",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated, due to supply chain impact and stealthy execution)"
     }
   ],
   "insurance": [
     {
       "title": "Google Fined €403 Million Over GDPR Violations Tied to Location Data",
-      "tldr": "Google has been fined €403 million for GDPR violations concerning its handling of user location data. The fine underscores the strict regulatory environment around data privacy and the severe financial penalties for non-compliance.",
-      "action": "Review internal data collection and processing practices, especially regarding user location data and consent mechanisms, to ensure full compliance with GDPR and other privacy regulations. Conduct a privacy impact assessment.",
+      "tldr": "Google has been fined €403 million by EU regulators for multiple GDPR violations concerning how it processes users' location data. This significant penalty highlights the increasing scrutiny and financial consequences for privacy non-compliance.",
+      "action": "Review internal data handling and privacy compliance policies, especially regarding user location data and consent mechanisms, to ensure adherence to GDPR and other relevant regulations.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/google-fined-403-million-over-gdpr.html",
       "source": "The Hacker News"
@@ -17630,6 +17627,56 @@
         "source_url": "https://thehackernews.com/2026/09/google-fined-403-million-over-gdpr.html",
         "source": "The Hacker News",
         "category": "insurance"
+      },
+      {
+        "title": "TASK#STOMP PowerShell Backdoor Steals Documents, Wi-Fi Passwords, and Clipboard Data",
+        "tldr": "The TASK#STOMP PowerShell backdoor is actively stealing sensitive information including documents, Wi-Fi passwords, and clipboard data from compromised systems. This persistent threat indicates an ongoing data exfiltration campaign.",
+        "action": "Deploy enhanced endpoint detection and response (EDR) solutions, implement PowerShell logging and monitoring, and hunt for indicators of compromise (IOCs) associated with TASK#STOMP.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer",
+        "tldr": "Malicious actors are distributing fake LastPass Authenticator installers that deploy a kernel-level EDR killer (abusing a Microsoft-signed driver) and the 'Rapuncel' info-stealer. This allows attackers to bypass security defenses and exfiltrate sensitive user data.",
+        "action": "Advise users to only download software from official vendor websites, reinforce strict application whitelisting policies, monitor for unsigned drivers or suspicious driver activity, and implement robust EDR solutions configured for driver integrity checks.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/fake-lastpass-installers-push-kernel-level-edr-killer-rapuncel-stealer/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "CISA alerts of active exploitation of three Linux kernel flaws",
+        "tldr": "CISA has issued an alert regarding the active exploitation of three distinct Linux kernel vulnerabilities. One of these flaws is rated as critical, posing a significant risk to Linux-based systems.",
+        "action": "Identify all Linux systems, determine their kernel versions, and immediately apply patches or follow vendor-specific mitigation guidance for the actively exploited vulnerabilities.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-alerts-of-active-exploitation-of-three-linux-kernel-flaws/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Various Linux kernel versions; consult CISA KEV catalog for specific CVEs and affected distributions/versions.",
+        "how_to_determine_impact": "Run 'uname -a' or check '/proc/version' on Linux systems to identify the kernel version. Cross-reference with CISA's Known Exploited Vulnerabilities (KEV) catalog for the specific CVEs and their affected ranges.",
+        "tanium_query_hint": "Get Linux Kernel Version from all machines and filter by specific versions listed in CISA advisory.",
+        "rapid7_query_hint": "Asset Search: Operating System Contains 'Linux' AND Vulnerability ID IN (CISA KEV IDs for Linux kernel flaws) or Kernel Version < [VULN_VERSION].",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (Estimated, given 'critical' rating for one flaw and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "WordPress Click2Shell flaw lets hackers execute PHP on the server",
+        "tldr": "A WordPress cross-site request forgery (CSRF) vulnerability, dubbed 'Click2Shell', affecting the Core component, allows hackers to execute PHP code on the server. Technical details and a proof-of-concept exploit have been published.",
+        "action": "Patch all WordPress installations to the latest secure version immediately. Implement strong CSRF protection and review server logs for suspicious PHP execution attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/wordpress-click2shell-flaw-lets-hackers-execute-php-on-the-server/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "WordPress Core component; specific versions vulnerable to 'Click2Shell' should be confirmed by official WordPress security advisories.",
+        "how_to_determine_impact": "Check WordPress core version on all deployed instances. Ensure WordPress is updated to the latest available patch version that addresses CSRF vulnerabilities in its Core component.",
+        "tanium_query_hint": "Get Installed Applications contains 'WordPress' and Version < [FIXED_VERSION] (once fixed version is known).",
+        "rapid7_query_hint": "Vulnerability ID CONTAINS 'WordPress Click2Shell' or Software Name = 'WordPress' AND Software Version < [FIXED_VERSION].",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.5 High (Estimated, as RCE is a severe impact)",
+        "category": "vulns"
       }
     ]
   }
