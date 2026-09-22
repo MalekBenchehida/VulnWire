@@ -1,35 +1,35 @@
 {
   "breaches": [
     {
-      "title": "EvilTokens PhaaS disrupted after compromising 12,000 Microsoft accounts",
-      "tldr": "The EvilTokens platform, used for phishing-as-a-service, was disrupted after compromising over 12,000 Microsoft accounts across more than 10,000 organizations. This significant credential breach was halted through an effort led by Microsoft's Digital Crimes Unit (DCU).",
-      "action": "Organizations should investigate all Microsoft accounts for signs of compromise, enforce strong Multi-Factor Authentication (MFA), and review recent activities for unusual logins or suspicious activity originating from this PhaaS. Review audit logs for unauthorized access.",
+      "title": "ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach",
+      "tldr": "The ShinyHunters extortion gang claims to have breached FBI systems. They leveraged a new Oracle PeopleSoft zero-day vulnerability to gain access to internal services and steal sensitive data on employees and job applicants.",
+      "action": "Organizations using Oracle PeopleSoft should immediately check for any unusual activity and apply any vendor-issued patches for zero-day vulnerabilities. Enhance monitoring for data exfiltration and unauthorized access attempts.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/eviltokens-phaas-disrupted-after-compromising-12-000-microsoft-accounts/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/",
       "source": "BleepingComputer"
     },
     {
       "title": "BigCommerce alerts merchants of data breach linked to Ribon apps",
-      "tldr": "Ecommerce platform BigCommerce has notified multiple merchants about data breaches resulting from attackers compromising credentials for third-party Ribon applications. These compromised credentials were then used to inject malicious scripts into online stores, potentially exposing customer data.",
-      "action": "BigCommerce merchants must immediately review their Ribon app integrations, rotate all associated API keys and credentials, and thoroughly audit their online store scripts for any malicious injections. Monitor for unusual activity or customer complaints related to data compromise.",
+      "tldr": "Ecommerce platform BigCommerce has alerted its merchants to data breaches. Attackers compromised credentials for third-party Ribon applications and used them to inject malicious scripts into online stores, potentially leading to data theft.",
+      "action": "BigCommerce merchants who use Ribon apps should immediately rotate credentials associated with these applications. They should also scan their online stores for malicious scripts and monitor for any suspicious transactions or customer data access.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/bigcommerce-alerts-merchants-of-data-breach-linked-to-ribon-apps/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Google Hit With $463 Million Fine for EU Location Data Rule Breach",
-      "tldr": "Google has been fined $463 million by the EU for breaching location data rules. This regulatory action highlights failures in Google's handling of user location data, underscoring the increasing scrutiny on how major tech companies collect and process sensitive personal information.",
-      "action": "Review and strengthen data privacy controls, consent mechanisms, and data retention policies, especially concerning location data collection and usage, to ensure full compliance with GDPR and other relevant data protection regulations. Conduct internal audits of data handling practices and transparency disclosures.",
+      "title": "Microsoft Takes Down EvilTokens Device-Code Phishing Service Tied to 12,000 Inbox Compromises",
+      "tldr": "Microsoft has successfully disrupted the EvilTokens device-code phishing-as-a-service (PhaaS) platform. This service was responsible for compromising over 12,000 Microsoft accounts across more than 10,000 organizations through sophisticated phishing techniques.",
+      "action": "Organizations should review their Microsoft 365 logs for any signs of device-code phishing attacks or unauthorized access to accounts, particularly from the period EvilTokens was active. Enforce multi-factor authentication and educate users on phishing awareness.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/google-hit-with-463-million-fine-for-eu-location-data-rule-breach/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/09/microsoft-takes-down-eviltokens-device.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "Fake LastPass Installers Push Kernel-Level EDR Killer, ‘Rapuncel’ Stealer",
-      "tldr": "Malicious actors are distributing fake LastPass installers that deploy a kernel-level EDR (Endpoint Detection and Response) killer and the 'Rapuncel' stealer malware. This sophisticated attack aims to bypass security defenses and exfiltrate sensitive user data, leading to potential data breaches.",
-      "action": "Educate users to only download software from official vendor websites and verify digital signatures. Implement advanced EDR solutions capable of detecting kernel-level threats and ensure integrity monitoring. Monitor for signs of EDR circumvention and the 'Rapuncel' stealer activity on endpoints.",
+      "title": "Google Hit With $463 Million Fine for EU Location Data Rule Breach",
+      "tldr": "Google has been fined $463 million by EU regulators for a breach of location data rules. This highlights the severe penalties for non-compliance with data privacy regulations regarding the handling of user location data.",
+      "action": "Review internal data handling practices and ensure strict compliance with all relevant data privacy regulations, especially regarding user location data. Conduct regular audits of data collection and retention policies.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/fake-lastpass-installers-push-kernel-level-edr-killer-rapuncel-stealer/",
+      "source_url": "https://www.securityweek.com/google-hit-with-463-million-fine-for-eu-location-data-rule-breach/",
       "source": "SecurityWeek"
     }
   ],
@@ -37,65 +37,65 @@
   "vulns": [
     {
       "title": "New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups",
-      "tldr": "A critical vulnerability with a CVSS score of 10.0 in VeloCloud Orchestrator is being actively exploited, particularly in certificate-based deployments. This flaw allows attackers to gain unauthorized access or control, posing an extreme risk to network management infrastructure.",
-      "action": "Immediately apply all available vendor patches and hotfixes for VeloCloud Orchestrator. Review system logs for signs of compromise, especially in certificate-based setups. Isolate affected systems until patching is confirmed and verified.",
+      "tldr": "A critical vulnerability with a CVSS score of 10.0 has been discovered in VMware's VeloCloud Orchestrator. This flaw is actively being exploited, specifically in certificate-based setups, posing an immediate and severe threat.",
+      "action": "Immediately apply the latest security updates or hotfixes from VMware for VeloCloud Orchestrator. Review system logs for signs of compromise, especially concerning certificate-based authentication or unauthorized access attempts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "VeloCloud Orchestrator (specific versions affected need to be confirmed via official VeloCloud advisory)",
-      "how_to_determine_impact": "Identify all VeloCloud Orchestrator deployments, specifically those utilizing certificate-based setups. Review VeloCloud logs for unusual activity, unauthorized access attempts, or configuration changes. Compare installed versions against the vendor's latest security advisories.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'VeloCloud*' or 'VMware SD-WAN*'. Cross-reference detected versions with vendor advisory. Check process lists for suspicious VeloCloud related processes.",
-      "rapid7_query_hint": "Search for vulnerability ID associated with VeloCloud Orchestrator (refer to vendor advisory). Filter assets by installed software 'VeloCloud Orchestrator'. For InsightIDR, search for 'VeloCloud' related alerts or unusual access patterns from Orchestrator devices.",
+      "affected_versions": "VMware VeloCloud Orchestrator (specific versions, especially in certificate-based setups, consult VMware advisory)",
+      "how_to_determine_impact": "Verify the version of your VMware VeloCloud Orchestrator. Check if your setup uses certificate-based authentication. Review logs for unauthorized access or unusual activity on the orchestrator.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'VMware VeloCloud Orchestrator' and check version numbers. Inspect configuration for certificate-based setups. Review process and network logs for anomalies.",
+      "rapid7_query_hint": "Search for vulnerability ID related to VeloCloud Orchestrator flaw. Use InsightAgent to scan orchestrator systems for vulnerable versions and indicators of compromise. Review logs for suspicious authentication attempts.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
       "title": "D-Link warns of max severity zero-day bug in DIR-822A routers",
-      "tldr": "D-Link has issued a warning regarding a maximum-severity zero-day vulnerability (CVE-2026-86296) affecting legacy DIR-822A dual-band Wi-Fi routers. A public proof-of-concept (PoC) exploit exists, and as there is no patch available, this flaw poses an immediate and high risk of remote compromise.",
-      "action": "Discontinue use of D-Link DIR-822A routers if possible. If immediate replacement is not feasible, isolate the router from critical networks, restrict access to its management interface, and monitor for any unusual network traffic. Plan for replacement of affected devices.",
+      "tldr": "D-Link has issued a warning about a maximum-severity zero-day vulnerability (CVE-2026-86296) in its legacy DIR-822A dual-band Wi-Fi routers. A public Proof-of-Concept (PoC) exploit exists, but no patch is currently available.",
+      "action": "D-Link DIR-822A users should consider discontinuing use of the affected routers or implementing strict network segmentation and access controls to mitigate risk until a patch is released. Monitor for suspicious activity.",
       "cve_ids": [
         "CVE-2026-86296"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/d-link-warns-of-max-severity-zero-day-bug-in-dir-822a-routers/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "D-Link DIR-822A dual-band Wi-Fi routers (all firmware versions as no patch currently exists)",
-      "how_to_determine_impact": "Identify all D-Link DIR-822A routers within your environment via asset inventory or network scans. Verify device models. Assume all DIR-822A models are vulnerable until D-Link provides an official patch or updated guidance. Check network logs for suspicious inbound connections to these devices.",
-      "tanium_query_hint": "Get D-Link Model from all machines with Computer Name matches 'DIR-822A*'. Get Network Device Info containing 'D-Link DIR-822A'. Check network connection status on potentially affected subnets.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-86296'. Filter assets by 'D-Link' and 'DIR-822A'. Perform authenticated network scans on network devices to identify vulnerable models and firmware configurations.",
+      "affected_versions": "D-Link DIR-822A dual-band Wi-Fi routers",
+      "how_to_determine_impact": "Identify if D-Link DIR-822A routers are present in your network. Check firmware versions, but note that no patch is available. Assume vulnerable if this model is in use.",
+      "tanium_query_hint": "Get Network Interfaces and associated device types. Query for router configurations if managed, otherwise identify based on network topology. (Tanium typically doesn't manage consumer routers directly, but might detect them on the network)",
+      "rapid7_query_hint": "Run network scans to identify D-Link DIR-822A routers. Search for CVE-2026-86296 in vulnerability scans. Implement asset grouping for network devices to easily identify affected assets.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
       "title": "Check Point warns of Management Server zero-day exploited in attacks",
-      "tldr": "Check Point has released emergency hotfixes to address a critical Security Management Server zero-day vulnerability that is actively being exploited in attacks. This flaw could allow attackers to execute arbitrary scripts, leading to full compromise of the management server and potentially the entire security infrastructure.",
-      "action": "Immediately apply the emergency hotfixes provided by Check Point for the Security Management Server. Conduct thorough scans for indicators of compromise (IoCs) and review logs for unauthorized script execution, unusual processes, or suspicious activity on the management server.",
+      "tldr": "Check Point Software has released emergency hotfixes to address a critical Security Management Server vulnerability. This zero-day flaw is actively exploited in attacks, allowing attackers to run arbitrary scripts.",
+      "action": "Immediately apply the emergency hotfixes provided by Check Point for its Security Management Server. Investigate logs for any signs of exploitation and ensure robust monitoring is in place.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/check-point-patches-management-server-zero-day-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Check Point Security Management Server (specific affected versions need to be confirmed via official Check Point advisory, apply latest hotfixes)",
-      "how_to_determine_impact": "Identify all Check Point Security Management Servers in the environment. Verify installed hotfix levels against vendor advisories. Review system logs, especially for the web interface or management daemons, for suspicious processes, script executions, or login attempts from unusual sources.",
-      "tanium_query_hint": "Get Installed Patches from all machines with Computer Name matches 'Check Point*Management*Server'. Get Running Processes containing 'python' or 'bash' in unusual contexts on these servers. Check file integrity of critical management server components.",
-      "rapid7_query_hint": "Search for vulnerability associated with Check Point Management Server zero-day (refer to vendor advisories). Filter assets by installed software 'Check Point Security Management Server'. Monitor InsightIDR for unusual activity on management server hosts, including script execution or privilege escalation events.",
+      "affected_versions": "Check Point Security Management Server (specific versions affected by the emergency hotfixes, consult vendor advisory)",
+      "how_to_determine_impact": "Check if your Check Point Security Management Server has applied the latest emergency hotfixes. Review audit logs for unauthorized script execution or unusual activity on the management server.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Check Point Management Server' and then check version against known vulnerable versions. Inspect logs for unauthorized script execution patterns.",
+      "rapid7_query_hint": "Search for vulnerability ID associated with the Check Point Management Server zero-day. Use InsightAgent to check application versions on Check Point Management Servers. Review log data for indicators of compromise.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated)"
+      "cvss_score": "10.0 Critical"
     },
     {
-      "title": "Zyxel and Veeam Flaws Under Active Exploitation With Command and SYSTEM Access",
-      "tldr": "Multiple critical vulnerabilities in Zyxel network devices and Veeam backup solutions are being actively exploited in the wild. These flaws grant attackers command execution and SYSTEM-level access, posing a severe risk of complete system compromise, data theft, and disruption of critical services.",
-      "action": "Immediately identify all Zyxel and Veeam installations within your environment. Apply all available security patches and hotfixes for affected products without delay. Conduct thorough scans for indicators of compromise and review system logs for unauthorized access or unusual activity on both Zyxel and Veeam systems.",
+      "title": "CISA orders feds to patch Zyxel flaw exploited for data theft",
+      "tldr": "CISA has issued an urgent directive for federal agencies to patch a high-severity vulnerability in Zyxel GS1900 series switches. This flaw is actively being exploited, reportedly by Chinese hackers, for data theft, highlighting a critical and immediate risk.",
+      "action": "Immediately apply all available patches for Zyxel GS1900 series switches. Organizations should also review logs for any signs of unauthorized access or data exfiltration, especially from state-sponsored actors.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/zyxel-and-veeam-flaws-under-active.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-zyxel-flaw-by-thursday/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Zyxel network devices and Veeam backup solutions (specific versions need to be confirmed via official vendor advisories)",
-      "how_to_determine_impact": "Inventory all Zyxel and Veeam products. Check their versions against vendor security advisories. Look for signs of unauthorized command execution or persistent access (e.g., new users, modified files, unusual network connections) on affected systems. Review logs for any SYSTEM-level privilege escalation events.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Veeam*' OR 'Zyxel*'. Get Running Processes from those machines. Search for known IoCs published by Zyxel/Veeam. Get Network Connections to/from these devices for suspicious activity.",
-      "rapid7_query_hint": "Search for vulnerability IDs associated with Zyxel and Veeam products under active exploitation (refer to vendor advisories). Filter assets by installed software 'Veeam Backup & Replication' or 'Zyxel'. Monitor InsightIDR for alerts on these systems related to command execution or SYSTEM access.",
+      "affected_versions": "Zyxel GS1900 series switches",
+      "how_to_determine_impact": "Identify all Zyxel GS1900 series switches in your network. Verify their firmware versions against Zyxel's advisories. Review switch logs for unauthorized access attempts or suspicious configuration changes.",
+      "tanium_query_hint": "Get Network Configuration from all machines with Device Type matches 'Switch' and Manufacturer matches 'Zyxel'. Check firmware versions. Inspect syslog for unauthorized login attempts or configuration changes.",
+      "rapid7_query_hint": "Run network scans to identify Zyxel GS1900 series switches. Search for known vulnerability IDs related to Zyxel switches. Review network traffic logs for indicators of compromise or data exfiltration.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated)"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -17855,6 +17855,40 @@
         "rapid7_query_hint": "Search for vulnerability IDs associated with Zyxel and Veeam products under active exploitation (refer to vendor advisories). Filter assets by installed software 'Veeam Backup & Replication' or 'Zyxel'. Monitor InsightIDR for alerts on these systems related to command execution or SYSTEM access.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach",
+        "tldr": "The ShinyHunters extortion gang claims to have breached FBI systems. They leveraged a new Oracle PeopleSoft zero-day vulnerability to gain access to internal services and steal sensitive data on employees and job applicants.",
+        "action": "Organizations using Oracle PeopleSoft should immediately check for any unusual activity and apply any vendor-issued patches for zero-day vulnerabilities. Enhance monitoring for data exfiltration and unauthorized access attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Microsoft Takes Down EvilTokens Device-Code Phishing Service Tied to 12,000 Inbox Compromises",
+        "tldr": "Microsoft has successfully disrupted the EvilTokens device-code phishing-as-a-service (PhaaS) platform. This service was responsible for compromising over 12,000 Microsoft accounts across more than 10,000 organizations through sophisticated phishing techniques.",
+        "action": "Organizations should review their Microsoft 365 logs for any signs of device-code phishing attacks or unauthorized access to accounts, particularly from the period EvilTokens was active. Enforce multi-factor authentication and educate users on phishing awareness.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/microsoft-takes-down-eviltokens-device.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "CISA orders feds to patch Zyxel flaw exploited for data theft",
+        "tldr": "CISA has issued an urgent directive for federal agencies to patch a high-severity vulnerability in Zyxel GS1900 series switches. This flaw is actively being exploited, reportedly by Chinese hackers, for data theft, highlighting a critical and immediate risk.",
+        "action": "Immediately apply all available patches for Zyxel GS1900 series switches. Organizations should also review logs for any signs of unauthorized access or data exfiltration, especially from state-sponsored actors.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-zyxel-flaw-by-thursday/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Zyxel GS1900 series switches",
+        "how_to_determine_impact": "Identify all Zyxel GS1900 series switches in your network. Verify their firmware versions against Zyxel's advisories. Review switch logs for unauthorized access attempts or suspicious configuration changes.",
+        "tanium_query_hint": "Get Network Configuration from all machines with Device Type matches 'Switch' and Manufacturer matches 'Zyxel'. Check firmware versions. Inspect syslog for unauthorized login attempts or configuration changes.",
+        "rapid7_query_hint": "Run network scans to identify Zyxel GS1900 series switches. Search for known vulnerability IDs related to Zyxel switches. Review network traffic logs for indicators of compromise or data exfiltration.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
