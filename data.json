@@ -2,42 +2,26 @@
   "breaches": [
     {
       "title": "Malicious AI agents steal 600K credit cards, infect 100+ sites with skimmers",
-      "tldr": "A financially motivated threat actor is leveraging open-source AI agent frameworks to conduct large-scale attacks on online retailers. These attacks have resulted in the theft of over 600,000 credit card records and the infection of more than 100 websites with skimmers.",
-      "action": "Implement robust endpoint detection and response (EDR) solutions and monitor for unusual activity, especially on e-commerce platforms. Review website integrity for unauthorized modifications or embedded skimmer code. Educate users on identifying sophisticated phishing attempts.",
+      "tldr": "A financially motivated threat actor is employing open-source AI agent frameworks to conduct large-scale attacks on hundreds of online retailers. These agents successfully deploy web skimmers, leading to the theft of over 600,000 credit card records.",
+      "action": "Implement enhanced monitoring for web skimming activity on all e-commerce platforms. Conduct a thorough audit of all online retail sites for suspicious script injections and unauthorized modifications to web assets.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Sweden fines Miljödata $183,000 over breach affecting 2.2 million",
-      "tldr": "Sweden's data privacy regulator, IMY, has imposed a significant fine of $183,000 on IT systems provider Miljödata. The fine stems from inadequate security measures that led to a data breach in August 2025, impacting 2.2 million individuals.",
-      "action": "Conduct a thorough review of data protection policies, access controls, and security configurations for all systems handling personal data. Ensure compliance with relevant data privacy regulations like GDPR and perform regular security audits.",
+      "title": "Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI",
+      "tldr": "Malicious 'MemTensor' packages have been identified on popular software registries npm and PyPI. These compromised packages contain a 'sckit' credential stealer, posing a significant supply chain threat to developers and potentially leading to widespread credential theft.",
+      "action": "Immediately audit all development projects for the use of 'MemTensor' or any similar suspicious packages. All credentials that may have been exposed on systems where these packages were installed must be revoked and rotated without delay.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/sweden-fines-milj-data-183-000-over-breach-affecting-22-million/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Chinese hackers exploit WordPress, Zyxel flaws to steal govt data",
-      "tldr": "A Chinese-speaking threat actor is actively exploiting vulnerabilities in ZyXEL GS1900 Smart Managed Switches and WordPress installations. These exploits are used to steal sensitive data from government entities, affecting nearly 1000 devices and over 18,500 backend database records.",
-      "action": "Patch all WordPress installations and ZyXEL GS1900 Smart Managed Switches to the latest versions immediately. Conduct an extensive forensic analysis on potentially affected systems for signs of compromise and data exfiltration, especially on government-related infrastructure.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-exploit-multiple-technologies-to-steal-govt-data/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "ShinyHunters Claims FBI Hack, Demands Retraction of Threat Report",
-      "tldr": "The ShinyHunters threat group claims to have successfully breached the FBI's systems. The group is demanding the retraction of a threat report, implying they have gained unauthorized access to sensitive information or systems within the agency.",
-      "action": "While details are unconfirmed, organizations should reinforce their perimeter defenses, review access logs for unusual activity, and enhance monitoring for insider threats. Ensure all critical systems are segmented and multi-factor authentication is enforced rigorously.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/shinyhunters-claims-fbi-hack-demands-retraction-of-threat-report/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
       "title": "Ryuk ransomware member sentenced to 24 months in prison",
-      "tldr": "An Armenian individual has been sentenced to 24 months in prison, followed by 3 years of supervised release, for their involvement in Ryuk ransomware attacks. The individual was convicted for hacking U.S. companies and encrypting their systems.",
-      "action": "Ensure robust backup and recovery strategies are in place, test them regularly, and store backups offline or immutable. Implement strong endpoint protection, network segmentation, and user awareness training to mitigate ransomware risks. Monitor for indicators of compromise associated with known ransomware groups.",
+      "tldr": "An Armenian man has been sentenced to 24 months in prison and three years of supervised release for his involvement in Ryuk ransomware attacks. He was convicted of hacking U.S. companies and encrypting their systems.",
+      "action": "Maintain robust defenses against ransomware, including comprehensive data backups, stringent network segmentation, and advanced endpoint protection. Regularly review and update incident response plans for ransomware attacks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-sentenced-to-24-months-in-prison/",
       "source": "BleepingComputer"
@@ -45,64 +29,68 @@
   ],
   "vulns": [
     {
+      "title": "Check Point warns of hackers exploiting Security Gateway VPN RCE flaw",
+      "tldr": "Check Point has confirmed active exploitation of CVE-2026-85102, a critical pre-authentication remote code execution (RCE) vulnerability. This flaw resides in the VPN certificate-handling functionality of their Security Gateway product, allowing attackers to execute arbitrary code remotely.",
+      "action": "Immediately apply the latest security updates provided by Check Point for all Security Gateway installations. Conduct a thorough audit of all affected systems and logs for any indicators of compromise related to this exploitation.",
+      "cve_ids": [
+        "CVE-2026-85102"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/check-point-warns-of-hackers-exploiting-security-gateway-vpn-rce-flaw/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Check Point Security Gateway products affected by CVE-2026-85102, prior to applying the vendor's latest security patches.",
+      "how_to_determine_impact": "Verify Check Point Security Gateway software versions against the official vendor advisories for CVE-2026-85102. Review VPN connection logs and system audit trails for any unusual access attempts, unexplained processes, or RCE indicators.",
+      "tanium_query_hint": "Not directly applicable to network appliances. Consult the Check Point management interface to confirm the installed version and patch status of Security Gateway.",
+      "rapid7_query_hint": "Scan network devices for Check Point Security Gateway installations. Filter asset search by vulnerability ID 'CVE-2026-85102'. Monitor network traffic and authentication logs for suspicious activity.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimating)"
+    },
+    {
+      "title": "Hackers start exploiting critical WordPress flaw for code execution",
+      "tldr": "Threat actors have begun actively exploiting CVE-2026-87902, a critical vulnerability in WordPress. This flaw allows attackers to write arbitrary files to disk that execute shell commands when accessed, leading to remote code execution on vulnerable websites.",
+      "action": "Immediately update all WordPress installations, including core, themes, and plugins, to the latest secure versions to remediate CVE-2026-87902. Conduct a comprehensive scan of all WordPress sites for malicious files, unauthorized modifications, or indicators of compromise.",
+      "cve_ids": [
+        "CVE-2026-87902"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "WordPress sites vulnerable to CVE-2026-87902, specifically those running versions prior to the latest security updates.",
+      "how_to_determine_impact": "Check WordPress core, theme, and plugin versions against vendor advisories. Inspect website file systems for newly created or modified suspicious PHP files, particularly within the wp-content directory. Review web server access and error logs for unusual requests or command execution attempts.",
+      "tanium_query_hint": "Get Installed Applications contains 'WordPress'; Get File Content from '[WordPress_root]/wp-includes/version.php' to identify version. Use 'Get File Existence' for '*/wp-content/*.php' with age less than 24h to spot recent malicious files.",
+      "rapid7_query_hint": "Scan web servers for WordPress installations. Use vulnerability ID 'CVE-2026-87902' in asset searches. Monitor web server logs and endpoint detection for suspicious file writes or shell command executions.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimating)"
+    },
+    {
       "title": "F5 Patches Critical BIG-IP APM Zero-Day Exploited for Unauthenticated RCE on OAuth Servers",
-      "tldr": "F5 has released urgent security patches to address a critical zero-day vulnerability in its BIG-IP APM. This flaw is actively being exploited in the wild, allowing unauthenticated remote code execution (RCE) on affected OAuth servers.",
-      "action": "Immediately apply the latest F5 BIG-IP APM security updates. Review logs for indicators of compromise, especially for unusual activity on OAuth servers or web-facing BIG-IP APM instances. Isolate affected systems during patching.",
+      "tldr": "F5 has released urgent patches for a critical BIG-IP APM zero-day vulnerability that is under active exploitation. This flaw allows unauthenticated remote code execution (RCE), specifically targeting BIG-IP APM systems configured as OAuth servers.",
+      "action": "Immediately apply all available F5 BIG-IP APM security patches. Conduct an exhaustive audit of all BIG-IP APM systems, particularly those acting as OAuth servers, for any signs of compromise, unauthorized access, or suspicious configurations.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/f5-patches-critical-big-ip-apm-zero-day.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "F5 BIG-IP APM versions prior to the released security update. Consult F5 security advisories for specific impacted versions.",
-      "how_to_determine_impact": "Check the installed version of F5 BIG-IP APM. Look for suspicious process execution, unauthorized file modifications, or unexpected outbound connections from the BIG-IP APM appliance, particularly on integrated OAuth servers.",
-      "tanium_query_hint": "Get Installed Applications with Name 'F5 BIG-IP APM' AND Get Running Processes from all machines with IsWindows equals False",
-      "rapid7_query_hint": "vulnerability.title = 'F5 BIG-IP APM RCE Zero-Day' AND status = 'vulnerable'",
+      "affected_versions": "F5 BIG-IP APM systems configured as OAuth servers, prior to applying the latest security patches addressing this zero-day vulnerability.",
+      "how_to_determine_impact": "Verify F5 BIG-IP APM firmware and software versions against F5's latest security advisories. Inspect system logs, audit trails, and network traffic for unauthorized access attempts, unusual RCE activities, or suspicious changes on OAuth-enabled BIG-IP APM instances.",
+      "tanium_query_hint": "Not directly applicable to network devices. Access the F5 BIG-IP management interface to confirm the installed software version and patch status.",
+      "rapid7_query_hint": "Perform network scans to identify F5 BIG-IP APM installations. Compare reported versions against F5's security bulletins for zero-day RCE. Monitor for unusual network connections or RCE indicators originating from these devices.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimating)"
     },
     {
-      "title": "Chinese Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy CLEANGULP Malware",
-      "tldr": "A sophisticated zero-day vulnerability chain targeting both Google Chrome and Microsoft Windows is being actively exploited by Chinese state-sponsored hackers. This exploit chain facilitates the deployment of 'CLEANGULP' malware, targeting specific high-value systems.",
-      "action": "Immediately update Google Chrome to the latest version. Ensure all Microsoft Windows operating systems have the latest security patches applied, particularly those addressing browser and kernel vulnerabilities. Scan endpoints for indicators of compromise related to 'CLEANGULP' malware.",
+      "title": "MikroTrick Chain Let Attackers Take Over MikroTik Routers Without a Password or SSH Key",
+      "tldr": "A new attack chain, dubbed 'MikroTrick,' allows attackers to gain full control over MikroTik routers without requiring a password or SSH key. This severe vulnerability facilitates complete device takeover, posing a significant risk to network infrastructure.",
+      "action": "Immediately apply the latest secure firmware updates to all MikroTik routers. After patching, review all router configurations and logs for any unauthorized access attempts, suspicious changes, or signs of compromise.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/chinese-hackers-exploit-chrome-windows.html",
+      "source_url": "https://thehackernews.com/2026/09/mikrotrick-chain-let-attackers-take.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Google Chrome (all versions prior to patched release); Microsoft Windows (specific versions affected by the kernel component of the chain - consult Microsoft advisories).",
-      "how_to_determine_impact": "Verify Chrome browser versions across all endpoints. Check Windows update status. Look for unusual process creations, suspicious network connections, or file modifications indicative of 'CLEANGULP' malware deployment.",
-      "tanium_query_hint": "Get Installed Applications with Name 'Google Chrome' AND Get Windows OS Version OR Get Running Processes with Name 'CLEANGULP.exe'",
-      "rapid7_query_hint": "vulnerability.severity = 'critical' AND vulnerability.tags contains 'zero-day' AND (vulnerability.software.name = 'Google Chrome' OR vulnerability.software.name = 'Microsoft Windows')",
+      "affected_versions": "All MikroTik RouterOS versions vulnerable to the 'MikroTrick' attack chain, prior to applying the vendor's latest security patches.",
+      "how_to_determine_impact": "Check MikroTik router firmware versions against official vendor advisories for the 'MikroTrick' vulnerability. Inspect router system logs, access lists, and configuration files for unauthorized changes or suspicious login attempts (especially without credentials).",
+      "tanium_query_hint": "Not directly applicable to network devices unless Tanium Network sensors are deployed. Consult network device inventory tools and MikroTik management interfaces for version and patch status.",
+      "rapid7_query_hint": "Perform network scans to identify MikroTik devices and retrieve their RouterOS versions. Compare reported versions with MikroTik's security advisories. Monitor network traffic to/from MikroTik routers for anomalous connections or unauthorized control plane activity.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Arista patches actively exploited VeloCloud Orchestrator zero-day",
-      "tldr": "Arista Networks has released critical security patches for an actively exploited zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. This flaw poses a severe risk to network management infrastructure.",
-      "action": "Immediately apply the latest security patches provided by Arista for all VeloCloud Orchestrator On-Prem deployments. Conduct a thorough review of VCO logs and network traffic for any signs of compromise or suspicious activity.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/arista-patches-actively-exploited-velocloud-orchestrator-zero-day/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Arista VeloCloud Orchestrator (VCO) On-Prem deployments (all versions prior to the released security update).",
-      "how_to_determine_impact": "Check the version of all VeloCloud Orchestrator On-Prem instances. Monitor for unauthorized access attempts, unusual commands executed on the orchestrator, or unexpected configuration changes within the VCO environment.",
-      "tanium_query_hint": "Get Installed Applications with Name 'Arista VeloCloud Orchestrator' OR Get File Version['/opt/velocloud/bin/vco']",
-      "rapid7_query_hint": "asset.software.name = 'Arista VeloCloud Orchestrator' AND vulnerability.tags contains 'zero-day' AND status = 'vulnerable'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Check Point Patches Exploited Management Server Zero-Day",
-      "tldr": "Check Point has released a critical patch for a zero-day vulnerability in its Management Servers that is actively being exploited. This flaw presents a significant risk, potentially allowing attackers to gain unauthorized control over critical security infrastructure.",
-      "action": "Immediately apply the latest security updates released by Check Point for all Management Servers. Conduct an in-depth investigation of management server logs for any indicators of compromise, including unusual login attempts, unauthorized command execution, or suspicious configuration modifications.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/check-point-patches-exploited-management-server-zero-day/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Check Point Management Servers (all versions prior to the released security update). Consult Check Point advisories for specific impacted versions.",
-      "how_to_determine_impact": "Verify the version of your Check Point Management Server. Examine SmartConsole logs, system logs on the management server, and monitor for unexpected outbound connections or unauthorized access to the management interface.",
-      "tanium_query_hint": "Get Check Point Product Version['Management Server'] OR Get Running Processes with Name matching 'cpd|cpmi'",
-      "rapid7_query_hint": "asset.software.name = 'Check Point Management Server' AND vulnerability.tags contains 'zero-day' AND status = 'vulnerable'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimating)"
     }
   ],
   "insurance": [],
@@ -18041,6 +18029,67 @@
         "rapid7_query_hint": "asset.software.name = 'Check Point Management Server' AND vulnerability.tags contains 'zero-day' AND status = 'vulnerable'",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Compromised MemTensor Packages Deliver sckit Credential Stealer via npm and PyPI",
+        "tldr": "Malicious 'MemTensor' packages have been identified on popular software registries npm and PyPI. These compromised packages contain a 'sckit' credential stealer, posing a significant supply chain threat to developers and potentially leading to widespread credential theft.",
+        "action": "Immediately audit all development projects for the use of 'MemTensor' or any similar suspicious packages. All credentials that may have been exposed on systems where these packages were installed must be revoked and rotated without delay.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/compromised-memtensor-packages-deliver.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Check Point warns of hackers exploiting Security Gateway VPN RCE flaw",
+        "tldr": "Check Point has confirmed active exploitation of CVE-2026-85102, a critical pre-authentication remote code execution (RCE) vulnerability. This flaw resides in the VPN certificate-handling functionality of their Security Gateway product, allowing attackers to execute arbitrary code remotely.",
+        "action": "Immediately apply the latest security updates provided by Check Point for all Security Gateway installations. Conduct a thorough audit of all affected systems and logs for any indicators of compromise related to this exploitation.",
+        "cve_ids": [
+          "CVE-2026-85102"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/check-point-warns-of-hackers-exploiting-security-gateway-vpn-rce-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Check Point Security Gateway products affected by CVE-2026-85102, prior to applying the vendor's latest security patches.",
+        "how_to_determine_impact": "Verify Check Point Security Gateway software versions against the official vendor advisories for CVE-2026-85102. Review VPN connection logs and system audit trails for any unusual access attempts, unexplained processes, or RCE indicators.",
+        "tanium_query_hint": "Not directly applicable to network appliances. Consult the Check Point management interface to confirm the installed version and patch status of Security Gateway.",
+        "rapid7_query_hint": "Scan network devices for Check Point Security Gateway installations. Filter asset search by vulnerability ID 'CVE-2026-85102'. Monitor network traffic and authentication logs for suspicious activity.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimating)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers start exploiting critical WordPress flaw for code execution",
+        "tldr": "Threat actors have begun actively exploiting CVE-2026-87902, a critical vulnerability in WordPress. This flaw allows attackers to write arbitrary files to disk that execute shell commands when accessed, leading to remote code execution on vulnerable websites.",
+        "action": "Immediately update all WordPress installations, including core, themes, and plugins, to the latest secure versions to remediate CVE-2026-87902. Conduct a comprehensive scan of all WordPress sites for malicious files, unauthorized modifications, or indicators of compromise.",
+        "cve_ids": [
+          "CVE-2026-87902"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "WordPress sites vulnerable to CVE-2026-87902, specifically those running versions prior to the latest security updates.",
+        "how_to_determine_impact": "Check WordPress core, theme, and plugin versions against vendor advisories. Inspect website file systems for newly created or modified suspicious PHP files, particularly within the wp-content directory. Review web server access and error logs for unusual requests or command execution attempts.",
+        "tanium_query_hint": "Get Installed Applications contains 'WordPress'; Get File Content from '[WordPress_root]/wp-includes/version.php' to identify version. Use 'Get File Existence' for '*/wp-content/*.php' with age less than 24h to spot recent malicious files.",
+        "rapid7_query_hint": "Scan web servers for WordPress installations. Use vulnerability ID 'CVE-2026-87902' in asset searches. Monitor web server logs and endpoint detection for suspicious file writes or shell command executions.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimating)",
+        "category": "vulns"
+      },
+      {
+        "title": "MikroTrick Chain Let Attackers Take Over MikroTik Routers Without a Password or SSH Key",
+        "tldr": "A new attack chain, dubbed 'MikroTrick,' allows attackers to gain full control over MikroTik routers without requiring a password or SSH key. This severe vulnerability facilitates complete device takeover, posing a significant risk to network infrastructure.",
+        "action": "Immediately apply the latest secure firmware updates to all MikroTik routers. After patching, review all router configurations and logs for any unauthorized access attempts, suspicious changes, or signs of compromise.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/mikrotrick-chain-let-attackers-take.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "All MikroTik RouterOS versions vulnerable to the 'MikroTrick' attack chain, prior to applying the vendor's latest security patches.",
+        "how_to_determine_impact": "Check MikroTik router firmware versions against official vendor advisories for the 'MikroTrick' vulnerability. Inspect router system logs, access lists, and configuration files for unauthorized changes or suspicious login attempts (especially without credentials).",
+        "tanium_query_hint": "Not directly applicable to network devices unless Tanium Network sensors are deployed. Consult network device inventory tools and MikroTik management interfaces for version and patch status.",
+        "rapid7_query_hint": "Perform network scans to identify MikroTik devices and retrieve their RouterOS versions. Compare reported versions with MikroTik's security advisories. Monitor network traffic to/from MikroTik routers for anomalous connections or unauthorized control plane activity.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimating)",
         "category": "vulns"
       }
     ]
