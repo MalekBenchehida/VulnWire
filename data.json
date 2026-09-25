@@ -1,112 +1,104 @@
 {
   "breaches": [
     {
-      "title": "ThreatsDay: AI Search Poisoning, AI Coding Tool Leaking Repos, One-Click Code Execution and 13 More Stories",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
+      "tldr": "Threat actors reactivated previously compromised GitHub Actions, resuming the execution of Mini Shai-Hulud malware. This indicates persistent unauthorized access to GitHub CI/CD environments and potential supply chain compromise.",
+      "action": "Review GitHub Actions logs for unusual activity, verify the integrity of all workflows and secrets, and implement least privilege for CI/CD environments. Consider token expiration and rotation policies.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/threatsday-ai-search-poisoning-ai.html",
+      "source_url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Astrana Health Data Breach Impacts Private, Confidential Information",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Hackers steal $351.6 million in Bitget crypto exchange hack",
+      "tldr": "Cryptocurrency exchange Bitget disclosed that suspected North Korean hackers stole $351.6 million from its hot and warm wallets. The incident points to a significant backend compromise of the exchange's systems.",
+      "action": "Review and enhance security measures for all cryptocurrency holdings, including multi-sig wallets, cold storage, and comprehensive monitoring for unusual transactions. Implement rigorous access controls for backend systems.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/astrana-health-data-breach-impacts-private-confidential-information/",
-      "source": "SecurityWeek"
-    }
-  ],
-  "ransomware": [
-    {
-      "title": "CISA: Ransomware gangs now exploiting critical TeamCity flaw",
-      "tldr": "​The U.S. Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies on Wednesday that ransomware gangs are now also exploiting a critical JetBrains TeamCity vulnerability patched in July. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/",
       "source": "BleepingComputer"
     },
     {
-      "title": "US Court Sentences Armenian Man to Prison for Ryuk Ransomware Attacks",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Rydox marketplace admin pleads guilty, faces 22 years in prison",
+      "tldr": "The administrator of Rydox, a major illegal online marketplace, pleaded guilty to charges related to selling stolen personal information, login credentials, and credit card details. This highlights ongoing law enforcement efforts against illicit data trade platforms.",
+      "action": "Monitor dark web channels for mentions of your organization's data or employee credentials. Implement multi-factor authentication and strong password policies to mitigate the impact of stolen credentials.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/us-court-sentences-armenian-man-to-prison-for-ryuk-ransomware-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/rydox-marketplace-admin-pleads-guilty-faces-22-years-in-prison/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "North Korea Suspected in $351 Million Bitget Crypto Heist",
+      "tldr": "A $351 million cryptocurrency heist from the Bitget exchange is suspected to be the work of North Korean state-sponsored hacking groups. This sophisticated attack underscores the persistent threat from nation-state actors targeting financial institutions.",
+      "action": "Implement enhanced security protocols for critical financial assets, including regular security audits, multi-factor authentication, and robust intrusion detection systems. Conduct regular threat hunting for nation-state TTPs.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/",
       "source": "SecurityWeek"
     }
   ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks",
+      "tldr": "CISA has issued a warning regarding critical authentication bypass vulnerability CVE-2026-5430 affecting WSO2 products, alongside other actively exploited flaws in Microsoft SharePoint and Adobe Commerce. These vulnerabilities are being exploited in the wild, necessitating immediate patching.",
+      "action": "Prioritize patching for all WSO2 products (especially for CVE-2026-5430), Adobe Commerce, and Microsoft SharePoint installations to their latest secure versions. Conduct thorough log analysis for indicators of compromise related to these specific CVEs and affected products.",
+      "cve_ids": [
+        "CVE-2026-5430"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "WSO2 products affected by CVE-2026-5430. Specific vulnerable versions for Adobe Commerce and Microsoft SharePoint should be confirmed via their respective vendor advisories.",
+      "how_to_determine_impact": "Identify all instances of WSO2, Adobe Commerce, and Microsoft SharePoint within your environment. Check installed versions against vendor security advisories and confirm if relevant patches (e.g., for CVE-2026-5430) are missing. Review system logs for unusual activity.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Software Name' contains 'WSO2' or 'Adobe Commerce' or 'SharePoint'. Check for specific patch presence related to CVE-2026-5430 or the latest security updates.",
+      "rapid7_query_hint": "Search Vulnerability ID for 'CVE-2026-5430' and other relevant WSO2, Adobe Commerce, SharePoint vulnerability IDs. Filter asset searches for software 'WSO2', 'Adobe Commerce', or 'Microsoft SharePoint' and look for 'Exploited in the Wild' tags.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated)"
+    },
+    {
+      "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
+      "tldr": "A critical pre-authentication SQL injection vulnerability in Roundcube webmail is being actively exploited in the wild. This flaw allows attackers to gain unauthorized access and potentially execute arbitrary code on affected servers without prior authentication.",
+      "action": "Immediately apply the latest security patches for all Roundcube Webmail installations. Isolate Roundcube instances from critical internal networks until patched and conduct a forensic review for potential compromise.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html",
+      "source_url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "active_exploitation": true,
+      "affected_versions": "Roundcube Webmail versions potentially prior to 1.6.6, 1.5.6, and 1.4.16. Consult official Roundcube security advisories for definitive vulnerable versions and patches.",
+      "how_to_determine_impact": "Check installed Roundcube versions on all web servers. Review web server and application logs for suspicious access attempts to Roundcube login pages, unusual SQL errors, or unexpected modifications to configuration files.",
+      "tanium_query_hint": "Get Installed Applications from all machines where 'Software Name' contains 'Roundcube'. Use 'Get File Version[path to Roundcube index file]' for precise version identification. Monitor web server process activity.",
+      "rapid7_query_hint": "Search Vulnerability ID for 'Roundcube SQL Injection' or related keywords. Utilize asset search for software 'Roundcube' and check for associated vulnerability findings in InsightVM. Monitor web server logs for exploitation attempts via InsightIDR.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated)"
+    },
+    {
+      "title": "New Carbonato malware uses AI agents to hijack exposed Docker hosts",
+      "tldr": "The new Carbonato botnet malware is actively targeting insecure Docker daemon hosts to install the Hermes Agent AI framework and gain control. This threat leverages misconfigured or exposed Docker environments to compromise systems and establish persistence.",
+      "action": "Secure all Docker daemon configurations, ensuring they are not exposed to the internet and require strong authentication. Implement robust network segmentation for Docker hosts and regularly audit Docker host security and container images for unauthorized changes.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Docker hosts with insecurely configured or exposed Docker daemon APIs. Any version of Docker daemon accessible without proper authentication is at risk.",
+      "how_to_determine_impact": "Check Docker daemon configurations (e.g., /etc/docker/daemon.json, systemd unit files) for insecure remote access, unauthenticated API exposure, or listening on public network interfaces. Inspect running Docker containers for unauthorized images, processes, or unusual network activity.",
+      "tanium_query_hint": "Get Network Connections from all machines with 'Process Name' contains 'dockerd' and 'Remote Port' matches '2375' or '2376'. Use 'Get File Content[/etc/docker/daemon.json]' to review daemon configuration files.",
+      "rapid7_query_hint": "Asset search for 'Docker' installations and check for vulnerabilities related to exposed daemon APIs. Conduct network scans for open ports 2375/2376 on Docker hosts. Monitor Docker host logs for unusual commands or container spawns in InsightIDR.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
+      "cvss_score": "9.0 Critical (Estimated)"
     },
     {
-      "title": "Placeholder third-party[.]com Referenced Across 1,700+ Repositories Now Serves Malicious Content",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "'SalesBleed' Flaws in Salesforce Agentforce Enabled Zero-Click Data Exfiltration",
+      "tldr": "A series of 'SalesBleed' vulnerabilities within Salesforce Agentforce allowed for zero-click data exfiltration, posing a severe risk of sensitive customer data exposure. These flaws enabled attackers to steal information without any user interaction.",
+      "action": "Salesforce customers should immediately review their Agentforce configurations, ensure all Salesforce instances are updated to the latest secure versions, and audit logs for any unauthorized data access or anomalous activity. Consult Salesforce's official security advisories.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/placeholder-third-partycom-referenced.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/salesbleed-flaws-in-salesforce-agentforce-enabled-zero-click-data-exfiltration/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Hacked Ukrainian Sites Serve Fake Cloudflare ClickFix Lures for Psychedelic Stealer",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/hacked-ukrainian-sites-serve-fake.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Corp MDM Spyware Targets Logistics Firms, Steals New SMS and Redirects Calls",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/corp-mdm-spyware-targets-logistics.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Salesforce Agentforce. Specific vulnerable versions should be confirmed by Salesforce's official advisories.",
+      "how_to_determine_impact": "Salesforce customers should check their instance's patch level and review Agentforce configuration settings for any non-standard or vulnerable configurations. Monitor Salesforce audit trails and API access logs for suspicious data export activities.",
+      "tanium_query_hint": "N/A - This is a SaaS platform vulnerability. Impact determination and remediation focus on configurations and audit logs directly within the Salesforce environment rather than endpoint queries.",
+      "rapid7_query_hint": "N/A - This is a SaaS platform vulnerability. Impact determination and remediation focus on configurations and audit logs directly within the Salesforce environment rather than endpoint queries.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.5 High (Estimated)"
     }
   ],
-  "insurance": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -18329,6 +18321,110 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-25": [
+      {
+        "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
+        "tldr": "Threat actors reactivated previously compromised GitHub Actions, resuming the execution of Mini Shai-Hulud malware. This indicates persistent unauthorized access to GitHub CI/CD environments and potential supply chain compromise.",
+        "action": "Review GitHub Actions logs for unusual activity, verify the integrity of all workflows and secrets, and implement least privilege for CI/CD environments. Consider token expiration and rotation policies.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers steal $351.6 million in Bitget crypto exchange hack",
+        "tldr": "Cryptocurrency exchange Bitget disclosed that suspected North Korean hackers stole $351.6 million from its hot and warm wallets. The incident points to a significant backend compromise of the exchange's systems.",
+        "action": "Review and enhance security measures for all cryptocurrency holdings, including multi-sig wallets, cold storage, and comprehensive monitoring for unusual transactions. Implement rigorous access controls for backend systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Rydox marketplace admin pleads guilty, faces 22 years in prison",
+        "tldr": "The administrator of Rydox, a major illegal online marketplace, pleaded guilty to charges related to selling stolen personal information, login credentials, and credit card details. This highlights ongoing law enforcement efforts against illicit data trade platforms.",
+        "action": "Monitor dark web channels for mentions of your organization's data or employee credentials. Implement multi-factor authentication and strong password policies to mitigate the impact of stolen credentials.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/rydox-marketplace-admin-pleads-guilty-faces-22-years-in-prison/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "North Korea Suspected in $351 Million Bitget Crypto Heist",
+        "tldr": "A $351 million cryptocurrency heist from the Bitget exchange is suspected to be the work of North Korean state-sponsored hacking groups. This sophisticated attack underscores the persistent threat from nation-state actors targeting financial institutions.",
+        "action": "Implement enhanced security protocols for critical financial assets, including regular security audits, multi-factor authentication, and robust intrusion detection systems. Conduct regular threat hunting for nation-state TTPs.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks",
+        "tldr": "CISA has issued a warning regarding critical authentication bypass vulnerability CVE-2026-5430 affecting WSO2 products, alongside other actively exploited flaws in Microsoft SharePoint and Adobe Commerce. These vulnerabilities are being exploited in the wild, necessitating immediate patching.",
+        "action": "Prioritize patching for all WSO2 products (especially for CVE-2026-5430), Adobe Commerce, and Microsoft SharePoint installations to their latest secure versions. Conduct thorough log analysis for indicators of compromise related to these specific CVEs and affected products.",
+        "cve_ids": [
+          "CVE-2026-5430"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "WSO2 products affected by CVE-2026-5430. Specific vulnerable versions for Adobe Commerce and Microsoft SharePoint should be confirmed via their respective vendor advisories.",
+        "how_to_determine_impact": "Identify all instances of WSO2, Adobe Commerce, and Microsoft SharePoint within your environment. Check installed versions against vendor security advisories and confirm if relevant patches (e.g., for CVE-2026-5430) are missing. Review system logs for unusual activity.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Software Name' contains 'WSO2' or 'Adobe Commerce' or 'SharePoint'. Check for specific patch presence related to CVE-2026-5430 or the latest security updates.",
+        "rapid7_query_hint": "Search Vulnerability ID for 'CVE-2026-5430' and other relevant WSO2, Adobe Commerce, SharePoint vulnerability IDs. Filter asset searches for software 'WSO2', 'Adobe Commerce', or 'Microsoft SharePoint' and look for 'Exploited in the Wild' tags.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
+        "tldr": "A critical pre-authentication SQL injection vulnerability in Roundcube webmail is being actively exploited in the wild. This flaw allows attackers to gain unauthorized access and potentially execute arbitrary code on affected servers without prior authentication.",
+        "action": "Immediately apply the latest security patches for all Roundcube Webmail installations. Isolate Roundcube instances from critical internal networks until patched and conduct a forensic review for potential compromise.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Roundcube Webmail versions potentially prior to 1.6.6, 1.5.6, and 1.4.16. Consult official Roundcube security advisories for definitive vulnerable versions and patches.",
+        "how_to_determine_impact": "Check installed Roundcube versions on all web servers. Review web server and application logs for suspicious access attempts to Roundcube login pages, unusual SQL errors, or unexpected modifications to configuration files.",
+        "tanium_query_hint": "Get Installed Applications from all machines where 'Software Name' contains 'Roundcube'. Use 'Get File Version[path to Roundcube index file]' for precise version identification. Monitor web server process activity.",
+        "rapid7_query_hint": "Search Vulnerability ID for 'Roundcube SQL Injection' or related keywords. Utilize asset search for software 'Roundcube' and check for associated vulnerability findings in InsightVM. Monitor web server logs for exploitation attempts via InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "New Carbonato malware uses AI agents to hijack exposed Docker hosts",
+        "tldr": "The new Carbonato botnet malware is actively targeting insecure Docker daemon hosts to install the Hermes Agent AI framework and gain control. This threat leverages misconfigured or exposed Docker environments to compromise systems and establish persistence.",
+        "action": "Secure all Docker daemon configurations, ensuring they are not exposed to the internet and require strong authentication. Implement robust network segmentation for Docker hosts and regularly audit Docker host security and container images for unauthorized changes.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Docker hosts with insecurely configured or exposed Docker daemon APIs. Any version of Docker daemon accessible without proper authentication is at risk.",
+        "how_to_determine_impact": "Check Docker daemon configurations (e.g., /etc/docker/daemon.json, systemd unit files) for insecure remote access, unauthenticated API exposure, or listening on public network interfaces. Inspect running Docker containers for unauthorized images, processes, or unusual network activity.",
+        "tanium_query_hint": "Get Network Connections from all machines with 'Process Name' contains 'dockerd' and 'Remote Port' matches '2375' or '2376'. Use 'Get File Content[/etc/docker/daemon.json]' to review daemon configuration files.",
+        "rapid7_query_hint": "Asset search for 'Docker' installations and check for vulnerabilities related to exposed daemon APIs. Conduct network scans for open ports 2375/2376 on Docker hosts. Monitor Docker host logs for unusual commands or container spawns in InsightIDR.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "'SalesBleed' Flaws in Salesforce Agentforce Enabled Zero-Click Data Exfiltration",
+        "tldr": "A series of 'SalesBleed' vulnerabilities within Salesforce Agentforce allowed for zero-click data exfiltration, posing a severe risk of sensitive customer data exposure. These flaws enabled attackers to steal information without any user interaction.",
+        "action": "Salesforce customers should immediately review their Agentforce configurations, ensure all Salesforce instances are updated to the latest secure versions, and audit logs for any unauthorized data access or anomalous activity. Consult Salesforce's official security advisories.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/salesbleed-flaws-in-salesforce-agentforce-enabled-zero-click-data-exfiltration/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Salesforce Agentforce. Specific vulnerable versions should be confirmed by Salesforce's official advisories.",
+        "how_to_determine_impact": "Salesforce customers should check their instance's patch level and review Agentforce configuration settings for any non-standard or vulnerable configurations. Monitor Salesforce audit trails and API access logs for suspicious data export activities.",
+        "tanium_query_hint": "N/A - This is a SaaS platform vulnerability. Impact determination and remediation focus on configurations and audit logs directly within the Salesforce environment rather than endpoint queries.",
+        "rapid7_query_hint": "N/A - This is a SaaS platform vulnerability. Impact determination and remediation focus on configurations and audit logs directly within the Salesforce environment rather than endpoint queries.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.5 High (Estimated)",
         "category": "vulns"
       }
     ]
