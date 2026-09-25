@@ -1,101 +1,85 @@
 {
   "breaches": [
     {
-      "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
-      "tldr": "Threat actors reactivated previously compromised GitHub Actions, resuming the execution of Mini Shai-Hulud malware. This indicates persistent unauthorized access to GitHub CI/CD environments and potential supply chain compromise.",
-      "action": "Review GitHub Actions logs for unusual activity, verify the integrity of all workflows and secrets, and implement least privilege for CI/CD environments. Consider token expiration and rotation policies.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Hackers steal $351.6 million in Bitget crypto exchange hack",
-      "tldr": "Cryptocurrency exchange Bitget disclosed that suspected North Korean hackers stole $351.6 million from its hot and warm wallets. The incident points to a significant backend compromise of the exchange's systems.",
-      "action": "Review and enhance security measures for all cryptocurrency holdings, including multi-sig wallets, cold storage, and comprehensive monitoring for unusual transactions. Implement rigorous access controls for backend systems.",
+      "tldr": "Cryptocurrency exchange Bitget reported a theft of $351.6 million from its hot and warm wallets. Suspected North Korean hackers are believed to be responsible for the backend compromise. This incident highlights ongoing financial threats to crypto platforms.",
+      "action": "Review and strengthen security measures for cryptocurrency holdings, especially hot and warm wallets. Implement multi-factor authentication, robust access controls, and continuous monitoring for suspicious transactions. Investigate any unusual backend activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-3516-million-in-bitget-crypto-exchange-hack/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Rydox marketplace admin pleads guilty, faces 22 years in prison",
-      "tldr": "The administrator of Rydox, a major illegal online marketplace, pleaded guilty to charges related to selling stolen personal information, login credentials, and credit card details. This highlights ongoing law enforcement efforts against illicit data trade platforms.",
-      "action": "Monitor dark web channels for mentions of your organization's data or employee credentials. Implement multi-factor authentication and strong password policies to mitigate the impact of stolen credentials.",
+      "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
+      "tldr": "Previously compromised GitHub Actions workflows have reactivated, leading to the continued execution of Mini Shai-Hulud malware. This indicates a persistent threat where attackers maintain access and capability to reinfect or continue malicious operations within the GitHub Actions environment.",
+      "action": "Organizations using GitHub Actions should immediately review all active workflows for signs of compromise, unusual activity, or unauthorized modifications. Enforce strict access controls, regularly audit CI/CD pipelines, and implement least privilege principles for all GitHub tokens and credentials. Monitor for indicators of Mini Shai-Hulud malware.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/rydox-marketplace-admin-pleads-guilty-faces-22-years-in-prison/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "North Korea Suspected in $351 Million Bitget Crypto Heist",
-      "tldr": "A $351 million cryptocurrency heist from the Bitget exchange is suspected to be the work of North Korean state-sponsored hacking groups. This sophisticated attack underscores the persistent threat from nation-state actors targeting financial institutions.",
-      "action": "Implement enhanced security protocols for critical financial assets, including regular security audits, multi-factor authentication, and robust intrusion detection systems. Conduct regular threat hunting for nation-state TTPs.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
       "title": "CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks",
-      "tldr": "CISA has issued a warning regarding critical authentication bypass vulnerability CVE-2026-5430 affecting WSO2 products, alongside other actively exploited flaws in Microsoft SharePoint and Adobe Commerce. These vulnerabilities are being exploited in the wild, necessitating immediate patching.",
-      "action": "Prioritize patching for all WSO2 products (especially for CVE-2026-5430), Adobe Commerce, and Microsoft SharePoint installations to their latest secure versions. Conduct thorough log analysis for indicators of compromise related to these specific CVEs and affected products.",
+      "tldr": "CISA has issued a warning regarding critical authentication bypass vulnerability, CVE-2026-5430, affecting multiple WSO2 products, which is actively exploited in the wild. The warning also covers exploited flaws in SharePoint and Adobe Commerce, indicating a broad range of high-priority targets for attackers.",
+      "action": "Immediately apply patches for WSO2 products, SharePoint, and Adobe Commerce. Prioritize systems exposed to the internet. Review logs for signs of compromise preceding patch application.",
       "cve_ids": [
         "CVE-2026-5430"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "WSO2 products affected by CVE-2026-5430. Specific vulnerable versions for Adobe Commerce and Microsoft SharePoint should be confirmed via their respective vendor advisories.",
-      "how_to_determine_impact": "Identify all instances of WSO2, Adobe Commerce, and Microsoft SharePoint within your environment. Check installed versions against vendor security advisories and confirm if relevant patches (e.g., for CVE-2026-5430) are missing. Review system logs for unusual activity.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Software Name' contains 'WSO2' or 'Adobe Commerce' or 'SharePoint'. Check for specific patch presence related to CVE-2026-5430 or the latest security updates.",
-      "rapid7_query_hint": "Search Vulnerability ID for 'CVE-2026-5430' and other relevant WSO2, Adobe Commerce, SharePoint vulnerability IDs. Filter asset searches for software 'WSO2', 'Adobe Commerce', or 'Microsoft SharePoint' and look for 'Exploited in the Wild' tags.",
+      "affected_versions": "WSO2 multiple products (CVE-2026-5430), specific versions of SharePoint and Adobe Commerce (details not fully specified in article, refer to CISA KEV catalog or vendor advisories for specific versions)",
+      "how_to_determine_impact": "For WSO2, check if vulnerable versions are deployed. For SharePoint and Adobe Commerce, consult official vendor advisories and CISA KEV for specific affected products/versions and indicators of compromise. Look for authentication bypass attempts or suspicious administrative activity.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'WSO2', 'SharePoint', 'Adobe Commerce'. Filter for vulnerable versions. For WSO2, also check 'Get Registry Value Data[HKEY_LOCAL_MACHINE\\SOFTWARE\\WSO2\\*\\Version]'. Look for suspicious process activity for known IoCs.",
+      "rapid7_query_hint": "Run vulnerability scans for CVE-2026-5430. Search assets for installed software 'WSO2', 'SharePoint', 'Adobe Commerce' and filter by version. Use InsightIDR to search for 'Authentication Bypass' alerts related to these products or known IoCs.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.8 Critical (for CVE-2026-5430)"
     },
     {
       "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
-      "tldr": "A critical pre-authentication SQL injection vulnerability in Roundcube webmail is being actively exploited in the wild. This flaw allows attackers to gain unauthorized access and potentially execute arbitrary code on affected servers without prior authentication.",
-      "action": "Immediately apply the latest security patches for all Roundcube Webmail installations. Isolate Roundcube instances from critical internal networks until patched and conduct a forensic review for potential compromise.",
+      "tldr": "A pre-authentication SQL injection vulnerability in Roundcube Webmail is being actively exploited by attackers. This critical flaw allows unauthenticated adversaries to execute arbitrary SQL commands, potentially leading to information disclosure, unauthorized access, or remote code execution.",
+      "action": "Immediately update all Roundcube Webmail installations to the latest patched version. Implement web application firewall (WAF) rules to detect and block SQL injection attempts. Monitor Roundcube logs for suspicious activity, especially failed authentication attempts or unusual database queries.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Roundcube Webmail versions potentially prior to 1.6.6, 1.5.6, and 1.4.16. Consult official Roundcube security advisories for definitive vulnerable versions and patches.",
-      "how_to_determine_impact": "Check installed Roundcube versions on all web servers. Review web server and application logs for suspicious access attempts to Roundcube login pages, unusual SQL errors, or unexpected modifications to configuration files.",
-      "tanium_query_hint": "Get Installed Applications from all machines where 'Software Name' contains 'Roundcube'. Use 'Get File Version[path to Roundcube index file]' for precise version identification. Monitor web server process activity.",
-      "rapid7_query_hint": "Search Vulnerability ID for 'Roundcube SQL Injection' or related keywords. Utilize asset search for software 'Roundcube' and check for associated vulnerability findings in InsightVM. Monitor web server logs for exploitation attempts via InsightIDR.",
+      "affected_versions": "Roundcube Webmail (specific vulnerable versions, consult official Roundcube advisories for exact ranges)",
+      "how_to_determine_impact": "Identify all servers running Roundcube Webmail. Check the installed version against vendor advisories. Examine web server logs for suspicious requests containing SQL injection payloads, especially before authentication.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'Roundcube'. Check 'Get File Version' for Roundcube application files. Look for suspicious entries in 'Get Logged In Users' or 'Get Connections' for unusual activity on web servers.",
+      "rapid7_query_hint": "Scan web servers for SQL injection vulnerabilities. Search InsightVM for assets running 'Roundcube' and filter by reported version. Use InsightIDR to monitor web server logs for patterns indicative of SQL injection attacks on Roundcube endpoints.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
-    },
-    {
-      "title": "New Carbonato malware uses AI agents to hijack exposed Docker hosts",
-      "tldr": "The new Carbonato botnet malware is actively targeting insecure Docker daemon hosts to install the Hermes Agent AI framework and gain control. This threat leverages misconfigured or exposed Docker environments to compromise systems and establish persistence.",
-      "action": "Secure all Docker daemon configurations, ensuring they are not exposed to the internet and require strong authentication. Implement robust network segmentation for Docker hosts and regularly audit Docker host security and container images for unauthorized changes.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-carbonato-malware-uses-ai-agents-to-hijack-exposed-docker-hosts/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Docker hosts with insecurely configured or exposed Docker daemon APIs. Any version of Docker daemon accessible without proper authentication is at risk.",
-      "how_to_determine_impact": "Check Docker daemon configurations (e.g., /etc/docker/daemon.json, systemd unit files) for insecure remote access, unauthenticated API exposure, or listening on public network interfaces. Inspect running Docker containers for unauthorized images, processes, or unusual network activity.",
-      "tanium_query_hint": "Get Network Connections from all machines with 'Process Name' contains 'dockerd' and 'Remote Port' matches '2375' or '2376'. Use 'Get File Content[/etc/docker/daemon.json]' to review daemon configuration files.",
-      "rapid7_query_hint": "Asset search for 'Docker' installations and check for vulnerabilities related to exposed daemon APIs. Conduct network scans for open ports 2375/2376 on Docker hosts. Monitor Docker host logs for unusual commands or container spawns in InsightIDR.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical (Estimated)"
+      "cvss_score": "9.8 Critical (Estimate based on pre-auth SQLi, active exploitation)"
     },
     {
       "title": "'SalesBleed' Flaws in Salesforce Agentforce Enabled Zero-Click Data Exfiltration",
-      "tldr": "A series of 'SalesBleed' vulnerabilities within Salesforce Agentforce allowed for zero-click data exfiltration, posing a severe risk of sensitive customer data exposure. These flaws enabled attackers to steal information without any user interaction.",
-      "action": "Salesforce customers should immediately review their Agentforce configurations, ensure all Salesforce instances are updated to the latest secure versions, and audit logs for any unauthorized data access or anomalous activity. Consult Salesforce's official security advisories.",
+      "tldr": "Multiple 'SalesBleed' flaws within Salesforce Agentforce could enable zero-click data exfiltration. These critical vulnerabilities allow attackers to extract sensitive data from affected Salesforce instances without requiring any user interaction, posing a significant risk to data privacy and integrity.",
+      "action": "Review Salesforce Agentforce configurations and apply any available patches or security updates from Salesforce immediately. Implement Salesforce security best practices, including strong access controls, continuous monitoring for unauthorized data access, and auditing of Agentforce activities.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/salesbleed-flaws-in-salesforce-agentforce-enabled-zero-click-data-exfiltration/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Salesforce Agentforce. Specific vulnerable versions should be confirmed by Salesforce's official advisories.",
-      "how_to_determine_impact": "Salesforce customers should check their instance's patch level and review Agentforce configuration settings for any non-standard or vulnerable configurations. Monitor Salesforce audit trails and API access logs for suspicious data export activities.",
-      "tanium_query_hint": "N/A - This is a SaaS platform vulnerability. Impact determination and remediation focus on configurations and audit logs directly within the Salesforce environment rather than endpoint queries.",
-      "rapid7_query_hint": "N/A - This is a SaaS platform vulnerability. Impact determination and remediation focus on configurations and audit logs directly within the Salesforce environment rather than endpoint queries.",
+      "affected_versions": "Salesforce Agentforce (specific versions affected, consult Salesforce advisories for details)",
+      "how_to_determine_impact": "Check if Salesforce Agentforce is deployed in your environment. Consult Salesforce's official security advisories to determine if your instance is running a vulnerable version and for any indicators of compromise related to 'SalesBleed'.",
+      "tanium_query_hint": "Query Salesforce API for 'Agentforce' instance details. Monitor network traffic for unusual outbound connections from Salesforce environments that could indicate data exfiltration. Check Salesforce audit logs for suspicious API calls.",
+      "rapid7_query_hint": "Review Salesforce security logs within InsightIDR for anomalies. Configure custom alerts for suspicious API usage or data export activities from Agentforce. Consult Salesforce-specific vulnerability checks in InsightVM.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.5 High (Estimated)"
+      "cvss_score": "9.1 Critical (Estimate based on zero-click data exfiltration potential)"
+    },
+    {
+      "title": "Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions",
+      "tldr": "Unpatched vulnerabilities in OnePlus devices allow installed Android applications to gain root privileges without requiring explicit user permissions. This poses a severe security risk, as malicious apps could exploit these flaws to take full control of the device and access sensitive user data.",
+      "action": "OnePlus users should immediately check for and apply any pending security updates from the vendor. Until patches are available, exercise extreme caution when installing new Android applications, especially from unofficial sources. Restrict unnecessary app permissions.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "OnePlus Android devices (specific models and OxygenOS versions are likely affected, consult OnePlus security advisories)",
+      "how_to_determine_impact": "Identify all OnePlus devices within your organization. Check the OxygenOS version on each device and compare against official OnePlus security bulletins for known vulnerabilities related to root privilege escalation.",
+      "tanium_query_hint": "Get Mobile Device Management Status from managed devices. Query 'Get Installed Applications' and 'Get Android OS Version' on OnePlus devices. Look for unauthorized root access indicators or unusual app permissions.",
+      "rapid7_query_hint": "For mobile device management solutions integrated with Rapid7, search for 'OnePlus' devices and 'Android OS Version'. Scan mobile devices for known vulnerabilities. Monitor mobile device activity for indicators of compromise such as unauthorized root access.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.8 High (Estimate based on privilege escalation to root without permissions)"
     }
   ],
   "insurance": [],
@@ -18425,6 +18409,22 @@
         "rapid7_query_hint": "N/A - This is a SaaS platform vulnerability. Impact determination and remediation focus on configurations and audit logs directly within the Salesforce environment rather than endpoint queries.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.5 High (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Unpatched OnePlus Flaws Let Installed Android Apps Gain Root Without Permissions",
+        "tldr": "Unpatched vulnerabilities in OnePlus devices allow installed Android applications to gain root privileges without requiring explicit user permissions. This poses a severe security risk, as malicious apps could exploit these flaws to take full control of the device and access sensitive user data.",
+        "action": "OnePlus users should immediately check for and apply any pending security updates from the vendor. Until patches are available, exercise extreme caution when installing new Android applications, especially from unofficial sources. Restrict unnecessary app permissions.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/unpatched-oneplus-flaws-let-installed.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "OnePlus Android devices (specific models and OxygenOS versions are likely affected, consult OnePlus security advisories)",
+        "how_to_determine_impact": "Identify all OnePlus devices within your organization. Check the OxygenOS version on each device and compare against official OnePlus security bulletins for known vulnerabilities related to root privilege escalation.",
+        "tanium_query_hint": "Get Mobile Device Management Status from managed devices. Query 'Get Installed Applications' and 'Get Android OS Version' on OnePlus devices. Look for unauthorized root access indicators or unusual app permissions.",
+        "rapid7_query_hint": "For mobile device management solutions integrated with Rapid7, search for 'OnePlus' devices and 'Android OS Version'. Scan mobile devices for known vulnerabilities. Monitor mobile device activity for indicators of compromise such as unauthorized root access.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High (Estimate based on privilege escalation to root without permissions)",
         "category": "vulns"
       }
     ]
