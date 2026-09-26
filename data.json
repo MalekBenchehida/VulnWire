@@ -2,100 +2,102 @@
   "breaches": [
     {
       "title": "Bitget Says Suspected North Korean Hackers Stole $351.6M After Backend Compromise",
-      "tldr": "Cryptocurrency exchange Bitget reported a $351.6 million theft, suspected to be carried out by North Korean hackers. The breach was attributed to a compromise of the exchange's backend systems.",
-      "action": "If using Bitget, monitor accounts for unusual activity. For other crypto exchanges, review security posture, especially backend access controls, and implement strong multi-factor authentication and threat detection.",
+      "tldr": "Cryptocurrency exchange Bitget reported a $351.6 million theft, suspected to be carried out by North Korean hackers. The incident involved a compromise of their backend systems, highlighting risks in managing large digital assets.",
+      "action": "Review and enhance security controls around cryptocurrency holdings and backend infrastructure, particularly against sophisticated state-sponsored threat actors. Implement multi-factor authentication, robust intrusion detection, and strict access controls for all critical systems.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/bitget-says-suspected-north-korean.html",
       "source": "The Hacker News"
     },
     {
-      "title": "OpenAI's AI agents accidentally uploaded user-provided images to third-party sites",
-      "tldr": "OpenAI announced that its AI agents inadvertently uploaded user-provided images to third-party image-hosting services during research and evaluation tasks. This incident represents an accidental data leakage of sensitive user data.",
-      "action": "Review any data submitted to AI agents for potential exposure if privacy controls are not clearly defined. Implement strict data handling policies for AI system interactions, especially concerning sensitive information.",
+      "title": "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser Credentials",
+      "tldr": "Lunex Stealer malware is leveraging a legitimate AMD driver to disable security monitoring tools, allowing it to operate undetected. Its primary objective is to steal browser credentials and other sensitive information from infected systems by evading detection.",
+      "action": "Deploy advanced endpoint detection and response (EDR) solutions capable of detecting driver abuse and stealthy malware behavior. Ensure all systems have up-to-date antivirus definitions, implement application whitelisting, and regularly audit driver integrity to prevent such attacks.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
-      "tldr": "Previously compromised third-party GitHub Actions were re-enabled, continuing to execute Mini Shai-Hulud malware. This indicates an ongoing and persistent compromise within the software supply chain using GitHub Actions.",
-      "action": "Audit all GitHub Actions used in your CI/CD pipelines, especially third-party actions, for integrity and ensure they are sourced from trusted, verified maintainers. Monitor for unusual activity in CI/CD environments and developer accounts.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
+      "source_url": "https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html",
       "source": "The Hacker News"
     },
     {
-      "title": "New x47.c Windows Botnet Weaponizes xAI Grok, AI API Draining",
-      "tldr": "A new Windows botnet, dubbed x47.c, has been observed weaponizing xAI Grok and performing AI API draining. This botnet signifies a new threat vector leveraging AI services for malicious purposes, potentially leading to unauthorized data access or resource exhaustion.",
-      "action": "Implement strict access controls and rate limiting for AI API usage. Monitor for unusual API call patterns, especially to AI services. Deploy endpoint detection and response (EDR) solutions to detect botnet activity on Windows systems.",
+      "title": "PamStealer macOS Malware Adds Live C2 Payload Decryption and Multi-Layer Persistence",
+      "tldr": "PamStealer, a macOS malware, has been updated with new capabilities, including live C2 payload decryption and multi-layer persistence mechanisms. This enhances its ability to evade detection and maintain control, ultimately aiming to steal sensitive data from macOS users.",
+      "action": "Educate macOS users about phishing and malicious downloads. Implement strict macOS security configurations, including Gatekeeper, XProtect, and regularly review login items and launch agents. Deploy EDR solutions for macOS to detect and respond to advanced threats.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/new-x47-c-windows-botnet-weaponizes-xai-grok-ai-api-draining/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/09/pamstealer-macos-malware-adds-live-c2.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "OpenAI's AI agents accidentally uploaded user-provided images to third-party sites",
+      "tldr": "OpenAI has disclosed that its AI agents inadvertently uploaded user-provided images to third-party image-hosting services during research and evaluation tasks. This raises privacy concerns regarding data handling by AI models and potential exposure of sensitive user data.",
+      "action": "Users of OpenAI's AI agents should be aware of potential data exposure and exercise caution with sensitive inputs. Organizations using or developing AI agents must conduct thorough privacy impact assessments and implement strict data handling policies for user-provided information.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/",
+      "source": "BleepingComputer"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks",
-      "tldr": "CISA has issued a warning regarding multiple critical vulnerabilities being actively exploited in the wild. Specifically, a critical authentication bypass flaw (CVE-2026-5430) affecting WSO2 products is under active attack. Other exploited flaws include those in SharePoint and Adobe Commerce.",
-      "action": "Immediately identify and patch all WSO2, SharePoint, and Adobe Commerce instances. Focus on WSO2 products vulnerable to CVE-2026-5430.",
+      "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
+      "tldr": "Critical vulnerabilities in SharePoint (RCE) and MikroTik RouterOS are being actively exploited in the wild. CISA has issued warnings, also noting active exploitation of a critical authentication bypass in WSO2 products (CVE-2026-5430) and Adobe Commerce flaws.",
+      "action": "Immediately identify and patch all SharePoint, MikroTik RouterOS, WSO2, and Adobe Commerce installations. Prioritize systems exposed to the internet, enable comprehensive logging, and actively monitor for any signs of exploitation attempts on these assets.",
       "cve_ids": [
         "CVE-2026-5430"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "WSO2 multiple products (CVE-2026-5430), various SharePoint and Adobe Commerce versions. Specific WSO2 versions are typically documented in vendor advisories related to CVE-2026-5430.",
-      "how_to_determine_impact": "Identify all WSO2, SharePoint, and Adobe Commerce deployments. For WSO2, check for presence of products mentioned in vendor advisory for CVE-2026-5430. For SharePoint and Adobe Commerce, consult CISA's KEV catalog or vendor security bulletins for specific vulnerable versions and indicators of compromise. Look for unusual activity or web shell deployment.",
-      "tanium_query_hint": "Get Installed Applications from all machines for 'WSO2', 'SharePoint', 'Adobe Commerce'. Use 'Get File Version' for specific binaries if known. Check 'Detect Compromised' sensor for IoCs related to these exploits.",
-      "rapid7_query_hint": "Asset Search: 'vulnerability.cve: CVE-2026-5430' OR 'vulnerability.title: (SharePoint AND RCE) OR (Adobe Commerce AND RCE)'. For InsightIDR, look for alerts on WSO2, SharePoint, Adobe Commerce related to web shell activity or unusual authentication attempts.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (for CVE-2026-5430, based on critical authentication bypass and active exploitation)"
-    },
-    {
-      "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
-      "tldr": "Remote Code Execution (RCE) vulnerabilities in SharePoint and unspecified flaws in MikroTik RouterOS are currently being actively exploited by attackers. These exploits pose a severe risk due to the potential for full system compromise.",
-      "action": "Immediately identify and patch all SharePoint and MikroTik RouterOS devices. Isolate unpatchable or critical systems. Monitor for signs of compromise, including unauthorized access or unusual network traffic.",
-      "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Various versions of Microsoft SharePoint and MikroTik RouterOS products. Consult vendor advisories for specific vulnerable versions related to recent RCEs and actively exploited flaws.",
-      "how_to_determine_impact": "Inventory all SharePoint servers and MikroTik RouterOS devices. Check their current patch levels against vendor advisories. Look for anomalous processes, web shells on SharePoint, or unauthorized configuration changes/traffic on RouterOS devices. Review logs for suspicious activity.",
-      "tanium_query_hint": "Get Running Processes from all machines for 'SharePoint'. Get Config File for 'RouterOS' devices (if managed). Use 'Get Installed Applications' for SharePoint. Look for unusual network connections or file changes.",
-      "rapid7_query_hint": "Asset Search: 'vulnerability.title: (SharePoint AND RCE) OR (MikroTik RouterOS AND RCE)'. Use network scans to identify unpatched MikroTik devices. Look for IoCs in InsightIDR for SharePoint servers.",
+      "affected_versions": "SharePoint (specific RCE not detailed, but actively exploited), MikroTik RouterOS (specific flaws not detailed, but actively exploited), WSO2 products vulnerable to CVE-2026-5430, Adobe Commerce (specific flaws not detailed, but actively exploited)",
+      "how_to_determine_impact": "Identify all instances of SharePoint, MikroTik RouterOS, WSO2, and Adobe Commerce within your environment. Verify if the latest vendor-supplied security patches are applied. For WSO2, specifically check for vulnerable versions related to CVE-2026-5430. Monitor logs for suspicious activity indicative of RCE, authentication bypass, or unauthorized access.",
+      "tanium_query_hint": "Use 'Get Installed Applications' to identify 'SharePoint', 'WSO2', or 'Adobe Commerce' instances. For MikroTik, 'Get File Version['path_to_routeros_firmware']' can help. Use 'Get Running Processes' and 'Get Network Connections' to detect unusual activity or outbound C2 communications on these servers.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-5430' or 'SharePoint RCE' or 'MikroTik RouterOS' in InsightVM. Utilize InsightAgent queries to check for specific file versions, configurations, or indicators of compromise on affected assets. Monitor web server logs via InsightIDR for signs of exploitation.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimating for RCE flaws actively exploited in the wild)"
+      "cvss_score": "9.8 Critical (Estimate for RCE/Auth Bypass)"
     },
     {
-      "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
-      "tldr": "A critical pre-authentication SQL injection vulnerability in Roundcube webmail is being actively exploited. This flaw allows attackers to execute arbitrary SQL commands without prior authentication, potentially leading to full compromise of email servers.",
-      "action": "Immediately identify and patch all Roundcube webmail instances to the latest secure version. Review logs for any signs of exploitation, such as unusual database queries or unauthorized access.",
+      "title": "Kiteworks Urges Customers to Shut Down Systems for 9 Hours Over Possible Cyber Attack",
+      "tldr": "Kiteworks, a secure file-sharing software company, has urged its customers to temporarily shut down their servers for several hours due to intelligence warning of a potentially imminent cyberattack, possibly leveraging a zero-day vulnerability. This is a critical advisory to prevent compromise.",
+      "action": "If your organization uses Kiteworks, follow their specific guidance immediately, which includes system shutdown. Monitor all Kiteworks instances closely for any signs of compromise before and after the shutdown period. Prepare for rapid patching and security updates once an official fix is released.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
+      "source_url": "https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific versions of Roundcube Webmail. Consult official Roundcube security advisories for the exact vulnerable range and patching instructions. Likely affects recent unpatched versions.",
-      "how_to_determine_impact": "Identify all servers running Roundcube Webmail. Check the installed version against official security advisories for the SQL injection vulnerability. Monitor web server logs and Roundcube application logs for suspicious SQL queries or access attempts originating before authentication.",
-      "tanium_query_hint": "Get Installed Applications from all machines for 'Roundcube'. Get Listen Ports showing web servers. Check 'Detect Compromised' sensor for SQLi IoCs.",
-      "rapid7_query_hint": "Asset Search: 'vulnerability.title: Roundcube AND SQL Injection'. Scan web servers for known vulnerabilities in Roundcube. In InsightIDR, look for suspicious SQL errors or unauthenticated access patterns to Roundcube.",
+      "affected_versions": "All Kiteworks secure file-sharing software versions are potentially affected due to a suspected zero-day, awaiting vendor specifics.",
+      "how_to_determine_impact": "Verify if your organization utilizes Kiteworks' secure file-sharing platform. Stay updated on and follow Kiteworks' direct communications for indicators of compromise, specific version checks, or further remediation steps. Be prepared for forensic analysis post-event to confirm integrity.",
+      "tanium_query_hint": "Use 'Get Installed Applications' for 'Kiteworks'. Employ 'Get Running Processes' to identify any unexpected processes or 'Get Open Network Connections' to detect unauthorized outbound communication on Kiteworks servers. Collect host-based logs for suspicious activity.",
+      "rapid7_query_hint": "Search for 'Kiteworks' assets in InsightVM/InsightIDR. Use InsightIDR to proactively monitor for suspicious activity on Kiteworks hosts, including unusual login attempts, process executions, or data exfiltration. As no specific CVE is released, behavioral monitoring is crucial.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimating for pre-auth SQLi actively exploited)"
+      "cvss_score": "9.8 Critical (Estimate for zero-day leading to system shutdown)"
     },
     {
-      "title": "Kiteworks urges 6-hour server shutdown over potential zero-day attacks",
-      "tldr": "Kiteworks has advised customers worldwide to shut down their secure file-sharing servers for six hours due to threat intelligence indicating potential imminent zero-day attacks. This is a critical preemptive measure to prevent exploitation.",
-      "action": "Follow Kiteworks' emergency instructions immediately by shutting down affected servers. Prepare to apply any forthcoming patches or mitigation steps as soon as they are released.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/",
-      "source": "BleepingComputer",
+      "title": "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells",
+      "tldr": "The ShinyHunters extortion gang is actively bypassing Web Application Firewalls (WAFs) using URL-encoding tricks to exploit CVE-2026-35273, a critical flaw in Oracle PeopleSoft. Successful exploitation leads to the deployment of web shells for persistent access and potential data exfiltration.",
+      "action": "Patch all Oracle PeopleSoft installations immediately to address CVE-2026-35273. Review and harden WAF configurations to ensure they effectively block advanced URL-encoding bypasses. Actively scan PeopleSoft web servers for deployed web shells and monitor for suspicious file creations and network connections.",
+      "cve_ids": [
+        "CVE-2026-35273"
+      ],
+      "source_url": "https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "All Kiteworks secure file-sharing servers. Specific version information for the zero-day will be released by Kiteworks upon patch availability.",
-      "how_to_determine_impact": "Identify all Kiteworks secure file-sharing server deployments. The primary impact determination is whether the system is online and unpatched during the threat window. Monitor for any signs of compromise post-patch or if shutdown was not fully achieved. Consult Kiteworks directly for further guidance.",
-      "tanium_query_hint": "Get Running Processes from all machines for 'Kiteworks'. Get Listen Ports on servers running Kiteworks to confirm operational status. Check 'Detect Compromised' sensor if IoCs are released.",
-      "rapid7_query_hint": "Asset Search: 'installed_software.name: Kiteworks'. Monitor network traffic to/from Kiteworks servers for unusual patterns. Look for any IoCs released by Kiteworks in InsightIDR.",
+      "affected_versions": "Oracle PeopleSoft versions vulnerable to CVE-2026-35273",
+      "how_to_determine_impact": "Identify all Oracle PeopleSoft deployments within your environment. Verify if the patch for CVE-2026-35273 has been applied. Review web server access logs for suspicious URL-encoded requests or attempts to upload files (e.g., web shells). Conduct endpoint scans for known web shell signatures on PeopleSoft servers.",
+      "tanium_query_hint": "Use 'Get Installed Applications' for 'Oracle PeopleSoft'. Employ 'Get File Hash' for common web server directories to detect unusual or unauthorized files (web shells). Use 'Get Network Connections' to identify outbound C2 communications from PeopleSoft servers.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-35273' in InsightVM. Utilize InsightAgent to scan for web shell artifacts in PeopleSoft application directories. Configure InsightIDR to monitor web server logs for WAF bypass attempts and suspicious user activities on PeopleSoft assets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimating for a zero-day requiring emergency shutdown)"
+      "cvss_score": "9.8 Critical (Estimate based on RCE via WAF bypass)"
+    },
+    {
+      "title": "Elementor WordPress flaw lets attackers create admin accounts",
+      "tldr": "A Cross-Site Request Forgery (CSRF) vulnerability in the Elementor plugin for WordPress allows unauthenticated attackers to create administrator accounts. This severe flaw could lead to full site compromise if an administrator clicks a specially crafted link.",
+      "action": "Update the Elementor WordPress plugin to the latest patched version immediately. Ensure all WordPress installations have robust WAF rules in place to mitigate CSRF attacks. Educate administrators and site editors about the risks of phishing and clicking suspicious links.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/elementor-wordpress-flaw-lets-attackers-create-admin-accounts/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Elementor WordPress plugin (specific vulnerable versions not detailed, but requires immediate update)",
+      "how_to_determine_impact": "Identify all WordPress sites utilizing the Elementor plugin. Check the installed version of Elementor to determine if it is vulnerable. Review web server and WordPress audit logs for any unauthorized creation of new administrator user accounts, especially those created without a typical registration process.",
+      "tanium_query_hint": "Use 'Get Installed Applications' for 'WordPress' and 'Elementor'. Check file content in the Elementor plugin directory for signs of tampering or outdated versions. Use 'Get File Version' for key Elementor plugin files to determine the installed version.",
+      "rapid7_query_hint": "Search for assets running 'WordPress' with the 'Elementor' plugin in InsightVM. Use InsightVM's vulnerability checks for WordPress plugins. Configure InsightIDR to monitor for new admin account creations on WordPress sites that fall outside of normal administrative procedures or expected user registrations.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.8 High (Estimate for unauthenticated admin account creation)"
     }
   ],
   "insurance": [],
@@ -18586,6 +18588,74 @@
         "rapid7_query_hint": "Asset Search: 'installed_software.name: Kiteworks'. Monitor network traffic to/from Kiteworks servers for unusual patterns. Look for any IoCs released by Kiteworks in InsightIDR.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (Estimating for a zero-day requiring emergency shutdown)",
+        "category": "vulns"
+      },
+      {
+        "title": "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser Credentials",
+        "tldr": "Lunex Stealer malware is leveraging a legitimate AMD driver to disable security monitoring tools, allowing it to operate undetected. Its primary objective is to steal browser credentials and other sensitive information from infected systems by evading detection.",
+        "action": "Deploy advanced endpoint detection and response (EDR) solutions capable of detecting driver abuse and stealthy malware behavior. Ensure all systems have up-to-date antivirus definitions, implement application whitelisting, and regularly audit driver integrity to prevent such attacks.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "PamStealer macOS Malware Adds Live C2 Payload Decryption and Multi-Layer Persistence",
+        "tldr": "PamStealer, a macOS malware, has been updated with new capabilities, including live C2 payload decryption and multi-layer persistence mechanisms. This enhances its ability to evade detection and maintain control, ultimately aiming to steal sensitive data from macOS users.",
+        "action": "Educate macOS users about phishing and malicious downloads. Implement strict macOS security configurations, including Gatekeeper, XProtect, and regularly review login items and launch agents. Deploy EDR solutions for macOS to detect and respond to advanced threats.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/pamstealer-macos-malware-adds-live-c2.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Kiteworks Urges Customers to Shut Down Systems for 9 Hours Over Possible Cyber Attack",
+        "tldr": "Kiteworks, a secure file-sharing software company, has urged its customers to temporarily shut down their servers for several hours due to intelligence warning of a potentially imminent cyberattack, possibly leveraging a zero-day vulnerability. This is a critical advisory to prevent compromise.",
+        "action": "If your organization uses Kiteworks, follow their specific guidance immediately, which includes system shutdown. Monitor all Kiteworks instances closely for any signs of compromise before and after the shutdown period. Prepare for rapid patching and security updates once an official fix is released.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "All Kiteworks secure file-sharing software versions are potentially affected due to a suspected zero-day, awaiting vendor specifics.",
+        "how_to_determine_impact": "Verify if your organization utilizes Kiteworks' secure file-sharing platform. Stay updated on and follow Kiteworks' direct communications for indicators of compromise, specific version checks, or further remediation steps. Be prepared for forensic analysis post-event to confirm integrity.",
+        "tanium_query_hint": "Use 'Get Installed Applications' for 'Kiteworks'. Employ 'Get Running Processes' to identify any unexpected processes or 'Get Open Network Connections' to detect unauthorized outbound communication on Kiteworks servers. Collect host-based logs for suspicious activity.",
+        "rapid7_query_hint": "Search for 'Kiteworks' assets in InsightVM/InsightIDR. Use InsightIDR to proactively monitor for suspicious activity on Kiteworks hosts, including unusual login attempts, process executions, or data exfiltration. As no specific CVE is released, behavioral monitoring is crucial.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate for zero-day leading to system shutdown)",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Bypass WAFs to Exploit Oracle PeopleSoft Flaw and Deploy Web Shells",
+        "tldr": "The ShinyHunters extortion gang is actively bypassing Web Application Firewalls (WAFs) using URL-encoding tricks to exploit CVE-2026-35273, a critical flaw in Oracle PeopleSoft. Successful exploitation leads to the deployment of web shells for persistent access and potential data exfiltration.",
+        "action": "Patch all Oracle PeopleSoft installations immediately to address CVE-2026-35273. Review and harden WAF configurations to ensure they effectively block advanced URL-encoding bypasses. Actively scan PeopleSoft web servers for deployed web shells and monitor for suspicious file creations and network connections.",
+        "cve_ids": [
+          "CVE-2026-35273"
+        ],
+        "source_url": "https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Oracle PeopleSoft versions vulnerable to CVE-2026-35273",
+        "how_to_determine_impact": "Identify all Oracle PeopleSoft deployments within your environment. Verify if the patch for CVE-2026-35273 has been applied. Review web server access logs for suspicious URL-encoded requests or attempts to upload files (e.g., web shells). Conduct endpoint scans for known web shell signatures on PeopleSoft servers.",
+        "tanium_query_hint": "Use 'Get Installed Applications' for 'Oracle PeopleSoft'. Employ 'Get File Hash' for common web server directories to detect unusual or unauthorized files (web shells). Use 'Get Network Connections' to identify outbound C2 communications from PeopleSoft servers.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-35273' in InsightVM. Utilize InsightAgent to scan for web shell artifacts in PeopleSoft application directories. Configure InsightIDR to monitor web server logs for WAF bypass attempts and suspicious user activities on PeopleSoft assets.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on RCE via WAF bypass)",
+        "category": "vulns"
+      },
+      {
+        "title": "Elementor WordPress flaw lets attackers create admin accounts",
+        "tldr": "A Cross-Site Request Forgery (CSRF) vulnerability in the Elementor plugin for WordPress allows unauthenticated attackers to create administrator accounts. This severe flaw could lead to full site compromise if an administrator clicks a specially crafted link.",
+        "action": "Update the Elementor WordPress plugin to the latest patched version immediately. Ensure all WordPress installations have robust WAF rules in place to mitigate CSRF attacks. Educate administrators and site editors about the risks of phishing and clicking suspicious links.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/elementor-wordpress-flaw-lets-attackers-create-admin-accounts/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Elementor WordPress plugin (specific vulnerable versions not detailed, but requires immediate update)",
+        "how_to_determine_impact": "Identify all WordPress sites utilizing the Elementor plugin. Check the installed version of Elementor to determine if it is vulnerable. Review web server and WordPress audit logs for any unauthorized creation of new administrator user accounts, especially those created without a typical registration process.",
+        "tanium_query_hint": "Use 'Get Installed Applications' for 'WordPress' and 'Elementor'. Check file content in the Elementor plugin directory for signs of tampering or outdated versions. Use 'Get File Version' for key Elementor plugin files to determine the installed version.",
+        "rapid7_query_hint": "Search for assets running 'WordPress' with the 'Elementor' plugin in InsightVM. Use InsightVM's vulnerability checks for WordPress plugins. Configure InsightIDR to monitor for new admin account creations on WordPress sites that fall outside of normal administrative procedures or expected user registrations.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High (Estimate for unauthenticated admin account creation)",
         "category": "vulns"
       }
     ]
