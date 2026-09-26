@@ -2,84 +2,100 @@
   "breaches": [
     {
       "title": "Bitget Says Suspected North Korean Hackers Stole $351.6M After Backend Compromise",
-      "tldr": "Cryptocurrency exchange Bitget reported a $351.6 million theft, suspected to be carried out by North Korean hackers. The breach occurred due to a compromise of their backend systems, leading to a significant financial loss.",
-      "action": "Immediately review and harden backend infrastructure, enforce strict access controls, monitor for suspicious activity related to North Korean APTs, and verify financial transaction logs.",
+      "tldr": "Cryptocurrency exchange Bitget reported a $351.6 million theft, suspected to be carried out by North Korean hackers. The breach was attributed to a compromise of the exchange's backend systems.",
+      "action": "If using Bitget, monitor accounts for unusual activity. For other crypto exchanges, review security posture, especially backend access controls, and implement strong multi-factor authentication and threat detection.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/bitget-says-suspected-north-korean.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Rydox marketplace admin pleads guilty, faces 22 years in prison",
-      "tldr": "A Kosovar national pleaded guilty to operating Rydox, an illegal online marketplace that facilitated the sale of stolen personal information, login credentials, and credit card details. This conviction highlights law enforcement efforts against cybercrime.",
-      "action": "Organizations should emphasize user awareness about credential stuffing, use multi-factor authentication, and monitor for their data appearing on dark web marketplaces. Conduct regular credential exposure checks.",
+      "title": "OpenAI's AI agents accidentally uploaded user-provided images to third-party sites",
+      "tldr": "OpenAI announced that its AI agents inadvertently uploaded user-provided images to third-party image-hosting services during research and evaluation tasks. This incident represents an accidental data leakage of sensitive user data.",
+      "action": "Review any data submitted to AI agents for potential exposure if privacy controls are not clearly defined. Implement strict data handling policies for AI system interactions, especially concerning sensitive information.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/rydox-marketplace-admin-pleads-guilty-faces-22-years-in-prison/",
+      "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
+      "tldr": "Previously compromised third-party GitHub Actions were re-enabled, continuing to execute Mini Shai-Hulud malware. This indicates an ongoing and persistent compromise within the software supply chain using GitHub Actions.",
+      "action": "Audit all GitHub Actions used in your CI/CD pipelines, especially third-party actions, for integrity and ensure they are sourced from trusted, verified maintainers. Monitor for unusual activity in CI/CD environments and developer accounts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "New x47.c Windows Botnet Weaponizes xAI Grok, AI API Draining",
+      "tldr": "A new Windows botnet, dubbed x47.c, has been observed weaponizing xAI Grok and performing AI API draining. This botnet signifies a new threat vector leveraging AI services for malicious purposes, potentially leading to unauthorized data access or resource exhaustion.",
+      "action": "Implement strict access controls and rate limiting for AI API usage. Monitor for unusual API call patterns, especially to AI services. Deploy endpoint detection and response (EDR) solutions to detect botnet activity on Windows systems.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/new-x47-c-windows-botnet-weaponizes-xai-grok-ai-api-draining/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
-      "tldr": "A pre-authentication SQL injection vulnerability in Roundcube Webmail is being actively exploited. This critical flaw allows attackers to bypass authentication and potentially gain unauthorized access or execute arbitrary code.",
-      "action": "Immediately patch Roundcube Webmail installations to the latest secure version. Isolate affected systems and review logs for signs of compromise if patching is not immediate.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Roundcube Webmail. Consult vendor advisories for specific vulnerable versions. Patch to the latest secure version.",
-      "how_to_determine_impact": "Identify all Roundcube Webmail installations. Check installed versions. Review server access logs for unusual SQL queries, authentication bypass attempts, or suspicious activity. Look for unauthorized user accounts or data modifications.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Is Windows containing 'Roundcube' or search for 'roundcube' in file paths on Linux servers. Utilize 'Get Running Processes' to identify web processes serving Roundcube and check their arguments or parent processes for anomalies.",
-      "rapid7_query_hint": "Search for vulnerability ID or keywords 'Roundcube SQL Injection'. Use asset search for 'software.name=Roundcube' to identify instances. Run authenticated scans to detect specific version numbers. Review web server access logs for signs of SQL injection attacks.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks",
-      "tldr": "CISA has issued a warning regarding active exploitation of vulnerabilities in Microsoft SharePoint, WSO2 products, and Adobe Commerce. A critical authentication bypass, CVE-2026-5430, affecting WSO2 products is specifically mentioned as being exploited.",
-      "action": "Immediately apply patches for CVE-2026-5430 in WSO2 products. For SharePoint and Adobe Commerce, consult CISA and vendor advisories for specific CVEs and apply all critical security updates. Scan for indicators of compromise.",
+      "tldr": "CISA has issued a warning regarding multiple critical vulnerabilities being actively exploited in the wild. Specifically, a critical authentication bypass flaw (CVE-2026-5430) affecting WSO2 products is under active attack. Other exploited flaws include those in SharePoint and Adobe Commerce.",
+      "action": "Immediately identify and patch all WSO2, SharePoint, and Adobe Commerce instances. Focus on WSO2 products vulnerable to CVE-2026-5430.",
       "cve_ids": [
         "CVE-2026-5430"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "WSO2 products affected by CVE-2026-5430 (critical authentication bypass). Microsoft SharePoint and Adobe Commerce products, specific vulnerable versions to be identified from CISA KEV and vendor advisories.",
-      "how_to_determine_impact": "Identify all deployments of WSO2, Microsoft SharePoint, and Adobe Commerce. Check installed versions against vendor security bulletins for CVE-2026-5430 and other recently exploited flaws. Scan systems for indicators of compromise (IoCs) provided by CISA or vendors.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Is Windows containing 'SharePoint', 'WSO2', or 'Adobe Commerce'. For Linux, 'Get Installed RPMs' or 'Get Installed Debian Packages' for 'WSO2' or 'Adobe Commerce'. Use 'Get File Version' for relevant executables/libraries.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-5430' and other relevant SharePoint or Adobe Commerce CVEs or vulnerability keywords. Asset search for 'software.name=WSO2', 'software.name=SharePoint', or 'software.name=Adobe Commerce'. Use InsightAgent to check patch status and file versions.",
+      "affected_versions": "WSO2 multiple products (CVE-2026-5430), various SharePoint and Adobe Commerce versions. Specific WSO2 versions are typically documented in vendor advisories related to CVE-2026-5430.",
+      "how_to_determine_impact": "Identify all WSO2, SharePoint, and Adobe Commerce deployments. For WSO2, check for presence of products mentioned in vendor advisory for CVE-2026-5430. For SharePoint and Adobe Commerce, consult CISA's KEV catalog or vendor security bulletins for specific vulnerable versions and indicators of compromise. Look for unusual activity or web shell deployment.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'WSO2', 'SharePoint', 'Adobe Commerce'. Use 'Get File Version' for specific binaries if known. Check 'Detect Compromised' sensor for IoCs related to these exploits.",
+      "rapid7_query_hint": "Asset Search: 'vulnerability.cve: CVE-2026-5430' OR 'vulnerability.title: (SharePoint AND RCE) OR (Adobe Commerce AND RCE)'. For InsightIDR, look for alerts on WSO2, SharePoint, Adobe Commerce related to web shell activity or unusual authentication attempts.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (for CVE-2026-5430, based on critical authentication bypass and active exploitation)"
+    },
+    {
+      "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
+      "tldr": "Remote Code Execution (RCE) vulnerabilities in SharePoint and unspecified flaws in MikroTik RouterOS are currently being actively exploited by attackers. These exploits pose a severe risk due to the potential for full system compromise.",
+      "action": "Immediately identify and patch all SharePoint and MikroTik RouterOS devices. Isolate unpatchable or critical systems. Monitor for signs of compromise, including unauthorized access or unusual network traffic.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Various versions of Microsoft SharePoint and MikroTik RouterOS products. Consult vendor advisories for specific vulnerable versions related to recent RCEs and actively exploited flaws.",
+      "how_to_determine_impact": "Inventory all SharePoint servers and MikroTik RouterOS devices. Check their current patch levels against vendor advisories. Look for anomalous processes, web shells on SharePoint, or unauthorized configuration changes/traffic on RouterOS devices. Review logs for suspicious activity.",
+      "tanium_query_hint": "Get Running Processes from all machines for 'SharePoint'. Get Config File for 'RouterOS' devices (if managed). Use 'Get Installed Applications' for SharePoint. Look for unusual network connections or file changes.",
+      "rapid7_query_hint": "Asset Search: 'vulnerability.title: (SharePoint AND RCE) OR (MikroTik RouterOS AND RCE)'. Use network scans to identify unpatched MikroTik devices. Look for IoCs in InsightIDR for SharePoint servers.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimating for RCE flaws actively exploited in the wild)"
+    },
+    {
+      "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
+      "tldr": "A critical pre-authentication SQL injection vulnerability in Roundcube webmail is being actively exploited. This flaw allows attackers to execute arbitrary SQL commands without prior authentication, potentially leading to full compromise of email servers.",
+      "action": "Immediately identify and patch all Roundcube webmail instances to the latest secure version. Review logs for any signs of exploitation, such as unusual database queries or unauthorized access.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Specific versions of Roundcube Webmail. Consult official Roundcube security advisories for the exact vulnerable range and patching instructions. Likely affects recent unpatched versions.",
+      "how_to_determine_impact": "Identify all servers running Roundcube Webmail. Check the installed version against official security advisories for the SQL injection vulnerability. Monitor web server logs and Roundcube application logs for suspicious SQL queries or access attempts originating before authentication.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'Roundcube'. Get Listen Ports showing web servers. Check 'Detect Compromised' sensor for SQLi IoCs.",
+      "rapid7_query_hint": "Asset Search: 'vulnerability.title: Roundcube AND SQL Injection'. Scan web servers for known vulnerabilities in Roundcube. In InsightIDR, look for suspicious SQL errors or unauthenticated access patterns to Roundcube.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimating for pre-auth SQLi actively exploited)"
     },
     {
       "title": "Kiteworks urges 6-hour server shutdown over potential zero-day attacks",
-      "tldr": "Kiteworks, a secure file-sharing software company, is advising customers to shut down their servers for six hours due to threat intelligence indicating imminent zero-day attacks. This proactive measure aims to prevent exploitation.",
-      "action": "Kiteworks customers must follow the vendor's urgent guidance, including the advised server shutdown, and monitor for further instructions and patches. Prepare for emergency patching.",
+      "tldr": "Kiteworks has advised customers worldwide to shut down their secure file-sharing servers for six hours due to threat intelligence indicating potential imminent zero-day attacks. This is a critical preemptive measure to prevent exploitation.",
+      "action": "Follow Kiteworks' emergency instructions immediately by shutting down affected servers. Prepare to apply any forthcoming patches or mitigation steps as soon as they are released.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Kiteworks secure file-sharing software. Specific vulnerable versions were not disclosed, but the threat intelligence implies current versions are at risk. Customers should follow vendor guidance.",
-      "how_to_determine_impact": "Identify all Kiteworks server deployments. Confirm server uptime adherence to vendor shutdown guidance. Monitor Kiteworks security advisories for patch availability and specific indicators of compromise once released. Review system and application logs for pre-shutdown attack attempts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Is Windows containing 'Kiteworks'. For Linux, 'Get Installed RPMs' or 'Get Installed Debian Packages' for 'Kiteworks'. Check 'Get Running Processes' for Kiteworks services or related web server processes.",
-      "rapid7_query_hint": "Asset search for 'software.name=Kiteworks' to identify affected systems. Monitor for any vulnerability alerts specific to Kiteworks or related components as they emerge. Review server logs for suspicious activity prior to shutdown or during operations.",
+      "affected_versions": "All Kiteworks secure file-sharing servers. Specific version information for the zero-day will be released by Kiteworks upon patch availability.",
+      "how_to_determine_impact": "Identify all Kiteworks secure file-sharing server deployments. The primary impact determination is whether the system is online and unpatched during the threat window. Monitor for any signs of compromise post-patch or if shutdown was not fully achieved. Consult Kiteworks directly for further guidance.",
+      "tanium_query_hint": "Get Running Processes from all machines for 'Kiteworks'. Get Listen Ports on servers running Kiteworks to confirm operational status. Check 'Detect Compromised' sensor if IoCs are released.",
+      "rapid7_query_hint": "Asset Search: 'installed_software.name: Kiteworks'. Monitor network traffic to/from Kiteworks servers for unusual patterns. Look for any IoCs released by Kiteworks in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw",
-      "tldr": "The Clop ransomware gang's data leak site was compromised and defaced by ShinyHunters using an unpatched unauthenticated path traversal vulnerability in Grav CMS. Clop has since moved to a new Tor address.",
-      "action": "Users of Grav CMS should immediately check for and apply any available patches for path traversal vulnerabilities. Audit Grav CMS installations for signs of compromise, especially if unpatched.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Grav CMS. Specific vulnerable versions for the unauthenticated path traversal flaw should be verified against Grav CMS official advisories. Update to the latest patched version.",
-      "how_to_determine_impact": "Identify all instances of Grav CMS. Check the installed version against official Grav CMS security advisories. Inspect web server and application logs for unusual access patterns, file modifications, or attempts to access restricted directories consistent with a path traversal attack.",
-      "tanium_query_hint": "Search for 'Grav CMS' in 'Get Installed Applications' on Windows or file paths on Linux. Use 'Get File Content' to examine Grav CMS configuration files or 'Get Running Processes' to identify web server processes serving Grav CMS.",
-      "rapid7_query_hint": "Asset search for 'software.name=Grav CMS'. Run authenticated vulnerability scans targeting web applications to identify path traversal vulnerabilities. Review web server access logs for anomalous requests or unauthorized file access.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimating for a zero-day requiring emergency shutdown)"
     }
   ],
   "insurance": [],
@@ -18466,6 +18482,110 @@
         "rapid7_query_hint": "Asset search for 'software.name=Grav CMS'. Run authenticated vulnerability scans targeting web applications to identify path traversal vulnerabilities. Review web server access logs for anomalous requests or unauthorized file access.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-26": [
+      {
+        "title": "Bitget Says Suspected North Korean Hackers Stole $351.6M After Backend Compromise",
+        "tldr": "Cryptocurrency exchange Bitget reported a $351.6 million theft, suspected to be carried out by North Korean hackers. The breach was attributed to a compromise of the exchange's backend systems.",
+        "action": "If using Bitget, monitor accounts for unusual activity. For other crypto exchanges, review security posture, especially backend access controls, and implement strong multi-factor authentication and threat detection.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/bitget-says-suspected-north-korean.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "OpenAI's AI agents accidentally uploaded user-provided images to third-party sites",
+        "tldr": "OpenAI announced that its AI agents inadvertently uploaded user-provided images to third-party image-hosting services during research and evaluation tasks. This incident represents an accidental data leakage of sensitive user data.",
+        "action": "Review any data submitted to AI agents for potential exposure if privacy controls are not clearly defined. Implement strict data handling policies for AI system interactions, especially concerning sensitive information.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
+        "tldr": "Previously compromised third-party GitHub Actions were re-enabled, continuing to execute Mini Shai-Hulud malware. This indicates an ongoing and persistent compromise within the software supply chain using GitHub Actions.",
+        "action": "Audit all GitHub Actions used in your CI/CD pipelines, especially third-party actions, for integrity and ensure they are sourced from trusted, verified maintainers. Monitor for unusual activity in CI/CD environments and developer accounts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "New x47.c Windows Botnet Weaponizes xAI Grok, AI API Draining",
+        "tldr": "A new Windows botnet, dubbed x47.c, has been observed weaponizing xAI Grok and performing AI API draining. This botnet signifies a new threat vector leveraging AI services for malicious purposes, potentially leading to unauthorized data access or resource exhaustion.",
+        "action": "Implement strict access controls and rate limiting for AI API usage. Monitor for unusual API call patterns, especially to AI services. Deploy endpoint detection and response (EDR) solutions to detect botnet activity on Windows systems.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/new-x47-c-windows-botnet-weaponizes-xai-grok-ai-api-draining/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks",
+        "tldr": "CISA has issued a warning regarding multiple critical vulnerabilities being actively exploited in the wild. Specifically, a critical authentication bypass flaw (CVE-2026-5430) affecting WSO2 products is under active attack. Other exploited flaws include those in SharePoint and Adobe Commerce.",
+        "action": "Immediately identify and patch all WSO2, SharePoint, and Adobe Commerce instances. Focus on WSO2 products vulnerable to CVE-2026-5430.",
+        "cve_ids": [
+          "CVE-2026-5430"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "WSO2 multiple products (CVE-2026-5430), various SharePoint and Adobe Commerce versions. Specific WSO2 versions are typically documented in vendor advisories related to CVE-2026-5430.",
+        "how_to_determine_impact": "Identify all WSO2, SharePoint, and Adobe Commerce deployments. For WSO2, check for presence of products mentioned in vendor advisory for CVE-2026-5430. For SharePoint and Adobe Commerce, consult CISA's KEV catalog or vendor security bulletins for specific vulnerable versions and indicators of compromise. Look for unusual activity or web shell deployment.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'WSO2', 'SharePoint', 'Adobe Commerce'. Use 'Get File Version' for specific binaries if known. Check 'Detect Compromised' sensor for IoCs related to these exploits.",
+        "rapid7_query_hint": "Asset Search: 'vulnerability.cve: CVE-2026-5430' OR 'vulnerability.title: (SharePoint AND RCE) OR (Adobe Commerce AND RCE)'. For InsightIDR, look for alerts on WSO2, SharePoint, Adobe Commerce related to web shell activity or unusual authentication attempts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (for CVE-2026-5430, based on critical authentication bypass and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
+        "tldr": "Remote Code Execution (RCE) vulnerabilities in SharePoint and unspecified flaws in MikroTik RouterOS are currently being actively exploited by attackers. These exploits pose a severe risk due to the potential for full system compromise.",
+        "action": "Immediately identify and patch all SharePoint and MikroTik RouterOS devices. Isolate unpatchable or critical systems. Monitor for signs of compromise, including unauthorized access or unusual network traffic.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Various versions of Microsoft SharePoint and MikroTik RouterOS products. Consult vendor advisories for specific vulnerable versions related to recent RCEs and actively exploited flaws.",
+        "how_to_determine_impact": "Inventory all SharePoint servers and MikroTik RouterOS devices. Check their current patch levels against vendor advisories. Look for anomalous processes, web shells on SharePoint, or unauthorized configuration changes/traffic on RouterOS devices. Review logs for suspicious activity.",
+        "tanium_query_hint": "Get Running Processes from all machines for 'SharePoint'. Get Config File for 'RouterOS' devices (if managed). Use 'Get Installed Applications' for SharePoint. Look for unusual network connections or file changes.",
+        "rapid7_query_hint": "Asset Search: 'vulnerability.title: (SharePoint AND RCE) OR (MikroTik RouterOS AND RCE)'. Use network scans to identify unpatched MikroTik devices. Look for IoCs in InsightIDR for SharePoint servers.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimating for RCE flaws actively exploited in the wild)",
+        "category": "vulns"
+      },
+      {
+        "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
+        "tldr": "A critical pre-authentication SQL injection vulnerability in Roundcube webmail is being actively exploited. This flaw allows attackers to execute arbitrary SQL commands without prior authentication, potentially leading to full compromise of email servers.",
+        "action": "Immediately identify and patch all Roundcube webmail instances to the latest secure version. Review logs for any signs of exploitation, such as unusual database queries or unauthorized access.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Specific versions of Roundcube Webmail. Consult official Roundcube security advisories for the exact vulnerable range and patching instructions. Likely affects recent unpatched versions.",
+        "how_to_determine_impact": "Identify all servers running Roundcube Webmail. Check the installed version against official security advisories for the SQL injection vulnerability. Monitor web server logs and Roundcube application logs for suspicious SQL queries or access attempts originating before authentication.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'Roundcube'. Get Listen Ports showing web servers. Check 'Detect Compromised' sensor for SQLi IoCs.",
+        "rapid7_query_hint": "Asset Search: 'vulnerability.title: Roundcube AND SQL Injection'. Scan web servers for known vulnerabilities in Roundcube. In InsightIDR, look for suspicious SQL errors or unauthenticated access patterns to Roundcube.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimating for pre-auth SQLi actively exploited)",
+        "category": "vulns"
+      },
+      {
+        "title": "Kiteworks urges 6-hour server shutdown over potential zero-day attacks",
+        "tldr": "Kiteworks has advised customers worldwide to shut down their secure file-sharing servers for six hours due to threat intelligence indicating potential imminent zero-day attacks. This is a critical preemptive measure to prevent exploitation.",
+        "action": "Follow Kiteworks' emergency instructions immediately by shutting down affected servers. Prepare to apply any forthcoming patches or mitigation steps as soon as they are released.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All Kiteworks secure file-sharing servers. Specific version information for the zero-day will be released by Kiteworks upon patch availability.",
+        "how_to_determine_impact": "Identify all Kiteworks secure file-sharing server deployments. The primary impact determination is whether the system is online and unpatched during the threat window. Monitor for any signs of compromise post-patch or if shutdown was not fully achieved. Consult Kiteworks directly for further guidance.",
+        "tanium_query_hint": "Get Running Processes from all machines for 'Kiteworks'. Get Listen Ports on servers running Kiteworks to confirm operational status. Check 'Detect Compromised' sensor if IoCs are released.",
+        "rapid7_query_hint": "Asset Search: 'installed_software.name: Kiteworks'. Monitor network traffic to/from Kiteworks servers for unusual patterns. Look for any IoCs released by Kiteworks in InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimating for a zero-day requiring emergency shutdown)",
         "category": "vulns"
       }
     ]
