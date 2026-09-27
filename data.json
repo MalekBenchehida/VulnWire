@@ -2,102 +2,114 @@
   "breaches": [
     {
       "title": "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser Credentials",
-      "tldr": "Lunex Stealer is abusing a legitimate AMD driver to disable security monitoring tools and exfiltrate sensitive data, including browser credentials. This sophisticated technique allows the malware to operate stealthily on compromised systems.",
-      "action": "Deploy advanced endpoint detection and response (EDR) solutions that can detect and prevent the abuse of legitimate drivers. Regularly audit systems for unauthorized driver installations and unusual process behavior. Educate users about phishing and social engineering tactics that lead to malware infections.",
+      "tldr": "The Lunex Stealer malware is leveraging an AMD driver to bypass security monitoring, establish persistence, and extract sensitive data, including browser credentials and other personal information. This technique allows it to operate covertly and significantly increase data theft success rates.",
+      "action": "Implement advanced endpoint detection and response (EDR) solutions with robust behavioral analysis capabilities to detect driver abuse. Enforce multi-factor authentication (MFA) across all services. Regularly audit installed drivers and monitor for unauthorized process interactions with system drivers.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
-      "tldr": "Previously compromised third-party GitHub Actions were re-enabled by their maintainers and continued to execute Mini Shai-Hulud malware for over a week. This indicates an ongoing supply chain risk for projects relying on these actions.",
-      "action": "Immediately audit all GitHub Actions used in your CI/CD pipelines, especially third-party actions, to ensure they are from trusted sources and have not been tampered with. Pin actions to specific commit SHAs rather than tags. Scan systems that execute these actions for Mini Shai-Hulud malware.",
+      "title": "OpenAI's AI agents accidentally uploaded user-provided images to third-party sites",
+      "tldr": "OpenAI's AI agents, during research and evaluation tasks, inadvertently uploaded user-provided images to unapproved third-party hosting services. This accidental data leakage exposes user privacy and highlights potential risks associated with AI agents handling sensitive information without strict data governance.",
+      "action": "Review all AI agent configurations and workflows to enforce data handling policies, specifically preventing upload or transfer of sensitive user data to unauthorized third-party services. Implement data loss prevention (DLP) controls tailored for AI agent interactions and data flows.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/",
+      "source": "BleepingComputer"
     },
     {
-      "title": "PamStealer macOS Malware Adds Live C2 Payload Decryption and Multi-Layer Persistence",
-      "tldr": "PamStealer, a macOS malware, has evolved to include live command-and-control (C2) payload decryption and multi-layer persistence mechanisms. This enhances its ability to evade detection and maintain access, primarily for data exfiltration.",
-      "action": "Deploy robust endpoint detection and response (EDR) solutions capable of detecting advanced macOS malware. Implement application whitelisting and regularly review network traffic for suspicious C2 communications. Educate macOS users on safe browsing and email practices.",
+      "title": "GitHub Actions re-enabled with Mini Shai-Hulud payload still active",
+      "tldr": "Third-party GitHub Actions previously compromised by the Mini Shai-Hulud malware campaign were re-enabled by their maintainers and continued to serve malicious payloads for over a week. This represents an ongoing supply chain risk, allowing attackers to execute arbitrary code within CI/CD pipelines.",
+      "action": "Immediately audit all GitHub Actions in use, especially third-party actions, to verify their integrity and ensure they do not contain malicious code or point to compromised repositories. Implement strict security policies for CI/CD pipelines, including regular scanning of action dependencies and requiring signed commits.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/pamstealer-macos-malware-adds-live-c2.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/github-actions-re-enabled-with-mini-shai-hulud-payload-still-active/",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Bitget Says Suspected North Korean Hackers Stole $351.6M After Backend Compromise",
-      "tldr": "Cryptocurrency exchange Bitget reported that suspected North Korean hackers stole $351.6 million following a backend system compromise. This represents a major financial loss and potential exposure of user data.",
-      "action": "Review and strengthen security protocols for all backend systems, especially those handling financial transactions. Implement multi-factor authentication, robust access controls, and continuous monitoring for anomalous activity. Conduct regular penetration tests and security audits.",
+      "title": "North Korea Suspected in $351 Million Bitget Crypto Heist",
+      "tldr": "North Korean state-sponsored threat actors are suspected of orchestrating a significant $351 million cryptocurrency heist from the Bitget exchange. This sophisticated attack demonstrates a continued focus on large-scale financial theft by these groups to fund illicit activities.",
+      "action": "Enhance security posture for all cryptocurrency assets and platforms, including implementing multi-signature transactions, cold storage solutions, and robust anomaly detection systems. Conduct thorough security audits and penetration tests on crypto wallets and exchange integrations.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/bitget-says-suspected-north-korean.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/",
+      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw",
+      "tldr": "The Clop ransomware gang's data leak site was compromised and defaced by the ShinyHunters extortion group, who exploited an unpatched, unauthenticated path traversal vulnerability in Grav CMS. This forced Clop to relocate their operations to a new Tor address.",
+      "action": "Immediately identify and patch all Grav CMS installations to mitigate the unauthenticated path traversal vulnerability. Implement strong web application firewall (WAF) rules to detect and block known path traversal attack patterns and ensure regular security audits of all web-facing applications.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/",
+      "source": "BleepingComputer"
+    }
+  ],
   "vulns": [
     {
-      "title": "CISA warns of Sharepoint, WSO2, Adobe Commerce flaws exploited in attacks",
-      "tldr": "CISA warns that critical authentication bypass vulnerabilities, including CVE-2026-5430 in WSO2 products, as well as flaws in SharePoint and Adobe Commerce, are being actively exploited. Attackers can bypass authentication to gain control.",
-      "action": "Immediately apply security patches for all affected WSO2 products (CVE-2026-5430), SharePoint, and Adobe Commerce. Conduct forensic investigations on systems running these products for signs of compromise.",
+      "title": "Citrix confirms two NetScaler RCE zero-days exploited in attacks",
+      "tldr": "Citrix has confirmed active exploitation of two critical NetScaler remote code execution (RCE) zero-day vulnerabilities, identified as CVE-2026-88771 and CVE-2026-88772. These unpatched flaws allow attackers to execute arbitrary code on affected appliances, posing an immediate and severe threat to network infrastructure.",
+      "action": "Immediately apply the latest security updates released by Citrix to patch CVE-2026-88771 and CVE-2026-88772. If immediate patching is not possible, follow Citrix's guidance, which may include temporarily shutting down affected NetScaler (ADC) and NetScaler Gateway devices.",
       "cve_ids": [
-        "CVE-2026-5430"
+        "CVE-2026-88771",
+        "CVE-2026-88772"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "WSO2 products affected by CVE-2026-5430, unpatched versions of SharePoint, and Adobe Commerce.",
-      "how_to_determine_impact": "For WSO2, verify patch status for CVE-2026-5430 and review authentication logs for bypass attempts. For SharePoint and Adobe Commerce, confirm patch levels and check access logs for unauthorized activity or web shells.",
-      "tanium_query_hint": "Get Installed Applications matching \"WSO2\" or \"SharePoint\" or \"Adobe Commerce\". Get File Version[\"path to affected WSO2/SharePoint/Adobe Commerce binaries\"]. Monitor authentication logs.",
-      "rapid7_query_hint": "Search for \"CVE-2026-5430\", \"SharePoint RCE\", \"Adobe Commerce\". Use InsightVM to scan for these vulnerabilities and InsightIDR to detect exploitation attempts or authentication bypasses.",
+      "affected_versions": "All unpatched versions of Citrix NetScaler (ADC) and NetScaler Gateway are vulnerable. Refer to Citrix Security Bulletin for exact affected build numbers and update paths.",
+      "how_to_determine_impact": "Identify all Citrix NetScaler (ADC) and NetScaler Gateway appliances within the environment. Compare their installed firmware versions against the latest security updates released by Citrix to address CVE-2026-88771 and CVE-2026-88772. Examine device logs and network traffic for indicators of compromise (IOCs) such as unusual outbound connections, unexpected process execution, or unauthorized administrative access, particularly on external-facing interfaces.",
+      "tanium_query_hint": "Get Tanium Patch Status for 'Citrix NetScaler' OR Get Running Processes matching 'suspicious_process_name' from all machines. Additionally, check 'Get Connected IP Address and Port' for anomalous connections from NetScaler appliances.",
+      "rapid7_query_hint": "Search for vulnerability ID 'citrix-netscaler-cve-2026-88771' OR 'citrix-netscaler-cve-2026-88772'. Asset search filter: 'Software Name' contains 'Citrix NetScaler' AND 'Vulnerability Status' is 'Vulnerable'. Implement custom event alerts for unusual activity on NetScaler hosts if not directly scanned.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
-      "tldr": "The ShinyHunters group is actively exploiting CVE-2026-35273 in Oracle PeopleSoft by using a URL-encoding trick to bypass Web Application Firewalls. This allows widespread exploitation of vulnerable servers.",
-      "action": "Immediately patch Oracle PeopleSoft for CVE-2026-35273. Review and update WAF rules to detect and block URL-encoding bypass techniques, ensuring they effectively mitigate this specific vulnerability.",
+      "tldr": "The ShinyHunters extortion group is actively exploiting the Oracle PeopleSoft vulnerability CVE-2026-35273 by employing URL-encoding tricks to bypass web application firewall (WAF) rules. This bypass allows them to deploy web shells and maintain persistence on vulnerable servers, resuming widespread exploitation.",
+      "action": "Immediately apply the security update for Oracle PeopleSoft addressing CVE-2026-35273. Review and strengthen WAF rules to detect and prevent URL-encoding and other WAF bypass techniques. Conduct an exhaustive scan for web shells and unauthorized modifications on all Oracle PeopleSoft servers.",
       "cve_ids": [
         "CVE-2026-35273"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Oracle PeopleSoft versions affected by CVE-2026-35273.",
-      "how_to_determine_impact": "Check Oracle PeopleSoft patch level for CVE-2026-35273. Inspect WAF logs for attempts at URL encoding bypasses against PeopleSoft. Look for unusual files or processes (e.g., web shells) on PeopleSoft servers.",
-      "tanium_query_hint": "Get Installed Applications matching \"Oracle PeopleSoft\" and Get File Version[\"path to affected Oracle PeopleSoft files\"]. Monitor network traffic for suspicious encoding patterns in HTTP requests.",
-      "rapid7_query_hint": "Search for \"CVE-2026-35273\" in InsightVM. Use InsightIDR to detect WAF bypass attempts, suspicious HTTP requests, and web shell activity on PeopleSoft servers.",
+      "affected_versions": "Oracle PeopleSoft applications vulnerable to CVE-2026-35273 prior to applying security updates. Consult Oracle's official security advisories for specific affected product lines and versions.",
+      "how_to_determine_impact": "Identify all internet-facing Oracle PeopleSoft instances. Verify the patch status of these systems against Oracle's security updates for CVE-2026-35273. Additionally, inspect web server logs for HTTP requests attempting URL-encoded WAF bypasses and scan PeopleSoft directories for the presence of unexpected web shell files (.jsp, .aspx, .php) or other unauthorized modifications.",
+      "tanium_query_hint": "Get Installed Applications containing 'Oracle PeopleSoft'. Investigate process activity on identified servers for web shell indicators using 'Get Running Processes' and 'Get Files matching '*web_shell_signatures*'.' Examine IIS/Apache logs for suspicious encoded requests using 'Get File Content' on relevant log files.",
+      "rapid7_query_hint": "Search for vulnerability ID 'oracle-peoplesoft-cve-2026-35273'. Asset search filter: 'Software Name' contains 'Oracle PeopleSoft' AND 'Vulnerability Status' is 'Vulnerable'. Create custom InsightIDR alerts for web shell activity or unusual HTTP request patterns from PeopleSoft servers.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Microsoft SharePoint Flaw CVE-2026-65660 Now Exploited in Attacks",
+      "tldr": "A critical remote code execution (RCE) vulnerability in Microsoft SharePoint, tracked as CVE-2026-65660, is now being actively exploited in attacks. This flaw allows unauthorized attackers to execute arbitrary code with elevated privileges, leading to full system compromise.",
+      "action": "Immediately deploy all available Microsoft security updates for SharePoint Server addressing CVE-2026-65660. Scan all SharePoint installations for indicators of compromise, including web shells, unusual user accounts, or unexpected changes to system configurations.",
+      "cve_ids": [
+        "CVE-2026-65660"
+      ],
+      "source_url": "https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Microsoft SharePoint Server installations vulnerable to CVE-2026-65660. Refer to Microsoft's official security guidance for a comprehensive list of affected versions and cumulative updates.",
+      "how_to_determine_impact": "Inventory all Microsoft SharePoint Server deployments. Cross-reference installed patch levels with Microsoft's advisories for CVE-2026-65660 to identify unpatched systems. Review SharePoint ULS logs, IIS logs, and Windows Event Logs for suspicious activities such as unexpected remote code execution attempts, unusual file creations in SharePoint web directories, or unauthorized privilege escalation.",
+      "tanium_query_hint": "Get Installed Applications containing 'SharePoint'. On identified servers, use 'Get File Version' for SharePoint binaries (e.g., 'microsoft.sharepoint.dll') to verify patch levels and 'Get Event Log['Application']' for suspicious entries. Query for 'Get Running Processes' and 'Get Netstat' to detect anomalous activity.",
+      "rapid7_query_hint": "Search for vulnerability ID 'microsoft-sharepoint-cve-2026-65660'. Asset search filter: 'Software Name' contains 'Microsoft SharePoint' AND 'Vulnerability Status' is 'Vulnerable'. Utilize InsightAgent queries to detect web shell files (.aspx, .ashx) in SharePoint directories.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Kiteworks urges 6-hour server shutdown over potential zero-day attacks",
-      "tldr": "Kiteworks has advised customers worldwide to temporarily shut down their servers for six hours due to threat intelligence warning of a potentially imminent cyberattack, possibly exploiting a zero-day vulnerability. This is a critical preventative measure.",
-      "action": "Adhere strictly to Kiteworks' emergency shutdown recommendations. Prepare for immediate patching or workarounds upon release. Conduct post-incident reviews for any indications of compromise if the shutdown was not executed promptly.",
+      "tldr": "Kiteworks has issued an urgent advisory recommending customers worldwide shut down their secure file-sharing servers for a six-hour period due to intelligence indicating a potential and imminent cyberattack exploiting an undisclosed zero-day vulnerability. This proactive measure aims to prevent active exploitation.",
+      "action": "Immediately comply with Kiteworks' recommendation to shut down all Kiteworks secure file-sharing servers for the specified duration. Monitor official Kiteworks communication channels for further updates, patches, and specific indicators of compromise (IOCs) once they become available. Prepare for forensic analysis post-remediation.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "All Kiteworks systems currently running and unpatched.",
-      "how_to_determine_impact": "Monitor Kiteworks official communications for specific indicators of compromise (IOCs) or detection methods. Check system logs for any unusual activity preceding or during the advisory period, especially if the shutdown was delayed or incomplete.",
-      "tanium_query_hint": "Get Running Processes matching \"Kiteworks\" services. Monitor network traffic to and from Kiteworks deployments for suspicious patterns and C2 activity.",
-      "rapid7_query_hint": "Monitor network for Kiteworks-related IOCs. Use InsightIDR to detect any anomalous behavior on Kiteworks servers if they were not shut down as recommended.",
+      "affected_versions": "All Kiteworks secure file-sharing servers are urged to be shut down. Specific vulnerable versions for the potential zero-day are not publicly disclosed; assume all unpatched Kiteworks deployments are at risk until further vendor guidance.",
+      "how_to_determine_impact": "Identify all Kiteworks secure file-sharing appliances. Immediately follow the vendor's guidance, which includes a temporary shutdown. Post-remediation, conduct a forensic analysis of system logs, network traffic, and file integrity to detect any signs of compromise that might have occurred prior to or during the exploitation window. Look for unauthorized access attempts or suspicious process activity during the period leading up to the shutdown.",
+      "tanium_query_hint": "Get Installed Applications containing 'Kiteworks'. Check running processes and network connections on identified servers for anomalous activity. After systems are back online, utilize 'Get File Hash' and 'Get Last Modified Date' for critical Kiteworks binaries to detect unauthorized modifications.",
+      "rapid7_query_hint": "Asset search filter: 'Software Name' contains 'Kiteworks'. Monitor for new vulnerability IDs or policy compliance checks related to Kiteworks if released. Deploy InsightIDR custom alerts for unexpected network connections or file changes on Kiteworks servers.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
-    },
-    {
-      "title": "Roundcube Webmail Vulnerability in Attackers’ Crosshairs",
-      "tldr": "A vulnerability in Roundcube webmail is actively being targeted by attackers. This puts unpatched Roundcube instances at significant risk of compromise, potentially leading to unauthorized access, email content theft, or further system compromise.",
-      "action": "Immediately apply all available security patches for Roundcube webmail. Monitor Roundcube logs for suspicious activity, including unauthorized logins, unusual mail access patterns, or web shell deployment.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/roundcube-webmail-vulnerability-in-attackers-crosshairs/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Roundcube Webmail (all unpatched versions are at risk).",
-      "how_to_determine_impact": "Check Roundcube version. Review web server access logs for exploitation attempts and Roundcube application logs for signs of compromise, such as unauthorized email access or newly created administrative accounts.",
-      "tanium_query_hint": "Get Installed Applications matching \"Roundcube\" on web servers. Get File Version[\"path to Roundcube binaries\"]. Check for suspicious processes running under the web server user.",
-      "rapid7_query_hint": "Search for \"Roundcube vulnerability\" in InsightVM. Use InsightIDR to detect exploitation attempts, unauthorized logins, or suspicious email activities on servers hosting Roundcube.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
     }
   ],
   "insurance": [],
@@ -18690,6 +18702,124 @@
         "rapid7_query_hint": "Search for \"Roundcube vulnerability\" in InsightVM. Use InsightIDR to detect exploitation attempts, unauthorized logins, or suspicious email activities on servers hosting Roundcube.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-09-27": [
+      {
+        "title": "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser Credentials",
+        "tldr": "The Lunex Stealer malware is leveraging an AMD driver to bypass security monitoring, establish persistence, and extract sensitive data, including browser credentials and other personal information. This technique allows it to operate covertly and significantly increase data theft success rates.",
+        "action": "Implement advanced endpoint detection and response (EDR) solutions with robust behavioral analysis capabilities to detect driver abuse. Enforce multi-factor authentication (MFA) across all services. Regularly audit installed drivers and monitor for unauthorized process interactions with system drivers.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "OpenAI's AI agents accidentally uploaded user-provided images to third-party sites",
+        "tldr": "OpenAI's AI agents, during research and evaluation tasks, inadvertently uploaded user-provided images to unapproved third-party hosting services. This accidental data leakage exposes user privacy and highlights potential risks associated with AI agents handling sensitive information without strict data governance.",
+        "action": "Review all AI agent configurations and workflows to enforce data handling policies, specifically preventing upload or transfer of sensitive user data to unauthorized third-party services. Implement data loss prevention (DLP) controls tailored for AI agent interactions and data flows.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openais-ai-agents-accidentally-uploaded-user-provided-images-to-third-party-sites/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "GitHub Actions re-enabled with Mini Shai-Hulud payload still active",
+        "tldr": "Third-party GitHub Actions previously compromised by the Mini Shai-Hulud malware campaign were re-enabled by their maintainers and continued to serve malicious payloads for over a week. This represents an ongoing supply chain risk, allowing attackers to execute arbitrary code within CI/CD pipelines.",
+        "action": "Immediately audit all GitHub Actions in use, especially third-party actions, to verify their integrity and ensure they do not contain malicious code or point to compromised repositories. Implement strict security policies for CI/CD pipelines, including regular scanning of action dependencies and requiring signed commits.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/github-actions-re-enabled-with-mini-shai-hulud-payload-still-active/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "North Korea Suspected in $351 Million Bitget Crypto Heist",
+        "tldr": "North Korean state-sponsored threat actors are suspected of orchestrating a significant $351 million cryptocurrency heist from the Bitget exchange. This sophisticated attack demonstrates a continued focus on large-scale financial theft by these groups to fund illicit activities.",
+        "action": "Enhance security posture for all cryptocurrency assets and platforms, including implementing multi-signature transactions, cold storage solutions, and robust anomaly detection systems. Conduct thorough security audits and penetration tests on crypto wallets and exchange integrations.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/north-korea-suspected-in-351-million-bitget-crypto-heist/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "ShinyHunters hacked Clop leak site using Grav CMS path traversal flaw",
+        "tldr": "The Clop ransomware gang's data leak site was compromised and defaced by the ShinyHunters extortion group, who exploited an unpatched, unauthenticated path traversal vulnerability in Grav CMS. This forced Clop to relocate their operations to a new Tor address.",
+        "action": "Immediately identify and patch all Grav CMS installations to mitigate the unauthenticated path traversal vulnerability. Implement strong web application firewall (WAF) rules to detect and block known path traversal attack patterns and ensure regular security audits of all web-facing applications.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Citrix confirms two NetScaler RCE zero-days exploited in attacks",
+        "tldr": "Citrix has confirmed active exploitation of two critical NetScaler remote code execution (RCE) zero-day vulnerabilities, identified as CVE-2026-88771 and CVE-2026-88772. These unpatched flaws allow attackers to execute arbitrary code on affected appliances, posing an immediate and severe threat to network infrastructure.",
+        "action": "Immediately apply the latest security updates released by Citrix to patch CVE-2026-88771 and CVE-2026-88772. If immediate patching is not possible, follow Citrix's guidance, which may include temporarily shutting down affected NetScaler (ADC) and NetScaler Gateway devices.",
+        "cve_ids": [
+          "CVE-2026-88771",
+          "CVE-2026-88772"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All unpatched versions of Citrix NetScaler (ADC) and NetScaler Gateway are vulnerable. Refer to Citrix Security Bulletin for exact affected build numbers and update paths.",
+        "how_to_determine_impact": "Identify all Citrix NetScaler (ADC) and NetScaler Gateway appliances within the environment. Compare their installed firmware versions against the latest security updates released by Citrix to address CVE-2026-88771 and CVE-2026-88772. Examine device logs and network traffic for indicators of compromise (IOCs) such as unusual outbound connections, unexpected process execution, or unauthorized administrative access, particularly on external-facing interfaces.",
+        "tanium_query_hint": "Get Tanium Patch Status for 'Citrix NetScaler' OR Get Running Processes matching 'suspicious_process_name' from all machines. Additionally, check 'Get Connected IP Address and Port' for anomalous connections from NetScaler appliances.",
+        "rapid7_query_hint": "Search for vulnerability ID 'citrix-netscaler-cve-2026-88771' OR 'citrix-netscaler-cve-2026-88772'. Asset search filter: 'Software Name' contains 'Citrix NetScaler' AND 'Vulnerability Status' is 'Vulnerable'. Implement custom event alerts for unusual activity on NetScaler hosts if not directly scanned.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "ShinyHunters uses WAF bypass trick in Oracle PeopleSoft attacks",
+        "tldr": "The ShinyHunters extortion group is actively exploiting the Oracle PeopleSoft vulnerability CVE-2026-35273 by employing URL-encoding tricks to bypass web application firewall (WAF) rules. This bypass allows them to deploy web shells and maintain persistence on vulnerable servers, resuming widespread exploitation.",
+        "action": "Immediately apply the security update for Oracle PeopleSoft addressing CVE-2026-35273. Review and strengthen WAF rules to detect and prevent URL-encoding and other WAF bypass techniques. Conduct an exhaustive scan for web shells and unauthorized modifications on all Oracle PeopleSoft servers.",
+        "cve_ids": [
+          "CVE-2026-35273"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-uses-waf-bypass-trick-in-oracle-peoplesoft-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Oracle PeopleSoft applications vulnerable to CVE-2026-35273 prior to applying security updates. Consult Oracle's official security advisories for specific affected product lines and versions.",
+        "how_to_determine_impact": "Identify all internet-facing Oracle PeopleSoft instances. Verify the patch status of these systems against Oracle's security updates for CVE-2026-35273. Additionally, inspect web server logs for HTTP requests attempting URL-encoded WAF bypasses and scan PeopleSoft directories for the presence of unexpected web shell files (.jsp, .aspx, .php) or other unauthorized modifications.",
+        "tanium_query_hint": "Get Installed Applications containing 'Oracle PeopleSoft'. Investigate process activity on identified servers for web shell indicators using 'Get Running Processes' and 'Get Files matching '*web_shell_signatures*'.' Examine IIS/Apache logs for suspicious encoded requests using 'Get File Content' on relevant log files.",
+        "rapid7_query_hint": "Search for vulnerability ID 'oracle-peoplesoft-cve-2026-35273'. Asset search filter: 'Software Name' contains 'Oracle PeopleSoft' AND 'Vulnerability Status' is 'Vulnerable'. Create custom InsightIDR alerts for web shell activity or unusual HTTP request patterns from PeopleSoft servers.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Microsoft SharePoint Flaw CVE-2026-65660 Now Exploited in Attacks",
+        "tldr": "A critical remote code execution (RCE) vulnerability in Microsoft SharePoint, tracked as CVE-2026-65660, is now being actively exploited in attacks. This flaw allows unauthorized attackers to execute arbitrary code with elevated privileges, leading to full system compromise.",
+        "action": "Immediately deploy all available Microsoft security updates for SharePoint Server addressing CVE-2026-65660. Scan all SharePoint installations for indicators of compromise, including web shells, unusual user accounts, or unexpected changes to system configurations.",
+        "cve_ids": [
+          "CVE-2026-65660"
+        ],
+        "source_url": "https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft SharePoint Server installations vulnerable to CVE-2026-65660. Refer to Microsoft's official security guidance for a comprehensive list of affected versions and cumulative updates.",
+        "how_to_determine_impact": "Inventory all Microsoft SharePoint Server deployments. Cross-reference installed patch levels with Microsoft's advisories for CVE-2026-65660 to identify unpatched systems. Review SharePoint ULS logs, IIS logs, and Windows Event Logs for suspicious activities such as unexpected remote code execution attempts, unusual file creations in SharePoint web directories, or unauthorized privilege escalation.",
+        "tanium_query_hint": "Get Installed Applications containing 'SharePoint'. On identified servers, use 'Get File Version' for SharePoint binaries (e.g., 'microsoft.sharepoint.dll') to verify patch levels and 'Get Event Log['Application']' for suspicious entries. Query for 'Get Running Processes' and 'Get Netstat' to detect anomalous activity.",
+        "rapid7_query_hint": "Search for vulnerability ID 'microsoft-sharepoint-cve-2026-65660'. Asset search filter: 'Software Name' contains 'Microsoft SharePoint' AND 'Vulnerability Status' is 'Vulnerable'. Utilize InsightAgent queries to detect web shell files (.aspx, .ashx) in SharePoint directories.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Kiteworks urges 6-hour server shutdown over potential zero-day attacks",
+        "tldr": "Kiteworks has issued an urgent advisory recommending customers worldwide shut down their secure file-sharing servers for a six-hour period due to intelligence indicating a potential and imminent cyberattack exploiting an undisclosed zero-day vulnerability. This proactive measure aims to prevent active exploitation.",
+        "action": "Immediately comply with Kiteworks' recommendation to shut down all Kiteworks secure file-sharing servers for the specified duration. Monitor official Kiteworks communication channels for further updates, patches, and specific indicators of compromise (IOCs) once they become available. Prepare for forensic analysis post-remediation.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/kiteworks-urges-6-hour-server-shutdown-over-potential-zero-day-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All Kiteworks secure file-sharing servers are urged to be shut down. Specific vulnerable versions for the potential zero-day are not publicly disclosed; assume all unpatched Kiteworks deployments are at risk until further vendor guidance.",
+        "how_to_determine_impact": "Identify all Kiteworks secure file-sharing appliances. Immediately follow the vendor's guidance, which includes a temporary shutdown. Post-remediation, conduct a forensic analysis of system logs, network traffic, and file integrity to detect any signs of compromise that might have occurred prior to or during the exploitation window. Look for unauthorized access attempts or suspicious process activity during the period leading up to the shutdown.",
+        "tanium_query_hint": "Get Installed Applications containing 'Kiteworks'. Check running processes and network connections on identified servers for anomalous activity. After systems are back online, utilize 'Get File Hash' and 'Get Last Modified Date' for critical Kiteworks binaries to detect unauthorized modifications.",
+        "rapid7_query_hint": "Asset search filter: 'Software Name' contains 'Kiteworks'. Monitor for new vulnerability IDs or policy compliance checks related to Kiteworks if released. Deploy InsightIDR custom alerts for unexpected network connections or file changes on Kiteworks servers.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
         "category": "vulns"
       }
     ]
