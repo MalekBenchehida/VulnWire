@@ -2,50 +2,50 @@
   "breaches": [
     {
       "title": "Bitget Says Attacker Exploited Third-Party Security Product Flaw to Steal $388M",
-      "tldr": "Cryptocurrency exchange Bitget reported a $388 million theft, attributing it to an exploit in a third-party security product. This incident highlights supply chain risks in financial services and significant financial losses due to external vulnerabilities.",
-      "action": "Review and harden security configurations for all third-party integrations and supply chain components, especially those handling financial transactions. Implement robust access control, continuous monitoring for suspicious activities, and perform regular security audits of all external dependencies.",
+      "tldr": "Cryptocurrency exchange Bitget reported a $388 million theft, attributing the incident to attackers exploiting a vulnerability in a third-party security product. This resulted in significant financial losses for the platform.",
+      "action": "Review all third-party security products for known vulnerabilities and ensure they are patched. Implement strong access controls and continuous monitoring for financial systems.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html",
       "source": "The Hacker News"
     },
     {
+      "title": "Times Car confirms data breach affecting 6.6 million user accounts",
+      "tldr": "Japanese car-sharing service Times Car has confirmed that approximately 6.6 million user accounts were compromised in a cyberattack. This data breach likely exposed personal information of their users.",
+      "action": "Notify affected users promptly and advise password resets. Conduct a thorough forensic investigation to identify the root cause and full extent of the breach. Enhance data protection measures.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/times-car-confirms-data-breach-affecting-66-million-user-accounts/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Over 16,000 Supabase databases expose PII, passwords, auth tokens",
-      "tldr": "Researchers discovered more than 16,000 Supabase databases that were misconfigured, leading to the exposure of sensitive data including personally identifiable information (PII), passwords, and authentication tokens. This exposure is due to improper security settings rather than a software vulnerability.",
-      "action": "Immediately review Supabase database configurations to ensure proper access controls and security policies are enforced. Restrict public access, implement strong authentication, and audit existing permissions. Assume compromise for exposed data and initiate credential resets.",
+      "tldr": "Researchers discovered more than 16,000 misconfigured Supabase databases, leading to the exposure of sensitive data including personally identifiable information (PII), passwords, and authentication tokens. This highlights widespread misconfiguration issues in cloud environments.",
+      "action": "Audit all Supabase database configurations to ensure proper access controls are in place and sensitive tables are not publicly readable. Implement least privilege access principles for all database users.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/misconfigured-supabase-apps-expose-data-in-over-16-000-databases/",
       "source": "BleepingComputer"
     },
     {
       "title": "80,000+ Organizations Had AI Logins Stolen: From Shadow AI to LLMjacking",
-      "tldr": "Infostealer logs have exposed AI account credentials and sessions belonging to over 80,000 corporate domains. This extensive data theft poses risks including compromised conversations and LLMjacking, highlighting widespread credential exposure across AI services.",
-      "action": "All organizations should immediately enforce multi-factor authentication (MFA) for all AI service logins. Employees should be instructed to reset passwords for any AI services used, especially those that may have been accessed from compromised personal devices. Monitor for unusual activity on AI accounts.",
+      "tldr": "Infostealer logs have exposed AI account credentials and session tokens belonging to over 80,000 corporate domains, creating risks such as stolen conversations and LLMjacking. This indicates a pervasive credential theft issue impacting AI service usage across numerous organizations.",
+      "action": "Implement strong multi-factor authentication (MFA) for all AI service logins. Monitor for suspicious access patterns to AI accounts and educate users about the dangers of infostealers and phishing campaigns.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/80-000-plus-organizations-had-ai-logins-stolen-from-shadow-ai-to-llmjacking/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "DC Health Agency Exposes 400,000 Beneficiary Records",
-      "tldr": "The DC Health Agency suffered a data exposure incident, revealing sensitive records of 400,000 beneficiaries. This breach highlights critical misconfigurations or security lapses in public sector data handling, potentially impacting a large number of individuals.",
-      "action": "Implement immediate data inventory and classification, followed by strict access controls and regular security audits on all public-facing and internal data repositories. Conduct a full investigation to determine the root cause and extent of the exposure. Notify affected individuals and prepare for regulatory reporting.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/dc-health-agency-exposes-400000-beneficiary-records/",
-      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure Resources",
-      "tldr": "Attackers associated with JADEPUFFER are exploiting compromised Azure service principals to gain unauthorized access and delete critical cloud resources. This destructive behavior aims to cause operational disruption and potential extortion, typical of ransomware-like operations.",
-      "action": "Immediately review Azure AD service principal configurations for excessive permissions. Implement strong multi-factor authentication for all administrative accounts and service principals, and monitor Azure activity logs for unusual deletion or modification events or suspicious logins.",
+      "title": "Japan's Keio confirms ransomware attack disrupted business systems",
+      "tldr": "Keio Corporation, a major private railway operator in Japan, confirmed its network was hit by a ransomware attack over the weekend. The incident disrupted some of its business systems, impacting operations.",
+      "action": "Implement robust backup and recovery strategies, including offline backups. Enhance network perimeter defenses and endpoint detection and response capabilities to prevent ransomware infiltration and lateral movement.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/japans-keio-confirms-ransomware-attack-disrupted-business-systems/",
+      "source": "BleepingComputer"
     },
     {
       "title": "JadePuffer agentic AI attacks target Azure, destroy cloud resources",
-      "tldr": "The JadePuffer ransomware operator is launching agent-driven attacks against Azure tenants. These sophisticated attacks perform reconnaissance, steal credentials, and destroy critical cloud infrastructure components, indicating a strong intent for extortion by crippling services.",
-      "action": "Implement least privilege principles for all Azure identities and service principals. Enable and enforce MFA across all accounts. Review Azure activity logs for unusual behavior, especially related to resource deletion, permission changes, and credential access. Deploy enhanced monitoring for AI-driven threats.",
+      "tldr": "The JadePuffer ransomware operator is conducting agent-driven attacks targeting Azure tenants. These attacks perform reconnaissance, steal credentials, and destroy core cloud components, representing a significant threat to cloud infrastructure integrity and availability.",
+      "action": "Implement enhanced monitoring for Azure environments, focusing on unusual API calls, resource modifications, and service principal activities. Strengthen identity and access management controls, including MFA, for all Azure resources.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/",
       "source": "BleepingComputer"
@@ -53,72 +53,66 @@
   ],
   "vulns": [
     {
-      "title": "Citrix confirms two NetScaler RCE zero-days exploited in attacks",
-      "tldr": "Citrix has officially confirmed two critical Remote Code Execution (RCE) zero-day vulnerabilities, CVE-2026-88771 and CVE-2026-88772, in NetScaler (formerly ADC and Gateway) are being actively exploited. Security updates have been released to address these flaws.",
-      "action": "Immediately apply the provided security updates from Citrix for all NetScaler ADC and Gateway instances. Prioritize internet-facing devices. Conduct a thorough review of logs for signs of compromise, and consider network segmentation or temporary disabling of affected services if immediate patching is not possible.",
-      "cve_ids": [
-        "CVE-2026-88771",
-        "CVE-2026-88772"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Citrix NetScaler ADC and Gateway. Specific vulnerable build numbers and versions are detailed in Citrix's official security advisory (e.g., specific builds of 14.1, 13.1, 13.0, and 12.1 are likely affected. Always consult the official Citrix advisory for precise versions).",
-      "how_to_determine_impact": "Consult the official Citrix security bulletin to identify exact vulnerable versions and patch levels. Check all NetScaler (ADC/Gateway) appliances for their current version. Verify if the released patches have been successfully applied. Look for suspicious processes, network connections, or configuration changes indicative of compromise.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications containing 'Citrix NetScaler' from all machines. For identified NetScaler hosts, use 'Get File Version' for critical system binaries as indicated by Citrix's advisory to pinpoint vulnerable build numbers.",
-      "rapid7_query_hint": "Search for assets running 'Citrix NetScaler ADC' or 'Citrix Gateway' and scan them using credentials for 'CVE-2026-88771' and 'CVE-2026-88772'. Review InsightVM's detected vulnerabilities for these specific CVEs on all relevant assets.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "CISA orders feds to patch exploited Citrix flaws by Wednesday",
-      "tldr": "CISA has mandated that U.S. government agencies patch two actively exploited critical Citrix NetScaler vulnerabilities (CVE-2026-88771 and CVE-2026-88772) by Wednesday. These RCE flaws pose an immediate threat, with active exploitation confirmed globally.",
-      "action": "All organizations using Citrix NetScaler (formerly ADC and Gateway) must immediately apply the latest security patches. Prioritize systems exposed to the internet. If patching is not possible by the deadline, consider isolating or temporarily disabling the affected services until remediation can be completed.",
-      "cve_ids": [
-        "CVE-2026-88771",
-        "CVE-2026-88772"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-exploited-citrix-flaws-by-wednesday/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Citrix NetScaler (formerly ADC and Gateway) versions affected by CVE-2026-88771 and CVE-2026-88772. Refer to official Citrix advisories for specific version ranges and updates.",
-      "how_to_determine_impact": "Identify all instances of Citrix NetScaler (ADC/Gateway) within your infrastructure. Consult the official Citrix security bulletin for the specific vulnerable versions. Verify the installed version and patch level of each instance. Check system logs for any signs of compromise prior to patching.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications containing 'Citrix NetScaler' from all machines. Then, use 'Get File Version' for critical NetScaler binaries (e.g., 'nsroot.exe', 'httpd.exe') against known vulnerable versions as per vendor documentation.",
-      "rapid7_query_hint": "Run an authenticated scan targeting all Citrix NetScaler assets for vulnerabilities 'CVE-2026-88771' and 'CVE-2026-88772'. Use InsightVM's 'Vulnerability Check' feature with these CVEs. For InsightIDR, search for 'Citrix NetScaler' related alerts or unusual login attempts.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "Microsoft SharePoint Flaw CVE-2026-65660 Now Exploited in Attacks",
-      "tldr": "A critical vulnerability in Microsoft SharePoint, tracked as CVE-2026-65660, is now being actively exploited in attacks. This flaw could lead to remote code execution or unauthorized data access, posing a significant risk to SharePoint deployments.",
-      "action": "Immediately apply the latest security updates and patches from Microsoft for SharePoint to address CVE-2026-65660. Prioritize all internet-facing SharePoint servers. Conduct a forensic analysis for any indicators of compromise if systems were unpatched.",
+      "tldr": "A critical vulnerability in Microsoft SharePoint, identified as CVE-2026-65660, is now being actively exploited in attacks. This flaw could allow remote code execution or unauthorized access to sensitive SharePoint data, posing a severe risk to affected organizations.",
+      "action": "Immediately apply the security update for CVE-2026-65660 to all affected Microsoft SharePoint servers. Prioritize public-facing or business-critical SharePoint deployments due to active exploitation.",
       "cve_ids": [
         "CVE-2026-65660"
       ],
       "source_url": "https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Microsoft SharePoint. Specific versions and cumulative updates are detailed in Microsoft's official security advisory for CVE-2026-65660.",
-      "how_to_determine_impact": "Identify all Microsoft SharePoint server instances. Check the installed version and applied security updates against Microsoft's official security bulletin for CVE-2026-65660. Review SharePoint ULS logs, IIS logs, and Windows Event logs for unusual activity or error messages indicative of exploitation.",
-      "tanium_query_hint": "Get Installed Applications matches 'Microsoft SharePoint' from all machines. For identified SharePoint servers, use 'Get Hotfixes' to verify applied patches or 'Get File Version' on SharePoint core binaries (e.g., 'owssvr.dll') to determine exact build numbers against vendor advisory.",
-      "rapid7_query_hint": "Perform authenticated scans against all Microsoft SharePoint servers for 'CVE-2026-65660'. Use InsightVM's vulnerability checks to report on this specific CVE. For InsightIDR, search for 'SharePoint' related alerts, especially around web requests or process anomalies.",
+      "affected_versions": "Microsoft SharePoint Server; specific vulnerable versions should be referenced in Microsoft's security bulletin for CVE-2026-65660.",
+      "how_to_determine_impact": "Identify all Microsoft SharePoint Server instances in your environment. Check the installed version against Microsoft's advisory for CVE-2026-65660. Scan for indicators of compromise (IOCs) related to the exploitation of this vulnerability.",
+      "tanium_query_hint": "Get Installed Applications and Get File Version['C:\\Program Files\\Microsoft Office Servers\\*\\*\\SharePoint.exe'] and Get Patch Status from all machines with ( Application Name contains 'SharePoint' )",
+      "rapid7_query_hint": "Search InsightVM for 'CVE-2026-65660' and filter by affected assets. Use InsightIDR to monitor SharePoint server logs for unusual activity or signs of exploitation, such as unexpected process creation or network connections.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Citrix Confirms 2 NetScaler Zero-Days After Admins Pulled the Plug",
+      "tldr": "Citrix has confirmed two zero-day vulnerabilities in NetScaler products (formerly Citrix ADC and Citrix Gateway), which are under active exploitation. These critical flaws led to some administrators proactively taking systems offline to mitigate risk, underscoring the severe and immediate threat.",
+      "action": "Immediately apply the official patches or mitigation strategies released by Citrix for the two confirmed zero-day NetScaler vulnerabilities. Prioritize internet-facing and critical deployments, and closely monitor for any signs of compromise.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/citrix-confirms-2-netscaler-zero-days-after-admins-pulled-the-plug/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Citrix NetScaler (formerly Citrix ADC) and Citrix Gateway; specific vulnerable versions are those identified by Citrix as containing the zero-day flaws. Consult official Citrix security advisories for exact details.",
+      "how_to_determine_impact": "Identify all Citrix NetScaler/Gateway appliances. Verify software versions against Citrix's security bulletin for the two zero-day vulnerabilities. Check for indicators of compromise (IOCs) provided by Citrix or CISA, and review appliance logs for suspicious activity.",
+      "tanium_query_hint": "Get Citrix NetScaler Version and Get Patch Status and Get Running Processes from all machines with ( Has Citrix NetScaler Installed equals true )",
+      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to Citrix NetScaler/Gateway, specifically for recently published zero-days. Review InsightIDR logs for any suspicious activity on these appliances, especially before they were potentially taken offline.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks",
+      "tldr": "Apple has released security patches addressing a CoreGraphics vulnerability that is believed to have been actively exploited in targeted attacks. This flaw could potentially allow for arbitrary code execution on affected devices.",
+      "action": "Apply the latest Apple security updates immediately to all affected iOS, macOS, watchOS, and tvOS devices. Ensure all systems are fully patched to mitigate the risk of exploitation.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Apple iOS, macOS, watchOS, and tvOS devices. Specific vulnerable versions are those prior to the latest security updates released in late September 2026.",
+      "how_to_determine_impact": "Check the operating system version on all Apple devices. If running older versions than the latest security update, assume vulnerability. Verify successful application of patches post-update.",
+      "tanium_query_hint": "Get Computer Name and Get OS Platform and Get OS Version and Get Software Name and Get Software Version from all machines with ( Is Mac equals true or Is iOS equals true )",
+      "rapid7_query_hint": "Search for assets with installed Apple OS versions prior to the latest security update. Look for InsightVM vulnerability checks related to CoreGraphics or Apple security updates released in September 2026.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Kiteworks Urges Server Shutdown, Finds Advanced Forms Vulnerability",
-      "tldr": "Kiteworks has issued an urgent advisory recommending customers shut down their servers due to a critical vulnerability found in its Advanced Forms module. The nature of the vulnerability implies severe risk, potentially leading to unauthorized access, remote code execution, or data compromise.",
-      "action": "Immediately comply with Kiteworks' recommendation to shut down servers running the Advanced Forms module. Monitor official Kiteworks channels for patches and detailed mitigation instructions. Conduct a post-incident review and forensic analysis for any signs of exploitation if the system was online during the vulnerability period.",
+      "tldr": "Kiteworks has issued an urgent advisory recommending users to shut down their servers due to the discovery of a critical 'Advanced Forms' vulnerability. This flaw necessitates immediate attention to prevent potential exploitation and data compromise.",
+      "action": "Immediately follow Kiteworks' recommendation to shut down affected servers running the 'Advanced Forms' component and apply any available patches or workarounds as soon as they are released. Prioritize this remediation due to the urgent nature of the advisory.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/kiteworks-urges-server-shutdown-finds-advanced-forms-vulnerability/",
       "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Kiteworks servers running the Advanced Forms module. Consult official Kiteworks advisories for specific vulnerable versions.",
-      "how_to_determine_impact": "Identify all Kiteworks servers within your environment. Check if the Advanced Forms module is installed and active. Monitor Kiteworks official announcements for specific detection methods or indicators of compromise related to this vulnerability.",
-      "tanium_query_hint": "Get Installed Applications containing 'Kiteworks' from all machines. For identified Kiteworks servers, check 'Get File Exists[<path_to_advanced_forms_module_directory>]' or specific configuration files for indicators of the module's presence, as detailed in Kiteworks' advisory.",
-      "rapid7_query_hint": "Search for assets running 'Kiteworks' software. Consult Kiteworks' advisory for specific files, processes, or registry keys that may indicate the presence of the Advanced Forms module and create custom vulnerability checks if official checks are not yet available.",
+      "active_exploitation": false,
+      "affected_versions": "Kiteworks servers running the 'Advanced Forms' component; specific versions affected should be detailed in Kiteworks' official advisory.",
+      "how_to_determine_impact": "Identify all Kiteworks server instances within the environment. Verify the presence and exact version of the 'Advanced Forms' component. Confirm if the server shutdown has been performed as advised by Kiteworks.",
+      "tanium_query_hint": "Get Installed Applications and Get Network Connections and Get Running Processes from all machines with ( Application Name contains 'Kiteworks' )",
+      "rapid7_query_hint": "Search InsightVM for 'Kiteworks' vulnerabilities, specifically looking for recent advisories regarding 'Advanced Forms'. Implement network monitoring in InsightIDR for any unusual communication from Kiteworks servers prior to shutdown.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -19064,6 +19058,56 @@
         "rapid7_query_hint": "Search for assets running 'Kiteworks' software. Consult Kiteworks' advisory for specific files, processes, or registry keys that may indicate the presence of the Advanced Forms module and create custom vulnerability checks if official checks are not yet available.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Times Car confirms data breach affecting 6.6 million user accounts",
+        "tldr": "Japanese car-sharing service Times Car has confirmed that approximately 6.6 million user accounts were compromised in a cyberattack. This data breach likely exposed personal information of their users.",
+        "action": "Notify affected users promptly and advise password resets. Conduct a thorough forensic investigation to identify the root cause and full extent of the breach. Enhance data protection measures.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/times-car-confirms-data-breach-affecting-66-million-user-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Japan's Keio confirms ransomware attack disrupted business systems",
+        "tldr": "Keio Corporation, a major private railway operator in Japan, confirmed its network was hit by a ransomware attack over the weekend. The incident disrupted some of its business systems, impacting operations.",
+        "action": "Implement robust backup and recovery strategies, including offline backups. Enhance network perimeter defenses and endpoint detection and response capabilities to prevent ransomware infiltration and lateral movement.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/japans-keio-confirms-ransomware-attack-disrupted-business-systems/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Citrix Confirms 2 NetScaler Zero-Days After Admins Pulled the Plug",
+        "tldr": "Citrix has confirmed two zero-day vulnerabilities in NetScaler products (formerly Citrix ADC and Citrix Gateway), which are under active exploitation. These critical flaws led to some administrators proactively taking systems offline to mitigate risk, underscoring the severe and immediate threat.",
+        "action": "Immediately apply the official patches or mitigation strategies released by Citrix for the two confirmed zero-day NetScaler vulnerabilities. Prioritize internet-facing and critical deployments, and closely monitor for any signs of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/citrix-confirms-2-netscaler-zero-days-after-admins-pulled-the-plug/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Citrix NetScaler (formerly Citrix ADC) and Citrix Gateway; specific vulnerable versions are those identified by Citrix as containing the zero-day flaws. Consult official Citrix security advisories for exact details.",
+        "how_to_determine_impact": "Identify all Citrix NetScaler/Gateway appliances. Verify software versions against Citrix's security bulletin for the two zero-day vulnerabilities. Check for indicators of compromise (IOCs) provided by Citrix or CISA, and review appliance logs for suspicious activity.",
+        "tanium_query_hint": "Get Citrix NetScaler Version and Get Patch Status and Get Running Processes from all machines with ( Has Citrix NetScaler Installed equals true )",
+        "rapid7_query_hint": "Search InsightVM for vulnerabilities related to Citrix NetScaler/Gateway, specifically for recently published zero-days. Review InsightIDR logs for any suspicious activity on these appliances, especially before they were potentially taken offline.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks",
+        "tldr": "Apple has released security patches addressing a CoreGraphics vulnerability that is believed to have been actively exploited in targeted attacks. This flaw could potentially allow for arbitrary code execution on affected devices.",
+        "action": "Apply the latest Apple security updates immediately to all affected iOS, macOS, watchOS, and tvOS devices. Ensure all systems are fully patched to mitigate the risk of exploitation.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Apple iOS, macOS, watchOS, and tvOS devices. Specific vulnerable versions are those prior to the latest security updates released in late September 2026.",
+        "how_to_determine_impact": "Check the operating system version on all Apple devices. If running older versions than the latest security update, assume vulnerability. Verify successful application of patches post-update.",
+        "tanium_query_hint": "Get Computer Name and Get OS Platform and Get OS Version and Get Software Name and Get Software Version from all machines with ( Is Mac equals true or Is iOS equals true )",
+        "rapid7_query_hint": "Search for assets with installed Apple OS versions prior to the latest security update. Look for InsightVM vulnerability checks related to CoreGraphics or Apple security updates released in September 2026.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
