@@ -2,109 +2,92 @@
   "breaches": [
     {
       "title": "French Tax Data Theft Using Stolen Staff Passwords Went Undetected for Seven Weeks",
-      "tldr": "French tax authorities experienced a data theft incident where attackers used stolen staff passwords to access sensitive tax data. The compromise remained undetected for seven weeks before discovery, highlighting risks from credential compromise and delayed detection.",
-      "action": "Implement multi-factor authentication (MFA) for all internal systems, especially those accessing sensitive data. Review logs for unusual access patterns, especially those originating from unusual IPs or times. Conduct immediate password resets for any potentially compromised accounts and investigate for persistence mechanisms.",
+      "tldr": "French tax data was stolen using compromised staff credentials, and the breach remained unnoticed for seven weeks. This incident highlights critical deficiencies in credential management and security monitoring within the affected agency.",
+      "action": "Implement strong multi-factor authentication (MFA) for all internal systems, regularly rotate credentials, and enhance security monitoring with advanced anomaly detection for unusual access patterns and data exfiltration attempts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/french-tax-data-theft-using-stolen.html",
       "source": "The Hacker News"
     },
     {
       "title": "Automated AI agent used to breach cybersecurity nonprofit DIVD",
-      "tldr": "The Dutch Institute for Vulnerability Disclosure (DIVD) suffered a breach attributed to an automated AI agent. The attack was described as \"loud and very, very messy,\" signaling an emerging and aggressive attack vector leveraging artificial intelligence.",
-      "action": "Review and strengthen defenses against automated attack vectors, including rate limiting, advanced bot detection, and behavior-based anomaly detection. Assess the security posture against emerging AI-driven threats and consider adopting AI-enhanced defense mechanisms.",
+      "tldr": "The Dutch Institute for Vulnerability Disclosure (DIVD) suffered a breach attributed to an 'automated AI agent,' described as 'loud and very, very messy.' This incident signals an emerging threat landscape involving autonomous AI-driven cyberattacks.",
+      "action": "Review and enhance existing security measures against automated and AI-driven attacks, focusing on robust rate-limiting, sophisticated bot detection, and integration of advanced threat intelligence. Implement AI-specific anomaly detection to identify and mitigate unusual AI-generated activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/automated-ai-agent-used-to-breach-cybersecurity-nonprofit-divd/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Times Car confirms data breach affecting 6.6 million user accounts",
-      "tldr": "Japanese car-sharing service Times Car has confirmed a data breach affecting approximately 6.6 million user accounts. This incident highlights the ongoing risk to personal identifiable information (PII) held by online services from cyberattacks.",
-      "action": "Users of Times Car should change their passwords immediately and enable MFA where available. Organizations should review their incident response plans for large-scale data breaches, focusing on customer notification and data protection measures.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/times-car-confirms-data-breach-affecting-66-million-user-accounts/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Pentagon Personnel Agency Data Breach Impacts 3 Million People",
-      "tldr": "A data breach at the Pentagon's personnel agency has impacted approximately 3 million individuals. This significant breach underscores the critical need for robust security measures, especially for sensitive government data, and highlights the potential for large-scale exposure of personal information.",
-      "action": "Affected individuals should monitor credit reports and be vigilant for phishing attempts. Organizations managing highly sensitive data should conduct thorough security audits, implement advanced threat detection, and review access controls to prevent similar large-scale compromises.",
+      "tldr": "A data breach at the Pentagon Personnel Agency has compromised the personal information of 3 million individuals. This represents a significant exposure of sensitive data related to government personnel.",
+      "action": "Implement robust data encryption at rest and in transit, strengthen access controls, and continuously monitor for unauthorized data access and exfiltration. Affected individuals should be promptly notified and offered identity protection services.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/pentagon-personnel-agency-data-breach-impacts-3-million-people/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Japan's Keio confirms ransomware attack disrupted business systems",
-      "tldr": "Keio Corporation, a major Japanese private railway operator, confirmed a ransomware attack that disrupted some of its business systems over the weekend. This incident demonstrates the ongoing threat ransomware poses to critical infrastructure and major corporations, affecting operational continuity.",
-      "action": "Immediately isolate affected systems and activate incident response plans. Ensure robust backups are in place and regularly tested, implement network segmentation, and enforce strong email security and endpoint detection and response (EDR) solutions. Review and update incident response playbooks for ransomware scenarios.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/japans-keio-confirms-ransomware-attack-disrupted-business-systems/",
-      "source": "BleepingComputer"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "New Spectre v2 attack variant leaks Linux root password hash in minutes",
-      "tldr": "A new Branch Target Reuse (BTR) attack, a variant of Spectre v2, has been discovered that can leak sensitive data, including Linux root password hashes, from Intel, AMD, and Arm CPUs. This attack bypasses existing defenses and demonstrates the ongoing challenges in mitigating speculative execution vulnerabilities.",
-      "action": "Review system configurations for available mitigations for Spectre v2 (e.g., L1TF, MDS, TAA, TSX Asynchronous Abort). Apply vendor-provided microcode updates and operating system patches as soon as they are available. Consider disabling hyperthreading on critical systems if performance impact is acceptable.",
+      "title": "Hackers exploit Citrix NetScaler zero-day to deploy web shells",
+      "tldr": "Attackers are actively exploiting a critical zero-day vulnerability, CVE-2026-88772, in Citrix NetScaler (formerly ADC and Gateway) appliances. This exploitation allows them to deploy web shells, gain root access, steal credentials, and facilitate lateral movement within compromised networks.",
+      "action": "Immediately identify all Citrix NetScaler appliances and apply the vendor-provided patch for CVE-2026-88772. Conduct a forensic analysis for signs of compromise (e.g., unexpected files, processes, or network connections) if appliances were exposed prior to patching.",
       "cve_ids": [
-        "CVE-2017-5715"
+        "CVE-2026-88772"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-spectre-v2-attack-variant-leaks-linux-root-password-hash-in-minutes/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Intel, AMD, and Arm CPUs potentially affected by Branch Target Reuse (BTR) attack variant, particularly systems running Linux. Specific vulnerable microcode and kernel versions should be referenced from vendor advisories.",
-      "how_to_determine_impact": "Check kernel versions for applied mitigations and CPU microcode versions. Look for specific patches from OS vendors (e.g., Linux kernel updates) that address speculative execution vulnerabilities.",
-      "tanium_query_hint": "Get CPU Architecture and Family from all machines combined with Get Kernel Version or Get Operating System Patch Level.",
-      "rapid7_query_hint": "Search for vulnerability ID 'linux-kernel-speculative-execution-vulnerability' or Asset Search: Kernel.Version < [VULNERABLE_VERSION] (Requires specific vulnerable version details from vendor advisory).",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.7 High"
-    },
-    {
-      "title": "Kiteworks patches critical flaw, brings customer systems online",
-      "tldr": "Kiteworks patched a critical vulnerability that prompted a nine-hour precautionary shutdown for customer systems globally. The flaw's severity led to a recommendation for customers to take their systems offline, indicating a significant risk of compromise or data exposure.",
-      "action": "Immediately apply the latest security patches released by Kiteworks. Follow all vendor-specific guidance for remediation and system verification. Conduct an internal audit of Kiteworks deployments for any signs of compromise prior to patching.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/kiteworks-lifts-shutdown-warning-after-patching-critical-flaw/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Kiteworks appliances and software. Specific vulnerable versions should be referenced from the official Kiteworks security advisory.",
-      "how_to_determine_impact": "Consult Kiteworks official security advisories for specific version numbers and upgrade paths. Verify patch application and system health as per vendor instructions.",
-      "tanium_query_hint": "Get Installed Applications with Name 'Kiteworks' and Get File Version['<Kiteworks_Install_Path>\\some_binary.exe'].",
-      "rapid7_query_hint": "Search for vulnerability ID 'Kiteworks Critical Vulnerability' (if Rapid7 has published one) or Asset Search: Software Name CONTAINS 'Kiteworks' AND Software Version IS [VULNERABLE_VERSION].",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Apple patches CoreGraphics zero-day flaw exploited in attacks",
-      "tldr": "Apple released security updates addressing a zero-day vulnerability in CoreGraphics that has been actively exploited in \"extremely sophisticated\" targeted attacks on iOS devices. This flaw allows for arbitrary code execution or data exposure, posing a severe risk to user privacy and device integrity.",
-      "action": "Immediately update all Apple iOS devices (iPhones, iPads) to the latest available iOS version. Users should also update macOS and watchOS if applicable, as CoreGraphics is a shared component. Monitor for any signs of compromise or unusual activity on affected devices.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/apple-patches-coregraphics-zero-day-flaw-exploited-in-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-citrix-netscaler-zero-day-to-deploy-web-shells/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "iOS, iPadOS, macOS, and watchOS versions prior to the latest security updates released by Apple. Consult Apple's security release notes for exact fixed versions.",
-      "how_to_determine_impact": "Check the operating system version on Apple devices. Devices running versions older than the latest security releases are vulnerable.",
-      "tanium_query_hint": "Get OS Platform AND Get OS Version for iOS, macOS, watchOS devices.",
-      "rapid7_query_hint": "Asset Search: Operating System CONTAINS 'iOS' AND Operating System Version IS < [FIXED_VERSION] (requires knowing the specific fixed version from Apple advisory).",
+      "affected_versions": "Citrix NetScaler (formerly ADC and Gateway) appliances. Refer to Citrix official security bulletins for exact affected versions, typically all supported versions prior to the patch.",
+      "how_to_determine_impact": "Identify all Citrix NetScaler appliances. Verify the installed firmware/software version against Citrix's security advisory for CVE-2026-88772. Conduct a thorough forensic analysis (e.g., check for unexpected files like web shells in /var/tmp/, /netscaler/, /var/netscaler/, unusual processes, and network connections) if vulnerable versions were exposed.",
+      "tanium_query_hint": "This vulnerability affects appliances; direct Tanium queries for software version may not apply to the appliance OS. Consider 'Get Network Connections with Listening Ports' for unusual listener activity or check appliance management interfaces for software versions and IOCs.",
+      "rapid7_query_hint": "Asset Search: 'vulnerability.id = \"CVE-2026-88772\"' or 'software.name CONTAINS \"Citrix NetScaler\"'. Conduct authenticated scans to detect vulnerable versions. Utilize InsightIDR for Endpoint Telemetry to identify deployed web shells or suspicious network traffic emanating from NetScaler devices.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Official MCP Python SDK Flaw Can Let Malicious Servers Steal OAuth Credentials",
-      "tldr": "A flaw in the official MCP Python SDK allows malicious servers to steal OAuth credentials. This vulnerability could enable attackers to gain unauthorized access to applications or services that rely on the compromised SDK for authentication, potentially leading to data exfiltration or account takeover.",
-      "action": "Developers using the MCP Python SDK should check for available updates and apply them immediately. Review applications for proper OAuth implementation and ensure that SDKs are retrieved from trusted sources and verified to prevent supply chain attacks.",
+      "title": "Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks",
+      "tldr": "Apple has released security patches addressing a vulnerability in CoreGraphics that may have been actively exploited in targeted attacks. This critical flaw poses a significant risk to the integrity and confidentiality of data on Apple devices.",
+      "action": "Users of Apple devices (iOS, iPadOS, macOS, watchOS, tvOS) should apply all available security updates immediately to patch the CoreGraphics vulnerability and protect against potential exploitation.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html",
+      "source_url": "https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Apple iOS, macOS, watchOS, tvOS. Specific vulnerable versions would be detailed in Apple's security advisories accompanying the patch, but generally all unpatched versions are affected.",
+      "how_to_determine_impact": "Identify all Apple devices (iPhones, iPads, Macs, Apple Watches, Apple TVs) within the environment. Verify their operating system versions (e.g., 'Settings > General > About > Version' for iOS/iPadOS, 'System Settings > General > About' for macOS) against Apple's latest security releases. Devices not running the patched version are vulnerable.",
+      "tanium_query_hint": "Get Operating System from all machines where Operating System contains 'macOS' or 'iOS'. Further refine with 'Get OS Version' to identify unpatched systems. For macOS, 'Get Installed Application Version[\"/System/Library/Frameworks/CoreGraphics.framework\"]' might provide version info, though OS version is primary.",
+      "rapid7_query_hint": "Asset Search: 'asset.os.family = \"macOS\"' or 'asset.os.family = \"iOS\"'. Utilize InsightAgent or authenticated scans to determine installed OS versions and check for relevant vulnerability IDs once assigned by Rapid7 through their vulnerability definitions.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Custom ChatGPTs push ClickFix attacks to deploy RAT malware",
+      "tldr": "Malicious custom ChatGPT variants, promoted through sponsored Google search results, are being used to direct unsuspecting users to malicious sites. These sites leverage 'ClickFix' attacks to deploy Remote Access Trojan (RAT) malware onto victims' systems.",
+      "action": "Educate users about the dangers of sponsored search results and deceptive AI chatbot links. Implement strict endpoint protection with behavior analysis and network filtering to detect and block RAT malware and suspicious command-and-control communications. Review and restrict the use of unmonitored custom chatbots.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/custom-chatgpts-push-clickfix-attacks-to-deploy-rat-malware/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Users interacting with malicious custom ChatGPTs promoted through platforms like Google Ads. Not a software version, but an attack vector leveraging user trust and platform misuse. All web browsers and operating systems are potentially vulnerable if users interact with the malicious content.",
+      "how_to_determine_impact": "Monitor network traffic for known RAT C2 indicators. Conduct endpoint forensic analysis for unauthorized software installations or unusual process activity (e.g., unexpected executables, processes making outbound connections) on user workstations, especially after interactions with AI chatbots or clicking suspicious links. Review browser history for access to known malicious domains.",
+      "tanium_query_hint": "Get Running Processes with Open Network Connections from all machines to detect RAT C2 activity. 'Get File Details' or 'Get Process Information' for suspicious executables. Query for suspicious browser history entries if possible.",
+      "rapid7_query_hint": "Utilize InsightIDR's User Behavior Analytics (UBA) and Endpoint Telemetry to detect RAT malware, unusual outbound connections from user devices, or suspicious process creation. Asset Search: 'asset.software.name = \"Google Chrome\" AND asset.url CONTAINS \"malicious-domain.com\"' (if specific malicious domains are known).",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.5 High"
+    },
+    {
+      "title": "Kiteworks Fixes Critical Flaw Found During Nine-Hour Precautionary Shutdown",
+      "tldr": "Kiteworks addressed a critical vulnerability in its platform that led to a precautionary nine-hour shutdown of customer systems globally. The flaw was significant enough to necessitate immediate vendor action to prevent potential widespread exploitation.",
+      "action": "Kiteworks customers should immediately verify and confirm the application of the released patch. Conduct post-remediation checks to ensure systems are fully updated and monitor for any residual signs of compromise that might have occurred during the period the vulnerability was active or systems were offline.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/kiteworks-fixes-critical-flaw-found.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Specific versions of the official MCP Python SDK. Consult the official SDK changelog or security advisories for affected ranges.",
-      "how_to_determine_impact": "Review project dependencies for the MCP Python SDK. Check installed SDK versions against vendor advisories and ensure all dependencies are up-to-date and from trusted repositories.",
-      "tanium_query_hint": "Get Python Packages and search for 'mcp-sdk' or similar, then check its version.",
-      "rapid7_query_hint": "Asset Search: Software Name CONTAINS 'MCP Python SDK' AND Software Version IS [VULNERABLE_VERSION].",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.1 High"
+      "affected_versions": "Kiteworks products. Specific vulnerable versions require consulting Kiteworks' official advisory. All Kiteworks customers who have not yet applied the patch released post-shutdown are vulnerable.",
+      "how_to_determine_impact": "Identify if Kiteworks products are deployed within the environment. Consult official Kiteworks security advisories for specific vulnerable product lines and version ranges. Confirm patch application by checking the installed Kiteworks product version or through the Kiteworks management interface.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Application Name contains 'Kiteworks'. Cross-reference detected versions with vendor advisory. For appliances, direct management interface checks are usually required.",
+      "rapid7_query_hint": "Asset Search: 'software.name CONTAINS \"Kiteworks\"'. Conduct authenticated scans to discover installed versions. Refer to Kiteworks' specific patching guidance and check for any vulnerability IDs published by Rapid7 related to Kiteworks patches.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -19304,6 +19287,56 @@
         "rapid7_query_hint": "Asset Search: Software Name CONTAINS 'MCP Python SDK' AND Software Version IS [VULNERABLE_VERSION].",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.1 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers exploit Citrix NetScaler zero-day to deploy web shells",
+        "tldr": "Attackers are actively exploiting a critical zero-day vulnerability, CVE-2026-88772, in Citrix NetScaler (formerly ADC and Gateway) appliances. This exploitation allows them to deploy web shells, gain root access, steal credentials, and facilitate lateral movement within compromised networks.",
+        "action": "Immediately identify all Citrix NetScaler appliances and apply the vendor-provided patch for CVE-2026-88772. Conduct a forensic analysis for signs of compromise (e.g., unexpected files, processes, or network connections) if appliances were exposed prior to patching.",
+        "cve_ids": [
+          "CVE-2026-88772"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-citrix-netscaler-zero-day-to-deploy-web-shells/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Citrix NetScaler (formerly ADC and Gateway) appliances. Refer to Citrix official security bulletins for exact affected versions, typically all supported versions prior to the patch.",
+        "how_to_determine_impact": "Identify all Citrix NetScaler appliances. Verify the installed firmware/software version against Citrix's security advisory for CVE-2026-88772. Conduct a thorough forensic analysis (e.g., check for unexpected files like web shells in /var/tmp/, /netscaler/, /var/netscaler/, unusual processes, and network connections) if vulnerable versions were exposed.",
+        "tanium_query_hint": "This vulnerability affects appliances; direct Tanium queries for software version may not apply to the appliance OS. Consider 'Get Network Connections with Listening Ports' for unusual listener activity or check appliance management interfaces for software versions and IOCs.",
+        "rapid7_query_hint": "Asset Search: 'vulnerability.id = \"CVE-2026-88772\"' or 'software.name CONTAINS \"Citrix NetScaler\"'. Conduct authenticated scans to detect vulnerable versions. Utilize InsightIDR for Endpoint Telemetry to identify deployed web shells or suspicious network traffic emanating from NetScaler devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Custom ChatGPTs push ClickFix attacks to deploy RAT malware",
+        "tldr": "Malicious custom ChatGPT variants, promoted through sponsored Google search results, are being used to direct unsuspecting users to malicious sites. These sites leverage 'ClickFix' attacks to deploy Remote Access Trojan (RAT) malware onto victims' systems.",
+        "action": "Educate users about the dangers of sponsored search results and deceptive AI chatbot links. Implement strict endpoint protection with behavior analysis and network filtering to detect and block RAT malware and suspicious command-and-control communications. Review and restrict the use of unmonitored custom chatbots.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/custom-chatgpts-push-clickfix-attacks-to-deploy-rat-malware/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Users interacting with malicious custom ChatGPTs promoted through platforms like Google Ads. Not a software version, but an attack vector leveraging user trust and platform misuse. All web browsers and operating systems are potentially vulnerable if users interact with the malicious content.",
+        "how_to_determine_impact": "Monitor network traffic for known RAT C2 indicators. Conduct endpoint forensic analysis for unauthorized software installations or unusual process activity (e.g., unexpected executables, processes making outbound connections) on user workstations, especially after interactions with AI chatbots or clicking suspicious links. Review browser history for access to known malicious domains.",
+        "tanium_query_hint": "Get Running Processes with Open Network Connections from all machines to detect RAT C2 activity. 'Get File Details' or 'Get Process Information' for suspicious executables. Query for suspicious browser history entries if possible.",
+        "rapid7_query_hint": "Utilize InsightIDR's User Behavior Analytics (UBA) and Endpoint Telemetry to detect RAT malware, unusual outbound connections from user devices, or suspicious process creation. Asset Search: 'asset.software.name = \"Google Chrome\" AND asset.url CONTAINS \"malicious-domain.com\"' (if specific malicious domains are known).",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.5 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Kiteworks Fixes Critical Flaw Found During Nine-Hour Precautionary Shutdown",
+        "tldr": "Kiteworks addressed a critical vulnerability in its platform that led to a precautionary nine-hour shutdown of customer systems globally. The flaw was significant enough to necessitate immediate vendor action to prevent potential widespread exploitation.",
+        "action": "Kiteworks customers should immediately verify and confirm the application of the released patch. Conduct post-remediation checks to ensure systems are fully updated and monitor for any residual signs of compromise that might have occurred during the period the vulnerability was active or systems were offline.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/kiteworks-fixes-critical-flaw-found.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Kiteworks products. Specific vulnerable versions require consulting Kiteworks' official advisory. All Kiteworks customers who have not yet applied the patch released post-shutdown are vulnerable.",
+        "how_to_determine_impact": "Identify if Kiteworks products are deployed within the environment. Consult official Kiteworks security advisories for specific vulnerable product lines and version ranges. Confirm patch application by checking the installed Kiteworks product version or through the Kiteworks management interface.",
+        "tanium_query_hint": "Get Installed Applications from all machines where Application Name contains 'Kiteworks'. Cross-reference detected versions with vendor advisory. For appliances, direct management interface checks are usually required.",
+        "rapid7_query_hint": "Asset Search: 'software.name CONTAINS \"Kiteworks\"'. Conduct authenticated scans to discover installed versions. Refer to Kiteworks' specific patching guidance and check for any vulnerability IDs published by Rapid7 related to Kiteworks patches.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
