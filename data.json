@@ -2,127 +2,127 @@
   "breaches": [
     {
       "title": "AI Coding Agents Exposed 13,000 Internal Images, Including Billing Records, on GitHub",
-      "tldr": "AI coding agents inadvertently uploaded and exposed 13,000 internal images, including sensitive billing records, onto public GitHub repositories. This incident highlights critical data leak risks associated with poorly configured or monitored AI development tools.",
-      "action": "Immediately audit configurations of all AI coding agents and development pipelines to prevent unintended public exposure of sensitive data. Implement robust secret scanning and Data Loss Prevention (DLP) solutions for all code repositories, and review existing access controls for developer tools.",
+      "tldr": "AI coding agents inadvertently exposed approximately 13,000 internal images, including sensitive billing records, on public GitHub repositories. This incident highlights data leakage risks associated with AI tool integration in development workflows and underscores the need for stringent data handling policies.",
+      "action": "Immediately audit all AI agents and automated tools for data handling practices and access permissions. Implement strict data loss prevention (DLP) policies and monitor public code repositories for accidental sensitive data exposure, leveraging automated scanning tools.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html",
       "source": "The Hacker News"
     },
     {
       "title": "US-Focused CSuite Phishing Steals Microsoft 365 Sessions and Deploys RMM Tools for Remote Access",
-      "tldr": "A sophisticated, US-focused phishing campaign is targeting C-suite executives, successfully stealing Microsoft 365 sessions. Post-compromise, attackers are deploying Remote Monitoring and Management (RMM) tools to establish persistent remote access and deepen their foothold within targeted organizations.",
-      "action": "Implement strong multi-factor authentication (MFA) with phishing-resistant methods (e.g., FIDO2) for all Microsoft 365 accounts, especially C-suite. Enhance email security gateways to detect advanced phishing lures. Review and restrict RMM tool usage, and monitor for unauthorized RMM installations or connections.",
+      "tldr": "A US-focused phishing campaign targeting C-suite executives is actively stealing Microsoft 365 sessions. This allows attackers to bypass multi-factor authentication, gain remote access, and deploy RMM tools for persistent control, leading to potential data exfiltration and further organizational compromise.",
+      "action": "Implement advanced phishing detection and response solutions. Enforce Conditional Access policies in Microsoft 365 to restrict access from untrusted locations/devices. Monitor for unusual Microsoft 365 session activity and unauthorized RMM tool deployments on endpoints.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/09/us-focused-csuite-phishing-steals.html",
       "source": "The Hacker News"
     },
     {
-      "title": "DIVD says Zammad zero-days enabled AI-driven network breach",
-      "tldr": "The Dutch Institute for Vulnerability Disclosure (DIVD) reported that its network was breached through the exploitation of a chain of two zero-day vulnerabilities in the open-source Zammad ticketing system. The breach was enabled by an ",
-      "action": "If using Zammad, immediately check for official vendor advisories and apply any available patches or workarounds for recently disclosed zero-days. Conduct a thorough forensic investigation for any indicators of compromise (IoCs) within your network, particularly on Zammad instances and related systems.",
+      "title": "Over 543,000 valid credentials exposed in public GitHub repositories",
+      "tldr": "More than 543,000 valid credentials were found exposed in public GitHub repositories, remaining active even after GitHub's security measures. This significant data leak poses a severe risk of account takeover, unauthorized access to systems, and further organizational compromise.",
+      "action": "Immediately identify any organizational credentials exposed on public GitHub. Force password resets for all affected accounts and implement automated credential scanning for public and private repositories to prevent future leaks.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/over-543-000-valid-credentials-exposed-in-public-github-repositories/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Over 543,000 valid credentials exposed in public GitHub repositories",
-      "tldr": "A recent analysis revealed that over 543,000 valid credentials were still publicly accessible in GitHub repositories as of July, despite GitHub's efforts to prevent such leaks. These exposed credentials pose a critical risk for widespread account compromise across various services.",
-      "action": "Conduct an immediate audit of all GitHub repositories (public and private) for exposed credentials using secret scanning tools. Rotate any identified exposed credentials without delay. Enforce strong credential management policies, including least privilege and regular rotation, and educate developers on secure coding practices.",
+      "title": "Bitget hacked via zero-day in third-party security products",
+      "tldr": "Cryptocurrency exchange Bitget was breached, resulting in the theft of $387.5 million, following the exploitation of a zero-day vulnerability in third-party security products used by the exchange. This incident highlights the significant supply chain risk associated with integrating security tools.",
+      "action": "Organizations should review their third-party security product inventory and ensure all are fully patched and configured according to best practices. Implement rigorous auditing of security product logs and monitor for anomalous activity indicative of compromise or zero-day exploitation.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/over-543-000-valid-credentials-exposed-in-public-github-repositories/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Attackers Exploit Zimbra Flaw to Deploy Web Shells and Harvest Authentication Secrets",
-      "tldr": "Attackers are actively exploiting an unspecified vulnerability in Zimbra Collaboration Suite to deploy web shells and steal authentication credentials. This allows for persistent access and potential broader compromise of affected systems.",
-      "action": "Immediately apply all available security patches for Zimbra Collaboration Suite. Scan Zimbra instances for web shells or other unauthorized files. Review authentication logs for suspicious access attempts or credential harvesting activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/09/attackers-exploit-zimbra-flaw-to-deploy.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Zimbra Collaboration Suite (specific versions require vendor advisory review)",
-      "how_to_determine_impact": "Check Zimbra logs for suspicious activity (e.g., creation of unknown files in web directories, unusual process execution from web server, high volume of login failures). Verify current Zimbra version against vendor's security advisories. Look for presence of web shell files.",
-      "tanium_query_hint": "Get Installed Applications with Name 'Zimbra' to check version. Get File Details['/opt/zimbra/jetty/webapps/*/'] for suspicious file names. Get Running Processes to identify unusual processes.",
-      "rapid7_query_hint": "Search for 'Zimbra' vulnerabilities. Use Insight Agent query: asset.software.name = 'Zimbra' AND asset.vulnerability.severity = 'Critical'. Monitor for web shell detection alerts or unusual process activity on Zimbra hosts.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "Cisco warns of new SD-WAN zero-day exploited in attacks",
-      "tldr": "Cisco has issued an urgent security warning and released patches for a critical zero-day authentication bypass vulnerability (CVE-2026-76504) in its Catalyst SD-WAN Manager. This flaw is being actively exploited by attackers to escalate privileges and gain administrative access.",
-      "action": "Immediately apply the security updates provided by Cisco for Catalyst SD-WAN Manager. Review logs for the SD-WAN Manager for any signs of unauthorized access, privilege escalation, or unusual administrative commands prior to patching.",
+      "tldr": "Cisco has released security updates for a critical zero-day vulnerability (CVE-2026-76504) in its Catalyst SD-WAN Manager. Attackers are actively exploiting this flaw to achieve authentication bypass and escalate to administrative privileges, posing a severe risk to network control.",
+      "action": "Immediately apply the latest security updates provided by Cisco for Catalyst SD-WAN Manager. Conduct an urgent forensic review of all SD-WAN Manager instances for signs of compromise, including unauthorized administrative access or configuration changes.",
       "cve_ids": [
         "CVE-2026-76504"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Catalyst SD-WAN Manager (specific vulnerable versions specified in Cisco's advisory)",
-      "how_to_determine_impact": "Verify the installed version of Cisco Catalyst SD-WAN Manager against Cisco's official advisory for CVE-2026-76504. Examine access logs on the SD-WAN Manager for any unauthorized logins or suspicious privilege escalation attempts around the time of the advisory.",
-      "tanium_query_hint": "Get Installed Applications with Name 'Cisco Catalyst SD-WAN Manager' for version checks. Get Event Log['Application'] with Source 'Cisco' and Message 'authentication bypass' for IoCs.",
-      "rapid7_query_hint": "Search for vulnerability ID CVE-2026-76504. Use Insight Agent query: asset.software.name = 'Cisco Catalyst SD-WAN Manager' AND asset.vulnerability.id = 'CVE-2026-76504'. Monitor for alerts related to privilege escalation on SD-WAN devices.",
+      "affected_versions": "Cisco Catalyst SD-WAN Manager versions affected by CVE-2026-76504. Refer to Cisco's official security advisory for precise details.",
+      "how_to_determine_impact": "Check Cisco Catalyst SD-WAN Manager versions. Review system logs and audit trails for unauthorized access attempts, successful logins by unknown users, or privilege escalation. Look for any unusual commands or configuration changes.",
+      "tanium_query_hint": "Get Installed Applications matching \"Cisco Catalyst SD-WAN Manager\". Get File Version[<path_to_sdwan_manager_binary>] from relevant servers. Look for unusual process activity or network connections on these hosts.",
+      "rapid7_query_hint": "Search InsightVM for vulnerability ID \"CVE-2026-76504\". Use InsightIDR to monitor for suspicious activity on SD-WAN Manager hosts, especially around authentication, privilege escalation, and unusual network flows.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution",
-      "tldr": "Detailed exploit information for CVE-2026-88772 in Citrix NetScaler (formerly ADC/Gateway) confirms a pre-authentication path to shellcode execution. This critical vulnerability allows remote attackers to gain control of affected appliances without authentication.",
-      "action": "Immediately apply the latest security updates and patches for all Citrix NetScaler (ADC/Gateway) appliances. Monitor network traffic to NetScaler devices for suspicious pre-authentication requests or indicators of compromise associated with shellcode execution.",
+      "tldr": "Detailed exploit information has emerged for CVE-2026-88772, a critical pre-authentication vulnerability in Citrix NetScaler (formerly ADC/Gateway). The exploit provides a clear path to shellcode execution, enabling unauthenticated attackers to gain control of affected devices.",
+      "action": "Immediately apply security updates from Citrix for NetScaler (ADC/Gateway) to address CVE-2026-88772. Scan for signs of compromise and ensure no unauthorized shellcode execution has occurred. Review network traffic for suspicious connections.",
       "cve_ids": [
         "CVE-2026-88772"
       ],
       "source_url": "https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Citrix NetScaler (ADC and Gateway) - specific versions detailed in Citrix's official advisory for CVE-2026-88772.",
-      "how_to_determine_impact": "Verify the installed software version of all Citrix NetScaler appliances against the vendor's advisory for CVE-2026-88772. Check system logs for unauthorized access attempts, unusual process activity, or unexpected outbound connections.",
-      "tanium_query_hint": "Get Installed Applications with Name 'Citrix NetScaler' for version. Get Listen Ports and Established Connections for suspicious network activity.",
-      "rapid7_query_hint": "Search for vulnerability ID CVE-2026-88772. Use Insight Agent query: asset.software.name LIKE 'Citrix NetScaler%' AND asset.vulnerability.id = 'CVE-2026-88772'. Scan NetScaler devices for active exploitation indicators.",
+      "affected_versions": "Citrix NetScaler (formerly ADC/Gateway) versions vulnerable to CVE-2026-88772. Consult official Citrix advisory for exact versions.",
+      "how_to_determine_impact": "Identify all Citrix NetScaler (ADC/Gateway) appliances. Cross-reference their versions with the official Citrix advisory for CVE-2026-88772. Look for any evidence of shellcode execution, unusual processes, or unauthorized network activity.",
+      "tanium_query_hint": "Get Installed Applications matching \"Citrix NetScaler\" or \"Citrix ADC\". Check for specific file versions and paths related to the vulnerability. Look for suspicious processes or network connections originating from these appliances.",
+      "rapid7_query_hint": "Search for vulnerability ID \"CVE-2026-88772\" in InsightVM. Use authenticated scans to verify patching status. Monitor network traffic for unusual patterns or C2 communications originating from NetScaler devices with InsightIDR.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Attackers Exploit Zimbra Flaw to Deploy Web Shells and Harvest Authentication Secrets",
+      "tldr": "Attackers are actively exploiting an undisclosed vulnerability in Zimbra, deploying web shells to maintain persistence and harvest authentication secrets. This allows for unauthorized access, potential lateral movement, and data exfiltration within compromised environments.",
+      "action": "Immediately identify and patch all Zimbra instances to the latest secure version. Scan all Zimbra servers for web shells, unauthorized files, and anomalous activity indicative of compromise. Review and rotate authentication secrets.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/09/attackers-exploit-zimbra-flaw-to-deploy.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "All known vulnerable Zimbra versions. Consult Zimbra's official security advisories for specific impacted versions.",
+      "how_to_determine_impact": "Check Zimbra server logs for suspicious activity (e.g., unusual commands, process spawns). Look for unauthorized web shells (e.g., .jsp, .php) in Zimbra web directories. Review authentication logs for unusual access patterns.",
+      "tanium_query_hint": "Get running processes with command line containing \"zimbra\" and check for unusual child processes or open ports. Get File Hash[<common_web_shell_paths>] or Search File Content[<Zimbra_web_dirs>] for web shell signatures.",
+      "rapid7_query_hint": "Run an authenticated scan targeting Zimbra servers to identify vulnerable versions. Look for suspicious file creations, process executions, or unauthorized network connections on Zimbra assets using InsightIDR. Search for known web shell signatures.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "CISA warns of critical pre-auth RCE flaw in MikroTik RouterOS",
-      "tldr": "CISA has issued a warning regarding a critical pre-authentication Remote Code Execution (RCE) vulnerability in MikroTik RouterOS. This flaw could allow unauthenticated attackers to execute arbitrary code or cause a denial-of-service condition on affected routers.",
-      "action": "Immediately apply the latest security patches available for MikroTik RouterOS to all affected devices. Restrict management interface access to trusted networks only. Monitor router logs for any unusual activity, unauthorized access attempts, or signs of compromise.",
+      "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning of a new critical pre-authentication Remote Code Execution (RCE) vulnerability in MikroTik RouterOS. This flaw could allow unauthenticated attackers to execute arbitrary code or cause a denial-of-service condition.",
+      "action": "Immediately identify and update all MikroTik RouterOS devices to the latest patched version available from MikroTik. Implement network segmentation and strictly restrict administrative access to RouterOS devices to trusted IP ranges and administrative networks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-pre-auth-rce-flaw-in-mikrotik-routeros/",
       "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "MikroTik RouterOS (specific vulnerable versions to be identified via vendor advisory from MikroTik or CISA)",
-      "how_to_determine_impact": "Check the RouterOS version on all MikroTik devices. Compare against official advisories from MikroTik or CISA to determine vulnerability status. Review router firewall and access logs for suspicious connections or configuration changes.",
-      "tanium_query_hint": "Get Installed Applications with Name 'MikroTik RouterOS' (if managed by agent, otherwise external scan). Get Listen Ports on network devices for unexpected open ports.",
-      "rapid7_query_hint": "Search for 'MikroTik RouterOS' vulnerabilities. Perform authenticated scans against MikroTik devices to identify vulnerable versions. Look for signs of unauthorized configuration changes.",
+      "active_exploitation": false,
+      "affected_versions": "All vulnerable MikroTik RouterOS versions. Consult official MikroTik advisories for specific version ranges and updates.",
+      "how_to_determine_impact": "Identify all MikroTik RouterOS devices on the network by inventory or scanning. Check their firmware versions against official MikroTik security advisories to determine if they are vulnerable. Monitor logs for unusual activity.",
+      "tanium_query_hint": "Discover network devices and attempt to Get Firmware Version[MikroTik RouterOS] or Get Configuration[MikroTik RouterOS] from identified appliances. Check for specific build numbers or patches.",
+      "rapid7_query_hint": "Scan network devices for MikroTik RouterOS and check reported versions against known vulnerabilities in InsightVM. Search for RouterOS vulnerability IDs. Monitor network traffic to/from MikroTik devices for suspicious patterns.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [
     {
-      "title": "AI's Third Wave: Coworkers Break the Security Model That Worked for Agents",
-      "tldr": "The emergence of persistent AI ",
-      "action": "Develop and implement specific identity, access management, and lifecycle controls for all AI agents. Regularly review the permissions and activities of AI agents, treating them as distinct identities with scoped access. Consult with cyber insurance providers on policy implications for AI-driven risks.",
+      "title": "FTC is Investigating OpenAI and Anthropic Over Possible risks to Consumers",
+      "tldr": "The U.S. Federal Trade Commission (FTC) is investigating OpenAI and Anthropic, two leading AI companies, over potential risks their AI models pose to consumers. This investigation signals increased regulatory scrutiny on AI safety, privacy, and potential for harm, with implications for corporate liability.",
+      "action": "Organizations deploying or integrating AI solutions should closely monitor regulatory developments and prepare for evolving compliance requirements. Conduct thorough risk assessments of AI deployments focusing on consumer impact, data privacy, fairness, and security vulnerabilities.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ais-third-wave-coworkers-break-the-security-model-that-worked-for-agents/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/ftc-is-investigating-openai-and-anthropic-over-possible-risks-to-consumers/",
+      "source": "SecurityWeek"
     },
     {
       "title": "Anthropic Flags AI Agent Liability Risks as OpenAI Faces Hacking Lawsuit",
-      "tldr": "Anthropic is highlighting the growing liability risks associated with AI agents, a concern underscored by OpenAI currently facing a lawsuit related to a hacking incident. This signals increasing legal and financial scrutiny of AI security.",
-      "action": "Conduct a comprehensive legal and risk assessment of AI agent deployments within the organization. Engage legal counsel and cyber insurance brokers to understand evolving liability landscapes and ensure adequate coverage for AI-related incidents. Implement robust security measures for AI systems to minimize risk.",
+      "tldr": "Anthropic is highlighting liability risks associated with AI agents, while OpenAI is facing a hacking lawsuit, signaling a growing legal and financial landscape concerning AI's security implications. This emphasizes the need for clear accountability and robust security measures in AI development and deployment.",
+      "action": "Legal and risk management teams should engage to understand the evolving liability landscape for AI and prepare for potential lawsuits. Organizations using or developing AI should conduct thorough legal reviews of their AI deployments and contracts, especially regarding security and data handling responsibilities.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/anthropic-flags-ai-agent-liability-risks-as-openai-faces-hacking-lawsuit/",
       "source": "SecurityWeek"
     },
     {
-      "title": "OpenAI CEO Announces New AI Agent and Avoids Mention of Security Concerns at Developer Conference",
-      "tldr": "During a developer conference, the OpenAI CEO announced a new AI agent but notably omitted discussions on associated security concerns. This omission highlights potential underemphasis on security amidst rapid AI development, which could lead to unforeseen risks and liabilities.",
-      "action": "Approach new AI agent deployments with a security-first mindset, regardless of vendor messaging. Demand clear security documentation and risk assessments from AI providers. Develop internal security policies specifically for AI technologies, and ensure proactive threat modeling for AI integrations.",
+      "title": "Trump Says Top Tech Firms Have Signed Accord to ‘Self-Police’ AI Development",
+      "tldr": "Former President Trump announced that major tech firms have signed an accord to 'self-police' AI development. This initiative aims to establish industry-led guidelines for AI, potentially influencing future regulatory frameworks, corporate liability, and the cyber insurance landscape for AI-related risks.",
+      "action": "Monitor developments regarding AI self-regulation and governmental policy initiatives closely. Evaluate internal AI development and deployment practices against emerging industry standards and best practices to anticipate future compliance requirements and manage associated risks.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/openai-ceo-announces-new-ai-agent-and-avoids-mention-of-security-concerns-at-developer-conference/",
+      "source_url": "https://www.securityweek.com/trump-says-top-tech-firms-have-signed-accord-to-self-police-ai-development/",
       "source": "SecurityWeek"
     }
   ],
@@ -19615,6 +19615,139 @@
         "action": "Approach new AI agent deployments with a security-first mindset, regardless of vendor messaging. Demand clear security documentation and risk assessments from AI providers. Develop internal security policies specifically for AI technologies, and ensure proactive threat modeling for AI integrations.",
         "cve_ids": [],
         "source_url": "https://www.securityweek.com/openai-ceo-announces-new-ai-agent-and-avoids-mention-of-security-concerns-at-developer-conference/",
+        "source": "SecurityWeek",
+        "category": "insurance"
+      }
+    ],
+    "2026-10-01": [
+      {
+        "title": "AI Coding Agents Exposed 13,000 Internal Images, Including Billing Records, on GitHub",
+        "tldr": "AI coding agents inadvertently exposed approximately 13,000 internal images, including sensitive billing records, on public GitHub repositories. This incident highlights data leakage risks associated with AI tool integration in development workflows and underscores the need for stringent data handling policies.",
+        "action": "Immediately audit all AI agents and automated tools for data handling practices and access permissions. Implement strict data loss prevention (DLP) policies and monitor public code repositories for accidental sensitive data exposure, leveraging automated scanning tools.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/ai-coding-agents-exposed-13000-internal.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "US-Focused CSuite Phishing Steals Microsoft 365 Sessions and Deploys RMM Tools for Remote Access",
+        "tldr": "A US-focused phishing campaign targeting C-suite executives is actively stealing Microsoft 365 sessions. This allows attackers to bypass multi-factor authentication, gain remote access, and deploy RMM tools for persistent control, leading to potential data exfiltration and further organizational compromise.",
+        "action": "Implement advanced phishing detection and response solutions. Enforce Conditional Access policies in Microsoft 365 to restrict access from untrusted locations/devices. Monitor for unusual Microsoft 365 session activity and unauthorized RMM tool deployments on endpoints.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/us-focused-csuite-phishing-steals.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Over 543,000 valid credentials exposed in public GitHub repositories",
+        "tldr": "More than 543,000 valid credentials were found exposed in public GitHub repositories, remaining active even after GitHub's security measures. This significant data leak poses a severe risk of account takeover, unauthorized access to systems, and further organizational compromise.",
+        "action": "Immediately identify any organizational credentials exposed on public GitHub. Force password resets for all affected accounts and implement automated credential scanning for public and private repositories to prevent future leaks.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/over-543-000-valid-credentials-exposed-in-public-github-repositories/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Bitget hacked via zero-day in third-party security products",
+        "tldr": "Cryptocurrency exchange Bitget was breached, resulting in the theft of $387.5 million, following the exploitation of a zero-day vulnerability in third-party security products used by the exchange. This incident highlights the significant supply chain risk associated with integrating security tools.",
+        "action": "Organizations should review their third-party security product inventory and ensure all are fully patched and configured according to best practices. Implement rigorous auditing of security product logs and monitor for anomalous activity indicative of compromise or zero-day exploitation.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/bitget-hacked-via-zero-day-in-third-party-security-products/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Cisco warns of new SD-WAN zero-day exploited in attacks",
+        "tldr": "Cisco has released security updates for a critical zero-day vulnerability (CVE-2026-76504) in its Catalyst SD-WAN Manager. Attackers are actively exploiting this flaw to achieve authentication bypass and escalate to administrative privileges, posing a severe risk to network control.",
+        "action": "Immediately apply the latest security updates provided by Cisco for Catalyst SD-WAN Manager. Conduct an urgent forensic review of all SD-WAN Manager instances for signs of compromise, including unauthorized administrative access or configuration changes.",
+        "cve_ids": [
+          "CVE-2026-76504"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Catalyst SD-WAN Manager versions affected by CVE-2026-76504. Refer to Cisco's official security advisory for precise details.",
+        "how_to_determine_impact": "Check Cisco Catalyst SD-WAN Manager versions. Review system logs and audit trails for unauthorized access attempts, successful logins by unknown users, or privilege escalation. Look for any unusual commands or configuration changes.",
+        "tanium_query_hint": "Get Installed Applications matching \"Cisco Catalyst SD-WAN Manager\". Get File Version[<path_to_sdwan_manager_binary>] from relevant servers. Look for unusual process activity or network connections on these hosts.",
+        "rapid7_query_hint": "Search InsightVM for vulnerability ID \"CVE-2026-76504\". Use InsightIDR to monitor for suspicious activity on SD-WAN Manager hosts, especially around authentication, privilege escalation, and unusual network flows.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Citrix NetScaler CVE-2026-88772 Exploit Details Show Pre-Auth Path to Shellcode Execution",
+        "tldr": "Detailed exploit information has emerged for CVE-2026-88772, a critical pre-authentication vulnerability in Citrix NetScaler (formerly ADC/Gateway). The exploit provides a clear path to shellcode execution, enabling unauthenticated attackers to gain control of affected devices.",
+        "action": "Immediately apply security updates from Citrix for NetScaler (ADC/Gateway) to address CVE-2026-88772. Scan for signs of compromise and ensure no unauthorized shellcode execution has occurred. Review network traffic for suspicious connections.",
+        "cve_ids": [
+          "CVE-2026-88772"
+        ],
+        "source_url": "https://thehackernews.com/2026/09/citrix-netscaler-cve-2026-88772-exploit.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Citrix NetScaler (formerly ADC/Gateway) versions vulnerable to CVE-2026-88772. Consult official Citrix advisory for exact versions.",
+        "how_to_determine_impact": "Identify all Citrix NetScaler (ADC/Gateway) appliances. Cross-reference their versions with the official Citrix advisory for CVE-2026-88772. Look for any evidence of shellcode execution, unusual processes, or unauthorized network activity.",
+        "tanium_query_hint": "Get Installed Applications matching \"Citrix NetScaler\" or \"Citrix ADC\". Check for specific file versions and paths related to the vulnerability. Look for suspicious processes or network connections originating from these appliances.",
+        "rapid7_query_hint": "Search for vulnerability ID \"CVE-2026-88772\" in InsightVM. Use authenticated scans to verify patching status. Monitor network traffic for unusual patterns or C2 communications originating from NetScaler devices with InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Exploit Zimbra Flaw to Deploy Web Shells and Harvest Authentication Secrets",
+        "tldr": "Attackers are actively exploiting an undisclosed vulnerability in Zimbra, deploying web shells to maintain persistence and harvest authentication secrets. This allows for unauthorized access, potential lateral movement, and data exfiltration within compromised environments.",
+        "action": "Immediately identify and patch all Zimbra instances to the latest secure version. Scan all Zimbra servers for web shells, unauthorized files, and anomalous activity indicative of compromise. Review and rotate authentication secrets.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/09/attackers-exploit-zimbra-flaw-to-deploy.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "All known vulnerable Zimbra versions. Consult Zimbra's official security advisories for specific impacted versions.",
+        "how_to_determine_impact": "Check Zimbra server logs for suspicious activity (e.g., unusual commands, process spawns). Look for unauthorized web shells (e.g., .jsp, .php) in Zimbra web directories. Review authentication logs for unusual access patterns.",
+        "tanium_query_hint": "Get running processes with command line containing \"zimbra\" and check for unusual child processes or open ports. Get File Hash[<common_web_shell_paths>] or Search File Content[<Zimbra_web_dirs>] for web shell signatures.",
+        "rapid7_query_hint": "Run an authenticated scan targeting Zimbra servers to identify vulnerable versions. Look for suspicious file creations, process executions, or unauthorized network connections on Zimbra assets using InsightIDR. Search for known web shell signatures.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA warns of critical pre-auth RCE flaw in MikroTik RouterOS",
+        "tldr": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning of a new critical pre-authentication Remote Code Execution (RCE) vulnerability in MikroTik RouterOS. This flaw could allow unauthenticated attackers to execute arbitrary code or cause a denial-of-service condition.",
+        "action": "Immediately identify and update all MikroTik RouterOS devices to the latest patched version available from MikroTik. Implement network segmentation and strictly restrict administrative access to RouterOS devices to trusted IP ranges and administrative networks.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-pre-auth-rce-flaw-in-mikrotik-routeros/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "All vulnerable MikroTik RouterOS versions. Consult official MikroTik advisories for specific version ranges and updates.",
+        "how_to_determine_impact": "Identify all MikroTik RouterOS devices on the network by inventory or scanning. Check their firmware versions against official MikroTik security advisories to determine if they are vulnerable. Monitor logs for unusual activity.",
+        "tanium_query_hint": "Discover network devices and attempt to Get Firmware Version[MikroTik RouterOS] or Get Configuration[MikroTik RouterOS] from identified appliances. Check for specific build numbers or patches.",
+        "rapid7_query_hint": "Scan network devices for MikroTik RouterOS and check reported versions against known vulnerabilities in InsightVM. Search for RouterOS vulnerability IDs. Monitor network traffic to/from MikroTik devices for suspicious patterns.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "FTC is Investigating OpenAI and Anthropic Over Possible risks to Consumers",
+        "tldr": "The U.S. Federal Trade Commission (FTC) is investigating OpenAI and Anthropic, two leading AI companies, over potential risks their AI models pose to consumers. This investigation signals increased regulatory scrutiny on AI safety, privacy, and potential for harm, with implications for corporate liability.",
+        "action": "Organizations deploying or integrating AI solutions should closely monitor regulatory developments and prepare for evolving compliance requirements. Conduct thorough risk assessments of AI deployments focusing on consumer impact, data privacy, fairness, and security vulnerabilities.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/ftc-is-investigating-openai-and-anthropic-over-possible-risks-to-consumers/",
+        "source": "SecurityWeek",
+        "category": "insurance"
+      },
+      {
+        "title": "Anthropic Flags AI Agent Liability Risks as OpenAI Faces Hacking Lawsuit",
+        "tldr": "Anthropic is highlighting liability risks associated with AI agents, while OpenAI is facing a hacking lawsuit, signaling a growing legal and financial landscape concerning AI's security implications. This emphasizes the need for clear accountability and robust security measures in AI development and deployment.",
+        "action": "Legal and risk management teams should engage to understand the evolving liability landscape for AI and prepare for potential lawsuits. Organizations using or developing AI should conduct thorough legal reviews of their AI deployments and contracts, especially regarding security and data handling responsibilities.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/anthropic-flags-ai-agent-liability-risks-as-openai-faces-hacking-lawsuit/",
+        "source": "SecurityWeek",
+        "category": "insurance"
+      },
+      {
+        "title": "Trump Says Top Tech Firms Have Signed Accord to ‘Self-Police’ AI Development",
+        "tldr": "Former President Trump announced that major tech firms have signed an accord to 'self-police' AI development. This initiative aims to establish industry-led guidelines for AI, potentially influencing future regulatory frameworks, corporate liability, and the cyber insurance landscape for AI-related risks.",
+        "action": "Monitor developments regarding AI self-regulation and governmental policy initiatives closely. Evaluate internal AI development and deployment practices against emerging industry standards and best practices to anticipate future compliance requirements and manage associated risks.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/trump-says-top-tech-firms-have-signed-accord-to-self-police-ai-development/",
         "source": "SecurityWeek",
         "category": "insurance"
       }
