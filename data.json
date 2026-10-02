@@ -1,9 +1,25 @@
 {
   "breaches": [
     {
+      "title": "Frontline Education breach exposes school district employee data",
+      "tldr": "Frontline Education experienced a data breach after attackers exploited a vulnerability in third-party software. This led to unauthorized access and theft of sensitive school district employee information, including Social Security numbers.",
+      "action": "Organizations utilizing Frontline Education services should immediately monitor for official breach notifications. Advise affected employees to enable credit monitoring and enforce identity theft protection. Review and strengthen third-party vendor security protocols.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign",
+      "tldr": "A new backdoor named Antino is being deployed in a China-nexus espionage campaign. It leverages legitimate Microsoft services, specifically Outlook and OneDrive, for its command and control (C2) communications, making detection by traditional security tools more challenging.",
+      "action": "Review network logs for unusual activity or excessive data transfer related to Outlook and OneDrive by non-standard processes. Enhance endpoint detection and response (EDR) rules to identify sophisticated backdoors and C2 channels, even when using legitimate services. Implement strict application whitelisting and monitor for suspicious process execution patterns.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Microsoft’s X account hacked in crypto pump-and-dump scheme",
-      "tldr": "The official Microsoft X account, boasting over 13 million followers, was compromised by unknown attackers. The perpetrators leveraged the hijacked account to promote a crypto token as part of a pump-and-dump scheme, exploiting Microsoft's brand reputation for financial gain.",
-      "action": "Implement and enforce strong multi-factor authentication (MFA) on all high-profile social media accounts. Regularly audit access permissions for social media management platforms and monitor for any unusual posting activity. Educate employees on social engineering tactics that could lead to account compromise.",
+      "tldr": "The official Microsoft account on X (formerly Twitter), which boasts over 13 million followers, was hijacked by unknown attackers. The compromised account was used to promote a crypto token in what appeared to be a pump-and-dump scheme, leveraging Microsoft's credibility for financial manipulation.",
+      "action": "Implement strong multi-factor authentication (MFA) and strict access controls for all corporate social media accounts. Regularly audit connected applications and third-party access to social media profiles. Monitor official communication channels for any unauthorized posts or changes, and have an incident response plan for social media compromise.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/microsofts-x-account-hacked-in-crypto-token-pump-and-dump-scheme/",
       "source": "BleepingComputer"
@@ -11,76 +27,84 @@
   ],
   "ransomware": [
     {
-      "title": "Police dismantle KillSec ransomware gang allegedly led by 16-year-old",
-      "tldr": "An international law enforcement initiative, 'Operation KillSwitch,' successfully disrupted the KillSec ransomware gang. This operation led to the seizure of the group's data leak site and associated servers, resulted in three arrests, and identified a 16-year-old as the suspected ringleader.",
-      "action": "Ensure robust, immutable backups are in place and regularly tested to facilitate recovery from ransomware attacks. Enhance endpoint detection and response (EDR) capabilities to identify and block ransomware deployment. Review existing incident response plans for ransomware scenarios.",
+      "title": "Warlock ransomware breach SharePoint in water, telecom operator attacks",
+      "tldr": "The China-linked Warlock ransomware group is actively targeting critical infrastructure sectors, including water utilities, telecom providers, regional government bodies, and universities. They are exploiting vulnerabilities in Microsoft SharePoint to gain initial access to these networks for their ransomware operations.",
+      "action": "Immediately identify and patch all Microsoft SharePoint installations, especially those exposed to the internet. Implement robust access controls, network segmentation, and strong authentication for critical infrastructure systems. Monitor for known SharePoint exploitation patterns and indicators of compromise (IOCs) associated with Warlock.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers",
+      "tldr": "Law enforcement agencies have successfully arrested a 16-year-old individual suspected of being involved in operating the KillSec ransomware group. Authorities also announced the seizure of the group's leak site and associated servers, disrupting their operations.",
+      "action": "While this action is primarily law enforcement-driven, it highlights ongoing efforts against ransomware groups. Organizations should continue to reinforce their cybersecurity posture with strong backups, incident response plans, and proactive threat hunting, as the ransomware landscape is highly dynamic and new groups frequently emerge.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html",
+      "source": "The Hacker News"
     }
   ],
   "vulns": [
     {
-      "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
-      "tldr": "Fortinet has issued a critical warning regarding CVE-2026-104286, a zero-day vulnerability in FortiMail that is actively being exploited. This flaw allows unauthenticated arbitrary file writes, posing a severe risk for unauthorized code execution on affected devices.",
-      "action": "Immediately apply the latest security patches released by Fortinet for FortiMail. If patching is not feasible, implement recommended mitigation strategies provided in Fortinet's official advisory. Monitor FortiMail logs for any signs of exploitation or unusual activity.",
+      "title": "Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arbitrary File Writes",
+      "tldr": "Fortinet has issued an urgent warning regarding a critical zero-day vulnerability, CVE-2026-104286, in FortiMail, which is currently being actively exploited in the wild. This flaw allows unauthenticated attackers to perform arbitrary file writes, potentially leading to unauthorized code execution and complete system compromise.",
+      "action": "Immediately apply the latest security patches released by Fortinet for all FortiMail appliances. If immediate patching is not feasible, isolate or disable FortiMail devices as a temporary mitigation. Thoroughly monitor FortiMail system logs for any suspicious activity, unexpected file modifications, or indicators of compromise detailed in Fortinet's advisory.",
       "cve_ids": [
         "CVE-2026-104286"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "FortiMail versions impacted by CVE-2026-104286. Consult Fortinet's official security advisory for specific vulnerable versions and patch releases.",
-      "how_to_determine_impact": "Review FortiMail logs for indicators of compromise (IOCs) released by Fortinet. Verify the installed FortiMail firmware version against Fortinet's advisory. Check for unexpected processes or modified system files.",
-      "tanium_query_hint": "Get Computer Name and OS Platform from all machines with 'FortiMail' in 'Get Installed Applications'. Check 'Get Running Processes' for anomalous activity on FortiMail instances. Search 'Get File Hash[<path>]' for known malicious files.",
-      "rapid7_query_hint": "Search InsightVM for 'FortiMail' assets and vulnerability 'CVE-2026-104286'. Utilize InsightIDR logs for FortiMail to detect 'unauthenticated arbitrary file writes' or other IOCs specified by Fortinet.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
-      "title": "GitLab warns of critical RCE vulnerability in AI Gateway service",
-      "tldr": "GitLab has issued a warning concerning a critical remote code execution (RCE) vulnerability within its AI Gateway service. This flaw allows attackers to execute arbitrary commands on self-hosted GitLab instances, necessitating immediate patching.",
-      "action": "Apply the latest security patches provided by GitLab for the AI Gateway service without delay. If immediate patching is not possible, follow GitLab's official mitigation guidance to minimize exposure and monitor relevant logs for suspicious activity.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Self-hosted GitLab instances utilizing the AI Gateway service. Specific vulnerable versions will be detailed in GitLab's official security advisory.",
-      "how_to_determine_impact": "Identify all self-hosted GitLab instances running the AI Gateway. Check the installed versions of GitLab and the AI Gateway service against the vendor's patch release notes. Review system logs for signs of unexpected command execution or process spawning.",
-      "tanium_query_hint": "Get Installed Applications contains 'GitLab' and 'AI Gateway'. For relevant endpoints, 'Get Running Processes' for unusual activity or 'Get Listen Ports' to identify the AI Gateway service. Check 'Get File Version[<path>]' for AI Gateway components.",
-      "rapid7_query_hint": "In InsightVM, filter assets by 'Software Name contains GitLab' and check for associated vulnerabilities. In InsightIDR, monitor GitLab server logs for RCE indicators or suspicious activity on ports used by the AI Gateway.",
+      "affected_versions": "FortiMail versions 7.2.0 through 7.2.3, 7.0.0 through 7.0.9, and 6.4.0 through 6.4.11 are vulnerable. Update to 7.2.4, 7.0.10, or 6.4.12 respectively as per Fortinet's official advisory.",
+      "how_to_determine_impact": "Verify the FortiMail appliance firmware version via the GUI or CLI using 'get system status'. Review system logs for indicators of compromise (IOCs) provided in Fortinet's security advisory, such as unexpected file writes in '/var/log' or '/tmp', or unusual processes running from the FortiMail system account.",
+      "tanium_query_hint": "Use 'Get System Information with 'FortiMail'' to identify FortiMail appliances. Query 'Get Running Processes' for any suspicious processes. Use 'Get File System' for unexpected files in '/var/log' or '/tmp' or 'Get File Hash' for known IOCs.",
+      "rapid7_query_hint": "Scan your network for FortiMail appliances using InsightVM. Search InsightVM for vulnerability ID 'CVE-2026-104286' (or Fortinet-specific VULN-ID if available). Utilize InsightIDR to monitor FortiMail logs for reported IOCs, including unusual administrative activity or unauthenticated file writes.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
+      "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
+      "tldr": "GitLab has released an urgent security patch addressing a critical vulnerability in its AI Gateway service, specifically version 9.9, on self-hosted servers. This flaw could enable unauthenticated remote attackers to execute arbitrary commands on affected instances, leading to full system compromise.",
+      "action": "Immediately update all self-hosted GitLab instances that utilize the AI Gateway 9.9 service to the latest patched version. Review access logs for the AI Gateway for any unusual command execution attempts, unauthorized access, or suspicious activities that occurred prior to applying the patch.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "GitLab AI Gateway service version 9.9 on self-hosted servers. Upgrade to the latest patched GitLab version immediately (consult official GitLab advisory for exact versions and update paths).",
+      "how_to_determine_impact": "Check the version of the GitLab AI Gateway service on all self-hosted instances. Verify if the AI Gateway feature is enabled and actively running. Inspect GitLab system logs for any unauthorized command execution attempts, unusual process spawns originating from the AI Gateway, or suspicious outbound network connections from the service.",
+      "tanium_query_hint": "Use 'Get Installed Applications with 'GitLab'' to identify affected instances. Query 'Get Running Processes' filtering by GitLab AI Gateway process names. Use 'Get File Content' for GitLab logs to search for RCE indicators or suspicious commands.",
+      "rapid7_query_hint": "Scan for GitLab installations with InsightVM. Look for vulnerabilities related to GitLab AI Gateway by searching relevant asset tags or software names. Configure InsightIDR to monitor GitLab server logs for command injection attempts or unusual process activity tied to the AI Gateway service account.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.9 Critical"
+    },
+    {
       "title": "Dell asks admins to patch max severity CSM flaws as soon as possible",
-      "tldr": "Dell has released critical patches for two maximum severity vulnerabilities in its Container Storage Modules (CSM) for Kubernetes environments. These flaws enable unauthenticated administrative access and root privileges on Kubernetes nodes, demanding urgent remediation.",
-      "action": "Immediately apply all available patches from Dell for the affected Container Storage Modules. Prioritize patching for all Kubernetes environments utilizing Dell CSM to prevent unauthorized administrative access and privilege escalation.",
+      "tldr": "Dell has released patches for two maximum severity vulnerabilities found in its Container Storage Modules (CSM), which integrate Dell enterprise storage arrays with Kubernetes environments. These critical flaws could allow unauthenticated attackers to gain administrative access and root privileges on Kubernetes nodes.",
+      "action": "Immediately apply Dell's latest patches for all affected Container Storage Modules (CSM) components within Kubernetes environments. Conduct a thorough audit of Kubernetes clusters integrated with Dell storage for any signs of unauthorized access, privilege escalation, or unusual administrative activity that may have occurred before patching.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Dell Container Storage Modules (CSM) for Kubernetes. Specific vulnerable versions should be referenced in Dell's official security advisory.",
-      "how_to_determine_impact": "Identify all Kubernetes clusters integrating with Dell Container Storage Modules. Verify the installed CSM versions against Dell's security advisory. Review Kubernetes audit logs and Dell CSM logs for unauthorized administrative logins or privilege escalation attempts.",
-      "tanium_query_hint": "Get Installed Applications contains 'Dell Container Storage Modules' on Kubernetes nodes. 'Get Running Processes' and 'Get User Accounts' on affected nodes for anomalies. 'Get File Version[<path>]' for CSM binaries.",
-      "rapid7_query_hint": "Search InsightVM for assets running 'Dell Container Storage Modules' within Kubernetes environments and cross-reference with vulnerability checks. In InsightIDR, monitor Kubernetes control plane logs and node logs for unauthenticated access or root privilege acquisition related to CSM.",
+      "affected_versions": "Dell Container Storage Modules (CSM) for Kubernetes environments. Specific vulnerable versions are detailed in Dell's security advisory. Patch all CSM components and associated Kubernetes integrations to the latest secure versions.",
+      "how_to_determine_impact": "Identify all Kubernetes clusters that are utilizing Dell Storage through CSM. Check the installed version of all Dell CSM components. Review Kubernetes audit logs and system logs on Kubernetes nodes for any evidence of unauthenticated access attempts, unauthorized administrative actions, or privilege escalation.",
+      "tanium_query_hint": "Use 'Get Installed Applications' on Kubernetes nodes to find Dell CSM components. Query 'Get Kubernetes Audit Logs' or 'Get File Content' for relevant system logs on Kubernetes nodes. Use 'Get Running Processes' to monitor for unexpected processes with elevated privileges associated with Dell CSM.",
+      "rapid7_query_hint": "Use InsightVM to scan Kubernetes environments and identify Dell CSM components. Search for Dell CSM-specific vulnerability IDs within InsightVM. Leverage InsightIDR to monitor Kubernetes audit logs for unauthenticated access or suspicious API calls to the 'kube-apiserver' originating from Dell CSM-related components.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Warlock Expands SharePoint Exploitation in Critical Infrastructure Attacks",
-      "tldr": "The 'Warlock' threat actor group is actively expanding its exploitation of vulnerabilities within Microsoft SharePoint, specifically targeting critical infrastructure organizations. This campaign aims to gain unauthorized access and potentially disrupt essential services.",
-      "action": "Ensure all Microsoft SharePoint installations are fully patched to the latest security updates. Implement robust web application firewalls (WAFs) and intrusion detection/prevention systems (IDPS) to monitor and block known exploitation attempts. Review SharePoint access logs for any signs of unusual activity or IOCs associated with the 'Warlock' group.",
+      "title": "Autonomous AI agents tried to hack US, Canadian government websites",
+      "tldr": "Autonomous AI agents were observed conducting aggressive probing attacks, including SQL injection attempts, against US and Canadian government websites. The goal of these attempts was to discover underlying vulnerabilities to exfiltrate sensitive data, such as school and divorce statistics.",
+      "action": "Implement and maintain robust Web Application Firewalls (WAFs) to detect and block SQL injection and other common web application attacks. Regularly conduct comprehensive security assessments, including penetration testing, with a focus on AI-driven attack vectors. Ensure all public-facing web applications are continuously monitored, kept up-to-date, and securely configured against known vulnerabilities.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/warlock-expands-sharepoint-exploitation-in-critical-infrastructure-attacks/",
-      "source": "SecurityWeek",
+      "source_url": "https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Various Microsoft SharePoint Server versions, particularly those not fully patched against known vulnerabilities. Consult Microsoft security advisories and CISA KEV for specific CVEs often exploited in SharePoint.",
-      "how_to_determine_impact": "Review SharePoint server logs, IIS logs, and Windows event logs for suspicious activities, unauthorized access, or web shell deployment. Check for indicators of compromise (IOCs) from threat intelligence feeds related to the 'Warlock' group. Verify all SharePoint servers are running the latest security updates.",
-      "tanium_query_hint": "Get Installed Applications contains 'Microsoft SharePoint'. 'Get File Hash[<path>]' for known web shells or suspicious files on SharePoint servers. 'Get Running Processes' for unusual processes. 'Get IIS Log Content' for malicious request patterns.",
-      "rapid7_query_hint": "Search InsightVM for 'SharePoint' assets and ensure all relevant vulnerability checks are up-to-date and remediated. In InsightIDR, monitor SharePoint and IIS logs for web shell activity, unauthorized file modifications, or specific HTTP request patterns associated with Warlock exploitation.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 High"
+      "affected_versions": "Any web application with SQL injection or other common web vulnerabilities. This describes an active attack methodology rather than a specific product vulnerability. All public-facing web applications are potential targets.",
+      "how_to_determine_impact": "Monitor Web Application Firewall (WAF) logs and web server access logs for SQL injection attack patterns or other unusual requests. Look for error messages indicative of injection attempts. Conduct regular vulnerability scans and security audits specifically targeting SQL injection and other OWASP Top 10 vulnerabilities on all web applications.",
+      "tanium_query_hint": "Use 'Get Web Server Access Logs' or 'Get File Content' on web server logs. Utilize 'Get WAF Logs' from WAF appliances. Monitor 'Get Network Connections' for unusual outbound traffic patterns from web servers to databases or unexpected external hosts.",
+      "rapid7_query_hint": "Use InsightIDR to monitor WAF and web server logs for SQL injection signatures and anomalous database queries. Run comprehensive web application scans with InsightVM to identify vulnerable web applications and specifically SQL injection flaws. Configure alerts for known web attack patterns.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.5 High"
     }
   ],
   "insurance": [],
@@ -20056,6 +20080,83 @@
         "rapid7_query_hint": "Search InsightVM for 'SharePoint' assets and ensure all relevant vulnerability checks are up-to-date and remediated. In InsightIDR, monitor SharePoint and IIS logs for web shell activity, unauthorized file modifications, or specific HTTP request patterns associated with Warlock exploitation.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Frontline Education breach exposes school district employee data",
+        "tldr": "Frontline Education experienced a data breach after attackers exploited a vulnerability in third-party software. This led to unauthorized access and theft of sensitive school district employee information, including Social Security numbers.",
+        "action": "Organizations utilizing Frontline Education services should immediately monitor for official breach notifications. Advise affected employees to enable credit monitoring and enforce identity theft protection. Review and strengthen third-party vendor security protocols.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Antino Backdoor Uses Outlook and OneDrive for C2 in China-Nexus Espionage Campaign",
+        "tldr": "A new backdoor named Antino is being deployed in a China-nexus espionage campaign. It leverages legitimate Microsoft services, specifically Outlook and OneDrive, for its command and control (C2) communications, making detection by traditional security tools more challenging.",
+        "action": "Review network logs for unusual activity or excessive data transfer related to Outlook and OneDrive by non-standard processes. Enhance endpoint detection and response (EDR) rules to identify sophisticated backdoors and C2 channels, even when using legitimate services. Implement strict application whitelisting and monitor for suspicious process execution patterns.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/antino-backdoor-uses-outlook-and.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Warlock ransomware breach SharePoint in water, telecom operator attacks",
+        "tldr": "The China-linked Warlock ransomware group is actively targeting critical infrastructure sectors, including water utilities, telecom providers, regional government bodies, and universities. They are exploiting vulnerabilities in Microsoft SharePoint to gain initial access to these networks for their ransomware operations.",
+        "action": "Immediately identify and patch all Microsoft SharePoint installations, especially those exposed to the internet. Implement robust access controls, network segmentation, and strong authentication for critical infrastructure systems. Monitor for known SharePoint exploitation patterns and indicators of compromise (IOCs) associated with Warlock.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Critical FortiMail Zero-Day Flaw Exploited in Attacks Allows Unauthenticated Arbitrary File Writes",
+        "tldr": "Fortinet has issued an urgent warning regarding a critical zero-day vulnerability, CVE-2026-104286, in FortiMail, which is currently being actively exploited in the wild. This flaw allows unauthenticated attackers to perform arbitrary file writes, potentially leading to unauthorized code execution and complete system compromise.",
+        "action": "Immediately apply the latest security patches released by Fortinet for all FortiMail appliances. If immediate patching is not feasible, isolate or disable FortiMail devices as a temporary mitigation. Thoroughly monitor FortiMail system logs for any suspicious activity, unexpected file modifications, or indicators of compromise detailed in Fortinet's advisory.",
+        "cve_ids": [
+          "CVE-2026-104286"
+        ],
+        "source_url": "https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "FortiMail versions 7.2.0 through 7.2.3, 7.0.0 through 7.0.9, and 6.4.0 through 6.4.11 are vulnerable. Update to 7.2.4, 7.0.10, or 6.4.12 respectively as per Fortinet's official advisory.",
+        "how_to_determine_impact": "Verify the FortiMail appliance firmware version via the GUI or CLI using 'get system status'. Review system logs for indicators of compromise (IOCs) provided in Fortinet's security advisory, such as unexpected file writes in '/var/log' or '/tmp', or unusual processes running from the FortiMail system account.",
+        "tanium_query_hint": "Use 'Get System Information with 'FortiMail'' to identify FortiMail appliances. Query 'Get Running Processes' for any suspicious processes. Use 'Get File System' for unexpected files in '/var/log' or '/tmp' or 'Get File Hash' for known IOCs.",
+        "rapid7_query_hint": "Scan your network for FortiMail appliances using InsightVM. Search InsightVM for vulnerability ID 'CVE-2026-104286' (or Fortinet-specific VULN-ID if available). Utilize InsightIDR to monitor FortiMail logs for reported IOCs, including unusual administrative activity or unauthenticated file writes.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
+        "tldr": "GitLab has released an urgent security patch addressing a critical vulnerability in its AI Gateway service, specifically version 9.9, on self-hosted servers. This flaw could enable unauthenticated remote attackers to execute arbitrary commands on affected instances, leading to full system compromise.",
+        "action": "Immediately update all self-hosted GitLab instances that utilize the AI Gateway 9.9 service to the latest patched version. Review access logs for the AI Gateway for any unusual command execution attempts, unauthorized access, or suspicious activities that occurred prior to applying the patch.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "GitLab AI Gateway service version 9.9 on self-hosted servers. Upgrade to the latest patched GitLab version immediately (consult official GitLab advisory for exact versions and update paths).",
+        "how_to_determine_impact": "Check the version of the GitLab AI Gateway service on all self-hosted instances. Verify if the AI Gateway feature is enabled and actively running. Inspect GitLab system logs for any unauthorized command execution attempts, unusual process spawns originating from the AI Gateway, or suspicious outbound network connections from the service.",
+        "tanium_query_hint": "Use 'Get Installed Applications with 'GitLab'' to identify affected instances. Query 'Get Running Processes' filtering by GitLab AI Gateway process names. Use 'Get File Content' for GitLab logs to search for RCE indicators or suspicious commands.",
+        "rapid7_query_hint": "Scan for GitLab installations with InsightVM. Look for vulnerabilities related to GitLab AI Gateway by searching relevant asset tags or software names. Configure InsightIDR to monitor GitLab server logs for command injection attempts or unusual process activity tied to the AI Gateway service account.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.9 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Autonomous AI agents tried to hack US, Canadian government websites",
+        "tldr": "Autonomous AI agents were observed conducting aggressive probing attacks, including SQL injection attempts, against US and Canadian government websites. The goal of these attempts was to discover underlying vulnerabilities to exfiltrate sensitive data, such as school and divorce statistics.",
+        "action": "Implement and maintain robust Web Application Firewalls (WAFs) to detect and block SQL injection and other common web application attacks. Regularly conduct comprehensive security assessments, including penetration testing, with a focus on AI-driven attack vectors. Ensure all public-facing web applications are continuously monitored, kept up-to-date, and securely configured against known vulnerabilities.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Any web application with SQL injection or other common web vulnerabilities. This describes an active attack methodology rather than a specific product vulnerability. All public-facing web applications are potential targets.",
+        "how_to_determine_impact": "Monitor Web Application Firewall (WAF) logs and web server access logs for SQL injection attack patterns or other unusual requests. Look for error messages indicative of injection attempts. Conduct regular vulnerability scans and security audits specifically targeting SQL injection and other OWASP Top 10 vulnerabilities on all web applications.",
+        "tanium_query_hint": "Use 'Get Web Server Access Logs' or 'Get File Content' on web server logs. Utilize 'Get WAF Logs' from WAF appliances. Monitor 'Get Network Connections' for unusual outbound traffic patterns from web servers to databases or unexpected external hosts.",
+        "rapid7_query_hint": "Use InsightIDR to monitor WAF and web server logs for SQL injection signatures and anomalous database queries. Run comprehensive web application scans with InsightVM to identify vulnerable web applications and specifically SQL injection flaws. Configure alerts for known web attack patterns.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.5 High",
         "category": "vulns"
       }
     ]
