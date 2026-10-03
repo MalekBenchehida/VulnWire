@@ -2,129 +2,112 @@
   "breaches": [
     {
       "title": "Danish university DTU breach exposes data of up to 200,000 people",
-      "tldr": "The Technical University of Denmark (DTU) experienced a data breach where hackers accessed its identity and access management system. This incident may have exposed personal information belonging to up to 200,000 users.",
-      "action": "If affiliated with DTU, be vigilant for phishing attempts and monitor personal accounts for suspicious activity. Organizations should review access management logs for unusual activity if similar systems are in use.",
+      "tldr": "The Technical University of Denmark (DTU) suffered a data breach where hackers accessed its identity and access management system, leading to the exposure of data for up to 200,000 users.",
+      "action": "Investigate the scope of the breach, notify affected individuals, reset passwords for all potentially impacted accounts, and review identity and access management system security.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/danish-university-dtu-breach-exposes-data-of-up-to-200-000-people/",
       "source": "BleepingComputer"
     },
     {
       "title": "Frontline Education breach exposes school district employee data",
-      "tldr": "Frontline Education suffered a data breach due to a vulnerability in third-party software, leading to unauthorized access to their systems. Employee data, including Social Security numbers, of school district employees was stolen.",
-      "action": "Organizations using Frontline Education should promptly confirm if their data was impacted. Employees potentially affected should monitor credit reports and be aware of potential identity theft risks.",
+      "tldr": "Frontline Education, a service provider for school districts, experienced a data breach stemming from a vulnerability in third-party software. Attackers gained unauthorized access to systems and stole employee information, including Social Security numbers.",
+      "action": "Implement multi-factor authentication, monitor for unauthorized access, conduct a thorough forensic investigation, and apply patches to all third-party software.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/",
       "source": "BleepingComputer"
     },
     {
       "title": "Microsoft’s X account hacked in crypto pump-and-dump scheme",
-      "tldr": "The official Microsoft X (formerly Twitter) account, with over 13 million followers, was hijacked by unknown attackers. The attackers used the compromised account to promote a crypto token in what appeared to be a pump-and-dump scheme.",
-      "action": "Implement strong authentication (MFA) on all social media accounts, enforce strict access controls, and monitor for unauthorized posting. Users should be wary of cryptocurrency promotions, especially from compromised accounts.",
+      "tldr": "The official Microsoft account on X (formerly Twitter), with over 13 million followers, was hijacked by unknown attackers to promote a crypto token in a pump-and-dump scheme.",
+      "action": "Implement strong multi-factor authentication for all social media accounts, enforce strict access controls, and regularly review account security settings.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/microsofts-x-account-hacked-in-crypto-token-pump-and-dump-scheme/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "macOS Users Targeted by Fake Zoom Installer Carrying CloudSyncD Backdoor",
+      "tldr": "Malicious actors are distributing fake Zoom installers to macOS users, which secretly deploy the CloudSyncD backdoor, enabling persistent access and potential data exfiltration.",
+      "action": "Advise macOS users to only download software from official sources. Conduct endpoint scans for the CloudSyncD backdoor and monitor for suspicious network activity.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/macos-users-targeted-by-fake-zoom-installer-carrying-cloudsyncd-backdoor/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
-      "tldr": "The Warlock ransomware group is exploiting vulnerabilities in SharePoint to gain initial access, disable security tools, and deploy their ransomware. This activity has been observed targeting various organizations.",
-      "action": "Review SharePoint environments for signs of compromise, specifically looking for Warlock group activity or indicators of exploited SharePoint flaws. Ensure all SharePoint instances are fully patched.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Warlock ransomware breach SharePoint in water, telecom operator attacks",
-      "tldr": "The China-linked Warlock ransomware group exploited SharePoint vulnerabilities to gain initial access to target organizations, including a water utility, a telecom provider, a regional government body, and a university. This led to ransomware attacks.",
-      "action": "Proactively patch all SharePoint vulnerabilities, especially those related to initial access. Implement robust network segmentation and enhance monitoring for lateral movement, particularly for critical infrastructure.",
+      "tldr": "The China-linked Warlock ransomware group exploited SharePoint vulnerabilities to gain initial access to and attack a water utility, a telecom provider, a regional government body, and a university.",
+      "action": "Immediately patch all SharePoint servers, review access logs for unusual activity, and enhance network segmentation for critical infrastructure.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Warlock Expands SharePoint Exploitation in Critical Infrastructure Attacks",
-      "tldr": "The Warlock ransomware group is actively expanding its exploitation of SharePoint vulnerabilities to target critical infrastructure. This ongoing campaign poses a significant threat to essential services.",
-      "action": "Prioritize patching of all SharePoint vulnerabilities. Enhance threat detection capabilities to identify early signs of Warlock group activity or exploitation attempts, especially within critical infrastructure environments.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/warlock-expands-sharepoint-exploitation-in-critical-infrastructure-attacks/",
-      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
-      "tldr": "Fortinet has issued a warning about a critical FortiMail vulnerability, CVE-2026-104286, that is actively being exploited as a zero-day. This flaw allows attackers to execute unauthorized code or commands on vulnerable devices.",
-      "action": "Immediately apply all available patches and recommended mitigations from Fortinet for FortiMail (CVE-2026-104286). Conduct thorough forensic analysis if any FortiMail appliance shows signs of compromise.",
+      "tldr": "Fortinet has issued an urgent warning about CVE-2026-104286, a critical FortiMail vulnerability actively exploited as a zero-day to allow unauthenticated arbitrary code/command execution.",
+      "action": "Apply the emergency patch for FortiMail (CVE-2026-104286) immediately. Monitor for signs of compromise, especially unauthorized code execution.",
       "cve_ids": [
         "CVE-2026-104286"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "FortiMail, specific versions affected by CVE-2026-104286. Refer to Fortinet's official security advisory for exact ranges.",
-      "how_to_determine_impact": "Identify all FortiMail appliances. Check firmware/software versions against Fortinet's advisory for CVE-2026-104286. Look for indicators of compromise.",
-      "tanium_query_hint": "Get FortiMail Version from all machines. Cross-reference with Fortinet advisory for CVE-2026-104286.",
-      "rapid7_query_hint": "Search for vulnerability \"CVE-2026-104286\" in InsightVM. Filter assets by FortiMail appliance type and version.",
+      "affected_versions": "FortiMail. Specific vulnerable versions not explicitly detailed in the headline or description, but applies to unpatched versions.",
+      "how_to_determine_impact": "Check all FortiMail appliances for the presence of the patch. Monitor logs for suspicious file write activity or unauthorized access attempts.",
+      "tanium_query_hint": "Get Installed Applications contains \"FortiMail\" and check 'FortiMail Version' sensor data. Look for specific file hashes or process anomalies associated with CVE-2026-104286.",
+      "rapid7_query_hint": "Search for \"CVE-2026-104286\" in InsightVM. Use an InsightAgent query to check the version of FortiMail software on relevant assets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated based on zero-day, unauthenticated, arbitrary code execution)"
     },
     {
       "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
-      "tldr": "GitLab has released patches for a critical vulnerability (9.9 CVSS) in its AI Gateway service affecting self-hosted servers. This flaw allows unauthenticated attackers to execute arbitrary commands, posing a severe risk.",
-      "action": "Immediately apply the latest security patches provided by GitLab for the AI Gateway service. Review logs for any signs of compromise prior to patching.",
+      "tldr": "GitLab has patched a critical vulnerability (CVSS 9.9) in its AI Gateway service that could allow unauthenticated attackers to execute arbitrary commands on self-hosted instances. Immediate patching is advised.",
+      "action": "Immediately update GitLab AI Gateway to the patched version.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "GitLab AI Gateway, versions prior to the latest patch. Consult GitLab's security advisories for specific vulnerable ranges.",
-      "how_to_determine_impact": "Identify self-hosted GitLab instances utilizing the AI Gateway service. Verify the installed version against GitLab's security advisories.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches \"gitlab\" and \"AI Gateway\". Check version.",
-      "rapid7_query_hint": "Search for \"GitLab AI Gateway\" vulnerabilities in InsightVM. Filter assets by installed software version.",
+      "affected_versions": "GitLab AI Gateway. Specific vulnerable versions not explicitly detailed in the headline or description, but applies to unpatched self-hosted instances.",
+      "how_to_determine_impact": "Check if your GitLab instance is self-hosted and uses the AI Gateway service. Verify the installed version of the AI Gateway and ensure the patch is applied.",
+      "tanium_query_hint": "Get Installed Applications contains \"GitLab AI Gateway\" and Get 'GitLab Version' sensor data. Check file versions of AI Gateway components.",
+      "rapid7_query_hint": "Search for GitLab AI Gateway vulnerabilities in InsightVM. Filter assets by \"installed software\" containing \"GitLab AI Gateway\" and check for corresponding vulnerability detections.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.9 Critical"
     },
     {
       "title": "Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes",
-      "tldr": "Dell Container Storage Modules (CSM) contain critical vulnerabilities that allow unauthenticated attackers to gain administrative access and root privileges on Kubernetes nodes. Immediate patching is required.",
-      "action": "Immediately apply Dell's security patches for Container Storage Modules (CSM). Audit Kubernetes environments for any signs of unauthorized access or suspicious activity.",
+      "tldr": "Dell has patched two maximum severity vulnerabilities in its Container Storage Modules (CSM) for Kubernetes environments, which could allow unauthenticated attackers to gain administrative access and root privileges.",
+      "action": "Apply the latest patches for Dell Container Storage Modules (CSM) immediately to prevent unauthenticated administrative access and root compromise on Kubernetes nodes.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Dell Container Storage Modules (CSM), specific versions connecting Dell enterprise storage arrays to Kubernetes, prior to the latest patch. Consult Dell's advisories for exact vulnerable ranges.",
-      "how_to_determine_impact": "Identify Kubernetes environments utilizing Dell CSM. Verify the installed CSM version and consult Dell's advisories for exact vulnerable ranges.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches \"kubernetes\" and \"Dell CSM\". Check version.",
-      "rapid7_query_hint": "Search for \"Dell CSM\" vulnerabilities in InsightVM. Filter assets by installed software version.",
+      "affected_versions": "Dell Container Storage Modules (CSM) for Kubernetes. Specific vulnerable versions not explicitly detailed in the headline or description, but applies to unpatched versions.",
+      "how_to_determine_impact": "Identify systems running Dell Container Storage Modules in Kubernetes environments. Verify the installed version of Dell CSM and confirm patch application.",
+      "tanium_query_hint": "Get Installed Applications contains \"Dell Container Storage Modules\" and Get 'Dell CSM Version' sensor data.",
+      "rapid7_query_hint": "Search for Dell CSM vulnerabilities in InsightVM. Filter assets by \"installed software\" containing \"Dell Container Storage Modules\" within Kubernetes clusters and check for vulnerability detections.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated based on max severity, unauthenticated admin/root access)"
     },
     {
       "title": "Fortra Patches Critical Vulnerabilities in BoKS",
-      "tldr": "Fortra has released patches addressing critical vulnerabilities in its BoKS product. Users are urged to apply these updates promptly to protect against potential exploitation.",
-      "action": "Review Fortra's security advisories for BoKS and apply all recommended critical patches without delay.",
+      "tldr": "Fortra has released patches for critical vulnerabilities in its BoKS product, which is used for privileged access management. Customers are urged to update promptly to prevent potential compromise of privileged accounts.",
+      "action": "Apply the latest patches for Fortra BoKS immediately to mitigate critical vulnerabilities.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/fortra-patches-critical-vulnerabilities-in-boks/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Fortra BoKS, specific versions prior to the latest patch. Consult Fortra's security advisories for exact vulnerable ranges.",
-      "how_to_determine_impact": "Identify all instances of Fortra BoKS in the environment. Verify current versions against Fortra's security advisories.",
-      "tanium_query_hint": "Get Installed Applications from all machines with \"Fortra BoKS\". Check version and compare to vendor advisory.",
-      "rapid7_query_hint": "Search for \"Fortra BoKS\" vulnerabilities in InsightVM. Filter by asset and version.",
+      "affected_versions": "Fortra BoKS. Specific vulnerable versions not explicitly detailed in the headline or description, but applies to unpatched versions.",
+      "how_to_determine_impact": "Identify all instances of Fortra BoKS within the environment. Verify the installed version and confirm patch application.",
+      "tanium_query_hint": "Get Installed Applications contains \"Fortra BoKS\" and Get 'Fortra BoKS Version' sensor data.",
+      "rapid7_query_hint": "Search for Fortra BoKS vulnerabilities in InsightVM. Filter assets by \"installed software\" containing \"Fortra BoKS\" and check for corresponding vulnerability detections.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.0 Critical (Estimated based on \"Critical Vulnerabilities\" in a privileged access management system)"
     }
   ],
-  "insurance": [
-    {
-      "title": "US sanctions Tren de Aragua gang members in ATM hacks crackdown",
-      "tldr": "The U.S. Treasury Department sanctioned eight members of the Venezuelan Tren de Aragua (TdA) gang for their involvement in ATM jackpotting attacks, which have stolen millions of dollars across the United States. This action aims to disrupt their financial operations.",
-      "action": "Financial institutions and ATM operators should enhance their physical and digital security measures against ATM jackpotting. All organizations should understand the implications of interacting with sanctioned entities.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/us-sanctions-tren-de-aragua-members-in-atm-jackpotting-crackdown/",
-      "source": "BleepingComputer"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -20333,6 +20316,15 @@
         "source_url": "https://www.bleepingcomputer.com/news/security/us-sanctions-tren-de-aragua-members-in-atm-jackpotting-crackdown/",
         "source": "BleepingComputer",
         "category": "insurance"
+      },
+      {
+        "title": "macOS Users Targeted by Fake Zoom Installer Carrying CloudSyncD Backdoor",
+        "tldr": "Malicious actors are distributing fake Zoom installers to macOS users, which secretly deploy the CloudSyncD backdoor, enabling persistent access and potential data exfiltration.",
+        "action": "Advise macOS users to only download software from official sources. Conduct endpoint scans for the CloudSyncD backdoor and monitor for suspicious network activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/macos-users-targeted-by-fake-zoom-installer-carrying-cloudsyncd-backdoor/",
+        "source": "SecurityWeek",
+        "category": "breaches"
       }
     ]
   }
