@@ -2,42 +2,34 @@
   "breaches": [
     {
       "title": "Danish university DTU breach exposes data of up to 200,000 people",
-      "tldr": "The Technical University of Denmark (DTU) suffered a data breach where hackers accessed its identity and access management system, leading to the exposure of data for up to 200,000 users.",
-      "action": "Investigate the scope of the breach, notify affected individuals, reset passwords for all potentially impacted accounts, and review identity and access management system security.",
+      "tldr": "The Technical University of Denmark (DTU) experienced a data breach where hackers accessed its identity and access management system, downloading a large amount of data belonging to up to 200,000 users. This incident involved a significant exposure of personal information.",
+      "action": "Organizations should review their identity and access management systems for vulnerabilities, strengthen authentication mechanisms, and implement robust logging and monitoring to detect unauthorized data access. Users potentially affected should be notified and advised to change passwords.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/danish-university-dtu-breach-exposes-data-of-up-to-200-000-people/",
       "source": "BleepingComputer"
     },
     {
       "title": "Frontline Education breach exposes school district employee data",
-      "tldr": "Frontline Education, a service provider for school districts, experienced a data breach stemming from a vulnerability in third-party software. Attackers gained unauthorized access to systems and stole employee information, including Social Security numbers.",
-      "action": "Implement multi-factor authentication, monitor for unauthorized access, conduct a thorough forensic investigation, and apply patches to all third-party software.",
+      "tldr": "Frontline Education, a service provider for school districts, suffered a data breach due to a vulnerability in third-party software. Attackers gained unauthorized access to systems and stole employee information, including Social Security numbers, affecting school district employees.",
+      "action": "Organizations using third-party software should ensure their vendors have robust security programs and perform due diligence. Affected individuals should monitor credit reports and be vigilant against identity theft. Implement software supply chain risk management.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/",
       "source": "BleepingComputer"
     },
     {
       "title": "Microsoft’s X account hacked in crypto pump-and-dump scheme",
-      "tldr": "The official Microsoft account on X (formerly Twitter), with over 13 million followers, was hijacked by unknown attackers to promote a crypto token in a pump-and-dump scheme.",
-      "action": "Implement strong multi-factor authentication for all social media accounts, enforce strict access controls, and regularly review account security settings.",
+      "tldr": "Unknown attackers hijacked the official Microsoft account on X (formerly Twitter) to promote a crypto token in a pump-and-dump scheme. This incident demonstrates a high-profile social media account takeover.",
+      "action": "Implement strong multi-factor authentication (MFA) for all social media accounts, review access logs for suspicious activity, and regularly audit privileged accounts. Educate staff on phishing and social engineering tactics.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/microsofts-x-account-hacked-in-crypto-token-pump-and-dump-scheme/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "macOS Users Targeted by Fake Zoom Installer Carrying CloudSyncD Backdoor",
-      "tldr": "Malicious actors are distributing fake Zoom installers to macOS users, which secretly deploy the CloudSyncD backdoor, enabling persistent access and potential data exfiltration.",
-      "action": "Advise macOS users to only download software from official sources. Conduct endpoint scans for the CloudSyncD backdoor and monitor for suspicious network activity.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/macos-users-targeted-by-fake-zoom-installer-carrying-cloudsyncd-backdoor/",
-      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Warlock ransomware breach SharePoint in water, telecom operator attacks",
-      "tldr": "The China-linked Warlock ransomware group exploited SharePoint vulnerabilities to gain initial access to and attack a water utility, a telecom provider, a regional government body, and a university.",
-      "action": "Immediately patch all SharePoint servers, review access logs for unusual activity, and enhance network segmentation for critical infrastructure.",
+      "tldr": "The China-linked Warlock ransomware group is exploiting SharePoint vulnerabilities to gain initial access, targeting critical infrastructure sectors including a water utility, a telecom provider, a regional government, and a university. This campaign involves deploying ransomware after initial breach.",
+      "action": "Immediately patch all SharePoint installations, especially those exposed to the internet. Implement robust network segmentation and multi-factor authentication (MFA) to prevent lateral movement and unauthorized access. Review all critical infrastructure systems for potential compromise.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/",
       "source": "BleepingComputer"
@@ -45,66 +37,64 @@
   ],
   "vulns": [
     {
-      "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
-      "tldr": "Fortinet has issued an urgent warning about CVE-2026-104286, a critical FortiMail vulnerability actively exploited as a zero-day to allow unauthenticated arbitrary code/command execution.",
-      "action": "Apply the emergency patch for FortiMail (CVE-2026-104286) immediately. Monitor for signs of compromise, especially unauthorized code execution.",
-      "cve_ids": [
-        "CVE-2026-104286"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
+      "title": "GitLab warns of critical RCE vulnerability in AI Gateway service",
+      "tldr": "GitLab has issued an urgent warning for a critical Remote Code Execution (RCE) vulnerability in its AI Gateway service. This flaw allows attackers to run arbitrary commands on self-hosted GitLab instances, necessitating immediate patching to prevent full system compromise.",
+      "action": "Immediately apply the latest patches released by GitLab for the AI Gateway service. Review all self-hosted GitLab instances for indicators of compromise, particularly any unauthorized command execution or system changes.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/",
       "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Specific vulnerable versions are not provided in the article. Refer to the official GitLab security advisory for exact vulnerable versions and patch information.",
+      "how_to_determine_impact": "Identify all self-hosted GitLab instances that utilize the AI Gateway service. Check the installed AI Gateway version against the latest GitLab security advisory to determine if the system is vulnerable.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'GitLab AI Gateway' exists. Cross-reference found versions with the official GitLab security advisory.",
+      "rapid7_query_hint": "Use InsightVM to search for vulnerability IDs related to GitLab AI Gateway RCE. Alternatively, search assets for 'GitLab AI Gateway' software and manually verify versions against vendor advisory.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical"
+    },
+    {
+      "title": "Dell asks admins to patch max severity CSM flaws as soon as possible",
+      "tldr": "Dell has released patches for two maximum severity vulnerabilities in its Container Storage Modules (CSM) for Kubernetes. These flaws could allow unauthenticated attackers to gain administrative privileges and root access on affected Kubernetes nodes, urging immediate patching.",
+      "action": "Immediately apply the recommended patches from Dell for all Container Storage Modules deployments. Conduct an audit of Kubernetes environments utilizing Dell CSM to ensure no unauthorized access or privilege escalation has occurred on vulnerable systems.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "Specific vulnerable versions of Dell Container Storage Modules (CSM) are not provided in the article. Refer to Dell's official security advisory for exact vulnerable versions and patch information.",
+      "how_to_determine_impact": "Inventory all Kubernetes clusters that integrate with Dell Container Storage Modules. Verify the installed CSM version against Dell's official security bulletin to identify vulnerable deployments.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Dell Container Storage Modules' exists. Cross-reference found versions with Dell's official security advisory.",
+      "rapid7_query_hint": "Use InsightVM to search for vulnerability IDs related to Dell CSM. Alternatively, search assets for 'Dell Container Storage Modules' software and manually verify versions against vendor advisory.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical"
+    },
+    {
+      "title": "Exploited Fortinet FortiMail Zero-Day Calls for Urgent Action",
+      "tldr": "A critical zero-day vulnerability in FortiMail is being actively exploited in attacks, allowing unauthenticated attackers to write arbitrary files. This remote code execution (RCE) capable flaw necessitates urgent action and patching to mitigate immediate severe risk.",
+      "action": "Immediately apply the latest security patches for FortiMail. Given active exploitation, conduct a thorough forensic investigation for signs of compromise, including unauthorized file creation, unexpected system modifications, or unusual outbound connections from FortiMail appliances.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "FortiMail. Specific vulnerable versions not explicitly detailed in the headline or description, but applies to unpatched versions.",
-      "how_to_determine_impact": "Check all FortiMail appliances for the presence of the patch. Monitor logs for suspicious file write activity or unauthorized access attempts.",
-      "tanium_query_hint": "Get Installed Applications contains \"FortiMail\" and check 'FortiMail Version' sensor data. Look for specific file hashes or process anomalies associated with CVE-2026-104286.",
-      "rapid7_query_hint": "Search for \"CVE-2026-104286\" in InsightVM. Use an InsightAgent query to check the version of FortiMail software on relevant assets.",
+      "affected_versions": "Specific vulnerable versions of FortiMail are not provided in the article. Refer to the official Fortinet security advisory for exact vulnerable versions and patch information.",
+      "how_to_determine_impact": "Identify all FortiMail appliances and check their firmware versions. Refer to the official Fortinet security advisory for the exact affected versions and any provided indicators of compromise (IoCs).",
+      "tanium_query_hint": "Get 'FortiMail firmware version' from all FortiMail appliances. Compare against Fortinet's security advisory. Also, look for suspicious processes or file changes.",
+      "rapid7_query_hint": "Use InsightVM to search for vulnerability IDs related to FortiMail zero-day. Alternatively, search assets for 'FortiMail' software versions and compare to vendor advisory. Look for IoCs in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated based on zero-day, unauthenticated, arbitrary code execution)"
-    },
-    {
-      "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
-      "tldr": "GitLab has patched a critical vulnerability (CVSS 9.9) in its AI Gateway service that could allow unauthenticated attackers to execute arbitrary commands on self-hosted instances. Immediate patching is advised.",
-      "action": "Immediately update GitLab AI Gateway to the patched version.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "GitLab AI Gateway. Specific vulnerable versions not explicitly detailed in the headline or description, but applies to unpatched self-hosted instances.",
-      "how_to_determine_impact": "Check if your GitLab instance is self-hosted and uses the AI Gateway service. Verify the installed version of the AI Gateway and ensure the patch is applied.",
-      "tanium_query_hint": "Get Installed Applications contains \"GitLab AI Gateway\" and Get 'GitLab Version' sensor data. Check file versions of AI Gateway components.",
-      "rapid7_query_hint": "Search for GitLab AI Gateway vulnerabilities in InsightVM. Filter assets by \"installed software\" containing \"GitLab AI Gateway\" and check for corresponding vulnerability detections.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.9 Critical"
-    },
-    {
-      "title": "Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes",
-      "tldr": "Dell has patched two maximum severity vulnerabilities in its Container Storage Modules (CSM) for Kubernetes environments, which could allow unauthenticated attackers to gain administrative access and root privileges.",
-      "action": "Apply the latest patches for Dell Container Storage Modules (CSM) immediately to prevent unauthenticated administrative access and root compromise on Kubernetes nodes.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Dell Container Storage Modules (CSM) for Kubernetes. Specific vulnerable versions not explicitly detailed in the headline or description, but applies to unpatched versions.",
-      "how_to_determine_impact": "Identify systems running Dell Container Storage Modules in Kubernetes environments. Verify the installed version of Dell CSM and confirm patch application.",
-      "tanium_query_hint": "Get Installed Applications contains \"Dell Container Storage Modules\" and Get 'Dell CSM Version' sensor data.",
-      "rapid7_query_hint": "Search for Dell CSM vulnerabilities in InsightVM. Filter assets by \"installed software\" containing \"Dell Container Storage Modules\" within Kubernetes clusters and check for vulnerability detections.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated based on max severity, unauthenticated admin/root access)"
+      "cvss_score": "Critical"
     },
     {
       "title": "Fortra Patches Critical Vulnerabilities in BoKS",
-      "tldr": "Fortra has released patches for critical vulnerabilities in its BoKS product, which is used for privileged access management. Customers are urged to update promptly to prevent potential compromise of privileged accounts.",
-      "action": "Apply the latest patches for Fortra BoKS immediately to mitigate critical vulnerabilities.",
+      "tldr": "Fortra has released patches addressing critical vulnerabilities in its BoKS product. These flaws could lead to significant security bypasses or unauthorized access, requiring users to update promptly to secure their systems.",
+      "action": "Immediately update Fortra BoKS to the latest patched version. Review systems utilizing BoKS for any signs of compromise or unauthorized activity that may have occurred before the patch was applied.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/fortra-patches-critical-vulnerabilities-in-boks/",
       "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Fortra BoKS. Specific vulnerable versions not explicitly detailed in the headline or description, but applies to unpatched versions.",
-      "how_to_determine_impact": "Identify all instances of Fortra BoKS within the environment. Verify the installed version and confirm patch application.",
-      "tanium_query_hint": "Get Installed Applications contains \"Fortra BoKS\" and Get 'Fortra BoKS Version' sensor data.",
-      "rapid7_query_hint": "Search for Fortra BoKS vulnerabilities in InsightVM. Filter assets by \"installed software\" containing \"Fortra BoKS\" and check for corresponding vulnerability detections.",
+      "affected_versions": "Specific vulnerable versions of Fortra BoKS are not provided in the article. Refer to Fortra's official security advisory for exact vulnerable versions and patch information.",
+      "how_to_determine_impact": "Identify all systems running Fortra BoKS. Consult the official Fortra security advisory for specific affected versions and update instructions.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Fortra BoKS' exists. Cross-reference found versions with Fortra's official security advisory.",
+      "rapid7_query_hint": "Use InsightVM to search for vulnerability IDs related to Fortra BoKS. Alternatively, search assets for 'Fortra BoKS' software and manually verify versions against vendor advisory.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical (Estimated based on \"Critical Vulnerabilities\" in a privileged access management system)"
+      "cvss_score": "Critical"
     }
   ],
   "insurance": [],
@@ -20325,6 +20315,54 @@
         "source_url": "https://www.securityweek.com/macos-users-targeted-by-fake-zoom-installer-carrying-cloudsyncd-backdoor/",
         "source": "SecurityWeek",
         "category": "breaches"
+      },
+      {
+        "title": "GitLab warns of critical RCE vulnerability in AI Gateway service",
+        "tldr": "GitLab has issued an urgent warning for a critical Remote Code Execution (RCE) vulnerability in its AI Gateway service. This flaw allows attackers to run arbitrary commands on self-hosted GitLab instances, necessitating immediate patching to prevent full system compromise.",
+        "action": "Immediately apply the latest patches released by GitLab for the AI Gateway service. Review all self-hosted GitLab instances for indicators of compromise, particularly any unauthorized command execution or system changes.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Specific vulnerable versions are not provided in the article. Refer to the official GitLab security advisory for exact vulnerable versions and patch information.",
+        "how_to_determine_impact": "Identify all self-hosted GitLab instances that utilize the AI Gateway service. Check the installed AI Gateway version against the latest GitLab security advisory to determine if the system is vulnerable.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'GitLab AI Gateway' exists. Cross-reference found versions with the official GitLab security advisory.",
+        "rapid7_query_hint": "Use InsightVM to search for vulnerability IDs related to GitLab AI Gateway RCE. Alternatively, search assets for 'GitLab AI Gateway' software and manually verify versions against vendor advisory.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Dell asks admins to patch max severity CSM flaws as soon as possible",
+        "tldr": "Dell has released patches for two maximum severity vulnerabilities in its Container Storage Modules (CSM) for Kubernetes. These flaws could allow unauthenticated attackers to gain administrative privileges and root access on affected Kubernetes nodes, urging immediate patching.",
+        "action": "Immediately apply the recommended patches from Dell for all Container Storage Modules deployments. Conduct an audit of Kubernetes environments utilizing Dell CSM to ensure no unauthorized access or privilege escalation has occurred on vulnerable systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Specific vulnerable versions of Dell Container Storage Modules (CSM) are not provided in the article. Refer to Dell's official security advisory for exact vulnerable versions and patch information.",
+        "how_to_determine_impact": "Inventory all Kubernetes clusters that integrate with Dell Container Storage Modules. Verify the installed CSM version against Dell's official security bulletin to identify vulnerable deployments.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Dell Container Storage Modules' exists. Cross-reference found versions with Dell's official security advisory.",
+        "rapid7_query_hint": "Use InsightVM to search for vulnerability IDs related to Dell CSM. Alternatively, search assets for 'Dell Container Storage Modules' software and manually verify versions against vendor advisory.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Exploited Fortinet FortiMail Zero-Day Calls for Urgent Action",
+        "tldr": "A critical zero-day vulnerability in FortiMail is being actively exploited in attacks, allowing unauthenticated attackers to write arbitrary files. This remote code execution (RCE) capable flaw necessitates urgent action and patching to mitigate immediate severe risk.",
+        "action": "Immediately apply the latest security patches for FortiMail. Given active exploitation, conduct a thorough forensic investigation for signs of compromise, including unauthorized file creation, unexpected system modifications, or unusual outbound connections from FortiMail appliances.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Specific vulnerable versions of FortiMail are not provided in the article. Refer to the official Fortinet security advisory for exact vulnerable versions and patch information.",
+        "how_to_determine_impact": "Identify all FortiMail appliances and check their firmware versions. Refer to the official Fortinet security advisory for the exact affected versions and any provided indicators of compromise (IoCs).",
+        "tanium_query_hint": "Get 'FortiMail firmware version' from all FortiMail appliances. Compare against Fortinet's security advisory. Also, look for suspicious processes or file changes.",
+        "rapid7_query_hint": "Use InsightVM to search for vulnerability IDs related to FortiMail zero-day. Alternatively, search assets for 'FortiMail' software versions and compare to vendor advisory. Look for IoCs in InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical",
+        "category": "vulns"
       }
     ]
   }
