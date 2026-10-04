@@ -1,17 +1,25 @@
 {
   "breaches": [
     {
-      "title": "Danish university DTU breach exposes data of up to 200,000 people",
-      "tldr": "The Technical University of Denmark (DTU) suffered a data breach where hackers accessed its identity and access management system. A large amount of data belonging to up to 200,000 users may have been exposed as a result of this unauthorized access.",
-      "action": "Investigate identity and access management systems for unusual activity and implement stronger access controls. Review logs for unauthorized data exfiltration.",
+      "title": "ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members",
+      "tldr": "A suspected member of the ShinyHunters hacking group, known as \"Rey,\" has been detained in Jordan and is cooperating with the FBI to identify other members. ShinyHunters is notorious for large-scale data breaches, making this a significant development in cybercrime enforcement.",
+      "action": "Monitor for any new disclosures or warnings from law enforcement regarding further ShinyHunters activity or compromised data related to past breaches. Review previous breach notifications for any connections to the ShinyHunters group.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/danish-university-dtu-breach-exposes-data-of-to-200-000-people/",
+      "source_url": "https://thehackernews.com/2026/10/shinyhunters-suspect-rey-reportedly.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Danish university DTU breach exposes data of up to 200,000 people",
+      "tldr": "The Technical University of Denmark (DTU) suffered a data breach, exposing information for up to 200,000 users. Hackers accessed their identity and access management system, leading to the download of a large amount of personal data.",
+      "action": "Affected individuals should be immediately advised to reset their passwords and enable multi-factor authentication on all associated accounts. For the institution, a thorough forensic investigation is critical, along with reviewing IAM security and enhancing monitoring for unauthorized access.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/danish-university-dtu-breach-exposes-data-of-up-to-200-000-people/",
       "source": "BleepingComputer"
     },
     {
       "title": "Frontline Education breach exposes school district employee data",
-      "tldr": "Frontline Education experienced a data breach stemming from a vulnerability in third-party software. Attackers gained unauthorized access to its systems and stole employee information, including sensitive data like Social Security numbers, impacting school district employees.",
-      "action": "Review third-party software security, ensure robust vulnerability management, and audit systems for unauthorized access. Notify affected individuals promptly and offer credit monitoring.",
+      "tldr": "Frontline Education experienced a data breach where attackers exploited a vulnerability in third-party software to gain unauthorized access. This compromise resulted in the theft of school district employee information, including sensitive Social Security numbers.",
+      "action": "Affected school districts and employees should be promptly notified, and credit monitoring services should be offered. Organizations must identify and patch vulnerabilities in third-party software, alongside enhancing overall supply chain security assessments.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/frontline-education-data-breach-impacts-school-district-employees/",
       "source": "BleepingComputer"
@@ -20,8 +28,8 @@
   "ransomware": [
     {
       "title": "Warlock ransomware breach SharePoint in water, telecom operator attacks",
-      "tldr": "The China-linked Warlock ransomware group is actively exploiting SharePoint vulnerabilities to gain initial access to networks. They have targeted critical infrastructure, including a water utility, a telecom provider, a regional government body, and a university, deploying ransomware and potentially disabling security tools.",
-      "action": "Immediately patch all SharePoint installations to the latest versions. Implement network segmentation, strengthen endpoint detection and response, and monitor for unusual activity, especially around SharePoint servers.",
+      "tldr": "The China-linked Warlock ransomware group is actively exploiting SharePoint vulnerabilities to gain initial access in targeted attacks. These attacks have impacted critical infrastructure sectors including a water utility, a telecom provider, a regional government body, and a university.",
+      "action": "Immediately apply all available security updates for SharePoint environments, prioritizing known vulnerabilities. Enhance monitoring for unusual access patterns, particularly from external sources, and implement robust endpoint detection and response measures to counter ransomware activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/warlock-ransomware-breach-sharepoint-in-water-telecom-operator-attacks/",
       "source": "BleepingComputer"
@@ -29,64 +37,66 @@
   ],
   "vulns": [
     {
+      "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
+      "tldr": "GitLab has released a patch for a critical vulnerability (9.9 CVSS) in its AI Gateway service on self-hosted servers. This flaw allows unauthenticated attackers to execute arbitrary commands, posing a severe risk to affected systems.",
+      "action": "Immediately apply the latest security updates for GitLab AI Gateway on all self-hosted instances. Conduct a review of AI Gateway logs for any signs of compromise prior to patching.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "GitLab AI Gateway service, specific vulnerable versions are not detailed in the provided intelligence, but the patch addresses a critical RCE vulnerability.",
+      "how_to_determine_impact": "Identify all self-hosted instances of GitLab AI Gateway. Check the installed version against official GitLab security advisories to confirm vulnerability. Review system logs for unexpected processes or command execution originating from the AI Gateway service.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'GitLab AI Gateway'. Inspect server logs for unexpected process spawns or suspicious activity associated with the AI Gateway.",
+      "rapid7_query_hint": "Search for 'GitLab AI Gateway RCE' in InsightVM for relevant vulnerability checks. Use InsightAgent queries to identify installed GitLab AI Gateway versions on assets.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.9 Critical"
+    },
+    {
+      "title": "Dell CSM Flaws Enable Unauthenticated Admin Access and Root on Kubernetes Nodes",
+      "tldr": "Multiple critical vulnerabilities have been discovered in Dell Container Storage Module (CSM) that allow unauthenticated attackers to gain administrative access and even root privileges on Kubernetes nodes. This presents a severe security risk to affected containerized environments.",
+      "action": "Immediately update Dell Container Storage Module (CSM) to the latest patched version. Conduct an audit of Kubernetes environments for any signs of unauthorized access or privilege escalation attempts that may indicate prior compromise.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/dell-csm-flaws-enable-unauthenticated.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Dell Container Storage Module (CSM) - specific vulnerable versions are not detailed in the provided intelligence, but affect configurations allowing unauthenticated admin and root access on Kubernetes nodes.",
+      "how_to_determine_impact": "Identify all Kubernetes clusters utilizing Dell Container Storage Module (CSM). Check the installed CSM version against vendor security advisories. Review Kubernetes audit logs and node logs for unusual administrative access, unauthorized container deployments, or privilege escalation events.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'Dell Container Storage Module'. Check specific file versions, service configurations, or running processes related to Dell CSM on Kubernetes nodes.",
+      "rapid7_query_hint": "Search for 'Dell CSM Kubernetes' in InsightVM for relevant vulnerability checks. Use InsightAgent queries to identify Dell CSM installations and versions within Kubernetes environments. Review InsightIDR logs for anomalous activity on Kubernetes nodes.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated)"
+    },
+    {
+      "title": "Citrix patches NetScaler SAML zero-day exploited in attacks",
+      "tldr": "Citrix has released emergency updates for a new NetScaler denial-of-service vulnerability, CVE-2026-88779, which is being actively exploited as a zero-day. Researchers are also investigating whether it can be exploited for remote code execution, elevating the urgency of remediation.",
+      "action": "Immediately apply the emergency updates for Citrix NetScaler (ADC and Gateway) to patch CVE-2026-88779. Monitor NetScaler devices for any signs of compromise, unexpected reloads, denial-of-service attempts, or unusual SAML authentication activity.",
+      "cve_ids": [
+        "CVE-2026-88779"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Citrix NetScaler (ADC and Gateway) appliances vulnerable to CVE-2026-88779 related to SAML. Specific vulnerable versions should be referenced in the official Citrix security advisory, which should be consulted immediately.",
+      "how_to_determine_impact": "Verify the version of Citrix NetScaler ADC and Gateway appliances against the official Citrix advisory for CVE-2026-88779. Check for the presence of the patch. Review NetScaler logs for unexpected reloads, denial-of-service symptoms, or unusual SAML authentication events indicating exploitation.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'Citrix NetScaler'. Check running processes, configuration files, and system logs on NetScaler appliances for indicators of compromise related to CVE-2026-88779.",
+      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-88779' in InsightVM and perform authenticated scans on NetScaler appliances. Review InsightIDR logs for unusual access patterns, authentication anomalies, or DoS events originating from NetScaler devices.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated - based on zero-day exploitation and potential RCE, typical for such vulnerabilities)"
+    },
+    {
       "title": "Exploited Fortinet FortiMail Zero-Day Calls for Urgent Action",
-      "tldr": "A critical zero-day vulnerability in Fortinet FortiMail is being actively exploited in the wild. This vulnerability requires urgent attention and patching to prevent successful attacks.",
-      "action": "Immediately apply the latest security updates and patches for Fortinet FortiMail. Isolate vulnerable systems and monitor for any signs of compromise, especially for unusual outbound connections or process execution.",
+      "tldr": "An actively exploited zero-day vulnerability has been discovered in Fortinet FortiMail, demanding immediate action. This vulnerability poses a significant and current risk to organizations due to ongoing exploitation in the wild.",
+      "action": "Immediately apply all available patches and security updates for Fortinet FortiMail. Conduct a thorough review for any signs of compromise, unusual email activity, or unauthorized access within the FortiMail environment.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Fortinet FortiMail: specific vulnerable versions not detailed, but assumed to be recent due to 'zero-day'.",
-      "how_to_determine_impact": "Check FortiMail appliance logs for suspicious activity, unexpected restarts, or indicators of compromise. Verify current FortiMail firmware version against vendor advisories for affected versions.",
-      "tanium_query_hint": "Get FortiMail Version from all machines. Check running processes on FortiMail appliances for unusual binaries or commands. Look for outbound connections from FortiMail devices to unknown external IPs.",
-      "rapid7_query_hint": "Search for vulnerability ID related to 'FortiMail zero-day' once available. Filter assets by 'FortiMail' and check for unpatched versions. Use InsightAgent to look for suspicious process activity on connected servers/endpoints interacting with FortiMail.",
+      "affected_versions": "Fortinet FortiMail - specific vulnerable versions are not detailed in the provided intelligence, but affected by an actively exploited zero-day vulnerability. Refer to official Fortinet advisories for precise version information.",
+      "how_to_determine_impact": "Verify the version of Fortinet FortiMail installations against official Fortinet security advisories. Check for the presence of the latest patches. Review FortiMail system logs, mail logs, and network traffic for unusual activity, unauthorized access attempts, or evidence of exploitation.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'Fortinet FortiMail'. Inspect system logs, configuration files, and network traffic for indicators of compromise associated with this zero-day.",
+      "rapid7_query_hint": "Search for 'Fortinet FortiMail zero-day' in InsightVM. Perform authenticated scans on FortiMail appliances. Monitor InsightIDR for alerts related to FortiMail anomalies, suspicious logins, or outbound connections.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "GitLab warns of critical RCE vulnerability in AI Gateway service",
-      "tldr": "GitLab has issued a warning regarding a critical RCE (Remote Code Execution) vulnerability in its AI Gateway service. This flaw could allow attackers to execute arbitrary commands on self-hosted GitLab instances with the AI Gateway service enabled.",
-      "action": "Immediately patch all self-hosted GitLab instances running the AI Gateway service to the latest secure version. Review logs for any signs of exploitation and unauthorized command execution.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "GitLab AI Gateway service, specific versions not detailed but implies versions before the patch. The Hacker News mentions '9.9 AI Gateway Flaw', which suggests a specific release family, but no precise range.",
-      "how_to_determine_impact": "Identify all self-hosted GitLab instances. Check if the AI Gateway service is enabled and determine its exact version. Compare against official GitLab security advisories for the patched version.",
-      "tanium_query_hint": "Get Installed Applications from all machines matching 'GitLab'. Get GitLab Configuration showing AI Gateway service status. Check process lists for unusual activity on GitLab servers.",
-      "rapid7_query_hint": "Search for vulnerability ID related to 'GitLab AI Gateway RCE' once available. Filter assets by 'GitLab' and check for software versions. Look for signs of compromise on affected servers.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Dell asks admins to patch max severity CSM flaws as soon as possible",
-      "tldr": "Dell has released patches for two maximum severity vulnerabilities in its Container Storage Modules (CSM) for Kubernetes environments. These flaws could allow unauthenticated attackers to gain administrative access and achieve root privileges on Kubernetes nodes connected to Dell enterprise storage arrays.",
-      "action": "Apply Dell's latest patches for Container Storage Modules (CSM) immediately. Audit Kubernetes clusters and connected Dell storage for any signs of unauthorized access or privilege escalation.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-max-severity-dell-csm-flaws-give-hackers-admin-privileges/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Dell Container Storage Modules (CSM), specific versions not detailed, but requires patching 'as soon as possible'.",
-      "how_to_determine_impact": "Identify all Kubernetes environments utilizing Dell Container Storage Modules (CSM). Check the installed CSM version and verify if patches have been applied according to Dell's security advisories. Look for unauthenticated access or suspicious activity on Kubernetes nodes.",
-      "tanium_query_hint": "Get Installed Applications from all machines. Search for Dell Container Storage Modules or related components. Check processes and network connections on Kubernetes nodes for unusual activity indicative of root access.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to 'Dell CSM'. Filter assets by 'Kubernetes' and 'Dell Storage' components. Use InsightAgent to detect privilege escalation attempts or unauthorized root access on Linux nodes.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Fortra Patches Critical Vulnerabilities in BoKS",
-      "tldr": "Fortra has released patches addressing critical vulnerabilities in its BoKS (BeyondTrust Privilege Management for Unix & Linux) product. Users are advised to update their installations to mitigate potential security risks.",
-      "action": "Apply the latest security patches provided by Fortra for BoKS immediately. Review BoKS configurations and audit logs for any unusual activity or unauthorized privilege escalation attempts.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/fortra-patches-critical-vulnerabilities-in-boks/",
-      "source": "SecurityWeek",
-      "active_exploitation": false,
-      "affected_versions": "Fortra BoKS (BeyondTrust Privilege Management for Unix & Linux), specific versions not detailed. Consult Fortra's official security advisory for exact affected and patched versions.",
-      "how_to_determine_impact": "Identify all systems running Fortra BoKS. Check the installed BoKS version and compare it against the latest security advisories from Fortra/BeyondTrust. Verify patch status and ensure updates have been applied.",
-      "tanium_query_hint": "Get Installed Applications from all machines matching 'BoKS' or 'BeyondTrust Privilege Management'. Check the version numbers against known vulnerable ranges. Look for system changes or process anomalies on BoKS-managed systems.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to 'Fortra BoKS' or 'BeyondTrust Privilege Management'. Filter assets by relevant software installations and version numbers. Use InsightAgent to check for unauthorized access attempts or configuration changes.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.8 Critical (Estimated - based on active zero-day exploitation)"
     }
   ],
   "insurance": [],
@@ -20497,6 +20507,33 @@
         "rapid7_query_hint": "Search for vulnerability IDs related to 'Dell CSM'. Filter assets by 'Kubernetes' and 'Dell Storage' components. Use InsightAgent to detect privilege escalation attempts or unauthorized root access on Linux nodes.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members",
+        "tldr": "A suspected member of the ShinyHunters hacking group, known as \"Rey,\" has been detained in Jordan and is cooperating with the FBI to identify other members. ShinyHunters is notorious for large-scale data breaches, making this a significant development in cybercrime enforcement.",
+        "action": "Monitor for any new disclosures or warnings from law enforcement regarding further ShinyHunters activity or compromised data related to past breaches. Review previous breach notifications for any connections to the ShinyHunters group.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/shinyhunters-suspect-rey-reportedly.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Citrix patches NetScaler SAML zero-day exploited in attacks",
+        "tldr": "Citrix has released emergency updates for a new NetScaler denial-of-service vulnerability, CVE-2026-88779, which is being actively exploited as a zero-day. Researchers are also investigating whether it can be exploited for remote code execution, elevating the urgency of remediation.",
+        "action": "Immediately apply the emergency updates for Citrix NetScaler (ADC and Gateway) to patch CVE-2026-88779. Monitor NetScaler devices for any signs of compromise, unexpected reloads, denial-of-service attempts, or unusual SAML authentication activity.",
+        "cve_ids": [
+          "CVE-2026-88779"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/citrix-patches-netscaler-saml-zero-day-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Citrix NetScaler (ADC and Gateway) appliances vulnerable to CVE-2026-88779 related to SAML. Specific vulnerable versions should be referenced in the official Citrix security advisory, which should be consulted immediately.",
+        "how_to_determine_impact": "Verify the version of Citrix NetScaler ADC and Gateway appliances against the official Citrix advisory for CVE-2026-88779. Check for the presence of the patch. Review NetScaler logs for unexpected reloads, denial-of-service symptoms, or unusual SAML authentication events indicating exploitation.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'Citrix NetScaler'. Check running processes, configuration files, and system logs on NetScaler appliances for indicators of compromise related to CVE-2026-88779.",
+        "rapid7_query_hint": "Search for vulnerability 'CVE-2026-88779' in InsightVM and perform authenticated scans on NetScaler appliances. Review InsightIDR logs for unusual access patterns, authentication anomalies, or DoS events originating from NetScaler devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated - based on zero-day exploitation and potential RCE, typical for such vulnerabilities)",
         "category": "vulns"
       }
     ]
