@@ -1,113 +1,120 @@
 {
   "breaches": [
     {
-      "title": "Denmark Says Attackers Accessed CPR Data for 8.8 Million People via Company Account",
-      "tldr": "Attackers gained access to Denmark's Central Person Register (CPR) data, impacting 8.8 million people. The breach occurred via a compromised company account, allowing unauthorized access to sensitive personal information.",
-      "action": "Review access controls and audit logs for sensitive databases, especially those managed by third-party vendors or accessed via company accounts. Implement strong multi-factor authentication (MFA) and least privilege principles.",
+      "title": "FBI Removes Accenture Contractor After Patch Failure Led to ShinyHunters Breach",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/denmark-says-attackers-accessed-cpr.html",
+      "source_url": "https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html",
       "source": "The Hacker News"
     },
     {
       "title": "ASOS confirms data breach after “HACKED” in-app notifications",
-      "tldr": "UK fashion retailer ASOS confirmed a data breach after hackers sent unauthorized push notifications through its mobile app. Attackers claimed to have stolen customer data from the company's Snowflake environment, affecting customer privacy.",
-      "action": "If using Snowflake, review its security configurations, access logs, and implement strong access controls and monitoring. Investigate mobile app infrastructure for unauthorized access points or compromised notification services.",
+      "tldr": "UK fashion retailer ASOS confirmed a data breach Tuesday after hackers sent unauthorized push notifications through its mobile app while claiming to have stolen customer data from the company's Snowflake environment. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/asos-confirms-data-breach-after-hacked-in-app-notifications/",
       "source": "BleepingComputer"
     },
     {
       "title": "Nikkei discloses breaches of employees’ Microsoft, Google email accounts",
-      "tldr": "Japanese publishing giant Nikkei disclosed that unknown attackers breached two employee email accounts (Microsoft and Google). One compromised account was used to send thousands of phishing emails, indicating potential further compromise.",
-      "action": "Force password resets and review MFA configurations for all employee email accounts. Implement advanced threat protection for email, conduct phishing awareness training, and audit email logs for suspicious activity.",
+      "tldr": "Over the weekend, Japanese publishing giant Nikkei disclosed that unknown attackers recently breached two employee email accounts and used one to send thousands of phishing emails. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-breaches-of-employees-microsoft-google-email-accounts/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Fake ChatGPT, Gemini, and Claude Ad Portals Capture Credentials and MFA Codes",
-      "tldr": "A new campaign uses fake ChatGPT, Gemini, Claude, and Perplexity sites to steal login credentials and multi-factor authentication (MFA) codes. These sophisticated phishing sites target ad account managers using browser-in-browser attacks.",
-      "action": "Educate users, especially those managing ad accounts, about sophisticated phishing techniques. Implement browser extensions to detect phishing, and enforce hardware-based MFA where possible to mitigate MFA bypass.",
+      "title": "FBI Blames Contractor's Missed Patch for ShinyHunters Breach",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/fake-chatgpt-gemini-and-claude-ad.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.securityweek.com/fbi-blames-contractors-missed-patch-for-shinyhunters-breach/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "Engineer sentenced for locking over 3,000 devices on employer network",
-      "tldr": "A former core infrastructure engineer was sentenced for intentionally locking thousands of devices on his employer's network in a ransomware-style attack. This insider threat caused significant disruption and data inaccessibility across the company.",
-      "action": "Implement robust insider threat detection mechanisms, enforce strict access controls and least privilege for privileged accounts, and maintain regular backups with immutable storage. Review employee offboarding procedures carefully.",
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/engineer-sentenced-for-locking-thousands-of-devices-on-employer-network/",
-      "source": "BleepingComputer"
+      "source_url": "",
+      "source": "System"
     }
   ],
   "vulns": [
     {
-      "title": "Atlassian warns of critical file-access flaw in Jira, Confluence",
-      "tldr": "Atlassian has issued a warning about CVE-2026-21589, a critical arbitrary file-access vulnerability. This flaw affects multiple self-hosted Data Center products, including Confluence, Jira, and Bitbucket, potentially allowing unauthenticated attackers to read known files.",
-      "action": "Immediately apply the vendor-provided patches for affected Atlassian Data Center products. If immediate patching is not possible, implement all recommended workarounds provided by Atlassian.",
-      "cve_ids": [
-        "CVE-2026-21589"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/",
-      "source": "BleepingComputer",
+      "title": "Fake ChatGPT, Gemini, and Claude Ad Portals Capture Credentials and MFA Codes",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/fake-chatgpt-gemini-and-claude-ad.html",
+      "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Multiple Atlassian self-hosted Data Center products including Confluence, Jira, and Bitbucket. Specific vulnerable versions should be checked against Atlassian's official advisory for CVE-2026-21589.",
-      "how_to_determine_impact": "Identify all instances of Atlassian Data Center products (Confluence, Jira, Bitbucket, etc.) within your environment. Verify their current version numbers against the vendor's security advisory for CVE-2026-21589 to determine if they fall within the vulnerable range.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Jira' or 'Confluence' or 'Bitbucket'; Get File Version['/path/to/atlassian/install'] from all machines with Computer Name matches 'Jira' or 'Confluence' or 'Bitbucket'",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-21589' in InsightVM. Filter assets by installed software containing 'Atlassian Jira', 'Atlassian Confluence', or 'Atlassian Bitbucket' and check against reported vulnerable versions.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "Hackers exploit 32 zero-days on first day of Pwn2Own Ireland",
-      "tldr": "Security researchers successfully exploited 32 zero-day vulnerabilities on the first day of Pwn2Own Ireland 2026. This included hacking the Samsung Galaxy S26 twice, demonstrating significant security flaws across various products.",
-      "action": "Monitor vendor advisories closely for upcoming patches related to Pwn2Own disclosures. Prioritize patching for all affected products as soon as updates become available. Implement enhanced monitoring for systems potentially targeted by zero-day exploits.",
+      "title": "Linux Backdoors Impersonate Email Security Tools to Evade Detection in Korea and Taiwan",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-32-zero-days-on-first-day-of-pwn2own-ireland/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Multiple products demonstrated at Pwn2Own Ireland 2026, including Samsung Galaxy S26. Specific vulnerable versions will be disclosed by vendors post-Pwn2Own.",
-      "how_to_determine_impact": "Stay vigilant for vendor security advisories following Pwn2Own. Once specific products and versions are identified, perform an inventory of those assets in your environment to determine exposure.",
-      "tanium_query_hint": "Monitor vendor-specific sensors or 'Get Installed Applications' for mobile device management (MDM) or workstation agents that manage potentially affected products (e.g., Samsung devices or enterprise software demonstrated).",
-      "rapid7_query_hint": "Continuously monitor Rapid7's vulnerability database for new CVEs and exploit details released post-Pwn2Own. Filter asset inventory for known affected software/hardware models once advisories are public.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0+ Critical"
-    },
-    {
-      "title": "Ninja Forms plugin flaw exploited to hack WordPress sites",
-      "tldr": "Threat actors are actively exploiting stored cross-site scripting (XSS) vulnerabilities in WordPress plugins, specifically Ninja Forms and WPC Product Bundles for WooCommerce. Exploitation leads to installation of backdoors and creation of rogue admin accounts.",
-      "action": "Immediately update Ninja Forms and WPC Product Bundles for WooCommerce to their latest patched versions. Scan WordPress sites for indicators of compromise, including unauthorized admin accounts or backdoors.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Ninja Forms plugin and WPC Product Bundles for WooCommerce. Specific vulnerable versions should be checked against vendor advisories; update to the latest patched versions immediately.",
-      "how_to_determine_impact": "Check all WordPress installations for the presence and version of Ninja Forms and WPC Product Bundles for WooCommerce plugins. Examine WordPress user lists for newly created, unauthorized administrator accounts or unusual activity in plugin files.",
-      "tanium_query_hint": "Get Installed WordPress Plugins from all machines with Computer Name matches 'webserver' or 'wordpress'; Get File Hash['/path/to/wordpress/wp-content/plugins/ninja-forms'] or 'Get File Hash['/path/to/wordpress/wp-content/plugins/wpc-product-bundles'] for suspicious changes.",
-      "rapid7_query_hint": "Scan WordPress sites with a web application scanner. Search for installed plugins 'Ninja Forms' and 'WPC Product Bundles for WooCommerce' in InsightVM asset inventory. Review WordPress audit logs for new user creations or suspicious plugin modifications.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.8 High"
+      "source_url": "https://thehackernews.com/2026/10/linux-backdoors-impersonate-email.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
       "title": "LibreOffice and OpenOffice Flaws Let Malicious Spreadsheets Run Code Without Macro Warnings",
-      "tldr": "Vulnerabilities in LibreOffice and OpenOffice allow malicious spreadsheets to execute code without macro warnings. This bypasses security mechanisms, enabling attackers to run arbitrary code on a victim's system, likely via social engineering.",
-      "action": "Update LibreOffice and OpenOffice to their latest patched versions. Educate users about the risks of opening untrusted documents, even if macro warnings are absent, and implement endpoint detection and response (EDR) to monitor for suspicious process execution.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "LibreOffice and OpenOffice. Specific vulnerable versions should be checked against official vendor security advisories.",
-      "how_to_determine_impact": "Identify all workstations and servers with LibreOffice or OpenOffice installed. Check the installed version numbers against vendor advisories to determine if they are within the vulnerable range. Review security policies regarding macro execution.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'LibreOffice' or 'OpenOffice'; Monitor for suspicious process creation originating from Office applications.",
-      "rapid7_query_hint": "Scan endpoints for installed applications 'LibreOffice' and 'OpenOffice' and their versions in InsightVM. Use InsightIDR to monitor for suspicious process activity related to document execution.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.0 High"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Wikimedia Says OpenAI Agents Tried to Compromise Etherpad and Use Wiki Tools as Proxies",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/wikimedia-says-openai-agents-tried-to.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -20977,6 +20984,108 @@
         "rapid7_query_hint": "Scan endpoints for installed applications 'LibreOffice' and 'OpenOffice' and their versions in InsightVM. Use InsightIDR to monitor for suspicious process activity related to document execution.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.0 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-10-07": [
+      {
+        "title": "FBI Removes Accenture Contractor After Patch Failure Led to ShinyHunters Breach",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "ASOS confirms data breach after “HACKED” in-app notifications",
+        "tldr": "UK fashion retailer ASOS confirmed a data breach Tuesday after hackers sent unauthorized push notifications through its mobile app while claiming to have stolen customer data from the company's Snowflake environment. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/asos-confirms-data-breach-after-hacked-in-app-notifications/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Nikkei discloses breaches of employees’ Microsoft, Google email accounts",
+        "tldr": "Over the weekend, Japanese publishing giant Nikkei disclosed that unknown attackers recently breached two employee email accounts and used one to send thousands of phishing emails. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-breaches-of-employees-microsoft-google-email-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "FBI Blames Contractor's Missed Patch for ShinyHunters Breach",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/fbi-blames-contractors-missed-patch-for-shinyhunters-breach/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Fake ChatGPT, Gemini, and Claude Ad Portals Capture Credentials and MFA Codes",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/fake-chatgpt-gemini-and-claude-ad.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Linux Backdoors Impersonate Email Security Tools to Evade Detection in Korea and Taiwan",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/linux-backdoors-impersonate-email.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "LibreOffice and OpenOffice Flaws Let Malicious Spreadsheets Run Code Without Macro Warnings",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Wikimedia Says OpenAI Agents Tried to Compromise Etherpad and Use Wiki Tools as Proxies",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/wikimedia-says-openai-agents-tried-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
