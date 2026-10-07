@@ -1,126 +1,129 @@
 {
   "breaches": [
     {
+      "title": "Hackers hijack Google domains after breaching ccTLD registries",
+      "tldr": "Attackers compromised country-code top-level domain (ccTLD) registries (.gh, .sl, .as), manipulated DNS records, and obtained unauthorized HTTPS certificates for several Google domains, leading to domain hijacking. This supply chain attack highlights critical risks in DNS infrastructure and could lead to impersonation or service disruption.",
+      "action": "Monitor DNS records and Certificate Transparency logs for your organization's domains, especially those using ccTLDs. Implement DMARC, DKIM, SPF, and Certificate Authority Authorization (CAA) records for enhanced protection against domain spoofing and unauthorized certificate issuance.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-google-domains-after-breaching-cctld-registries/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "FBI Warns FortiBleed Remains Active After Amassing 86,644 Fortinet Device Credentials",
+      "tldr": "The FBI is warning of ongoing FortiBleed attacks, which have already amassed 86,644 Fortinet device credentials. Attackers are actively targeting exposed Fortinet FortiGate firewalls and SSL VPN gateways, locking out legitimate administrators and potentially gaining persistent unauthorized access.",
+      "action": "Immediately patch all Fortinet FortiGate firewalls and SSL VPN gateways to the latest versions. Reset all administrative credentials, enforce strong, unique passwords, and enable multi-factor authentication (MFA) for all accounts, especially those with access to Fortinet devices. Monitor network logs for unusual login attempts or suspicious activity.",
+      "cve_ids": [
+        "CVE-2023-27997",
+        "CVE-2023-24090"
+      ],
+      "source_url": "https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Georgia Power, Alabama Power Data Breach Hits 400,000 Accounts",
-      "tldr": "Georgia Power and Alabama Power have experienced a data breach impacting 400,000 customer accounts. Details on the specific type of data exposed are not immediately available, but such breaches commonly involve sensitive personal information.",
-      "action": "Review incident response plans and alert affected customers to monitor their accounts for suspicious activity. Advise customers to consider identity theft protection services and be vigilant against phishing attempts.",
+      "tldr": "A data breach at Georgia Power and Alabama Power has impacted approximately 400,000 customer accounts. While the specific method of attack is not detailed, the incident highlights the risk of sensitive customer information being exposed at utility providers and necessitates immediate customer notification.",
+      "action": "If your organization's data or customers could be impacted by third-party breaches, establish clear communication protocols. Implement enhanced third-party risk management and data protection controls. Affected customers should monitor their accounts for suspicious activity and be wary of phishing attempts.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/georgia-power-alabama-power-data-breach-hits-400000-accounts/",
       "source": "SecurityWeek"
     },
     {
-      "title": "ASOS Confirms Cyberattack, Data Breach",
-      "tldr": "Online fashion retailer ASOS has confirmed a cyberattack that resulted in a data breach. The company is currently investigating the full scope and nature of the attack, as well as the extent of data compromised.",
-      "action": "Monitor for further disclosures from ASOS regarding the cyberattack and its impact. Alert customers of potential phishing attempts targeting ASOS users and advise immediate password changes for their accounts.",
+      "title": "Advantest Discloses Data Breach Months After Ransomware Attack",
+      "tldr": "Advantest Corporation has disclosed a data breach, confirming that personally identifiable information (PII) was stolen during a ransomware attack that occurred earlier this year. The disclosure comes months after the initial attack, emphasizing the prolonged impact of ransomware incidents beyond initial encryption.",
+      "action": "Implement robust data loss prevention (DLP) strategies alongside ransomware protection. Ensure incident response plans account for data exfiltration scenarios. If Advantest is a vendor, assess the potential impact on your supply chain and request detailed incident reports and remediation actions.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/asos-confirms-cyberattack-data-breach/",
+      "source_url": "https://www.securityweek.com/advantest-discloses-data-breach-months-after-ransomware-attack/",
       "source": "SecurityWeek"
-    },
-    {
-      "title": "FBI Warns FortiBleed Remains Active After Amassing 86,644 Fortinet Device Credentials",
-      "tldr": "The FBI has issued a warning that the FortiBleed campaign continues to be active, having already amassed credentials for 86,644 Fortinet devices. This credential theft poses a significant risk for unauthorized access to critical network infrastructure.",
-      "action": "Immediately initiate a forced password reset for all Fortinet device administrator and user accounts. Implement multi-factor authentication (MFA) on all management interfaces and conduct a thorough review of logs for suspicious access attempts.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/fbi-warns-fortibleed-remains-active.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Advantest confirms personal information stolen in ransomware attack",
-      "tldr": "Semiconductor test equipment manufacturer Advantest has confirmed that personally identifiable information (PII) of affected individuals was stolen during a ransomware attack earlier this year. This signifies a double extortion tactic where data exfiltration precedes encryption.",
-      "action": "Organizations that are customers or partners of Advantest should monitor their networks for any unusual activity. Individuals impacted should be advised to enroll in identity theft protection services and remain vigilant against phishing scams.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/advantest-confirms-personal-information-stolen-in-ransomware-attack/",
-      "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
       "title": "Ransomware has a new target. Is your backup ready?",
-      "tldr": "Ransomware groups are increasingly focusing attacks on backup infrastructure to eliminate recovery options and intensify pressure on victims to pay ransoms. Kaseya emphasizes the critical need for isolated, immutable, and regularly tested backups that are difficult for attackers to reach.",
-      "action": "Review and harden all backup strategies to include isolated, immutable, and air-gapped backups. Regularly test recovery procedures to ensure data integrity and availability in the event of a ransomware attack.",
+      "tldr": "Ransomware groups are increasingly targeting backup infrastructure to eliminate recovery options and heighten pressure on victims to pay. This trend emphasizes the critical need for organizations to secure their backups effectively, as compromised backups can severely impede recovery efforts.",
+      "action": "Review and fortify your backup strategy. Ensure backups are isolated, immutable, and regularly tested for restorability. Implement robust access controls, multi-factor authentication, and network segmentation for backup systems to prevent attackers from reaching them.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ransomware-has-a-new-target-is-your-backup-ready/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Qilin Ransomware Suspect Arrested in Japan, Extradited to Germany",
-      "tldr": "A suspect allegedly linked to the Qilin ransomware group has been arrested in Japan and subsequently extradited to Germany. This represents a significant international law enforcement success against a prominent ransomware operation.",
-      "action": "Maintain vigilance against Qilin ransomware and its associated affiliates. Ensure robust security measures are in place, as other members of the group may still be active and capable of launching attacks.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/qilin-ransomware-suspect-arrested-in-japan-extradited-to-germany/",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "Advantest confirms personal information stolen in ransomware attack",
-      "tldr": "Semiconductor test equipment manufacturer Advantest has confirmed that personal information was stolen during a ransomware attack earlier this year. This incident exemplifies the double extortion tactic where threat actors exfiltrate sensitive data prior to encrypting systems, increasing leverage for ransom demands.",
-      "action": "Enhance data exfiltration detection capabilities and ensure robust Endpoint Detection and Response (EDR) and network monitoring solutions are in place. These tools should be configured to identify and alert on unusual data transfers or suspicious network activity.",
+      "tldr": "Advantest Corporation has confirmed that personally identifiable data was exposed and stolen as part of a ransomware attack earlier this year. This incident highlights that ransomware attacks often involve data exfiltration in addition to encryption, leading to data breaches and regulatory notification requirements.",
+      "action": "Implement robust data exfiltration detection mechanisms and ensure incident response plans account for data theft alongside system encryption in ransomware scenarios. Review third-party vendor security if Advantest is part of your supply chain to understand potential downstream impacts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/advantest-confirms-personal-information-stolen-in-ransomware-attack/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Qilin Ransomware Suspect Arrested in Japan, Extradited to Germany",
+      "tldr": "A suspect allegedly linked to the Qilin ransomware group has been arrested in Japan and subsequently extradited to Germany. This demonstrates ongoing international law enforcement efforts to disrupt and apprehend individuals involved in ransomware operations, providing some deterrence to threat actors.",
+      "action": "This is primarily informational for threat intelligence awareness. Organizations should continue to strengthen their defenses against ransomware attacks by implementing strong cybersecurity hygiene, as law enforcement actions aim to reduce, but not eliminate, the threat.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/qilin-ransomware-suspect-arrested-in-japan-extradited-to-germany/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "SonicWall Patches CVSS 10.0 Pre-Authentication SSRF Flaw in SMA1000 Appliances",
-      "tldr": "SonicWall has released urgent hotfixes to address a critical CVSS 10.0 pre-authentication Server-Side Request Forgery (SSRF) vulnerability in its SMA1000 series appliances. This flaw could allow an unauthenticated attacker to access internal network resources.",
-      "action": "Immediately apply the provided hotfixes or patches to all affected SonicWall SMA1000 appliances in your environment. If immediate patching is not feasible, implement all recommended workarounds provided by SonicWall without delay.",
+      "tldr": "SonicWall has released hotfixes for a critical CVSS 10.0 pre-authentication Server-Side Request Forgery (SSRF) vulnerability affecting SMA1000 series appliances. This flaw could allow unauthenticated attackers to remotely execute code or access sensitive internal network resources, posing a severe risk to affected organizations.",
+      "action": "Immediately apply the provided hotfixes to all SonicWall SMA1000 series appliances. Verify successful installation and closely monitor network and device logs for any suspicious activity pre- or post-patch, indicative of attempted or successful exploitation.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/sonicwall-patches-cvss-100-pre.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "SonicWall SMA1000 series appliances. Consult SonicWall's official advisory for specific vulnerable versions and patch details.",
-      "how_to_determine_impact": "Identify all deployed SonicWall SMA1000 appliances within your infrastructure. Verify their current firmware and hotfix versions against the latest official SonicWall security advisory to confirm vulnerability status.",
-      "tanium_query_hint": "Use 'Get Installed Applications contains \"SonicWall SMA1000\" from all machines' to locate appliances. Then, use 'Get File Version[\"path_to_firmware_file\"]' to determine the current patch level or 'Get OS Build Number' if applicable to appliance OS.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability IDs related to SonicWall SMA1000 SSRF. Deploy Insight Agent queries to check for specific firmware versions or configurations on appliances, if they are endpoint-like devices.",
+      "affected_versions": "SonicWall SMA1000 series appliances (consult vendor advisory for exact vulnerable versions/builds)",
+      "how_to_determine_impact": "Check the firmware version of your SonicWall SMA1000 appliances against the official SonicWall security advisory for specific vulnerable versions. Review device logs for unusual network requests or unauthorized access attempts.",
+      "tanium_query_hint": "Get SonicWall SMA1000 Appliance Firmware Version from all machines; Get Running Processes with Name 'SonicWall_SMA' (if applicable for software appliances).",
+      "rapid7_query_hint": "Vulnerability ID: SonicWall SMA1000 SSRF (if available) or use an asset search filter for 'Software Name: SonicWall SMA1000' and check installed versions against the vendor advisory.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
       "title": "Hackers exploit critical Atlassian flaw after public PoC release",
-      "tldr": "A critical vulnerability, CVE-2026-21589, affecting multiple Atlassian Data Center products including Jira, Confluence, and Bitbucket, is now being actively exploited in the wild. This unauthenticated arbitrary file access flaw poses a severe risk to affected installations.",
-      "action": "Immediately apply the available patches for CVE-2026-21589 to all affected Atlassian Data Center products. Prioritize remediation due to confirmed active exploitation and high potential for compromise.",
+      "tldr": "A critical vulnerability, CVE-2026-21589, affecting multiple Atlassian Data Center products including Jira, Confluence, and Bitbucket, is being actively exploited in the wild. Exploitation attempts were observed within hours of public details and a Proof-of-Concept (PoC) being released, allowing unauthenticated attackers to compromise systems.",
+      "action": "Immediately apply vendor patches to all affected Atlassian Data Center products (Jira, Confluence, Bitbucket). Conduct a thorough scan of systems for indicators of compromise (IOCs), newly created unauthorized user accounts, or unexpected process execution, and ensure strong access controls are in place.",
       "cve_ids": [
         "CVE-2026-21589"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Multiple Atlassian Data Center product families, including Jira, Confluence, and Bitbucket. Refer to official Atlassian advisories for exact vulnerable versions.",
-      "how_to_determine_impact": "Identify all self-hosted Atlassian Data Center products (e.g., Jira, Confluence, Bitbucket) running in your environment. Verify their current patch levels against Atlassian's security advisory for CVE-2026-21589.",
-      "tanium_query_hint": "Use 'Get Installed Applications contains \"Atlassian\" from all machines' to identify relevant systems. Then 'Get File Version[\"path_to_atlassian_binary\"]' to check for specific patch levels or 'Get Running Processes' to identify suspicious activity.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID \"CVE-2026-21589\". Utilize asset search to filter for Atlassian products and initiate a scan for this specific vulnerability. Monitor InsightIDR for signs of exploitation, such as unusual file access or process execution.",
+      "affected_versions": "Multiple Atlassian Data Center product families including Jira, Confluence, and Bitbucket (consult Atlassian's advisory for exact vulnerable versions)",
+      "how_to_determine_impact": "Check the installed version of your Atlassian Data Center products. Inspect application logs for unusual authentication attempts, newly created user accounts, or unexpected process execution following the vulnerability disclosure date.",
+      "tanium_query_hint": "Get Installed Applications contains 'Atlassian Jira' or 'Atlassian Confluence' or 'Atlassian Bitbucket' then filter by version. Also, 'Get Service Details matches 'jira|confluence|bitbucket'' to check running processes.",
+      "rapid7_query_hint": "Vulnerability ID: CVE-2026-21589 or use an asset search filter for 'Software Name: Atlassian Jira' OR 'Software Name: Atlassian Confluence' OR 'Software Name: Atlassian Bitbucket' and cross-reference with detected vulnerabilities.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Unpatched Critical LMCache Flaw Lets Unauthenticated Attackers Run Code Remotely",
+      "tldr": "A critical, unpatched vulnerability in LMCache allows unauthenticated attackers to achieve remote code execution (RCE). The lack of a patch means systems running LMCache are at immediate and severe risk of compromise without available mitigation from the vendor.",
+      "action": "Identify all systems running LMCache within your environment. If possible, disable or restrict network access to LMCache services until a patch is available. Implement strong network segmentation and continuously monitor for any unusual activity or connection attempts to LMCache services.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/unpatched-critical-lmcache-flaw-lets.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "LMCache (assume all currently deployed versions are vulnerable without a specific patch)",
+      "how_to_determine_impact": "Search for running processes or installed software named 'LMCache'. Inspect network configurations and firewall rules to determine if LMCache services are exposed to untrusted networks.",
+      "tanium_query_hint": "Get Running Processes contains 'LMCache' or Get Installed Applications contains 'LMCache'.",
+      "rapid7_query_hint": "Software Name: LMCache in asset search; investigate detected processes or services related to LMCache and check for network exposure.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Ninja Forms plugin flaw exploited to hack WordPress sites",
-      "tldr": "Stored cross-site scripting (XSS) vulnerabilities found in popular WordPress plugins, specifically Ninja Forms and WPC Product Bundles for WooCommerce, are being actively exploited by attackers. These exploits allow for the installation of backdoors and creation of rogue administrator accounts on compromised WordPress sites.",
-      "action": "Update Ninja Forms and WPC Product Bundles for WooCommerce plugins to their latest versions immediately. Conduct a thorough review of WordPress site logs for any suspicious administrator account creations or unauthorized file modifications.",
+      "tldr": "Stored cross-site scripting (XSS) vulnerabilities in the WordPress plugins Ninja Forms and WPC Product Bundles for WooCommerce are being actively exploited. Attackers are using these flaws to install backdoors and create rogue administrative accounts on compromised WordPress sites, leading to full site control.",
+      "action": "Immediately update Ninja Forms and WPC Product Bundles for WooCommerce plugins to their latest patched versions. Conduct a thorough audit of all WordPress user accounts for any unauthorized administrative users, and scan for any installed backdoors or malicious code within your WordPress file system.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ninja-forms-plugin-flaw-exploited-to-hack-wordpress-sites/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Ninja Forms plugin and WPC Product Bundles for WooCommerce plugin for WordPress. Consult specific plugin vendor advisories for vulnerable version ranges.",
-      "how_to_determine_impact": "Audit all installed WordPress plugins to identify instances of Ninja Forms and WPC Product Bundles. Verify if they are running vulnerable versions. Inspect WordPress user accounts for any newly created or unauthorized administrator accounts.",
-      "tanium_query_hint": "Use 'Get Installed WordPress Plugins' sensor to list plugins and their versions. Check for suspicious files or directories in 'wp-content/plugins/ninja-forms' or 'wp-content/plugins/wpc-product-bundles-for-woocommerce'.",
-      "rapid7_query_hint": "Perform web application scans on WordPress sites to identify known vulnerabilities in Ninja Forms and WPC Product Bundles. Search web server access logs for suspicious POST requests or attempts to inject XSS payloads.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "8.8 High"
-    },
-    {
-      "title": "Chrome 155 Update Patches 247 Vulnerabilities",
-      "tldr": "Google has released Chrome 155, which includes patches for a significant 247 vulnerabilities across various components. This major update addresses numerous potential security risks, and users are strongly advised to update promptly.",
-      "action": "Update all Google Chrome installations to version 155 or later immediately across all user endpoints. Ensure automatic updates are enabled to maintain continuous protection against newly discovered vulnerabilities.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/",
-      "source": "SecurityWeek",
-      "active_exploitation": false,
-      "affected_versions": "Google Chrome versions prior to 155.",
-      "how_to_determine_impact": "Check the version of Google Chrome installed on all user endpoints within your organization. Any version below 155 is considered vulnerable.",
-      "tanium_query_hint": "Use 'Get Installed Applications contains \"Google Chrome\" from all machines' to identify Chrome installations. Follow up with 'Get File Version[\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\"]' to determine the exact version number.",
-      "rapid7_query_hint": "Scan endpoints for installed software inventory and identify all instances of Google Chrome. Filter results for versions older than 155 to pinpoint vulnerable assets.",
+      "affected_versions": "Ninja Forms and WPC Product Bundles for WooCommerce WordPress plugins (consult vendor advisories for specific vulnerable version ranges)",
+      "how_to_determine_impact": "Check the installed versions of Ninja Forms and WPC Product Bundles for WooCommerce plugins on your WordPress sites. Inspect the WordPress database for suspicious users or entries. Review web server logs for unusual requests or malicious payload delivery.",
+      "tanium_query_hint": "Get WordPress Plugins and Versions from all machines; Get File Content['/path/to/wordpress/wp-content/plugins/ninja-forms/readme.txt'] for version verification.",
+      "rapid7_query_hint": "Search for 'Vulnerability ID: WordPress Ninja Forms XSS' or 'Vulnerability ID: WordPress WPC Product Bundles XSS'. Use asset search for 'Software Name: WordPress' and review detected plugin vulnerabilities.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "Varies, including Critical and High"
+      "cvss_score": "8.0 High"
     }
   ],
   "insurance": [],
@@ -21215,6 +21218,40 @@
         "rapid7_query_hint": "Scan endpoints for installed software inventory and identify all instances of Google Chrome. Filter results for versions older than 155 to pinpoint vulnerable assets.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "Varies, including Critical and High",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers hijack Google domains after breaching ccTLD registries",
+        "tldr": "Attackers compromised country-code top-level domain (ccTLD) registries (.gh, .sl, .as), manipulated DNS records, and obtained unauthorized HTTPS certificates for several Google domains, leading to domain hijacking. This supply chain attack highlights critical risks in DNS infrastructure and could lead to impersonation or service disruption.",
+        "action": "Monitor DNS records and Certificate Transparency logs for your organization's domains, especially those using ccTLDs. Implement DMARC, DKIM, SPF, and Certificate Authority Authorization (CAA) records for enhanced protection against domain spoofing and unauthorized certificate issuance.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-google-domains-after-breaching-cctld-registries/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Advantest Discloses Data Breach Months After Ransomware Attack",
+        "tldr": "Advantest Corporation has disclosed a data breach, confirming that personally identifiable information (PII) was stolen during a ransomware attack that occurred earlier this year. The disclosure comes months after the initial attack, emphasizing the prolonged impact of ransomware incidents beyond initial encryption.",
+        "action": "Implement robust data loss prevention (DLP) strategies alongside ransomware protection. Ensure incident response plans account for data exfiltration scenarios. If Advantest is a vendor, assess the potential impact on your supply chain and request detailed incident reports and remediation actions.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/advantest-discloses-data-breach-months-after-ransomware-attack/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Unpatched Critical LMCache Flaw Lets Unauthenticated Attackers Run Code Remotely",
+        "tldr": "A critical, unpatched vulnerability in LMCache allows unauthenticated attackers to achieve remote code execution (RCE). The lack of a patch means systems running LMCache are at immediate and severe risk of compromise without available mitigation from the vendor.",
+        "action": "Identify all systems running LMCache within your environment. If possible, disable or restrict network access to LMCache services until a patch is available. Implement strong network segmentation and continuously monitor for any unusual activity or connection attempts to LMCache services.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/unpatched-critical-lmcache-flaw-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "LMCache (assume all currently deployed versions are vulnerable without a specific patch)",
+        "how_to_determine_impact": "Search for running processes or installed software named 'LMCache'. Inspect network configurations and firewall rules to determine if LMCache services are exposed to untrusted networks.",
+        "tanium_query_hint": "Get Running Processes contains 'LMCache' or Get Installed Applications contains 'LMCache'.",
+        "rapid7_query_hint": "Software Name: LMCache in asset search; investigate detected processes or services related to LMCache and check for network exposure.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
