@@ -1,33 +1,33 @@
 {
   "breaches": [
     {
-      "title": "FBI arrests another suspected ShinyHunters hacker after agency breach",
-      "tldr": "The FBI has arrested another suspected member of the ShinyHunters extortion group, believed to be connected to a recent breach of FBI systems. This signifies ongoing law enforcement action against major hacking groups.",
-      "action": "Review internal security controls and incident response plans in light of persistent threats from extortion groups. Conduct proactive threat hunting for indicators associated with ShinyHunters.",
+      "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
+      "tldr": "Malicious GitHub Actions workflows are being planted in thousands of repositories to steal credentials. Attackers are leveraging compromised developer accounts or insecure configurations to inject these workflows, posing a significant risk of data theft and unauthorized access to various projects.",
+      "action": "Audit all GitHub repositories for suspicious workflow files, review recent workflow run logs for anomalous activity, and enforce stricter security measures for developer accounts, including multi-factor authentication (MFA) and secure secrets management.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-arrests-another-suspected-shinyhunters-hacker-after-agency-breach/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "FBI disrupts Chinese hacking tools used to breach critical infrastructure",
-      "tldr": "The FBI has disrupted Chinese state-sponsored hacking tools, MicroScan and FishHub, used by the Flax Typhoon group to breach critical infrastructure and other global organizations. Seven domains associated with these tools were seized.",
-      "action": "Organizations, especially those in critical infrastructure sectors, should conduct a thorough review for indicators of compromise related to Flax Typhoon, MicroScan, and FishHub. Implement stronger network segmentation and monitoring.",
+      "title": "FBI Arrests Another ShinyHunters Suspect Reportedly Involved in Its Jobs Portal Hack",
+      "tldr": "The FBI has arrested another individual suspected of being a core member of the ShinyHunters extortion group. This arrest is directly linked to their alleged involvement in the breach of the FBI's own jobs portal, signaling ongoing law enforcement efforts to dismantle the group and its operations.",
+      "action": "Continue to monitor for data breaches and leaks associated with the ShinyHunters group. Verify the integrity and security posture of all external-facing applications, particularly those handling sensitive personal or organizational information.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-disrupts-chinese-hacking-tools-used-to-breach-critical-infrastructure/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/10/fbi-arrests-another-shinyhunters.html",
+      "source": "The Hacker News"
     },
     {
       "title": "In Other News: AI Used in Korean Bank Breaches, Poem-Guided Botnet, Empire Admin Gets 40 Years",
-      "tldr": "AI has been implicated in recent Korean bank breaches, signifying an evolving threat landscape where advanced technologies are leveraged by attackers.",
-      "action": "Organizations should assess and enhance their defenses against AI-powered attacks, focusing on advanced detection and anomaly monitoring within financial systems and critical data stores.",
+      "tldr": "Artificial intelligence tools have reportedly been leveraged by attackers in recent bank breaches in Korea. This development indicates a worrying trend where threat actors are adopting advanced AI capabilities to enhance the sophistication and scale of their attacks, presenting new challenges for cybersecurity defenses.",
+      "action": "Evaluate existing security controls for their effectiveness against AI-powered attack vectors. Focus on implementing and enhancing anomaly detection and behavioral analysis systems capable of identifying sophisticated, automated threats that may bypass traditional defenses.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/in-other-news-ai-used-in-korean-bank-breaches-poem-guided-botnet-empire-admin-gets-40-years/",
       "source": "SecurityWeek"
     },
     {
       "title": "Google Domains Impacted by Recent ccTLD Hijacks",
-      "tldr": "Google Domains have been affected by recent country code Top-Level Domain (ccTLD) hijacks, indicating a vulnerability in domain registration and management systems that could lead to website redirection and associated breaches.",
-      "action": "Domain owners should immediately review their domain security settings, implement strong authentication (e.g., DNSSEC, 2FA for registrars), and monitor for unauthorized changes to their domain records.",
+      "tldr": "Google Domains has been affected by recent country code Top-Level Domain (ccTLD) hijacks. This incident highlights critical vulnerabilities in domain registration and management systems, potentially leading to unauthorized website defacement, phishing attacks, or service disruption for affected domains.",
+      "action": "Review and strengthen domain registration and DNS management security practices. Enforce strict authentication protocols for all domain-related operations and consider implementing DNSSEC to protect against domain hijacking and manipulation.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/google-domains-impacted-by-recent-cctld-domain-hijacks/",
       "source": "SecurityWeek"
@@ -36,8 +36,8 @@
   "ransomware": [
     {
       "title": "Germany arrests alleged core Qilin ransomware member after extradition",
-      "tldr": "Germany has arrested a Russian national, extradited from Japan, who is suspected of being a core member of the Qilin ransomware group. This marks a significant international law enforcement effort against ransomware operators.",
-      "action": "Continue to strengthen ransomware defenses, including robust backups, strong authentication, and regular vulnerability management, as law enforcement continues to target ransomware groups.",
+      "tldr": "German authorities have arrested a Russian national suspected of being a leading member of the Qilin ransomware group, following his extradition from Japan. This international law enforcement operation aims to significantly disrupt the infrastructure and operations of the prolific Qilin ransomware gang.",
+      "action": "Reinforce existing ransomware defenses, including robust backup and recovery strategies, stringent network segmentation, and advanced endpoint detection and response (EDR) solutions. Stay informed on the latest tactics, techniques, and procedures (TTPs) utilized by active ransomware groups like Qilin.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/germany-arrests-alleged-core-qilin-ransomware-member-after-extradition/",
       "source": "BleepingComputer"
@@ -45,68 +45,66 @@
   ],
   "vulns": [
     {
-      "title": "Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access",
-      "tldr": "A public working exploit is now available for a pre-authentication vulnerability in AnyDesk on Linux, allowing an attacker to achieve root access. This poses an immediate and severe risk to exposed Linux systems running AnyDesk.",
-      "action": "Immediately apply the latest security updates for AnyDesk on all Linux systems. If patching is not feasible, restrict network access to AnyDesk ports and services, or temporarily uninstall AnyDesk until updates can be applied.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "AnyDesk for Linux. Specific vulnerable versions should be confirmed with official AnyDesk security advisories. It is prudent to assume all unpatched Linux versions are at risk.",
-      "how_to_determine_impact": "Identify all Linux endpoints running AnyDesk. Verify the installed AnyDesk version against official vendor advisories. In the absence of specific version details, assume unpatched versions are vulnerable. Check for unexpected processes running with root privileges or unauthorized file modifications on AnyDesk servers.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to identify AnyDesk installations on Linux endpoints. For custom detection, query 'Get Running Processes' for AnyDesk-related processes (e.g., 'anydesk') and their command lines. Use 'Get File Version' for AnyDesk binaries located in common installation paths (e.g., /usr/bin/anydesk).",
-      "rapid7_query_hint": "Perform authenticated scans of Linux assets using InsightVM to detect AnyDesk installations and associated vulnerability IDs. Create custom queries in InsightIDR to monitor for suspicious process executions or network connections originating from AnyDesk processes on Linux systems.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated, pre-authentication RCE leading to root access)"
-    },
-    {
-      "title": "Attackers Exploit Unpatched AhsayCBS Flaws to Deploy Webshells, Mine Crypto",
-      "tldr": "Critical and medium-severity vulnerabilities in the AhsayCBS backup management platform are being actively exploited in the wild. Attackers are leveraging these flaws to deploy webshells for persistent access and XMRig cryptocurrency miners, sometimes disguised as legitimate software.",
-      "action": "Immediately patch all AhsayCBS installations to the latest secure version. Conduct an exhaustive scan for webshells, unauthorized processes (e.g., XMRig), and suspicious files on all AhsayCBS servers and any connected systems. Implement network segmentation for backup infrastructure.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "AhsayCBS backup management platform. Critical and medium-severity unpatched versions. Consult Ahsay's official security advisories for precise vulnerable version ranges.",
-      "how_to_determine_impact": "Identify all AhsayCBS servers in the environment. Verify their versions against official Ahsay security bulletins. Inspect web directories for suspicious files (webshells), monitor for unexpected high CPU usage, and check for unknown processes (e.g., 'xmrig.exe' or similar cryptominer executables) or processes disguised as legitimate software like 'Microsoft Edge'.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to locate AhsayCBS installations. For detection of exploitation, use 'Get Running Processes' and 'Get File Hash' for suspicious executables. Search common web directories for unusual '.php', '.asp', '.jsp' files. Monitor 'Get Network Connections' for unexpected outbound connections from backup servers.",
-      "rapid7_query_hint": "Conduct authenticated scans with InsightVM on all servers running AhsayCBS. Search for known vulnerability IDs related to AhsayCBS flaws. Use InsightIDR to monitor for process anomalies, high CPU usage patterns, suspicious file creations, and network connections indicative of cryptomining or webshell activity.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated, unpatched flaws with active exploitation for unauthorized access/resource usage)"
-    },
-    {
-      "title": "Citrix Patches Critical NetScaler Flaw That Could Enable RCE in SAML Deployments",
-      "tldr": "Citrix has released an urgent patch for a critical Remote Code Execution (RCE) vulnerability (likely CVE-2026-102255) affecting NetScaler ADC and NetScaler Gateway, especially in SAML deployments. Admins are strongly urged to patch immediately due to high risk.",
-      "action": "Immediately apply the latest security updates provided by Citrix for all NetScaler ADC and NetScaler Gateway appliances, prioritizing those configured with SAML. Review logs for any indicators of compromise if unable to patch promptly.",
-      "cve_ids": [
-        "CVE-2026-102255"
-      ],
-      "source_url": "https://thehackernews.com/2026/10/citrix-patches-critical-netscaler-flaw.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Citrix NetScaler ADC and NetScaler Gateway solutions, specifically impacting SAML deployments. Refer to Citrix security advisories (e.g., CTX583759 for CVE-2026-102255) for precise vulnerable versions and build numbers.",
-      "how_to_determine_impact": "Verify the installed firmware/software versions of all Citrix NetScaler ADC and Gateway appliances. Check configuration to see if SAML is enabled. Consult official Citrix advisories for specific vulnerable versions and any provided indicators of compromise (IoCs).",
-      "tanium_query_hint": "Utilize Tanium to identify NetScaler appliances using 'Get Hardware Information' or by querying network devices. For deeper checks, use 'Get File Version' on critical NetScaler binaries. Monitor 'Get Network Connections' for suspicious traffic to/from these appliances, and review logs for unusual SAML authentication attempts or signs of RCE.",
-      "rapid7_query_hint": "Perform authenticated scans of NetScaler appliances with InsightVM/Nexpose, specifically looking for vulnerability ID 'CVE-2026-102255' or other recent Citrix RCE flaws. Implement InsightIDR detections for anomalous behavior, failed authentication attempts, or unexpected command execution on NetScaler devices.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (explicitly critical RCE, urgent patching advised)"
-    },
-    {
       "title": "Max severity SonicWall SMA1000 flaw now exploited in attacks",
-      "tldr": "A maximum-severity vulnerability (CVE-2026-102255) in SonicWall SMA1000 appliances, for which a patch was released recently, is now actively being exploited in attacks. Immediate patching is imperative to prevent compromise.",
-      "action": "Immediately update all SonicWall SMA1000 appliances to the latest patched firmware. If patching was delayed, conduct an immediate forensic review of the appliance and associated logs for any signs of compromise.",
+      "tldr": "A maximum-severity vulnerability, CVE-2026-102255, in SonicWall SMA1000 appliances is actively being exploited in the wild. This critical flaw allows attackers to gain unauthorized access, posing an immediate and severe risk to affected organizations.",
+      "action": "Immediately patch all SonicWall SMA1000 appliances to the latest available firmware version to mitigate the actively exploited maximum-severity vulnerability. Verify system logs and network traffic for any signs of compromise or unusual activity.",
       "cve_ids": [
         "CVE-2026-102255"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SMA1000 appliances. Consult SonicWall's official security advisory for CVE-2026-102255 for the exact vulnerable firmware versions and recommended patched versions.",
-      "how_to_determine_impact": "Check the firmware version of all SonicWall SMA1000 appliances in your environment against the SonicWall advisory for CVE-2026-102255. Review system logs and network traffic for suspicious activity, unauthorized access attempts, or indicators of compromise if running a vulnerable version.",
-      "tanium_query_hint": "Use 'Get Hardware Information' or network device management tools to identify SonicWall SMA1000 appliances and their firmware versions. Monitor 'Get Network Connections' and 'Get Running Processes' on adjacent systems for anomalous activity originating from or targeting the SMA1000.",
-      "rapid7_query_hint": "Perform network scans with InsightVM/Nexpose targeting SonicWall SMA1000 appliances. Specifically search for vulnerability ID 'CVE-2026-102255'. Configure InsightIDR to alert on suspicious login attempts, configuration changes, or unusual traffic patterns associated with these devices.",
+      "affected_versions": "SonicWall SMA1000 appliances. Specific vulnerable versions were patched on Tuesday, three days prior to this report. Users should refer to official SonicWall advisories for exact version numbers and apply the latest update.",
+      "how_to_determine_impact": "Check SonicWall SMA1000 appliance firmware versions against the latest patched versions provided in SonicWall's official security advisory. Verify appliance logs for unusual access attempts, unexpected reboots, or configuration changes indicative of compromise.",
+      "tanium_query_hint": "Get Computer Name and OS Platform from all machines with Is SonicWall SMA1000 Appliance equals true and Firmware Version less than X.Y.Z. (Replace X.Y.Z with the latest safe version from SonicWall advisory).",
+      "rapid7_query_hint": "Search vulnerabilities by CVE ID 'CVE-2026-102255' in InsightVM. Filter assets by 'SonicWall SMA1000' and check for unpatched instances. Look for related network alerts in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (explicitly max severity, actively exploited)"
+      "cvss_score": "10.0 Critical"
+    },
+    {
+      "title": "Citrix warns admins to patch new NetScaler RCE flaw immediately",
+      "tldr": "Citrix has issued an urgent warning for administrators to immediately patch a new critical Remote Code Execution (RCE) vulnerability affecting NetScaler ADC networking appliances and NetScaler Gateway secure remote access solutions. This flaw could allow unauthenticated attackers to execute arbitrary code, posing a severe threat.",
+      "action": "Apply the latest security patches for NetScaler ADC and NetScaler Gateway products without delay. Prior to and after patching, conduct a thorough review of systems and logs for any indicators of compromise or suspicious activity.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/citrix-warns-admins-to-patch-new-netscaler-rce-flaw-immediately/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "NetScaler ADC networking appliances and NetScaler Gateway secure remote access solutions. Refer to official Citrix security advisories for specific vulnerable versions and update paths.",
+      "how_to_determine_impact": "Consult Citrix's official security advisory for the new RCE flaw (check recent releases). Identify all NetScaler ADC and Gateway instances and compare their installed versions with the advised patched versions.",
+      "tanium_query_hint": "Get Installed Applications containing 'NetScaler' and Version less than X.Y.Z (Replace X.Y.Z with the latest safe version from Citrix advisory).",
+      "rapid7_query_hint": "Search assets with 'NetScaler ADC' or 'NetScaler Gateway' and look for reported vulnerabilities related to the new RCE flaw. Reference official Citrix advisories for vulnerability IDs or descriptions.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access",
+      "tldr": "A working exploit has been publicly released for a pre-authentication vulnerability in AnyDesk for Linux, allowing attackers to gain root access. This critical flaw poses an extremely severe risk to Linux systems running AnyDesk, enabling complete system compromise without prior authentication.",
+      "action": "Immediately update AnyDesk on all Linux systems to the latest patched version available. If immediate patching is not feasible, restrict network access to AnyDesk services to only trusted sources as a temporary mitigation.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "AnyDesk for Linux versions vulnerable to pre-authentication root access. Users should update to the latest patched version available from AnyDesk's official website.",
+      "how_to_determine_impact": "Identify all Linux endpoints running AnyDesk. Verify the installed AnyDesk version against the official security advisory to determine if it is vulnerable. Look for unauthorized root access logs or suspicious processes on these systems.",
+      "tanium_query_hint": "Get Installed Applications containing 'AnyDesk' on machines with OS Platform containing 'Linux' and Version less than X.Y.Z (Replace X.Y.Z with the latest safe version from AnyDesk advisory).",
+      "rapid7_query_hint": "Search assets with 'AnyDesk' installed on 'Linux' operating systems. Filter vulnerabilities for 'AnyDesk Linux Root Access' or similar keywords. Monitor for anomalous activity on affected Linux hosts via InsightIDR.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Unpatched AhsayCBS Flaws Exploited to Deploy Webshells, Mine Crypto",
+      "tldr": "Threat actors are actively exploiting one critical and one medium-severity unpatched vulnerability in the AhsayCBS backup management platform. These exploits lead to the deployment of webshells for persistent access and cryptocurrency miners (e.g., XMRig), often disguised as legitimate software like Microsoft Edge.",
+      "action": "Isolate and patch all AhsayCBS instances immediately to the latest secure version. Conduct a thorough forensic analysis on affected systems for webshells and cryptocurrency miners. Review system and application logs for suspicious activity and unexpected processes.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "AhsayCBS backup management platform, specifically unpatched versions containing one critical and one medium-severity vulnerability. Refer to Ahsay's official advisories for specific vulnerable version ranges.",
+      "how_to_determine_impact": "Identify all servers running AhsayCBS. Check the installed version against Ahsay's latest security advisories. Perform scans for webshells (e.g., via file integrity monitoring, known webshell signatures) and cryptocurrency miners (e.g., unusual CPU usage, 'xmrig' processes/files) on affected servers.",
+      "tanium_query_hint": "Get Installed Applications containing 'AhsayCBS' and Version less than X.Y.Z (Replace X.Y.Z with the latest safe version from Ahsay advisory). Also, 'Get Running Processes containing 'xmrig' or 'msedge.exe' in suspicious paths on AhsayCBS hosts'.",
+      "rapid7_query_hint": "Search assets by 'AhsayCBS' and look for associated unpatched critical/medium vulnerabilities. Use InsightAgent queries to search for specific file hashes or process names (e.g., 'xmrig') on AhsayCBS servers. Review log data for webshell activity.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -21815,6 +21813,40 @@
         "rapid7_query_hint": "Perform network scans with InsightVM/Nexpose targeting SonicWall SMA1000 appliances. Specifically search for vulnerability ID 'CVE-2026-102255'. Configure InsightIDR to alert on suspicious login attempts, configuration changes, or unusual traffic patterns associated with these devices.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (explicitly max severity, actively exploited)",
+        "category": "vulns"
+      },
+      {
+        "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
+        "tldr": "Malicious GitHub Actions workflows are being planted in thousands of repositories to steal credentials. Attackers are leveraging compromised developer accounts or insecure configurations to inject these workflows, posing a significant risk of data theft and unauthorized access to various projects.",
+        "action": "Audit all GitHub repositories for suspicious workflow files, review recent workflow run logs for anomalous activity, and enforce stricter security measures for developer accounts, including multi-factor authentication (MFA) and secure secrets management.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "FBI Arrests Another ShinyHunters Suspect Reportedly Involved in Its Jobs Portal Hack",
+        "tldr": "The FBI has arrested another individual suspected of being a core member of the ShinyHunters extortion group. This arrest is directly linked to their alleged involvement in the breach of the FBI's own jobs portal, signaling ongoing law enforcement efforts to dismantle the group and its operations.",
+        "action": "Continue to monitor for data breaches and leaks associated with the ShinyHunters group. Verify the integrity and security posture of all external-facing applications, particularly those handling sensitive personal or organizational information.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/fbi-arrests-another-shinyhunters.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Citrix warns admins to patch new NetScaler RCE flaw immediately",
+        "tldr": "Citrix has issued an urgent warning for administrators to immediately patch a new critical Remote Code Execution (RCE) vulnerability affecting NetScaler ADC networking appliances and NetScaler Gateway secure remote access solutions. This flaw could allow unauthenticated attackers to execute arbitrary code, posing a severe threat.",
+        "action": "Apply the latest security patches for NetScaler ADC and NetScaler Gateway products without delay. Prior to and after patching, conduct a thorough review of systems and logs for any indicators of compromise or suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/citrix-warns-admins-to-patch-new-netscaler-rce-flaw-immediately/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "NetScaler ADC networking appliances and NetScaler Gateway secure remote access solutions. Refer to official Citrix security advisories for specific vulnerable versions and update paths.",
+        "how_to_determine_impact": "Consult Citrix's official security advisory for the new RCE flaw (check recent releases). Identify all NetScaler ADC and Gateway instances and compare their installed versions with the advised patched versions.",
+        "tanium_query_hint": "Get Installed Applications containing 'NetScaler' and Version less than X.Y.Z (Replace X.Y.Z with the latest safe version from Citrix advisory).",
+        "rapid7_query_hint": "Search assets with 'NetScaler ADC' or 'NetScaler Gateway' and look for reported vulnerabilities related to the new RCE flaw. Reference official Citrix advisories for vulnerability IDs or descriptions.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
