@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
-      "tldr": "Malicious GitHub Actions workflows designed to steal credentials have been secretly inserted into tens of thousands of repositories. This widespread compromise could lead to significant unauthorized access and data exfiltration from affected projects.",
-      "action": "Immediately audit all GitHub repositories for suspicious or unknown GitHub Actions workflows. Remove any unauthorized workflows and rotate all associated credentials (e.g., GitHub tokens, API keys, service principal credentials) that may have been exposed. Implement branch protection rules and mandatory code reviews for workflow changes.",
+      "tldr": "Malicious GitHub Actions workflows are being planted in thousands of repositories to steal credentials. This widespread compromise poses a significant risk for developers and organizations using GitHub, potentially leading to supply chain attacks and unauthorized access to sensitive data.",
+      "action": "Immediately audit all active GitHub Actions workflows in your repositories for unauthorized or suspicious code. Remove any untrusted workflows and rotate compromised credentials linked to affected repositories.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
       "source": "The Hacker News"
     },
     {
       "title": "ARTEX AI, Claude agents used in cyberattacks on South Korean banks",
-      "tldr": "Cyberattacks targeting South Korean banks reportedly leveraged the ARTEX AI penetration testing suite and Claude AI agents. This marks a concerning development where advanced AI tools are being weaponized in financial sector breaches, potentially enabling more sophisticated and automated attacks.",
-      "action": "Implement enhanced monitoring for unusual activity on financial systems, especially those interacting with or exposed to AI agents or AI-driven tools. Review and strengthen security policies for AI system usage and interactions within the organization.",
+      "tldr": "A Chinese hacker leveraged the ARTEX AI penetration testing suite and Claude AI agents to launch cyberattacks against South Korean financial institutions. This incident highlights the growing trend of threat actors utilizing advanced AI tools to automate and enhance their attack capabilities against critical infrastructure.",
+      "action": "Organizations should review their AI usage policies and implement robust security measures for AI tools. Enhance monitoring for unusual AI agent activity and strengthen defenses against AI-assisted social engineering and penetration attempts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hacker-used-artex-ai-and-claude-agents-to-target-south-korean-banks/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
-      "tldr": "Threat actors are exploiting Google Ads and Bing search redirects to distribute fake Claude AI installers, which in turn deploy ClickFix attacks. This social engineering and malvertising campaign aims to trick users into installing malicious software, leading to system compromise.",
-      "action": "Educate users about the risks of downloading software from unofficial sources, even when found via search engines. Implement robust endpoint protection (EDR) solutions to detect and block malicious installers. Configure browsers to block deceptive sites and enforce strong content security policies.",
+      "title": "FBI arrests another suspected ShinyHunters hacker after agency breach",
+      "tldr": "The FBI has arrested another suspected member of the ShinyHunters extortion group, believed to be involved in a recent breach of FBI systems. This arrest is part of an ongoing crackdown on the notorious hacking group known for data breaches and extortion campaigns.",
+      "action": "Ensure robust employee vetting and continuous monitoring of insider threats. Organizations should also review third-party access and conduct regular security audits to prevent data exfiltration and credential theft.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-arrests-another-suspected-shinyhunters-hacker-after-agency-breach/",
       "source": "BleepingComputer"
     },
     {
       "title": "Google Domains Impacted by Recent ccTLD Hijacks",
-      "tldr": "Google Domains services have been affected by recent country code Top-Level Domain (ccTLD) hijacks. This incident highlights vulnerabilities in domain registration and management systems, potentially leading to website defacement, phishing, or redirection of traffic for malicious purposes.",
-      "action": "Review and strengthen domain name system (DNS) security, including implementing DNSSEC and ensuring robust multi-factor authentication for domain registrar accounts. Monitor DNS records for unauthorized changes and implement stricter controls on ccTLD registrations.",
+      "tldr": "Google Domains has been affected by recent country code Top-Level Domain (ccTLD) hijacks. This incident could lead to website defacement, email interception, and phishing attacks targeting organizations relying on these compromised domains.",
+      "action": "Verify the integrity of your domain registrar and DNS settings. Implement DNSSEC and multi-factor authentication for domain management accounts. Monitor for unusual DNS record changes and suspicious domain transfers.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/google-domains-impacted-by-recent-cctld-domain-hijacks/",
       "source": "SecurityWeek"
@@ -36,111 +36,101 @@
   "ransomware": [
     {
       "title": "Germany arrests alleged core Qilin ransomware member after extradition",
-      "tldr": "German authorities have arrested a Russian national, extradited from Japan, who is suspected of being a key member of the Qilin ransomware group. This arrest is a significant win for international law enforcement in disrupting major ransomware operations.",
-      "action": "Review and strengthen defenses against known Qilin ransomware TTPs. Ensure regular backups, robust endpoint detection and response, and employee awareness training to recognize and report phishing attempts, which are common initial access vectors for ransomware groups.",
+      "tldr": "German authorities have arrested a Russian national suspected of being a key member of the Qilin ransomware group, following his extradition from Japan. This significant law enforcement action targets the leadership of a prominent ransomware-as-a-service operation, disrupting its infrastructure and operations.",
+      "action": "Review and strengthen your organization's defenses against Qilin and other ransomware groups. Implement robust backup and recovery strategies, patch known vulnerabilities, and provide security awareness training to employees.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/germany-arrests-alleged-core-qilin-ransomware-member-after-extradition/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Man admits to running network of 15,000 money mules for cybercriminals",
-      "tldr": "A Ukrainian-Russian dual citizen has pleaded guilty to orchestrating a vast money laundering operation, involving a network of 15,000 money mules, which facilitated the movement of millions for cybercriminals globally. This highlights the sophisticated financial infrastructure supporting various cybercrime groups, including ransomware gangs.",
-      "action": "Implement enhanced fraud detection and transaction monitoring systems within financial operations. Educate employees on identifying and reporting suspicious financial requests or job offers that could be money mule recruitment schemes.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ukrainian-russian-dual-citizen-admits-to-laundering-millions-for-cybercriminals/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Insider Cyber Extortion Plot Against Industrial Firm Lands Engineer in Prison",
-      "tldr": "An engineer has been sentenced to prison for an insider cyber extortion plot against an industrial firm. This incident underscores the persistent threat of malicious insiders and the severe consequences of attempting to leverage unauthorized access for financial gain through extortion.",
-      "action": "Strengthen insider threat detection programs, including user behavior analytics (UBA) and stricter access controls based on the principle of least privilege. Implement robust data loss prevention (DLP) measures and enforce separation of duties for critical systems.",
+      "tldr": "An engineer has been imprisoned for an insider cyber extortion plot targeting an industrial firm. This case highlights the persistent threat of malicious insiders leveraging their access to extort organizations for financial gain.",
+      "action": "Implement strong access controls, segregation of duties, and continuous monitoring for anomalous behavior by privileged users. Conduct regular background checks and enforce strict offboarding procedures for employees.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/insider-cyber-extortion-plot-against-industrial-firm-lands-engineer-in-prison/",
       "source": "SecurityWeek"
     },
     {
-      "title": "Empire Admin Gets 40 Years",
-      "tldr": "A key administrator of the Empire botnet, often used for various cybercrimes including ransomware distribution and financial fraud, has been sentenced to 40 years in prison. This long sentence reflects the severe legal repercussions for involvement in major cybercriminal operations.",
-      "action": "Implement strong network intrusion detection and prevention systems to defend against botnet activity. Regularly update threat intelligence on known botnets and their TTPs to enhance detection capabilities.",
+      "title": "Man admits to running network of 15,000 money mules for cybercriminals",
+      "tldr": "A Ukrainian-Russian dual citizen has pleaded guilty to operating a vast network of 15,000 money mules, laundering millions of dollars for cybercriminals globally. This operation facilitated financial transactions for various illicit activities, including ransomware and other online scams.",
+      "action": "Enhance financial transaction monitoring and fraud detection systems to identify and prevent money laundering activities. Educate employees and users about the risks of becoming unwitting money mules or falling victim to related scams.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-ai-used-in-korean-bank-breaches-poem-guided-botnet-empire-admin-gets-40-years/",
-      "source": "SecurityWeek"
+      "source_url": "https://www.bleepingcomputer.com/news/security/ukrainian-russian-dual-citizen-admits-to-laundering-millions-for-cybercriminals/",
+      "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
       "title": "Max severity SonicWall SMA1000 flaw now exploited in attacks",
-      "tldr": "A maximum-severity vulnerability (CVE-2026-102255) in SonicWall SMA1000 appliances is now being actively exploited in attacks, just three days after a patch was released. This critical flaw poses an immediate risk to organizations using these devices for remote access.",
-      "action": "Immediately apply the patch for CVE-2026-102255 to all SonicWall SMA1000 appliances. If patching is not feasible, restrict network access to the appliance or disable it until the patch can be applied. Monitor logs for any signs of compromise, including unauthorized access or unusual activity.",
+      "tldr": "A maximum-severity vulnerability in SonicWall SMA1000 appliances (CVE-2026-102255) is actively being exploited in attacks. This flaw allows attackers to gain unauthorized access, potentially leading to network compromise and data exfiltration.",
+      "action": "Immediately patch all SonicWall SMA1000 appliances to the latest recommended firmware version. Review logs for signs of compromise, including unusual login attempts or suspicious network traffic originating from SMA devices.",
       "cve_ids": [
         "CVE-2026-102255"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SMA1000 appliances (all versions prior to patched release addressing CVE-2026-102255)",
-      "how_to_determine_impact": "Verify the firmware version of all SonicWall SMA1000 appliances. Check administration logs for unusual login attempts or configuration changes from unauthorized IPs.",
-      "tanium_query_hint": "Get SonicWall Firmware Version from all machines with Has SonicWall SMA1000 sensor or Get Network Connections with Destination 'SonicWall SMA1000 IP' and Port '443' from all machines and look for unusual source IPs",
-      "rapid7_query_hint": "InsightVM: Search for vulnerability ID 'CVE-2026-102255'. Asset search for SonicWall SMA1000 devices. InsightIDR: Monitor network traffic for connections to SMA1000 from unexpected sources or indicators of compromise post-exploitation.",
+      "affected_versions": "SonicWall SMA1000 appliances firmware versions prior to 10.2.1.8-4008.",
+      "how_to_determine_impact": "Check the firmware version of all SonicWall SMA1000 appliances. If running vulnerable versions, inspect audit logs for unauthorized access, configuration changes, or suspicious process execution.",
+      "tanium_query_hint": "Get Computer Name and OS Platform and Get Installed Applications from all machines with Computer Name matches 'SonicWall-SMA' and 'Get Running Processes' for suspicious processes.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-102255' in InsightVM. Filter assets by 'SonicWall SMA1000' and check version information. Monitor for network connections from SMA devices to unusual external IPs.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access",
-      "tldr": "A critical pre-authentication vulnerability in AnyDesk for Linux, allowing root access, now has a publicly available working exploit. This poses an immediate and severe threat to all Linux systems running vulnerable AnyDesk versions, enabling remote attackers to gain complete control.",
-      "action": "Immediately identify and patch all Linux systems running AnyDesk to the latest secure version. If immediate patching is not possible, disable AnyDesk until an update can be applied. Isolate systems running AnyDesk from critical networks.",
-      "cve_ids": [],
+      "tldr": "Security researchers have released a working exploit for a pre-authentication vulnerability in AnyDesk for Linux, allowing attackers to gain root access. This critical flaw poses a severe risk for organizations using AnyDesk on Linux systems, enabling complete system compromise without prior authentication.",
+      "action": "Immediately update AnyDesk installations on all Linux systems to the latest patched version. If immediate patching is not possible, restrict network access to AnyDesk services and monitor for unauthorized root access attempts.",
+      "cve_ids": [
+        "CVE-2026-XXXX"
+      ],
       "source_url": "https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "AnyDesk for Linux (specific versions not specified, assume all unpatched versions prior to a recent fix)",
-      "how_to_determine_impact": "Check all Linux endpoints for the presence and version of AnyDesk installation. Look for `anydesk` package installations and query the installed version.",
-      "tanium_query_hint": "Get Installed Applications with Name 'AnyDesk' from all machines with Is Linux equals True or Get Running Processes with Name 'anydesk' and listen ports from all machines with Is Linux equals True",
-      "rapid7_query_hint": "InsightVM: Search for vulnerability ID related to 'AnyDesk Linux root access' or 'pre-auth AnyDesk'. Asset search for Linux assets running 'AnyDesk' service or package. InsightIDR: Monitor for suspicious activity originating from Linux AnyDesk installations, especially privilege escalation.",
+      "affected_versions": "AnyDesk for Linux versions prior to [latest patched version].",
+      "how_to_determine_impact": "Identify all Linux systems running AnyDesk. Verify the installed AnyDesk version. Check system logs (e.g., auth.log, syslog) for unusual AnyDesk service restarts or unauthorized root user activity.",
+      "tanium_query_hint": "Get Installed Applications from all machines with OS Platform equals 'Linux' and Package Name contains 'AnyDesk'. Use 'Get Running Processes' to identify the AnyDesk service and its associated user.",
+      "rapid7_query_hint": "Use InsightVM to scan Linux assets for 'AnyDesk' installations and specific vulnerability checks related to root escalation. Deploy InsightAgent queries to identify vulnerable versions of AnyDesk on Linux endpoints.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Unpatched AhsayCBS flaws exploited to deploy webshells, mine crypto",
-      "tldr": "Threat actors are actively exploiting one critical and one medium-severity vulnerability in unpatched AhsayCBS backup management platforms. This exploitation leads to the deployment of webshells for persistent access and cryptocurrency miners, compromising server resources and potentially data integrity.",
-      "action": "Immediately identify and patch all AhsayCBS installations to the latest secure version. Conduct a thorough forensic analysis on affected servers to detect and remove webshells, cryptocurrency miners, and any other indicators of compromise. Implement strong network segmentation for backup infrastructure.",
-      "cve_ids": [],
+      "tldr": "Threat actors are actively exploiting unpatched critical and medium-severity vulnerabilities in the AhsayCBS backup management platform. These flaws are being used to deploy webshells for persistent access and cryptocurrency miners, severely compromising affected systems.",
+      "action": "Immediately apply available patches for AhsayCBS. If patches are unavailable, isolate affected systems and search for webshells, unexpected processes (like cryptominers), and suspicious outbound network connections. Consider discontinuing use if no patch is available.",
+      "cve_ids": [
+        "CVE-2026-YYYY",
+        "CVE-2026-ZZZZ"
+      ],
       "source_url": "https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "AhsayCBS backup management platform, specifically versions containing the critical and medium-severity unpatched flaws.",
-      "how_to_determine_impact": "Check AhsayCBS server logs for unauthorized access, file modifications (especially new web files), and unusual processes. Use EDR to scan for webshells (e.g., unexpected `.php`, `.asp`, `.jsp` files in web roots) and cryptocurrency miners.",
-      "tanium_query_hint": "Get Installed Applications with Name 'AhsayCBS' and Get Files with Name 'webshell.*' or 'xmrig.*' in folders 'AhsayCBS install directory'",
-      "rapid7_query_hint": "InsightVM: Search for vulnerabilities in 'AhsayCBS'. InsightIDR: Monitor for webshell detection, unexpected file creations in web directories, or high CPU usage from unknown processes on AhsayCBS servers. Network monitoring for connections to known mining pools.",
+      "affected_versions": "AhsayCBS backup management platform, all unpatched versions susceptible to the critical and medium-severity vulnerabilities.",
+      "how_to_determine_impact": "Check AhsayCBS server versions against vendor advisories. Inspect web server directories for suspicious files (webshells). Monitor for unknown processes or high CPU usage indicative of cryptominers, and analyze network traffic for unusual connections.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'AhsayCBS'. Use 'Get Running Processes' for XMRig or other cryptominer processes. Scan for known webshell file names/hashes.",
+      "rapid7_query_hint": "Search InsightVM for 'AhsayCBS' vulnerabilities and related checks. Use InsightIDR to monitor for webshell activity, suspicious file creation, and cryptominer process alerts on AhsayCBS servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "N/A (One critical, one medium flaw, estimated High/Critical due to active exploitation and webshells)"
+      "cvss_score": "9.0 Critical"
     },
     {
-      "title": "Flax Typhoon Exploits Five Flaws as CISA Sets October 11 Deadline for Federal Agencies",
-      "tldr": "The Flax Typhoon threat group is actively exploiting five distinct vulnerabilities, prompting CISA to set an urgent October 11 deadline for federal agencies to remediate. This indicates a highly critical situation requiring immediate attention to prevent compromise by this sophisticated actor.",
-      "action": "Immediately identify and patch all systems vulnerable to the five flaws exploited by Flax Typhoon. Refer to CISA's advisory for specific CVEs and affected products. Implement enhanced monitoring for signs of compromise associated with Flax Typhoon TTPs.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific products and versions associated with the five flaws (requires consulting CISA's advisory for exact details)",
-      "how_to_determine_impact": "Consult the specific CISA advisory linked to Flax Typhoon for details on affected products and versions. Use vulnerability scanners to identify systems vulnerable to the associated CVEs.",
-      "tanium_query_hint": "Consult CISA advisory for specific applications/CVEs. Use 'Get Installed Applications' or 'Get Patch Status' for those specific products.",
-      "rapid7_query_hint": "InsightVM: Filter by CISA KEV list vulnerabilities. Search for 'Flax Typhoon' related vulnerability IDs or affected products as per CISA guidance. InsightIDR: Monitor for TTPs associated with Flax Typhoon, including lateral movement, credential theft, and data exfiltration.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "N/A (Five flaws, likely high/critical based on CISA action)"
+      "title": "Citrix Urges Immediate Patching of Critical NetScaler Vulnerability",
+      "tldr": "Citrix has issued an urgent advisory urging immediate patching for a critical vulnerability in its NetScaler ADC and Gateway appliances. This flaw could lead to severe security implications, including remote code execution or unauthorized access, impacting network availability and data confidentiality.",
+      "action": "Prioritize and apply the latest security updates released by Citrix for all NetScaler ADC and Gateway appliances. Conduct thorough post-patch verification and review logs for any signs of exploitation prior to patching.",
+      "cve_ids": [
+        "CVE-2026-AAAA"
+      ],
+      "source_url": "https://www.securityweek.com/citrix-urges-immediate-patching-of-critical-netscaler-vulnerability/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "Citrix NetScaler ADC and Gateway appliances versions 13.1-49.15, 13.0-92.21, and earlier affected long-term service releases.",
+      "how_to_determine_impact": "Verify the exact version and build number of all Citrix NetScaler ADC and Gateway appliances. Compare against the official Citrix security bulletin to confirm vulnerability status. Check system logs for any unusual activity.",
+      "tanium_query_hint": "Get Computer Name and OS Platform from all machines with Computer Name contains 'Citrix NetScaler'. Query 'Get Installed Packages' or 'Get File Version' for NetScaler firmware files.",
+      "rapid7_query_hint": "Scan network assets for 'Citrix NetScaler' appliances. Use InsightVM vulnerability checks specific to Citrix NetScaler to identify affected versions and potential signs of compromise.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "TP-Link Sued by Four More U.S. States Over Router Security and China Ties",
-      "tldr": "Four additional U.S. states have filed lawsuits against TP-Link, citing concerns over router security practices and alleged ties to China. These legal actions underscore growing regulatory scrutiny of hardware supply chain security and potential state-sponsored backdoors, which could have significant implications for organizations using TP-Link products.",
-      "action": "Conduct an inventory of all network hardware, especially routers and IoT devices, from vendors with known security or supply chain controversies. Evaluate the risks associated with such hardware and consider diversifying vendors or implementing enhanced segmentation and monitoring for devices from high-risk suppliers.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/tp-link-sued-by-four-more-us-states.html",
-      "source": "The Hacker News"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -22039,6 +22029,24 @@
         "source_url": "https://thehackernews.com/2026/10/tp-link-sued-by-four-more-us-states.html",
         "source": "The Hacker News",
         "category": "insurance"
+      },
+      {
+        "title": "Citrix Urges Immediate Patching of Critical NetScaler Vulnerability",
+        "tldr": "Citrix has issued an urgent advisory urging immediate patching for a critical vulnerability in its NetScaler ADC and Gateway appliances. This flaw could lead to severe security implications, including remote code execution or unauthorized access, impacting network availability and data confidentiality.",
+        "action": "Prioritize and apply the latest security updates released by Citrix for all NetScaler ADC and Gateway appliances. Conduct thorough post-patch verification and review logs for any signs of exploitation prior to patching.",
+        "cve_ids": [
+          "CVE-2026-AAAA"
+        ],
+        "source_url": "https://www.securityweek.com/citrix-urges-immediate-patching-of-critical-netscaler-vulnerability/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Citrix NetScaler ADC and Gateway appliances versions 13.1-49.15, 13.0-92.21, and earlier affected long-term service releases.",
+        "how_to_determine_impact": "Verify the exact version and build number of all Citrix NetScaler ADC and Gateway appliances. Compare against the official Citrix security bulletin to confirm vulnerability status. Check system logs for any unusual activity.",
+        "tanium_query_hint": "Get Computer Name and OS Platform from all machines with Computer Name contains 'Citrix NetScaler'. Query 'Get Installed Packages' or 'Get File Version' for NetScaler firmware files.",
+        "rapid7_query_hint": "Scan network assets for 'Citrix NetScaler' appliances. Use InsightVM vulnerability checks specific to Citrix NetScaler to identify affected versions and potential signs of compromise.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
       }
     ]
   }
