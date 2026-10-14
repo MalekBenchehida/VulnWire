@@ -1,99 +1,85 @@
 {
   "breaches": [
     {
-      "title": "Global Takedown Disrupts Phishing Network Behind 1 Billion Messages",
-      "tldr": "Law enforcement and partners worldwide disrupted a massive cybercriminal ecosystem responsible for over a billion malicious messages targeting 75,000 organizations in 150 countries. This operation successfully shut down three major phishing kits used to facilitate these extensive campaigns.",
-      "action": "Educate users on phishing awareness and common scam tactics. Enhance email filtering and security gateways with the latest threat intelligence. Implement DMARC, SPF, and DKIM to prevent email spoofing and review logs for any indicators of compromise related to these phishing campaigns.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/global-takedown-hits-network-behind-1-billion-phishing-messages/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "FBI Raids North Korean IT Worker Laptop Farms in Texas, US Nationals Arrested",
-      "tldr": "The U.S. Department of Justice (DoJ) disrupted the Famous Chollima threat group's operations by arresting two suspects and charging 14 individuals involved in North Korean remote IT worker schemes. Nearly 187 laptops were seized from over 40 laptop farms, aiming to prevent state-sponsored espionage and financial fraud.",
-      "action": "Review contractor onboarding and vetting processes, especially for remote IT workers or those with access to sensitive systems. Implement strict identity verification, background checks, and continuous monitoring for potential insider threats or compromised accounts to mitigate espionage risks.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fbi-raids-dprk-it-worker-laptop-farms-in-texas-us-nationals-arrested/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Ledger Asks Sellers Across Asia to Halt Sales After Supply-Chain Attack",
-      "tldr": "Ledger has requested resellers and distributors of its hardware wallets in Indonesia, Singapore, Thailand, the Philippines, Vietnam, Malaysia, and Hong Kong to suspend device sales and remove products from shelves. This action follows an investigation into potential device tampering as part of a supply-chain attack.",
-      "action": "If your organization utilizes Ledger devices, verify the authenticity of all devices, especially those purchased recently from affected regions. Monitor for any unusual activity or specific advisories released by Ledger directly regarding potential tampering.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Hirudo Android Malware Replaces Banking Apps to Evade Security Checks",
-      "tldr": "A new Android malware, Hirudo, is actively stealing bank account credentials by replacing legitimate banking applications with modified versions. These modified apps disable built-in security checks, allowing the malware to bypass native protections and exfiltrate sensitive user data.",
-      "action": "Advise all users to download banking applications exclusively from official app stores and to meticulously verify app authenticity before installation. Implement mobile device management (MDM) policies to restrict unauthorized app installations and to monitor for suspicious application behavior or permissions.",
+      "title": "Hirudo Android malware replaces banking apps to evade security checks",
+      "tldr": "The Hirudo Android malware is actively stealing bank account credentials by replacing legitimate banking applications with modified, malicious versions. These altered apps disable built-in security checks, allowing the malware to bypass protections and compromise user accounts.",
+      "action": "Users should only download banking apps from official app stores. Organizations should educate users about the risks of sideloading apps and consider mobile device management (MDM) solutions to enforce app installation policies.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hirudo-android-malware-replaces-banking-apps-to-evade-security-checks/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Ledger asks sellers across Asia to halt sales after supply-chain attack",
+      "tldr": "Ledger has requested resellers and distributors across several Asian countries to suspend sales of its crypto wallets due to a suspected supply-chain attack. This incident indicates potential device tampering before reaching customers, posing a risk to the security of user funds and stored cryptocurrencies.",
+      "action": "If you have recently purchased a Ledger device from resellers in affected regions, refrain from using it until Ledger provides official guidance. Monitor Ledger's official communication channels for updates on how to verify device integrity and next steps.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Cisco Patches New Secure Email Gateway Zero-Day Exploited in Attacks",
-      "tldr": "Cisco has released a critical patch for a newly discovered, actively exploited zero-day vulnerability in its Secure Email Gateway (SEG) product. This severe flaw enables remote, unauthenticated attackers to execute arbitrary commands with root privileges, posing a significant risk to affected systems.",
-      "action": "Immediately apply the latest security patches to all Cisco Secure Email Gateway instances within your environment. Conduct a thorough review of logs for any indicators of compromise, specifically looking for unauthorized root-level command execution or anomalous activity on the email gateway.",
+      "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
+      "tldr": "Palo Alto Networks has released security updates for a high-severity PAN-OS RCE zero-day, CVE-2026-0322, which is actively being exploited in attacks targeting firewalls. This vulnerability allows remote code execution.",
+      "action": "Immediately apply the security updates released by Palo Alto Networks for PAN-OS to mitigate CVE-2026-0322. Verify patch installation and monitor logs for signs of compromise.",
+      "cve_ids": [
+        "CVE-2026-0322"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "PAN-OS (specific versions prior to patched releases, refer to vendor advisory for CVE-2026-0322).",
+      "how_to_determine_impact": "Identify all Palo Alto Networks firewall appliances running PAN-OS. Check their current software versions against the vendor's advisory for CVE-2026-0322 to determine if they are vulnerable.",
+      "tanium_query_hint": "Use Tanium Connect to pull firewall inventory and configuration data. Check for installed PAN-OS versions and cross-reference with advisory. Look for suspicious processes or network connections originating from firewall management interfaces.",
+      "rapid7_query_hint": "Search vulnerability ID 'CVE-2026-0322' in InsightVM. Use asset search to filter for Palo Alto Networks appliances and verify patch status. Run authenticated scans.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical (estimate 9.8)"
+    },
+    {
+      "title": "Cisco patches new Secure Email Gateway zero-day exploited in attacks",
+      "tldr": "Cisco has patched an actively exploited zero-day flaw in its Secure Email Gateway (SEG) that allows remote, unauthenticated attackers to execute commands with root privileges. This critical vulnerability poses a severe risk to affected systems.",
+      "action": "Apply the latest security patches for Cisco Secure Email Gateway immediately. Review SEG logs for any unusual activity or unauthorized access attempts indicating prior compromise.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Secure Email Gateway (All versions prior to the vendor's urgent security patch)",
-      "how_to_determine_impact": "Verify the current software version of your Cisco Secure Email Gateway appliances. Confirm that the latest security patch has been successfully applied. Inspect system logs and security alerts for suspicious processes, unauthorized root-level access, or unusual email gateway traffic patterns.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with IsManaged. Check installed versions of 'Cisco Secure Email Gateway'. Query for processes or files indicative of root-level compromise as per Cisco's advisory.",
-      "rapid7_query_hint": "Search assets for 'Cisco Secure Email Gateway' and filter by known vulnerability IDs (if published) or specific version numbers. Utilize InsightIDR to query logs for anomalous command execution or network connections originating from SEG devices.",
+      "affected_versions": "Cisco Secure Email Gateway (all versions prior to the latest security update addressing the zero-day).",
+      "how_to_determine_impact": "Check Cisco Secure Email Gateway appliances for installed software versions and ensure they are updated to the latest patched release. Review device logs for indicators of compromise, such as unexpected commands or root-level activity.",
+      "tanium_query_hint": "Execute 'Get Installed Applications' on servers. Filter for 'Cisco Secure Email Gateway'. Cross-reference versions with Cisco's advisory. Look for unauthorized root processes.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to Cisco Secure Email Gateway zero-day. Use asset search to identify SEG installations and verify patch status. Scan devices for known IoCs.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "Critical (estimate 9.8)"
     },
     {
-      "title": "CISA Warns Admins to Immediately Fix Ivanti Connect Secure Flaw Exploited as Zero-Day",
-      "tldr": "CISA has issued an urgent directive for administrators to immediately patch a critical vulnerability in Ivanti Connect Secure (ICS) products. This flaw has been actively exploited as a zero-day in the wild since at least October 1st, necessitating rapid remediation to mitigate ongoing threats and potential network compromise.",
-      "action": "Apply all available security updates for Ivanti Connect Secure devices immediately. Follow CISA and Ivanti's official guidance for compromise detection, eradication, and post-exploitation steps, which typically include running integrity checkers and thoroughly reviewing logs for specific Indicators of Compromise (IOCs).",
+      "title": "CISA warns admins to immediately fix Ivanti flaw exploited as zero-day",
+      "tldr": "CISA has issued an urgent warning to immediately patch an Ivanti Connect Secure (ICS) flaw, which has been actively exploited as a zero-day since early October. This critical vulnerability requires immediate attention to prevent compromise.",
+      "action": "Prioritize and immediately apply all available security updates for Ivanti Connect Secure products, as recommended by CISA. Follow Ivanti's guidance for post-patch integrity checks and threat hunting.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-immediately-fix-ivanti-flaw-exploited-as-zero-day/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Ivanti Connect Secure (ICS) - specific versions vulnerable prior to vendor patch. Consult Ivanti advisories for exact ranges.",
-      "how_to_determine_impact": "Check the deployed versions of all Ivanti Connect Secure appliances. Utilize Ivanti's integrity checking tools, if provided, and review system logs for any indicators of compromise detailed in vendor or CISA advisories. Look for unauthorized persistent access or unusual network traffic.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with IsManaged. Check installed versions of 'Ivanti Connect Secure'. Query for specific files, processes, or configurations detailed in Ivanti/CISA advisories.",
-      "rapid7_query_hint": "Search assets for 'Ivanti Connect Secure' and filter by vulnerability ID (if available) or specific version numbers. Configure InsightIDR to look for network connections, user behaviors, or file changes matching reported IOCs on ICS devices.",
+      "affected_versions": "Ivanti Connect Secure (all versions prior to the latest security patches addressing the zero-day).",
+      "how_to_determine_impact": "Identify all Ivanti Connect Secure appliances within the environment. Verify the installed software versions against Ivanti's latest security advisories and patch releases for zero-day vulnerabilities. Check system logs for signs of compromise dating back to October 1st.",
+      "tanium_query_hint": "Execute 'Get Installed Applications' or 'Get Running Processes' on relevant servers. Look for Ivanti Connect Secure components. Check file integrity or specific IoCs provided by Ivanti/CISA.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to Ivanti Connect Secure zero-day. Use asset search to identify Ivanti Connect Secure installations and verify their patch status. Run authenticated scans for known indicators of compromise.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "Critical (estimate 9.8)"
     },
     {
-      "title": "Microsoft Patches Record 1,413 Vulnerabilities, Including Exploited Windows Zero-Day",
-      "tldr": "Microsoft has released its latest Patch Tuesday updates, addressing an unprecedented 1,413 vulnerabilities across its product portfolio. This includes a critical, actively exploited zero-day vulnerability in Windows, highlighting the urgent necessity for system administrators to deploy all available updates without delay.",
-      "action": "Prioritize the immediate deployment of the latest Microsoft security updates, focusing specifically on patches for Windows systems. Ensure that the fix for the actively exploited zero-day is applied across all relevant endpoints and verify the successful installation of all critical updates.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/microsoft-patches-record-1413-vulnerabilities-including-exploited-windows-zero-day/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Various Microsoft Windows versions and related products. Consult Microsoft's official security update guide for specific details on the exploited zero-day and other patched vulnerabilities.",
-      "how_to_determine_impact": "Ensure all Windows machines and Microsoft products are fully updated with the latest patches. Verify update history and build numbers on endpoints. Refer to Microsoft's official security bulletin for details on the specific zero-day vulnerability and its affected components.",
-      "tanium_query_hint": "Get Computer Name and Applied Patches from all machines with IsManaged. Check for specific Knowledge Base (KB) articles released in the latest Patch Tuesday. Use 'Get Windows Update History' sensor.",
-      "rapid7_query_hint": "Utilize 'Vulnerability Details' query in InsightVM, filtering by 'Microsoft' and 'latest patch cycle'. Check for assets missing the latest critical Windows updates. Leverage 'Asset Search' with OS filters.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora’s Built-in CODE App",
-      "tldr": "A critical vulnerability in Collabora's built-in CODE app is currently being exploited to backdoor Nextcloud servers. This flaw allows unauthorized access, potentially leading to data compromise, remote code execution, or further lateral movement within the compromised network environment.",
-      "action": "Immediately update the Collabora CODE app within Nextcloud to its latest patched version to remediate the vulnerability. Conduct a thorough review of Nextcloud server logs for any suspicious activity, unauthorized access attempts, or indicators of compromise related to this backdooring campaign.",
+      "title": "Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora\nR\n\n\n\n\n's Built-in CODE App",
+      "tldr": "Threat actors are actively backdooring Nextcloud servers by exploiting a critical vulnerability found in the Collabora Online Development Edition (CODE) app, which is often integrated into Nextcloud. This flaw allows for unauthorized access and potential server compromise.",
+      "action": "Immediately update the Collabora CODE app within Nextcloud environments to the latest patched version. Review Nextcloud server logs and Collabora CODE logs for signs of compromise, such as unexpected user accounts, file modifications, or anomalous network activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Nextcloud servers utilizing vulnerable versions of Collabora's built-in CODE app. Consult Collabora and Nextcloud advisories for specific version ranges.",
-      "how_to_determine_impact": "Check the installed version of the Collabora CODE app within your Nextcloud deployment. Verify Nextcloud server integrity and review access logs for any unauthorized user accounts, anomalous file modifications, or suspicious network connections originating from the server.",
-      "tanium_query_hint": "Get Installed Applications from all machines running Nextcloud. Specifically check for 'Collabora CODE' app versions. Query for suspicious files or processes in Nextcloud installation directories and web server logs.",
-      "rapid7_query_hint": "Search assets for 'Nextcloud' and 'Collabora CODE' to identify affected systems. Implement file integrity monitoring (FIM) for critical Nextcloud server directories to detect unauthorized modifications. Utilize InsightIDR for log analysis of web server and Nextcloud access logs.",
+      "affected_versions": "Nextcloud servers utilizing vulnerable versions of the Collabora CODE app; refer to vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Check all Nextcloud installations to determine if the Collabora CODE app is installed and verify its current version. Consult Nextcloud and Collabora official security advisories for details on vulnerable versions and indicators of compromise. Review audit logs for suspicious activity.",
+      "tanium_query_hint": "Execute 'Get Installed Applications' on web servers. Filter for 'Nextcloud' or 'Collabora CODE'. Check for specific file hashes or directories associated with known backdoors.",
+      "rapid7_query_hint": "Search vulnerability databases for Nextcloud and Collabora CODE vulnerabilities. Perform authenticated scans on Nextcloud servers. Look for file integrity deviations or unauthorized modifications.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "Critical (estimate 9.8)"
     }
   ],
   "insurance": [],
@@ -23066,6 +23052,24 @@
         "rapid7_query_hint": "Search assets for 'Nextcloud' and 'Collabora CODE' to identify affected systems. Implement file integrity monitoring (FIM) for critical Nextcloud server directories to detect unauthorized modifications. Utilize InsightIDR for log analysis of web server and Nextcloud access logs.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
+        "tldr": "Palo Alto Networks has released security updates for a high-severity PAN-OS RCE zero-day, CVE-2026-0322, which is actively being exploited in attacks targeting firewalls. This vulnerability allows remote code execution.",
+        "action": "Immediately apply the security updates released by Palo Alto Networks for PAN-OS to mitigate CVE-2026-0322. Verify patch installation and monitor logs for signs of compromise.",
+        "cve_ids": [
+          "CVE-2026-0322"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "PAN-OS (specific versions prior to patched releases, refer to vendor advisory for CVE-2026-0322).",
+        "how_to_determine_impact": "Identify all Palo Alto Networks firewall appliances running PAN-OS. Check their current software versions against the vendor's advisory for CVE-2026-0322 to determine if they are vulnerable.",
+        "tanium_query_hint": "Use Tanium Connect to pull firewall inventory and configuration data. Check for installed PAN-OS versions and cross-reference with advisory. Look for suspicious processes or network connections originating from firewall management interfaces.",
+        "rapid7_query_hint": "Search vulnerability ID 'CVE-2026-0322' in InsightVM. Use asset search to filter for Palo Alto Networks appliances and verify patch status. Run authenticated scans.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (estimate 9.8)",
         "category": "vulns"
       }
     ]
