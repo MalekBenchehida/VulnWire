@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Meta Says Hackers Took Code, Personal Data of 1,500 in GitHub Breach",
-      "tldr": "Hackers accessed Meta's code and personal data of 1,500 individuals via a GitHub breach. This incident highlights supply chain risks and the compromise of sensitive corporate assets residing in third-party code hosting platforms.",
-      "action": "Review access logs for GitHub repositories, ensure robust multi-factor authentication for all developer accounts, and conduct an internal audit of data stored in third-party code hosting platforms.",
+      "tldr": "Meta disclosed a breach where hackers accessed code and personal data of approximately 1,500 individuals via GitHub. This incident highlights the risk of third-party platform vulnerabilities leading to sensitive data exposure.",
+      "action": "Review access logs and permissions for any GitHub repositories containing sensitive company code or data. Ensure strong authentication and least privilege principles are applied to all source code management platforms.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/meta-says-hackers-took-code-personal-data-of-1500-in-github-breach/",
       "source": "SecurityWeek"
     },
     {
       "title": "Xandr Fined a Record €8.6 Million for Relaying Grindr Data Revealing Sexual Orientation",
-      "tldr": "Ad-tech firm Xandr was fined €8.6 million for illegally relaying Grindr user data, including sensitive sexual orientation information. This demonstrates significant regulatory consequences for data privacy violations, even if not a direct 'hack'.",
-      "action": "Ensure all third-party data sharing agreements are compliant with privacy regulations (e.g., GDPR), conduct thorough privacy impact assessments, and verify that user consent mechanisms are robust for sensitive data.",
+      "tldr": "Xandr, an advertising platform, was fined €8.6 million for illegally collecting and sharing sensitive user data, specifically Grindr user data revealing sexual orientation. This constitutes a significant privacy breach under GDPR.",
+      "action": "Conduct a thorough audit of all data collection, processing, and sharing practices, especially concerning sensitive personal data. Ensure strict compliance with data protection regulations like GDPR and CCPA.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/xandr-fined-record-86-million-for.html",
       "source": "The Hacker News"
     },
     {
-      "title": "UK Housing Ombudsman Service investigates 'security incident'",
-      "tldr": "The U.K. Housing Ombudsman Service is investigating a third-party IT security incident that impacted its case management system. This points to potential data compromise and operational disruption due to supply chain vulnerabilities.",
-      "action": "Identify all third-party vendors with access to critical systems and data. Assess their security posture, review contractual security clauses, and prepare incident response plans for third-party breaches.",
+      "title": "OpenAI engineer arrested for allegedly planting spy device in office",
+      "tldr": "An OpenAI engineer was arrested for allegedly planting a hidden recording device in an executive conference room. This internal incident highlights insider threat risks for sensitive discussions and intellectual property.",
+      "action": "Implement enhanced physical security measures for sensitive areas, including regular sweeps for unauthorized devices. Strengthen insider threat programs, including monitoring and awareness training for all employees.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/uk-housing-ombudsman-service-investigates-security-incident/",
+      "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-engineer-arrested-for-allegedly-planting-spy-device-in-office/",
       "source": "BleepingComputer"
     },
     {
       "title": "TFG London cyberattack disrupts systems at Hobbs and Whistles retailers",
-      "tldr": "TFG London detected a cybersecurity incident that impacted IT systems used by the Phase Eight, Hobbs, and Whistles premium fashion brands. This highlights operational risks and potential customer data exposure for retail businesses.",
-      "action": "Implement enhanced monitoring for unusual network activity, review and strengthen endpoint security across retail systems, and ensure robust data backup and recovery strategies are in place to minimize disruption.",
+      "tldr": "TFG London experienced a cybersecurity incident that disrupted IT systems for its fashion brands, including Phase Eight, Hobbs, and Whistles. The nature of the attack is not specified but caused operational disruption.",
+      "action": "Review incident response plans and ensure business continuity measures are in place for critical systems. Investigate recent security logs for anomalies and indicators of compromise related to system disruption.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/tfg-london-cyberattack-disrupts-systems-at-hobbs-and-whistles-retailers/",
       "source": "BleepingComputer"
@@ -36,66 +36,66 @@
   "ransomware": [],
   "vulns": [
     {
-      "title": "Attacker Chains Three Ivanti Connect Secure Zero-Days for Root Access, Only Two Patched So Far",
-      "tldr": "Attackers are chaining three Ivanti Connect Secure zero-day vulnerabilities to achieve root access, with only two out of the three flaws currently patched. This is a critical, actively exploited threat to remote access gateways.",
-      "action": "Immediately apply all available patches for Ivanti Connect Secure. Hunt for indicators of compromise (IoCs) related to these zero-days and investigate any suspicious activity on Ivanti appliances.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Ivanti Connect Secure (ICS) remote access gateway. Specific vulnerable versions require consulting Ivanti's official security advisory.",
-      "how_to_determine_impact": "Check Ivanti Connect Secure appliance health and patch status. Look for evidence of unauthorized access or unusual activity in logs. Consult Ivanti's official advisory for specific compromise detection tools or steps.",
-      "tanium_query_hint": "Utilize Tanium sensors to check installed software versions on servers where Ivanti appliances are hosted, or look for specific file hashes/process names provided in Ivanti's IoCs.",
-      "rapid7_query_hint": "Search for Ivanti Connect Secure vulnerabilities in InsightVM. Look for asset inventory matching Ivanti products. Check InsightIDR logs for unusual access attempts or post-exploitation activities related to the gateway.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
-      "title": "SAP Discloses Critical CVSS 10 Flaw in Cloud SDK for Python Allowing OAuth2 Credential Theft",
-      "tldr": "A critical vulnerability (CVSS 10.0) in SAP Cloud SDK for Python allows attackers to steal OAuth2 client credentials. This affects multi-tenant applications on SAP Business Technology Platform (BTP) where an attacker controls the tenant subdomain.",
-      "action": "Update SAP Cloud SDK for Python to the latest patched version immediately. Review and audit OAuth2 client configurations and permissions, particularly for multi-tenant applications on BTP.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/sap-discloses-critical-cvss-10-flaw-in.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "SAP Cloud SDK for Python. Specific vulnerable versions require consulting SAP's official security advisory.",
-      "how_to_determine_impact": "Identify all applications using SAP Cloud SDK for Python, especially multi-tenant applications on SAP BTP. Check if `oauth2client_credentials_flow` is used and if the application is susceptible to subdomain control.",
-      "tanium_query_hint": "Use Tanium 'Get Installed Applications' or 'Get File Version' for Python packages to identify affected SDK versions. Search for specific configuration files or code patterns related to OAuth2 credential handling within Python applications.",
-      "rapid7_query_hint": "Scan assets for installed Python environments and SDKs. Use InsightVM to search for vulnerability definitions related to SAP Cloud SDK. Review application configurations for OAuth2 credential usage and tenant subdomain settings.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
       "title": "Microsoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days",
-      "tldr": "Microsoft's October 2026 Patch Tuesday addressed a record 1,411 vulnerabilities, including three zero-day flaws. One zero-day is actively exploited, and two were publicly disclosed prior to patching. This is a critical monthly update.",
-      "action": "Prioritize and deploy all Microsoft October 2026 Patch Tuesday updates immediately. Focus remediation efforts on systems affected by the actively exploited zero-day and the publicly disclosed vulnerabilities.",
+      "tldr": "Microsoft's October 2026 Patch Tuesday addressed a record 1,411 vulnerabilities, including one actively exploited zero-day and two publicly disclosed zero-days. This is a critical monthly update.",
+      "action": "Immediately apply all available Microsoft October 2026 security updates to all Windows systems, Exchange Servers, and other Microsoft products. Prioritize patching systems affected by the actively exploited zero-day.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Various Microsoft Windows, Office, and other products. Refer to Microsoft's official October 2026 Security Update Guide for specific product and version details.",
-      "how_to_determine_impact": "Consult Microsoft's Security Update Guide for October 2026. Use vulnerability scanners or system management tools to identify systems missing the latest patches. Focus on critical and actively exploited CVEs.",
-      "tanium_query_hint": "Use 'Get Installed Patches' sensor to identify missing October 2026 updates across Windows endpoints. Query 'Get OS Build' and 'Get Hotfix List' for specific zero-day related KBs. Leverage Tanium Comply for patch compliance reporting.",
-      "rapid7_query_hint": "Run a credentialed scan with InsightVM. Filter vulnerabilities by 'Microsoft' and 'October 2026' or by specific CVEs identified in the Microsoft Security Update Guide. Use InsightAgent queries for missing KBs.",
+      "affected_versions": "All supported Microsoft Windows versions, Microsoft Exchange, and other Microsoft products prior to October 2026 patches. Specifics for zero-days not detailed in snippet.",
+      "how_to_determine_impact": "Identify systems running Microsoft Windows and other Microsoft applications. Verify successful installation of October 2026 Patch Tuesday updates. Check for specific KBs (e.g., KB5126657 for Win10, KB5127648/KB5126653 for Win11) to confirm patch status.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Windows' and 'Exchange'. Use 'Get Windows Update History' sensor to verify October 2026 KBs. Use 'Get Running Processes' to identify potentially vulnerable services if specific CVE details are released.",
+      "rapid7_query_hint": "Search for 'Microsoft October 2026 Patch Tuesday' vulnerabilities. Filter assets by 'Operating System: Windows' or 'Service: Exchange'. Verify patch status using agent data or authenticated scans for missing KBs.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Varies, with several critical (9.0-10.0) and important (7.0-8.9) scores, including for zero-days."
+      "cvss_score": "Critical (Multiple CVSS scores, including critical for zero-days)"
+    },
+    {
+      "title": "Attacker Chains Three Ivanti Connect Secure Zero-Days for Root Access, Only Two Patched So Far",
+      "tldr": "Attackers are chaining multiple zero-day vulnerabilities in Ivanti Connect Secure VPNs to achieve root access. While some patches have been released, at least one zero-day remains unpatched, posing a significant risk of active exploitation.",
+      "action": "Immediately apply all available patches for Ivanti Connect Secure. For any unpatched zero-days, implement recommended mitigation strategies, isolate affected devices, and actively monitor for indicators of compromise.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Ivanti Connect Secure (ICS) VPN appliances, specific versions requiring patches. Refer to Ivanti advisories for exact vulnerable versions.",
+      "how_to_determine_impact": "Check Ivanti Connect Secure appliance versions. Verify successful application of all vendor-provided patches. Monitor appliance logs for suspicious activity or known IoCs related to these zero-days. Review vendor advisories for specific detection methods.",
+      "tanium_query_hint": "Use 'Get Installed Software' to identify Ivanti Connect Secure installations. Use 'Get File Version' for critical Ivanti components to verify patch level. Query logs for suspicious connections to/from Ivanti devices.",
+      "rapid7_query_hint": "Search for 'Ivanti Connect Secure zero-day' vulnerability IDs. Filter assets by 'Software: Ivanti Connect Secure'. Run authenticated scans to detect unpatched vulnerabilities. Monitor network traffic to/from Ivanti VPNs for suspicious patterns.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical (Likely 9.8 or 10.0 given root access and active exploitation)"
+    },
+    {
+      "title": "SAP Discloses Critical CVSS 10 Flaw in Cloud SDK for Python Allowing OAuth2 Credential Theft",
+      "tldr": "SAP disclosed a critical CVSS 10 vulnerability in its Cloud SDK for Python. The flaw allows an attacker to steal OAuth2 client credentials from multi-tenant applications on SAP Business Technology Platform (BTP) if they control the tenant subdomain.",
+      "action": "Update SAP Cloud SDK for Python to the patched version immediately. Review and restrict subdomain control permissions on SAP BTP. Implement robust monitoring for unusual OAuth2 credential usage.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/sap-discloses-critical-cvss-10-flaw-in.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "SAP Cloud SDK for Python, specific versions prior to the October 13 patch. Affected are multi-tenant applications on SAP Business Technology Platform (BTP) that use the SDK.",
+      "how_to_determine_impact": "Identify all applications using SAP Cloud SDK for Python on SAP BTP. Check the version of the SDK in use. Verify if the application is multi-tenant and if an attacker could control a tenant subdomain.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'SAP Cloud SDK for Python'. Check file versions of SDK components. Query configurations for BTP applications to identify multi-tenant setups and subdomain control mechanisms.",
+      "rapid7_query_hint": "Search for 'SAP Cloud SDK for Python' vulnerabilities. Filter assets by 'Software: SAP Cloud SDK for Python'. Use authenticated scans to identify vulnerable SDK versions. Review BTP configurations for potential subdomain control issues.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical"
     },
     {
       "title": "Ghostscript flaw lets hackers hijack servers via PDF uploads",
-      "tldr": "A critical heap buffer overflow vulnerability (CVE-2026-39919) in the Ghostscript interpreter allows remote code execution through specially crafted PDF files. This poses a significant risk to systems processing untrusted PDFs.",
-      "action": "Update Ghostscript to the latest patched version. Implement robust input validation for PDF uploads and consider sandboxing environments for PDF processing.",
+      "tldr": "A critical heap buffer overflow vulnerability, CVE-2026-39919, in the Ghostscript interpreter allows remote code execution. This can occur through specially crafted PDF files, enabling attackers to hijack servers.",
+      "action": "Update Ghostscript to the patched version. Implement input validation and sanitization for all PDF uploads to systems using Ghostscript. Restrict Ghostscript execution privileges.",
       "cve_ids": [
         "CVE-2026-39919"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Ghostscript interpreter and rendering engine. Specific vulnerable versions should be confirmed with the official Ghostscript advisory.",
-      "how_to_determine_impact": "Identify all systems that utilize Ghostscript for PDF processing or rendering. Check for applications that allow users to upload or convert PDF files, as these are potential attack vectors.",
-      "tanium_query_hint": "Use 'Get Installed Applications' to find Ghostscript installations. Query for file versions of relevant Ghostscript executables or libraries (e.g., gs.exe, libgs.so) to identify vulnerable versions.",
-      "rapid7_query_hint": "Scan systems for Ghostscript installations. Search InsightVM for vulnerability ID 'CVE-2026-39919' and associated solutions. Use file inventory searches for Ghostscript binaries to identify affected assets.",
+      "affected_versions": "Ghostscript interpreter and rendering engine, versions prior to the patch addressing CVE-2026-39919. Check vendor advisories for specific vulnerable ranges.",
+      "how_to_determine_impact": "Identify all systems that utilize Ghostscript for PDF processing or rendering. Check the installed version of Ghostscript. Verify if systems accept untrusted PDF uploads.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Ghostscript'. Use 'Get File Version' for Ghostscript executables (e.g., 'gs.exe' or 'libgs.so') to determine patch status. Look for processes handling PDF files with Ghostscript.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-39919'. Filter assets by 'Software: Ghostscript'. Run authenticated scans to detect vulnerable Ghostscript versions. Review systems with exposed PDF upload functionalities.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "Critical (Estimated 9.8)"
     }
   ],
   "insurance": [],
@@ -22816,6 +22816,110 @@
         "rapid7_query_hint": "Scan systems for Ghostscript installations. Search InsightVM for vulnerability ID 'CVE-2026-39919' and associated solutions. Use file inventory searches for Ghostscript binaries to identify affected assets.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-10-14": [
+      {
+        "title": "Meta Says Hackers Took Code, Personal Data of 1,500 in GitHub Breach",
+        "tldr": "Meta disclosed a breach where hackers accessed code and personal data of approximately 1,500 individuals via GitHub. This incident highlights the risk of third-party platform vulnerabilities leading to sensitive data exposure.",
+        "action": "Review access logs and permissions for any GitHub repositories containing sensitive company code or data. Ensure strong authentication and least privilege principles are applied to all source code management platforms.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/meta-says-hackers-took-code-personal-data-of-1500-in-github-breach/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Xandr Fined a Record €8.6 Million for Relaying Grindr Data Revealing Sexual Orientation",
+        "tldr": "Xandr, an advertising platform, was fined €8.6 million for illegally collecting and sharing sensitive user data, specifically Grindr user data revealing sexual orientation. This constitutes a significant privacy breach under GDPR.",
+        "action": "Conduct a thorough audit of all data collection, processing, and sharing practices, especially concerning sensitive personal data. Ensure strict compliance with data protection regulations like GDPR and CCPA.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/xandr-fined-record-86-million-for.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "OpenAI engineer arrested for allegedly planting spy device in office",
+        "tldr": "An OpenAI engineer was arrested for allegedly planting a hidden recording device in an executive conference room. This internal incident highlights insider threat risks for sensitive discussions and intellectual property.",
+        "action": "Implement enhanced physical security measures for sensitive areas, including regular sweeps for unauthorized devices. Strengthen insider threat programs, including monitoring and awareness training for all employees.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-engineer-arrested-for-allegedly-planting-spy-device-in-office/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "TFG London cyberattack disrupts systems at Hobbs and Whistles retailers",
+        "tldr": "TFG London experienced a cybersecurity incident that disrupted IT systems for its fashion brands, including Phase Eight, Hobbs, and Whistles. The nature of the attack is not specified but caused operational disruption.",
+        "action": "Review incident response plans and ensure business continuity measures are in place for critical systems. Investigate recent security logs for anomalies and indicators of compromise related to system disruption.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/tfg-london-cyberattack-disrupts-systems-at-hobbs-and-whistles-retailers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Microsoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days",
+        "tldr": "Microsoft's October 2026 Patch Tuesday addressed a record 1,411 vulnerabilities, including one actively exploited zero-day and two publicly disclosed zero-days. This is a critical monthly update.",
+        "action": "Immediately apply all available Microsoft October 2026 security updates to all Windows systems, Exchange Servers, and other Microsoft products. Prioritize patching systems affected by the actively exploited zero-day.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All supported Microsoft Windows versions, Microsoft Exchange, and other Microsoft products prior to October 2026 patches. Specifics for zero-days not detailed in snippet.",
+        "how_to_determine_impact": "Identify systems running Microsoft Windows and other Microsoft applications. Verify successful installation of October 2026 Patch Tuesday updates. Check for specific KBs (e.g., KB5126657 for Win10, KB5127648/KB5126653 for Win11) to confirm patch status.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Windows' and 'Exchange'. Use 'Get Windows Update History' sensor to verify October 2026 KBs. Use 'Get Running Processes' to identify potentially vulnerable services if specific CVE details are released.",
+        "rapid7_query_hint": "Search for 'Microsoft October 2026 Patch Tuesday' vulnerabilities. Filter assets by 'Operating System: Windows' or 'Service: Exchange'. Verify patch status using agent data or authenticated scans for missing KBs.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (Multiple CVSS scores, including critical for zero-days)",
+        "category": "vulns"
+      },
+      {
+        "title": "Attacker Chains Three Ivanti Connect Secure Zero-Days for Root Access, Only Two Patched So Far",
+        "tldr": "Attackers are chaining multiple zero-day vulnerabilities in Ivanti Connect Secure VPNs to achieve root access. While some patches have been released, at least one zero-day remains unpatched, posing a significant risk of active exploitation.",
+        "action": "Immediately apply all available patches for Ivanti Connect Secure. For any unpatched zero-days, implement recommended mitigation strategies, isolate affected devices, and actively monitor for indicators of compromise.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Ivanti Connect Secure (ICS) VPN appliances, specific versions requiring patches. Refer to Ivanti advisories for exact vulnerable versions.",
+        "how_to_determine_impact": "Check Ivanti Connect Secure appliance versions. Verify successful application of all vendor-provided patches. Monitor appliance logs for suspicious activity or known IoCs related to these zero-days. Review vendor advisories for specific detection methods.",
+        "tanium_query_hint": "Use 'Get Installed Software' to identify Ivanti Connect Secure installations. Use 'Get File Version' for critical Ivanti components to verify patch level. Query logs for suspicious connections to/from Ivanti devices.",
+        "rapid7_query_hint": "Search for 'Ivanti Connect Secure zero-day' vulnerability IDs. Filter assets by 'Software: Ivanti Connect Secure'. Run authenticated scans to detect unpatched vulnerabilities. Monitor network traffic to/from Ivanti VPNs for suspicious patterns.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical (Likely 9.8 or 10.0 given root access and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "SAP Discloses Critical CVSS 10 Flaw in Cloud SDK for Python Allowing OAuth2 Credential Theft",
+        "tldr": "SAP disclosed a critical CVSS 10 vulnerability in its Cloud SDK for Python. The flaw allows an attacker to steal OAuth2 client credentials from multi-tenant applications on SAP Business Technology Platform (BTP) if they control the tenant subdomain.",
+        "action": "Update SAP Cloud SDK for Python to the patched version immediately. Review and restrict subdomain control permissions on SAP BTP. Implement robust monitoring for unusual OAuth2 credential usage.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/sap-discloses-critical-cvss-10-flaw-in.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "SAP Cloud SDK for Python, specific versions prior to the October 13 patch. Affected are multi-tenant applications on SAP Business Technology Platform (BTP) that use the SDK.",
+        "how_to_determine_impact": "Identify all applications using SAP Cloud SDK for Python on SAP BTP. Check the version of the SDK in use. Verify if the application is multi-tenant and if an attacker could control a tenant subdomain.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'SAP Cloud SDK for Python'. Check file versions of SDK components. Query configurations for BTP applications to identify multi-tenant setups and subdomain control mechanisms.",
+        "rapid7_query_hint": "Search for 'SAP Cloud SDK for Python' vulnerabilities. Filter assets by 'Software: SAP Cloud SDK for Python'. Use authenticated scans to identify vulnerable SDK versions. Review BTP configurations for potential subdomain control issues.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Ghostscript flaw lets hackers hijack servers via PDF uploads",
+        "tldr": "A critical heap buffer overflow vulnerability, CVE-2026-39919, in the Ghostscript interpreter allows remote code execution. This can occur through specially crafted PDF files, enabling attackers to hijack servers.",
+        "action": "Update Ghostscript to the patched version. Implement input validation and sanitization for all PDF uploads to systems using Ghostscript. Restrict Ghostscript execution privileges.",
+        "cve_ids": [
+          "CVE-2026-39919"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ghostscript-flaw-lets-hackers-hijack-servers-via-pdf-uploads/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Ghostscript interpreter and rendering engine, versions prior to the patch addressing CVE-2026-39919. Check vendor advisories for specific vulnerable ranges.",
+        "how_to_determine_impact": "Identify all systems that utilize Ghostscript for PDF processing or rendering. Check the installed version of Ghostscript. Verify if systems accept untrusted PDF uploads.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Ghostscript'. Use 'Get File Version' for Ghostscript executables (e.g., 'gs.exe' or 'libgs.so') to determine patch status. Look for processes handling PDF files with Ghostscript.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-39919'. Filter assets by 'Software: Ghostscript'. Run authenticated scans to detect vulnerable Ghostscript versions. Review systems with exposed PDF upload functionalities.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "Critical (Estimated 9.8)",
         "category": "vulns"
       }
     ]
