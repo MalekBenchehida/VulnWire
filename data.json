@@ -2,92 +2,86 @@
   "breaches": [
     {
       "title": "UK Legal Aid Agency: Hackers stole records dating back to 1978",
-      "tldr": "The UK's Legal Aid Agency (LAA) confirmed a breach in April 2025 where attackers stole records dating back to 1978. A subsequent forensic review indicated a wider scope of the hack, exposing historical personal data. This represents a significant and long-term data compromise.",
-      "action": "Assess if your organization has any data sharing or integration with the UK Legal Aid Agency. Monitor for any potential impact or direct notifications. Advise employees who may have interacted with the LAA to be vigilant for phishing attempts and identity theft.",
+      "tldr": "The UK's Legal Aid Agency suffered a data breach in April 2025, resulting in the theft of records spanning from 1978. A forensic review confirmed the wide scope of the data compromise, impacting sensitive historical data.",
+      "action": "Organizations should review third-party vendor security, especially those handling sensitive or historical data. Implement robust data retention policies and access controls.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/",
       "source": "BleepingComputer"
     },
     {
       "title": "CenterPoint Energy Data Breach Impacts 1 Million Texans",
-      "tldr": "CenterPoint Energy, a major utility provider, has experienced a data breach affecting approximately 1 million customers in Texas. The specific types of data compromised are critical for understanding the full impact on affected individuals.",
-      "action": "If your organization is a customer of CenterPoint Energy, monitor for direct notifications regarding the breach. Advise employees in Texas who are CenterPoint customers to enhance vigilance against phishing, imposter scams, and potential identity theft.",
+      "tldr": "CenterPoint Energy experienced a data breach affecting approximately 1 million Texans. While specific details on the compromised data were not fully disclosed, it implies the exposure of sensitive customer information.",
+      "action": "Customers of CenterPoint Energy should monitor their accounts and credit reports for suspicious activity. Organizations handling large datasets must implement strong access controls and continuous monitoring.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/centerpoint-energy-data-breach-impacts-1-million-texans/",
       "source": "SecurityWeek"
-    },
-    {
-      "title": "ThreatsDay: DNS Wallet Theft",
-      "tldr": "A summary of recent threats highlights instances of DNS wallet theft, indicating sophisticated attacks where adversaries manipulate DNS records to redirect cryptocurrency transactions or steal wallet credentials. This targets high-value financial assets.",
-      "action": "Implement and enforce robust DNS security measures, including DNSSEC where applicable. Advise users of cryptocurrency wallets to always verify URLs and domain authenticity. Ensure all financial accounts utilize strong multi-factor authentication (MFA) and consider hardware wallets for critical assets.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/threatsday-adobe-rce-dns-wallet-thft.html",
-      "source": "The Hacker News"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
-      "tldr": "Palo Alto Networks has released security updates for a high-severity PAN-OS RCE zero-day, tracked as CVE-2026-0322, that is actively being exploited in attacks targeting firewalls. This vulnerability allows for remote code execution on affected devices.",
-      "action": "Immediately apply the provided security updates to all affected Palo Alto Networks PAN-OS installations. Prioritize patching internet-facing firewalls. Review logs for any indicators of compromise related to CVE-2026-0322.",
+      "title": "Palo Alto Networks Patches PAN-OS Zero-Day Exploited for Remote Code Execution",
+      "tldr": "Palo Alto Networks has released out-of-band security updates for a high-severity remote code execution (RCE) flaw in PAN-OS, tracked as CVE-2026-0322. This zero-day vulnerability is actively exploited in attacks targeting Palo Alto firewalls, posing an immediate threat.",
+      "action": "Immediately apply the security updates provided by Palo Alto Networks for all affected PAN-OS versions. Review network logs for any signs of compromise if updates were not applied promptly, and implement additional intrusion detection.",
       "cve_ids": [
         "CVE-2026-0322"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
+      "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Specific PAN-OS versions are affected. Consult the official Palo Alto Networks advisory for precise vulnerable version ranges and patches.",
+      "how_to_determine_impact": "Check the PAN-OS version on all Palo Alto Network firewalls. Look for signs of compromise in logs, especially related to authentication, unusual network activity, or unauthorized access attempts.",
+      "tanium_query_hint": "Get Computer Name and OS Platform and Product Version from all machines where Product Name contains 'PAN-OS'. Check vulnerability reports for 'CVE-2026-0322'.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-0322' in InsightVM. Use an asset search filter for 'Operating System' containing 'PAN-OS' and verify applied patches against the vendor advisory.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated)"
+    },
+    {
+      "title": "Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers",
+      "tldr": "Threat actors are actively exploiting a critical command execution flaw, CVE-2026-110447, in the Collabora Online - Built-in CODE Server app (richdocumentscode) for Nextcloud. Successful exploitation allows attackers to backdoor Nextcloud servers, enabling persistent access.",
+      "action": "Update the Collabora Online - Built-in CODE Server app (richdocumentscode) in all Nextcloud installations immediately to the latest patched version. Monitor Nextcloud server logs for suspicious activity, unauthorized file modifications, or new user accounts.",
+      "cve_ids": [
+        "CVE-2026-110447"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Specific versions of Palo Alto Networks PAN-OS are vulnerable. Consult the official Palo Alto Networks advisory for the exact vulnerable version ranges and patch releases.",
-      "how_to_determine_impact": "Check the firmware version of all Palo Alto Networks PAN-OS firewalls against the vendor's security advisory for CVE-2026-0322. Look for any unusual activity in firewall logs or system performance metrics that may indicate exploitation.",
-      "tanium_query_hint": "Get Network Devices. For identified Palo Alto devices, use 'Get Hardware Information' or 'Get Software Version' specific to PAN-OS. Refer to vendor's guide for endpoint-specific checks if applicable.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-0322' in InsightVM. Use asset search filters for 'Operating System: PAN-OS' to identify affected devices. Follow Rapid7's recommended remediation steps and compromise assessment queries.",
+      "affected_versions": "Collabora Online - Built-in CODE Server app (richdocumentscode) for Nextcloud. Consult Collabora and Nextcloud advisories for specific vulnerable version ranges.",
+      "how_to_determine_impact": "Check the installed versions of the 'richdocumentscode' app within all Nextcloud environments. Examine Nextcloud server logs and file integrity for evidence of unauthorized code execution or backdoor presence.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Nextcloud' or 'Collabora'. Search for known backdoor indicators using 'Get File Exists' or 'Get Process List'.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-110447' in InsightVM. Use asset search for 'Software Name' containing 'Nextcloud' or 'Collabora' and check installed versions against the vendor's patch release.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
-      "title": "Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing",
-      "tldr": "Next.js has released an urgent out-of-band patch to address two critical Remote Code Execution (RCE) vulnerabilities. These flaws reside in the caching and SVG processing components of the framework, potentially allowing attackers to execute arbitrary code.",
-      "action": "Immediately update all Next.js applications and deployments to the latest patched versions. Conduct a review of application code for any custom caching or SVG processing that might introduce additional risks or complexity.",
+      "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+      "tldr": "A critical Linux kernel vulnerability, dubbed PwnEscape, has been discovered that allows guest virtual machines (VMs) to read memory from the host system. This could lead to sensitive information disclosure and potential further compromise of the host environment.",
+      "action": "Apply the latest security patches for the Linux kernel on all affected host systems running virtual machines. Isolate critical host systems and implement strict memory access controls.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html",
+      "source_url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Specific versions of Next.js are vulnerable prior to the emergency out-of-band patch. Consult the official Vercel/Next.js security advisory for exact vulnerable version ranges.",
-      "how_to_determine_impact": "Identify all applications and services utilizing Next.js in your environment. Verify their deployed versions against the official Next.js security advisory to determine vulnerability.",
-      "tanium_query_hint": "On servers or containers hosting Next.js applications, use 'Get Installed Applications' or 'Get File Version' for Next.js binaries to determine current version.",
-      "rapid7_query_hint": "Perform authenticated scans on web servers and application hosts. Search InsightVM for vulnerability checks related to Next.js or web framework RCEs. Asset search for 'Software: Next.js' and filter by version.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks",
-      "tldr": "NGINX has released patches for five vulnerabilities, including a critical Remote Code Execution (RCE) possibility and a TLS bug that could allow attackers to bypass client certificate authentication checks. These flaws could severely impact web server security and access control.",
-      "action": "Immediately update all NGINX installations to the latest patched version. Review NGINX configurations, particularly those enforcing client certificate authentication, to confirm proper implementation and mitigation of the TLS bypass bug.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Specific versions of NGINX are affected. Consult the official NGINX security advisory for detailed vulnerable version ranges for each of the five fixed flaws.",
-      "how_to_determine_impact": "Verify the version of NGINX running on all web servers. Compare the version number against the NGINX security advisory. Additionally, inspect NGINX configuration files for affected TLS and RCE-related directives.",
-      "tanium_query_hint": "Use 'Get Installed Applications' on web servers to identify NGINX versions. For configuration checks, use 'Get File Content' for NGINX configuration files (e.g., /etc/nginx/nginx.conf) to look for relevant settings.",
-      "rapid7_query_hint": "Conduct authenticated scans on web servers running NGINX. Search InsightVM for NGINX-related vulnerability checks, especially for RCE and TLS configuration issues. Asset search for 'Software: NGINX' and filter by version.",
+      "affected_versions": "Specific versions of the Linux kernel are affected. Consult official Linux distribution advisories for precise vulnerable version ranges and available patches.",
+      "how_to_determine_impact": "Check the Linux kernel version on all host machines running virtual environments. Review VM configurations for any unusual access permissions or memory mapping settings.",
+      "tanium_query_hint": "Get Kernel Version from all machines where OS Platform contains 'Linux'. Use 'Get Installed Patches' to verify if relevant kernel updates have been applied.",
+      "rapid7_query_hint": "Asset search for 'Operating System' containing 'Linux' and check kernel versions against vulnerability databases. Look for vulnerability checks related to 'PwnEscape' or Linux kernel memory vulnerabilities.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "8.8 High (Estimated)"
     },
     {
       "title": "Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules",
-      "tldr": "Drupal has issued a patch for a critical vulnerability in its Field UI that can lead to unauthenticated Remote Code Execution (RCE) when specific contributed modules are enabled. This presents a severe security risk to unpatched Drupal sites.",
-      "action": "Immediately apply the latest security updates to all Drupal installations. Conduct an audit of all active contributed modules and disable any that are not essential, especially if they are mentioned in the Drupal security advisory.",
+      "tldr": "Drupal has released patches for a critical Field UI flaw that could enable unauthenticated Remote Code Execution (RCE). This vulnerability primarily affects Drupal installations utilizing specific contributed modules, allowing attackers to execute arbitrary code without authentication.",
+      "action": "Immediately update all Drupal installations, especially those utilizing contributed modules, to the latest patched versions. Review all custom and contributed modules for security best practices and ensure no unauthorized modifications exist.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Specific versions of Drupal core, particularly when configured with certain contributed modules, are vulnerable. Refer to the official Drupal security advisory for precise version details.",
-      "how_to_determine_impact": "Identify all Drupal installations within your environment and check their core versions. Additionally, enumerate and verify the versions and active status of all contributed modules installed on each Drupal instance.",
-      "tanium_query_hint": "On web servers, use 'Get Installed Applications' to find Drupal versions. Utilize 'Get File Content' to examine Drupal module directories for specific contributed modules mentioned in the advisory.",
-      "rapid7_query_hint": "Perform authenticated web application scans targeting Drupal sites. Search InsightVM for vulnerability checks related to Drupal RCE or Field UI. Filter asset searches by 'Software: Drupal' and investigate module configurations.",
+      "affected_versions": "Specific versions of Drupal and potentially certain contributed modules. Consult official Drupal security advisories for precise vulnerable and fixed versions.",
+      "how_to_determine_impact": "Check the Drupal core version and the list of installed contributed modules on all Drupal instances. Compare against official Drupal security advisories to determine vulnerability.",
+      "tanium_query_hint": "Get Installed Applications with Name containing 'Drupal'. Use 'Get File Content' on 'core/CHANGELOG.txt' or similar version files to determine the exact Drupal version.",
+      "rapid7_query_hint": "Asset search for web servers running Drupal. Look for vulnerability checks specific to Drupal Field UI or unauthenticated RCE flaws in InsightVM.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     }
   ],
   "insurance": [],
@@ -23223,6 +23217,58 @@
         "rapid7_query_hint": "Perform authenticated web application scans targeting Drupal sites. Search InsightVM for vulnerability checks related to Drupal RCE or Field UI. Filter asset searches by 'Software: Drupal' and investigate module configurations.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Palo Alto Networks Patches PAN-OS Zero-Day Exploited for Remote Code Execution",
+        "tldr": "Palo Alto Networks has released out-of-band security updates for a high-severity remote code execution (RCE) flaw in PAN-OS, tracked as CVE-2026-0322. This zero-day vulnerability is actively exploited in attacks targeting Palo Alto firewalls, posing an immediate threat.",
+        "action": "Immediately apply the security updates provided by Palo Alto Networks for all affected PAN-OS versions. Review network logs for any signs of compromise if updates were not applied promptly, and implement additional intrusion detection.",
+        "cve_ids": [
+          "CVE-2026-0322"
+        ],
+        "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Specific PAN-OS versions are affected. Consult the official Palo Alto Networks advisory for precise vulnerable version ranges and patches.",
+        "how_to_determine_impact": "Check the PAN-OS version on all Palo Alto Network firewalls. Look for signs of compromise in logs, especially related to authentication, unusual network activity, or unauthorized access attempts.",
+        "tanium_query_hint": "Get Computer Name and OS Platform and Product Version from all machines where Product Name contains 'PAN-OS'. Check vulnerability reports for 'CVE-2026-0322'.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-0322' in InsightVM. Use an asset search filter for 'Operating System' containing 'PAN-OS' and verify applied patches against the vendor advisory.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers exploit Collabora RCE flaw to backdoor Nextcloud servers",
+        "tldr": "Threat actors are actively exploiting a critical command execution flaw, CVE-2026-110447, in the Collabora Online - Built-in CODE Server app (richdocumentscode) for Nextcloud. Successful exploitation allows attackers to backdoor Nextcloud servers, enabling persistent access.",
+        "action": "Update the Collabora Online - Built-in CODE Server app (richdocumentscode) in all Nextcloud installations immediately to the latest patched version. Monitor Nextcloud server logs for suspicious activity, unauthorized file modifications, or new user accounts.",
+        "cve_ids": [
+          "CVE-2026-110447"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Collabora Online - Built-in CODE Server app (richdocumentscode) for Nextcloud. Consult Collabora and Nextcloud advisories for specific vulnerable version ranges.",
+        "how_to_determine_impact": "Check the installed versions of the 'richdocumentscode' app within all Nextcloud environments. Examine Nextcloud server logs and file integrity for evidence of unauthorized code execution or backdoor presence.",
+        "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Nextcloud' or 'Collabora'. Search for known backdoor indicators using 'Get File Exists' or 'Get Process List'.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-110447' in InsightVM. Use asset search for 'Software Name' containing 'Nextcloud' or 'Collabora' and check installed versions against the vendor's patch release.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical PwnEscape Linux Kernel Vulnerability Lets Guest VMs Read Host Memory",
+        "tldr": "A critical Linux kernel vulnerability, dubbed PwnEscape, has been discovered that allows guest virtual machines (VMs) to read memory from the host system. This could lead to sensitive information disclosure and potential further compromise of the host environment.",
+        "action": "Apply the latest security patches for the Linux kernel on all affected host systems running virtual machines. Isolate critical host systems and implement strict memory access controls.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific versions of the Linux kernel are affected. Consult official Linux distribution advisories for precise vulnerable version ranges and available patches.",
+        "how_to_determine_impact": "Check the Linux kernel version on all host machines running virtual environments. Review VM configurations for any unusual access permissions or memory mapping settings.",
+        "tanium_query_hint": "Get Kernel Version from all machines where OS Platform contains 'Linux'. Use 'Get Installed Patches' to verify if relevant kernel updates have been applied.",
+        "rapid7_query_hint": "Asset search for 'Operating System' containing 'Linux' and check kernel versions against vulnerability databases. Look for vulnerability checks related to 'PwnEscape' or Linux kernel memory vulnerabilities.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High (Estimated)",
         "category": "vulns"
       }
     ]
