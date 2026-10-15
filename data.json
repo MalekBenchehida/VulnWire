@@ -1,85 +1,101 @@
 {
   "breaches": [
     {
-      "title": "Hirudo Android malware replaces banking apps to evade security checks",
-      "tldr": "The Hirudo Android malware is actively stealing bank account credentials by replacing legitimate banking applications with modified, malicious versions. These altered apps disable built-in security checks, allowing the malware to bypass protections and compromise user accounts.",
-      "action": "Users should only download banking apps from official app stores. Organizations should educate users about the risks of sideloading apps and consider mobile device management (MDM) solutions to enforce app installation policies.",
+      "title": "UK Legal Aid Agency: Hackers stole records dating back to 1978",
+      "tldr": "The UK Legal Aid Agency (LAA) confirmed a breach in April 2025 where attackers stole sensitive records dating back to 1978. The breadth of compromised data includes decades of historical information, indicating a significant historical data loss.",
+      "action": "Review historical data retention policies and implement robust data loss prevention (DLP) measures. Enhance intrusion detection and prevention systems to guard against sophisticated breaches and monitor for related data exposure.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hirudo-android-malware-replaces-banking-apps-to-evade-security-checks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/",
       "source": "BleepingComputer"
     },
     {
       "title": "Ledger asks sellers across Asia to halt sales after supply-chain attack",
-      "tldr": "Ledger has requested resellers and distributors across several Asian countries to suspend sales of its crypto wallets due to a suspected supply-chain attack. This incident indicates potential device tampering before reaching customers, posing a risk to the security of user funds and stored cryptocurrencies.",
-      "action": "If you have recently purchased a Ledger device from resellers in affected regions, refrain from using it until Ledger provides official guidance. Monitor Ledger's official communication channels for updates on how to verify device integrity and next steps.",
+      "tldr": "Ledger has instructed resellers and distributors in several Asian countries to suspend sales of its hardware wallets due to a supply-chain attack involving device tampering. This measure aims to prevent customers from receiving potentially compromised hardware devices.",
+      "action": "Customers who recently purchased Ledger devices in affected regions should not use them until further guidance from Ledger. All users should rigorously verify device authenticity and integrity using official Ledger tools and instructions upon receipt.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "UK Legal Aid Agency Hack Scope Widens After Forensic Review",
+      "tldr": "The initial forensic review of the UK Legal Aid Agency (LAA) data breach indicates a wider scope of compromise than initially assessed. This expansion suggests more records or a broader range of data types may have been affected.",
+      "action": "Organizations should conduct thorough and continuous forensic analyses after a breach to accurately determine the full impact. Prepare for potential further notifications to affected parties and adjust incident response plans accordingly.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/uk-legal-aid-agency-hack-scope-widens-after-forensic-review/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "CenterPoint Energy Data Breach Impacts 1 Million Texans",
+      "tldr": "CenterPoint Energy has confirmed a significant data breach affecting approximately 1 million customers in Texas. The breach involves personal and potentially sensitive customer information, raising concerns for identity theft and fraud.",
+      "action": "Implement immediate credit monitoring and fraud alerts for affected individuals. All organizations, particularly those in critical infrastructure, should enhance their customer data segregation, access control, and breach detection measures.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/centerpoint-energy-data-breach-impacts-1-million-texans/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
       "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
-      "tldr": "Palo Alto Networks has released security updates for a high-severity PAN-OS RCE zero-day, CVE-2026-0322, which is actively being exploited in attacks targeting firewalls. This vulnerability allows remote code execution.",
-      "action": "Immediately apply the security updates released by Palo Alto Networks for PAN-OS to mitigate CVE-2026-0322. Verify patch installation and monitor logs for signs of compromise.",
+      "tldr": "Palo Alto Networks has released security updates for a high-severity PAN-OS RCE zero-day, tracked as CVE-2026-0322. This vulnerability is actively exploited in attacks targeting Palo Alto firewalls, allowing for remote code execution.",
+      "action": "Immediately apply the latest security updates to all Palo Alto Networks PAN-OS devices without delay. Monitor network traffic and device logs for any indicators of compromise related to CVE-2026-0322.",
       "cve_ids": [
         "CVE-2026-0322"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "PAN-OS (specific versions prior to patched releases, refer to vendor advisory for CVE-2026-0322).",
-      "how_to_determine_impact": "Identify all Palo Alto Networks firewall appliances running PAN-OS. Check their current software versions against the vendor's advisory for CVE-2026-0322 to determine if they are vulnerable.",
-      "tanium_query_hint": "Use Tanium Connect to pull firewall inventory and configuration data. Check for installed PAN-OS versions and cross-reference with advisory. Look for suspicious processes or network connections originating from firewall management interfaces.",
-      "rapid7_query_hint": "Search vulnerability ID 'CVE-2026-0322' in InsightVM. Use asset search to filter for Palo Alto Networks appliances and verify patch status. Run authenticated scans.",
+      "affected_versions": "Palo Alto Networks PAN-OS (specific vulnerable versions specified in vendor advisory for CVE-2026-0322)",
+      "how_to_determine_impact": "Check the PAN-OS version on all Palo Alto Networks firewalls against the vendor's advisory for CVE-2026-0322. Look for unusual activity, unauthorized configurations, or signs of compromise as outlined in the vendor's security alert.",
+      "tanium_query_hint": "Use Tanium 'Get Installed Applications' or relevant sensors to identify PAN-OS versions on devices. For affected systems, deploy a custom sensor to check specific configuration files or process states for indicators of compromise related to CVE-2026-0322.",
+      "rapid7_query_hint": "In InsightVM, search for vulnerability ID 'CVE-2026-0322' to identify affected assets. Use InsightIDR to search logs for suspicious activity originating from or targeting PAN-OS devices, matching vendor-provided IoCs.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (estimate 9.8)"
+      "cvss_score": "9.8 Critical (estimated based on RCE zero-day and active exploitation)"
     },
     {
       "title": "Cisco patches new Secure Email Gateway zero-day exploited in attacks",
-      "tldr": "Cisco has patched an actively exploited zero-day flaw in its Secure Email Gateway (SEG) that allows remote, unauthenticated attackers to execute commands with root privileges. This critical vulnerability poses a severe risk to affected systems.",
-      "action": "Apply the latest security patches for Cisco Secure Email Gateway immediately. Review SEG logs for any unusual activity or unauthorized access attempts indicating prior compromise.",
+      "tldr": "Cisco has released a patch for a new zero-day vulnerability in its Secure Email Gateway (SEG) that allows unauthenticated remote attackers to execute commands with root privileges. This critical flaw is actively exploited in the wild.",
+      "action": "Immediately apply the latest security updates to all Cisco Secure Email Gateway deployments. Monitor these devices closely for any signs of compromise, such as unexpected processes, modified configurations, or unauthorized activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Secure Email Gateway (all versions prior to the latest security update addressing the zero-day).",
-      "how_to_determine_impact": "Check Cisco Secure Email Gateway appliances for installed software versions and ensure they are updated to the latest patched release. Review device logs for indicators of compromise, such as unexpected commands or root-level activity.",
-      "tanium_query_hint": "Execute 'Get Installed Applications' on servers. Filter for 'Cisco Secure Email Gateway'. Cross-reference versions with Cisco's advisory. Look for unauthorized root processes.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to Cisco Secure Email Gateway zero-day. Use asset search to identify SEG installations and verify patch status. Scan devices for known IoCs.",
+      "affected_versions": "Cisco Secure Email Gateway (SEG) (specific vulnerable versions to be identified in Cisco's official advisory)",
+      "how_to_determine_impact": "Verify the version of all Cisco Secure Email Gateway appliances. Consult Cisco's official security advisory for this zero-day to identify exact vulnerable versions and detection methods. Look for unexpected processes or configurations.",
+      "tanium_query_hint": "Use Tanium 'Get Installed Applications' or relevant sensors to determine Cisco SEG versions. Deploy custom sensors to check for known IoCs or suspicious processes/files detailed in Cisco's advisory and endpoint security logs.",
+      "rapid7_query_hint": "Check InsightVM for any listed vulnerabilities related to Cisco Secure Email Gateway. In InsightIDR, search logs from SEG appliances for activity consistent with unauthenticated RCE or root command execution as described by Cisco.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (estimate 9.8)"
+      "cvss_score": "9.8 Critical (estimated based on unauthenticated root RCE zero-day and active exploitation)"
     },
     {
-      "title": "CISA warns admins to immediately fix Ivanti flaw exploited as zero-day",
-      "tldr": "CISA has issued an urgent warning to immediately patch an Ivanti Connect Secure (ICS) flaw, which has been actively exploited as a zero-day since early October. This critical vulnerability requires immediate attention to prevent compromise.",
-      "action": "Prioritize and immediately apply all available security updates for Ivanti Connect Secure products, as recommended by CISA. Follow Ivanti's guidance for post-patch integrity checks and threat hunting.",
+      "title": "Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks",
+      "tldr": "The Silent Lynx threat group is actively exploiting an unpatched WinRAR vulnerability to deploy reverse shells, primarily targeting CIS government entities. This indicates a sophisticated attack campaign using a known software flaw for initial access and persistence.",
+      "action": "Immediately identify and patch all WinRAR installations to the latest secure version across all endpoints. Conduct comprehensive endpoint detection and response (EDR) scans for indicators of compromise related to Silent Lynx or active reverse shells.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-immediately-fix-ivanti-flaw-exploited-as-zero-day/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Ivanti Connect Secure (all versions prior to the latest security patches addressing the zero-day).",
-      "how_to_determine_impact": "Identify all Ivanti Connect Secure appliances within the environment. Verify the installed software versions against Ivanti's latest security advisories and patch releases for zero-day vulnerabilities. Check system logs for signs of compromise dating back to October 1st.",
-      "tanium_query_hint": "Execute 'Get Installed Applications' or 'Get Running Processes' on relevant servers. Look for Ivanti Connect Secure components. Check file integrity or specific IoCs provided by Ivanti/CISA.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to Ivanti Connect Secure zero-day. Use asset search to identify Ivanti Connect Secure installations and verify their patch status. Run authenticated scans for known indicators of compromise.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (estimate 9.8)"
-    },
-    {
-      "title": "Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora\nR\n\n\n\n\n's Built-in CODE App",
-      "tldr": "Threat actors are actively backdooring Nextcloud servers by exploiting a critical vulnerability found in the Collabora Online Development Edition (CODE) app, which is often integrated into Nextcloud. This flaw allows for unauthorized access and potential server compromise.",
-      "action": "Immediately update the Collabora CODE app within Nextcloud environments to the latest patched version. Review Nextcloud server logs and Collabora CODE logs for signs of compromise, such as unexpected user accounts, file modifications, or anomalous network activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html",
+      "source_url": "https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Nextcloud servers utilizing vulnerable versions of the Collabora CODE app; refer to vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Check all Nextcloud installations to determine if the Collabora CODE app is installed and verify its current version. Consult Nextcloud and Collabora official security advisories for details on vulnerable versions and indicators of compromise. Review audit logs for suspicious activity.",
-      "tanium_query_hint": "Execute 'Get Installed Applications' on web servers. Filter for 'Nextcloud' or 'Collabora CODE'. Check for specific file hashes or directories associated with known backdoors.",
-      "rapid7_query_hint": "Search vulnerability databases for Nextcloud and Collabora CODE vulnerabilities. Perform authenticated scans on Nextcloud servers. Look for file integrity deviations or unauthorized modifications.",
+      "affected_versions": "WinRAR (specific vulnerable version details to be determined from official WinRAR or security researcher advisories)",
+      "how_to_determine_impact": "Verify the installed version of WinRAR on all endpoints. Look for suspicious processes indicative of a reverse shell (e.g., cmd.exe, powershell.exe connecting outbound to unusual IPs) and review system logs for file execution anomalies.",
+      "tanium_query_hint": "Use Tanium 'Get Installed Applications' or 'Get File Version' for 'WinRAR.exe' to identify vulnerable versions. Query for suspicious network connections or processes (e.g., 'Get Running Processes matching \"cmd.exe|powershell.exe\" with netstat') on affected systems.",
+      "rapid7_query_hint": "In InsightVM, search for any known vulnerabilities related to WinRAR or general RCE exploits. Use InsightIDR to look for process creation events of common reverse shell tools or outbound connections from WinRAR processes to suspicious external IPs.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (estimate 9.8)"
+      "cvss_score": "9.0 Critical (estimated based on active exploitation and RCE leading to reverse shell)"
+    },
+    {
+      "title": "Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing",
+      "tldr": "Next.js has released an emergency out-of-band patch to address two critical Remote Code Execution (RCE) vulnerabilities. These flaws impact the framework's caching mechanisms and SVG processing capabilities, necessitating urgent updates.",
+      "action": "Immediately update all Next.js applications and deployments to the patched version. Review codebases for any custom SVG handling or caching implementations that might interact with these flaws and potentially introduce risk.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Next.js (specific vulnerable versions to be identified in Vercel's official security advisory)",
+      "how_to_determine_impact": "Identify all Next.js projects and their deployed versions. Consult the official Next.js/Vercel security advisory for precise vulnerable version ranges. Audit applications for specific use of caching features or SVG processing that could trigger these flaws.",
+      "tanium_query_hint": "For servers hosting Next.js applications, use 'Get Installed Applications' or 'Get File Version' on relevant Node.js packages to determine Next.js versions. Custom sensors can be deployed to check specific configuration files or module versions within application directories.",
+      "rapid7_query_hint": "Use InsightVM to scan web application servers for known vulnerabilities related to Next.js or JavaScript frameworks. For custom deployments, manual verification of Next.js versions and framework configurations may be required following vendor guidance.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (estimated based on multiple critical RCE flaws requiring out-of-band patch)"
     }
   ],
   "insurance": [],
@@ -23070,6 +23086,110 @@
         "rapid7_query_hint": "Search vulnerability ID 'CVE-2026-0322' in InsightVM. Use asset search to filter for Palo Alto Networks appliances and verify patch status. Run authenticated scans.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Critical (estimate 9.8)",
+        "category": "vulns"
+      }
+    ],
+    "2026-10-15": [
+      {
+        "title": "UK Legal Aid Agency: Hackers stole records dating back to 1978",
+        "tldr": "The UK Legal Aid Agency (LAA) confirmed a breach in April 2025 where attackers stole sensitive records dating back to 1978. The breadth of compromised data includes decades of historical information, indicating a significant historical data loss.",
+        "action": "Review historical data retention policies and implement robust data loss prevention (DLP) measures. Enhance intrusion detection and prevention systems to guard against sophisticated breaches and monitor for related data exposure.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Ledger asks sellers across Asia to halt sales after supply-chain attack",
+        "tldr": "Ledger has instructed resellers and distributors in several Asian countries to suspend sales of its hardware wallets due to a supply-chain attack involving device tampering. This measure aims to prevent customers from receiving potentially compromised hardware devices.",
+        "action": "Customers who recently purchased Ledger devices in affected regions should not use them until further guidance from Ledger. All users should rigorously verify device authenticity and integrity using official Ledger tools and instructions upon receipt.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "UK Legal Aid Agency Hack Scope Widens After Forensic Review",
+        "tldr": "The initial forensic review of the UK Legal Aid Agency (LAA) data breach indicates a wider scope of compromise than initially assessed. This expansion suggests more records or a broader range of data types may have been affected.",
+        "action": "Organizations should conduct thorough and continuous forensic analyses after a breach to accurately determine the full impact. Prepare for potential further notifications to affected parties and adjust incident response plans accordingly.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/uk-legal-aid-agency-hack-scope-widens-after-forensic-review/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "CenterPoint Energy Data Breach Impacts 1 Million Texans",
+        "tldr": "CenterPoint Energy has confirmed a significant data breach affecting approximately 1 million customers in Texas. The breach involves personal and potentially sensitive customer information, raising concerns for identity theft and fraud.",
+        "action": "Implement immediate credit monitoring and fraud alerts for affected individuals. All organizations, particularly those in critical infrastructure, should enhance their customer data segregation, access control, and breach detection measures.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/centerpoint-energy-data-breach-impacts-1-million-texans/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
+        "tldr": "Palo Alto Networks has released security updates for a high-severity PAN-OS RCE zero-day, tracked as CVE-2026-0322. This vulnerability is actively exploited in attacks targeting Palo Alto firewalls, allowing for remote code execution.",
+        "action": "Immediately apply the latest security updates to all Palo Alto Networks PAN-OS devices without delay. Monitor network traffic and device logs for any indicators of compromise related to CVE-2026-0322.",
+        "cve_ids": [
+          "CVE-2026-0322"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Palo Alto Networks PAN-OS (specific vulnerable versions specified in vendor advisory for CVE-2026-0322)",
+        "how_to_determine_impact": "Check the PAN-OS version on all Palo Alto Networks firewalls against the vendor's advisory for CVE-2026-0322. Look for unusual activity, unauthorized configurations, or signs of compromise as outlined in the vendor's security alert.",
+        "tanium_query_hint": "Use Tanium 'Get Installed Applications' or relevant sensors to identify PAN-OS versions on devices. For affected systems, deploy a custom sensor to check specific configuration files or process states for indicators of compromise related to CVE-2026-0322.",
+        "rapid7_query_hint": "In InsightVM, search for vulnerability ID 'CVE-2026-0322' to identify affected assets. Use InsightIDR to search logs for suspicious activity originating from or targeting PAN-OS devices, matching vendor-provided IoCs.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (estimated based on RCE zero-day and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Cisco patches new Secure Email Gateway zero-day exploited in attacks",
+        "tldr": "Cisco has released a patch for a new zero-day vulnerability in its Secure Email Gateway (SEG) that allows unauthenticated remote attackers to execute commands with root privileges. This critical flaw is actively exploited in the wild.",
+        "action": "Immediately apply the latest security updates to all Cisco Secure Email Gateway deployments. Monitor these devices closely for any signs of compromise, such as unexpected processes, modified configurations, or unauthorized activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Secure Email Gateway (SEG) (specific vulnerable versions to be identified in Cisco's official advisory)",
+        "how_to_determine_impact": "Verify the version of all Cisco Secure Email Gateway appliances. Consult Cisco's official security advisory for this zero-day to identify exact vulnerable versions and detection methods. Look for unexpected processes or configurations.",
+        "tanium_query_hint": "Use Tanium 'Get Installed Applications' or relevant sensors to determine Cisco SEG versions. Deploy custom sensors to check for known IoCs or suspicious processes/files detailed in Cisco's advisory and endpoint security logs.",
+        "rapid7_query_hint": "Check InsightVM for any listed vulnerabilities related to Cisco Secure Email Gateway. In InsightIDR, search logs from SEG appliances for activity consistent with unauthenticated RCE or root command execution as described by Cisco.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (estimated based on unauthenticated root RCE zero-day and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks",
+        "tldr": "The Silent Lynx threat group is actively exploiting an unpatched WinRAR vulnerability to deploy reverse shells, primarily targeting CIS government entities. This indicates a sophisticated attack campaign using a known software flaw for initial access and persistence.",
+        "action": "Immediately identify and patch all WinRAR installations to the latest secure version across all endpoints. Conduct comprehensive endpoint detection and response (EDR) scans for indicators of compromise related to Silent Lynx or active reverse shells.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "WinRAR (specific vulnerable version details to be determined from official WinRAR or security researcher advisories)",
+        "how_to_determine_impact": "Verify the installed version of WinRAR on all endpoints. Look for suspicious processes indicative of a reverse shell (e.g., cmd.exe, powershell.exe connecting outbound to unusual IPs) and review system logs for file execution anomalies.",
+        "tanium_query_hint": "Use Tanium 'Get Installed Applications' or 'Get File Version' for 'WinRAR.exe' to identify vulnerable versions. Query for suspicious network connections or processes (e.g., 'Get Running Processes matching \"cmd.exe|powershell.exe\" with netstat') on affected systems.",
+        "rapid7_query_hint": "In InsightVM, search for any known vulnerabilities related to WinRAR or general RCE exploits. Use InsightIDR to look for process creation events of common reverse shell tools or outbound connections from WinRAR processes to suspicious external IPs.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (estimated based on active exploitation and RCE leading to reverse shell)",
+        "category": "vulns"
+      },
+      {
+        "title": "Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing",
+        "tldr": "Next.js has released an emergency out-of-band patch to address two critical Remote Code Execution (RCE) vulnerabilities. These flaws impact the framework's caching mechanisms and SVG processing capabilities, necessitating urgent updates.",
+        "action": "Immediately update all Next.js applications and deployments to the patched version. Review codebases for any custom SVG handling or caching implementations that might interact with these flaws and potentially introduce risk.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Next.js (specific vulnerable versions to be identified in Vercel's official security advisory)",
+        "how_to_determine_impact": "Identify all Next.js projects and their deployed versions. Consult the official Next.js/Vercel security advisory for precise vulnerable version ranges. Audit applications for specific use of caching features or SVG processing that could trigger these flaws.",
+        "tanium_query_hint": "For servers hosting Next.js applications, use 'Get Installed Applications' or 'Get File Version' on relevant Node.js packages to determine Next.js versions. Custom sensors can be deployed to check specific configuration files or module versions within application directories.",
+        "rapid7_query_hint": "Use InsightVM to scan web application servers for known vulnerabilities related to Next.js or JavaScript frameworks. For custom deployments, manual verification of Next.js versions and framework configurations may be required following vendor guidance.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (estimated based on multiple critical RCE flaws requiring out-of-band patch)",
         "category": "vulns"
       }
     ]
