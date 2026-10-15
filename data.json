@@ -2,100 +2,92 @@
   "breaches": [
     {
       "title": "UK Legal Aid Agency: Hackers stole records dating back to 1978",
-      "tldr": "The UK Legal Aid Agency (LAA) confirmed a breach in April 2025 where attackers stole sensitive records dating back to 1978. The breadth of compromised data includes decades of historical information, indicating a significant historical data loss.",
-      "action": "Review historical data retention policies and implement robust data loss prevention (DLP) measures. Enhance intrusion detection and prevention systems to guard against sophisticated breaches and monitor for related data exposure.",
+      "tldr": "The UK's Legal Aid Agency (LAA) confirmed a breach in April 2025 where attackers stole records dating back to 1978. A subsequent forensic review indicated a wider scope of the hack, exposing historical personal data. This represents a significant and long-term data compromise.",
+      "action": "Assess if your organization has any data sharing or integration with the UK Legal Aid Agency. Monitor for any potential impact or direct notifications. Advise employees who may have interacted with the LAA to be vigilant for phishing attempts and identity theft.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/uk-legal-aid-agency-hackers-stole-records-dating-back-to-1978/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Ledger asks sellers across Asia to halt sales after supply-chain attack",
-      "tldr": "Ledger has instructed resellers and distributors in several Asian countries to suspend sales of its hardware wallets due to a supply-chain attack involving device tampering. This measure aims to prevent customers from receiving potentially compromised hardware devices.",
-      "action": "Customers who recently purchased Ledger devices in affected regions should not use them until further guidance from Ledger. All users should rigorously verify device authenticity and integrity using official Ledger tools and instructions upon receipt.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ledger-asks-sellers-across-asia-to-halt-sales-after-supply-chain-attack/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "UK Legal Aid Agency Hack Scope Widens After Forensic Review",
-      "tldr": "The initial forensic review of the UK Legal Aid Agency (LAA) data breach indicates a wider scope of compromise than initially assessed. This expansion suggests more records or a broader range of data types may have been affected.",
-      "action": "Organizations should conduct thorough and continuous forensic analyses after a breach to accurately determine the full impact. Prepare for potential further notifications to affected parties and adjust incident response plans accordingly.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/uk-legal-aid-agency-hack-scope-widens-after-forensic-review/",
-      "source": "SecurityWeek"
-    },
-    {
       "title": "CenterPoint Energy Data Breach Impacts 1 Million Texans",
-      "tldr": "CenterPoint Energy has confirmed a significant data breach affecting approximately 1 million customers in Texas. The breach involves personal and potentially sensitive customer information, raising concerns for identity theft and fraud.",
-      "action": "Implement immediate credit monitoring and fraud alerts for affected individuals. All organizations, particularly those in critical infrastructure, should enhance their customer data segregation, access control, and breach detection measures.",
+      "tldr": "CenterPoint Energy, a major utility provider, has experienced a data breach affecting approximately 1 million customers in Texas. The specific types of data compromised are critical for understanding the full impact on affected individuals.",
+      "action": "If your organization is a customer of CenterPoint Energy, monitor for direct notifications regarding the breach. Advise employees in Texas who are CenterPoint customers to enhance vigilance against phishing, imposter scams, and potential identity theft.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/centerpoint-energy-data-breach-impacts-1-million-texans/",
       "source": "SecurityWeek"
+    },
+    {
+      "title": "ThreatsDay: DNS Wallet Theft",
+      "tldr": "A summary of recent threats highlights instances of DNS wallet theft, indicating sophisticated attacks where adversaries manipulate DNS records to redirect cryptocurrency transactions or steal wallet credentials. This targets high-value financial assets.",
+      "action": "Implement and enforce robust DNS security measures, including DNSSEC where applicable. Advise users of cryptocurrency wallets to always verify URLs and domain authenticity. Ensure all financial accounts utilize strong multi-factor authentication (MFA) and consider hardware wallets for critical assets.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/threatsday-adobe-rce-dns-wallet-thft.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
       "title": "Palo Alto Networks warns of PAN-OS RCE flaw exploited in attacks",
-      "tldr": "Palo Alto Networks has released security updates for a high-severity PAN-OS RCE zero-day, tracked as CVE-2026-0322. This vulnerability is actively exploited in attacks targeting Palo Alto firewalls, allowing for remote code execution.",
-      "action": "Immediately apply the latest security updates to all Palo Alto Networks PAN-OS devices without delay. Monitor network traffic and device logs for any indicators of compromise related to CVE-2026-0322.",
+      "tldr": "Palo Alto Networks has released security updates for a high-severity PAN-OS RCE zero-day, tracked as CVE-2026-0322, that is actively being exploited in attacks targeting firewalls. This vulnerability allows for remote code execution on affected devices.",
+      "action": "Immediately apply the provided security updates to all affected Palo Alto Networks PAN-OS installations. Prioritize patching internet-facing firewalls. Review logs for any indicators of compromise related to CVE-2026-0322.",
       "cve_ids": [
         "CVE-2026-0322"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-pan-os-rce-flaw-exploited-in-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Palo Alto Networks PAN-OS (specific vulnerable versions specified in vendor advisory for CVE-2026-0322)",
-      "how_to_determine_impact": "Check the PAN-OS version on all Palo Alto Networks firewalls against the vendor's advisory for CVE-2026-0322. Look for unusual activity, unauthorized configurations, or signs of compromise as outlined in the vendor's security alert.",
-      "tanium_query_hint": "Use Tanium 'Get Installed Applications' or relevant sensors to identify PAN-OS versions on devices. For affected systems, deploy a custom sensor to check specific configuration files or process states for indicators of compromise related to CVE-2026-0322.",
-      "rapid7_query_hint": "In InsightVM, search for vulnerability ID 'CVE-2026-0322' to identify affected assets. Use InsightIDR to search logs for suspicious activity originating from or targeting PAN-OS devices, matching vendor-provided IoCs.",
+      "affected_versions": "Specific versions of Palo Alto Networks PAN-OS are vulnerable. Consult the official Palo Alto Networks advisory for the exact vulnerable version ranges and patch releases.",
+      "how_to_determine_impact": "Check the firmware version of all Palo Alto Networks PAN-OS firewalls against the vendor's security advisory for CVE-2026-0322. Look for any unusual activity in firewall logs or system performance metrics that may indicate exploitation.",
+      "tanium_query_hint": "Get Network Devices. For identified Palo Alto devices, use 'Get Hardware Information' or 'Get Software Version' specific to PAN-OS. Refer to vendor's guide for endpoint-specific checks if applicable.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-0322' in InsightVM. Use asset search filters for 'Operating System: PAN-OS' to identify affected devices. Follow Rapid7's recommended remediation steps and compromise assessment queries.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated based on RCE zero-day and active exploitation)"
-    },
-    {
-      "title": "Cisco patches new Secure Email Gateway zero-day exploited in attacks",
-      "tldr": "Cisco has released a patch for a new zero-day vulnerability in its Secure Email Gateway (SEG) that allows unauthenticated remote attackers to execute commands with root privileges. This critical flaw is actively exploited in the wild.",
-      "action": "Immediately apply the latest security updates to all Cisco Secure Email Gateway deployments. Monitor these devices closely for any signs of compromise, such as unexpected processes, modified configurations, or unauthorized activity.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Cisco Secure Email Gateway (SEG) (specific vulnerable versions to be identified in Cisco's official advisory)",
-      "how_to_determine_impact": "Verify the version of all Cisco Secure Email Gateway appliances. Consult Cisco's official security advisory for this zero-day to identify exact vulnerable versions and detection methods. Look for unexpected processes or configurations.",
-      "tanium_query_hint": "Use Tanium 'Get Installed Applications' or relevant sensors to determine Cisco SEG versions. Deploy custom sensors to check for known IoCs or suspicious processes/files detailed in Cisco's advisory and endpoint security logs.",
-      "rapid7_query_hint": "Check InsightVM for any listed vulnerabilities related to Cisco Secure Email Gateway. In InsightIDR, search logs from SEG appliances for activity consistent with unauthenticated RCE or root command execution as described by Cisco.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated based on unauthenticated root RCE zero-day and active exploitation)"
-    },
-    {
-      "title": "Silent Lynx Exploits WinRAR Flaw to Deploy Reverse Shell in CIS Government Attacks",
-      "tldr": "The Silent Lynx threat group is actively exploiting an unpatched WinRAR vulnerability to deploy reverse shells, primarily targeting CIS government entities. This indicates a sophisticated attack campaign using a known software flaw for initial access and persistence.",
-      "action": "Immediately identify and patch all WinRAR installations to the latest secure version across all endpoints. Conduct comprehensive endpoint detection and response (EDR) scans for indicators of compromise related to Silent Lynx or active reverse shells.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/silent-lynx-exploits-winrar-flaw-to.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "WinRAR (specific vulnerable version details to be determined from official WinRAR or security researcher advisories)",
-      "how_to_determine_impact": "Verify the installed version of WinRAR on all endpoints. Look for suspicious processes indicative of a reverse shell (e.g., cmd.exe, powershell.exe connecting outbound to unusual IPs) and review system logs for file execution anomalies.",
-      "tanium_query_hint": "Use Tanium 'Get Installed Applications' or 'Get File Version' for 'WinRAR.exe' to identify vulnerable versions. Query for suspicious network connections or processes (e.g., 'Get Running Processes matching \"cmd.exe|powershell.exe\" with netstat') on affected systems.",
-      "rapid7_query_hint": "In InsightVM, search for any known vulnerabilities related to WinRAR or general RCE exploits. Use InsightIDR to look for process creation events of common reverse shell tools or outbound connections from WinRAR processes to suspicious external IPs.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (estimated based on active exploitation and RCE leading to reverse shell)"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Next.js Ships Out-of-Band Patch for Two Critical RCE Flaws in Caching and SVG Processing",
-      "tldr": "Next.js has released an emergency out-of-band patch to address two critical Remote Code Execution (RCE) vulnerabilities. These flaws impact the framework's caching mechanisms and SVG processing capabilities, necessitating urgent updates.",
-      "action": "Immediately update all Next.js applications and deployments to the patched version. Review codebases for any custom SVG handling or caching implementations that might interact with these flaws and potentially introduce risk.",
+      "tldr": "Next.js has released an urgent out-of-band patch to address two critical Remote Code Execution (RCE) vulnerabilities. These flaws reside in the caching and SVG processing components of the framework, potentially allowing attackers to execute arbitrary code.",
+      "action": "Immediately update all Next.js applications and deployments to the latest patched versions. Conduct a review of application code for any custom caching or SVG processing that might introduce additional risks or complexity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/nextjs-ships-out-of-band-patch-for-two.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Next.js (specific vulnerable versions to be identified in Vercel's official security advisory)",
-      "how_to_determine_impact": "Identify all Next.js projects and their deployed versions. Consult the official Next.js/Vercel security advisory for precise vulnerable version ranges. Audit applications for specific use of caching features or SVG processing that could trigger these flaws.",
-      "tanium_query_hint": "For servers hosting Next.js applications, use 'Get Installed Applications' or 'Get File Version' on relevant Node.js packages to determine Next.js versions. Custom sensors can be deployed to check specific configuration files or module versions within application directories.",
-      "rapid7_query_hint": "Use InsightVM to scan web application servers for known vulnerabilities related to Next.js or JavaScript frameworks. For custom deployments, manual verification of Next.js versions and framework configurations may be required following vendor guidance.",
+      "affected_versions": "Specific versions of Next.js are vulnerable prior to the emergency out-of-band patch. Consult the official Vercel/Next.js security advisory for exact vulnerable version ranges.",
+      "how_to_determine_impact": "Identify all applications and services utilizing Next.js in your environment. Verify their deployed versions against the official Next.js security advisory to determine vulnerability.",
+      "tanium_query_hint": "On servers or containers hosting Next.js applications, use 'Get Installed Applications' or 'Get File Version' for Next.js binaries to determine current version.",
+      "rapid7_query_hint": "Perform authenticated scans on web servers and application hosts. Search InsightVM for vulnerability checks related to Next.js or web framework RCEs. Asset search for 'Software: Next.js' and filter by version.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimated based on multiple critical RCE flaws requiring out-of-band patch)"
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks",
+      "tldr": "NGINX has released patches for five vulnerabilities, including a critical Remote Code Execution (RCE) possibility and a TLS bug that could allow attackers to bypass client certificate authentication checks. These flaws could severely impact web server security and access control.",
+      "action": "Immediately update all NGINX installations to the latest patched version. Review NGINX configurations, particularly those enforcing client certificate authentication, to confirm proper implementation and mitigation of the TLS bypass bug.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Specific versions of NGINX are affected. Consult the official NGINX security advisory for detailed vulnerable version ranges for each of the five fixed flaws.",
+      "how_to_determine_impact": "Verify the version of NGINX running on all web servers. Compare the version number against the NGINX security advisory. Additionally, inspect NGINX configuration files for affected TLS and RCE-related directives.",
+      "tanium_query_hint": "Use 'Get Installed Applications' on web servers to identify NGINX versions. For configuration checks, use 'Get File Content' for NGINX configuration files (e.g., /etc/nginx/nginx.conf) to look for relevant settings.",
+      "rapid7_query_hint": "Conduct authenticated scans on web servers running NGINX. Search InsightVM for NGINX-related vulnerability checks, especially for RCE and TLS configuration issues. Asset search for 'Software: NGINX' and filter by version.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical"
+    },
+    {
+      "title": "Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules",
+      "tldr": "Drupal has issued a patch for a critical vulnerability in its Field UI that can lead to unauthenticated Remote Code Execution (RCE) when specific contributed modules are enabled. This presents a severe security risk to unpatched Drupal sites.",
+      "action": "Immediately apply the latest security updates to all Drupal installations. Conduct an audit of all active contributed modules and disable any that are not essential, especially if they are mentioned in the Drupal security advisory.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Specific versions of Drupal core, particularly when configured with certain contributed modules, are vulnerable. Refer to the official Drupal security advisory for precise version details.",
+      "how_to_determine_impact": "Identify all Drupal installations within your environment and check their core versions. Additionally, enumerate and verify the versions and active status of all contributed modules installed on each Drupal instance.",
+      "tanium_query_hint": "On web servers, use 'Get Installed Applications' to find Drupal versions. Utilize 'Get File Content' to examine Drupal module directories for specific contributed modules mentioned in the advisory.",
+      "rapid7_query_hint": "Perform authenticated web application scans targeting Drupal sites. Search InsightVM for vulnerability checks related to Drupal RCE or Field UI. Filter asset searches by 'Software: Drupal' and investigate module configurations.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -23190,6 +23182,47 @@
         "rapid7_query_hint": "Use InsightVM to scan web application servers for known vulnerabilities related to Next.js or JavaScript frameworks. For custom deployments, manual verification of Next.js versions and framework configurations may be required following vendor guidance.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (estimated based on multiple critical RCE flaws requiring out-of-band patch)",
+        "category": "vulns"
+      },
+      {
+        "title": "ThreatsDay: DNS Wallet Theft",
+        "tldr": "A summary of recent threats highlights instances of DNS wallet theft, indicating sophisticated attacks where adversaries manipulate DNS records to redirect cryptocurrency transactions or steal wallet credentials. This targets high-value financial assets.",
+        "action": "Implement and enforce robust DNS security measures, including DNSSEC where applicable. Advise users of cryptocurrency wallets to always verify URLs and domain authenticity. Ensure all financial accounts utilize strong multi-factor authentication (MFA) and consider hardware wallets for critical assets.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/threatsday-adobe-rce-dns-wallet-thft.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "NGINX Fixes 5 Flaws, Including Possible RCE and a TLS Bug That May Skip Client-Cert Checks",
+        "tldr": "NGINX has released patches for five vulnerabilities, including a critical Remote Code Execution (RCE) possibility and a TLS bug that could allow attackers to bypass client certificate authentication checks. These flaws could severely impact web server security and access control.",
+        "action": "Immediately update all NGINX installations to the latest patched version. Review NGINX configurations, particularly those enforcing client certificate authentication, to confirm proper implementation and mitigation of the TLS bypass bug.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific versions of NGINX are affected. Consult the official NGINX security advisory for detailed vulnerable version ranges for each of the five fixed flaws.",
+        "how_to_determine_impact": "Verify the version of NGINX running on all web servers. Compare the version number against the NGINX security advisory. Additionally, inspect NGINX configuration files for affected TLS and RCE-related directives.",
+        "tanium_query_hint": "Use 'Get Installed Applications' on web servers to identify NGINX versions. For configuration checks, use 'Get File Content' for NGINX configuration files (e.g., /etc/nginx/nginx.conf) to look for relevant settings.",
+        "rapid7_query_hint": "Conduct authenticated scans on web servers running NGINX. Search InsightVM for NGINX-related vulnerability checks, especially for RCE and TLS configuration issues. Asset search for 'Software: NGINX' and filter by version.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Drupal Patches Critical Field UI Flaw With Unauthenticated RCE Path via Contributed Modules",
+        "tldr": "Drupal has issued a patch for a critical vulnerability in its Field UI that can lead to unauthenticated Remote Code Execution (RCE) when specific contributed modules are enabled. This presents a severe security risk to unpatched Drupal sites.",
+        "action": "Immediately apply the latest security updates to all Drupal installations. Conduct an audit of all active contributed modules and disable any that are not essential, especially if they are mentioned in the Drupal security advisory.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/drupal-patches-critical-core-rce-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific versions of Drupal core, particularly when configured with certain contributed modules, are vulnerable. Refer to the official Drupal security advisory for precise version details.",
+        "how_to_determine_impact": "Identify all Drupal installations within your environment and check their core versions. Additionally, enumerate and verify the versions and active status of all contributed modules installed on each Drupal instance.",
+        "tanium_query_hint": "On web servers, use 'Get Installed Applications' to find Drupal versions. Utilize 'Get File Content' to examine Drupal module directories for specific contributed modules mentioned in the advisory.",
+        "rapid7_query_hint": "Perform authenticated web application scans targeting Drupal sites. Search InsightVM for vulnerability checks related to Drupal RCE or Field UI. Filter asset searches by 'Software: Drupal' and investigate module configurations.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
