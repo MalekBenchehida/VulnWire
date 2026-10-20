@@ -1,99 +1,99 @@
 {
   "breaches": [
     {
+      "title": "Nikkei discloses third data breach in a month, 1.8M records exposed",
+      "tldr": "Nikkei Inc. has reported its third data breach in a month, resulting in the exposure of 1.83 million personal information records. This pattern of repeated breaches highlights persistent security weaknesses within the organization's systems.",
+      "action": "Review internal data retention policies and access controls. Conduct a thorough audit of all data repositories for unauthorized access or exfiltration. Implement multi-factor authentication for all internal and external services handling sensitive data.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys",
-      "tldr": "The OpenCode Console suffered a security breach that potentially exposed API keys for OpenAI, Anthropic, and Google, used by its users. This compromise could lead to unauthorized access and abuse of these sensitive AI services, impacting confidentiality and potentially leading to further exploitation.",
-      "action": "All users of OpenCode Console should immediately revoke and regenerate every API key for OpenAI, Anthropic, and Google services. Actively monitor all linked AI accounts for any unusual or unauthorized activity.",
+      "tldr": "The open-source AI coding project OpenCode experienced a security breach that may have exposed API keys used by some users with external providers like OpenAI, Anthropic, and Google. This incident puts connected AI services at risk of unauthorized access and potential 'AI distillation attacks'.",
+      "action": "All users of OpenCode should immediately revoke and regenerate any API keys that were used with the platform. Implement strict access control and least privilege principles for all API keys. Monitor logs for suspicious activity on connected AI services.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/opencode-console-breach-may-have.html",
       "source": "The Hacker News"
     },
     {
-      "title": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants",
-      "tldr": "ConnectWise has temporarily suspended its cloud backup services due to a cyberattack that led to the compromise of Microsoft 365 tenants. This incident highlights significant supply chain risks for organizations relying on cloud service providers for critical infrastructure and data.",
-      "action": "ConnectWise cloud backup customers must urgently review their Microsoft 365 tenant security configurations and logs for any unauthorized access, modifications, or data exfiltration. Develop an incident response plan for potential data recovery or service disruption.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Bullhorn takes staffing platform offline to contain cyberattack",
-      "tldr": "Staffing software company Bullhorn has proactively disabled access to its entire platform to contain an active cyberattack, resulting in a system-wide outage. This action indicates a serious compromise and a need for immediate containment efforts to prevent further damage.",
-      "action": "Organizations utilizing Bullhorn's staffing platform should activate their incident response plans and monitor their internal systems for any anomalous activity that might be correlated with this outage or potential data exfiltration. Prepare for service disruptions.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/bullhorn-takes-staffing-platform-offline-to-contain-cyberattack/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "One Compromised Login Exposed Millions of California Students' Records",
-      "tldr": "A single compromised login credential resulted in a massive data exposure, affecting millions of California students' records. This incident underscores the severe consequences of weak access controls and highlights the critical need for robust identity management practices.",
-      "action": "Immediately review and strengthen all access management policies, enforcing multi-factor authentication (MFA) for every privileged and sensitive account. Conduct a comprehensive audit of all external vendors or third parties with access to sensitive organizational or student data.",
+      "tldr": "A single compromised login credential led to the exposure of millions of California students' records. This incident underscores the critical importance of robust access management and multi-factor authentication, especially for systems handling sensitive personal data.",
+      "action": "Conduct a comprehensive review of all systems storing sensitive personal identifiable information (PII) to ensure strong, unique credentials and mandatory multi-factor authentication (MFA) are enforced for all access points. Regularly audit user accounts and access logs for anomalous activity.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/one-compromised-login-exposed-millions-of-california-students-records/",
       "source": "SecurityWeek"
+    },
+    {
+      "title": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants",
+      "tldr": "ConnectWise has suspended its cloud backup services following a cyberattack that resulted in the compromise of Microsoft 365 tenants for some customers. This incident highlights the risks associated with third-party cloud service providers and supply chain attacks affecting shared infrastructure.",
+      "action": "Customers using ConnectWise cloud backup services should monitor their Microsoft 365 tenants for any signs of compromise or unauthorized activity. Immediately review and strengthen security configurations for all integrated cloud services and apply least privilege access.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Drupal Warns of Fast Exploitation Risk for Critical Core RCE Flaw",
-      "tldr": "Drupal has issued an urgent warning regarding a critical Remote Code Execution (RCE) vulnerability in its core, emphasizing a high risk of rapid exploitation. This flaw could allow attackers to gain complete control over affected Drupal-based websites, leading to data theft, defacement, or further network penetration.",
-      "action": "Immediately patch all Drupal core installations to the latest secure version. As an interim measure, implement or strengthen Web Application Firewall (WAF) rules to detect and block RCE attempts, and meticulously monitor Drupal logs for any suspicious activity or exploit attempts.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/drupal-warns-of-fast-exploitation-risk-for-critical-core-rce-flaw/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Drupal core (specific vulnerable versions require patching; consult official Drupal security advisories for exact details)",
-      "how_to_determine_impact": "Check the current version of Drupal core. Review web server access logs for unusual or suspicious requests (e.g., POST requests to unexpected paths, suspicious parameters) and Drupal's watchdog logs for any errors related to unauthorized code execution attempts.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'Drupal' and Get File Version[<path_to_drupal_core_index.php>]",
-      "rapid7_query_hint": "Vulnerability.title LIKE '%Drupal RCE%' AND Vulnerability.severity = 'CRITICAL' OR Asset.Software.Name = 'Drupal' AND Asset.Vulnerability.status = 'VULNERABLE'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Exploited Fortinet Bug Linked to Stealthy FortiGate Implant in Telecom Hack",
-      "tldr": "An actively exploited Fortinet vulnerability has been linked to the deployment of a stealthy implant on FortiGate devices during a recent telecom sector hack. This incident points to sophisticated, likely state-sponsored, threat actors leveraging a zero-day or recently patched flaw for persistent access.",
-      "action": "Immediately update all FortiGate devices to the latest secure firmware version. Conduct a thorough forensic investigation of all FortiGate appliances for indicators of compromise, including unauthorized implants, unusual configurations, or suspicious network connections that bypass normal logging.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/exploited-fortinet-bug-linked-to-stealthy-fortigate-implant-in-telecom-hack/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "FortiGate devices running specific vulnerable FortiOS versions (consult official Fortinet advisories for exact versions)",
-      "how_to_determine_impact": "Verify FortiGate firmware version. Review FortiGate system logs, traffic logs, and configuration changes for any anomalies. Specifically look for unrecognized processes, unexpected persistent components, or unusual outbound C2 traffic. Utilize FortiAnalyzer/FortiManager for deep log and configuration analysis.",
-      "tanium_query_hint": "Get FortiGate Firmware Version (requires custom sensor or direct API query). Get Network Connections with RemotePort = 'unusual_c2_port' or DestinationIP = 'suspicious_c2_ip'.",
-      "rapid7_query_hint": "Vulnerability.title LIKE '%FortiGate Implant%' OR Asset.Product.Vendor = 'Fortinet' AND Asset.Product.Name = 'FortiGate' AND Asset.Vulnerability.status = 'VULNERABLE'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor",
-      "tldr": "Attackers are actively exploiting recently disclosed 'Plex2Shell' vulnerabilities in Plex Media Servers to compromise systems. This exploitation leads to the installation of resource-intensive cryptocurrency miners and the establishment of persistent Linux proxy backdoors on affected servers.",
-      "action": "Immediately update all Plex Media Server installations to the latest patched version without delay. Actively scan affected systems for any running cryptocurrency miner processes, unusual network connections originating from Plex, and the presence of known backdoor files in unexpected directories like /tmp or /var/tmp.",
+      "tldr": "An exploit chain dubbed 'Plex2Shell' is being actively weaponized against Plex Media Servers, allowing attackers to install crypto miners and Linux proxy backdoors. Exploitation began rapidly after disclosure, indicating a critical and immediate threat to vulnerable servers.",
+      "action": "Immediately apply all available security updates for Plex Media Server. Review server logs for suspicious processes, network connections, or unauthorized file modifications, particularly for cryptocurrency mining tools or proxy configurations.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Plex Media Server (specific vulnerable versions targeted by the Plex2Shell exploit chain; consult Plex security advisories for details)",
-      "how_to_determine_impact": "Check the current Plex Media Server version. Monitor CPU/GPU usage for unexpected spikes. Inspect active processes for unknown crypto miners (e.g., 'xmrig', 'cpuminer'). Review network connections for suspicious outbound traffic to mining pools or C2 servers. Look for new or modified files in /tmp, /var/tmp, or Plex installation directories.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'Plex Media Server'. Get Running Processes with CommandLine contains 'plex' and CPU > 'threshold' or ProcessName contains 'miner'. Get File Existence['/var/tmp/backdoor.sh']",
-      "rapid7_query_hint": "Vulnerability.title LIKE '%Plex2Shell%' OR Asset.Software.Name = 'Plex Media Server' AND Asset.Vulnerability.status = 'VULNERABLE'",
+      "affected_versions": "Plex Media Server versions potentially affected by recently disclosed Plex2Shell flaws. Specific versions not detailed; consult Plex security advisories for precise information.",
+      "how_to_determine_impact": "Inspect Plex Media Server logs for unusual activity, new user accounts, or installation of unapproved software. Check running processes for known cryptocurrency miners or proxy applications. Monitor outgoing network traffic from Plex servers for anomalies.",
+      "tanium_query_hint": "Get Running Processes matches 'xmrig' or 'proxy' from all machines with Computer Name matches 'PlexServer'. Get Installed Applications with Application Name matches 'Plex Media Server'. Get Listening Ports from all machines and filter by unusual ports.",
+      "rapid7_query_hint": "Run an authenticated scan against Plex Media Server installations. Search for vulnerability checks related to Plex Media Server RCE or shell injection. Use InsightIDR to look for unusual process launches or network connections originating from Plex servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated, due to active RCE exploitation)"
+    },
+    {
+      "title": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers",
+      "tldr": "A critical, unpatched vulnerability in Broadcom Wi-Fi components allows attackers within wireless range to achieve root-level code execution on affected routers. This flaw poses a significant risk for network compromise and requires urgent attention from device vendors for patching.",
+      "action": "Identify all devices utilizing Broadcom Wi-Fi chipsets, particularly routers and access points. Monitor vendor advisories for immediate patch releases. If patches are unavailable, consider network segmentation or temporary disabling of affected Wi-Fi functionality in high-risk areas.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Broadcom Wi-Fi chipsets in various routers and access points. Specific models and firmware versions not detailed; consult Broadcom and device vendor advisories.",
+      "how_to_determine_impact": "Identify all networking devices (routers, access points) using Broadcom Wi-Fi chipsets. Check device firmware versions against vendor security advisories for patches related to RCE vulnerabilities in Wi-Fi components. Assess physical security of wireless infrastructure.",
+      "tanium_query_hint": "Get Hardware Information contains 'Broadcom' on all network infrastructure devices. Get Installed Applications contains 'Firmware' from all devices to check versions. Get Network Configuration to identify exposed Wi-Fi networks.",
+      "rapid7_query_hint": "Perform network scans targeting routers/APIs for Broadcom Wi-Fi vulnerabilities. Use credentialed scans where possible to enumerate firmware versions. Monitor for unusual network traffic patterns or unauthorized access to network devices.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated, due to unauthenticated RCE as root)"
     },
     {
       "title": "F5 releases out-of-band patches for critical NGINX vulnerabilities",
-      "tldr": "F5 has released urgent, out-of-band security patches to address multiple critical vulnerabilities found in the NGINX web server. Three of these flaws are particularly severe, allowing remote code execution (RCE) and potentially enabling attackers to fully compromise affected systems.",
-      "action": "Immediately apply all available out-of-band patches from F5 for NGINX to all deployments. Conduct a thorough review of NGINX configurations, access logs, and error logs for any indicators of compromise, unusual requests, or explicit exploit attempts.",
+      "tldr": "F5 has issued urgent, out-of-band security patches for multiple critical vulnerabilities in its NGINX web server. These flaws include at least three critical-severity issues that could enable remote code execution (RCE) on vulnerable systems, requiring immediate action.",
+      "action": "Immediately apply the latest F5 security patches to all NGINX web server deployments. Prioritize systems that are internet-facing. After patching, verify system integrity and review logs for any signs of compromise prior to applying the patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/",
       "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "NGINX web server (specific vulnerable versions addressed by F5's out-of-band patches; consult F5 advisories for exact versions)",
-      "how_to_determine_impact": "Verify the NGINX version. Examine NGINX access and error logs for unusual requests, unexpected HTTP response codes (e.g., 500 errors after suspicious requests), or patterns indicative of exploit attempts. Check for unexpected processes running under the NGINX user or parent process.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'NGINX'. Get File Version[<path_to_nginx_executable>]. Get Running Processes with ParentProcessName = 'nginx' and User = 'root' (if not expected).",
-      "rapid7_query_hint": "Vulnerability.title LIKE '%NGINX RCE%' AND Vulnerability.severity = 'CRITICAL' OR Asset.Software.Name = 'NGINX' AND Asset.Vulnerability.status = 'VULNERABLE'",
+      "active_exploitation": false,
+      "affected_versions": "Specific versions of NGINX, potentially F5 NGINX Plus or open-source NGINX, are affected. Consult F5's official security advisories for precise version ranges and associated patches.",
+      "how_to_determine_impact": "Identify all NGINX server instances. Check the installed NGINX version and configuration against F5's security advisories. Look for any related CVEs mentioned in their documentation. Verify patch application.",
+      "tanium_query_hint": "Get Installed Applications with Application Name matches 'NGINX' and filter by Version. Get Running Processes where process name is 'nginx'. Check `nginx -v` output via 'Run Command' sensor.",
+      "rapid7_query_hint": "Scan all NGINX web servers for known vulnerabilities, specifically looking for F5-issued CVEs. Check `nginx` process versions. Use authenticated scans to ensure accurate version detection.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated, based on 'critical-severity vulnerabilities' leading to RCE)"
+    },
+    {
+      "title": "Drupal Warns of Fast Exploitation Risk for Critical Core RCE Flaw",
+      "tldr": "Drupal has issued a warning regarding a critical remote code execution (RCE) flaw in its core, with a high risk of rapid exploitation. This vulnerability could allow unauthenticated attackers to take full control of affected Drupal sites.",
+      "action": "Immediately update all Drupal installations to the latest patched version as advised by Drupal security advisories. If immediate patching is not possible, implement temporary mitigation strategies as suggested by Drupal, such as Web Application Firewall (WAF) rules or restricting access.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/drupal-warns-of-fast-exploitation-risk-for-critical-core-rce-flaw/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "Drupal core. Specific vulnerable versions should be detailed in official Drupal security advisories. All unpatched versions are likely at risk.",
+      "how_to_determine_impact": "Check the version of all deployed Drupal instances. Compare against Drupal's official security advisories for the critical RCE flaw. Verify that no unauthorized changes have been made to the Drupal core files.",
+      "tanium_query_hint": "Get Installed Applications with Application Name matches 'Drupal' and filter by Version. Check web server logs for suspicious requests targeting common Drupal RCE vectors. Get File Content of `core/CHANGELOG.txt` or `core/lib/Drupal.php` for version info.",
+      "rapid7_query_hint": "Perform authenticated web application scans on all Drupal sites. Search for specific vulnerability IDs related to Drupal core RCE flaws. Monitor web server logs for suspicious requests and payloads.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, due to 'critical core RCE flaw' and 'fast exploitation risk')"
     }
   ],
   "insurance": [],
@@ -23888,6 +23888,108 @@
         "rapid7_query_hint": "Vulnerability.title LIKE '%NGINX RCE%' AND Vulnerability.severity = 'CRITICAL' OR Asset.Software.Name = 'NGINX' AND Asset.Vulnerability.status = 'VULNERABLE'",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-10-20": [
+      {
+        "title": "Nikkei discloses third data breach in a month, 1.8M records exposed",
+        "tldr": "Nikkei Inc. has reported its third data breach in a month, resulting in the exposure of 1.83 million personal information records. This pattern of repeated breaches highlights persistent security weaknesses within the organization's systems.",
+        "action": "Review internal data retention policies and access controls. Conduct a thorough audit of all data repositories for unauthorized access or exfiltration. Implement multi-factor authentication for all internal and external services handling sensitive data.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/nikkei-discloses-third-data-breach-in-a-month-18m-records-exposed/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys",
+        "tldr": "The open-source AI coding project OpenCode experienced a security breach that may have exposed API keys used by some users with external providers like OpenAI, Anthropic, and Google. This incident puts connected AI services at risk of unauthorized access and potential 'AI distillation attacks'.",
+        "action": "All users of OpenCode should immediately revoke and regenerate any API keys that were used with the platform. Implement strict access control and least privilege principles for all API keys. Monitor logs for suspicious activity on connected AI services.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/opencode-console-breach-may-have.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "One Compromised Login Exposed Millions of California Students' Records",
+        "tldr": "A single compromised login credential led to the exposure of millions of California students' records. This incident underscores the critical importance of robust access management and multi-factor authentication, especially for systems handling sensitive personal data.",
+        "action": "Conduct a comprehensive review of all systems storing sensitive personal identifiable information (PII) to ensure strong, unique credentials and mandatory multi-factor authentication (MFA) are enforced for all access points. Regularly audit user accounts and access logs for anomalous activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/one-compromised-login-exposed-millions-of-california-students-records/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants",
+        "tldr": "ConnectWise has suspended its cloud backup services following a cyberattack that resulted in the compromise of Microsoft 365 tenants for some customers. This incident highlights the risks associated with third-party cloud service providers and supply chain attacks affecting shared infrastructure.",
+        "action": "Customers using ConnectWise cloud backup services should monitor their Microsoft 365 tenants for any signs of compromise or unauthorized activity. Immediately review and strengthen security configurations for all integrated cloud services and apply least privilege access.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor",
+        "tldr": "An exploit chain dubbed 'Plex2Shell' is being actively weaponized against Plex Media Servers, allowing attackers to install crypto miners and Linux proxy backdoors. Exploitation began rapidly after disclosure, indicating a critical and immediate threat to vulnerable servers.",
+        "action": "Immediately apply all available security updates for Plex Media Server. Review server logs for suspicious processes, network connections, or unauthorized file modifications, particularly for cryptocurrency mining tools or proxy configurations.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Plex Media Server versions potentially affected by recently disclosed Plex2Shell flaws. Specific versions not detailed; consult Plex security advisories for precise information.",
+        "how_to_determine_impact": "Inspect Plex Media Server logs for unusual activity, new user accounts, or installation of unapproved software. Check running processes for known cryptocurrency miners or proxy applications. Monitor outgoing network traffic from Plex servers for anomalies.",
+        "tanium_query_hint": "Get Running Processes matches 'xmrig' or 'proxy' from all machines with Computer Name matches 'PlexServer'. Get Installed Applications with Application Name matches 'Plex Media Server'. Get Listening Ports from all machines and filter by unusual ports.",
+        "rapid7_query_hint": "Run an authenticated scan against Plex Media Server installations. Search for vulnerability checks related to Plex Media Server RCE or shell injection. Use InsightIDR to look for unusual process launches or network connections originating from Plex servers.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, due to active RCE exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers",
+        "tldr": "A critical, unpatched vulnerability in Broadcom Wi-Fi components allows attackers within wireless range to achieve root-level code execution on affected routers. This flaw poses a significant risk for network compromise and requires urgent attention from device vendors for patching.",
+        "action": "Identify all devices utilizing Broadcom Wi-Fi chipsets, particularly routers and access points. Monitor vendor advisories for immediate patch releases. If patches are unavailable, consider network segmentation or temporary disabling of affected Wi-Fi functionality in high-risk areas.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Broadcom Wi-Fi chipsets in various routers and access points. Specific models and firmware versions not detailed; consult Broadcom and device vendor advisories.",
+        "how_to_determine_impact": "Identify all networking devices (routers, access points) using Broadcom Wi-Fi chipsets. Check device firmware versions against vendor security advisories for patches related to RCE vulnerabilities in Wi-Fi components. Assess physical security of wireless infrastructure.",
+        "tanium_query_hint": "Get Hardware Information contains 'Broadcom' on all network infrastructure devices. Get Installed Applications contains 'Firmware' from all devices to check versions. Get Network Configuration to identify exposed Wi-Fi networks.",
+        "rapid7_query_hint": "Perform network scans targeting routers/APIs for Broadcom Wi-Fi vulnerabilities. Use credentialed scans where possible to enumerate firmware versions. Monitor for unusual network traffic patterns or unauthorized access to network devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (Estimated, due to unauthenticated RCE as root)",
+        "category": "vulns"
+      },
+      {
+        "title": "F5 releases out-of-band patches for critical NGINX vulnerabilities",
+        "tldr": "F5 has issued urgent, out-of-band security patches for multiple critical vulnerabilities in its NGINX web server. These flaws include at least three critical-severity issues that could enable remote code execution (RCE) on vulnerable systems, requiring immediate action.",
+        "action": "Immediately apply the latest F5 security patches to all NGINX web server deployments. Prioritize systems that are internet-facing. After patching, verify system integrity and review logs for any signs of compromise prior to applying the patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/f5-releases-out-of-band-patches-for-critical-nginx-vulnerabilities/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Specific versions of NGINX, potentially F5 NGINX Plus or open-source NGINX, are affected. Consult F5's official security advisories for precise version ranges and associated patches.",
+        "how_to_determine_impact": "Identify all NGINX server instances. Check the installed NGINX version and configuration against F5's security advisories. Look for any related CVEs mentioned in their documentation. Verify patch application.",
+        "tanium_query_hint": "Get Installed Applications with Application Name matches 'NGINX' and filter by Version. Get Running Processes where process name is 'nginx'. Check `nginx -v` output via 'Run Command' sensor.",
+        "rapid7_query_hint": "Scan all NGINX web servers for known vulnerabilities, specifically looking for F5-issued CVEs. Check `nginx` process versions. Use authenticated scans to ensure accurate version detection.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, based on 'critical-severity vulnerabilities' leading to RCE)",
+        "category": "vulns"
+      },
+      {
+        "title": "Drupal Warns of Fast Exploitation Risk for Critical Core RCE Flaw",
+        "tldr": "Drupal has issued a warning regarding a critical remote code execution (RCE) flaw in its core, with a high risk of rapid exploitation. This vulnerability could allow unauthenticated attackers to take full control of affected Drupal sites.",
+        "action": "Immediately update all Drupal installations to the latest patched version as advised by Drupal security advisories. If immediate patching is not possible, implement temporary mitigation strategies as suggested by Drupal, such as Web Application Firewall (WAF) rules or restricting access.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/drupal-warns-of-fast-exploitation-risk-for-critical-core-rce-flaw/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Drupal core. Specific vulnerable versions should be detailed in official Drupal security advisories. All unpatched versions are likely at risk.",
+        "how_to_determine_impact": "Check the version of all deployed Drupal instances. Compare against Drupal's official security advisories for the critical RCE flaw. Verify that no unauthorized changes have been made to the Drupal core files.",
+        "tanium_query_hint": "Get Installed Applications with Application Name matches 'Drupal' and filter by Version. Check web server logs for suspicious requests targeting common Drupal RCE vectors. Get File Content of `core/CHANGELOG.txt` or `core/lib/Drupal.php` for version info.",
+        "rapid7_query_hint": "Perform authenticated web application scans on all Drupal sites. Search for specific vulnerability IDs related to Drupal core RCE flaws. Monitor web server logs for suspicious requests and payloads.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, due to 'critical core RCE flaw' and 'fast exploitation risk')",
         "category": "vulns"
       }
     ]
