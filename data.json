@@ -1,43 +1,51 @@
 {
   "breaches": [
     {
+      "title": "LiteLLM Compromised in Supply Chain Attack Delivering Credential Stealer and Backdoor",
+      "tldr": "The LiteLLM library has been compromised through a supply chain attack, injecting credential-stealing malware and backdoors. Users who have integrated or used LiteLLM are at risk of data exfiltration and system compromise.",
+      "action": "Immediately audit all systems that have used or integrated LiteLLM for indicators of compromise, such as unexpected network connections, new user accounts, or unusual file modifications. Update LiteLLM to a verified clean version or cease usage until a secure version is confirmed.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
+      "tldr": "Over 300 Tor exit relays have been compromised by attackers, allowing them to intercept SSH connections passing through these relays. This large-scale hijacking poses a significant risk of eavesdropping on sensitive communications and credential theft for Tor users.",
+      "action": "Users leveraging Tor for SSH should assume their connections may be compromised. Implement strong SSH security measures, including multi-factor authentication, and avoid transmitting sensitive information over Tor until the issue is resolved.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Lazarus hackers use post-quantum cryptography for malware delivery",
+      "tldr": "The North Korean Lazarus Group is now utilizing post-quantum cryptographic mechanisms to secure their malware payload delivery. This advanced technique enhances the stealth and resilience of their operations, making detection and analysis more challenging for defenders.",
+      "action": "Strengthen network and endpoint detection capabilities to identify novel malware delivery and communication techniques. Evaluate existing cryptographic defenses against post-quantum threats and consider enhancing threat intelligence for state-sponsored activities.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-use-post-quantum-cryptography-for-malware-delivery/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Stolen UpdraftCentral keys used to backdoor WordPress sites",
-      "tldr": "A threat actor breached TeamUpdraft's website, a developer of popular WordPress backup and security plugins, potentially compromising UpdraftCentral connection keys that can send commands to connected websites. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "TeamUpdraft's website was breached, resulting in the theft of UpdraftCentral connection keys. These compromised keys are being actively used by threat actors to backdoor WordPress sites connected to UpdraftCentral, potentially leading to remote code execution.",
+      "action": "All organizations using UpdraftCentral should immediately revoke and regenerate their connection keys. Conduct a comprehensive security audit of all WordPress sites that were managed via UpdraftCentral for any signs of unauthorized access or injected backdoors.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
-      "tldr": "Certificate authority eMudhra revoked eight compromised intermediate certificates after researchers found their private keys were so weak that anyone could recover them almost instantly and use them to forge trusted certificates for legitimate websites. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Zeabur shutting down after second security breach in two months",
-      "tldr": "Development platform Zeabur has disclosed details of a cybersecurity incident in which an attacker used leaked internal credentials stored in plaintext to compromise its infrastructure and steal over 3.2 million environment variable records and information for 321,810 accounts. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/zeabur-shutting-down-after-second-security-breach-in-two-months/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
       "title": "CISA: SafePay ransomware hit over 600 critical infrastructure orgs",
-      "tldr": "The Cybersecurity and Infrastructure Security Agency (CISA) says the SafePay ransomware gang has breached over 600 critical infrastructure organizations worldwide since 2024. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "CISA reports that the SafePay ransomware group has compromised over 600 critical infrastructure organizations globally since 2024. This extensive campaign targets essential services, posing a significant threat to operational continuity and data integrity.",
+      "action": "Implement and regularly test robust data backup and recovery strategies. Enhance network segmentation, endpoint detection and response (EDR), and multi-factor authentication across the enterprise. Develop and practice incident response plans specifically for ransomware attacks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisa-and-fbi-safepay-ransomware-has-hit-over-600-critical-infrastructure-organizations/",
       "source": "BleepingComputer"
     },
     {
       "title": "High-Severity Flaws Exploited in Three Days as Ransomware Dominates Q3: Rapid7",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Rapid7's Q3 report highlights a trend where high-severity vulnerabilities are exploited by ransomware groups within three days of public disclosure. Ransomware continues to be a dominant threat, leveraging newly disclosed flaws for rapid compromise.",
+      "action": "Prioritize patching of all high-severity vulnerabilities, especially those with public exploits, within 72 hours of disclosure. Implement robust vulnerability management processes, conduct regular penetration testing, and maintain strong security awareness training to mitigate ransomware risks.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/high-severity-flaws-exploited-in-three-days-as-ransomware-dominates-q3-rapid7/",
       "source": "SecurityWeek"
@@ -45,76 +53,70 @@
   ],
   "vulns": [
     {
-      "title": "OpenAI's GPT-6 Agent Removed Safety Monitoring, Then Falsely Denied Doing So",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases",
+      "tldr": "A critical vulnerability in GitLab, with a CVSS score of 10.0, allows for unauthenticated remote code execution. This flaw affects releases spanning 12 years, making a vast number of GitLab instances vulnerable to immediate compromise.",
+      "action": "Immediately apply the latest security patches to all GitLab instances. Conduct a comprehensive audit of all GitLab servers for indicators of compromise (IOCs) such as unusual process activity, unexpected files, or unauthorized modifications.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/openais-gpt-6-agent-removed-safety.html",
+      "source_url": "https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "affected_versions": "GitLab versions released over the past 12 years. Specific vulnerable versions to be identified via official GitLab security advisories.",
+      "how_to_determine_impact": "Identify all GitLab instances in your environment. Check the installed GitLab version and compare it against the latest security advisories. Inspect GitLab logs and system logs for any signs of unauthorized access, unusual command execution, or error messages related to the vulnerability.",
+      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with Installed Applications contains 'GitLab' and Installed Applications < 'latest_patched_version'. Check Process Command Line for suspicious activity related to GitLab.",
+      "rapid7_query_hint": "Scan assets for 'GitLab' installations. Search for vulnerability IDs related to 'GitLab RCE'. Utilize InsightIDR to monitor for unusual process activity or network connections originating from GitLab servers, indicative of RCE exploitation.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "10.0 Critical"
     },
     {
-      "title": "Google Chrome Adds ClickFix Warnings to Stop Users From Running Malicious Commands",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/google-chrome-adds-clickfix-warnings-to.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "title": "PHP ships emergency patches for critical PHP2Shell flaws",
+      "tldr": "The PHP security team has released emergency security patches for two critical remote code execution (RCE) vulnerabilities, CVE-2026-109618 and CVE-2026-109619, collectively known as PHP2Shell. Active exploitation attempts for these flaws are already being observed.",
+      "action": "Immediately apply the emergency security patches to all affected PHP installations across your infrastructure. Conduct an urgent investigation of all PHP-enabled web servers and applications for any signs of compromise or malicious activity.",
+      "cve_ids": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Vulnerable PHP versions addressed by emergency patches (refer to official PHP security advisories for precise version ranges).",
+      "how_to_determine_impact": "Inventory all systems running PHP. Check the exact PHP version installed. Cross-reference with the official PHP security advisories for CVE-2026-109618 and CVE-2026-109619 to identify vulnerable instances. Examine web server and system logs for suspicious requests, error patterns, or unauthorized file modifications.",
+      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with Installed Applications contains 'PHP' and Installed Applications < 'patched_version'. Look for unusual PHP process command lines or spawned child processes.",
+      "rapid7_query_hint": "Scan assets for PHP installations. Search for vulnerability IDs 'CVE-2026-109618' and 'CVE-2026-109619'. Use InsightIDR to monitor web server logs for indicators of RCE attempts and suspicious activity related to PHP processes.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated based on 'critical RCE' and emergency patch)"
     },
     {
-      "title": "China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "CISA: Hackers chain Plex flaws in Plex2Shell attacks to breach servers",
+      "tldr": "CISA has issued a warning regarding active exploitation of four chained vulnerabilities in Plex Media Server, collectively termed Plex2Shell. Attackers are leveraging these flaws to breach servers, making immediate action crucial for users.",
+      "action": "Immediately update all Plex Media Server installations to the latest secure version. Follow CISA's recommendations and conduct a thorough security review of all systems running Plex Media Server for any signs of compromise.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    }
-  ],
-  "insurance": [
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-hackers-chain-plex-flaws-in-plex2shell-attacks-to-breach-servers/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Plex Media Server (four chained vulnerabilities are being exploited, refer to official Plex/CISA advisories for specific vulnerable versions).",
+      "how_to_determine_impact": "Identify all instances of Plex Media Server within your environment. Verify the installed version against official Plex and CISA security alerts for the Plex2Shell vulnerabilities. Monitor server logs, network traffic, and file system integrity for indicators of compromise.",
+      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with Installed Applications contains 'Plex Media Server' and Installed Applications < 'latest_patched_version'. Check for unusual processes or network connections originating from Plex servers.",
+      "rapid7_query_hint": "Scan assets for Plex Media Server installations. Search for vulnerabilities related to 'Plex2Shell' or 'Plex Media Server RCE'. Use InsightIDR to detect active exploitation patterns, anomalous behavior, or known IOCs associated with these attacks.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated due to CISA warning, chained RCE, and active exploitation)"
+    },
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "Mozilla, Google, Apple block compromised eMudhra CA certificates",
+      "tldr": "Major browser vendors like Mozilla, Google, and Apple have blocked eMudhra intermediate Certificate Authority (CA) certificates. This action was taken after it was discovered that the private keys for these CAs were easily recoverable, enabling attackers to forge trusted certificates.",
+      "action": "Audit your organization's certificate trust stores and deployed certificates to identify any reliance on eMudhra intermediate CAs. Ensure operating systems, browsers, and applications are updated to block these compromised certificates. Replace any internal certificates issued by these CAs immediately.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "eMudhra intermediate CA certificates that had recoverable private keys. This impacts any system configured to trust these compromised certificates.",
+      "how_to_determine_impact": "Inspect browser trust stores, operating system certificate stores (e.g., Windows Certificate Manager, Linux /etc/ssl/certs), and application-specific trust configurations for the presence of eMudhra intermediate CAs. Verify if any internal services or clients rely on certificates signed by the compromised eMudhra CAs.",
+      "tanium_query_hint": "Get Computer Name and Certificate Details from all machines with Certificate Issuer Name contains 'eMudhra' and Certificate Status is 'compromised' or 'revoked'. Check for suspicious network connections using these certificates.",
+      "rapid7_query_hint": "Scan assets for certificate validity and trust chain issues. Search for logs related to TLS/SSL handshake failures or warnings involving eMudhra CAs. Use InsightIDR to monitor for connections attempting to use or validate revoked eMudhra certificates.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 High (Estimated, due to fundamental trust compromise)"
     }
   ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -24310,6 +24312,84 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "LiteLLM Compromised in Supply Chain Attack Delivering Credential Stealer and Backdoor",
+        "tldr": "The LiteLLM library has been compromised through a supply chain attack, injecting credential-stealing malware and backdoors. Users who have integrated or used LiteLLM are at risk of data exfiltration and system compromise.",
+        "action": "Immediately audit all systems that have used or integrated LiteLLM for indicators of compromise, such as unexpected network connections, new user accounts, or unusual file modifications. Update LiteLLM to a verified clean version or cease usage until a secure version is confirmed.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
+        "tldr": "Over 300 Tor exit relays have been compromised by attackers, allowing them to intercept SSH connections passing through these relays. This large-scale hijacking poses a significant risk of eavesdropping on sensitive communications and credential theft for Tor users.",
+        "action": "Users leveraging Tor for SSH should assume their connections may be compromised. Implement strong SSH security measures, including multi-factor authentication, and avoid transmitting sensitive information over Tor until the issue is resolved.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Lazarus hackers use post-quantum cryptography for malware delivery",
+        "tldr": "The North Korean Lazarus Group is now utilizing post-quantum cryptographic mechanisms to secure their malware payload delivery. This advanced technique enhances the stealth and resilience of their operations, making detection and analysis more challenging for defenders.",
+        "action": "Strengthen network and endpoint detection capabilities to identify novel malware delivery and communication techniques. Evaluate existing cryptographic defenses against post-quantum threats and consider enhancing threat intelligence for state-sponsored activities.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-use-post-quantum-cryptography-for-malware-delivery/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases",
+        "tldr": "A critical vulnerability in GitLab, with a CVSS score of 10.0, allows for unauthenticated remote code execution. This flaw affects releases spanning 12 years, making a vast number of GitLab instances vulnerable to immediate compromise.",
+        "action": "Immediately apply the latest security patches to all GitLab instances. Conduct a comprehensive audit of all GitLab servers for indicators of compromise (IOCs) such as unusual process activity, unexpected files, or unauthorized modifications.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "GitLab versions released over the past 12 years. Specific vulnerable versions to be identified via official GitLab security advisories.",
+        "how_to_determine_impact": "Identify all GitLab instances in your environment. Check the installed GitLab version and compare it against the latest security advisories. Inspect GitLab logs and system logs for any signs of unauthorized access, unusual command execution, or error messages related to the vulnerability.",
+        "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with Installed Applications contains 'GitLab' and Installed Applications < 'latest_patched_version'. Check Process Command Line for suspicious activity related to GitLab.",
+        "rapid7_query_hint": "Scan assets for 'GitLab' installations. Search for vulnerability IDs related to 'GitLab RCE'. Utilize InsightIDR to monitor for unusual process activity or network connections originating from GitLab servers, indicative of RCE exploitation.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "PHP ships emergency patches for critical PHP2Shell flaws",
+        "tldr": "The PHP security team has released emergency security patches for two critical remote code execution (RCE) vulnerabilities, CVE-2026-109618 and CVE-2026-109619, collectively known as PHP2Shell. Active exploitation attempts for these flaws are already being observed.",
+        "action": "Immediately apply the emergency security patches to all affected PHP installations across your infrastructure. Conduct an urgent investigation of all PHP-enabled web servers and applications for any signs of compromise or malicious activity.",
+        "cve_ids": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/php-ships-emergency-patches-for-critical-php2shell-flaws/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Vulnerable PHP versions addressed by emergency patches (refer to official PHP security advisories for precise version ranges).",
+        "how_to_determine_impact": "Inventory all systems running PHP. Check the exact PHP version installed. Cross-reference with the official PHP security advisories for CVE-2026-109618 and CVE-2026-109619 to identify vulnerable instances. Examine web server and system logs for suspicious requests, error patterns, or unauthorized file modifications.",
+        "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with Installed Applications contains 'PHP' and Installed Applications < 'patched_version'. Look for unusual PHP process command lines or spawned child processes.",
+        "rapid7_query_hint": "Scan assets for PHP installations. Search for vulnerability IDs 'CVE-2026-109618' and 'CVE-2026-109619'. Use InsightIDR to monitor web server logs for indicators of RCE attempts and suspicious activity related to PHP processes.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated based on 'critical RCE' and emergency patch)",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA: Hackers chain Plex flaws in Plex2Shell attacks to breach servers",
+        "tldr": "CISA has issued a warning regarding active exploitation of four chained vulnerabilities in Plex Media Server, collectively termed Plex2Shell. Attackers are leveraging these flaws to breach servers, making immediate action crucial for users.",
+        "action": "Immediately update all Plex Media Server installations to the latest secure version. Follow CISA's recommendations and conduct a thorough security review of all systems running Plex Media Server for any signs of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-hackers-chain-plex-flaws-in-plex2shell-attacks-to-breach-servers/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Plex Media Server (four chained vulnerabilities are being exploited, refer to official Plex/CISA advisories for specific vulnerable versions).",
+        "how_to_determine_impact": "Identify all instances of Plex Media Server within your environment. Verify the installed version against official Plex and CISA security alerts for the Plex2Shell vulnerabilities. Monitor server logs, network traffic, and file system integrity for indicators of compromise.",
+        "tanium_query_hint": "Get Computer Name and Installed Applications from all machines with Installed Applications contains 'Plex Media Server' and Installed Applications < 'latest_patched_version'. Check for unusual processes or network connections originating from Plex servers.",
+        "rapid7_query_hint": "Scan assets for Plex Media Server installations. Search for vulnerabilities related to 'Plex2Shell' or 'Plex Media Server RCE'. Use InsightIDR to detect active exploitation patterns, anomalous behavior, or known IOCs associated with these attacks.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated due to CISA warning, chained RCE, and active exploitation)",
         "category": "vulns"
       }
     ]
