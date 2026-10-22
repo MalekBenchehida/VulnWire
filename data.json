@@ -1,102 +1,111 @@
 {
   "breaches": [
     {
-      "title": "Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations",
-      "tldr": "Meta has been ordered to pay $25 billion after a court found the company guilty of 43 million privacy violations related to Facebook user data. This ruling highlights significant legal and financial risks associated with large-scale data privacy infringements and misuse of user information.",
-      "action": "Review and strengthen data privacy compliance frameworks. Ensure transparent data handling practices and conduct a thorough audit of user data processing to prevent similar large-scale violations.",
+      "title": "Capcom confirms data breach affecting 11.7 million accounts",
+      "tldr": "Japanese gaming company Capcom announced a data breach affecting its CAPCOM ID membership service, exposing over 11.7 million customer email addresses and associated information. This incident includes personal data tied to user accounts, necessitating immediate action.",
+      "action": "Advise users with CAPCOM ID accounts to change their passwords, especially if reused on other services. Organizations should ensure employees are aware of potential phishing attempts targeting these exposed users.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
+      "source": "BleepingComputer"
     },
     {
       "title": "Railway Says Intruder May Have Accessed Customer Secrets, Urges Credential Rotation",
-      "tldr": "A railway company has reported an intruder may have gained unauthorized access to customer secrets. While the full extent of the compromise is under investigation, customers are being urged to rotate their credentials as a precautionary measure.",
-      "action": "Immediately implement a mandatory credential rotation policy for all users, especially those with access to sensitive systems. Conduct an internal forensic investigation to determine the scope of access and any exfiltrated data.",
+      "tldr": "The Railway platform reported an intrusion where an unauthorized party may have accessed customer secrets. While specific details on the extent of compromise are limited, users are strongly advised to rotate their credentials as a precautionary measure to prevent further unauthorized access.",
+      "action": "All users of the Railway platform should immediately rotate their API keys, database credentials, and any other secrets stored within the platform. Monitor associated accounts for unusual activity or unauthorized access.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
       "source": "The Hacker News"
     },
     {
-      "title": "LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release",
-      "tldr": "LiteLLM suspects a GitHub token leak from their AI gateway logs led to the release of a malicious package. This incident points to a potential supply chain attack vector, where compromised credentials facilitate the distribution of malicious software through trusted channels.",
-      "action": "All developers and organizations using LiteLLM or similar AI gateway services should immediately revoke any GitHub tokens potentially exposed through logs and regenerate new ones. Implement stricter log sanitization and access controls for sensitive credentials. Review all recently pulled packages for signs of tampering.",
+      "title": "LiteLLM release pipeline hacked to distribute info-stealer malware",
+      "tldr": "The LiteLLM project's PyPI package and Docker images were compromised, leading to the distribution of malicious software containing an info-stealer payload. This malware is designed to exfiltrate credentials, secrets, and environment variables from affected systems, posing a supply chain risk.",
+      "action": "Immediately review and verify any LiteLLM installations from PyPI or Docker images. If compromised versions were deployed, scan affected systems for info-stealer malware, rotate all exposed credentials, and rebuild environments from trusted sources.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/litellm-release-pipeline-hacked-to-distribute-info-stealer-malware/",
+      "source": "BleepingComputer"
     },
     {
       "title": "Japan's Onamae Desktop Cloud hacked, up to 27,000 servers affected",
-      "tldr": "Onamae Desktop Cloud, a major VPS provider in Japan, suffered a breach where attackers compromised its infrastructure and installed malware on nearly 27,000 customer servers. This large-scale compromise affects a significant number of client environments, posing a widespread threat of further data theft or disruption.",
-      "action": "Customers of Onamae Desktop Cloud should isolate affected servers, conduct a thorough malware scan, and change all credentials associated with the compromised environment. All organizations using VPS providers should verify their provider's security posture and implement robust monitoring for unusual activity.",
+      "tldr": "The infrastructure of Onamae Desktop Cloud, a popular VPS provider in Japan, was compromised by hackers. This breach resulted in the installation of malware on up to 26,739 customer servers, indicating a wide-scale supply chain attack impacting hosted environments.",
+      "action": "Customers of Onamae Desktop Cloud should immediately isolate their servers, perform thorough malware scans, and reset all credentials. Investigate for unauthorized access or data exfiltration. Consider migrating critical workloads temporarily.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27-000-servers-affected/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/japans-onamae-desktop-cloud-hacked-up-to-27000-servers-affected/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Arista patches new VeloCloud Orchestrator zero-day exploited in attacks",
-      "tldr": "Arista Networks has released security updates for an actively exploited zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. This critical flaw allows attackers to compromise the orchestrator, potentially impacting managed network infrastructure.",
-      "action": "Immediately apply the latest security patches provided by Arista Networks for all VeloCloud Orchestrator On-Prem deployments. Review logs for any signs of compromise prior to patching, as active exploitation has been confirmed.",
+      "title": "Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks",
+      "tldr": "Arista Networks has issued a warning regarding a critical SQL injection zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. This flaw is actively being exploited in the wild, posing a significant risk for remote code execution and system compromise.",
+      "action": "Immediately apply the latest security updates provided by Arista for VeloCloud Orchestrator On-Prem deployments. Isolate affected systems and monitor for any signs of compromise if patching is not immediate.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Arista VeloCloud Orchestrator (VCO) On-Prem deployments (specific versions to be confirmed by vendor advisory)",
-      "how_to_determine_impact": "Consult the official Arista Networks security advisory for specific version checks. Verify the current version of VeloCloud Orchestrator and compare against the patched versions. Look for any suspicious activity or unauthorized access attempts in VCO logs.",
-      "tanium_query_hint": "Get Tanium Deployments for 'VeloCloud Orchestrator' from all machines. Check for installed versions. Examine 'Security Event Log' for suspicious logins or process executions on VCO servers.",
-      "rapid7_query_hint": "Search assets by 'Software Name contains VeloCloud Orchestrator' and 'Version equals [Vulnerable Version Range]'. Use InsightAgent queries to check for specific file hashes or process activity detailed in the Arista advisory.",
+      "affected_versions": "Arista VeloCloud Orchestrator (VCO) On-Prem deployments. Specific vulnerable versions will be detailed in Arista's official security advisory.",
+      "how_to_determine_impact": "Check if your organization utilizes VeloCloud Orchestrator On-Prem deployments. Verify the installed version against Arista's latest security advisory and look for any unusual network activity or unauthorized access attempts against the VCO instance.",
+      "tanium_query_hint": "Get Installed Applications with Name like \"VeloCloud Orchestrator\" or Get Running Processes with Name \"vco.exe\" and check version information.",
+      "rapid7_query_hint": "vulnerability.title = \"Arista VeloCloud Orchestrator SQL Injection\" or asset.software.name = \"VeloCloud Orchestrator\" AND asset.software.version < \"Vulnerable_Version\"",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate based on zero-day RCE potential)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "PHP2Shell Exploitation Started Days Before Patches",
-      "tldr": "Attackers began exploiting PHP2Shell vulnerabilities approximately four days before official security patches were released. This pre-patch exploitation window highlights the urgency for immediate patching and detection of any compromise. CISA also warned about this.",
-      "action": "Immediately apply all available security patches for PHP2Shell. Conduct a forensic analysis of systems running PHP2Shell for signs of compromise during the period prior to patch release, focusing on the four days before patches became available.",
+      "title": "Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes",
+      "tldr": "Two critical remote code execution (RCE) vulnerabilities in Linux KSMBD were publicly disclosed with a CVSS score of 9.0. These flaws allow attackers to execute arbitrary code and were revealed on public mailing lists prior to official kernel fixes being widely available.",
+      "action": "Update Linux kernels to versions that include fixes for the KSMBD RCE flaws as soon as patches are released by distribution vendors. If immediate patching is not possible, restrict access to KSMBD services from untrusted networks or disable KSMBD if not essential.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/php2shell-exploitation-started-days-before-patches/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "PHP2Shell installations (all known versions prior to patches released on October 2026)",
-      "how_to_determine_impact": "Identify all servers running PHP2Shell. Inspect web server logs, PHP error logs, and system access logs for suspicious requests, file modifications, or unexpected process executions from the vulnerable application's context, especially activity in the 4 days preceding patch release.",
-      "tanium_query_hint": "Get Running Processes with CommandLine matches 'php2shell' or 'php-cgi' or 'apache' from all machines. Check 'File Hash' for known malicious files. Check 'Last Modified Date' for scripts in PHP2Shell directories.",
-      "rapid7_query_hint": "Search assets by 'Software Name contains PHP2Shell' and check for specific vulnerability IDs (if known). Use InsightAgent to look for file integrity monitoring alerts or process anomalies related to the application directory.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate based on pre-patch active exploitation, likely RCE)"
+      "source_url": "https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Linux kernels utilizing KSMBD. Specific vulnerable kernel versions will be detailed in official vendor advisories from distributions like Red Hat, Debian, and Ubuntu.",
+      "how_to_determine_impact": "Identify Linux systems within your environment that are running KSMBD. Check the installed kernel versions against official advisories from your respective Linux distribution vendors for known vulnerable versions.",
+      "tanium_query_hint": "Get Linux Kernel Version and Get Running Processes with Name \"ksmbd\"",
+      "rapid7_query_hint": "vulnerability.cvss_score >= 9.0 AND vulnerability.software.name = \"Linux Kernel\" AND vulnerability.software.vendor = \"Linux\" or asset.os.name = \"Linux\" AND asset.software.name = \"ksmbd\"",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical"
     },
     {
       "title": "GitLab warns of new max severity code execution vulnerability",
-      "tldr": "GitLab has released security patches addressing a maximum-severity Regular Expression Compiler flaw. This vulnerability could allow remote attackers to execute arbitrary code on vulnerable GitLab servers, posing a critical threat to source code repositories and CI/CD pipelines.",
-      "action": "Apply the latest security patches from GitLab immediately to all GitLab instances. Prioritize GitLab servers exposed to the internet. Verify patch application and monitor for any suspicious activity post-patch.",
+      "tldr": "GitLab has issued security patches for a maximum-severity Regular Expression Compiler flaw. This vulnerability could allow remote attackers to execute arbitrary code on servers running vulnerable GitLab instances, posing a critical risk to data and system integrity.",
+      "action": "Apply the latest security updates released by GitLab immediately to patch the Regular Expression Compiler flaw. Verify that the update was successful and continuously monitor GitLab instances for any unusual activity or signs of compromise.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/gitlab-warns-of-new-max-severity-code-execution-vulnerability/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "GitLab instances (specific versions affected by Regular Expression Compiler flaw, consult official GitLab advisory for exact ranges)",
-      "how_to_determine_impact": "Consult the official GitLab security advisory for the exact affected versions. Check the version of your GitLab instance(s) and apply the patch. Look for unexpected processes or unauthorized modifications within the GitLab environment.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'GitLab' in Name. Compare version numbers to the patched versions. Check 'Running Processes' for unusual commands on GitLab servers.",
-      "rapid7_query_hint": "Search assets by 'Software Name contains GitLab' and 'Version equals [Vulnerable Version Range]'. Look for specific vulnerability checks related to GitLab in InsightVM. Check logs for regex compilation errors or unusual activity on GitLab servers.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical (Based on 'max severity code execution')"
+      "affected_versions": "Specific versions of GitLab affected by the Regular Expression Compiler flaw. Refer to GitLab's official security advisory for exact vulnerable and patched versions.",
+      "how_to_determine_impact": "Check the version of all GitLab installations within your organization. Compare these versions against the official GitLab security advisory for the patched versions to identify vulnerable instances.",
+      "tanium_query_hint": "Get Installed Applications with Name \"GitLab\" and Get Application Version[\"GitLab\"]",
+      "rapid7_query_hint": "vulnerability.title = \"GitLab Remote Code Execution\" OR asset.software.name = \"GitLab\" AND asset.software.version < \"Vulnerable_Version\"",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "CISA: Hackers chain Plex flaws in Plex2Shell attacks to breach servers",
-      "tldr": "CISA has issued a warning about attackers actively exploiting four vulnerabilities in Plex Media Server. These flaws are being chained in \"Plex2Shell\" attacks to breach servers, indicating a severe and ongoing threat to users of the media server software.",
-      "action": "Immediately apply all available security updates for Plex Media Server. Isolate any internet-facing Plex Media Server instances until patched. Conduct a thorough compromise assessment on all Plex servers for signs of active exploitation and unauthorized access.",
+      "title": "Oracle Patches Over 1,200 Vulnerabilities With October 2026 CPU",
+      "tldr": "Oracle has released its October 2026 Critical Patch Update (CPU), addressing over 1,200 vulnerabilities across various products. This extensive update includes fixes for numerous critical flaws in databases, applications, and middleware, requiring a comprehensive patching effort.",
+      "action": "Review the Oracle October 2026 Critical Patch Update advisory and prioritize applying all relevant patches to Oracle products within your environment. Focus on critical vulnerabilities impacting internet-facing systems or high-value assets first.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-hackers-chain-plex-flaws-in-plex2shell-attacks-to-breach-servers/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Plex Media Server (four specific vulnerabilities; consult CISA advisory and Plex security bulletins for affected version ranges)",
-      "how_to_determine_impact": "Review CISA's advisory for specific vulnerability identifiers and affected Plex Media Server versions. Check current Plex Media Server installations against these versions. Monitor server logs for unusual activity, unauthorized file access, or unexpected process creations indicative of compromise.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Plex Media Server' in Name. Compare version numbers to CISA advisory. Check 'Running Processes' and 'Network Connections' for suspicious activity on Plex servers.",
-      "rapid7_query_hint": "Search assets by 'Software Name contains Plex Media Server' and 'Version equals [Vulnerable Version Range]'. Use InsightAgent to scan for indicators of compromise (IOCs) or specific vulnerability checks related to Plex flaws outlined by CISA.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate based on CISA warning of chained, actively exploited flaws leading to server breaches)"
+      "source_url": "https://www.securityweek.com/oracle-patches-over-1200-vulnerabilities-with-october-2026-cpu/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "Numerous Oracle products across various categories including databases, applications, and middleware. Consult the official Oracle October 2026 CPU advisory for a comprehensive list of affected products and versions.",
+      "how_to_determine_impact": "Inventory all Oracle products and components in use across your infrastructure. Cross-reference installed product versions with the detailed advisories provided by Oracle in their October 2026 CPU for specific CVEs relevant to your environment.",
+      "tanium_query_hint": "Get Installed Applications with Name like \"Oracle\" and Get Application Version[\"Oracle\"] for various Oracle components.",
+      "rapid7_query_hint": "vulnerability.solution.id = \"Oracle October 2026 CPU\" or asset.software.vendor = \"Oracle\" and filter by CVEs listed in the CPU.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "Multiple, consult Oracle CPU"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations",
+      "tldr": "Meta has been ordered to pay $25 billion following a court ruling that found the company responsible for 43 million privacy violations. This significant penalty highlights growing legal and financial consequences for companies mishandling user data and privacy.",
+      "action": "Organizations should proactively review their data handling practices and privacy policies to ensure strict compliance with relevant regulations (e.g., GDPR, CCPA). Conduct regular privacy impact assessments to mitigate potential legal and financial risks.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html",
+      "source": "The Hacker News"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -24556,6 +24565,72 @@
         "rapid7_query_hint": "Search assets by 'Software Name contains GitLab' and 'Version equals [Vulnerable Version Range]'. Look for specific vulnerability checks related to GitLab in InsightVM. Check logs for regex compilation errors or unusual activity on GitLab servers.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.8 Critical (Based on 'max severity code execution')",
+        "category": "vulns"
+      },
+      {
+        "title": "Capcom confirms data breach affecting 11.7 million accounts",
+        "tldr": "Japanese gaming company Capcom announced a data breach affecting its CAPCOM ID membership service, exposing over 11.7 million customer email addresses and associated information. This incident includes personal data tied to user accounts, necessitating immediate action.",
+        "action": "Advise users with CAPCOM ID accounts to change their passwords, especially if reused on other services. Organizations should ensure employees are aware of potential phishing attempts targeting these exposed users.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "LiteLLM release pipeline hacked to distribute info-stealer malware",
+        "tldr": "The LiteLLM project's PyPI package and Docker images were compromised, leading to the distribution of malicious software containing an info-stealer payload. This malware is designed to exfiltrate credentials, secrets, and environment variables from affected systems, posing a supply chain risk.",
+        "action": "Immediately review and verify any LiteLLM installations from PyPI or Docker images. If compromised versions were deployed, scan affected systems for info-stealer malware, rotate all exposed credentials, and rebuild environments from trusted sources.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/litellm-release-pipeline-hacked-to-distribute-info-stealer-malware/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Arista Warns of Critical VeloCloud SQL Injection Zero-Day Exploited in Attacks",
+        "tldr": "Arista Networks has issued a warning regarding a critical SQL injection zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. This flaw is actively being exploited in the wild, posing a significant risk for remote code execution and system compromise.",
+        "action": "Immediately apply the latest security updates provided by Arista for VeloCloud Orchestrator On-Prem deployments. Isolate affected systems and monitor for any signs of compromise if patching is not immediate.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/arista-warns-of-critical-velocloud-sql.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Arista VeloCloud Orchestrator (VCO) On-Prem deployments. Specific vulnerable versions will be detailed in Arista's official security advisory.",
+        "how_to_determine_impact": "Check if your organization utilizes VeloCloud Orchestrator On-Prem deployments. Verify the installed version against Arista's latest security advisory and look for any unusual network activity or unauthorized access attempts against the VCO instance.",
+        "tanium_query_hint": "Get Installed Applications with Name like \"VeloCloud Orchestrator\" or Get Running Processes with Name \"vco.exe\" and check version information.",
+        "rapid7_query_hint": "vulnerability.title = \"Arista VeloCloud Orchestrator SQL Injection\" or asset.software.name = \"VeloCloud Orchestrator\" AND asset.software.version < \"Vulnerable_Version\"",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Two CVSS 9.0 Linux KSMBD RCE Flaws Disclosed on Public Mailing Lists Before Kernel Fixes",
+        "tldr": "Two critical remote code execution (RCE) vulnerabilities in Linux KSMBD were publicly disclosed with a CVSS score of 9.0. These flaws allow attackers to execute arbitrary code and were revealed on public mailing lists prior to official kernel fixes being widely available.",
+        "action": "Update Linux kernels to versions that include fixes for the KSMBD RCE flaws as soon as patches are released by distribution vendors. If immediate patching is not possible, restrict access to KSMBD services from untrusted networks or disable KSMBD if not essential.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/two-cvss-90-linux-ksmbd-rce-flaws.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Linux kernels utilizing KSMBD. Specific vulnerable kernel versions will be detailed in official vendor advisories from distributions like Red Hat, Debian, and Ubuntu.",
+        "how_to_determine_impact": "Identify Linux systems within your environment that are running KSMBD. Check the installed kernel versions against official advisories from your respective Linux distribution vendors for known vulnerable versions.",
+        "tanium_query_hint": "Get Linux Kernel Version and Get Running Processes with Name \"ksmbd\"",
+        "rapid7_query_hint": "vulnerability.cvss_score >= 9.0 AND vulnerability.software.name = \"Linux Kernel\" AND vulnerability.software.vendor = \"Linux\" or asset.os.name = \"Linux\" AND asset.software.name = \"ksmbd\"",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Oracle Patches Over 1,200 Vulnerabilities With October 2026 CPU",
+        "tldr": "Oracle has released its October 2026 Critical Patch Update (CPU), addressing over 1,200 vulnerabilities across various products. This extensive update includes fixes for numerous critical flaws in databases, applications, and middleware, requiring a comprehensive patching effort.",
+        "action": "Review the Oracle October 2026 Critical Patch Update advisory and prioritize applying all relevant patches to Oracle products within your environment. Focus on critical vulnerabilities impacting internet-facing systems or high-value assets first.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/oracle-patches-over-1200-vulnerabilities-with-october-2026-cpu/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Numerous Oracle products across various categories including databases, applications, and middleware. Consult the official Oracle October 2026 CPU advisory for a comprehensive list of affected products and versions.",
+        "how_to_determine_impact": "Inventory all Oracle products and components in use across your infrastructure. Cross-reference installed product versions with the detailed advisories provided by Oracle in their October 2026 CPU for specific CVEs relevant to your environment.",
+        "tanium_query_hint": "Get Installed Applications with Name like \"Oracle\" and Get Application Version[\"Oracle\"] for various Oracle components.",
+        "rapid7_query_hint": "vulnerability.solution.id = \"Oracle October 2026 CPU\" or asset.software.vendor = \"Oracle\" and filter by CVEs listed in the CPU.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "Multiple, consult Oracle CPU",
         "category": "vulns"
       }
     ]
