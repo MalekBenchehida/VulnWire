@@ -1,51 +1,51 @@
 {
   "breaches": [
     {
+      "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
+      "tldr": "A master key for LiteLLM was leaked, enabling attackers to steal GitHub tokens. This compromise allowed them to hijack the software's release pipeline, indicating a significant supply chain attack that could lead to malicious code distribution.",
+      "action": "If using LiteLLM, immediately revoke all GitHub tokens associated with LiteLLM and review release pipeline integrity for any unauthorized changes. Implement stronger access controls and monitoring for supply chain integrity.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials",
-      "tldr": "Attackers successfully breached enterprise firewalls and VPNs, leading to the exposure of more than 70,000 user credentials. This indicates a significant compromise of network perimeter security, likely affecting multiple organizations.",
-      "action": "Immediately reset all credentials for users who access the affected firewalls and VPNs. Conduct a thorough audit of firewall and VPN logs for unauthorized access patterns and anomalous activity to identify the extent of compromise.",
+      "tldr": "Attackers successfully breached enterprise firewalls and VPNs, leading to the exposure of over 70,000 user credentials. This compromise of critical perimeter defenses poses a severe risk of further network intrusion and data access.",
+      "action": "Immediately force password resets for all potentially exposed accounts. Review firewall and VPN configurations for any unauthorized access or backdoors, and ensure all systems are patched. Implement multi-factor authentication (MFA) across all services.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html",
       "source": "The Hacker News"
     },
     {
       "title": "Quest Diagnostics confirms data breach exposed patient records",
-      "tldr": "Clinical laboratory company Quest Diagnostics disclosed a data breach where patient records were exposed due to a threat actor gaining unauthorized access to its Quanum LSM system. Specific details on the number of affected individuals or types of records are still emerging.",
-      "action": "Affected individuals should be notified according to regulatory requirements. Internally, security teams must isolate the compromised system, conduct a forensic investigation, and enhance access controls to critical patient data systems to prevent future breaches.",
+      "tldr": "American clinical laboratory company Quest Diagnostics disclosed a data breach after unauthorized access to its Quanum LSM system exposed patient records. The breach involves sensitive healthcare information, requiring vigilance from affected individuals.",
+      "action": "If your organization uses Quest Diagnostics, assess potential impact to your patient data. Review third-party vendor security posture and data handling agreements. Advise potentially affected individuals to monitor medical statements and credit reports.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
       "source": "BleepingComputer"
     },
     {
       "title": "Capcom confirms data breach affecting 11.7 million accounts",
-      "tldr": "Japanese gaming company Capcom confirmed that its CAPCOM ID membership service was breached, resulting in the exposure of over 11.7 million customer email addresses and associated information. This represents a large-scale compromise of user data across its platform.",
-      "action": "Advise all CAPCOM ID users to immediately reset their passwords and enable two-factor authentication (2FA) if available. Organizations should monitor for credential stuffing attacks targeting their users, leveraging these newly exposed credentials.",
+      "tldr": "Japanese gaming giant Capcom has confirmed that hackers breached its CAPCOM ID membership service, resulting in the exposure of more than 11.7 million customer email addresses and associated information. This data could be used for targeted phishing.",
+      "action": "If you have a CAPCOM ID, change your password immediately and use a unique, strong password not reused on other services. Be vigilant for phishing attempts leveraging this exposed information.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "LiteLLM release pipeline hacked to distribute info-stealer malware",
-      "tldr": "The LiteLLM project's PyPI package and Docker images were compromised, leading to the distribution of malicious payloads that steal credentials, secrets, and environment variables. This represents a critical supply chain attack targeting AI development environments.",
-      "action": "Users of LiteLLM should immediately verify the integrity of their installed packages and Docker images. All credentials, secrets, and environment variables accessed by systems using LiteLLM should be rotated, and systems should be scanned for info-stealing malware.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/litellm-release-pipeline-hacked-to-distribute-info-stealer-malware/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
       "title": "Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions",
-      "tldr": "Research into exposed infrastructure revealed that ransomware affiliates are leveraging AI agents to automate and enhance their intrusion operations. This indicates a growing sophistication in ransomware attack methodologies, potentially enabling faster and more effective attacks.",
-      "action": "Organizations should review and harden security policies for any AI agents or automated systems used within their environments. Implement strict access controls, continuous monitoring, and anomaly detection for AI-driven processes to prevent their misuse in intrusions.",
+      "tldr": "Analysis of exposed infrastructure shows ransomware affiliates are leveraging AI agents to automate and execute intrusions. This marks a new level of sophistication in ransomware attack methodologies, potentially enabling faster and more effective breaches.",
+      "action": "Enhance network monitoring for AI agent activity, especially for unusual access patterns, command execution, or rapid reconnaissance. Review and harden security configurations for systems that could be targeted by AI-driven intrusion tools.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
       "source": "The Hacker News"
     },
     {
-      "title": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware",
-      "tldr": "New details have emerged about self-rebuilding macOS ransomware variants. This type of ransomware is designed to persist and reconstitute itself even after attempted removal, posing a significant challenge to recovery efforts on Apple systems.",
-      "action": "Enhance endpoint detection and response (EDR) solutions on macOS systems, focusing on behavioral analysis for ransomware-like activity and persistence mechanisms. Ensure robust, immutable backups are in place and regularly tested for macOS endpoints to facilitate recovery.",
+      "title": "Self-Rebuilding macOS Ransomware",
+      "tldr": "A new variant of ransomware targeting macOS systems has been identified with self-rebuilding capabilities. This advanced feature allows the ransomware to restore itself after removal attempts, posing a significant challenge for incident response and recovery.",
+      "action": "Ensure macOS systems have updated security software, robust backup strategies (including immutable backups), and endpoint detection and response (EDR) solutions capable of detecting and preventing advanced ransomware behaviors. Monitor for unusual process activity.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
       "source": "SecurityWeek"
@@ -53,64 +53,66 @@
   ],
   "vulns": [
     {
-      "title": "PHP2Shell Exploit Attempts Hit Millions as Attackers Try to Deploy Mirai Malware",
-      "tldr": "Exploit attempts targeting the PHP2Shell vulnerability have escalated to millions, with attackers actively trying to deploy the Mirai botnet malware. This indicates widespread and active exploitation of this critical PHP vulnerability, posing an immediate threat to vulnerable servers.",
-      "action": "Immediately apply all available emergency patches for the PHP2Shell vulnerability. If patching is not yet possible, implement recommended mitigations such as restricting access to vulnerable PHP configurations or disabling affected functionalities and monitor for Mirai IOCs.",
+      "title": "CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud",
+      "tldr": "CISA has alerted to critical, actively exploited vulnerabilities in Collabora Online and Arista VeloCloud, including a third zero-day in Arista VCO within four months. These flaws present an immediate and severe risk to affected systems, indicating persistent targeting by attackers.",
+      "action": "Immediately identify and apply all available patches for Collabora Online and Arista VeloCloud instances. Refer to CISA and vendor advisories for specific affected versions and indicators of compromise, and monitor systems for suspicious activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/php2shell-exploit-attempts-hit-millions.html",
+      "source_url": "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "PHP installations vulnerable to PHP2Shell, particularly those with non-default configurations enabling specific functions like `phar.readonly = Off` and `opcache.enable = 0`.",
-      "how_to_determine_impact": "Identify all PHP installations. Review `php.ini` configuration for `phar.readonly = Off` and `opcache.enable = 0`. Check web server logs for exploitation attempts (e.g., requests to phar files, unusual POST requests). Search for presence of Mirai malware binaries.",
-      "tanium_query_hint": "Get File Exists[php.ini] from all machines with Get Content of File[php.ini] for 'phar.readonly = Off' or 'opcache.enable = 0'. Also, Get Running Processes matching 'mirai'.",
-      "rapid7_query_hint": "Search for PHP assets with recent web server logs showing suspicious activity. Look for vulnerability IDs related to PHP2Shell in asset reports. Use InsightAgent queries to detect Mirai process activity or file hashes.",
+      "affected_versions": "Specific versions of Collabora Online and Arista VeloCloud Orchestrator (VCO), as detailed in CISA and vendor advisories.",
+      "how_to_determine_impact": "Consult CISA and vendor advisories for precise affected versions and known Indicators of Compromise (IOCs). Inspect logs for unauthorized access or unusual processes on Collabora Online and Arista VCO systems.",
+      "tanium_query_hint": "Get Installed Applications containing 'Collabora Online' or Get Network Device Information for Arista devices to check versions. Look for processes or files matching IOCs.",
+      "rapid7_query_hint": "Scan for vulnerabilities in Collabora Online or Scan for vulnerabilities in Arista VeloCloud Orchestrator. Use asset search filters for device type and software versions once CVEs are identified.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "PHP shares mitigation for new RCE vulnerability with no patch",
-      "tldr": "The PHP security team has issued mitigation measures for a newly discovered remote code execution (RCE) vulnerability that affects systems with non-default configurations. As no patch is currently available, immediate mitigation is crucial to prevent active exploitation.",
-      "action": "Implement the recommended mitigation measures provided by the PHP security team immediately. This likely involves specific `php.ini` configuration changes, such as setting `phar.readonly = On`, limiting `opcache.enable` to `1`, or disabling vulnerable functions, until a patch is released.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/php-shares-mitigation-for-new-and-unpatched-rce-vulnerability/",
-      "source": "BleepingComputer",
+      "title": "BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations",
+      "tldr": "The BlackX UEFI bootkit, deployed in espionage campaigns, exploits the \"Baton Drop\" vulnerability (CVE-2022-21894) to bypass Secure Boot on patched Windows systems missing critical revocations. This allows it to load malicious drivers and interfere with security solutions.",
+      "action": "Ensure all Windows systems have the latest Secure Boot revocation lists applied, specifically addressing CVE-2022-21894. Review system integrity for signs of UEFI compromise using firmware analysis tools and monitor for suspicious boot-time activity.",
+      "cve_ids": [
+        "CVE-2022-21894"
+      ],
+      "source_url": "https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "PHP installations with specific non-default configurations, particularly concerning `phar.readonly` and `opcache.enable` settings. Specific PHP versions are not detailed but are assumed to be widely affected if configurations match.",
-      "how_to_determine_impact": "Check all PHP `php.ini` files. Specifically, search for `phar.readonly = Off` or `opcache.enable = 0` (or missing these settings, defaulting to vulnerable states). Look for unusual file creations or process executions related to PHP applications.",
-      "tanium_query_hint": "Get File Content[php.ini] from all machines. Search for 'phar.readonly = Off' or 'opcache.enable = 0'. Also, Get Installed Applications that contain 'PHP' for inventory.",
-      "rapid7_query_hint": "Search asset inventory for PHP installations. Use InsightAgent to scan `php.ini` files for specific vulnerable configurations. Monitor web server logs for suspicious requests targeting PHP applications.",
+      "affected_versions": "Windows systems vulnerable to CVE-2022-21894 (Baton Drop flaw) and missing necessary Secure Boot revocations.",
+      "how_to_determine_impact": "Verify that all Secure Boot revocations, particularly those related to CVE-2022-21894, are fully updated on Windows systems. Scan for the presence of the BlackX bootkit or any unauthorized UEFI firmware modifications.",
+      "tanium_query_hint": "Get Registry Value[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\SecureBoot\\State] for Secure Boot status. Get Firmware Version or Get Running Processes to look for malicious components or drivers associated with BlackX.",
+      "rapid7_query_hint": "Scan for CVE-2022-21894. Use InsightAgent to query for suspicious files in UEFI-related directories or unusual boot entries. Asset search filters for Secure Boot Status.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.0 Critical"
     },
     {
-      "title": "HPE patches eight max severity RCE and auth bypass AOS flaws",
-      "tldr": "Hewlett Packard Enterprise (HPE) released security updates addressing 72 vulnerabilities in Aruba Operating System (ArubaOS), including eight maximum-severity flaws. These critical vulnerabilities include remote code execution (RCE) and authentication bypass issues, requiring immediate attention.",
-      "action": "Immediately apply all available HPE security updates for ArubaOS to patch these critical RCE and authentication bypass vulnerabilities. Prioritize deployment on internet-facing devices and critical network infrastructure components to prevent compromise.",
+      "title": "PHP Warns of Another Unpatched RCE Risk Two Days After Emergency PHP2Shell Patches",
+      "tldr": "PHP has issued a warning regarding a new, unpatched remote code execution (RCE) vulnerability affecting systems with non-default configurations. This critical flaw currently lacks an official patch, but the PHP security team has provided mitigation measures.",
+      "action": "Immediately review all PHP installations, especially those with non-default configurations, and apply the mitigation measures recommended by the PHP security team. Monitor PHP servers closely for any signs of exploitation attempts.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html",
+      "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Multiple versions of HPE Aruba Operating System (ArubaOS). Refer to official HPE security advisories for exact affected product lines and version ranges, which can be extensive.",
-      "how_to_determine_impact": "Consult HPE's official security advisories for the specific patch release. Verify the version of ArubaOS running on all HPE network devices. Look for signs of unauthorized access or configuration changes on unpatched systems that could indicate compromise.",
-      "tanium_query_hint": "Use Tanium sensors to identify HPE ArubaOS devices and their versions (e.g., 'Get Hardware Information' or device-specific inventory sensors). Consult vendor documentation for specific file paths or registry keys to check for software versions.",
-      "rapid7_query_hint": "Scan network devices for identified ArubaOS vulnerabilities using InsightVM. Search for assets reporting ArubaOS versions within the affected ranges specified by HPE advisories. Look for vulnerability IDs matching the HPE patches in scan results.",
+      "affected_versions": "PHP installations with specific non-default configurations. Consult PHP advisories for details.",
+      "how_to_determine_impact": "Identify all PHP installations in your environment. Compare php.ini and other configuration files against vendor advisories to detect the specific non-default settings that trigger this RCE vulnerability.",
+      "tanium_query_hint": "Get Installed Applications containing 'PHP' to identify PHP instances. Get File Content[C:\\php\\php.ini] (adjust path) to review configuration for problematic settings.",
+      "rapid7_query_hint": "Scan for PHP installations. Use InsightAgent to query for php.ini content or specific configuration settings that indicate vulnerability.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated for max severity RCE/Auth Bypass)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Attackers Exploit Third Arista VCO Zero-Day in Four Months",
-      "tldr": "Attackers are actively exploiting a third zero-day vulnerability in Arista's Velocloud Orchestrator (VCO) within a four-month period. This indicates a persistent and targeted threat against critical network infrastructure components, likely leading to network compromise.",
-      "action": "Immediately check Arista's official security advisories for information on this zero-day and apply any available emergency patches or recommended mitigations. Monitor Arista VCO instances for any signs of compromise or unusual activity, including unauthorized access attempts.",
+      "title": "Mirai Botnet Operators Join PHP2Shell Attacks as ASLR Bypass Exploits Emerge",
+      "tldr": "Mirai botnet operators are actively incorporating PHP2Shell attacks, exploiting ASLR bypasses to gain remote code execution and control over vulnerable PHP systems. This indicates a widespread and dangerous campaign to enlist compromised servers into the Mirai botnet.",
+      "action": "Immediately patch all PHP installations against PHP2Shell vulnerabilities. Deploy and maintain robust intrusion detection and prevention systems (IDPS) to detect Mirai botnet activity and ASLR bypass attempts. Harden PHP configurations where possible.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/",
+      "source_url": "https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Specific versions of Arista Velocloud Orchestrator (VCO) are affected. Consult Arista's official security advisories for precise version ranges and impacted products.",
-      "how_to_determine_impact": "Identify all Arista VCO deployments. Verify current software versions against Arista's advisories. Check system logs for indicators of compromise (IOCs) provided by Arista or threat intelligence feeds. Monitor network traffic for unusual connections originating from VCO appliances.",
-      "tanium_query_hint": "Use network device sensors or 'Get Installed Applications' to identify Arista VCO installations and their versions. Look for specific process names or file paths mentioned in Arista advisories for IOCs on affected hosts.",
-      "rapid7_query_hint": "Perform authenticated scans on Arista VCO appliances to identify vulnerable versions. Search for vulnerability IDs related to Arista VCO zero-days in InsightVM. Use InsightIDR to monitor for suspicious activity on network orchestrators.",
+      "affected_versions": "PHP systems vulnerable to PHP2Shell attacks and ASLR bypass exploits. Specific PHP versions as detailed in vendor advisories.",
+      "how_to_determine_impact": "Identify all PHP installations and cross-reference with known PHP2Shell vulnerabilities. Monitor network traffic for Mirai botnet command-and-control (C2) communications and look for unusual processes or outbound connections on PHP servers.",
+      "tanium_query_hint": "Get Installed Applications containing 'PHP'. Get Running Processes to look for Mirai-related processes. Get Network Connections for suspicious outbound traffic.",
+      "rapid7_query_hint": "Scan for PHP vulnerabilities, specifically PHP2Shell. Monitor logs for ASLR bypass failures or unusual process execution on PHP servers. Network sensor data for Mirai signatures.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated for zero-day exploitation)"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -24905,6 +24907,128 @@
         "rapid7_query_hint": "Perform authenticated scans on Arista VCO appliances to identify vulnerable versions. Search for vulnerability IDs related to Arista VCO zero-days in InsightVM. Use InsightIDR to monitor for suspicious activity on network orchestrators.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (Estimated for zero-day exploitation)",
+        "category": "vulns"
+      }
+    ],
+    "2026-10-24": [
+      {
+        "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
+        "tldr": "A master key for LiteLLM was leaked, enabling attackers to steal GitHub tokens. This compromise allowed them to hijack the software's release pipeline, indicating a significant supply chain attack that could lead to malicious code distribution.",
+        "action": "If using LiteLLM, immediately revoke all GitHub tokens associated with LiteLLM and review release pipeline integrity for any unauthorized changes. Implement stronger access controls and monitoring for supply chain integrity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials",
+        "tldr": "Attackers successfully breached enterprise firewalls and VPNs, leading to the exposure of over 70,000 user credentials. This compromise of critical perimeter defenses poses a severe risk of further network intrusion and data access.",
+        "action": "Immediately force password resets for all potentially exposed accounts. Review firewall and VPN configurations for any unauthorized access or backdoors, and ensure all systems are patched. Implement multi-factor authentication (MFA) across all services.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Quest Diagnostics confirms data breach exposed patient records",
+        "tldr": "American clinical laboratory company Quest Diagnostics disclosed a data breach after unauthorized access to its Quanum LSM system exposed patient records. The breach involves sensitive healthcare information, requiring vigilance from affected individuals.",
+        "action": "If your organization uses Quest Diagnostics, assess potential impact to your patient data. Review third-party vendor security posture and data handling agreements. Advise potentially affected individuals to monitor medical statements and credit reports.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Capcom confirms data breach affecting 11.7 million accounts",
+        "tldr": "Japanese gaming giant Capcom has confirmed that hackers breached its CAPCOM ID membership service, resulting in the exposure of more than 11.7 million customer email addresses and associated information. This data could be used for targeted phishing.",
+        "action": "If you have a CAPCOM ID, change your password immediately and use a unique, strong password not reused on other services. Be vigilant for phishing attempts leveraging this exposed information.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions",
+        "tldr": "Analysis of exposed infrastructure shows ransomware affiliates are leveraging AI agents to automate and execute intrusions. This marks a new level of sophistication in ransomware attack methodologies, potentially enabling faster and more effective breaches.",
+        "action": "Enhance network monitoring for AI agent activity, especially for unusual access patterns, command execution, or rapid reconnaissance. Review and harden security configurations for systems that could be targeted by AI-driven intrusion tools.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "Self-Rebuilding macOS Ransomware",
+        "tldr": "A new variant of ransomware targeting macOS systems has been identified with self-rebuilding capabilities. This advanced feature allows the ransomware to restore itself after removal attempts, posing a significant challenge for incident response and recovery.",
+        "action": "Ensure macOS systems have updated security software, robust backup strategies (including immutable backups), and endpoint detection and response (EDR) solutions capable of detecting and preventing advanced ransomware behaviors. Monitor for unusual process activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud",
+        "tldr": "CISA has alerted to critical, actively exploited vulnerabilities in Collabora Online and Arista VeloCloud, including a third zero-day in Arista VCO within four months. These flaws present an immediate and severe risk to affected systems, indicating persistent targeting by attackers.",
+        "action": "Immediately identify and apply all available patches for Collabora Online and Arista VeloCloud instances. Refer to CISA and vendor advisories for specific affected versions and indicators of compromise, and monitor systems for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Specific versions of Collabora Online and Arista VeloCloud Orchestrator (VCO), as detailed in CISA and vendor advisories.",
+        "how_to_determine_impact": "Consult CISA and vendor advisories for precise affected versions and known Indicators of Compromise (IOCs). Inspect logs for unauthorized access or unusual processes on Collabora Online and Arista VCO systems.",
+        "tanium_query_hint": "Get Installed Applications containing 'Collabora Online' or Get Network Device Information for Arista devices to check versions. Look for processes or files matching IOCs.",
+        "rapid7_query_hint": "Scan for vulnerabilities in Collabora Online or Scan for vulnerabilities in Arista VeloCloud Orchestrator. Use asset search filters for device type and software versions once CVEs are identified.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations",
+        "tldr": "The BlackX UEFI bootkit, deployed in espionage campaigns, exploits the \"Baton Drop\" vulnerability (CVE-2022-21894) to bypass Secure Boot on patched Windows systems missing critical revocations. This allows it to load malicious drivers and interfere with security solutions.",
+        "action": "Ensure all Windows systems have the latest Secure Boot revocation lists applied, specifically addressing CVE-2022-21894. Review system integrity for signs of UEFI compromise using firmware analysis tools and monitor for suspicious boot-time activity.",
+        "cve_ids": [
+          "CVE-2022-21894"
+        ],
+        "source_url": "https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Windows systems vulnerable to CVE-2022-21894 (Baton Drop flaw) and missing necessary Secure Boot revocations.",
+        "how_to_determine_impact": "Verify that all Secure Boot revocations, particularly those related to CVE-2022-21894, are fully updated on Windows systems. Scan for the presence of the BlackX bootkit or any unauthorized UEFI firmware modifications.",
+        "tanium_query_hint": "Get Registry Value[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\SecureBoot\\State] for Secure Boot status. Get Firmware Version or Get Running Processes to look for malicious components or drivers associated with BlackX.",
+        "rapid7_query_hint": "Scan for CVE-2022-21894. Use InsightAgent to query for suspicious files in UEFI-related directories or unusual boot entries. Asset search filters for Secure Boot Status.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "PHP Warns of Another Unpatched RCE Risk Two Days After Emergency PHP2Shell Patches",
+        "tldr": "PHP has issued a warning regarding a new, unpatched remote code execution (RCE) vulnerability affecting systems with non-default configurations. This critical flaw currently lacks an official patch, but the PHP security team has provided mitigation measures.",
+        "action": "Immediately review all PHP installations, especially those with non-default configurations, and apply the mitigation measures recommended by the PHP security team. Monitor PHP servers closely for any signs of exploitation attempts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "PHP installations with specific non-default configurations. Consult PHP advisories for details.",
+        "how_to_determine_impact": "Identify all PHP installations in your environment. Compare php.ini and other configuration files against vendor advisories to detect the specific non-default settings that trigger this RCE vulnerability.",
+        "tanium_query_hint": "Get Installed Applications containing 'PHP' to identify PHP instances. Get File Content[C:\\php\\php.ini] (adjust path) to review configuration for problematic settings.",
+        "rapid7_query_hint": "Scan for PHP installations. Use InsightAgent to query for php.ini content or specific configuration settings that indicate vulnerability.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Mirai Botnet Operators Join PHP2Shell Attacks as ASLR Bypass Exploits Emerge",
+        "tldr": "Mirai botnet operators are actively incorporating PHP2Shell attacks, exploiting ASLR bypasses to gain remote code execution and control over vulnerable PHP systems. This indicates a widespread and dangerous campaign to enlist compromised servers into the Mirai botnet.",
+        "action": "Immediately patch all PHP installations against PHP2Shell vulnerabilities. Deploy and maintain robust intrusion detection and prevention systems (IDPS) to detect Mirai botnet activity and ASLR bypass attempts. Harden PHP configurations where possible.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "PHP systems vulnerable to PHP2Shell attacks and ASLR bypass exploits. Specific PHP versions as detailed in vendor advisories.",
+        "how_to_determine_impact": "Identify all PHP installations and cross-reference with known PHP2Shell vulnerabilities. Monitor network traffic for Mirai botnet command-and-control (C2) communications and look for unusual processes or outbound connections on PHP servers.",
+        "tanium_query_hint": "Get Installed Applications containing 'PHP'. Get Running Processes to look for Mirai-related processes. Get Network Connections for suspicious outbound traffic.",
+        "rapid7_query_hint": "Scan for PHP vulnerabilities, specifically PHP2Shell. Monitor logs for ASLR bypass failures or unusual process execution on PHP servers. Network sensor data for Mirai signatures.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
