@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
-      "tldr": "A leaked LiteLLM master key allowed attackers to compromise GitHub tokens, leading to the hijacking of its release pipeline. This incident represents a significant supply chain attack, indicating unauthorized access to critical development infrastructure.",
-      "action": "Immediately rotate all GitHub tokens and API keys associated with LiteLLM. Review audit logs for unauthorized access or modifications to your release pipelines and code repositories.",
+      "tldr": "LiteLLM experienced a supply chain attack due to a leaked master key, enabling attackers to steal GitHub tokens and potentially compromise its release pipeline. This incident highlights critical risks in developer tool security and potential for downstream impact on users of LiteLLM.",
+      "action": "Developers using LiteLLM must immediately rotate any GitHub tokens or other credentials that might have been exposed through their LiteLLM integration. Conduct a thorough review of logs for unauthorized access or changes within associated repositories and pipelines.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
       "source": "The Hacker News"
     },
     {
       "title": "Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials",
-      "tldr": "Hackers successfully breached enterprise firewalls and VPNs, resulting in the exposure of over 70,000 credentials. This indicates a widespread compromise of network perimeter defenses, leading to potential unauthorized access to internal systems.",
-      "action": "Immediately force a password reset for all 70,000 potentially exposed credentials. Conduct a comprehensive audit of all firewall and VPN configurations, logs, and access policies for signs of compromise.",
+      "tldr": "Threat actors successfully breached enterprise firewalls and VPNs, leading to the exposure of over 70,000 user credentials. This compromise underscores a significant risk to organizational perimeter defenses and could facilitate widespread internal network access.",
+      "action": "Organizations should immediately audit firewall and VPN configurations, review access logs for suspicious activity, and enforce multi-factor authentication for all VPN access. All exposed credentials must be rotated without delay.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html",
       "source": "The Hacker News"
     },
     {
       "title": "Quest Diagnostics confirms data breach exposed patient records",
-      "tldr": "Quest Diagnostics confirmed a data breach where a threat actor gained unauthorized access to its Quanum LSM system, exposing patient records. The scope and specifics of the exposed data are still under investigation, raising privacy concerns for affected individuals.",
-      "action": "Patients should monitor their financial statements and credit reports for suspicious activity. Quest Diagnostics customers should await official notification and follow advised identity protection measures.",
+      "tldr": "Clinical laboratory company Quest Diagnostics has confirmed a data breach following unauthorized access by a threat actor to its Quanum LSM system. The incident resulted in the exposure of 'certain patient records'.",
+      "action": "Organizations handling sensitive patient data must review access controls and monitoring for all critical systems, especially those processing protected health information. Ensure strong authentication, robust logging, and regular security audits are rigorously maintained.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
       "source": "BleepingComputer"
     },
     {
       "title": "Capcom confirms data breach affecting 11.7 million accounts",
-      "tldr": "Japanese gaming company Capcom confirmed a data breach impacting its CAPCOM ID membership service, exposing over 11.7 million customer email addresses and associated information. This is a large-scale exposure of personal data, demanding user action to mitigate risks.",
-      "action": "Users of CAPCOM ID should assume their email addresses and associated information are compromised. Change passwords for CAPCOM ID and any other accounts where the same credentials might have been reused.",
+      "tldr": "Japanese gaming giant Capcom has confirmed a significant data breach impacting its CAPCOM ID membership service. The breach exposed over 11.7 million customer email addresses and associated personal information.",
+      "action": "Users of CAPCOM ID should assume their email and associated account information are compromised; change passwords immediately and enable multi-factor authentication where available. Organizations should review security practices of third-party services they integrate with, especially those handling customer data.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
       "source": "BleepingComputer"
@@ -36,16 +36,16 @@
   "ransomware": [
     {
       "title": "Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions",
-      "tldr": "Exposed infrastructure has revealed that ransomware affiliates are leveraging AI agents to automate and execute intrusions. This marks an evolution in ransomware tactics, enhancing their efficiency and stealth in breaching networks.",
-      "action": "Enhance monitoring for unusual AI agent activity within your network. Implement strict access controls and behavioral analytics to detect and prevent AI-assisted intrusions.",
+      "tldr": "New findings reveal ransomware affiliates are leveraging AI agents to automate and execute intrusions, indicating an evolution in attack methodologies. This sophisticated approach allows for more efficient reconnaissance and exploitation, posing a heightened threat.",
+      "action": "Implement robust endpoint detection and response (EDR) solutions capable of detecting anomalous AI-driven activity and automated behaviors. Strengthen network segmentation and access controls to limit lateral movement, even against advanced, automated tools.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
       "source": "The Hacker News"
     },
     {
-      "title": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware",
-      "tldr": "A self-rebuilding macOS ransomware has been identified, indicating advanced persistence capabilities. This new variant poses a significant threat to macOS users and organizations, requiring specialized defenses.",
-      "action": "macOS users and administrators should ensure robust endpoint protection is in place, including anti-ransomware solutions. Implement regular, offline backups and verify their integrity.",
+      "title": "Self-Rebuilding macOS Ransomware Emerges",
+      "tldr": "A new strain of macOS ransomware has been identified that features self-rebuilding capabilities, enhancing its persistence and making it more resilient to detection and removal efforts. This advanced characteristic poses a significant and evolving threat to macOS environments.",
+      "action": "Ensure all macOS systems are running the latest security updates and have robust endpoint protection. Implement comprehensive backup strategies and educate users on identifying and avoiding phishing attempts or malicious downloads to prevent initial infection. Monitor macOS systems for unusual file system activity and process behavior.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
       "source": "SecurityWeek"
@@ -53,66 +53,64 @@
   ],
   "vulns": [
     {
-      "title": "CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud",
-      "tldr": "CISA has issued an alert for two critical vulnerabilities affecting Collabora Online and Arista VeloCloud products that are actively being exploited in the wild. These flaws pose significant immediate risks to organizations utilizing the affected software, demanding urgent patching.",
-      "action": "Immediately identify and apply all available security patches for Collabora Online and Arista VeloCloud environments. Conduct an urgent forensic investigation for any signs of compromise if these products are present in your infrastructure.",
+      "title": "CISA Flags Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud (Third Arista VCO Zero-Day Exploited)",
+      "tldr": "CISA has issued warnings regarding actively exploited critical vulnerabilities affecting Collabora Online and Arista VeloCloud, including a third Arista VCO zero-day exploited in four months. These ongoing exploits highlight severe and persistent threats targeting these platforms, requiring immediate attention.",
+      "action": "Immediately apply all available patches and vendor-provided mitigations for Collabora Online and Arista VeloCloud. Conduct an urgent review for Indicators of Compromise (IOCs) on all affected systems and isolate any potentially compromised assets to prevent further damage.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Collabora Online and Arista VeloCloud products. Specific versions not detailed, refer to CISA advisory for exact details.",
-      "how_to_determine_impact": "Check all deployments of Collabora Online and Arista VeloCloud for specific versions. Consult CISA's KEV catalog and vendor advisories for vulnerable versions and indicators of compromise.",
-      "tanium_query_hint": "Get Installed Applications containing 'Collabora Online' or 'Arista VeloCloud'; Consult CISA KEV for specific IOCs to query via Tanium Trace.",
-      "rapid7_query_hint": "Search InsightVM for 'Collabora Online' and 'Arista VeloCloud' vulnerabilities. Refer to CISA KEV and vendor advisories for specific vulnerability IDs and indicators.",
+      "affected_versions": "Collabora Online (specific versions unstated in feed), Arista VeloCloud Orchestrator (VCO) (specific versions unstated in feed)",
+      "how_to_determine_impact": "Check CISA's KEV catalog for specific CVEs and affected versions. Inspect Collabora Online and Arista VCO installations for current version numbers. Apply vendor-specific detection tools or review system and application logs for compromise indicators, including unusual network traffic or unauthorized access.",
+      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines. Filter for 'Arista VeloCloud' and 'Collabora Online' software. Investigate logs for unusual process execution or network connections related to these applications. Look for known IOCs in file systems and processes.",
+      "rapid7_query_hint": "Search for vulnerabilities associated with 'Collabora Online' or 'Arista VeloCloud Orchestrator'. Use InsightAgent to query for specific file versions, configurations, or known IOCs related to these products. Perform authenticated scans to detect missing patches and potential exploitation.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimate based on CISA KEV and active exploitation)"
     },
     {
-      "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
-      "tldr": "The BlackX UEFI bootkit, utilized in an active espionage campaign, leverages the \"Baton Drop\" vulnerability (likely CVE-2023-24932) to bypass Secure Boot on Windows systems. This allows the loading of malicious drivers, including those designed to neutralize security software from vendors like Kaspersky and Avast.",
-      "action": "Verify that all Windows systems have the latest UEFI firmware updates and that all Secure Boot revocations related to CVE-2023-24932 are applied. Implement continuous monitoring for unusual boot activity and unauthorized UEFI modifications.",
-      "cve_ids": [
-        "CVE-2023-24932"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Windows systems with vulnerable UEFI firmware that are missing patches or revocations for the 'Baton Drop' flaw (e.g., CVE-2023-24932). Affects systems where Secure Boot is bypassed.",
-      "how_to_determine_impact": "Check UEFI firmware versions and confirm application of updates related to CVE-2023-24932. Verify that Secure Boot revocations are up-to-date. Look for suspicious drivers loaded during boot or modifications to the boot chain.",
-      "tanium_query_hint": "Get UEFI Secure Boot Status; Get Driver Files and check signatures; Search for files related to known BlackX IOCs. Check 'Boot Critical Driver' status.",
-      "rapid7_query_hint": "Scan for CVE-2023-24932. Check asset inventory for UEFI firmware versions. Use InsightIDR to look for unusual driver loads or boot chain modifications.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
-    },
-    {
-      "title": "Mirai Botnet Operators Join PHP2Shell Attacks as ASLR Bypass Exploits Emerge",
-      "tldr": "Mirai botnet operators are actively incorporating PHP2Shell attacks into their campaigns, leveraging newly emerging ASLR bypass exploits to enhance their intrusion capabilities. This escalation represents a severe and ongoing threat, demanding immediate attention for PHP-based systems.",
-      "action": "Urgently apply all available security patches for PHP, especially those addressing PHP2Shell vulnerabilities and related ASLR bypasses. Deploy and tune intrusion detection systems to specifically identify Mirai botnet activity and exploit attempts against PHP environments.",
+      "title": "Multiple Critical RCE Flaws in Brotli Decoder (Node.js, Bun, Python) and Ruby (GitLab)",
+      "tldr": "Critical Remote Code Execution (RCE) flaws have been identified in the Brotli decoder, impacting widely used software such as Node.js, Bun, and Python. Separately, Ruby has released fixes for three regex engine bugs that were responsible for four critical RCE vulnerabilities within GitLab.",
+      "action": "Update Node.js, Bun, Python, Ruby, and GitLab installations to their latest patched versions immediately. Review application logs for any signs of exploitation attempts targeting these components, especially those processing compressed data or user-supplied regular expressions.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "PHP systems vulnerable to PHP2Shell attacks and ASLR bypass exploits. Specific versions not detailed.",
-      "how_to_determine_impact": "Ensure all PHP installations are fully patched. Scan for indicators of compromise related to PHP2Shell and Mirai botnet activity.",
-      "tanium_query_hint": "Get Installed Applications 'PHP'. Search for known PHP2Shell files or Mirai botnet IOCs on endpoints. Check process memory for ASLR bypass indicators.",
-      "rapid7_query_hint": "Scan for PHP2Shell vulnerabilities. Monitor network traffic for Mirai botnet communications and look for exploit attempts.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "source_url": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Node.js (versions using vulnerable Brotli decoder, specific versions unstated), Bun (versions using vulnerable Brotli decoder, specific versions unstated), Python (versions using vulnerable Brotli decoder, specific versions unstated), Ruby (specific versions with regex engine bugs, unstated), GitLab (versions affected by Ruby RCE flaws, unstated)",
+      "how_to_determine_impact": "Identify all systems running Node.js, Bun, Python, Ruby, or GitLab. Check their installed versions against vendor advisories for vulnerabilities related to the Brotli decoder and Ruby regex engine. For GitLab, confirm the underlying Ruby version used.",
+      "tanium_query_hint": "Get Installed Applications from all machines. Filter for 'Node.js', 'Bun', 'Python', 'Ruby', 'GitLab'. Cross-reference detected versions with vendor advisories. For Brotli, investigate dependencies of these applications for vulnerable Brotli library versions and their presence.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Node.js RCE', 'Bun RCE', 'Python RCE', 'Ruby RCE', 'GitLab RCE'. Run authenticated scans to identify installed versions of these software components and detect unpatched vulnerabilities. Monitor for any unusual process activity.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical (Estimate based on RCE capability)"
     },
     {
-      "title": "Attackers Exploit Third Arista VCO Zero-Day in Four Months",
-      "tldr": "A third zero-day vulnerability in Arista VeloCloud Orchestrator (VCO) has been identified and is being actively exploited by attackers within a four-month period. This pattern highlights a critical and persistent security weakness within the product, necessitating immediate mitigation.",
-      "action": "Prioritize and immediately deploy all available patches or hotfixes for Arista VeloCloud Orchestrator. Conduct an in-depth security audit and forensic investigation across all VCO deployments for indicators of compromise related to this ongoing series of zero-day exploits.",
+      "title": "BlackX UEFI Bootkit Bypasses Secure Boot Exploiting Baton Drop Flaw",
+      "tldr": "A new UEFI bootkit, BlackX, is actively exploiting the 'Baton Drop' vulnerability to bypass Secure Boot on patched Windows systems that are missing specific revocations. This allows malicious drivers to be loaded, interfering with endpoint security solutions like Kaspersky and Avast.",
+      "action": "Review and apply all UEFI firmware updates and ensure that all necessary boot manager revocations are in place, particularly for Windows systems. Implement endpoint security solutions capable of detecting UEFI tampering and monitor for suspicious boot processes.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/",
-      "source": "SecurityWeek",
+      "source_url": "https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Arista VeloCloud Orchestrator (VCO). Specific vulnerable versions for this third zero-day are not detailed, consult Arista advisories.",
-      "how_to_determine_impact": "Identify all Arista VCO deployments. Check product versions against Arista's latest security advisories for patches addressing this zero-day. Monitor logs for unusual activity.",
-      "tanium_query_hint": "Get Installed Applications 'Arista VeloCloud Orchestrator'. Check process activity and network connections for anomalous behavior.",
-      "rapid7_query_hint": "Scan network devices for Arista VCO vulnerabilities. Monitor for zero-day exploitation patterns and indicators of compromise using InsightIDR.",
+      "affected_versions": "Windows systems with UEFI firmware vulnerable to 'Baton Drop' flaw where revocations are missing (specific Windows versions and firmware vendors unstated)",
+      "how_to_determine_impact": "Check UEFI firmware versions and boot logs for signs of unauthorized module loading. Verify that all security updates related to Secure Boot and boot manager revocations have been applied according to vendor guidance (e.g., Microsoft's advisories).",
+      "tanium_query_hint": "Check 'System Information' sensor for BIOS/UEFI version. Investigate 'Running Processes' and 'Loaded Modules' for suspicious unsigned drivers. Look for specific registry keys or files associated with known bootkits and atypical boot sequences.",
+      "rapid7_query_hint": "Perform authenticated scans to identify vulnerable UEFI firmware versions or missing patches. Search for vulnerability checks related to 'Secure Boot bypass' or 'Baton Drop'. Monitor system logs for unexpected kernel module loads or secure boot violations.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.0 Critical (Estimate based on bootkit capabilities and Secure Boot bypass)"
+    },
+    {
+      "title": "PHP Warns of Unpatched RCE Risk with Mirai Botnet Exploitation, After PHP2Shell Patches",
+      "tldr": "PHP is warning of a new, unpatched RCE vulnerability that requires immediate mitigation, with no patch currently available. This critical alert follows closely after emergency patches for PHP2Shell, which is now actively being exploited by Mirai botnet operators using ASLR bypass techniques.",
+      "action": "Immediately apply all available emergency patches for PHP, particularly those addressing PHP2Shell. For the unpatched RCE, implement vendor-recommended mitigation measures for systems with non-default configurations. Deploy or strengthen web application firewalls (WAFs) and monitor PHP-based web servers for any unusual activity or exploitation attempts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "PHP versions affected by PHP2Shell (specific versions unstated). PHP versions with new unpatched RCE (specific versions and non-default configurations unstated).",
+      "how_to_determine_impact": "Identify all PHP installations. Check for specific PHP2Shell configurations or indicators of compromise. For the new RCE, assess if systems use non-default configurations as warned by PHP. Inspect web server logs for suspicious requests or unusual process spawning from PHP.",
+      "tanium_query_hint": "Get Installed Applications and their versions. Filter for 'PHP'. Query for 'Running Processes' and 'Loaded Modules' to identify malicious activity. Inspect web server configuration files for unusual directives or included scripts and look for any known IOCs related to PHP2Shell.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'PHP RCE' or 'PHP2Shell'. Perform authenticated scans on web servers to detect vulnerable PHP versions or configurations. Monitor network traffic for botnet communication patterns and indicators of ASLR bypass exploits.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate for actively exploited RCE)"
     }
   ],
   "insurance": [],
@@ -25063,6 +25061,22 @@
         "rapid7_query_hint": "Scan network devices for Arista VCO vulnerabilities. Monitor for zero-day exploitation patterns and indicators of compromise using InsightIDR.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Multiple Critical RCE Flaws in Brotli Decoder (Node.js, Bun, Python) and Ruby (GitLab)",
+        "tldr": "Critical Remote Code Execution (RCE) flaws have been identified in the Brotli decoder, impacting widely used software such as Node.js, Bun, and Python. Separately, Ruby has released fixes for three regex engine bugs that were responsible for four critical RCE vulnerabilities within GitLab.",
+        "action": "Update Node.js, Bun, Python, Ruby, and GitLab installations to their latest patched versions immediately. Review application logs for any signs of exploitation attempts targeting these components, especially those processing compressed data or user-supplied regular expressions.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Node.js (versions using vulnerable Brotli decoder, specific versions unstated), Bun (versions using vulnerable Brotli decoder, specific versions unstated), Python (versions using vulnerable Brotli decoder, specific versions unstated), Ruby (specific versions with regex engine bugs, unstated), GitLab (versions affected by Ruby RCE flaws, unstated)",
+        "how_to_determine_impact": "Identify all systems running Node.js, Bun, Python, Ruby, or GitLab. Check their installed versions against vendor advisories for vulnerabilities related to the Brotli decoder and Ruby regex engine. For GitLab, confirm the underlying Ruby version used.",
+        "tanium_query_hint": "Get Installed Applications from all machines. Filter for 'Node.js', 'Bun', 'Python', 'Ruby', 'GitLab'. Cross-reference detected versions with vendor advisories. For Brotli, investigate dependencies of these applications for vulnerable Brotli library versions and their presence.",
+        "rapid7_query_hint": "Search for vulnerabilities related to 'Node.js RCE', 'Bun RCE', 'Python RCE', 'Ruby RCE', 'GitLab RCE'. Run authenticated scans to identify installed versions of these software components and detect unpatched vulnerabilities. Monitor for any unusual process activity.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical (Estimate based on RCE capability)",
         "category": "vulns"
       }
     ]
