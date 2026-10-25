@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
-      "tldr": "A leaked LiteLLM master key allowed attackers to steal GitHub tokens and subsequently hijack the release pipeline. This represents a critical supply chain attack vector, compromising code integrity and developer environments.",
-      "action": "Immediately rotate all GitHub tokens and API keys associated with LiteLLM. Conduct a thorough audit of the release pipeline for any signs of tampering or unauthorized access. Implement stricter secrets management and access controls.",
+      "tldr": "A master key for LiteLLM was leaked, allowing attackers to compromise GitHub tokens and hijack the release pipeline. This incident represents a significant supply chain attack, enabling malicious code injection into distributed software.",
+      "action": "Developers using LiteLLM should immediately rotate all GitHub tokens and API keys used with the platform. Audit release pipelines for unauthorized modifications and implement stricter access controls.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Railway warns devs to rotate secrets after potential breach",
-      "tldr": "Cloud platform Railway issued an urgent warning for developers to rotate secrets due to detected suspicious activity on systems storing customer environment variables. This indicates a potential breach and compromise of developer secrets.",
-      "action": "If your organization uses Railway, immediately rotate all API keys, database credentials, and other secrets stored within the platform. Audit logs for unauthorized access or modification of environment variables.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Quest Diagnostics confirms data breach exposed patient records",
-      "tldr": "Quest Diagnostics has confirmed a data breach where a threat actor gained unauthorized access to its Quanum LSM system, exposing patient records. This sensitive data exposure affects healthcare information.",
-      "action": "Monitor for official notifications from Quest Diagnostics for affected individuals. If your organization is a customer, assess potential impact on shared data and review contracts for incident response protocols.",
+      "tldr": "Quest Diagnostics has confirmed a data breach where a threat actor gained unauthorized access to its Quanum LSM system, exposing patient records. This incident affects sensitive healthcare data, raising privacy concerns for individuals.",
+      "action": "Affected individuals should monitor their credit reports and consider identity theft protection services. Quest Diagnostics should conduct a thorough forensic investigation and enhance access controls and monitoring on its systems.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
       "source": "BleepingComputer"
     },
     {
+      "title": "Railway warns devs to rotate secrets after potential breach",
+      "tldr": "Cloud platform Railway has issued an urgent warning to its developers, advising them to rotate secrets following suspicious activity detected on systems storing customer environment variables. This indicates a potential compromise of sensitive development credentials.",
+      "action": "Developers using Railway should immediately rotate all API keys, database credentials, and other secrets stored within or used by their Railway environments. Audit logs for unauthorized access or usage of environment variables.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "11 Million Impacted by Capcom Data Breach",
-      "tldr": "Capcom has reported a data breach impacting 11 million individuals. This widespread breach highlights the continued risk of large-scale data compromise, particularly within the gaming industry.",
-      "action": "If your data was potentially involved, monitor credit reports and look for phishing attempts. Organizations should review their data protection strategies and incident response plans to mitigate similar risks.",
+      "tldr": "Capcom, a major video game developer, has suffered a data breach impacting 11 million individuals. The incident likely involved personal identifiable information (PII) of customers, employees, and business partners.",
+      "action": "Individuals who have interacted with Capcom services should remain vigilant for phishing attempts and monitor their accounts for suspicious activity. Capcom must ensure all systems are patched and strengthen their data protection measures.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/11-million-impacted-by-capcom-data-breach/",
       "source": "SecurityWeek"
@@ -35,9 +35,9 @@
   ],
   "ransomware": [
     {
-      "title": "In Other News: ... Self-Rebuilding macOS Ransomware",
-      "tldr": "New macOS ransomware variants possess self-rebuilding capabilities, making them more resilient to removal and enhancing their persistence on infected systems. This sophistication poses a significant challenge for incident response.",
-      "action": "Ensure macOS systems have updated security software and robust backup strategies. Implement strict application control and monitor for unusual system modifications or processes indicative of ransomware activity.",
+      "title": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware",
+      "tldr": "New macOS ransomware variants are emerging with self-rebuilding capabilities, making them more resilient to removal and enhancing their persistence on infected systems.",
+      "action": "Ensure macOS systems have robust endpoint protection and are regularly backed up. Implement strong user training to prevent ransomware infections.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
       "source": "SecurityWeek"
@@ -46,66 +46,91 @@
   "vulns": [
     {
       "title": "CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud",
-      "tldr": "CISA has issued an alert for two actively exploited critical vulnerabilities in Collabora Online and Arista VeloCloud. Attackers are currently leveraging these flaws in the wild, posing an immediate threat to affected systems.",
-      "action": "Immediately identify all Collabora Online and Arista VeloCloud instances within your environment. Apply vendor-provided patches or temporary mitigations without delay and monitor systems for signs of compromise.",
+      "tldr": "CISA has issued an alert regarding two critical vulnerabilities in Collabora Online and Arista VeloCloud, both of which are being actively exploited in the wild. These zero-day exploits pose an immediate and severe threat to affected organizations.",
+      "action": "Immediately patch all Collabora Online and Arista VeloCloud installations to the latest secure versions. Investigate systems for signs of compromise, as active exploitation is confirmed.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Collabora Online (all versions before patch), Arista VeloCloud Orchestrator (VCO) (all versions before patch). Specific vulnerable versions should be referenced in vendor advisories.",
-      "how_to_determine_impact": "Inventory all instances of Collabora Online and Arista VCO. Check vendor advisories (Collabora and Arista) for specific vulnerable versions and any published Indicators of Compromise (IoCs) to determine impact.",
-      "tanium_query_hint": "Get Installed Applications filtering for \"Collabora Online\" or \"Arista VeloCloud\". For network devices, use 'Get Network Device Configuration' to identify Arista VCO instances and their versions.",
-      "rapid7_query_hint": "In InsightVM, search for assets running \"Collabora Online\" or \"Arista VeloCloud\". Use vulnerability scan data to identify specific vulnerability IDs related to these products and their affected versions.",
+      "affected_versions": "Collabora Online and Arista VeloCloud (specific versions not provided, assume all unpatched versions are vulnerable until patched)",
+      "how_to_determine_impact": "Check installed versions of Collabora Online and Arista VeloCloud. Refer to CISA's KEV catalog and vendor advisories for specific vulnerable versions and Indicators of Compromise (IOCs).",
+      "tanium_query_hint": "Get Installed Applications contains \"Collabora Online\" or \"Arista VeloCloud\" from all machines. Inspect network connections from these applications for suspicious outbound traffic.",
+      "rapid7_query_hint": "Search for vulnerabilities associated with \"Collabora Online\" or \"Arista VeloCloud\" in InsightVM. Utilize InsightIDR to monitor for IOCs published by CISA.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking",
-      "tldr": "The PHP2Shell vulnerability is actively exploited, targeting a government entity, with global scanning detected. This RCE vulnerability in PHP is being leveraged with signs of AI-assisted hacking.",
-      "action": "Urgent review of all PHP environments, especially those exposed to the internet. Implement recommended mitigations from the PHP security team (as a patch is not yet available). Monitor web server and application logs for signs of PHP2Shell exploitation attempts.",
+      "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
+      "tldr": "Researchers discovered that AI coding agents can be hijacked by a malicious AGENTS.md file placed in the Downloads folder. This trick leads the AI agent to install rogue npm packages, indicating a new vector for supply chain attacks via AI agent interaction.",
+      "action": "Educate users and AI agent administrators about the risks of untrusted files in common download directories. Implement strict whitelisting for AI agent actions, especially package installations, and monitor agent behavior for anomalous activities.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "PHP installations with non-default configurations vulnerable to PHP2Shell RCE. Specific versions and configurations need to be identified from PHP advisories.",
-      "how_to_determine_impact": "Inspect PHP configuration files (e.g., php.ini or web server configs) for specific non-default settings that enable the PHP2Shell vulnerability. Check web server access logs for suspicious requests related to PHP files.",
-      "tanium_query_hint": "Get File Content['php.ini']' to search for specific vulnerable directives. 'Get Running Processes' filtering for 'php-fpm' or 'apache2' processes running PHP to identify active PHP servers.",
-      "rapid7_query_hint": "Use InsightAgent to perform custom checks on 'php.ini' content for vulnerable configurations. Search web server access logs collected by InsightIDR for known PHP2Shell exploitation patterns or unusual PHP requests.",
+      "affected_versions": "AI coding agents that are configured to process files in user-controlled directories (e.g., Downloads) without sufficient sanitization or validation, leading to arbitrary command execution or package installation.",
+      "how_to_determine_impact": "Identify all systems deploying AI coding agents. Review the agents' configurations to understand how they interact with local file systems and user-provided inputs. Examine user Downloads folders for suspicious AGENTS.md files or unexpected package installations.",
+      "tanium_query_hint": "Get File Exists[\"%userprofile%\\Downloads\\AGENTS.md\"] from all machines. Get Installed NPM Packages or other package manager logs for suspicious installations.",
+      "rapid7_query_hint": "Monitor file system activity for creation of AGENTS.md in user-specific download directories. Correlate with AI agent process activity and unauthorized package installations detected by endpoint monitoring.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "8.5 High"
     },
     {
-      "title": "BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations",
-      "tldr": "The BlackX UEFI bootkit, used in espionage campaigns, exploits the 'Baton Drop' vulnerability to bypass Secure Boot on Windows systems lacking critical revocations. This allows loading of malicious drivers, undermining security solutions.",
-      "action": "Ensure all Windows systems have applied the latest Secure Boot revocations and patches for the 'Baton Drop' vulnerability. Deploy robust endpoint detection and response (EDR) to monitor for UEFI tampering and unauthorized driver loading.",
+      "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
+      "tldr": "A new UEFI bootkit, BlackX, is being used in an espionage campaign and leverages the 'Baton Drop' vulnerability to bypass Secure Boot. This allows it to load malicious drivers that interfere with security software from Kaspersky and Avast. This confirms active, sophisticated, state-sponsored attacks.",
+      "action": "Apply all available patches and revocations related to the 'Baton Drop' vulnerability. Ensure UEFI firmware is updated and Secure Boot is properly configured. Deploy advanced endpoint protection capable of UEFI integrity monitoring.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Windows systems vulnerable to the 'Baton Drop' flaw and missing necessary Secure Boot revocations. This can affect various Windows client and server versions.",
-      "how_to_determine_impact": "Verify the status of Secure Boot and the applied revocation lists on all Windows endpoints and servers using tools like 'msinfo32' or PowerShell commands. Check for known IoCs associated with the BlackX bootkit.",
-      "tanium_query_hint": "'Get UEFI Secure Boot Status'. 'Get Windows Updates' to identify missing security updates or revocations related to Secure Boot. 'Get Drivers' to look for suspicious unsigned drivers.",
-      "rapid7_query_hint": "Asset search in InsightVM for Windows devices. Perform vulnerability scans to check for Baton Drop-related vulnerabilities or missing Secure Boot updates. Use InsightIDR to monitor for unusual kernel module loads.",
+      "affected_versions": "Systems vulnerable to the \"Baton Drop\" flaw, impacting Secure Boot on Windows (specific hardware/firmware versions not provided, but generally systems running vulnerable UEFI firmware versions).",
+      "how_to_determine_impact": "Verify that all system firmware (UEFI/BIOS) is fully updated and all relevant Secure Boot revocations have been applied. Use boot integrity monitoring tools. Look for suspicious drivers loaded at boot that interfere with security solutions.",
+      "tanium_query_hint": "Get BIOS Version and Get Secure Boot Status from all machines. Use \"Detect UEFI Threats\" sensor if available. Inspect boot logs for unusual driver loads.",
+      "rapid7_query_hint": "Scan for UEFI/firmware vulnerabilities and misconfigurations using InsightVM. Monitor InsightIDR for suspicious boot processes or attempts to disable/interfere with endpoint security solutions.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.0 Critical"
     },
     {
-      "title": "HPE patches eight max severity RCE and auth bypass AOS flaws",
-      "tldr": "HPE has released critical security updates for 72 vulnerabilities in ArubaOS, including eight maximum-severity RCE and authentication bypass flaws. These vulnerabilities pose significant risks to network infrastructure, allowing potential unauthorized access and arbitrary code execution.",
-      "action": "Immediately identify all HPE ArubaOS devices in your environment. Apply the latest security updates provided by HPE without delay. Prioritize patching for devices that are externally accessible or critical to network operations.",
+      "title": "Attackers Exploit Third Arista VCO Zero-Day in Four Months",
+      "tldr": "Attackers are actively exploiting a third zero-day vulnerability in Arista VeloCloud Orchestrator (VCO) within a span of four months. This indicates a persistent targeting of Arista VCO, with new critical flaws being discovered and weaponized rapidly.",
+      "action": "Immediately apply all available patches for Arista VCO. Implement strict network segmentation and access controls for VCO deployments. Actively monitor VCO systems for indicators of compromise.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "HPE Aruba Operating System (ArubaOS). Specific affected versions should be referenced in HPE's official security advisories.",
-      "how_to_determine_impact": "Inventory all HPE Aruba network devices. Check the firmware versions of these devices against the HPE security advisories to identify vulnerable versions that require patching.",
-      "tanium_query_hint": "For endpoint devices that might interact with ArubaOS: 'Get Network Device Information' or specific network-focused Tanium sensors if available. (Note: ArubaOS primarily affects network devices, so endpoint queries are indirect.)",
-      "rapid7_query_hint": "Conduct network vulnerability scans targeting HPE Aruba devices. Look for specific vulnerability IDs related to ArubaOS updates in InsightVM's vulnerability database.",
+      "source_url": "https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Arista VeloCloud Orchestrator (VCO) (specific vulnerable versions not provided, assume all unpatched versions are vulnerable to recent zero-days).",
+      "how_to_determine_impact": "Check installed versions of Arista VeloCloud Orchestrator against the latest Arista security advisories. Actively monitor VCO systems for unusual activity, unauthorized access attempts, or signs of compromise.",
+      "tanium_query_hint": "Get Installed Applications contains \"Arista VeloCloud Orchestrator\" from all machines. Review network connections and logs for anomalous behavior originating from VCO.",
+      "rapid7_query_hint": "Search for vulnerabilities related to \"Arista VeloCloud Orchestrator\" in InsightVM. Leverage InsightIDR to detect zero-day exploitation patterns or IOCs associated with VCO attacks.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads",
+      "tldr": "Google has stated that data from Gmail and Photos shared with its AI Search can be utilized for targeted advertising. This indicates a policy shift regarding user data privacy and monetization through AI-driven services.",
+      "action": "Review privacy settings for Google accounts. Be aware of the data sharing implications when using AI Search and other Google services. Consider alternative privacy-focused services if concerned about data usage.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Microsoft Teams to get AI-powered, context-aware phishing detection",
+      "tldr": "Microsoft is introducing AI-powered, context-aware phishing detection for Teams messages, expected in early November 2026. This enhancement aims to improve protection against sophisticated phishing attacks by leveraging AI to analyze message context.",
+      "action": "Review existing phishing detection strategies and prepare to leverage new features in Microsoft Teams as they roll out. Ensure users are still trained on phishing awareness, as AI detection is an additional layer, not a replacement.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Former Unit 8200 Officers Raise $34 Million for Agentic SecOps Startup Mave",
+      "tldr": "Former officers from Israel's Unit 8200 have successfully raised $34 million for their new startup, Mave, which focuses on agentic security operations. This funding indicates a growing interest and investment in AI-driven solutions for cybersecurity.",
+      "action": "Stay informed about emerging cybersecurity technologies and startups that may offer innovative solutions. Evaluate potential integration of advanced SecOps tools to enhance organizational defenses.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/former-unit-8200-officers-raise-34-million-for-agentic-secops-startup-mave/",
+      "source": "SecurityWeek"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -25240,6 +25265,65 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical",
         "category": "vulns"
+      },
+      {
+        "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
+        "tldr": "Researchers discovered that AI coding agents can be hijacked by a malicious AGENTS.md file placed in the Downloads folder. This trick leads the AI agent to install rogue npm packages, indicating a new vector for supply chain attacks via AI agent interaction.",
+        "action": "Educate users and AI agent administrators about the risks of untrusted files in common download directories. Implement strict whitelisting for AI agent actions, especially package installations, and monitor agent behavior for anomalous activities.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "AI coding agents that are configured to process files in user-controlled directories (e.g., Downloads) without sufficient sanitization or validation, leading to arbitrary command execution or package installation.",
+        "how_to_determine_impact": "Identify all systems deploying AI coding agents. Review the agents' configurations to understand how they interact with local file systems and user-provided inputs. Examine user Downloads folders for suspicious AGENTS.md files or unexpected package installations.",
+        "tanium_query_hint": "Get File Exists[\"%userprofile%\\Downloads\\AGENTS.md\"] from all machines. Get Installed NPM Packages or other package manager logs for suspicious installations.",
+        "rapid7_query_hint": "Monitor file system activity for creation of AGENTS.md in user-specific download directories. Correlate with AI agent process activity and unauthorized package installations detected by endpoint monitoring.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "8.5 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Exploit Third Arista VCO Zero-Day in Four Months",
+        "tldr": "Attackers are actively exploiting a third zero-day vulnerability in Arista VeloCloud Orchestrator (VCO) within a span of four months. This indicates a persistent targeting of Arista VCO, with new critical flaws being discovered and weaponized rapidly.",
+        "action": "Immediately apply all available patches for Arista VCO. Implement strict network segmentation and access controls for VCO deployments. Actively monitor VCO systems for indicators of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Arista VeloCloud Orchestrator (VCO) (specific vulnerable versions not provided, assume all unpatched versions are vulnerable to recent zero-days).",
+        "how_to_determine_impact": "Check installed versions of Arista VeloCloud Orchestrator against the latest Arista security advisories. Actively monitor VCO systems for unusual activity, unauthorized access attempts, or signs of compromise.",
+        "tanium_query_hint": "Get Installed Applications contains \"Arista VeloCloud Orchestrator\" from all machines. Review network connections and logs for anomalous behavior originating from VCO.",
+        "rapid7_query_hint": "Search for vulnerabilities related to \"Arista VeloCloud Orchestrator\" in InsightVM. Leverage InsightIDR to detect zero-day exploitation patterns or IOCs associated with VCO attacks.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads",
+        "tldr": "Google has stated that data from Gmail and Photos shared with its AI Search can be utilized for targeted advertising. This indicates a policy shift regarding user data privacy and monetization through AI-driven services.",
+        "action": "Review privacy settings for Google accounts. Be aware of the data sharing implications when using AI Search and other Google services. Consider alternative privacy-focused services if concerned about data usage.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
+        "source": "The Hacker News",
+        "category": "insurance"
+      },
+      {
+        "title": "Microsoft Teams to get AI-powered, context-aware phishing detection",
+        "tldr": "Microsoft is introducing AI-powered, context-aware phishing detection for Teams messages, expected in early November 2026. This enhancement aims to improve protection against sophisticated phishing attacks by leveraging AI to analyze message context.",
+        "action": "Review existing phishing detection strategies and prepare to leverage new features in Microsoft Teams as they roll out. Ensure users are still trained on phishing awareness, as AI detection is an additional layer, not a replacement.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/",
+        "source": "BleepingComputer",
+        "category": "insurance"
+      },
+      {
+        "title": "Former Unit 8200 Officers Raise $34 Million for Agentic SecOps Startup Mave",
+        "tldr": "Former officers from Israel's Unit 8200 have successfully raised $34 million for their new startup, Mave, which focuses on agentic security operations. This funding indicates a growing interest and investment in AI-driven solutions for cybersecurity.",
+        "action": "Stay informed about emerging cybersecurity technologies and startups that may offer innovative solutions. Evaluate potential integration of advanced SecOps tools to enhance organizational defenses.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/former-unit-8200-officers-raise-34-million-for-agentic-secops-startup-mave/",
+        "source": "SecurityWeek",
+        "category": "insurance"
       }
     ]
   }
