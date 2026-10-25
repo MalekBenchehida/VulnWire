@@ -1,116 +1,108 @@
 {
   "breaches": [
     {
-      "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
-      "tldr": "LiteLLM experienced a supply chain attack due to a leaked master key, enabling attackers to steal GitHub tokens and potentially compromise its release pipeline. This incident highlights critical risks in developer tool security and potential for downstream impact on users of LiteLLM.",
-      "action": "Developers using LiteLLM must immediately rotate any GitHub tokens or other credentials that might have been exposed through their LiteLLM integration. Conduct a thorough review of logs for unauthorized access or changes within associated repositories and pipelines.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials",
-      "tldr": "Threat actors successfully breached enterprise firewalls and VPNs, leading to the exposure of over 70,000 user credentials. This compromise underscores a significant risk to organizational perimeter defenses and could facilitate widespread internal network access.",
-      "action": "Organizations should immediately audit firewall and VPN configurations, review access logs for suspicious activity, and enforce multi-factor authentication for all VPN access. All exposed credentials must be rotated without delay.",
+      "tldr": "Threat actors successfully breached enterprise firewalls and VPNs, leading to the exposure of more than 70,000 user credentials. This compromise provides extensive unauthorized access to internal systems and poses a significant risk to organizational security.",
+      "action": "Immediately review all firewall and VPN logs for signs of compromise, force a password reset for all potentially exposed credentials, and enforce multi-factor authentication (MFA) across all enterprise access points and critical systems.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html",
       "source": "The Hacker News"
     },
     {
       "title": "Quest Diagnostics confirms data breach exposed patient records",
-      "tldr": "Clinical laboratory company Quest Diagnostics has confirmed a data breach following unauthorized access by a threat actor to its Quanum LSM system. The incident resulted in the exposure of 'certain patient records'.",
-      "action": "Organizations handling sensitive patient data must review access controls and monitoring for all critical systems, especially those processing protected health information. Ensure strong authentication, robust logging, and regular security audits are rigorously maintained.",
+      "tldr": "Clinical laboratory company Quest Diagnostics confirmed a data breach where a threat actor gained unauthorized access to its Quanum LSM system, exposing certain patient records. The scope of exposed data likely includes sensitive patient information, necessitating vigilance from affected individuals.",
+      "action": "Affected individuals should monitor credit reports and medical statements for suspicious activity and consider enrolling in identity theft protection services. Organizations should review access controls and audit logs for the Quanum LSM system and similar patient data platforms.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Capcom confirms data breach affecting 11.7 million accounts",
-      "tldr": "Japanese gaming giant Capcom has confirmed a significant data breach impacting its CAPCOM ID membership service. The breach exposed over 11.7 million customer email addresses and associated personal information.",
-      "action": "Users of CAPCOM ID should assume their email and associated account information are compromised; change passwords immediately and enable multi-factor authentication where available. Organizations should review security practices of third-party services they integrate with, especially those handling customer data.",
+      "title": "11 Million Impacted by Capcom Data Breach",
+      "tldr": "Gaming company Capcom has confirmed a data breach impacting 11 million individuals, stemming from unauthorized access to its systems. The breach likely involved personal data, necessitating vigilance from affected users against phishing and identity theft.",
+      "action": "Individuals who have accounts with Capcom should immediately change their passwords, especially if they reuse passwords across different services. Be vigilant for phishing attempts and consider identity theft protection services.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/capcom-confirms-data-breach-affecting-117-million-accounts/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/11-million-impacted-by-capcom-data-breach/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "LiteLLM Compromised in Fresh Supply Chain Attack",
+      "tldr": "LiteLLM was compromised in a supply chain attack, resulting in the leakage of a master key and theft of GitHub tokens. This allowed attackers to potentially hijack release pipelines and compromise the integrity of software builds.",
+      "action": "Developers using LiteLLM must immediately rotate all associated API keys, secrets, and GitHub tokens. Conduct a thorough audit of CI/CD pipelines for any signs of unauthorized modification or malicious injections and review access logs for suspicious activity.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/litellm-compromised-in-fresh-supply-chain-attack/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions",
-      "tldr": "New findings reveal ransomware affiliates are leveraging AI agents to automate and execute intrusions, indicating an evolution in attack methodologies. This sophisticated approach allows for more efficient reconnaissance and exploitation, posing a heightened threat.",
-      "action": "Implement robust endpoint detection and response (EDR) solutions capable of detecting anomalous AI-driven activity and automated behaviors. Strengthen network segmentation and access controls to limit lateral movement, even against advanced, automated tools.",
+      "tldr": "Recent intelligence exposes the infrastructure utilized by ransomware affiliates, revealing their sophisticated methods for leveraging AI agents to conduct and execute intrusions. This indicates an evolving threat landscape where AI tools are integrated into ransomware operations for reconnaissance and execution.",
+      "action": "Implement enhanced monitoring for unusual AI agent activity within the network, focusing on abnormal resource usage or suspicious outbound connections. Reinforce security controls around AI agent deployments and restrict unnecessary privileges to prevent abuse.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
       "source": "The Hacker News"
-    },
-    {
-      "title": "Self-Rebuilding macOS Ransomware Emerges",
-      "tldr": "A new strain of macOS ransomware has been identified that features self-rebuilding capabilities, enhancing its persistence and making it more resilient to detection and removal efforts. This advanced characteristic poses a significant and evolving threat to macOS environments.",
-      "action": "Ensure all macOS systems are running the latest security updates and have robust endpoint protection. Implement comprehensive backup strategies and educate users on identifying and avoiding phishing attempts or malicious downloads to prevent initial infection. Monitor macOS systems for unusual file system activity and process behavior.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
-      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
-      "title": "CISA Flags Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud (Third Arista VCO Zero-Day Exploited)",
-      "tldr": "CISA has issued warnings regarding actively exploited critical vulnerabilities affecting Collabora Online and Arista VeloCloud, including a third Arista VCO zero-day exploited in four months. These ongoing exploits highlight severe and persistent threats targeting these platforms, requiring immediate attention.",
-      "action": "Immediately apply all available patches and vendor-provided mitigations for Collabora Online and Arista VeloCloud. Conduct an urgent review for Indicators of Compromise (IOCs) on all affected systems and isolate any potentially compromised assets to prevent further damage.",
+      "title": "CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud",
+      "tldr": "CISA has issued an alert regarding two critical vulnerabilities in Collabora Online and Arista VeloCloud, both of which are being actively exploited in the wild. These flaws pose an immediate and severe risk of remote code execution or unauthorized access, requiring urgent attention.",
+      "action": "Immediately apply all available security patches and updates for Collabora Online and Arista VeloCloud products. Conduct an urgent forensic analysis to detect any signs of exploitation if these products are currently deployed within your environment.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Collabora Online (specific versions unstated in feed), Arista VeloCloud Orchestrator (VCO) (specific versions unstated in feed)",
-      "how_to_determine_impact": "Check CISA's KEV catalog for specific CVEs and affected versions. Inspect Collabora Online and Arista VCO installations for current version numbers. Apply vendor-specific detection tools or review system and application logs for compromise indicators, including unusual network traffic or unauthorized access.",
-      "tanium_query_hint": "Get Computer Name and Installed Applications from all machines. Filter for 'Arista VeloCloud' and 'Collabora Online' software. Investigate logs for unusual process execution or network connections related to these applications. Look for known IOCs in file systems and processes.",
-      "rapid7_query_hint": "Search for vulnerabilities associated with 'Collabora Online' or 'Arista VeloCloud Orchestrator'. Use InsightAgent to query for specific file versions, configurations, or known IOCs related to these products. Perform authenticated scans to detect missing patches and potential exploitation.",
+      "affected_versions": "Collabora Online and Arista VeloCloud products impacted by critical, actively exploited vulnerabilities. Refer to official vendor advisories and CISA's KEV catalog for specific vulnerable versions and patch information.",
+      "how_to_determine_impact": "Identify all instances of Collabora Online and Arista VeloCloud within your environment. Verify current installed versions against vendor security bulletins and CISA's KEV for specific CVEs. Look for unusual network traffic, unauthorized access attempts, or indicators of compromise.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'Collabora Online' or 'Arista VeloCloud'. Use 'Get Running Processes with CommandLine' to check for unexpected processes. Cross-reference with CISA KEV if CVEs are published via Tanium Comply.",
+      "rapid7_query_hint": "Search for vulnerabilities related to 'Collabora Online' or 'Arista VeloCloud' in InsightVM. Use InsightAgent queries for specific file versions or configurations mentioned in vendor advisories. Filter assets by 'Actively Exploited' tag to prioritize remediation.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate based on CISA KEV and active exploitation)"
+      "cvss_score": "9.8 Critical (Estimated, based on CISA KEV inclusion and active exploitation)"
     },
     {
-      "title": "Multiple Critical RCE Flaws in Brotli Decoder (Node.js, Bun, Python) and Ruby (GitLab)",
-      "tldr": "Critical Remote Code Execution (RCE) flaws have been identified in the Brotli decoder, impacting widely used software such as Node.js, Bun, and Python. Separately, Ruby has released fixes for three regex engine bugs that were responsible for four critical RCE vulnerabilities within GitLab.",
-      "action": "Update Node.js, Bun, Python, Ruby, and GitLab installations to their latest patched versions immediately. Review application logs for any signs of exploitation attempts targeting these components, especially those processing compressed data or user-supplied regular expressions.",
+      "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
+      "tldr": "The BlackX UEFI bootkit is actively exploiting the 'Baton Drop' vulnerability to bypass Secure Boot on Windows systems, even those that are patched but missing specific revocations. This allows malicious drivers to load and interfere with security solutions, used in espionage campaigns.",
+      "action": "Ensure all UEFI firmware is updated to the latest versions. Verify that all Secure Boot revocation lists are current and correctly applied to prevent the 'Baton Drop' flaw from being exploited. Monitor for indicators of compromise related to BlackX bootkit activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploit-baton-drop-flaw-to-bypass-secure-boot/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Windows systems with UEFI firmware vulnerable to the 'Baton Drop' flaw, specifically those with outdated Secure Boot revocation lists or unpatched firmware versions. Consult hardware vendor advisories for affected models.",
+      "how_to_determine_impact": "Inspect UEFI firmware versions and Secure Boot status. Verify the integrity of bootloaders and ensure the latest revocation lists are applied. Look for unauthorized driver loading or unexpected kernel modules using endpoint detection tools.",
+      "tanium_query_hint": "Get Computer Name and OS Platform from all machines. Use 'Get Secure Boot Status' and 'Get UEFI Firmware Version'. Look for unusual kernel modules via 'Get Loaded Modules' or unexpected processes using 'Get Running Processes'.",
+      "rapid7_query_hint": "Query assets for UEFI Secure Boot status. Search InsightVM for vulnerabilities related to 'Secure Boot bypass' or known bootloader flaws (e.g., 'Baton Drop'). Use InsightAgent to inspect installed drivers and system integrity checks.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, as it bypasses Secure Boot and is actively used in espionage)"
+    },
+    {
+      "title": "HPE patches eight max severity RCE and auth bypass AOS flaws",
+      "tldr": "Hewlett Packard Enterprise (HPE) released critical security updates addressing 72 vulnerabilities in Aruba Operating System (ArubaOS), including eight maximum-severity remote code execution (RCE) and authentication bypass issues. These flaws could allow complete system compromise, necessitating immediate patching.",
+      "action": "Immediately apply all available security updates and patches for Aruba Operating System (ArubaOS) to mitigate the eight maximum-severity RCE and authentication bypass vulnerabilities. Prioritize critical network infrastructure devices running ArubaOS for patching.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Node.js (versions using vulnerable Brotli decoder, specific versions unstated), Bun (versions using vulnerable Brotli decoder, specific versions unstated), Python (versions using vulnerable Brotli decoder, specific versions unstated), Ruby (specific versions with regex engine bugs, unstated), GitLab (versions affected by Ruby RCE flaws, unstated)",
-      "how_to_determine_impact": "Identify all systems running Node.js, Bun, Python, Ruby, or GitLab. Check their installed versions against vendor advisories for vulnerabilities related to the Brotli decoder and Ruby regex engine. For GitLab, confirm the underlying Ruby version used.",
-      "tanium_query_hint": "Get Installed Applications from all machines. Filter for 'Node.js', 'Bun', 'Python', 'Ruby', 'GitLab'. Cross-reference detected versions with vendor advisories. For Brotli, investigate dependencies of these applications for vulnerable Brotli library versions and their presence.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Node.js RCE', 'Bun RCE', 'Python RCE', 'Ruby RCE', 'GitLab RCE'. Run authenticated scans to identify installed versions of these software components and detect unpatched vulnerabilities. Monitor for any unusual process activity.",
+      "affected_versions": "Aruba Operating System (ArubaOS) versions vulnerable to the recently patched critical RCE and authentication bypass flaws. Refer to the official HPE security bulletin for a complete list of affected and patched versions.",
+      "how_to_determine_impact": "Identify all HPE/Aruba network devices running ArubaOS within your environment. Check the installed ArubaOS version against the official HPE security advisory for this patch cycle. Look for logs indicating unauthorized access or suspicious activity on these devices.",
+      "tanium_query_hint": "Get Installed Applications from all machines for 'ArubaOS'. For devices where Tanium collects network device inventory, query for 'Firmware Version' or 'OS Version' for Aruba devices. Monitor network logs for unusual access attempts.",
+      "rapid7_query_hint": "Scan network devices for vulnerabilities related to ArubaOS using InsightVM. Search for vulnerability IDs or keywords from the HPE advisory. Filter assets by 'ArubaOS' and compare reported versions against patched versions identified in the advisory.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical (Estimate based on RCE capability)"
+      "cvss_score": "9.8 Critical (Based on 'max severity RCE and auth bypass')"
     },
     {
-      "title": "BlackX UEFI Bootkit Bypasses Secure Boot Exploiting Baton Drop Flaw",
-      "tldr": "A new UEFI bootkit, BlackX, is actively exploiting the 'Baton Drop' vulnerability to bypass Secure Boot on patched Windows systems that are missing specific revocations. This allows malicious drivers to be loaded, interfering with endpoint security solutions like Kaspersky and Avast.",
-      "action": "Review and apply all UEFI firmware updates and ensure that all necessary boot manager revocations are in place, particularly for Windows systems. Implement endpoint security solutions capable of detecting UEFI tampering and monitor for suspicious boot processes.",
+      "title": "PHP shares mitigation for new RCE vulnerability with no patch",
+      "tldr": "The PHP security team has disclosed a new remote code execution (RCE) vulnerability affecting systems with non-default configurations. Crucially, no patch is currently available, and the team has provided mitigation measures that should be immediately implemented for protection.",
+      "action": "Immediately implement the recommended mitigation measures provided by the PHP security team, especially for any PHP installations running with non-default configurations. Closely monitor PHP application logs for any signs of exploitation and anomalous behavior.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Windows systems with UEFI firmware vulnerable to 'Baton Drop' flaw where revocations are missing (specific Windows versions and firmware vendors unstated)",
-      "how_to_determine_impact": "Check UEFI firmware versions and boot logs for signs of unauthorized module loading. Verify that all security updates related to Secure Boot and boot manager revocations have been applied according to vendor guidance (e.g., Microsoft's advisories).",
-      "tanium_query_hint": "Check 'System Information' sensor for BIOS/UEFI version. Investigate 'Running Processes' and 'Loaded Modules' for suspicious unsigned drivers. Look for specific registry keys or files associated with known bootkits and atypical boot sequences.",
-      "rapid7_query_hint": "Perform authenticated scans to identify vulnerable UEFI firmware versions or missing patches. Search for vulnerability checks related to 'Secure Boot bypass' or 'Baton Drop'. Monitor system logs for unexpected kernel module loads or secure boot violations.",
+      "source_url": "https://www.bleepingcomputer.com/news/security/php-shares-mitigation-for-new-and-unpatched-rce-vulnerability/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "PHP installations with specific non-default configurations. Consult the official PHP security advisory or announcement for precise details on the vulnerable configuration settings and affected PHP versions.",
+      "how_to_determine_impact": "Review all PHP configuration files (php.ini) across your environment for the specific non-default settings outlined in the PHP security advisory. Verify if any custom applications are inadvertently triggering these potentially vulnerable configurations.",
+      "tanium_query_hint": "Get File Content['php.ini'] from all machines and search for specific configuration directives mentioned in the advisory. Use 'Get Listening Ports' to identify servers running PHP-based web applications. Monitor 'Get Running Processes with CommandLine' for suspicious PHP executions.",
+      "rapid7_query_hint": "Scan web servers for PHP installations using InsightVM. Use custom checks or InsightAgent queries to analyze php.ini files for vulnerable configurations. Prioritize publicly accessible web servers and those with high-value data.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (Estimate based on bootkit capabilities and Secure Boot bypass)"
-    },
-    {
-      "title": "PHP Warns of Unpatched RCE Risk with Mirai Botnet Exploitation, After PHP2Shell Patches",
-      "tldr": "PHP is warning of a new, unpatched RCE vulnerability that requires immediate mitigation, with no patch currently available. This critical alert follows closely after emergency patches for PHP2Shell, which is now actively being exploited by Mirai botnet operators using ASLR bypass techniques.",
-      "action": "Immediately apply all available emergency patches for PHP, particularly those addressing PHP2Shell. For the unpatched RCE, implement vendor-recommended mitigation measures for systems with non-default configurations. Deploy or strengthen web application firewalls (WAFs) and monitor PHP-based web servers for any unusual activity or exploitation attempts.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/urgent-php-warns-of-another-unpatched.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "PHP versions affected by PHP2Shell (specific versions unstated). PHP versions with new unpatched RCE (specific versions and non-default configurations unstated).",
-      "how_to_determine_impact": "Identify all PHP installations. Check for specific PHP2Shell configurations or indicators of compromise. For the new RCE, assess if systems use non-default configurations as warned by PHP. Inspect web server logs for suspicious requests or unusual process spawning from PHP.",
-      "tanium_query_hint": "Get Installed Applications and their versions. Filter for 'PHP'. Query for 'Running Processes' and 'Loaded Modules' to identify malicious activity. Inspect web server configuration files for unusual directives or included scripts and look for any known IOCs related to PHP2Shell.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'PHP RCE' or 'PHP2Shell'. Perform authenticated scans on web servers to detect vulnerable PHP versions or configurations. Monitor network traffic for botnet communication patterns and indicators of ASLR bypass exploits.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate for actively exploited RCE)"
+      "cvss_score": "9.0 High (Estimated, as it's an RCE with no patch and requires immediate mitigation)"
     }
   ],
   "insurance": [],
@@ -25077,6 +25069,117 @@
         "rapid7_query_hint": "Search for vulnerabilities related to 'Node.js RCE', 'Bun RCE', 'Python RCE', 'Ruby RCE', 'GitLab RCE'. Run authenticated scans to identify installed versions of these software components and detect unpatched vulnerabilities. Monitor for any unusual process activity.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.8 Critical (Estimate based on RCE capability)",
+        "category": "vulns"
+      }
+    ],
+    "2026-10-25": [
+      {
+        "title": "Hackers Breach Enterprise Firewalls and VPNs, Exposing Over 70,000 Credentials",
+        "tldr": "Threat actors successfully breached enterprise firewalls and VPNs, leading to the exposure of more than 70,000 user credentials. This compromise provides extensive unauthorized access to internal systems and poses a significant risk to organizational security.",
+        "action": "Immediately review all firewall and VPN logs for signs of compromise, force a password reset for all potentially exposed credentials, and enforce multi-factor authentication (MFA) across all enterprise access points and critical systems.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/hackers-breach-enterprise-firewalls-and.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Quest Diagnostics confirms data breach exposed patient records",
+        "tldr": "Clinical laboratory company Quest Diagnostics confirmed a data breach where a threat actor gained unauthorized access to its Quanum LSM system, exposing certain patient records. The scope of exposed data likely includes sensitive patient information, necessitating vigilance from affected individuals.",
+        "action": "Affected individuals should monitor credit reports and medical statements for suspicious activity and consider enrolling in identity theft protection services. Organizations should review access controls and audit logs for the Quanum LSM system and similar patient data platforms.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "11 Million Impacted by Capcom Data Breach",
+        "tldr": "Gaming company Capcom has confirmed a data breach impacting 11 million individuals, stemming from unauthorized access to its systems. The breach likely involved personal data, necessitating vigilance from affected users against phishing and identity theft.",
+        "action": "Individuals who have accounts with Capcom should immediately change their passwords, especially if they reuse passwords across different services. Be vigilant for phishing attempts and consider identity theft protection services.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/11-million-impacted-by-capcom-data-breach/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "LiteLLM Compromised in Fresh Supply Chain Attack",
+        "tldr": "LiteLLM was compromised in a supply chain attack, resulting in the leakage of a master key and theft of GitHub tokens. This allowed attackers to potentially hijack release pipelines and compromise the integrity of software builds.",
+        "action": "Developers using LiteLLM must immediately rotate all associated API keys, secrets, and GitHub tokens. Conduct a thorough audit of CI/CD pipelines for any signs of unauthorized modification or malicious injections and review access logs for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/litellm-compromised-in-fresh-supply-chain-attack/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Exposed Infrastructure Reveals How Ransomware Affiliates Used AI Agents to Execute Intrusions",
+        "tldr": "Recent intelligence exposes the infrastructure utilized by ransomware affiliates, revealing their sophisticated methods for leveraging AI agents to conduct and execute intrusions. This indicates an evolving threat landscape where AI tools are integrated into ransomware operations for reconnaissance and execution.",
+        "action": "Implement enhanced monitoring for unusual AI agent activity within the network, focusing on abnormal resource usage or suspicious outbound connections. Reinforce security controls around AI agent deployments and restrict unnecessary privileges to prevent abuse.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/exposed-infrastructure-reveals-how.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud",
+        "tldr": "CISA has issued an alert regarding two critical vulnerabilities in Collabora Online and Arista VeloCloud, both of which are being actively exploited in the wild. These flaws pose an immediate and severe risk of remote code execution or unauthorized access, requiring urgent attention.",
+        "action": "Immediately apply all available security patches and updates for Collabora Online and Arista VeloCloud products. Conduct an urgent forensic analysis to detect any signs of exploitation if these products are currently deployed within your environment.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Collabora Online and Arista VeloCloud products impacted by critical, actively exploited vulnerabilities. Refer to official vendor advisories and CISA's KEV catalog for specific vulnerable versions and patch information.",
+        "how_to_determine_impact": "Identify all instances of Collabora Online and Arista VeloCloud within your environment. Verify current installed versions against vendor security bulletins and CISA's KEV for specific CVEs. Look for unusual network traffic, unauthorized access attempts, or indicators of compromise.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'Collabora Online' or 'Arista VeloCloud'. Use 'Get Running Processes with CommandLine' to check for unexpected processes. Cross-reference with CISA KEV if CVEs are published via Tanium Comply.",
+        "rapid7_query_hint": "Search for vulnerabilities related to 'Collabora Online' or 'Arista VeloCloud' in InsightVM. Use InsightAgent queries for specific file versions or configurations mentioned in vendor advisories. Filter assets by 'Actively Exploited' tag to prioritize remediation.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, based on CISA KEV inclusion and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
+        "tldr": "The BlackX UEFI bootkit is actively exploiting the 'Baton Drop' vulnerability to bypass Secure Boot on Windows systems, even those that are patched but missing specific revocations. This allows malicious drivers to load and interfere with security solutions, used in espionage campaigns.",
+        "action": "Ensure all UEFI firmware is updated to the latest versions. Verify that all Secure Boot revocation lists are current and correctly applied to prevent the 'Baton Drop' flaw from being exploited. Monitor for indicators of compromise related to BlackX bootkit activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploit-baton-drop-flaw-to-bypass-secure-boot/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Windows systems with UEFI firmware vulnerable to the 'Baton Drop' flaw, specifically those with outdated Secure Boot revocation lists or unpatched firmware versions. Consult hardware vendor advisories for affected models.",
+        "how_to_determine_impact": "Inspect UEFI firmware versions and Secure Boot status. Verify the integrity of bootloaders and ensure the latest revocation lists are applied. Look for unauthorized driver loading or unexpected kernel modules using endpoint detection tools.",
+        "tanium_query_hint": "Get Computer Name and OS Platform from all machines. Use 'Get Secure Boot Status' and 'Get UEFI Firmware Version'. Look for unusual kernel modules via 'Get Loaded Modules' or unexpected processes using 'Get Running Processes'.",
+        "rapid7_query_hint": "Query assets for UEFI Secure Boot status. Search InsightVM for vulnerabilities related to 'Secure Boot bypass' or known bootloader flaws (e.g., 'Baton Drop'). Use InsightAgent to inspect installed drivers and system integrity checks.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, as it bypasses Secure Boot and is actively used in espionage)",
+        "category": "vulns"
+      },
+      {
+        "title": "HPE patches eight max severity RCE and auth bypass AOS flaws",
+        "tldr": "Hewlett Packard Enterprise (HPE) released critical security updates addressing 72 vulnerabilities in Aruba Operating System (ArubaOS), including eight maximum-severity remote code execution (RCE) and authentication bypass issues. These flaws could allow complete system compromise, necessitating immediate patching.",
+        "action": "Immediately apply all available security updates and patches for Aruba Operating System (ArubaOS) to mitigate the eight maximum-severity RCE and authentication bypass vulnerabilities. Prioritize critical network infrastructure devices running ArubaOS for patching.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hpe-patches-eight-max-severity-rce-and-auth-bypass-aos-flaws/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Aruba Operating System (ArubaOS) versions vulnerable to the recently patched critical RCE and authentication bypass flaws. Refer to the official HPE security bulletin for a complete list of affected and patched versions.",
+        "how_to_determine_impact": "Identify all HPE/Aruba network devices running ArubaOS within your environment. Check the installed ArubaOS version against the official HPE security advisory for this patch cycle. Look for logs indicating unauthorized access or suspicious activity on these devices.",
+        "tanium_query_hint": "Get Installed Applications from all machines for 'ArubaOS'. For devices where Tanium collects network device inventory, query for 'Firmware Version' or 'OS Version' for Aruba devices. Monitor network logs for unusual access attempts.",
+        "rapid7_query_hint": "Scan network devices for vulnerabilities related to ArubaOS using InsightVM. Search for vulnerability IDs or keywords from the HPE advisory. Filter assets by 'ArubaOS' and compare reported versions against patched versions identified in the advisory.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical (Based on 'max severity RCE and auth bypass')",
+        "category": "vulns"
+      },
+      {
+        "title": "PHP shares mitigation for new RCE vulnerability with no patch",
+        "tldr": "The PHP security team has disclosed a new remote code execution (RCE) vulnerability affecting systems with non-default configurations. Crucially, no patch is currently available, and the team has provided mitigation measures that should be immediately implemented for protection.",
+        "action": "Immediately implement the recommended mitigation measures provided by the PHP security team, especially for any PHP installations running with non-default configurations. Closely monitor PHP application logs for any signs of exploitation and anomalous behavior.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/php-shares-mitigation-for-new-and-unpatched-rce-vulnerability/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "PHP installations with specific non-default configurations. Consult the official PHP security advisory or announcement for precise details on the vulnerable configuration settings and affected PHP versions.",
+        "how_to_determine_impact": "Review all PHP configuration files (php.ini) across your environment for the specific non-default settings outlined in the PHP security advisory. Verify if any custom applications are inadvertently triggering these potentially vulnerable configurations.",
+        "tanium_query_hint": "Get File Content['php.ini'] from all machines and search for specific configuration directives mentioned in the advisory. Use 'Get Listening Ports' to identify servers running PHP-based web applications. Monitor 'Get Running Processes with CommandLine' for suspicious PHP executions.",
+        "rapid7_query_hint": "Scan web servers for PHP installations using InsightVM. Use custom checks or InsightAgent queries to analyze php.ini files for vulnerable configurations. Prioritize publicly accessible web servers and those with high-value data.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 High (Estimated, as it's an RCE with no patch and requires immediate mitigation)",
         "category": "vulns"
       }
     ]
