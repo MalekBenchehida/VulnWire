@@ -1,61 +1,53 @@
 {
   "breaches": [
     {
+      "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
+      "tldr": "Attackers have compromised 953 online stores, primarily Magento-based, injecting scanner-evading JavaScript. This Magecart-style attack is designed to steal payment card information and customer data, posing a significant risk to e-commerce platforms and their users. The stealthy nature of the script makes detection challenging for traditional security tools.",
+      "action": "Conduct thorough web application security audits and implement real-time monitoring for unauthorized script injections on e-commerce platforms, especially Magento. Ensure content security policies (CSPs) are rigorously enforced and regularly review third-party scripts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations",
-      "tldr": "Attackers are using token-replay techniques to compromise Microsoft 365 accounts. This has led to 97 accounts across 79 organizations being breached. The method bypasses MFA, allowing unauthorized access to sensitive cloud resources.",
-      "action": "Implement strong session management and token invalidation policies. Monitor for unusual login patterns, token replay attempts, and activity from compromised accounts. Consider Conditional Access policies to restrict access based on device health, location, and other attributes.",
+      "tldr": "Threat actors have launched token-replay attacks targeting Microsoft 365 accounts, resulting in the compromise of 97 accounts across 79 organizations. This technique allows attackers to bypass multi-factor authentication by replaying stolen session tokens, granting unauthorized access to sensitive corporate resources and data within the Microsoft 365 ecosystem.",
+      "action": "Implement continuous monitoring for unusual login patterns and token usage within Microsoft 365 environments. Enforce Conditional Access policies, implement token protection mechanisms (e.g., Continuous Access Evaluation), and consider phishing-resistant MFA like FIDO2 security keys. Rotate session tokens for potentially compromised accounts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
       "source": "The Hacker News"
     },
     {
       "title": "Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs",
-      "tldr": "A new threat, \"Gheist,\" leverages stolen GitHub tokens to exfiltrate private repository secrets. The attack specifically exploits GitHub Actions logs, indicating a potential supply chain risk for development environments.",
-      "action": "Rotate GitHub tokens regularly, especially for CI/CD pipelines. Implement strict access controls and least privilege for GitHub tokens. Monitor GitHub Actions logs for suspicious activity and unauthorized access to repository secrets. Consider using GitHub's secret scanning features.",
+      "tldr": "A threat actor dubbed \"Gheist\" is leveraging stolen GitHub access tokens to exfiltrate sensitive secrets from private repositories by exploiting GitHub Actions logs. This method allows attackers to gain access to credentials, API keys, and other critical information stored within CI/CD pipelines, posing a significant supply chain security risk.",
+      "action": "Implement strict access controls and principle of least privilege for GitHub tokens. Regularly audit GitHub Actions workflows and logs for suspicious activity. Consider token rotation policies and enforce strong authentication for GitHub accounts, including hardware-backed MFA. Educate developers on secure coding practices related to secrets management.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Genesys Hack Exposes Customer Data From Internal Systems",
-      "tldr": "Genesys, a customer experience software provider, suffered a hack that exposed customer data. The breach originated from their internal systems, indicating a compromise of their operational environment leading to data exfiltration.",
-      "action": "Customers of Genesys should monitor their accounts for suspicious activity and be wary of phishing attempts. All organizations should enforce robust access controls, network segmentation, and continuous monitoring of internal systems to detect and prevent unauthorized data access.",
+      "title": "Former pentester used ARTEX AI to steal 8.2 million data records",
+      "tldr": "A former pentester utilized the ARTEX AI framework to breach over 90 organizations in South Korea, resulting in the theft of 8.2 million data records. This incident highlights the growing risk of sophisticated AI-powered tools being misused for large-scale data exfiltration and cybercrime.",
+      "action": "Review and strengthen access controls, network segmentation, and data loss prevention (DLP) measures. Enhance monitoring for unusual data exfiltration patterns. Investigate the specific techniques used by ARTEX AI for potential proactive defensive measures.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/genesys-hack-exposes-customer-data-from-internal-systems/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Dutch Police Arrest Two Over NFC Relay Attacks That Drained $400,000+ From Bank Accounts",
-      "tldr": "Two individuals have been arrested in the Netherlands for conducting NFC relay attacks. These attacks allowed them to steal over $400,000 from victims' bank accounts by intercepting and relaying contactless payment signals.",
-      "action": "Advise employees and customers about the risks of NFC relay attacks, especially in public places. Consider using physical cards or digital wallets that require explicit authorization for each transaction. Banks should enhance fraud detection for contactless payments.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/dutch-police-arrest-two-over-nfc-relay-attacks-that-drained-400000/",
-      "source": "SecurityWeek"
+      "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
+      "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
       "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
-      "tldr": "Threat actors are leveraging sophisticated IT support scams within Microsoft Teams to deploy various malware strains, including ransomware. They impersonate internal IT staff to trick users into installing malicious software.",
-      "action": "Educate users on identifying phishing and social engineering attempts, especially within collaboration platforms like Microsoft Teams. Implement strong endpoint detection and response (EDR) solutions and application whitelisting to prevent unauthorized software installation. Verify all IT support requests through official channels.",
+      "tldr": "Threat actors are employing convincing IT support scams via Microsoft Teams to trick users into installing malware, ultimately leading to ransomware deployment. These social engineering tactics exploit user trust in internal communication platforms to gain initial access and escalate privileges within target organizations.",
+      "action": "Conduct immediate user awareness training on phishing and social engineering attacks, specifically targeting communications on platforms like Microsoft Teams. Implement strict email and message filtering, and ensure endpoint detection and response (EDR) solutions are configured to detect and block suspicious executables and network activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
       "source": "The Hacker News"
-    },
-    {
-      "title": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware",
-      "tldr": "This story mentions the emergence of a \"self-rebuilding macOS ransomware.\" This type of ransomware is designed to persist and recover even after attempted removal, posing a significant threat to macOS users and organizations.",
-      "action": "macOS users should ensure systems are fully patched and run robust endpoint protection. Implement regular, immutable backups. Organizations should conduct incident response drills for macOS ransomware scenarios and ensure recovery plans account for persistent threats.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
-      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
       "title": "PHP2Shell security flaws now sucessfully exploited in the wild",
-      "tldr": "Multiple critical Remote Code Execution (RCE) vulnerabilities, collectively known as PHP2Shell (CVE-2026-109618, CVE-2026-109619), Node2Shell, and HTTP2Shell, residing in the Brotli C decoder library, PHP, Node.js, and Microsoft .NET, are now being actively exploited in the wild. These flaws allow attackers to corrupt memory and execute arbitrary code.",
-      "action": "Immediately apply all available emergency patches for PHP, Node.js, Microsoft .NET, and any other products leveraging the Brotli C decoder library. Prioritize web servers and internet-facing applications. Inspect systems for signs of compromise, including suspicious processes or network connections.",
+      "tldr": "Two critical RCE vulnerabilities, CVE-2026-109618 and CVE-2026-109619, collectively known as PHP2Shell, are now actively being exploited in the wild. These flaws affect PHP installations and can lead to remote code execution, allowing attackers to take full control of vulnerable systems.",
+      "action": "Immediately apply available patches for PHP to mitigate CVE-2026-109618 and CVE-2026-109619. Prioritize systems running PHP, especially internet-facing servers.",
       "cve_ids": [
         "CVE-2026-109618",
         "CVE-2026-109619"
@@ -63,57 +55,61 @@
       "source_url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "PHP running on Windows, Node.js versions utilizing vulnerable Brotli C decoder, Microsoft .NET applications using affected Brotli libraries, and other products integrating the vulnerable Brotli C decoder. Specific version ranges are highly dependent on the vendor. Refer to official vendor advisories.",
-      "how_to_determine_impact": "Check installed versions of PHP (especially on Windows), Node.js, and Microsoft .NET frameworks. Look for the presence and version of the Brotli library (e.g., brotli.dll on Windows). Review vendor advisories for specific affected product versions. On Linux/Unix, inspect package managers for Brotli library versions.",
-      "tanium_query_hint": "Get Installed Applications with Name[\"PHP\"] or Get Installed Applications with Name[\"Node.js\"] or Get Installed Applications with Name[\".NET\"]. For Windows systems, Get File Version[\"C:\\path\\to\\brotli.dll\"] if the library is directly deployed. Look for processes related to PHP-FPM, Node.js, IIS worker processes.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to \"Brotli\", \"PHP2Shell\", \"Node2Shell\", or \"HTTP2Shell\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%PHP%' OR software.name LIKE '%Node.js%' OR software.name LIKE 'Microsoft .NET%'.",
+      "affected_versions": "PHP versions prior to patched versions that address CVE-2026-109618 and CVE-2026-109619.",
+      "how_to_determine_impact": "Identify all systems running PHP. Check PHP version and installed patches. Look for indicators of compromise such as unexpected child processes spawned by web servers or PHP processes, unusual outbound network connections, or modifications to web server configurations/files. Review access logs for suspicious requests.",
+      "tanium_query_hint": "Get PHP Version from all machines. Investigate processes running from web server directories using 'Get Running Processes matching pattern'. Check for existence of specific patch files or registry entries related to PHP updates.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-109618' or 'CVE-2026-109619' in InsightVM. Use InsightAgent queries to identify PHP installations and versions: 'SELECT version FROM programs WHERE name LIKE 'PHP%';'. Look for web server logs indicating RCE attempts.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimate based on RCE and active exploitation)"
+    },
+    {
+      "title": "Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches",
+      "tldr": "A critical vulnerability, dubbed 'HTTP2Shell' (also referred to as Node2Shell and Broccoli2Shell), in the Brotli C decoder library has necessitated emergency patches. This flaw allows for memory corruption and potential arbitrary code execution, affecting various platforms including Node.js and .NET, and could lead to sensitive data access.",
+      "action": "Immediately apply emergency patches for Node.js, Microsoft .NET, and any other systems utilizing the Brotli C decoder library, as this flaw is critical and requires urgent attention.",
+      "cve_ids": [
+        "CVE-2026-XXXXX"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Node.js (versions using vulnerable Brotli), Microsoft .NET (versions using vulnerable Brotli), Python packages, and other applications integrating the vulnerable Brotli C decoder library.",
+      "how_to_determine_impact": "Identify all systems running Node.js, Microsoft .NET applications, and Python environments. Check if these applications use the Brotli compression library. Review vendor advisories for specific affected versions and patch levels. Look for suspicious process crashes or unexpected memory usage.",
+      "tanium_query_hint": "Get Installed Applications matching 'Node.js' or '.NET'. Get File Version['brotli*.dll'] or 'brotli*.so'. Search for running processes related to Node.js or .NET applications. Check for recent patch installations.",
+      "rapid7_query_hint": "Search for vulnerability ID related to 'HTTP2Shell' or 'Brotli' in InsightVM. Use InsightAgent queries to check installed software versions for Node.js, .NET, and Python libraries. Scan for unpatched systems. Review network traffic for anomalous Brotli-related requests.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate based on memory corruption and RCE potential)"
+    },
+    {
+      "title": "PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw",
+      "tldr": "PHP has released a second emergency security update for Windows in five days to address a critical Brotli code execution vulnerability. This urgent patch highlights the severity of the flaw, which could allow attackers to execute arbitrary code on Windows servers running vulnerable PHP installations.",
+      "action": "Apply the latest available PHP security updates for Windows immediately. Prioritize systems where PHP is exposed, particularly those running web services.",
+      "cve_ids": [
+        "CVE-2026-XXXXX"
+      ],
+      "source_url": "https://thehackernews.com/2026/10/php-issues-second-windows-security.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "PHP installations on Windows systems using vulnerable Brotli components. Specific PHP versions would be detailed in official PHP advisories.",
+      "how_to_determine_impact": "Identify all Windows servers running PHP. Verify the installed PHP version and ensure it includes the latest security updates that address Brotli-related code execution flaws. Check the PHP changelog and security advisories for specific version numbers.",
+      "tanium_query_hint": "Get PHP Version from all Windows machines. Check 'Installed Programs' for PHP installations and their patch levels. Look for specific hotfix KBs or file versions associated with the Brotli patch.",
+      "rapid7_query_hint": "Scan Windows assets for PHP installations and check for known vulnerabilities. Search for vulnerability IDs related to PHP Brotli flaws in InsightVM. Use InsightAgent to query for PHP process versions and patch status.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate based on code execution potential and emergency update status)"
     },
     {
       "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
-      "tldr": "Two critical vulnerabilities have been discovered in Wasmtime, a WebAssembly runtime. These flaws could allow malicious WebAssembly modules to escape their sandboxed environment, potentially leading to arbitrary code execution or unauthorized access to the host system.",
-      "action": "Update Wasmtime to the latest patched version immediately. Review and audit any WebAssembly modules being run in production for suspicious behavior. Ensure robust input validation and least privilege principles are applied to environments where WebAssembly is executed.",
+      "tldr": "Two critical vulnerabilities have been discovered in Wasmtime, a WebAssembly runtime, that could allow malicious WebAssembly modules to escape their sandboxes. Successful exploitation would enable attackers to execute arbitrary code outside the intended isolated environment, gaining unauthorized access to the host system.",
+      "action": "Update Wasmtime to the latest patched version. For applications or services that rely on Wasmtime, review configurations to ensure strict sandbox policies are in place and monitor for any unusual process activity originating from Wasmtime environments.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Wasmtime runtime, specific versions prior to the patch. Refer to official Wasmtime project advisories for exact vulnerable ranges.",
-      "how_to_determine_impact": "Identify systems running Wasmtime. Check the version of the Wasmtime runtime installed. Consult the official Wasmtime project's security advisories for detection scripts or specific file checksums/versions.",
-      "tanium_query_hint": "Get Installed Applications with Name[\"Wasmtime\"]. If Wasmtime is embedded, Get File Version[\"C:\\path\\to\\wasmtime.dll\"] or Get File Version[\"/usr/bin/wasmtime\"].",
-      "rapid7_query_hint": "Search for vulnerability IDs related to \"Wasmtime\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%Wasmtime%'.",
+      "affected_versions": "Wasmtime runtime, specific versions prior to the patches released for these critical flaws.",
+      "how_to_determine_impact": "Identify all systems or applications utilizing the Wasmtime WebAssembly runtime. Check the installed Wasmtime version against vendor advisories. Review application logs for failed sandbox attempts or unusual resource access by WebAssembly modules.",
+      "tanium_query_hint": "Get Installed Applications matching 'Wasmtime'. Check file versions of Wasmtime binaries. Look for processes running with Wasmtime arguments. Query configuration files related to Wasmtime sandbox settings.",
+      "rapid7_query_hint": "Scan assets for Wasmtime installations. Search for vulnerability IDs related to 'Wasmtime sandbox escape' in InsightVM. Use custom checks or InsightAgent queries to determine Wasmtime versions and configurations.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
-    },
-    {
-      "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
-      "tldr": "Unpatched vulnerabilities in Tailscale's SSH implementation could allow a compromised device within a Tailscale network to escalate privileges and gain root access on other connected servers. This poses a significant internal network lateral movement risk.",
-      "action": "Monitor for official patches from Tailscale and apply them as soon as they are available. In the interim, restrict SSH access through Tailscale to only trusted devices and users. Implement granular access controls and continuously monitor all Tailscale network activity for anomalies.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Tailscale SSH functionality in certain versions. Refer to official Tailscale security advisories for the precise vulnerable versions.",
-      "how_to_determine_impact": "Check installed versions of Tailscale clients on all devices in the network. Specifically, verify if Tailscale's SSH feature is enabled and in use. Consult Tailscale documentation for detection methods of vulnerable configurations.",
-      "tanium_query_hint": "Get Installed Applications with Name[\"Tailscale\"]. Check configuration files for Tailscale SSH settings or Get Running Processes with Name[\"tailscaled\"] and inspect its parameters/version.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to \"Tailscale SSH\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%Tailscale%'. Look for devices where Tailscale SSH is active.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.5 High"
-    },
-    {
-      "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
-      "tldr": "A new UEFI bootkit, BlackX, is exploiting the existing \"Baton Drop\" vulnerability to bypass Secure Boot. This allows it to load malicious drivers, such as those interfering with Kaspersky and Avast security solutions, indicating a sophisticated espionage campaign.",
-      "action": "Ensure all systems have the latest UEFI firmware updates that specifically address the \"Baton Drop\" vulnerability. Verify Secure Boot is correctly configured and enforced. Implement robust endpoint detection and response (EDR) that can detect bootkit activity and firmware tampering.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Systems with UEFI firmware vulnerable to the \"Baton Drop\" class of vulnerabilities, specifically those that have not applied updates to mitigate bootkit bypasses. This is typically OEM and firmware version dependent. Consult vendor advisories.",
-      "how_to_determine_impact": "Check UEFI firmware versions on endpoints. Verify Secure Boot status. Look for indicators of compromise related to BlackX bootkit or suspicious unsigned drivers being loaded at boot. Check for the presence of the specified malicious driver.",
-      "tanium_query_hint": "Get Computer Name and OS Platform and BIOS Version. Look for systems with older BIOS/UEFI firmware that may be vulnerable to \"Baton Drop\". Get running processes with command line to detect suspicious driver loading.",
-      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to \"UEFI Secure Boot Bypass\" or \"Baton Drop\". Use InsightAgent queries to check BIOS/UEFI versions or SELECT os.firmware.version FROM os to identify potentially vulnerable systems.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.3 Critical"
+      "cvss_score": "9.0 Critical (Estimate based on sandbox escape leading to RCE)"
     }
   ],
   "insurance": [],
@@ -25432,6 +25428,60 @@
         "rapid7_query_hint": "Search InsightVM for vulnerabilities related to \"UEFI Secure Boot Bypass\" or \"Baton Drop\". Use InsightAgent queries to check BIOS/UEFI versions or SELECT os.firmware.version FROM os to identify potentially vulnerable systems.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.3 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
+        "tldr": "Attackers have compromised 953 online stores, primarily Magento-based, injecting scanner-evading JavaScript. This Magecart-style attack is designed to steal payment card information and customer data, posing a significant risk to e-commerce platforms and their users. The stealthy nature of the script makes detection challenging for traditional security tools.",
+        "action": "Conduct thorough web application security audits and implement real-time monitoring for unauthorized script injections on e-commerce platforms, especially Magento. Ensure content security policies (CSPs) are rigorously enforced and regularly review third-party scripts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Former pentester used ARTEX AI to steal 8.2 million data records",
+        "tldr": "A former pentester utilized the ARTEX AI framework to breach over 90 organizations in South Korea, resulting in the theft of 8.2 million data records. This incident highlights the growing risk of sophisticated AI-powered tools being misused for large-scale data exfiltration and cybercrime.",
+        "action": "Review and strengthen access controls, network segmentation, and data loss prevention (DLP) measures. Enhance monitoring for unusual data exfiltration patterns. Investigate the specific techniques used by ARTEX AI for potential proactive defensive measures.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches",
+        "tldr": "A critical vulnerability, dubbed 'HTTP2Shell' (also referred to as Node2Shell and Broccoli2Shell), in the Brotli C decoder library has necessitated emergency patches. This flaw allows for memory corruption and potential arbitrary code execution, affecting various platforms including Node.js and .NET, and could lead to sensitive data access.",
+        "action": "Immediately apply emergency patches for Node.js, Microsoft .NET, and any other systems utilizing the Brotli C decoder library, as this flaw is critical and requires urgent attention.",
+        "cve_ids": [
+          "CVE-2026-XXXXX"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Node.js (versions using vulnerable Brotli), Microsoft .NET (versions using vulnerable Brotli), Python packages, and other applications integrating the vulnerable Brotli C decoder library.",
+        "how_to_determine_impact": "Identify all systems running Node.js, Microsoft .NET applications, and Python environments. Check if these applications use the Brotli compression library. Review vendor advisories for specific affected versions and patch levels. Look for suspicious process crashes or unexpected memory usage.",
+        "tanium_query_hint": "Get Installed Applications matching 'Node.js' or '.NET'. Get File Version['brotli*.dll'] or 'brotli*.so'. Search for running processes related to Node.js or .NET applications. Check for recent patch installations.",
+        "rapid7_query_hint": "Search for vulnerability ID related to 'HTTP2Shell' or 'Brotli' in InsightVM. Use InsightAgent queries to check installed software versions for Node.js, .NET, and Python libraries. Scan for unpatched systems. Review network traffic for anomalous Brotli-related requests.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on memory corruption and RCE potential)",
+        "category": "vulns"
+      },
+      {
+        "title": "PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw",
+        "tldr": "PHP has released a second emergency security update for Windows in five days to address a critical Brotli code execution vulnerability. This urgent patch highlights the severity of the flaw, which could allow attackers to execute arbitrary code on Windows servers running vulnerable PHP installations.",
+        "action": "Apply the latest available PHP security updates for Windows immediately. Prioritize systems where PHP is exposed, particularly those running web services.",
+        "cve_ids": [
+          "CVE-2026-XXXXX"
+        ],
+        "source_url": "https://thehackernews.com/2026/10/php-issues-second-windows-security.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "PHP installations on Windows systems using vulnerable Brotli components. Specific PHP versions would be detailed in official PHP advisories.",
+        "how_to_determine_impact": "Identify all Windows servers running PHP. Verify the installed PHP version and ensure it includes the latest security updates that address Brotli-related code execution flaws. Check the PHP changelog and security advisories for specific version numbers.",
+        "tanium_query_hint": "Get PHP Version from all Windows machines. Check 'Installed Programs' for PHP installations and their patch levels. Look for specific hotfix KBs or file versions associated with the Brotli patch.",
+        "rapid7_query_hint": "Scan Windows assets for PHP installations and check for known vulnerabilities. Search for vulnerability IDs related to PHP Brotli flaws in InsightVM. Use InsightAgent to query for PHP process versions and patch status.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on code execution potential and emergency update status)",
         "category": "vulns"
       }
     ]
