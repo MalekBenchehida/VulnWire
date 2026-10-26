@@ -1,43 +1,51 @@
 {
   "breaches": [
     {
-      "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
-      "tldr": "A master key for LiteLLM was leaked, allowing attackers to compromise GitHub tokens and hijack the release pipeline. This incident represents a significant supply chain attack, enabling malicious code injection into distributed software.",
-      "action": "Developers using LiteLLM should immediately rotate all GitHub tokens and API keys used with the platform. Audit release pipelines for unauthorized modifications and implement stricter access controls.",
+      "title": "Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations",
+      "tldr": "Attackers are using token-replay techniques to compromise Microsoft 365 accounts. This has led to 97 accounts across 79 organizations being breached. The method bypasses MFA, allowing unauthorized access to sensitive cloud resources.",
+      "action": "Implement strong session management and token invalidation policies. Monitor for unusual login patterns, token replay attempts, and activity from compromised accounts. Consider Conditional Access policies to restrict access based on device health, location, and other attributes.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
+      "source_url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Quest Diagnostics confirms data breach exposed patient records",
-      "tldr": "Quest Diagnostics has confirmed a data breach where a threat actor gained unauthorized access to its Quanum LSM system, exposing patient records. This incident affects sensitive healthcare data, raising privacy concerns for individuals.",
-      "action": "Affected individuals should monitor their credit reports and consider identity theft protection services. Quest Diagnostics should conduct a thorough forensic investigation and enhance access controls and monitoring on its systems.",
+      "title": "Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs",
+      "tldr": "A new threat, \"Gheist,\" leverages stolen GitHub tokens to exfiltrate private repository secrets. The attack specifically exploits GitHub Actions logs, indicating a potential supply chain risk for development environments.",
+      "action": "Rotate GitHub tokens regularly, especially for CI/CD pipelines. Implement strict access controls and least privilege for GitHub tokens. Monitor GitHub Actions logs for suspicious activity and unauthorized access to repository secrets. Consider using GitHub's secret scanning features.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/quest-diagnostics-confirms-data-breach-exposed-patient-records/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "Railway warns devs to rotate secrets after potential breach",
-      "tldr": "Cloud platform Railway has issued an urgent warning to its developers, advising them to rotate secrets following suspicious activity detected on systems storing customer environment variables. This indicates a potential compromise of sensitive development credentials.",
-      "action": "Developers using Railway should immediately rotate all API keys, database credentials, and other secrets stored within or used by their Railway environments. Audit logs for unauthorized access or usage of environment variables.",
+      "title": "Genesys Hack Exposes Customer Data From Internal Systems",
+      "tldr": "Genesys, a customer experience software provider, suffered a hack that exposed customer data. The breach originated from their internal systems, indicating a compromise of their operational environment leading to data exfiltration.",
+      "action": "Customers of Genesys should monitor their accounts for suspicious activity and be wary of phishing attempts. All organizations should enforce robust access controls, network segmentation, and continuous monitoring of internal systems to detect and prevent unauthorized data access.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/railway-warns-devs-to-rotate-secrets-after-potential-breach/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/genesys-hack-exposes-customer-data-from-internal-systems/",
+      "source": "SecurityWeek"
     },
     {
-      "title": "11 Million Impacted by Capcom Data Breach",
-      "tldr": "Capcom, a major video game developer, has suffered a data breach impacting 11 million individuals. The incident likely involved personal identifiable information (PII) of customers, employees, and business partners.",
-      "action": "Individuals who have interacted with Capcom services should remain vigilant for phishing attempts and monitor their accounts for suspicious activity. Capcom must ensure all systems are patched and strengthen their data protection measures.",
+      "title": "Dutch Police Arrest Two Over NFC Relay Attacks That Drained $400,000+ From Bank Accounts",
+      "tldr": "Two individuals have been arrested in the Netherlands for conducting NFC relay attacks. These attacks allowed them to steal over $400,000 from victims' bank accounts by intercepting and relaying contactless payment signals.",
+      "action": "Advise employees and customers about the risks of NFC relay attacks, especially in public places. Consider using physical cards or digital wallets that require explicit authorization for each transaction. Banks should enhance fraud detection for contactless payments.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/11-million-impacted-by-capcom-data-breach/",
+      "source_url": "https://www.securityweek.com/dutch-police-arrest-two-over-nfc-relay-attacks-that-drained-400000/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
+      "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
+      "tldr": "Threat actors are leveraging sophisticated IT support scams within Microsoft Teams to deploy various malware strains, including ransomware. They impersonate internal IT staff to trick users into installing malicious software.",
+      "action": "Educate users on identifying phishing and social engineering attempts, especially within collaboration platforms like Microsoft Teams. Implement strong endpoint detection and response (EDR) solutions and application whitelisting to prevent unauthorized software installation. Verify all IT support requests through official channels.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware",
-      "tldr": "New macOS ransomware variants are emerging with self-rebuilding capabilities, making them more resilient to removal and enhancing their persistence on infected systems.",
-      "action": "Ensure macOS systems have robust endpoint protection and are regularly backed up. Implement strong user training to prevent ransomware infections.",
+      "tldr": "This story mentions the emergence of a \"self-rebuilding macOS ransomware.\" This type of ransomware is designed to persist and recover even after attempted removal, posing a significant threat to macOS users and organizations.",
+      "action": "macOS users should ensure systems are fully patched and run robust endpoint protection. Implement regular, immutable backups. Organizations should conduct incident response drills for macOS ransomware scenarios and ensure recovery plans account for persistent threats.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
       "source": "SecurityWeek"
@@ -45,92 +53,70 @@
   ],
   "vulns": [
     {
-      "title": "CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud",
-      "tldr": "CISA has issued an alert regarding two critical vulnerabilities in Collabora Online and Arista VeloCloud, both of which are being actively exploited in the wild. These zero-day exploits pose an immediate and severe threat to affected organizations.",
-      "action": "Immediately patch all Collabora Online and Arista VeloCloud installations to the latest secure versions. Investigate systems for signs of compromise, as active exploitation is confirmed.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html",
-      "source": "The Hacker News",
+      "title": "PHP2Shell security flaws now sucessfully exploited in the wild",
+      "tldr": "Multiple critical Remote Code Execution (RCE) vulnerabilities, collectively known as PHP2Shell (CVE-2026-109618, CVE-2026-109619), Node2Shell, and HTTP2Shell, residing in the Brotli C decoder library, PHP, Node.js, and Microsoft .NET, are now being actively exploited in the wild. These flaws allow attackers to corrupt memory and execute arbitrary code.",
+      "action": "Immediately apply all available emergency patches for PHP, Node.js, Microsoft .NET, and any other products leveraging the Brotli C decoder library. Prioritize web servers and internet-facing applications. Inspect systems for signs of compromise, including suspicious processes or network connections.",
+      "cve_ids": [
+        "CVE-2026-109618",
+        "CVE-2026-109619"
+      ],
+      "source_url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Collabora Online and Arista VeloCloud (specific versions not provided, assume all unpatched versions are vulnerable until patched)",
-      "how_to_determine_impact": "Check installed versions of Collabora Online and Arista VeloCloud. Refer to CISA's KEV catalog and vendor advisories for specific vulnerable versions and Indicators of Compromise (IOCs).",
-      "tanium_query_hint": "Get Installed Applications contains \"Collabora Online\" or \"Arista VeloCloud\" from all machines. Inspect network connections from these applications for suspicious outbound traffic.",
-      "rapid7_query_hint": "Search for vulnerabilities associated with \"Collabora Online\" or \"Arista VeloCloud\" in InsightVM. Utilize InsightIDR to monitor for IOCs published by CISA.",
+      "affected_versions": "PHP running on Windows, Node.js versions utilizing vulnerable Brotli C decoder, Microsoft .NET applications using affected Brotli libraries, and other products integrating the vulnerable Brotli C decoder. Specific version ranges are highly dependent on the vendor. Refer to official vendor advisories.",
+      "how_to_determine_impact": "Check installed versions of PHP (especially on Windows), Node.js, and Microsoft .NET frameworks. Look for the presence and version of the Brotli library (e.g., brotli.dll on Windows). Review vendor advisories for specific affected product versions. On Linux/Unix, inspect package managers for Brotli library versions.",
+      "tanium_query_hint": "Get Installed Applications with Name[\"PHP\"] or Get Installed Applications with Name[\"Node.js\"] or Get Installed Applications with Name[\".NET\"]. For Windows systems, Get File Version[\"C:\\path\\to\\brotli.dll\"] if the library is directly deployed. Look for processes related to PHP-FPM, Node.js, IIS worker processes.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to \"Brotli\", \"PHP2Shell\", \"Node2Shell\", or \"HTTP2Shell\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%PHP%' OR software.name LIKE '%Node.js%' OR software.name LIKE 'Microsoft .NET%'.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
-      "tldr": "Researchers discovered that AI coding agents can be hijacked by a malicious AGENTS.md file placed in the Downloads folder. This trick leads the AI agent to install rogue npm packages, indicating a new vector for supply chain attacks via AI agent interaction.",
-      "action": "Educate users and AI agent administrators about the risks of untrusted files in common download directories. Implement strict whitelisting for AI agent actions, especially package installations, and monitor agent behavior for anomalous activities.",
+      "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
+      "tldr": "Two critical vulnerabilities have been discovered in Wasmtime, a WebAssembly runtime. These flaws could allow malicious WebAssembly modules to escape their sandboxed environment, potentially leading to arbitrary code execution or unauthorized access to the host system.",
+      "action": "Update Wasmtime to the latest patched version immediately. Review and audit any WebAssembly modules being run in production for suspicious behavior. Ensure robust input validation and least privilege principles are applied to environments where WebAssembly is executed.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "AI coding agents that are configured to process files in user-controlled directories (e.g., Downloads) without sufficient sanitization or validation, leading to arbitrary command execution or package installation.",
-      "how_to_determine_impact": "Identify all systems deploying AI coding agents. Review the agents' configurations to understand how they interact with local file systems and user-provided inputs. Examine user Downloads folders for suspicious AGENTS.md files or unexpected package installations.",
-      "tanium_query_hint": "Get File Exists[\"%userprofile%\\Downloads\\AGENTS.md\"] from all machines. Get Installed NPM Packages or other package manager logs for suspicious installations.",
-      "rapid7_query_hint": "Monitor file system activity for creation of AGENTS.md in user-specific download directories. Correlate with AI agent process activity and unauthorized package installations detected by endpoint monitoring.",
-      "remediation_priority": "Emergency out-of-band",
+      "source_url": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Wasmtime runtime, specific versions prior to the patch. Refer to official Wasmtime project advisories for exact vulnerable ranges.",
+      "how_to_determine_impact": "Identify systems running Wasmtime. Check the version of the Wasmtime runtime installed. Consult the official Wasmtime project's security advisories for detection scripts or specific file checksums/versions.",
+      "tanium_query_hint": "Get Installed Applications with Name[\"Wasmtime\"]. If Wasmtime is embedded, Get File Version[\"C:\\path\\to\\wasmtime.dll\"] or Get File Version[\"/usr/bin/wasmtime\"].",
+      "rapid7_query_hint": "Search for vulnerability IDs related to \"Wasmtime\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%Wasmtime%'.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical"
+    },
+    {
+      "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
+      "tldr": "Unpatched vulnerabilities in Tailscale's SSH implementation could allow a compromised device within a Tailscale network to escalate privileges and gain root access on other connected servers. This poses a significant internal network lateral movement risk.",
+      "action": "Monitor for official patches from Tailscale and apply them as soon as they are available. In the interim, restrict SSH access through Tailscale to only trusted devices and users. Implement granular access controls and continuously monitor all Tailscale network activity for anomalies.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Tailscale SSH functionality in certain versions. Refer to official Tailscale security advisories for the precise vulnerable versions.",
+      "how_to_determine_impact": "Check installed versions of Tailscale clients on all devices in the network. Specifically, verify if Tailscale's SSH feature is enabled and in use. Consult Tailscale documentation for detection methods of vulnerable configurations.",
+      "tanium_query_hint": "Get Installed Applications with Name[\"Tailscale\"]. Check configuration files for Tailscale SSH settings or Get Running Processes with Name[\"tailscaled\"] and inspect its parameters/version.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to \"Tailscale SSH\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%Tailscale%'. Look for devices where Tailscale SSH is active.",
+      "remediation_priority": "High next patch cycle",
       "cvss_score": "8.5 High"
     },
     {
       "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
-      "tldr": "A new UEFI bootkit, BlackX, is being used in an espionage campaign and leverages the 'Baton Drop' vulnerability to bypass Secure Boot. This allows it to load malicious drivers that interfere with security software from Kaspersky and Avast. This confirms active, sophisticated, state-sponsored attacks.",
-      "action": "Apply all available patches and revocations related to the 'Baton Drop' vulnerability. Ensure UEFI firmware is updated and Secure Boot is properly configured. Deploy advanced endpoint protection capable of UEFI integrity monitoring.",
+      "tldr": "A new UEFI bootkit, BlackX, is exploiting the existing \"Baton Drop\" vulnerability to bypass Secure Boot. This allows it to load malicious drivers, such as those interfering with Kaspersky and Avast security solutions, indicating a sophisticated espionage campaign.",
+      "action": "Ensure all systems have the latest UEFI firmware updates that specifically address the \"Baton Drop\" vulnerability. Verify Secure Boot is correctly configured and enforced. Implement robust endpoint detection and response (EDR) that can detect bootkit activity and firmware tampering.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Systems vulnerable to the \"Baton Drop\" flaw, impacting Secure Boot on Windows (specific hardware/firmware versions not provided, but generally systems running vulnerable UEFI firmware versions).",
-      "how_to_determine_impact": "Verify that all system firmware (UEFI/BIOS) is fully updated and all relevant Secure Boot revocations have been applied. Use boot integrity monitoring tools. Look for suspicious drivers loaded at boot that interfere with security solutions.",
-      "tanium_query_hint": "Get BIOS Version and Get Secure Boot Status from all machines. Use \"Detect UEFI Threats\" sensor if available. Inspect boot logs for unusual driver loads.",
-      "rapid7_query_hint": "Scan for UEFI/firmware vulnerabilities and misconfigurations using InsightVM. Monitor InsightIDR for suspicious boot processes or attempts to disable/interfere with endpoint security solutions.",
+      "affected_versions": "Systems with UEFI firmware vulnerable to the \"Baton Drop\" class of vulnerabilities, specifically those that have not applied updates to mitigate bootkit bypasses. This is typically OEM and firmware version dependent. Consult vendor advisories.",
+      "how_to_determine_impact": "Check UEFI firmware versions on endpoints. Verify Secure Boot status. Look for indicators of compromise related to BlackX bootkit or suspicious unsigned drivers being loaded at boot. Check for the presence of the specified malicious driver.",
+      "tanium_query_hint": "Get Computer Name and OS Platform and BIOS Version. Look for systems with older BIOS/UEFI firmware that may be vulnerable to \"Baton Drop\". Get running processes with command line to detect suspicious driver loading.",
+      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to \"UEFI Secure Boot Bypass\" or \"Baton Drop\". Use InsightAgent queries to check BIOS/UEFI versions or SELECT os.firmware.version FROM os to identify potentially vulnerable systems.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
-    },
-    {
-      "title": "Attackers Exploit Third Arista VCO Zero-Day in Four Months",
-      "tldr": "Attackers are actively exploiting a third zero-day vulnerability in Arista VeloCloud Orchestrator (VCO) within a span of four months. This indicates a persistent targeting of Arista VCO, with new critical flaws being discovered and weaponized rapidly.",
-      "action": "Immediately apply all available patches for Arista VCO. Implement strict network segmentation and access controls for VCO deployments. Actively monitor VCO systems for indicators of compromise.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/attackers-exploit-third-velocloud-orchestrator-zero-day-in-four-months/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Arista VeloCloud Orchestrator (VCO) (specific vulnerable versions not provided, assume all unpatched versions are vulnerable to recent zero-days).",
-      "how_to_determine_impact": "Check installed versions of Arista VeloCloud Orchestrator against the latest Arista security advisories. Actively monitor VCO systems for unusual activity, unauthorized access attempts, or signs of compromise.",
-      "tanium_query_hint": "Get Installed Applications contains \"Arista VeloCloud Orchestrator\" from all machines. Review network connections and logs for anomalous behavior originating from VCO.",
-      "rapid7_query_hint": "Search for vulnerabilities related to \"Arista VeloCloud Orchestrator\" in InsightVM. Leverage InsightIDR to detect zero-day exploitation patterns or IOCs associated with VCO attacks.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.3 Critical"
     }
   ],
-  "insurance": [
-    {
-      "title": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads",
-      "tldr": "Google has stated that data from Gmail and Photos shared with its AI Search can be utilized for targeted advertising. This indicates a policy shift regarding user data privacy and monetization through AI-driven services.",
-      "action": "Review privacy settings for Google accounts. Be aware of the data sharing implications when using AI Search and other Google services. Consider alternative privacy-focused services if concerned about data usage.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Microsoft Teams to get AI-powered, context-aware phishing detection",
-      "tldr": "Microsoft is introducing AI-powered, context-aware phishing detection for Teams messages, expected in early November 2026. This enhancement aims to improve protection against sophisticated phishing attacks by leveraging AI to analyze message context.",
-      "action": "Review existing phishing detection strategies and prepare to leverage new features in Microsoft Teams as they roll out. Ensure users are still trained on phishing awareness, as AI detection is an additional layer, not a replacement.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-teams-to-get-ai-powered-context-aware-phishing-detection/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Former Unit 8200 Officers Raise $34 Million for Agentic SecOps Startup Mave",
-      "tldr": "Former officers from Israel's Unit 8200 have successfully raised $34 million for their new startup, Mave, which focuses on agentic security operations. This funding indicates a growing interest and investment in AI-driven solutions for cybersecurity.",
-      "action": "Stay informed about emerging cybersecurity technologies and startups that may offer innovative solutions. Evaluate potential integration of advanced SecOps tools to enhance organizational defenses.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/former-unit-8200-officers-raise-34-million-for-agentic-secops-startup-mave/",
-      "source": "SecurityWeek"
-    }
-  ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -25324,6 +25310,129 @@
         "source_url": "https://www.securityweek.com/former-unit-8200-officers-raise-34-million-for-agentic-secops-startup-mave/",
         "source": "SecurityWeek",
         "category": "insurance"
+      }
+    ],
+    "2026-10-26": [
+      {
+        "title": "Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations",
+        "tldr": "Attackers are using token-replay techniques to compromise Microsoft 365 accounts. This has led to 97 accounts across 79 organizations being breached. The method bypasses MFA, allowing unauthorized access to sensitive cloud resources.",
+        "action": "Implement strong session management and token invalidation policies. Monitor for unusual login patterns, token replay attempts, and activity from compromised accounts. Consider Conditional Access policies to restrict access based on device health, location, and other attributes.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs",
+        "tldr": "A new threat, \"Gheist,\" leverages stolen GitHub tokens to exfiltrate private repository secrets. The attack specifically exploits GitHub Actions logs, indicating a potential supply chain risk for development environments.",
+        "action": "Rotate GitHub tokens regularly, especially for CI/CD pipelines. Implement strict access controls and least privilege for GitHub tokens. Monitor GitHub Actions logs for suspicious activity and unauthorized access to repository secrets. Consider using GitHub's secret scanning features.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Genesys Hack Exposes Customer Data From Internal Systems",
+        "tldr": "Genesys, a customer experience software provider, suffered a hack that exposed customer data. The breach originated from their internal systems, indicating a compromise of their operational environment leading to data exfiltration.",
+        "action": "Customers of Genesys should monitor their accounts for suspicious activity and be wary of phishing attempts. All organizations should enforce robust access controls, network segmentation, and continuous monitoring of internal systems to detect and prevent unauthorized data access.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/genesys-hack-exposes-customer-data-from-internal-systems/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Dutch Police Arrest Two Over NFC Relay Attacks That Drained $400,000+ From Bank Accounts",
+        "tldr": "Two individuals have been arrested in the Netherlands for conducting NFC relay attacks. These attacks allowed them to steal over $400,000 from victims' bank accounts by intercepting and relaying contactless payment signals.",
+        "action": "Advise employees and customers about the risks of NFC relay attacks, especially in public places. Consider using physical cards or digital wallets that require explicit authorization for each transaction. Banks should enhance fraud detection for contactless payments.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/dutch-police-arrest-two-over-nfc-relay-attacks-that-drained-400000/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
+        "tldr": "Threat actors are leveraging sophisticated IT support scams within Microsoft Teams to deploy various malware strains, including ransomware. They impersonate internal IT staff to trick users into installing malicious software.",
+        "action": "Educate users on identifying phishing and social engineering attempts, especially within collaboration platforms like Microsoft Teams. Implement strong endpoint detection and response (EDR) solutions and application whitelisting to prevent unauthorized software installation. Verify all IT support requests through official channels.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware",
+        "tldr": "This story mentions the emergence of a \"self-rebuilding macOS ransomware.\" This type of ransomware is designed to persist and recover even after attempted removal, posing a significant threat to macOS users and organizations.",
+        "action": "macOS users should ensure systems are fully patched and run robust endpoint protection. Implement regular, immutable backups. Organizations should conduct incident response drills for macOS ransomware scenarios and ensure recovery plans account for persistent threats.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "PHP2Shell security flaws now sucessfully exploited in the wild",
+        "tldr": "Multiple critical Remote Code Execution (RCE) vulnerabilities, collectively known as PHP2Shell (CVE-2026-109618, CVE-2026-109619), Node2Shell, and HTTP2Shell, residing in the Brotli C decoder library, PHP, Node.js, and Microsoft .NET, are now being actively exploited in the wild. These flaws allow attackers to corrupt memory and execute arbitrary code.",
+        "action": "Immediately apply all available emergency patches for PHP, Node.js, Microsoft .NET, and any other products leveraging the Brotli C decoder library. Prioritize web servers and internet-facing applications. Inspect systems for signs of compromise, including suspicious processes or network connections.",
+        "cve_ids": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "PHP running on Windows, Node.js versions utilizing vulnerable Brotli C decoder, Microsoft .NET applications using affected Brotli libraries, and other products integrating the vulnerable Brotli C decoder. Specific version ranges are highly dependent on the vendor. Refer to official vendor advisories.",
+        "how_to_determine_impact": "Check installed versions of PHP (especially on Windows), Node.js, and Microsoft .NET frameworks. Look for the presence and version of the Brotli library (e.g., brotli.dll on Windows). Review vendor advisories for specific affected product versions. On Linux/Unix, inspect package managers for Brotli library versions.",
+        "tanium_query_hint": "Get Installed Applications with Name[\"PHP\"] or Get Installed Applications with Name[\"Node.js\"] or Get Installed Applications with Name[\".NET\"]. For Windows systems, Get File Version[\"C:\\path\\to\\brotli.dll\"] if the library is directly deployed. Look for processes related to PHP-FPM, Node.js, IIS worker processes.",
+        "rapid7_query_hint": "Search for vulnerability IDs related to \"Brotli\", \"PHP2Shell\", \"Node2Shell\", or \"HTTP2Shell\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%PHP%' OR software.name LIKE '%Node.js%' OR software.name LIKE 'Microsoft .NET%'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
+        "tldr": "Two critical vulnerabilities have been discovered in Wasmtime, a WebAssembly runtime. These flaws could allow malicious WebAssembly modules to escape their sandboxed environment, potentially leading to arbitrary code execution or unauthorized access to the host system.",
+        "action": "Update Wasmtime to the latest patched version immediately. Review and audit any WebAssembly modules being run in production for suspicious behavior. Ensure robust input validation and least privilege principles are applied to environments where WebAssembly is executed.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Wasmtime runtime, specific versions prior to the patch. Refer to official Wasmtime project advisories for exact vulnerable ranges.",
+        "how_to_determine_impact": "Identify systems running Wasmtime. Check the version of the Wasmtime runtime installed. Consult the official Wasmtime project's security advisories for detection scripts or specific file checksums/versions.",
+        "tanium_query_hint": "Get Installed Applications with Name[\"Wasmtime\"]. If Wasmtime is embedded, Get File Version[\"C:\\path\\to\\wasmtime.dll\"] or Get File Version[\"/usr/bin/wasmtime\"].",
+        "rapid7_query_hint": "Search for vulnerability IDs related to \"Wasmtime\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%Wasmtime%'.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
+        "tldr": "Unpatched vulnerabilities in Tailscale's SSH implementation could allow a compromised device within a Tailscale network to escalate privileges and gain root access on other connected servers. This poses a significant internal network lateral movement risk.",
+        "action": "Monitor for official patches from Tailscale and apply them as soon as they are available. In the interim, restrict SSH access through Tailscale to only trusted devices and users. Implement granular access controls and continuously monitor all Tailscale network activity for anomalies.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Tailscale SSH functionality in certain versions. Refer to official Tailscale security advisories for the precise vulnerable versions.",
+        "how_to_determine_impact": "Check installed versions of Tailscale clients on all devices in the network. Specifically, verify if Tailscale's SSH feature is enabled and in use. Consult Tailscale documentation for detection methods of vulnerable configurations.",
+        "tanium_query_hint": "Get Installed Applications with Name[\"Tailscale\"]. Check configuration files for Tailscale SSH settings or Get Running Processes with Name[\"tailscaled\"] and inspect its parameters/version.",
+        "rapid7_query_hint": "Search for vulnerability IDs related to \"Tailscale SSH\" in InsightVM. Use InsightAgent queries for installed software versions: SELECT software.name, software.version FROM software WHERE software.name LIKE '%Tailscale%'. Look for devices where Tailscale SSH is active.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.5 High",
+        "category": "vulns"
+      },
+      {
+        "title": "BlackX UEFI bootkit exploits Baton Drop flaw to bypass Secure Boot",
+        "tldr": "A new UEFI bootkit, BlackX, is exploiting the existing \"Baton Drop\" vulnerability to bypass Secure Boot. This allows it to load malicious drivers, such as those interfering with Kaspersky and Avast security solutions, indicating a sophisticated espionage campaign.",
+        "action": "Ensure all systems have the latest UEFI firmware updates that specifically address the \"Baton Drop\" vulnerability. Verify Secure Boot is correctly configured and enforced. Implement robust endpoint detection and response (EDR) that can detect bootkit activity and firmware tampering.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Systems with UEFI firmware vulnerable to the \"Baton Drop\" class of vulnerabilities, specifically those that have not applied updates to mitigate bootkit bypasses. This is typically OEM and firmware version dependent. Consult vendor advisories.",
+        "how_to_determine_impact": "Check UEFI firmware versions on endpoints. Verify Secure Boot status. Look for indicators of compromise related to BlackX bootkit or suspicious unsigned drivers being loaded at boot. Check for the presence of the specified malicious driver.",
+        "tanium_query_hint": "Get Computer Name and OS Platform and BIOS Version. Look for systems with older BIOS/UEFI firmware that may be vulnerable to \"Baton Drop\". Get running processes with command line to detect suspicious driver loading.",
+        "rapid7_query_hint": "Search InsightVM for vulnerabilities related to \"UEFI Secure Boot Bypass\" or \"Baton Drop\". Use InsightAgent queries to check BIOS/UEFI versions or SELECT os.firmware.version FROM os to identify potentially vulnerable systems.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.3 Critical",
+        "category": "vulns"
       }
     ]
   }
