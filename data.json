@@ -1,102 +1,120 @@
 {
   "breaches": [
     {
+      "title": "Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key",
+      "tldr": "Keystone is destroying over 18,000 hardware wallets after hackers stole a device verification key. This compromise could allow malicious firmware to be loaded onto the affected devices, putting user assets at risk.",
+      "action": "If you own a Keystone hardware wallet, verify its status with Keystone directly. Do not use any device from the affected batch. Implement multi-factor authentication and review all connected accounts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Hackers hijack Convertr analytics script to steal payment card data",
+      "tldr": "A credit card skimming group compromised a shared analytics script used by e-commerce platform Convertr. This allowed them to steal shoppers' payment card data during the checkout process.",
+      "action": "If your organization uses Convertr analytics script, immediately audit its implementation for unauthorized modifications. Implement Content Security Policy (CSP) headers to restrict script execution. Advise users to monitor credit card statements for suspicious activity.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "University of Copenhagen data breach exposes data of 525,000 people",
-      "tldr": "The University of Copenhagen confirmed a data breach where hackers accessed a test environment, compromising personal data for 525,000 individuals. The incident highlights the risk of sensitive data exposure in non-production systems.",
-      "action": "If affiliated with the University of Copenhagen, be vigilant for phishing attempts and consider changing passwords for any linked personal accounts. Organizations should rigorously secure all test and development environments containing sensitive data.",
+      "tldr": "The University of Copenhagen confirmed a data breach where hackers accessed a test environment containing personal data belonging to 525,000 individuals.",
+      "action": "If you are or were affiliated with the University of Copenhagen, monitor for direct communications from the university regarding the breach. Be vigilant for phishing attempts and review credit reports for suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
       "source": "BleepingComputer"
     },
     {
       "title": "Energy giant ENGIE discloses data breach affecting customers",
-      "tldr": "French energy company ENGIE reported a data breach where customer data was stolen from a marketing platform managed by its business partners. This incident underscores the supply chain risk associated with third-party vendors handling sensitive customer information.",
-      "action": "ENGIE customers should exercise heightened caution regarding unsolicited communications and potential phishing attempts. Organizations must conduct thorough security assessments and continuous monitoring of third-party vendors with access to their customer data.",
+      "tldr": "French energy company ENGIE confirmed a data breach affecting its customers. Attackers stole customer data by breaching a marketing platform used by business partners.",
+      "action": "If you are an ENGIE customer, monitor for official communication from ENGIE regarding the breach and specific steps to take. Be vigilant for phishing attempts and unauthorized account activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
       "source": "BleepingComputer"
-    },
+    }
+  ],
+  "ransomware": [
     {
-      "title": "Warp discloses breach exposing AI agent logs, user telemetry data",
-      "tldr": "Warp, an agentic development environment, disclosed a breach originating from a third-party vendor within its infrastructure. The compromise led to the exposure of AI agent decision logs and user telemetry data, revealing sensitive operational insights.",
-      "action": "Warp users should monitor their accounts for any suspicious activity and be aware of potential exposure of their AI agent interactions. All organizations utilizing third-party services for critical infrastructure should review vendor security postures and data access policies.",
+      "title": "Cybersecurity Issue Forces a Major New Mexico Hospital to Divert Patients and Close Clinics",
+      "tldr": "A major New Mexico hospital was forced to divert patients and close clinics due to a cybersecurity issue. This type of disruption often indicates a ransomware attack severely impacting critical healthcare operations.",
+      "action": "Healthcare organizations should review and harden their ransomware defense strategies, including robust backups, network segmentation, and incident response plans. Ensure critical systems are isolated and monitored.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Vendor Key Leak Puts Data of 238,000 Denver Health Plan Members at Risk",
-      "tldr": "A vendor key leak has compromised the data of 238,000 Denver Health Plan members, likely due to a breach at a third-party provider. This incident highlights critical supply chain vulnerabilities that can expose sensitive personal health information.",
-      "action": "Denver Health Plan members should be vigilant for any unusual communications or suspicious activity related to their health data. Organizations must enforce strict key management practices and regular security audits for all third-party vendors with access to sensitive data.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/vendor-key-leak-puts-data-of-238000-denver-health-plan-members-at-risk/",
+      "source_url": "https://www.securityweek.com/cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
   "vulns": [
     {
-      "title": "CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution",
-      "tldr": "CISA has confirmed active exploitation of two vulnerabilities in PHP2Shell that enable remote code execution (RCE). These flaws are now part of CISA's Known Exploited Vulnerabilities catalog, mandating urgent patching by federal agencies.",
-      "action": "Immediately identify and patch all instances of PHP2Shell in your environment, prioritizing internet-facing systems. Review web server logs for indicators of compromise and suspicious activity related to PHP2Shell scripts.",
+      "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+      "tldr": "Apple has backported security patches for an actively exploited CoreGraphics zero-day vulnerability to older iPhones and iPads. This critical flaw was exploited in \"extremely sophisticated\" targeted attacks, allowing for arbitrary code execution.",
+      "action": "Immediately update all older Apple iPhones and iPads to the latest available iOS/iPadOS versions that include the patch. Prioritize devices handling sensitive data or used by high-risk individuals.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "All active PHP2Shell installations are considered vulnerable until specific patched versions are released. Assume widespread impact.",
-      "how_to_determine_impact": "Scan file systems for 'php2shell.php' or similar PHP2Shell scripts, inspect web server configurations for execution paths, and query software inventories for any deployed instances. Correlate with public-facing web servers.",
-      "tanium_query_hint": "Get File Exists[php2shell.php] from all machines. Also, 'Get Running Processes that match 'php' from all machines' to find potential execution.",
-      "rapid7_query_hint": "Search vulnerability database for 'PHP2Shell' or perform a file content search for 'php2shell.php' across relevant assets. Utilize InsightAgent queries to check for script presence.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated due to active RCE exploitation)"
-    },
-    {
-      "title": "Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads",
-      "tldr": "Apple has released security patches, backporting a fix for an actively exploited zero-day vulnerability in CoreGraphics to older iPhones and iPads. This critical flaw was previously addressed for newer devices and is being targeted in sophisticated attacks.",
-      "action": "Immediately update all older iPhones and iPads to the latest available iOS/iPadOS security versions to apply the backported fix. Verify patch status and compliance via Mobile Device Management (MDM) systems.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Older iPhone and iPad models running prior iOS/iPadOS versions. Specific version numbers not fully detailed but refers to devices receiving backported patches (e.g., devices on iOS 17.x or earlier that now have a new update).",
-      "how_to_determine_impact": "Use MDM solutions to query the iOS/iPadOS version on all Apple mobile devices. Any device not running the most current patched version for its model is considered vulnerable.",
-      "tanium_query_hint": "Leverage Tanium's MDM integration (if configured) to 'Get iOS Version' or 'Get iPadOS Version' from all Apple mobile devices.",
-      "rapid7_query_hint": "Utilize MDM integrations in InsightVM/InsightIDR or perform asset searches to filter devices by 'OS Name' (iOS/iPadOS) and 'OS Version' to identify unpatched devices.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated due to zero-day and active exploitation)"
-    },
-    {
-      "title": "Tailscale warns of SSH flaws allowing root privilege escalation",
-      "tldr": "Tailscale is rushing to patch almost a dozen critical SSH vulnerabilities, some dubbed 'Tailworm,' which enable root privilege escalation, credential theft, and server crashes. These flaws were subject to uncoordinated disclosure, increasing the urgency of remediation.",
-      "action": "Apply the latest available patches from Tailscale to all systems running the software immediately. Review logs for any unusual SSH activity or signs of unauthorized access, especially on systems utilizing Tailscale's SSH features.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/tailscale-warns-of-serious-ssh-flaws-allowing-root-privilege-escalation/",
+      "source_url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
       "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "All Tailscale client and server installations are potentially vulnerable until patched. Specific vulnerable version ranges are not yet publicly detailed.",
-      "how_to_determine_impact": "Identify all endpoints and servers running Tailscale software. Cross-reference installed Tailscale versions with the vendor's security advisories to determine vulnerability status. Pay close attention to systems with SSH enabled through Tailscale.",
-      "tanium_query_hint": "Get Installed Applications with Name 'Tailscale' from all machines. Check version details. Also, 'Get Running Processes with Name 'tailscaled' from all machines' to identify active instances.",
-      "rapid7_query_hint": "Search asset inventory for 'Tailscale' installations. Filter by version number once specific patched versions are known. Look for vulnerability checks related to 'Tailscale' or 'SSH privilege escalation' in InsightVM scans.",
+      "active_exploitation": true,
+      "affected_versions": "Older iPhones and iPads; specific iOS/iPadOS versions are vulnerable. Refer to Apple's official security advisories for exact affected versions and patch releases.",
+      "how_to_determine_impact": "Check the iOS/iPadOS version of all Apple mobile devices in your environment. Devices running older, unpatched versions are vulnerable. Consult Apple's support documentation for version numbers.",
+      "tanium_query_hint": "Get OS Version from all machines where OS Platform contains \"iOS\" or \"iPadOS\"; review results for unpatched versions.",
+      "rapid7_query_hint": "Query for assets with \"iOS\" or \"iPadOS\" operating systems in InsightVM. Filter by reported OS versions and compare against known patched versions from Apple advisories.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (Estimated due to root privilege escalation via SSH flaws)"
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
-      "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
-      "tldr": "A critical vulnerability in the Microsoft Authenticator Android application allowed other Android apps, even those without elevated permissions, to steal work account authentication tokens. This flaw could enable unauthorized access to corporate resources.",
-      "action": "Ensure all Android users have updated their Microsoft Authenticator app to the latest available version. Implement multi-factor authentication (MFA) everywhere possible and monitor corporate account logs for unusual sign-in attempts or token usage on Android devices.",
+      "title": "CISA confirms PHP2Shell vulnerabilities now exploited in attacks",
+      "tldr": "CISA has added PHP2Shell vulnerabilities to its catalog of actively exploited flaws (KEV). Federal agencies are ordered to patch immediately, indicating ongoing exploitation in the wild, likely allowing for remote code execution.",
+      "action": "Identify all systems running PHP2Shell or applications using PHP2Shell components. Immediately apply patches and remediate the vulnerabilities. Prioritize external-facing systems.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "PHP2Shell, specific versions impacted by the vulnerabilities. Refer to vendor advisories or CISA KEV for exact details.",
+      "how_to_determine_impact": "Scan systems for installations of PHP2Shell. Inspect web server configurations and file systems for PHP2Shell scripts or components (e.g., specific file names, directories).",
+      "tanium_query_hint": "Get Installed Applications from all machines where Application Name contains \"PHP2Shell\"; Get Files and Folders from all machines where Path contains \"php2shell\" and name matches known vulnerable files.",
+      "rapid7_query_hint": "Search for \"PHP2Shell\" vulnerabilities in InsightVM. Use credentialed scans to detect installed components and known vulnerable file hashes or paths.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated)"
+    },
+    {
+      "title": "Microsoft releases Windows OOB updates to distrust eMudhra certificates",
+      "tldr": "Microsoft has issued out-of-band (OOB) updates for Windows to distrust certificates linked to compromised eMudhra certificate authority keys. This action protects systems from potential impersonation or man-in-the-middle attacks.",
+      "action": "Apply the latest Windows OOB updates immediately to ensure eMudhra certificates are distrusted. Verify that automatic certificate trust updates are enabled on all systems.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "All Windows versions not updated with the latest out-of-band patch that specifically addresses the eMudhra certificate distrust.",
+      "how_to_determine_impact": "Verify Windows Update status on all endpoints to confirm the OOB patch is installed. Additionally, check certificate trust lists for the presence of eMudhra certificates that should be revoked.",
+      "tanium_query_hint": "Get Windows Update Status from all machines; Get Certificate Information from all machines where Certificate Issuer contains \"eMudhra\" and review their trust status.",
+      "rapid7_query_hint": "In InsightVM, check for installed Windows updates. For certificate auditing, search for certificates with \"eMudhra\" as the issuer to identify potentially affected systems.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated)"
+    },
+    {
+      "title": "Tailscale Rushes Patches After Uncoordinated Disclosure of 'Tailworm' Flaws",
+      "tldr": "Tailscale is urgently releasing patches to address a series of vulnerabilities, dubbed 'Tailworm' flaws, following an uncoordinated disclosure. These flaws could potentially lead to root privilege escalation, credential theft, and server crashes.",
+      "action": "Immediately update all Tailscale clients and servers to the latest patched versions as soon as they are available. Monitor official Tailscale advisories for detailed remediation instructions.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/tailscale-ruses-patches-after-uncoordinated-disclosure-of-tailworm-flaws/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Microsoft Authenticator app on Android. Specific vulnerable version ranges are not detailed, but users should update to the latest available version immediately.",
-      "how_to_determine_impact": "Verify that all Android devices using Microsoft Authenticator for work accounts have the most current application version installed. Utilize Mobile Device Management (MDM) systems to audit app versions across managed devices.",
-      "tanium_query_hint": "Leverage Tanium's mobile device integration (if deployed) to query 'Get Installed Mobile Applications' and check the version of 'Microsoft Authenticator' on Android endpoints.",
-      "rapid7_query_hint": "Utilize MDM integrations in InsightVM/InsightIDR to query Android device application inventories. Search for 'Microsoft Authenticator' and filter by version to identify outdated installations.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.5 High (Estimated due to token theft leading to account compromise)"
+      "affected_versions": "Tailscale clients and servers, specific versions impacted by the 'Tailworm' flaws. Refer to official Tailscale security advisories for detailed affected version ranges.",
+      "how_to_determine_impact": "Identify all systems running Tailscale clients or servers and verify their installed versions against official Tailscale advisories for the 'Tailworm' flaws.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Application Name contains \"Tailscale\" and compare versions with known vulnerable ranges.",
+      "rapid7_query_hint": "Search for \"Tailscale\" vulnerabilities in InsightVM using the latest vulnerability definitions. Use credentialed scans to ensure accurate software inventory.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated)"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Risks Spelled Out for Anthropic Investors Include Possible Harms From Runaway AI",
+      "tldr": "Anthropic, an AI company, has outlined risks to investors, including potential harms from \"runaway AI\" systems. While not directly cyber insurance, this highlights novel risks that may influence future AI liability and insurance policies.",
+      "action": "Organizations developing or deploying advanced AI systems should proactively assess and mitigate potential risks, including unintended consequences and security vulnerabilities, which may influence future cyber risk and insurance frameworks.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai/",
+      "source": "SecurityWeek"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -25678,6 +25696,106 @@
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.5 High (Estimated due to token theft leading to account compromise)",
         "category": "vulns"
+      },
+      {
+        "title": "Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key",
+        "tldr": "Keystone is destroying over 18,000 hardware wallets after hackers stole a device verification key. This compromise could allow malicious firmware to be loaded onto the affected devices, putting user assets at risk.",
+        "action": "If you own a Keystone hardware wallet, verify its status with Keystone directly. Do not use any device from the affected batch. Implement multi-factor authentication and review all connected accounts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers hijack Convertr analytics script to steal payment card data",
+        "tldr": "A credit card skimming group compromised a shared analytics script used by e-commerce platform Convertr. This allowed them to steal shoppers' payment card data during the checkout process.",
+        "action": "If your organization uses Convertr analytics script, immediately audit its implementation for unauthorized modifications. Implement Content Security Policy (CSP) headers to restrict script execution. Advise users to monitor credit card statements for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-convertr-analytics-script-to-steal-payment-card-data/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Cybersecurity Issue Forces a Major New Mexico Hospital to Divert Patients and Close Clinics",
+        "tldr": "A major New Mexico hospital was forced to divert patients and close clinics due to a cybersecurity issue. This type of disruption often indicates a ransomware attack severely impacting critical healthcare operations.",
+        "action": "Healthcare organizations should review and harden their ransomware defense strategies, including robust backups, network segmentation, and incident response plans. Ensure critical systems are isolated and monitored.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/cybersecurity-issue-forces-a-major-new-mexico-hospital-to-divert-patients-and-close-clinics/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+        "tldr": "Apple has backported security patches for an actively exploited CoreGraphics zero-day vulnerability to older iPhones and iPads. This critical flaw was exploited in \"extremely sophisticated\" targeted attacks, allowing for arbitrary code execution.",
+        "action": "Immediately update all older Apple iPhones and iPads to the latest available iOS/iPadOS versions that include the patch. Prioritize devices handling sensitive data or used by high-risk individuals.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Older iPhones and iPads; specific iOS/iPadOS versions are vulnerable. Refer to Apple's official security advisories for exact affected versions and patch releases.",
+        "how_to_determine_impact": "Check the iOS/iPadOS version of all Apple mobile devices in your environment. Devices running older, unpatched versions are vulnerable. Consult Apple's support documentation for version numbers.",
+        "tanium_query_hint": "Get OS Version from all machines where OS Platform contains \"iOS\" or \"iPadOS\"; review results for unpatched versions.",
+        "rapid7_query_hint": "Query for assets with \"iOS\" or \"iPadOS\" operating systems in InsightVM. Filter by reported OS versions and compare against known patched versions from Apple advisories.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "CISA confirms PHP2Shell vulnerabilities now exploited in attacks",
+        "tldr": "CISA has added PHP2Shell vulnerabilities to its catalog of actively exploited flaws (KEV). Federal agencies are ordered to patch immediately, indicating ongoing exploitation in the wild, likely allowing for remote code execution.",
+        "action": "Identify all systems running PHP2Shell or applications using PHP2Shell components. Immediately apply patches and remediate the vulnerabilities. Prioritize external-facing systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cisa-confirms-php2shell-vulnerabilities-now-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "PHP2Shell, specific versions impacted by the vulnerabilities. Refer to vendor advisories or CISA KEV for exact details.",
+        "how_to_determine_impact": "Scan systems for installations of PHP2Shell. Inspect web server configurations and file systems for PHP2Shell scripts or components (e.g., specific file names, directories).",
+        "tanium_query_hint": "Get Installed Applications from all machines where Application Name contains \"PHP2Shell\"; Get Files and Folders from all machines where Path contains \"php2shell\" and name matches known vulnerable files.",
+        "rapid7_query_hint": "Search for \"PHP2Shell\" vulnerabilities in InsightVM. Use credentialed scans to detect installed components and known vulnerable file hashes or paths.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Microsoft releases Windows OOB updates to distrust eMudhra certificates",
+        "tldr": "Microsoft has issued out-of-band (OOB) updates for Windows to distrust certificates linked to compromised eMudhra certificate authority keys. This action protects systems from potential impersonation or man-in-the-middle attacks.",
+        "action": "Apply the latest Windows OOB updates immediately to ensure eMudhra certificates are distrusted. Verify that automatic certificate trust updates are enabled on all systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-windows-oob-updates-to-distrust-emudhra-certificates/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All Windows versions not updated with the latest out-of-band patch that specifically addresses the eMudhra certificate distrust.",
+        "how_to_determine_impact": "Verify Windows Update status on all endpoints to confirm the OOB patch is installed. Additionally, check certificate trust lists for the presence of eMudhra certificates that should be revoked.",
+        "tanium_query_hint": "Get Windows Update Status from all machines; Get Certificate Information from all machines where Certificate Issuer contains \"eMudhra\" and review their trust status.",
+        "rapid7_query_hint": "In InsightVM, check for installed Windows updates. For certificate auditing, search for certificates with \"eMudhra\" as the issuer to identify potentially affected systems.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Tailscale Rushes Patches After Uncoordinated Disclosure of 'Tailworm' Flaws",
+        "tldr": "Tailscale is urgently releasing patches to address a series of vulnerabilities, dubbed 'Tailworm' flaws, following an uncoordinated disclosure. These flaws could potentially lead to root privilege escalation, credential theft, and server crashes.",
+        "action": "Immediately update all Tailscale clients and servers to the latest patched versions as soon as they are available. Monitor official Tailscale advisories for detailed remediation instructions.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/tailscale-ruses-patches-after-uncoordinated-disclosure-of-tailworm-flaws/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Tailscale clients and servers, specific versions impacted by the 'Tailworm' flaws. Refer to official Tailscale security advisories for detailed affected version ranges.",
+        "how_to_determine_impact": "Identify all systems running Tailscale clients or servers and verify their installed versions against official Tailscale advisories for the 'Tailworm' flaws.",
+        "tanium_query_hint": "Get Installed Applications from all machines where Application Name contains \"Tailscale\" and compare versions with known vulnerable ranges.",
+        "rapid7_query_hint": "Search for \"Tailscale\" vulnerabilities in InsightVM using the latest vulnerability definitions. Use credentialed scans to ensure accurate software inventory.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Risks Spelled Out for Anthropic Investors Include Possible Harms From Runaway AI",
+        "tldr": "Anthropic, an AI company, has outlined risks to investors, including potential harms from \"runaway AI\" systems. While not directly cyber insurance, this highlights novel risks that may influence future AI liability and insurance policies.",
+        "action": "Organizations developing or deploying advanced AI systems should proactively assess and mitigate potential risks, including unintended consequences and security vulnerabilities, which may influence future cyber risk and insurance frameworks.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/risks-spelled-out-for-anthropic-investors-include-possible-harms-from-runaway-ai/",
+        "source": "SecurityWeek",
+        "category": "insurance"
       }
     ]
   }
