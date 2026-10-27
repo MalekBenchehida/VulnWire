@@ -1,117 +1,99 @@
 {
   "breaches": [
     {
-      "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
-      "tldr": "Attackers injected sophisticated, scanner-evading JavaScript into 953 online stores, primarily Magento, to steal customer payment and personal information. This ongoing supply chain attack bypasses traditional security scans, indicating advanced evasion techniques.",
-      "action": "Immediately scan all Magento and other e-commerce platforms for unauthorized JavaScript injections. Implement strong Content Security Policies (CSPs) and real-time monitoring of web content. Review payment processing logs for suspicious activity and notify potentially affected customers.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations",
-      "tldr": "Attackers successfully used token-replay techniques to compromise 97 Microsoft 365 accounts across 79 organizations. This method bypasses traditional authentication mechanisms by re-using stolen session tokens, granting unauthorized access to sensitive data and systems.",
-      "action": "Implement continuous access evaluation (CAE) and conditional access policies for Microsoft 365. Monitor for unusual login patterns and token usage anomalies. Enforce strong multi-factor authentication (MFA) and consider token protection solutions.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "University of Copenhagen data breach exposes data of 525,000 people",
-      "tldr": "The University of Copenhagen confirmed a data breach where hackers gained access to one of its test environments, exposing personal data belonging to 525,000 individuals. This incident highlights the critical need to secure non-production environments with the same rigor as production systems.",
-      "action": "Isolate and secure the compromised test environment. Conduct a thorough forensic investigation to determine the full extent of the breach and identify the root cause. Review and enforce strict data handling policies for all non-production systems containing sensitive data.",
+      "tldr": "The University of Copenhagen confirmed a data breach where hackers accessed a test environment, compromising personal data for 525,000 individuals. The incident highlights the risk of sensitive data exposure in non-production systems.",
+      "action": "If affiliated with the University of Copenhagen, be vigilant for phishing attempts and consider changing passwords for any linked personal accounts. Organizations should rigorously secure all test and development environments containing sensitive data.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/university-of-copenhagen-data-breach-exposes-data-of-525-000-people/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Former pentester used ARTEX AI to steal 8.2 million data records",
-      "tldr": "South Korean police identified suspects linked to a cybercrime operation that breached over 90 organizations, stealing 8.2 million data records. The ARTEX AI pentesting framework was used in most of the attacks, demonstrating the misuse of powerful security tools by malicious actors.",
-      "action": "Review and enhance access controls and monitoring for privileged accounts, especially those with access to pentesting tools or sensitive data. Implement robust insider threat detection mechanisms and conduct regular background checks for personnel with high-level access.",
+      "title": "Energy giant ENGIE discloses data breach affecting customers",
+      "tldr": "French energy company ENGIE reported a data breach where customer data was stolen from a marketing platform managed by its business partners. This incident underscores the supply chain risk associated with third-party vendors handling sensitive customer information.",
+      "action": "ENGIE customers should exercise heightened caution regarding unsolicited communications and potential phishing attempts. Organizations must conduct thorough security assessments and continuous monitoring of third-party vendors with access to their customer data.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/former-pentester-used-artex-ai-to-steal-82-million-data-records/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
       "source": "BleepingComputer"
-    }
-  ],
-  "ransomware": [
+    },
     {
-      "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
-      "tldr": "Attackers are leveraging social engineering tactics via Microsoft Teams IT support scams to trick users into installing malicious software, including ransomware. This method exploits user trust in internal communication channels to gain initial access and deploy payloads.",
-      "action": "Educate users on identifying and reporting suspicious Microsoft Teams messages, especially those requesting software installations, credential verification, or urgent IT assistance. Implement strict controls over application installations and enhance endpoint detection and response (EDR) capabilities.",
+      "title": "Warp discloses breach exposing AI agent logs, user telemetry data",
+      "tldr": "Warp, an agentic development environment, disclosed a breach originating from a third-party vendor within its infrastructure. The compromise led to the exposure of AI agent decision logs and user telemetry data, revealing sensitive operational insights.",
+      "action": "Warp users should monitor their accounts for any suspicious activity and be aware of potential exposure of their AI agent interactions. All organizations utilizing third-party services for critical infrastructure should review vendor security postures and data access policies.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Vendor Key Leak Puts Data of 238,000 Denver Health Plan Members at Risk",
+      "tldr": "A vendor key leak has compromised the data of 238,000 Denver Health Plan members, likely due to a breach at a third-party provider. This incident highlights critical supply chain vulnerabilities that can expose sensitive personal health information.",
+      "action": "Denver Health Plan members should be vigilant for any unusual communications or suspicious activity related to their health data. Organizations must enforce strict key management practices and regular security audits for all third-party vendors with access to sensitive data.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/vendor-key-leak-puts-data-of-238000-denver-health-plan-members-at-risk/",
+      "source": "SecurityWeek"
     }
   ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "PHP2Shell security flaws now sucessfully exploited in the wild",
-      "tldr": "Two critical Remote Code Execution (RCE) vulnerabilities, CVE-2026-109618 and CVE-2026-109619, collectively known as PHP2Shell, are now actively being exploited in the wild. These flaws represent a severe risk to affected PHP environments, allowing attackers to gain full control over compromised servers.",
-      "action": "Immediately apply all available patches for PHP addressing CVE-2026-109618 and CVE-2026-109619. Conduct thorough scans for web shells and other post-exploitation artifacts on all PHP-enabled servers.",
-      "cve_ids": [
-        "CVE-2026-109618",
-        "CVE-2026-109619"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "PHP installations susceptible to CVE-2026-109618 and CVE-2026-109619. Specific vulnerable PHP versions should be confirmed with official PHP security advisories (e.g., PHP 8.x, 7.x, 5.x requiring updates).",
-      "how_to_determine_impact": "Inventory all servers running PHP. Check the installed PHP version against vendor advisories for CVE-2026-109618/109619. Look for newly created or modified files in web directories (e.g., '.php' files in unusual locations), suspicious outgoing network connections from web servers, and abnormal PHP process behavior. Review web server and PHP error logs for any unusual entries.",
-      "tanium_query_hint": "Get Installed Applications with Name like 'PHP'. Use 'Get PHP Version' sensor. Check 'Get Running Processes with Name contains 'php'' for unusual process arguments or parent processes. Search 'Get File Content[path to web root] with Text matches '<php eval(' and depth 5' for web shells. Use 'Get Web Shells'.",
-      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-109618' or 'CVE-2026-109619' in InsightVM. Use InsightAgent to scan for installed PHP versions and associated packages. Deploy file integrity monitoring (FIM) for web directories. Look for web shell detections via network or host-based IDS/IPS.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Critical 'HTTP2Shell' Brotli vulnerability triggers emergency patches",
-      "tldr": "A critical memory corruption flaw, dubbed 'HTTP2Shell', exists in the Brotli C decoder library, particularly impacting Node.js. This vulnerability could lead to sensitive data access or remote code execution, necessitating emergency patches due to its high severity and relation to actively exploited Brotli flaws (e.g., PHP2Shell CVEs).",
-      "action": "Immediately apply all available emergency patches for Node.js and any applications using the Brotli C decoder library. Review systems for indicators of compromise related to memory corruption or unauthorized data access.",
-      "cve_ids": [
-        "CVE-2026-109618",
-        "CVE-2026-109619"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Node.js applications using the Brotli C decoder library. Specific vulnerable versions for Node.js are expected to be identified in official Node.js security advisories (e.g., LTS and Current releases).",
-      "how_to_determine_impact": "Identify all systems running Node.js, especially those processing Brotli-compressed content. Verify the installed Node.js version and any bundled or explicitly used Brotli libraries against vendor security advisories. Monitor for unusual memory usage, crashes, or unexpected network connections from Node.js processes.",
-      "tanium_query_hint": "Get Installed Applications with Name like 'Node.js'. Check 'Get File Version[path to node.exe]'. Look for evidence of Brotli library usage or dependencies. 'Get Running Processes' for Node.js processes with unusual behavior.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Node.js Brotli', 'HTTP2Shell', 'CVE-2026-109618', or 'CVE-2026-109619' in InsightVM. Use InsightAgent to query installed software for Node.js and its dependencies. Network-based scanning for unusual Node.js traffic.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Microsoft releases emergency .NET patches for critical Brotli flaw",
-      "tldr": "Microsoft has released emergency .NET security updates to patch a critical Brotli vulnerability, tracked as Broccoli2Shell (also Node2Shell, HTTP2Shell). This flaw, related to CVE-2026-109618 and CVE-2026-109619, could impact .NET applications that process Brotli compressed data, potentially leading to remote code execution or data exposure.",
-      "action": "Apply the latest emergency .NET security updates released by Microsoft immediately. Scan .NET applications and environments for dependencies on Brotli and ensure they are updated or patched.",
-      "cve_ids": [
-        "CVE-2026-109618",
-        "CVE-2026-109619"
-      ],
-      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Microsoft .NET applications utilizing the Brotli C decoder library. Consult Microsoft's official security advisories (e.g., for .NET Framework, .NET Core, ASP.NET) for specific affected versions and patch details.",
-      "how_to_determine_impact": "Identify all systems running .NET applications. Check for dependencies on Brotli compression libraries within your .NET environment (e.g., NuGet packages, direct library inclusions). Verify if the latest emergency patches from Microsoft have been applied. Inspect application logs for errors related to Brotli processing.",
-      "tanium_query_hint": "Get Installed Applications with Name like '.NET Framework' or '.NET Runtime'. Check 'Get File Version[path to relevant .NET assemblies/DLLs]' (e.g., System.IO.Compression.Brotli.dll) for patch status. Look for relevant KBs from 'Get Installed Updates'.",
-      "rapid7_query_hint": "Search for vulnerabilities related to '.NET Brotli', 'Broccoli2Shell', 'CVE-2026-109618', or 'CVE-2026-109619' in InsightVM. Use InsightAgent to identify installed .NET components and their patch status, including installed KBs.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
-      "tldr": "Two critical vulnerabilities in Wasmtime, a popular WebAssembly runtime, could allow malicious WebAssembly modules to escape their sandboxes. This severe flaw enables unauthorized access and potential remote code execution on the host system, compromising isolation.",
-      "action": "Update Wasmtime to the latest patched version immediately. Review and restrict the execution context of all WebAssembly modules, especially those sourced from untrusted or external origins.",
+      "title": "CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution",
+      "tldr": "CISA has confirmed active exploitation of two vulnerabilities in PHP2Shell that enable remote code execution (RCE). These flaws are now part of CISA's Known Exploited Vulnerabilities catalog, mandating urgent patching by federal agencies.",
+      "action": "Immediately identify and patch all instances of PHP2Shell in your environment, prioritizing internet-facing systems. Review web server logs for indicators of compromise and suspicious activity related to PHP2Shell scripts.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
+      "source_url": "https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "All active PHP2Shell installations are considered vulnerable until specific patched versions are released. Assume widespread impact.",
+      "how_to_determine_impact": "Scan file systems for 'php2shell.php' or similar PHP2Shell scripts, inspect web server configurations for execution paths, and query software inventories for any deployed instances. Correlate with public-facing web servers.",
+      "tanium_query_hint": "Get File Exists[php2shell.php] from all machines. Also, 'Get Running Processes that match 'php' from all machines' to find potential execution.",
+      "rapid7_query_hint": "Search vulnerability database for 'PHP2Shell' or perform a file content search for 'php2shell.php' across relevant assets. Utilize InsightAgent queries to check for script presence.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated due to active RCE exploitation)"
+    },
+    {
+      "title": "Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads",
+      "tldr": "Apple has released security patches, backporting a fix for an actively exploited zero-day vulnerability in CoreGraphics to older iPhones and iPads. This critical flaw was previously addressed for newer devices and is being targeted in sophisticated attacks.",
+      "action": "Immediately update all older iPhones and iPads to the latest available iOS/iPadOS security versions to apply the backported fix. Verify patch status and compliance via Mobile Device Management (MDM) systems.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Older iPhone and iPad models running prior iOS/iPadOS versions. Specific version numbers not fully detailed but refers to devices receiving backported patches (e.g., devices on iOS 17.x or earlier that now have a new update).",
+      "how_to_determine_impact": "Use MDM solutions to query the iOS/iPadOS version on all Apple mobile devices. Any device not running the most current patched version for its model is considered vulnerable.",
+      "tanium_query_hint": "Leverage Tanium's MDM integration (if configured) to 'Get iOS Version' or 'Get iPadOS Version' from all Apple mobile devices.",
+      "rapid7_query_hint": "Utilize MDM integrations in InsightVM/InsightIDR or perform asset searches to filter devices by 'OS Name' (iOS/iPadOS) and 'OS Version' to identify unpatched devices.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated due to zero-day and active exploitation)"
+    },
+    {
+      "title": "Tailscale warns of SSH flaws allowing root privilege escalation",
+      "tldr": "Tailscale is rushing to patch almost a dozen critical SSH vulnerabilities, some dubbed 'Tailworm,' which enable root privilege escalation, credential theft, and server crashes. These flaws were subject to uncoordinated disclosure, increasing the urgency of remediation.",
+      "action": "Apply the latest available patches from Tailscale to all systems running the software immediately. Review logs for any unusual SSH activity or signs of unauthorized access, especially on systems utilizing Tailscale's SSH features.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/tailscale-warns-of-serious-ssh-flaws-allowing-root-privilege-escalation/",
+      "source": "BleepingComputer",
+      "active_exploitation": false,
+      "affected_versions": "All Tailscale client and server installations are potentially vulnerable until patched. Specific vulnerable version ranges are not yet publicly detailed.",
+      "how_to_determine_impact": "Identify all endpoints and servers running Tailscale software. Cross-reference installed Tailscale versions with the vendor's security advisories to determine vulnerability status. Pay close attention to systems with SSH enabled through Tailscale.",
+      "tanium_query_hint": "Get Installed Applications with Name 'Tailscale' from all machines. Check version details. Also, 'Get Running Processes with Name 'tailscaled' from all machines' to identify active instances.",
+      "rapid7_query_hint": "Search asset inventory for 'Tailscale' installations. Filter by version number once specific patched versions are known. Look for vulnerability checks related to 'Tailscale' or 'SSH privilege escalation' in InsightVM scans.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated due to root privilege escalation via SSH flaws)"
+    },
+    {
+      "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
+      "tldr": "A critical vulnerability in the Microsoft Authenticator Android application allowed other Android apps, even those without elevated permissions, to steal work account authentication tokens. This flaw could enable unauthorized access to corporate resources.",
+      "action": "Ensure all Android users have updated their Microsoft Authenticator app to the latest available version. Implement multi-factor authentication (MFA) everywhere possible and monitor corporate account logs for unusual sign-in attempts or token usage on Android devices.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Wasmtime, a WebAssembly runtime environment. Specific vulnerable versions were not detailed, but immediate patching to the latest stable release is recommended by the vendor.",
-      "how_to_determine_impact": "Identify all systems or applications that utilize Wasmtime for executing WebAssembly modules. Verify the installed Wasmtime version against vendor security advisories. Assess the criticality of data and processes accessible to Wasmtime execution environments.",
-      "tanium_query_hint": "Get Installed Applications with Name like 'Wasmtime'. Check 'Get File Version[path to wasmtime executable]'. Look for running processes associated with Wasmtime and their associated command lines or parent processes.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Wasmtime sandbox escape' or 'WebAssembly vulnerabilities' in InsightVM. Use InsightAgent to query installed software for Wasmtime and its components. Monitor for unusual process spawns from Wasmtime processes.",
+      "affected_versions": "Microsoft Authenticator app on Android. Specific vulnerable version ranges are not detailed, but users should update to the latest available version immediately.",
+      "how_to_determine_impact": "Verify that all Android devices using Microsoft Authenticator for work accounts have the most current application version installed. Utilize Mobile Device Management (MDM) systems to audit app versions across managed devices.",
+      "tanium_query_hint": "Leverage Tanium's mobile device integration (if deployed) to query 'Get Installed Mobile Applications' and check the version of 'Microsoft Authenticator' on Android endpoints.",
+      "rapid7_query_hint": "Utilize MDM integrations in InsightVM/InsightIDR to query Android device application inventories. Search for 'Microsoft Authenticator' and filter by version to identify outdated installations.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "8.5 High (Estimated due to token theft leading to account compromise)"
     }
   ],
   "insurance": [],
@@ -25604,6 +25586,97 @@
         "rapid7_query_hint": "Search for vulnerabilities related to 'Wasmtime sandbox escape' or 'WebAssembly vulnerabilities' in InsightVM. Use InsightAgent to query installed software for Wasmtime and its components. Monitor for unusual process spawns from Wasmtime processes.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Energy giant ENGIE discloses data breach affecting customers",
+        "tldr": "French energy company ENGIE reported a data breach where customer data was stolen from a marketing platform managed by its business partners. This incident underscores the supply chain risk associated with third-party vendors handling sensitive customer information.",
+        "action": "ENGIE customers should exercise heightened caution regarding unsolicited communications and potential phishing attempts. Organizations must conduct thorough security assessments and continuous monitoring of third-party vendors with access to their customer data.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/energy-giant-engie-discloses-data-breach-affecting-customers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Warp discloses breach exposing AI agent logs, user telemetry data",
+        "tldr": "Warp, an agentic development environment, disclosed a breach originating from a third-party vendor within its infrastructure. The compromise led to the exposure of AI agent decision logs and user telemetry data, revealing sensitive operational insights.",
+        "action": "Warp users should monitor their accounts for any suspicious activity and be aware of potential exposure of their AI agent interactions. All organizations utilizing third-party services for critical infrastructure should review vendor security postures and data access policies.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/warp-discloses-breach-exposing-ai-agent-logs-user-telemetry-data/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Vendor Key Leak Puts Data of 238,000 Denver Health Plan Members at Risk",
+        "tldr": "A vendor key leak has compromised the data of 238,000 Denver Health Plan members, likely due to a breach at a third-party provider. This incident highlights critical supply chain vulnerabilities that can expose sensitive personal health information.",
+        "action": "Denver Health Plan members should be vigilant for any unusual communications or suspicious activity related to their health data. Organizations must enforce strict key management practices and regular security audits for all third-party vendors with access to sensitive data.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/vendor-key-leak-puts-data-of-238000-denver-health-plan-members-at-risk/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution",
+        "tldr": "CISA has confirmed active exploitation of two vulnerabilities in PHP2Shell that enable remote code execution (RCE). These flaws are now part of CISA's Known Exploited Vulnerabilities catalog, mandating urgent patching by federal agencies.",
+        "action": "Immediately identify and patch all instances of PHP2Shell in your environment, prioritizing internet-facing systems. Review web server logs for indicators of compromise and suspicious activity related to PHP2Shell scripts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "All active PHP2Shell installations are considered vulnerable until specific patched versions are released. Assume widespread impact.",
+        "how_to_determine_impact": "Scan file systems for 'php2shell.php' or similar PHP2Shell scripts, inspect web server configurations for execution paths, and query software inventories for any deployed instances. Correlate with public-facing web servers.",
+        "tanium_query_hint": "Get File Exists[php2shell.php] from all machines. Also, 'Get Running Processes that match 'php' from all machines' to find potential execution.",
+        "rapid7_query_hint": "Search vulnerability database for 'PHP2Shell' or perform a file content search for 'php2shell.php' across relevant assets. Utilize InsightAgent queries to check for script presence.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated due to active RCE exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads",
+        "tldr": "Apple has released security patches, backporting a fix for an actively exploited zero-day vulnerability in CoreGraphics to older iPhones and iPads. This critical flaw was previously addressed for newer devices and is being targeted in sophisticated attacks.",
+        "action": "Immediately update all older iPhones and iPads to the latest available iOS/iPadOS security versions to apply the backported fix. Verify patch status and compliance via Mobile Device Management (MDM) systems.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Older iPhone and iPad models running prior iOS/iPadOS versions. Specific version numbers not fully detailed but refers to devices receiving backported patches (e.g., devices on iOS 17.x or earlier that now have a new update).",
+        "how_to_determine_impact": "Use MDM solutions to query the iOS/iPadOS version on all Apple mobile devices. Any device not running the most current patched version for its model is considered vulnerable.",
+        "tanium_query_hint": "Leverage Tanium's MDM integration (if configured) to 'Get iOS Version' or 'Get iPadOS Version' from all Apple mobile devices.",
+        "rapid7_query_hint": "Utilize MDM integrations in InsightVM/InsightIDR or perform asset searches to filter devices by 'OS Name' (iOS/iPadOS) and 'OS Version' to identify unpatched devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated due to zero-day and active exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Tailscale warns of SSH flaws allowing root privilege escalation",
+        "tldr": "Tailscale is rushing to patch almost a dozen critical SSH vulnerabilities, some dubbed 'Tailworm,' which enable root privilege escalation, credential theft, and server crashes. These flaws were subject to uncoordinated disclosure, increasing the urgency of remediation.",
+        "action": "Apply the latest available patches from Tailscale to all systems running the software immediately. Review logs for any unusual SSH activity or signs of unauthorized access, especially on systems utilizing Tailscale's SSH features.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/tailscale-warns-of-serious-ssh-flaws-allowing-root-privilege-escalation/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "All Tailscale client and server installations are potentially vulnerable until patched. Specific vulnerable version ranges are not yet publicly detailed.",
+        "how_to_determine_impact": "Identify all endpoints and servers running Tailscale software. Cross-reference installed Tailscale versions with the vendor's security advisories to determine vulnerability status. Pay close attention to systems with SSH enabled through Tailscale.",
+        "tanium_query_hint": "Get Installed Applications with Name 'Tailscale' from all machines. Check version details. Also, 'Get Running Processes with Name 'tailscaled' from all machines' to identify active instances.",
+        "rapid7_query_hint": "Search asset inventory for 'Tailscale' installations. Filter by version number once specific patched versions are known. Look for vulnerability checks related to 'Tailscale' or 'SSH privilege escalation' in InsightVM scans.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (Estimated due to root privilege escalation via SSH flaws)",
+        "category": "vulns"
+      },
+      {
+        "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
+        "tldr": "A critical vulnerability in the Microsoft Authenticator Android application allowed other Android apps, even those without elevated permissions, to steal work account authentication tokens. This flaw could enable unauthorized access to corporate resources.",
+        "action": "Ensure all Android users have updated their Microsoft Authenticator app to the latest available version. Implement multi-factor authentication (MFA) everywhere possible and monitor corporate account logs for unusual sign-in attempts or token usage on Android devices.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Microsoft Authenticator app on Android. Specific vulnerable version ranges are not detailed, but users should update to the latest available version immediately.",
+        "how_to_determine_impact": "Verify that all Android devices using Microsoft Authenticator for work accounts have the most current application version installed. Utilize Mobile Device Management (MDM) systems to audit app versions across managed devices.",
+        "tanium_query_hint": "Leverage Tanium's mobile device integration (if deployed) to query 'Get Installed Mobile Applications' and check the version of 'Microsoft Authenticator' on Android endpoints.",
+        "rapid7_query_hint": "Utilize MDM integrations in InsightVM/InsightIDR to query Android device application inventories. Search for 'Microsoft Authenticator' and filter by version to identify outdated installations.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.5 High (Estimated due to token theft leading to account compromise)",
         "category": "vulns"
       }
     ]
