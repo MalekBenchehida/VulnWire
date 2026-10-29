@@ -2,34 +2,42 @@
   "breaches": [
     {
       "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
-      "tldr": "Over 26,400 active cloud and AI service credentials have been discovered exposed in publicly accessible Gitee repositories. These credentials could allow unauthorized access to sensitive cloud infrastructure and AI systems, posing a significant security risk.",
-      "action": "Immediately identify and review all internally generated or managed cloud and AI service credentials for exposure in public code repositories like Gitee. Rotate any exposed credentials and implement automated secret scanning in CI/CD pipelines and codebases.",
+      "tldr": "Over 26,400 valid cloud and AI platform credentials have been discovered exposed in publicly accessible Gitee repositories. This significant leak poses a severe risk of unauthorized access to sensitive cloud and AI infrastructure, potentially leading to further data breaches or system compromise. Organizations must immediately scan public code repositories for their credentials.",
+      "action": "Audit Gitee for any internal credentials. Rotate all cloud and AI API keys/credentials discovered or suspected to be exposed. Implement automated credential scanning for public and private repositories.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Sony ISP subsidiary data breach exposes 2.5 million customer records",
-      "tldr": "Sony Network Communications, an ISP subsidiary, has confirmed a data breach affecting approximately 2.5 million current and former customer records. The breach exposed personal information, which could lead to identity theft or targeted phishing attacks.",
-      "action": "Customers of Sony Network Communications should be advised to monitor their financial statements and credit reports for suspicious activity and be wary of phishing attempts. Affected organizations should review incident response plans and data handling procedures.",
+      "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
+      "tldr": "A fraudulent cryptocurrency trading application, \"Padre Terminal,\" was available on the Apple App Store and has been linked to the theft of approximately $23,000 from 27 Solana wallets. Users who downloaded and used this app unknowingly exposed their cryptocurrency assets to attackers, resulting in direct financial loss.",
+      "action": "Users who downloaded \"Padre Terminal\" or similar suspicious crypto apps should immediately transfer funds from affected wallets and revoke any permissions granted. Organizations should educate users on verifying legitimate apps and exercising caution with financial applications.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/",
       "source": "BleepingComputer"
     },
     {
       "title": "Over 41,000 DHS Employee Records Leaked Online",
-      "tldr": "More than 41,000 employee records belonging to the Department of Homeland Security (DHS) have been leaked online. This exposure of sensitive personnel data could make individuals vulnerable to social engineering, identity theft, and targeted attacks.",
-      "action": "DHS employees should be alerted to potential targeting and advised to enhance personal security measures. Organizations should conduct an immediate investigation into the source of the leak and review data access and storage policies for sensitive employee information.",
+      "tldr": "More than 41,000 employee records belonging to the Department of Homeland Security (DHS) have been leaked and made available online. This significant data exposure puts DHS personnel at risk of targeted phishing, social engineering, and identity theft, potentially compromising national security.",
+      "action": "DHS should initiate a full investigation into the source and scope of the leak. Affected employees should be notified, provided with credit monitoring, and advised on mitigating identity theft risks. All government agencies should review their data protection measures.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Hackers Steal 2.6 Million Records From Sony's Japanese ISP So-net",
+      "tldr": "Hackers have successfully stolen 2.6 million customer records from So-net, Sony's Internet Service Provider in Japan. This large-scale data theft likely includes personal identifiable information (PII) of customers, exposing them to significant risks such as identity theft and targeted cyberattacks.",
+      "action": "So-net must immediately notify all affected customers and provide credit monitoring and identity theft protection services. A comprehensive forensic investigation should be launched to determine the breach's root cause and implement enhanced security controls to prevent future incidents.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Police seize Virtualine bulletproof service tied to ransowmare, cybercrime",
-      "tldr": "U.S. law enforcement has successfully seized Virtualine, a bulletproof hosting service frequently advertised on cybercrime forums. This service was widely used to facilitate ransomware operations and other illegal cyber activities, providing a critical infrastructure for threat actors.",
-      "action": "Organizations should review their existing threat intelligence feeds to identify if Virtualine infrastructure was ever leveraged in attacks against their systems. Update blocklists with any newly available indicators of compromise related to this service shutdown.",
+      "tldr": "U.S. law enforcement has successfully seized the primary domain of Virtualine, a \"bulletproof\" hosting service widely advertised on cybercrime forums. Virtualine was known for facilitating illegal activities, including ransomware operations and other cybercriminal enterprises, by providing infrastructure resilient to takedowns.",
+      "action": "Organizations should review their threat intelligence feeds for indicators of compromise related to Virtualine and associated ransomware groups. Law enforcement's action disrupts critical infrastructure for cybercriminals, potentially reducing future ransomware attacks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/",
       "source": "BleepingComputer"
@@ -37,66 +45,66 @@
   ],
   "vulns": [
     {
-      "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
-      "tldr": "A critical TCP flaw with a CVSS score of 9.8 has been identified in the Linux Kernel, impacting major distributions such as Ubuntu and Red Hat. This vulnerability could allow remote attackers to cause denial-of-service or potentially execute arbitrary code.",
-      "action": "System administrators should immediately identify all Linux systems running affected kernel versions. Prioritize patching to the latest stable kernel release provided by the distribution vendor to mitigate the TCP vulnerability.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Linux Kernel (specific versions and distributions not specified, but impacts Ubuntu, Red Hat, and others). Update all Linux systems to their latest patched kernel versions.",
-      "how_to_determine_impact": "Check kernel version on all Linux hosts using 'uname -r' and cross-reference with vendor advisories (e.g., Ubuntu Security Notices, Red Hat Security Advisories) for affected ranges and patches.",
-      "tanium_query_hint": "Get Computer Name and Get OS Platform and Get Kernel Version from all machines",
-      "rapid7_query_hint": "Search for vulnerability ID related to Linux kernel TCP vulnerabilities; filter assets by OS containing 'Linux' and check for installed kernel versions.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
-      "tldr": "The APT group UAT-11473 is actively exploiting CVE-2026-20127, an authentication-bypass flaw in Cisco Catalyst SD-WAN Controllers. This exploitation allows them to deploy a custom malware framework named KeyDrift, indicating a sophisticated and targeted attack.",
-      "action": "Immediately apply security updates from Cisco for Catalyst SD-WAN Controllers to patch CVE-2026-20127. Implement network segmentation and monitor for indicators of compromise related to KeyDrift malware, particularly on SD-WAN infrastructure.",
+      "tldr": "An APT group, UAT-11473, is actively exploiting CVE-2026-20127, an authentication-bypass flaw in Cisco Catalyst SD-WAN Controllers. This zero-day vulnerability allows attackers to deploy a custom malware framework named KeyDrift, enabling persistent access and potentially further network compromise.",
+      "action": "Immediately apply available patches for Cisco Catalyst SD-WAN Controllers. Implement network segmentation and monitor for KeyDrift malware indicators of compromise. Review logs for unauthorized access attempts or suspicious activity on SD-WAN devices.",
       "cve_ids": [
         "CVE-2026-20127"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Catalyst SD-WAN Controllers vulnerable to CVE-2026-20127. Specific versions not detailed, refer to Cisco's official advisory.",
-      "how_to_determine_impact": "Check Cisco Catalyst SD-WAN Controller software versions against Cisco's security advisory for CVE-2026-20127. Monitor logs for unusual authentication attempts or activity associated with KeyDrift malware on SD-WAN devices.",
-      "tanium_query_hint": "Get Cisco SD-WAN Controller Version from all machines; Get Running Processes and Get Open Network Connections filtering for suspicious activity.",
-      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-20127' in InsightVM; check asset configurations for Cisco Catalyst SD-WAN Controllers and review authentication logs for suspicious access.",
+      "affected_versions": "Cisco Catalyst SD-WAN Controllers vulnerable to CVE-2026-20127 (specific versions need to be checked against Cisco advisories, assume all unpatched)",
+      "how_to_determine_impact": "Check Cisco Catalyst SD-WAN Controller software versions against Cisco's security advisory for CVE-2026-20127. Examine device logs for suspicious authentication bypass attempts or the presence of KeyDrift malware artifacts.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Cisco Catalyst SD-WAN Controller' contains 'vManage' or 'cEdge'. Query 'Get running processes' for KeyDrift related binaries/hashes.",
+      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-20127' in InsightVM. For InsightIDR, query logs for 'Cisco SD-WAN' and 'authentication bypass' or 'KeyDrift'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (inferred)"
-    },
-    {
-      "title": "CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks",
-      "tldr": "CISA has issued a warning regarding the active exploitation of the \"Fragnesia\" Linux kernel privilege escalation bug. This high-severity vulnerability is being chained with PHP2Shell flaws in attacks, allowing attackers to escalate privileges on compromised Linux systems.",
-      "action": "Federal agencies and all organizations should immediately patch Linux systems to address the Fragnesia kernel privilege escalation bug. Also, ensure PHP installations are secured and PHP2Shell vulnerabilities are remediated to prevent chaining attacks.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Linux kernel versions vulnerable to Fragnesia privilege escalation. Refer to CISA and vendor advisories for specific affected kernel ranges. Also, systems with PHP2Shell vulnerabilities.",
-      "how_to_determine_impact": "Check Linux kernel versions for known Fragnesia vulnerabilities and inspect PHP environments for PHP2Shell attack indicators. Look for unusual process activity or privilege escalation attempts in system logs.",
-      "tanium_query_hint": "Get Computer Name and Get OS Platform and Get Kernel Version from all machines; Get Running Processes and Get Loaded Modules filtering for known exploit artifacts or unusual processes.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to Fragnesia or Linux kernel privilege escalation; check asset configurations for PHP versions and known PHP2Shell vulnerabilities.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "High (inferred)"
+      "cvss_score": "Critical (estimated 9.8)"
     },
     {
       "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
-      "tldr": "Cisco has released security updates for a zero-day denial-of-service vulnerability in Adaptive Security Appliance (ASA) and Threat Defense (FTD) software. Attackers are actively exploiting this flaw to remotely crash vulnerable firewall devices, causing significant service disruption.",
-      "action": "Immediately apply the latest security updates released by Cisco for ASA and FTD software. Prioritize patching all internet-facing ASA and FTD SSL VPN devices to prevent denial-of-service attacks.",
+      "tldr": "Cisco has released security updates for a zero-day denial-of-service vulnerability affecting Adaptive Security Appliance (ASA) and Threat Defense (FTD) software. Attackers are actively exploiting this flaw to remotely crash vulnerable firewall devices, leading to service disruption.",
+      "action": "Immediately apply the latest security updates provided by Cisco for ASA and FTD software. Monitor firewall device health and logs for unexpected crashes or DoS attempts. Consider implementing temporary mitigations if patching is not immediate.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Cisco Adaptive Security Appliance (ASA) and Threat Defense (FTD) software vulnerable to the denial-of-service zero-day. Refer to Cisco's official security advisory for specific affected versions and patch information.",
-      "how_to_determine_impact": "Check software versions of all Cisco ASA and FTD devices. Look for unscheduled reloads or unusual behavior indicative of a denial-of-service condition. Review system logs for crash reports.",
-      "tanium_query_hint": "Get Cisco ASA/FTD Version from all machines; Get Device Uptime and Get Event Log[Name=System][Message=*crash*] filtering for relevant device types.",
-      "rapid7_query_hint": "Search for vulnerability ID related to Cisco ASA/FTD zero-day DoS. Filter assets by product 'Cisco ASA' or 'Cisco FTD' and check installed software versions against advisory.",
+      "affected_versions": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) software running on affected firewall devices (specific versions need to be checked against Cisco advisories, assume all unpatched).",
+      "how_to_determine_impact": "Check Cisco ASA and FTD software versions against Cisco's latest security advisories. Monitor device logs for unexplained reloads, crashes, or high resource utilization indicative of a denial-of-service attack.",
+      "tanium_query_hint": "Get installed versions of 'Cisco Adaptive Security Appliance' or 'Cisco Firepower Threat Defense'. Review logs for process crashes or reloads.",
+      "rapid7_query_hint": "Search InsightVM for vulnerabilities affecting Cisco ASA/FTD (check latest advisories for specific vulnerability ID). Monitor InsightIDR for DoS-related events or unexpected device reboots.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (inferred)"
+      "cvss_score": "Critical (estimated 9.0+ based on DoS zero-day exploitation of critical network infrastructure)"
+    },
+    {
+      "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
+      "tldr": "A critical TCP flaw in the Linux Kernel, assigned a CVSS score of 9.8, impacts major distributions including Ubuntu and Red Hat. This vulnerability could allow remote attackers to cause denial-of-service or potentially execute arbitrary code, threatening the stability and security of affected systems.",
+      "action": "Immediately update all Linux kernel installations, especially those running Ubuntu, Red Hat, and other affected distributions, to the patched versions. Prioritize internet-facing and critical servers.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Linux Kernel versions (specific range needs to be checked against vendor advisories for Ubuntu, Red Hat, and other distributions).",
+      "how_to_determine_impact": "Check the running kernel version on all Linux systems using 'uname -r'. Compare the output against advisories from your specific distribution vendor (e.g., Ubuntu Security Notices, Red Hat Product Security).",
+      "tanium_query_hint": "Get Kernel Version from all Linux machines. Filter for known vulnerable versions based on vendor advisories.",
+      "rapid7_query_hint": "Search InsightVM for 'Linux kernel TCP' vulnerabilities. Use the 'Software Name' filter for 'Linux Kernel' and 'Version' to identify affected assets. For InsightAgent, query 'System Information.Kernel Version'.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.8 Critical (as reported in title)"
+    },
+    {
+      "title": "CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks",
+      "tldr": "CISA has issued a warning regarding \"Fragnesia,\" a high-severity Linux kernel privilege escalation bug actively being chained with PHP2Shell flaws in attacks. This allows attackers to gain elevated privileges on compromised Linux systems, posing a severe risk of full system takeover.",
+      "action": "Federal agencies and all organizations running Linux systems must immediately apply patches to address the Fragnesia Linux kernel privilege escalation vulnerability and the PHP2Shell flaws. Hunt for indicators of compromise related to PHP2Shell and Fragnesia.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Linux Kernel (specific versions vulnerable to Fragnesia privilege escalation flaw need to be identified from CISA and vendor advisories).",
+      "how_to_determine_impact": "Check Linux kernel versions using 'uname -r' and consult CISA advisories or distribution-specific security updates for 'Fragnesia' or related privilege escalation vulnerabilities. Investigate logs for PHP2Shell activity.",
+      "tanium_query_hint": "Get Kernel Version from all Linux machines. Query 'Get Installed Packages' for PHP2Shell installations or related files. Look for suspicious process activity related to privilege escalation.",
+      "rapid7_query_hint": "Search InsightVM for 'Linux kernel privilege escalation' or terms related to 'Fragnesia' (if a CVE is published). For InsightIDR, look for suspicious PHP process executions or unauthorized privilege escalations.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "High (estimated 8.x, as CISA warns of high-severity privilege escalation)"
     }
   ],
   "insurance": [],
@@ -26230,6 +26238,24 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Critical (inferred)",
         "category": "vulns"
+      },
+      {
+        "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
+        "tldr": "A fraudulent cryptocurrency trading application, \"Padre Terminal,\" was available on the Apple App Store and has been linked to the theft of approximately $23,000 from 27 Solana wallets. Users who downloaded and used this app unknowingly exposed their cryptocurrency assets to attackers, resulting in direct financial loss.",
+        "action": "Users who downloaded \"Padre Terminal\" or similar suspicious crypto apps should immediately transfer funds from affected wallets and revoke any permissions granted. Organizations should educate users on verifying legitimate apps and exercising caution with financial applications.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers Steal 2.6 Million Records From Sony's Japanese ISP So-net",
+        "tldr": "Hackers have successfully stolen 2.6 million customer records from So-net, Sony's Internet Service Provider in Japan. This large-scale data theft likely includes personal identifiable information (PII) of customers, exposing them to significant risks such as identity theft and targeted cyberattacks.",
+        "action": "So-net must immediately notify all affected customers and provide credit monitoring and identity theft protection services. A comprehensive forensic investigation should be launched to determine the breach's root cause and implement enhanced security controls to prevent future incidents.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
+        "source": "SecurityWeek",
+        "category": "breaches"
       }
     ]
   }
