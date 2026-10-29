@@ -1,103 +1,112 @@
 {
   "breaches": [
     {
-      "title": "Sony ISP subsidiary data breach exposes 2.5 million customer records",
-      "tldr": "Sony Network Communications confirmed a data breach compromising approximately 2.5 million records. These records contained personal information of current and former customers of their ISP subsidiary.",
-      "action": "Organizations should review vendor agreements and third-party data handling practices, ensuring robust security controls to prevent similar data exfiltration incidents. Monitor for potential identity theft or credential stuffing attacks leveraging this leaked data.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network",
-      "tldr": "A PHP2Shell attack successfully compromised 25 servers, leading to a breach of a U.S. government-affiliated network. The attack leveraged PHP flaws, likely gaining root access to critical infrastructure.",
-      "action": "Immediately identify and patch all internet-facing systems running PHP, especially web management interfaces of network devices like firewalls and VPNs, against PHP2Shell vulnerabilities. Implement strong access controls and monitor for unauthorized root access or unusual activity on PHP-enabled servers.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
       "source": "The Hacker News"
+    },
+    {
+      "title": "Sony ISP subsidiary data breach exposes 2.5 million customer records",
+      "tldr": "Sony Network Communications has confirmed a data breach that compromised approximately 2.5 million records containing current and former customers' personal information. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+      "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
-      "title": "Police seize Virtualine bulletproof service tied to ransowmare, cybercrime",
-      "tldr": "U.S. law enforcement has seized the primary domain of Virtualine, a bulletproof hosting service. This service was widely advertised on cybercrime forums and used to facilitate ransomware and other illegal activities, disrupting attacker infrastructure.",
-      "action": "Stay informed about law enforcement actions against cybercrime infrastructure. Review logs for any past or present connections to known bulletproof hosting services like Virtualine which could indicate compromised systems.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Nefilim and Hive ransomware affiliate gets 70 months in prison",
-      "tldr": "A Ukrainian national was sentenced to 70 months in prison for their involvement as an affiliate in Nefilim and Hive ransomware operations. The individual participated in attacks targeting hospitals, government entities, and high-revenue businesses globally between 2018 and 2021.",
-      "action": "Reinforce defenses against known ransomware tactics, techniques, and procedures (TTPs) associated with Nefilim and Hive ransomware groups. Ensure robust backup and recovery strategies are in place, alongside strong endpoint detection and response capabilities.",
+      "tldr": "A Ukrainian national was sentenced to 70 months in prison for his role in ransomware attacks targeting hospitals, government entities, and high-revenue businesses worldwide between 2018 and 2021. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/nefilim-and-hive-ransomware-affiliate-gets-70-months-in-prison/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Ukrainian Hive and Nefilim Ransomware Affiliate Gets 70 Months in US Prison",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/ukrainian-hive-and-nefilim-ransomware-affiliate-gets-70-months-in-us-prison/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
-      "title": "CISA warns of hackers now exploiting critical Node2Shell flaw",
-      "tldr": "CISA has confirmed active exploitation of a critical Brotli vulnerability, referred to as Node2Shell, Broccoli2Shell, and HTTP2Shell. Honeypots are also logging attack attempts, indicating widespread scanning and exploitation.",
-      "action": "Immediately identify and patch all systems using vulnerable Brotli versions, especially if exposed to the internet. Monitor network traffic for exploitation attempts related to Node2Shell.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "All systems using unpatched Brotli implementations, potentially impacting web servers and network devices. (Specific version range not provided, assume recent unpatched versions)",
-      "how_to_determine_impact": "Identify systems running Brotli compression library. Check software inventory for Brotli versions. Review server logs for suspicious requests or error patterns indicative of exploitation attempts. Consult vendor advisories for specific product impacts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Brotli' and 'Get Running Processes with CommandLine contains brotli'",
-      "rapid7_query_hint": "Search for vulnerability 'Node2Shell' or 'Brotli' in InsightVM. Use InsightAgent queries to check installed software versions on endpoints: 'queryInstalledSoftware(name=~\"brotli\")'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate due to active exploitation and criticality, awaiting official CVE)"
-    },
-    {
-      "title": "Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch",
-      "tldr": "Hackers are actively targeting a critical Remote Code Execution (RCE) vulnerability in Oracle E-Business Suite (EBS) shortly after a security patch was released. Internet scanning for unpatched systems has begun.",
-      "action": "Immediately apply the latest security patches for Oracle E-Business Suite. Monitor Oracle EBS installations for any signs of compromise or suspicious activity, especially if patches could not be applied promptly.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific versions of Oracle E-Business Suite (EBS) affected by the recently patched RCE flaw. Consult Oracle's latest Critical Patch Update (CPU) advisory for exact versions.",
-      "how_to_determine_impact": "Verify installed Oracle EBS versions against the latest Oracle Critical Patch Update advisory. Check patch levels. Inspect logs for errors, unusual process execution, or unauthorized access attempts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Oracle E-Business Suite' and check for specific patch presence using 'Get Registry Value Data[HKEY_LOCAL_MACHINE\\SOFTWARE\\Oracle\\...]' or relevant file versions.",
-      "rapid7_query_hint": "Search InsightVM for vulnerabilities related to 'Oracle E-Business Suite RCE' or specific Oracle CVEs from the latest CPU. Use InsightAgent to check patch status or file versions on Oracle EBS servers.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimate due to active targeting and RCE, awaiting official CVE)"
-    },
-    {
       "title": "Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns",
-      "tldr": "Chinese state-sponsored hacking group Volt Typhoon has been employing a sophisticated 'Silent Train' framework to conduct covert zero-day exploitation campaigns. This framework leverages rotating chains of compromised devices to obscure their activity.",
-      "action": "Enhance network monitoring for indicators of compromise (IoCs) associated with Volt Typhoon and 'Silent Train' framework. Prioritize patching of internet-facing systems and conduct regular threat hunting for unusual network connections or persistence mechanisms indicative of zero-day exploitation.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific software/hardware vulnerabilities exploited as zero-days are not publicly disclosed. Implies general internet-facing systems are at risk.",
-      "how_to_determine_impact": "Threat hunt for Volt Typhoon TTPs. Look for unusual network traffic patterns, unauthorized access attempts, or new persistence mechanisms on critical infrastructure. Review endpoint logs for signs of compromise where zero-days might have been used.",
-      "tanium_query_hint": "Get all network connections with Destination Name contains 'known C2 IoCs for Volt Typhoon'. Check 'Get Running Processes' for suspicious processes or 'Get File Hash' for malicious binaries.",
-      "rapid7_query_hint": "Utilize InsightIDR for threat hunting, searching for TTPs related to Volt Typhoon. Deploy network sensors for anomalous traffic detection. Check for unusual remote access or privilege escalation attempts.",
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical (Estimate for zero-day exploitation by state-sponsored actor, as actual CVEs are unknown)"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass",
-      "tldr": "Adobe has released patches for 8 critical vulnerabilities in Adobe Campaign Classic. These flaws could allow for arbitrary code execution and security bypass, posing a significant risk to affected deployments.",
-      "action": "Immediately apply all available security updates and patches for Adobe Campaign Classic. Verify patch installation and monitor deployments for any signs of exploitation prior to patching.",
+      "title": "Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html",
+      "source_url": "https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Specific versions of Adobe Campaign Classic, as detailed in Adobe's security bulletin for these 8 critical flaws. Users should consult the official Adobe advisory.",
-      "how_to_determine_impact": "Check installed versions of Adobe Campaign Classic against Adobe's official security advisory to identify vulnerable deployments. Confirm successful patch application.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Adobe Campaign Classic' and check 'Get File Version' for core application files mentioned in Adobe's advisory.",
-      "rapid7_query_hint": "Search InsightVM for 'Adobe Campaign Classic' vulnerabilities or specific CVEs once released by Adobe. Use InsightAgent queries to verify installed versions and patch status.",
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical (Estimate based on 'critical flaws' allowing 'code execution', awaiting official CVEs)"
+      "cvss_score": "7.8 High"
+    },
+    {
+      "title": "Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -26032,6 +26041,108 @@
         "rapid7_query_hint": "Search InsightVM for 'Adobe Campaign Classic' vulnerabilities or specific CVEs once released by Adobe. Use InsightAgent queries to verify installed versions and patch status.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.8 Critical (Estimate based on 'critical flaws' allowing 'code execution', awaiting official CVEs)",
+        "category": "vulns"
+      }
+    ],
+    "2026-10-29": [
+      {
+        "title": "PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Sony ISP subsidiary data breach exposes 2.5 million customer records",
+        "tldr": "Sony Network Communications has confirmed a data breach that compromised approximately 2.5 million records containing current and former customers' personal information. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/sony-isp-subsidiary-data-breach-exposes-25-million-customer-records/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Nefilim and Hive ransomware affiliate gets 70 months in prison",
+        "tldr": "A Ukrainian national was sentenced to 70 months in prison for his role in ransomware attacks targeting hospitals, government entities, and high-revenue businesses worldwide between 2018 and 2021. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/nefilim-and-hive-ransomware-affiliate-gets-70-months-in-prison/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Ukrainian Hive and Nefilim Ransomware Affiliate Gets 70 Months in US Prison",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/ukrainian-hive-and-nefilim-ransomware-affiliate-gets-70-months-in-us-prison/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
