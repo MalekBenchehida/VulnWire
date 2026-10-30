@@ -2,98 +2,98 @@
   "breaches": [
     {
       "title": "Binance Suffers Security Breach Affecting $6.3 Billion in Assets, Nearly $3 Billion Frozen",
-      "tldr": "Binance, a leading cryptocurrency exchange, experienced a massive security breach resulting in the theft of $6.3 billion in assets, with roughly $3 billion subsequently frozen. The breach was linked to a compromised DevOps engineer's laptop, highlighting internal system and supply chain risks. The incident is being investigated for potential ties to North Korea's TraderTraitor group.",
-      "action": "Users of Binance should enable all available multi-factor authentication (MFA), review account activity for suspicious transactions, and consider moving assets to offline storage. Organizations should enhance endpoint security for all privileged users, especially DevOps personnel, with strong EDR, strict access controls, and regular security awareness training. Implement advanced threat detection to identify TTPs associated with nation-state actors.",
+      "tldr": "Cryptocurrency exchange Binance has experienced a massive security breach, resulting in the compromise of $6.3 billion in assets, with approximately $3 billion subsequently frozen. This represents a significant financial loss for the exchange.",
+      "action": "While Binance works on remediation, users should monitor their accounts for suspicious activity. Binance customers should consider enabling all available security features (e.g., 2FA, whitelisting), but immediate action for this specific breach rests with Binance.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/binance-suffers-security-breach.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Trezor Warns of Suspected Hardware Implant in One of Its Wallets Sold by CryptoBilis",
-      "tldr": "Trezor has issued a warning regarding a suspected hardware implant found in a Trezor Safe 5 wallet sold by its reseller CryptoBilis in Southeast Asia. This implant is designed to facilitate cryptocurrency theft through a supply chain compromise, directly jeopardizing the security of assets stored on the device.",
-      "action": "Users who purchased Trezor Safe 5 wallets from CryptoBilis should immediately transfer all assets to a new, trusted wallet and contact Trezor support. Physically inspect the device for any signs of tampering or unauthorized modifications. Avoid purchasing hardware wallets from unverified third-party resellers.",
+      "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
+      "tldr": "Binance, the world's largest crypto exchange, has linked the massive $6.3 billion cryptocurrency theft to a compromised DevOps engineer's laptop. This points to an internal system compromise as the initial vector of the breach.",
+      "action": "Organizations should enforce strict endpoint security on all employee devices, especially for highly privileged users like DevOps engineers. Implement strong access controls, network segmentation, and regular security audits to mitigate insider threats and supply chain risks.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+      "source": "BleepingComputer"
     },
     {
-      "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
-      "tldr": "Over $2 million has been stolen from Polymarket traders as a result of a new supply chain attack. This incident underscores the significant risks posed by third-party software or service integrations within financial platforms, where a compromise in one component can lead to widespread asset theft.",
-      "action": "Users of Polymarket should review their recent transaction history for any unauthorized activity and ensure all security measures, such as strong unique passwords and MFA, are enabled. Polymarket should conduct an in-depth forensic investigation into the supply chain compromise to identify the root cause, revoke any compromised credentials, and secure its platform's integrations.",
+      "title": "$6 Billion Binance Hack Bears Hallmarks of North Korea's TraderTraitor",
+      "tldr": "The $6 billion Binance hack, which originated from a compromised DevOps engineer's laptop, is suspected to bear hallmarks of North Korea's TraderTraitor (aka Lazarus Group) operations. This suggests nation-state involvement in the high-value cryptocurrency theft.",
+      "action": "Organizations should enforce strict endpoint security on all employee devices, especially for highly privileged users. Implement strong access controls, network segmentation, and leverage threat intelligence feeds to identify TTPs of known APTs like TraderTraitor. Enhance employee security awareness.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
+      "source_url": "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/",
       "source": "SecurityWeek"
     },
     {
-      "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
-      "tldr": "A crypto-mining malware campaign that abuses Hugging Face models has resurfaced, actively hijacking GPU servers for unauthorized crypto mining and planting backdoors. One malicious model alone was downloaded over 28,000 times, indicating a broad supply chain compromise impacting AI/ML development environments.",
-      "action": "Organizations utilizing Hugging Face models or similar AI/ML platforms must audit all deployed models for integrity and authenticity. Scan GPU servers for unauthorized processes, unusual network connections, or evidence of backdoors. Implement strict access controls for model deployment pipelines and enforce rigorous security hygiene for development environments.",
+      "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
+      "tldr": "Over $2 million has been stolen from Polymarket traders due to a new supply chain attack. This incident highlights the significant risks associated with third-party software and dependencies in cryptocurrency trading platforms.",
+      "action": "Users of Polymarket should review their account activity and consider rotating credentials. Organizations should audit their supply chain dependencies and implement rigorous security checks for all third-party integrations to prevent similar attacks.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
-      "tldr": "CISA has listed actively exploited Remote Code Execution (RCE) flaws in GitLab and Denial-of-Service (DoS) flaws in Cisco Firewalls in its Known Exploited Vulnerabilities (KEV) catalog. The GitLab RCE vulnerability has specifically been observed exploited against instances running on Alpine Linux, posing an immediate and critical risk.",
-      "action": "Organizations using affected GitLab and Cisco Firewall products must immediately apply all available security patches. Prioritize patching these systems due to CISA's KEV listing and active exploitation. Implement robust monitoring for signs of compromise and unusual activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific GitLab versions vulnerable to RCE and Cisco Firewall versions vulnerable to DoS. Refer to CISA KEV (e.g., cisa.gov/known-exploited-vulnerabilities) and vendor advisories for precise CVEs, affected products, and version ranges, especially for GitLab instances on Alpine Linux.",
-      "how_to_determine_impact": "Check GitLab and Cisco Firewall product versions against vendor security advisories and the CISA KEV list. Review system logs, application logs, and network traffic for any indicators of compromise (IOCs) such as unexpected processes, unauthorized access attempts, or unusual outbound connections. Verify configurations for any unauthorized changes.",
-      "tanium_query_hint": "To identify GitLab versions: 'Get Installed Applications from all machines with Computer Name matches 'GitLab''. For Cisco Firewalls: 'Get Firmware Version' or 'Get CLI Output[show version]' (if Tanium has network device capabilities). For Alpine Linux: 'Get Operating System' to identify affected hosts. Monitor for unusual process execution or network connections from affected systems.",
-      "rapid7_query_hint": "In InsightVM, perform a Vulnerability ID search for relevant GitLab and Cisco CVEs (e.g., 'CVE-XXXX-YYYY'). Utilize asset search filtered by software 'GitLab' or 'Cisco ASA/Firewall' and check associated versions. Leverage InsightAgent queries to check configuration files, running processes, or specific file versions for exploitation indicators. Prioritize remediation based on KEV data within InsightVM.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours",
-      "tldr": "A critical Remote Code Execution (RCE) vulnerability in WordPress is being heavily targeted by attackers, with approximately 63,000 attack attempts observed within a single 24-hour period. This flaw allows unauthenticated attackers to execute arbitrary code on vulnerable WordPress sites, posing a severe risk to web infrastructure.",
-      "action": "Immediately update all WordPress installations, including core, plugins, and themes, to their latest patched versions. Implement a Web Application Firewall (WAF) to detect and block known exploit attempts. Conduct a thorough audit of WordPress files and databases for any signs of compromise.",
+      "tldr": "A critical Remote Code Execution (RCE) vulnerability in WordPress is being actively exploited, with nearly 63,000 attack attempts observed within a single day. This indicates widespread scanning and exploitation efforts against unpatched WordPress sites.",
+      "action": "Immediately update all WordPress installations to the latest patched version. Review web server logs for signs of compromise, especially targeting common WordPress file paths or parameters indicative of RCE attempts. Implement a Web Application Firewall (WAF).",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific WordPress core versions or popular plugins/themes. Refer to official WordPress security advisories and releases (e.g., wordpress.org/news/category/security) for exact vulnerable version ranges and patches.",
-      "how_to_determine_impact": "Check the installed versions of WordPress core, plugins, and themes. Inspect web server access logs (Apache, Nginx) for suspicious requests targeting WordPress endpoints or unusual POST data. Look for unexpected file modifications or new files in WordPress directories (e.g., wp-content, wp-includes) that could indicate compromise.",
-      "tanium_query_hint": "To identify WordPress installations: 'Get Installed Applications from all machines with Computer Name matches 'WordPress'' (if hosted locally) or 'Get File Version' for WordPress core files (e.g., wp-includes/version.php). Use 'Get Process List' to look for suspicious processes executed by the web server user. Analyze web server logs for attack signatures.",
-      "rapid7_query_hint": "In InsightVM, perform a Vulnerability ID search for 'WordPress RCE' or related CVEs. Asset search for web servers hosting WordPress and filter by installed software versions. Utilize web application scanning features to actively detect the vulnerability. In InsightIDR, monitor web server logs for specific exploit patterns or unusual file system activity within WordPress installations.",
+      "affected_versions": "WordPress core or a commonly used plugin/theme (specific versions not identified in the headline, requiring urgent vendor advisory review).",
+      "how_to_determine_impact": "Identify all WordPress installations. Check WordPress core version and installed plugins/themes against vendor advisories. Review web server access and error logs for suspicious requests (e.g., POST requests to unexpected PHP files, unusual user-agent strings, or large payloads indicative of RCE attempts).",
+      "tanium_query_hint": "Get Installed Applications with Name like 'WordPress' or 'Get File Version['%wwwroot%\\wp-includes\\version.php']' to check WordPress core version. Additionally, look for suspicious files in web directories using 'Get Files by Path' and 'Get File Content'.",
+      "rapid7_query_hint": "Perform a credentialed vulnerability scan targeting WordPress installations via InsightVM. Search for relevant vulnerability IDs (e.g., 'WordPress RCE') in InsightVM or InsightIDR. Review web server logs for RCE exploitation indicators using custom log parsers if needed.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimate for RCE with active exploitation)"
     },
     {
-      "title": "Hackers Actively Exploit Highly Critical Drupal Commerce Core Authorization Bypass Flaw",
-      "tldr": "A highly critical authorization bypass vulnerability in the Drupal Commerce Core module is being actively exploited by attackers. This flaw allows unauthorized access to sensitive functionalities within e-commerce sites, enabling attackers to potentially manipulate orders, access customer data, or gain administrative privileges.",
-      "action": "Immediately update all Drupal installations utilizing the Commerce Core module to the latest patched version. Conduct a thorough review of e-commerce transaction logs, customer accounts, and administrator logs for any signs of unauthorized activity, fraudulent orders, or account manipulation. Implement robust access controls and monitoring.",
+      "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
+      "tldr": "CISA has added an actively exploited, maximum-severity Remote Code Execution (RCE) vulnerability in GitLab to its Known Exploited Vulnerabilities (KEV) catalog. Exploitation has been observed against GitLab instances, including those running on Alpine Linux.",
+      "action": "Organizations using GitLab must immediately identify and patch this vulnerability. Prioritize internet-facing GitLab instances. Review GitLab application logs and system logs for signs of compromise, such as unauthorized process execution.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html",
+      "source_url": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific vulnerable versions of the Drupal Commerce Core module. Consult Drupal's official security advisories (e.g., drupal.org/security) for precise version ranges and available patches. All versions prior to the latest security fix should be considered vulnerable.",
-      "how_to_determine_impact": "Check the installed version of the Drupal Commerce Core module. Audit web server and Drupal application logs for suspicious access patterns, unauthorized requests to administrative or e-commerce endpoints, or attempts to bypass authentication/authorization. Verify the integrity of user roles, permissions, and e-commerce data for any unauthorized changes.",
-      "tanium_query_hint": "To identify Drupal installations: 'Get Installed Applications from all machines with Computer Name matches 'Drupal'' (if hosted locally). To identify module versions: 'Get File Content' of module-specific files (e.g., .info.yml files for module versions). Monitor web server processes for unusual execution and network connections. Look for unauthorized changes to Drupal configuration files or database entries.",
-      "rapid7_query_hint": "In InsightVM, perform a Vulnerability ID search for 'Drupal Commerce Core' related CVEs. Asset search for web servers running Drupal with the Commerce Core module and filter by version. Utilize web application scanning to confirm the presence of the vulnerability and verify patch application. In InsightIDR, monitor for suspicious Drupal login attempts, privilege escalations, or data modifications.",
+      "affected_versions": "GitLab (specific max-severity RCE vulnerability, requiring immediate review of GitLab's official security advisories for vulnerable versions. Observed against Alpine Linux instances).",
+      "how_to_determine_impact": "Identify all GitLab instances. Check their versions against CISA KEV and vendor advisories for the maximum-severity vulnerability. For GitLab, inspect application logs for RCE indicators (e.g., unusual commands, user activity, or process spawning).",
+      "tanium_query_hint": "Get Installed Applications with Name like 'GitLab' on all endpoints. For Linux systems, query 'Get OS Type' to identify Alpine Linux. Use 'Get File Version' for relevant GitLab binaries or 'Get Running Processes' for indicators of compromise (e.g., unexpected processes running under GitLab user).",
+      "rapid7_query_hint": "Search for CVEs associated with the recent max-severity GitLab RCE vulnerability in InsightVM/InsightIDR. Perform credentialed scans on identified GitLab assets. Configure InsightIDR to alert on suspicious GitLab user activity or process creation.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimate based on max severity RCE and CISA KEV listing)"
     },
     {
       "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
-      "tldr": "A malicious version of the 'Claude Code' VS Code extension, intended for Anthropic's AI, was distributed through Cursor's extension marketplace for approximately 11 hours on October 29th. This trojanized extension installed persistent SSH backdoors on affected developer systems, potentially compromising up to 5,000 developers.",
-      "action": "Developers who installed the 'Claude Code' extension from the Cursor marketplace (especially on Oct 29th) must immediately remove the extension. Perform a comprehensive system scan for malware, specifically targeting SSH backdoors. Rotate all SSH keys, API keys, and credentials, and review all source code repositories for unauthorized commits or access.",
+      "tldr": "A malicious version of the \"Claude Code\" VS Code extension was distributed via the Cursor marketplace, containing a persistent SSH backdoor. This supply chain attack exposed up to 5,000 developers to potential remote access.",
+      "action": "Developers who installed the \"Claude Code\" extension from the Cursor marketplace should immediately remove it, conduct a thorough malware scan, rotate all SSH keys, and change any potentially compromised credentials. Review network traffic for suspicious SSH connections.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Users who installed the 'Claude Code' VS Code extension from Cursor's extension marketplace for approximately 11 hours on October 29, 2026. Specific OS versions are not limited as it affects VS Code extensions.",
-      "how_to_determine_impact": "Check the list of installed VS Code extensions for 'Claude Code'. Inspect the `~/.ssh/authorized_keys` file (for Linux/macOS) or `C:\\Users\\<user>\\.ssh\\authorized_keys` (for Windows) for any unknown or suspicious public keys. Look for unexpected outgoing SSH connections from developer workstations or unusual processes running as the user.",
-      "tanium_query_hint": "To identify the extension: 'Get Installed Applications from all machines with Computer Name matches 'Visual Studio Code'' and investigate extensions. To check for backdoors: 'Get File Content[~/.ssh/authorized_keys]' (for Unix-like) or similar for Windows paths to find unauthorized SSH keys. 'Get Running Processes with Name matches 'ssh'' for suspicious SSH sessions.",
-      "rapid7_query_hint": "In InsightVM/InsightIDR, utilize InsightAgent queries to list installed VS Code extensions or to find specific files indicative of the backdoor (e.g., unexpected entries in `authorized_keys` or newly created executables). Monitor for unusual outbound SSH connections from developer workstations to detect active backdoor usage. Create custom alerts for modifications to SSH configuration files.",
+      "affected_versions": "Malicious 'Claude Code' VS Code extension distributed on Cursor's marketplace for approximately 11 hours on October 29, 2026.",
+      "how_to_determine_impact": "Identify developer workstations. Check for the presence of the 'Claude Code' extension from the Cursor marketplace. Inspect SSH configurations (e.g., `authorized_keys`, `sshd_config`) and system logs for unauthorized key additions or suspicious connections. Look for unexpected processes or files in user directories.",
+      "tanium_query_hint": "Get Installed Applications with Name like 'Claude Code' (check VS Code extension directories like `~/.vscode/extensions`). Use 'Get File Content' on SSH configuration files or 'Get Running Processes' for suspicious executables.",
+      "rapid7_query_hint": "Scan developer workstations for known indicators of compromise (IOCs) related to this specific malicious extension. Examine endpoint logs via InsightIDR for suspicious SSH activity, unauthorized file modifications (especially in `~/.ssh/`), or unusual process creation on developer machines.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.1 Critical"
+      "cvss_score": "9.8 Critical (Estimate based on persistent remote access via backdoor)"
+    },
+    {
+      "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+      "tldr": "A critical vulnerability in the Linux kernel's Multipath TCP (MPTCP) implementation allows unauthenticated remote attackers to achieve root access and execute commands on affected servers. An exploit for this flaw has been developed by security researchers.",
+      "action": "Immediately identify all Linux servers running MPTCP listeners. Apply the latest kernel updates provided by your distribution vendor that specifically address this vulnerability. Monitor affected systems for signs of compromise and unauthorized root activity.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Linux kernel versions with MPTCP listeners enabled (specific affected kernel ranges will be detailed in distribution security advisories).",
+      "how_to_determine_impact": "Identify all Linux servers. Check if MPTCP is enabled (`sysctl net.mptcp.enabled` should return `1`). Determine the kernel version (`uname -r`) and compare against official distribution security advisories for relevant patches. Inspect system logs for kernel errors or unusual root process activity.",
+      "tanium_query_hint": "Get Computer Name and Kernel Version from all Linux endpoints. Query 'Get Process List' for suspicious activity. Use 'Run Command' to check `sysctl net.mptcp.enabled`. Use 'Get Linux Packages' to check for kernel package updates.",
+      "rapid7_query_hint": "Scan Linux assets for relevant kernel vulnerabilities using InsightVM. Utilize InsightAgent to gather kernel versions (`uname -r`) and MPTCP configuration. Monitor Linux endpoint logs via InsightIDR for suspicious root processes or network connections.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimate based on unauthenticated remote root exploit)"
     }
   ],
   "insurance": [],
@@ -26466,6 +26466,40 @@
         "rapid7_query_hint": "In InsightVM/InsightIDR, utilize InsightAgent queries to list installed VS Code extensions or to find specific files indicative of the backdoor (e.g., unexpected entries in `authorized_keys` or newly created executables). Monitor for unusual outbound SSH connections from developer workstations to detect active backdoor usage. Create custom alerts for modifications to SSH configuration files.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.1 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
+        "tldr": "Binance, the world's largest crypto exchange, has linked the massive $6.3 billion cryptocurrency theft to a compromised DevOps engineer's laptop. This points to an internal system compromise as the initial vector of the breach.",
+        "action": "Organizations should enforce strict endpoint security on all employee devices, especially for highly privileged users like DevOps engineers. Implement strong access controls, network segmentation, and regular security audits to mitigate insider threats and supply chain risks.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "$6 Billion Binance Hack Bears Hallmarks of North Korea's TraderTraitor",
+        "tldr": "The $6 billion Binance hack, which originated from a compromised DevOps engineer's laptop, is suspected to bear hallmarks of North Korea's TraderTraitor (aka Lazarus Group) operations. This suggests nation-state involvement in the high-value cryptocurrency theft.",
+        "action": "Organizations should enforce strict endpoint security on all employee devices, especially for highly privileged users. Implement strong access controls, network segmentation, and leverage threat intelligence feeds to identify TTPs of known APTs like TraderTraitor. Enhance employee security awareness.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/6-billion-binance-hack-bears-hallmarks-of-north-koreas-tradertraitor/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+        "tldr": "A critical vulnerability in the Linux kernel's Multipath TCP (MPTCP) implementation allows unauthenticated remote attackers to achieve root access and execute commands on affected servers. An exploit for this flaw has been developed by security researchers.",
+        "action": "Immediately identify all Linux servers running MPTCP listeners. Apply the latest kernel updates provided by your distribution vendor that specifically address this vulnerability. Monitor affected systems for signs of compromise and unauthorized root activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Linux kernel versions with MPTCP listeners enabled (specific affected kernel ranges will be detailed in distribution security advisories).",
+        "how_to_determine_impact": "Identify all Linux servers. Check if MPTCP is enabled (`sysctl net.mptcp.enabled` should return `1`). Determine the kernel version (`uname -r`) and compare against official distribution security advisories for relevant patches. Inspect system logs for kernel errors or unusual root process activity.",
+        "tanium_query_hint": "Get Computer Name and Kernel Version from all Linux endpoints. Query 'Get Process List' for suspicious activity. Use 'Run Command' to check `sysctl net.mptcp.enabled`. Use 'Get Linux Packages' to check for kernel package updates.",
+        "rapid7_query_hint": "Scan Linux assets for relevant kernel vulnerabilities using InsightVM. Utilize InsightAgent to gather kernel versions (`uname -r`) and MPTCP configuration. Monitor Linux endpoint logs via InsightIDR for suspicious root processes or network connections.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimate based on unauthenticated remote root exploit)",
         "category": "vulns"
       }
     ]
