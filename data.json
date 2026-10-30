@@ -1,110 +1,126 @@
 {
   "breaches": [
     {
-      "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
-      "tldr": "Over 26,400 valid cloud and AI platform credentials have been discovered exposed in publicly accessible Gitee repositories. This significant leak poses a severe risk of unauthorized access to sensitive cloud and AI infrastructure, potentially leading to further data breaches or system compromise. Organizations must immediately scan public code repositories for their credentials.",
-      "action": "Audit Gitee for any internal credentials. Rotate all cloud and AI API keys/credentials discovered or suspected to be exposed. Implement automated credential scanning for public and private repositories.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Fake crypto app on Apple App Store linked to $23K wallet theft",
-      "tldr": "A fraudulent cryptocurrency trading application, \"Padre Terminal,\" was available on the Apple App Store and has been linked to the theft of approximately $23,000 from 27 Solana wallets. Users who downloaded and used this app unknowingly exposed their cryptocurrency assets to attackers, resulting in direct financial loss.",
-      "action": "Users who downloaded \"Padre Terminal\" or similar suspicious crypto apps should immediately transfer funds from affected wallets and revoke any permissions granted. Organizations should educate users on verifying legitimate apps and exercising caution with financial applications.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fake-crypto-app-on-apple-app-store-linked-to-23k-wallet-theft/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Over 41,000 DHS Employee Records Leaked Online",
-      "tldr": "More than 41,000 employee records belonging to the Department of Homeland Security (DHS) have been leaked and made available online. This significant data exposure puts DHS personnel at risk of targeted phishing, social engineering, and identity theft, potentially compromising national security.",
-      "action": "DHS should initiate a full investigation into the source and scope of the leak. Affected employees should be notified, provided with credit monitoring, and advised on mitigating identity theft risks. All government agencies should review their data protection measures.",
+      "tldr": "Over 41,000 employee records from the Department of Homeland Security (DHS) have been leaked and made available online. This incident represents a significant exposure of sensitive personnel data.",
+      "action": "Monitor dark web and other underground forums for further dissemination of DHS employee data. Conduct an internal audit to determine if any internal systems were compromised leading to the leak and to identify the specific nature of the exposed records.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
       "source": "SecurityWeek"
     },
     {
       "title": "Hackers Steal 2.6 Million Records From Sony's Japanese ISP So-net",
-      "tldr": "Hackers have successfully stolen 2.6 million customer records from So-net, Sony's Internet Service Provider in Japan. This large-scale data theft likely includes personal identifiable information (PII) of customers, exposing them to significant risks such as identity theft and targeted cyberattacks.",
-      "action": "So-net must immediately notify all affected customers and provide credit monitoring and identity theft protection services. A comprehensive forensic investigation should be launched to determine the breach's root cause and implement enhanced security controls to prevent future incidents.",
+      "tldr": "Hackers have successfully stolen 2.6 million records from So-net, Sony's Internet Service Provider in Japan. This breach highlights the risks associated with third-party service providers and the potential for large-scale data exfiltration.",
+      "action": "If using Sony's So-net, advise users to change passwords immediately and enable MFA. For organizations, review third-party vendor security posture, especially those with access to sensitive customer data.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
       "source": "SecurityWeek"
+    },
+    {
+      "title": "Japan Airlines suffers third-party data breach exposing passenger info",
+      "tldr": "Japan Airlines (JAL) has announced a data breach originating from Amadeus's Passenger Service System, exposing data for approximately 92,000 customers. This incident underscores the supply chain risk posed by third-party service providers in critical industries.",
+      "action": "Advise potentially affected Japan Airlines customers to be vigilant against phishing attacks and monitor financial statements for unusual activity. Evaluate the security controls of third-party vendors, especially those processing sensitive customer information.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
+      "tldr": "A significant number of valid cloud and AI platform credentials, totaling 26,400, have been discovered exposed in public Gitee repositories. This leak poses a direct risk of unauthorized access to sensitive cloud infrastructure and AI services.",
+      "action": "Immediately revoke and rotate any cloud and AI service credentials that might have been inadvertently exposed in public repositories. Implement automated scanning for secrets in code repositories and enforce strict access controls.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
+      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
-      "title": "Police seize Virtualine bulletproof service tied to ransowmare, cybercrime",
-      "tldr": "U.S. law enforcement has successfully seized the primary domain of Virtualine, a \"bulletproof\" hosting service widely advertised on cybercrime forums. Virtualine was known for facilitating illegal activities, including ransomware operations and other cybercriminal enterprises, by providing infrastructure resilient to takedowns.",
-      "action": "Organizations should review their threat intelligence feeds for indicators of compromise related to Virtualine and associated ransomware groups. Law enforcement's action disrupts critical infrastructure for cybercriminals, potentially reducing future ransomware attacks.",
+      "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
+      "tldr": "Prediction market platform Polymarket temporarily suspended trading after hackers compromised a third-party service to inject a crypto-draining JavaScript. Approximately $2.5 million in digital assets has been traced to an attacker's wallet.",
+      "action": "Investigate third-party scripts and supply chain integrity. For users, review recent transactions and revoke permissions for affected smart contracts if applicable. Implement strict content security policies (CSPs) on web applications.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
+      "tldr": "A crypto-mining campaign exploiting Hugging Face models has resurfaced, hijacking GPU servers and installing backdoors, with one malicious model downloaded over 28,000 times. This highlights the risk of malicious code embedded in seemingly benign AI/ML models and the potential for resource abuse.",
+      "action": "Review and scan any AI/ML models or dependencies obtained from public repositories like Hugging Face for malicious code. Monitor GPU utilization for unusual spikes indicating unauthorized crypto-mining activity. Implement network segmentation for GPU servers.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Fake ChatGPT and Claude Apps Abuse Signed Executables to Deploy Crypto Miners",
+      "tldr": "Malicious actors are distributing fake ChatGPT and Claude applications that exploit signed executables to deploy crypto miners on victim systems. This social engineering tactic leverages popular AI tools to deliver malware for financial gain through unauthorized resource usage.",
+      "action": "Educate users about the risks of downloading unofficial software and verify application authenticity. Implement application whitelisting and robust endpoint detection and response (EDR) solutions to prevent the execution of unauthorized crypto-mining software.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
+      "source": "The Hacker News"
     }
   ],
   "vulns": [
     {
-      "title": "Hackers exploit Cisco SD-WAN flaw to deploy custom KeyDrift malware",
-      "tldr": "An APT group, UAT-11473, is actively exploiting CVE-2026-20127, an authentication-bypass flaw in Cisco Catalyst SD-WAN Controllers. This zero-day vulnerability allows attackers to deploy a custom malware framework named KeyDrift, enabling persistent access and potentially further network compromise.",
-      "action": "Immediately apply available patches for Cisco Catalyst SD-WAN Controllers. Implement network segmentation and monitor for KeyDrift malware indicators of compromise. Review logs for unauthorized access attempts or suspicious activity on SD-WAN devices.",
+      "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
+      "tldr": "Cisco has released patches for an actively exploited vulnerability affecting its Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) VPN products. This flaw, if exploited, can lead to denial of service by crashing affected firewalls.",
+      "action": "Immediately apply the latest security patches from Cisco for all affected ASA and FTD VPN deployments. Monitor for indicators of compromise (IOCs) related to exploitation attempts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software running VPN services. Specific vulnerable versions require consulting Cisco's official advisory.",
+      "how_to_determine_impact": "Check the installed versions of Cisco ASA and FTD software. Verify if VPN services are enabled. Inspect logs for unusual activity or crashes related to VPN components.",
+      "tanium_query_hint": "Get Tanium Patch Status for 'Cisco Adaptive Security Appliance' or 'Cisco Firepower Threat Defense'. Use 'Get Installed Applications' to check versions. Look for process crashes related to VPN services.",
+      "rapid7_query_hint": "Search for vulnerability ID associated with Cisco ASA/FTD VPN flaws. Filter assets by 'Software Name contains Cisco ASA' or 'Software Name contains Cisco FTD'. Check for associated InsightAgent alerts on crashes or exploitation attempts.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Likely 9.0+ Critical"
+    },
+    {
+      "title": "Cisco SD-WAN Zero-Day Exploitation Tied to Volt Typhoon's 'Silent Train' Network",
+      "tldr": "A zero-day vulnerability in Cisco SD-WAN Controllers is being actively exploited, with indications tying it to the advanced persistent threat (APT) group Volt Typhoon's 'Silent Train' network. This exploitation allows for unauthorized access and potentially persistent compromise of network infrastructure.",
+      "action": "Isolate Cisco SD-WAN Controllers if immediate patching is not possible. Apply the latest patches and firmware updates from Cisco. Conduct a thorough forensic analysis for signs of compromise, including unauthorized access and persistence mechanisms.",
       "cve_ids": [
         "CVE-2026-20127"
       ],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-cisco-sd-wan-flaw-to-deploy-custom-keydrift-malware/",
-      "source": "BleepingComputer",
+      "source_url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Cisco Catalyst SD-WAN Controllers vulnerable to CVE-2026-20127 (specific versions need to be checked against Cisco advisories, assume all unpatched)",
-      "how_to_determine_impact": "Check Cisco Catalyst SD-WAN Controller software versions against Cisco's security advisory for CVE-2026-20127. Examine device logs for suspicious authentication bypass attempts or the presence of KeyDrift malware artifacts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with 'Cisco Catalyst SD-WAN Controller' contains 'vManage' or 'cEdge'. Query 'Get running processes' for KeyDrift related binaries/hashes.",
-      "rapid7_query_hint": "Search for vulnerability 'CVE-2026-20127' in InsightVM. For InsightIDR, query logs for 'Cisco SD-WAN' and 'authentication bypass' or 'KeyDrift'.",
+      "affected_versions": "Cisco Catalyst SD-WAN Controllers (vManage, cEdge, vBond, vSmart) running specific vulnerable versions. Refer to Cisco's advisory for exact affected versions.",
+      "how_to_determine_impact": "Check the installed versions of Cisco Catalyst SD-WAN components. Review network logs for unusual connections to/from SD-WAN controllers, especially those matching Volt Typhoon TTPs.",
+      "tanium_query_hint": "Get Tanium Patch Status for 'Cisco Catalyst SD-WAN'. Use 'Get Installed Applications' to check versions. Look for suspicious process activity or network connections originating from SD-WAN controllers.",
+      "rapid7_query_hint": "Search for vulnerability ID CVE-2026-20127 or 'Cisco SD-WAN'. Filter assets by 'Software Name contains Cisco SD-WAN'. Check for associated InsightAgent alerts on suspicious network activity or malware presence (KeyDrift).",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (estimated 9.8)"
+      "cvss_score": "Likely 9.8 Critical"
     },
     {
-      "title": "New Cisco firewall zero-day exploited to crash SSL VPN devices",
-      "tldr": "Cisco has released security updates for a zero-day denial-of-service vulnerability affecting Adaptive Security Appliance (ASA) and Threat Defense (FTD) software. Attackers are actively exploiting this flaw to remotely crash vulnerable firewall devices, leading to service disruption.",
-      "action": "Immediately apply the latest security updates provided by Cisco for ASA and FTD software. Monitor firewall device health and logs for unexpected crashes or DoS attempts. Consider implementing temporary mitigations if patching is not immediate.",
+      "title": "Attackers Exploit Second Cisco Firewall VPN Zero-Day Since August",
+      "tldr": "Attackers are actively exploiting a second zero-day vulnerability affecting Cisco Firewall VPNs since August. This critical flaw allows for unauthorized access or denial of service, emphasizing the need for immediate attention to Cisco security updates.",
+      "action": "Prioritize applying all available patches for Cisco Firewall VPN products, specifically those released to address zero-day vulnerabilities. Review all firewall logs for unauthorized access attempts or suspicious activity.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-firewall-zero-day-exploited-to-crash-ssl-vpn-devices/",
-      "source": "BleepingComputer",
+      "source_url": "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Cisco Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) software running on affected firewall devices (specific versions need to be checked against Cisco advisories, assume all unpatched).",
-      "how_to_determine_impact": "Check Cisco ASA and FTD software versions against Cisco's latest security advisories. Monitor device logs for unexplained reloads, crashes, or high resource utilization indicative of a denial-of-service attack.",
-      "tanium_query_hint": "Get installed versions of 'Cisco Adaptive Security Appliance' or 'Cisco Firepower Threat Defense'. Review logs for process crashes or reloads.",
-      "rapid7_query_hint": "Search InsightVM for vulnerabilities affecting Cisco ASA/FTD (check latest advisories for specific vulnerability ID). Monitor InsightIDR for DoS-related events or unexpected device reboots.",
+      "affected_versions": "Cisco Firewall VPN products. Specific vulnerable versions require consulting Cisco's official advisory regarding the 'second zero-day'.",
+      "how_to_determine_impact": "Check installed Cisco Firewall VPN versions. Monitor VPN connection logs for unauthorized access. Review firewall system logs for indicators of compromise or unexpected restarts.",
+      "tanium_query_hint": "Get Tanium Patch Status for 'Cisco Firewall VPN'. Use 'Get Installed Applications' to check versions. Look for suspicious VPN session activity or process anomalies on firewall devices.",
+      "rapid7_query_hint": "Search for relevant Cisco Firewall VPN vulnerability IDs. Filter assets by 'Software Name contains Cisco Firewall VPN'. Examine InsightAgent data for unusual network traffic or unauthorized access patterns.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical (estimated 9.0+ based on DoS zero-day exploitation of critical network infrastructure)"
+      "cvss_score": "Likely 9.0+ Critical"
     },
     {
       "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
-      "tldr": "A critical TCP flaw in the Linux Kernel, assigned a CVSS score of 9.8, impacts major distributions including Ubuntu and Red Hat. This vulnerability could allow remote attackers to cause denial-of-service or potentially execute arbitrary code, threatening the stability and security of affected systems.",
-      "action": "Immediately update all Linux kernel installations, especially those running Ubuntu, Red Hat, and other affected distributions, to the patched versions. Prioritize internet-facing and critical servers.",
+      "tldr": "A critical TCP flaw in the Linux Kernel, with a CVSS score of 9.8, affects major distributions including Ubuntu and Red Hat. This vulnerability could allow for remote code execution or denial of service, making it a severe threat to Linux-based systems.",
+      "action": "Apply immediate kernel updates for all affected Linux systems (Ubuntu, Red Hat, etc.). Reboot systems after patching to ensure the new kernel is loaded. Monitor for any unusual network traffic or system behavior.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Linux Kernel versions (specific range needs to be checked against vendor advisories for Ubuntu, Red Hat, and other distributions).",
-      "how_to_determine_impact": "Check the running kernel version on all Linux systems using 'uname -r'. Compare the output against advisories from your specific distribution vendor (e.g., Ubuntu Security Notices, Red Hat Product Security).",
-      "tanium_query_hint": "Get Kernel Version from all Linux machines. Filter for known vulnerable versions based on vendor advisories.",
-      "rapid7_query_hint": "Search InsightVM for 'Linux kernel TCP' vulnerabilities. Use the 'Software Name' filter for 'Linux Kernel' and 'Version' to identify affected assets. For InsightAgent, query 'System Information.Kernel Version'.",
+      "affected_versions": "Linux Kernel TCP stack, affecting Ubuntu, Red Hat, and other distributions. Specific kernel versions need to be identified via vendor advisories.",
+      "how_to_determine_impact": "Check the running kernel version on all Linux systems using `uname -r`. Consult distribution-specific advisories (e.g., Ubuntu Security Notices, Red Hat Advisories) for affected kernel versions.",
+      "tanium_query_hint": "Get Computer Name and Kernel Version from all Linux machines. Compare against vendor advisories. Check 'Installed Applications' for relevant kernel packages.",
+      "rapid7_query_hint": "Filter assets by 'OS contains Linux' and then by kernel version (if available via agent or scan data). Search for vulnerability ID related to 'Linux Kernel TCP Flaw' or by potential CVE if one becomes known.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical (as reported in title)"
-    },
-    {
-      "title": "CISA warns of Fragnesia Linux flaw chained in PHP2Shell attacks",
-      "tldr": "CISA has issued a warning regarding \"Fragnesia,\" a high-severity Linux kernel privilege escalation bug actively being chained with PHP2Shell flaws in attacks. This allows attackers to gain elevated privileges on compromised Linux systems, posing a severe risk of full system takeover.",
-      "action": "Federal agencies and all organizations running Linux systems must immediately apply patches to address the Fragnesia Linux kernel privilege escalation vulnerability and the PHP2Shell flaws. Hunt for indicators of compromise related to PHP2Shell and Fragnesia.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-fragnesia-linux-flaw-chained-in-php2shell-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Linux Kernel (specific versions vulnerable to Fragnesia privilege escalation flaw need to be identified from CISA and vendor advisories).",
-      "how_to_determine_impact": "Check Linux kernel versions using 'uname -r' and consult CISA advisories or distribution-specific security updates for 'Fragnesia' or related privilege escalation vulnerabilities. Investigate logs for PHP2Shell activity.",
-      "tanium_query_hint": "Get Kernel Version from all Linux machines. Query 'Get Installed Packages' for PHP2Shell installations or related files. Look for suspicious process activity related to privilege escalation.",
-      "rapid7_query_hint": "Search InsightVM for 'Linux kernel privilege escalation' or terms related to 'Fragnesia' (if a CVE is published). For InsightIDR, look for suspicious PHP process executions or unauthorized privilege escalations.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "High (estimated 8.x, as CISA warns of high-severity privilege escalation)"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -26256,6 +26272,137 @@
         "source_url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
         "source": "SecurityWeek",
         "category": "breaches"
+      }
+    ],
+    "2026-10-30": [
+      {
+        "title": "Over 41,000 DHS Employee Records Leaked Online",
+        "tldr": "Over 41,000 employee records from the Department of Homeland Security (DHS) have been leaked and made available online. This incident represents a significant exposure of sensitive personnel data.",
+        "action": "Monitor dark web and other underground forums for further dissemination of DHS employee data. Conduct an internal audit to determine if any internal systems were compromised leading to the leak and to identify the specific nature of the exposed records.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/over-41000-dhs-employee-records-leaked-online/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers Steal 2.6 Million Records From Sony's Japanese ISP So-net",
+        "tldr": "Hackers have successfully stolen 2.6 million records from So-net, Sony's Internet Service Provider in Japan. This breach highlights the risks associated with third-party service providers and the potential for large-scale data exfiltration.",
+        "action": "If using Sony's So-net, advise users to change passwords immediately and enable MFA. For organizations, review third-party vendor security posture, especially those with access to sensitive customer data.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/hackers-steal-2-6-million-records-from-sonys-japanese-isp-so-net/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Japan Airlines suffers third-party data breach exposing passenger info",
+        "tldr": "Japan Airlines (JAL) has announced a data breach originating from Amadeus's Passenger Service System, exposing data for approximately 92,000 customers. This incident underscores the supply chain risk posed by third-party service providers in critical industries.",
+        "action": "Advise potentially affected Japan Airlines customers to be vigilant against phishing attacks and monitor financial statements for unusual activity. Evaluate the security controls of third-party vendors, especially those processing sensitive customer information.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
+        "tldr": "A significant number of valid cloud and AI platform credentials, totaling 26,400, have been discovered exposed in public Gitee repositories. This leak poses a direct risk of unauthorized access to sensitive cloud infrastructure and AI services.",
+        "action": "Immediately revoke and rotate any cloud and AI service credentials that might have been inadvertently exposed in public repositories. Implement automated scanning for secrets in code repositories and enforce strict access controls.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Polymarket halts trading after crypto-draining script breach, $2.5M traced",
+        "tldr": "Prediction market platform Polymarket temporarily suspended trading after hackers compromised a third-party service to inject a crypto-draining JavaScript. Approximately $2.5 million in digital assets has been traced to an attacker's wallet.",
+        "action": "Investigate third-party scripts and supply chain integrity. For users, review recent transactions and revoke permissions for affected smart contracts if applicable. Implement strict content security policies (CSPs) on web applications.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/polymarket-halts-trading-after-crypto-draining-script-breach-25m-traced/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
+        "tldr": "A crypto-mining campaign exploiting Hugging Face models has resurfaced, hijacking GPU servers and installing backdoors, with one malicious model downloaded over 28,000 times. This highlights the risk of malicious code embedded in seemingly benign AI/ML models and the potential for resource abuse.",
+        "action": "Review and scan any AI/ML models or dependencies obtained from public repositories like Hugging Face for malicious code. Monitor GPU utilization for unusual spikes indicating unauthorized crypto-mining activity. Implement network segmentation for GPU servers.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Fake ChatGPT and Claude Apps Abuse Signed Executables to Deploy Crypto Miners",
+        "tldr": "Malicious actors are distributing fake ChatGPT and Claude applications that exploit signed executables to deploy crypto miners on victim systems. This social engineering tactic leverages popular AI tools to deliver malware for financial gain through unauthorized resource usage.",
+        "action": "Educate users about the risks of downloading unofficial software and verify application authenticity. Implement application whitelisting and robust endpoint detection and response (EDR) solutions to prevent the execution of unauthorized crypto-mining software.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
+        "tldr": "Cisco has released patches for an actively exploited vulnerability affecting its Adaptive Security Appliance (ASA) and Firepower Threat Defense (FTD) VPN products. This flaw, if exploited, can lead to denial of service by crashing affected firewalls.",
+        "action": "Immediately apply the latest security patches from Cisco for all affected ASA and FTD VPN deployments. Monitor for indicators of compromise (IOCs) related to exploitation attempts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software running VPN services. Specific vulnerable versions require consulting Cisco's official advisory.",
+        "how_to_determine_impact": "Check the installed versions of Cisco ASA and FTD software. Verify if VPN services are enabled. Inspect logs for unusual activity or crashes related to VPN components.",
+        "tanium_query_hint": "Get Tanium Patch Status for 'Cisco Adaptive Security Appliance' or 'Cisco Firepower Threat Defense'. Use 'Get Installed Applications' to check versions. Look for process crashes related to VPN services.",
+        "rapid7_query_hint": "Search for vulnerability ID associated with Cisco ASA/FTD VPN flaws. Filter assets by 'Software Name contains Cisco ASA' or 'Software Name contains Cisco FTD'. Check for associated InsightAgent alerts on crashes or exploitation attempts.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Likely 9.0+ Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Cisco SD-WAN Zero-Day Exploitation Tied to Volt Typhoon's 'Silent Train' Network",
+        "tldr": "A zero-day vulnerability in Cisco SD-WAN Controllers is being actively exploited, with indications tying it to the advanced persistent threat (APT) group Volt Typhoon's 'Silent Train' network. This exploitation allows for unauthorized access and potentially persistent compromise of network infrastructure.",
+        "action": "Isolate Cisco SD-WAN Controllers if immediate patching is not possible. Apply the latest patches and firmware updates from Cisco. Conduct a thorough forensic analysis for signs of compromise, including unauthorized access and persistence mechanisms.",
+        "cve_ids": [
+          "CVE-2026-20127"
+        ],
+        "source_url": "https://www.securityweek.com/cisco-sd-wan-zero-day-exploitation-tied-to-volt-typhoons-silent-train-network/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Catalyst SD-WAN Controllers (vManage, cEdge, vBond, vSmart) running specific vulnerable versions. Refer to Cisco's advisory for exact affected versions.",
+        "how_to_determine_impact": "Check the installed versions of Cisco Catalyst SD-WAN components. Review network logs for unusual connections to/from SD-WAN controllers, especially those matching Volt Typhoon TTPs.",
+        "tanium_query_hint": "Get Tanium Patch Status for 'Cisco Catalyst SD-WAN'. Use 'Get Installed Applications' to check versions. Look for suspicious process activity or network connections originating from SD-WAN controllers.",
+        "rapid7_query_hint": "Search for vulnerability ID CVE-2026-20127 or 'Cisco SD-WAN'. Filter assets by 'Software Name contains Cisco SD-WAN'. Check for associated InsightAgent alerts on suspicious network activity or malware presence (KeyDrift).",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Likely 9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Exploit Second Cisco Firewall VPN Zero-Day Since August",
+        "tldr": "Attackers are actively exploiting a second zero-day vulnerability affecting Cisco Firewall VPNs since August. This critical flaw allows for unauthorized access or denial of service, emphasizing the need for immediate attention to Cisco security updates.",
+        "action": "Prioritize applying all available patches for Cisco Firewall VPN products, specifically those released to address zero-day vulnerabilities. Review all firewall logs for unauthorized access attempts or suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/attackers-exploit-second-cisco-firewall-vpn-zero-day-since-august/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Firewall VPN products. Specific vulnerable versions require consulting Cisco's official advisory regarding the 'second zero-day'.",
+        "how_to_determine_impact": "Check installed Cisco Firewall VPN versions. Monitor VPN connection logs for unauthorized access. Review firewall system logs for indicators of compromise or unexpected restarts.",
+        "tanium_query_hint": "Get Tanium Patch Status for 'Cisco Firewall VPN'. Use 'Get Installed Applications' to check versions. Look for suspicious VPN session activity or process anomalies on firewall devices.",
+        "rapid7_query_hint": "Search for relevant Cisco Firewall VPN vulnerability IDs. Filter assets by 'Software Name contains Cisco Firewall VPN'. Examine InsightAgent data for unusual network traffic or unauthorized access patterns.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Likely 9.0+ Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
+        "tldr": "A critical TCP flaw in the Linux Kernel, with a CVSS score of 9.8, affects major distributions including Ubuntu and Red Hat. This vulnerability could allow for remote code execution or denial of service, making it a severe threat to Linux-based systems.",
+        "action": "Apply immediate kernel updates for all affected Linux systems (Ubuntu, Red Hat, etc.). Reboot systems after patching to ensure the new kernel is loaded. Monitor for any unusual network traffic or system behavior.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Linux Kernel TCP stack, affecting Ubuntu, Red Hat, and other distributions. Specific kernel versions need to be identified via vendor advisories.",
+        "how_to_determine_impact": "Check the running kernel version on all Linux systems using `uname -r`. Consult distribution-specific advisories (e.g., Ubuntu Security Notices, Red Hat Advisories) for affected kernel versions.",
+        "tanium_query_hint": "Get Computer Name and Kernel Version from all Linux machines. Compare against vendor advisories. Check 'Installed Applications' for relevant kernel packages.",
+        "rapid7_query_hint": "Filter assets by 'OS contains Linux' and then by kernel version (if available via agent or scan data). Search for vulnerability ID related to 'Linux Kernel TCP Flaw' or by potential CVE if one becomes known.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
       }
     ]
   }
