@@ -1,25 +1,33 @@
 {
   "breaches": [
     {
-      "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
-      "tldr": "Blockchain analytics firm Chainalysis confirmed an intrusion into its internal tools, leading to the exposure of customer identity data. The breach involved unauthorized access to sensitive customer information such as names, email addresses, user IDs, and organizational roles.",
-      "action": "Review Chainalysis advisories, monitor for related phishing attempts, and rotate any credentials or API keys that might have been associated with Chainalysis services. Customers should be vigilant for phishing attempts using the exposed data.",
+      "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
+      "tldr": "Blockchain analytics firm Chainalysis reported a data breach where attackers used \"offensive agentic techniques\" to access internal systems, exposing customer names, email addresses, user IDs, and organizational roles. This PII could be used for targeted phishing or further attacks.",
+      "action": "Chainalysis customers should be highly vigilant for phishing attempts leveraging this exposed PII. Consider reviewing and strengthening account security within Chainalysis platforms and related services.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
+      "source": "BleepingComputer"
     },
     {
       "title": "Northflank security breach leads to abuse of customers' AI API keys",
-      "tldr": "Cloud application hosting platform Northflank experienced a security breach resulting in the unauthorized use of customers' AI API keys. This compromise exposed customers to potential abuse of their AI service access.",
-      "action": "Northflank customers must immediately rotate all credentials and secrets, especially AI API keys, stored on the platform. Review logs for unauthorized API usage or access to identify potential misuse.",
+      "tldr": "Cloud application hosting platform Northflank experienced a security breach that resulted in the unauthorized use and potential abuse of customers' AI API keys. The extent of the compromise regarding data accessed via these keys is under investigation.",
+      "action": "Northflank customers must immediately rotate all credentials, API keys, and secrets stored on the platform. Review API key usage logs and associated AI service accounts for any suspicious or unauthorized activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
       "source": "BleepingComputer"
     },
     {
+      "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+      "tldr": "Trezor has received credible reports of a suspected hardware crypto-theft implant discovered in a Trezor Safe 5 wallet. The compromised devices were reportedly sold by its reseller, CryptoBilis, in Southeast Asia, posing a direct threat of cryptocurrency theft.",
+      "action": "Users who purchased Trezor Safe 5 wallets from CryptoBilis, particularly in Southeast Asia, should immediately verify the integrity of their device. It is recommended to transfer all cryptocurrency assets to a secure, uncompromised wallet if any suspicion exists. Contact Trezor support for verification and guidance.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
-      "tldr": "Over $2 million has been drained from Polymarket traders due to a new supply chain attack. This incident highlights the risks associated with third-party software and service providers in the crypto ecosystem, leading to significant financial losses.",
-      "action": "Users of Polymarket should review their account activity for unauthorized transactions and enable multi-factor authentication. Organizations relying on Polymarket or similar platforms should enhance their supply chain security assessments and monitoring protocols.",
+      "tldr": "Over $2 million has been drained from Polymarket traders due to a sophisticated new supply chain attack. While specific details of the exploit chain are not fully disclosed, the attack led to significant financial losses for users of the platform.",
+      "action": "Polymarket users should meticulously review their transaction history for any unauthorized activity. It is crucial to ensure all cryptocurrency assets are secured using robust authentication methods and best security practices, including revoking unnecessary permissions.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
       "source": "SecurityWeek"
@@ -28,66 +36,66 @@
   "ransomware": [],
   "vulns": [
     {
+      "title": "CISA says max severity GitLab flaw now exploited in the wild",
+      "tldr": "A recently patched maximum-severity vulnerability in GitLab is now being actively exploited in the wild, as confirmed by CISA. This critical flaw allows attackers to compromise GitLab instances, potentially leading to remote code execution or unauthorized access to repositories and pipelines.",
+      "action": "Immediately apply the latest security patches for all GitLab instances (Enterprise Edition and Community Edition). Conduct an urgent forensic review for indicators of compromise (IoCs), especially on internet-exposed GitLab servers.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "All unpatched versions of GitLab (Enterprise Edition and Community Edition) affected by the recently disclosed maximum-severity vulnerability. Refer to GitLab's official security advisories for exact version ranges.",
+      "how_to_determine_impact": "Check the installed version of GitLab using 'sudo gitlab-rake gitlab:check_version'. Consult GitLab's official security advisories for the specific CVE and corresponding patched versions. Look for logs indicating suspicious API calls, unauthorized repository access, or unusual process execution on the GitLab host.",
+      "tanium_query_hint": "Get 'Installed Applications' from all machines with computer name containing 'gitlab'. Use 'Get File Version[\"/opt/gitlab/embedded/service/gitlab-rails/VERSION\"]' or similar for specific paths. Investigate 'Get Running Processes' for unexpected GitLab-related processes.",
+      "rapid7_query_hint": "Search for vulnerability ID associated with the latest critical GitLab patch within InsightVM. Use Asset Search with 'Software Name contains GitLab' and filter by installed version to identify vulnerable assets. Check for relevant IoCs within InsightIDR.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical (Estimated)"
+    },
+    {
       "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
-      "tldr": "Attackers are actively chaining three Ivanti Connect Secure vulnerabilities to achieve unauthenticated root access. These critical flaws allow for severe compromise of affected systems, potentially leading to full administrative control.",
-      "action": "Immediately apply all available patches for Ivanti Connect Secure. Implement network segmentation, review logs for signs of compromise, and enforce robust access controls, especially for systems exposed to the internet.",
+      "tldr": "Threat actors are actively chaining three distinct vulnerabilities in Ivanti Connect Secure VPN and Policy Secure Gateways to achieve unauthenticated root access. This chain of flaws represents a severe compromise vector, allowing complete control over the affected appliances.",
+      "action": "Immediately apply all available patches and mitigations released by Ivanti for Connect Secure and Policy Secure devices. Conduct a thorough forensic analysis for signs of compromise, such as persistent backdoors or unauthorized configuration changes, especially if patches were not applied promptly.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Ivanti Connect Secure appliances (specific versions require vendor advisory review, ensure latest patches are applied)",
-      "how_to_determine_impact": "Identify all Ivanti Connect Secure appliances within your environment. Check for vendor-specific integrity checker tools and review system logs for suspicious activity indicative of root compromise or unauthorized access.",
-      "tanium_query_hint": "Get Operating System from all machines with Computer Name matches 'Ivanti*' or Get Installed Applications from all machines with Application Name contains 'Ivanti Connect Secure'",
-      "rapid7_query_hint": "Search for Ivanti Connect Secure vulnerabilities via Nexpose/InsightVM. Query InsightAgent for suspicious processes, unauthorized file modifications, or network connections on Ivanti endpoints.",
+      "affected_versions": "Specific versions of Ivanti Connect Secure VPN and Policy Secure Gateways. Refer to Ivanti's official security advisories for precise vulnerable version ranges and patch details.",
+      "how_to_determine_impact": "Check Ivanti Connect Secure appliance logs for unusual activity, unauthorized file modifications, or unexpected process execution. Utilize Ivanti's provided integrity checker tools and threat detection scripts. Verify the patch level of all Ivanti Connect Secure deployments against vendor advisories.",
+      "tanium_query_hint": "Get 'Installed Applications' sensor output for 'Ivanti Connect Secure' or 'Pulse Connect Secure'. Use 'Get File Content' for configuration files for specific indicators outlined in Ivanti advisories. 'Get Running Processes' for suspicious processes on the appliances.",
+      "rapid7_query_hint": "Search for 'Ivanti Connect Secure' vulnerabilities within InsightVM's vulnerability database. Use Asset Search to identify devices running Ivanti software and check their patch status against vendor recommendations. Monitor for IoCs in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours",
-      "tldr": "A critical Remote Code Execution (RCE) vulnerability in WordPress is being actively exploited, with nearly 63,000 attack attempts recorded in a single day. This flaw allows attackers to execute arbitrary code on vulnerable WordPress sites, leading to full site compromise.",
-      "action": "Immediately patch all WordPress installations and associated plugins/themes to the latest secure versions. Implement a Web Application Firewall (WAF) to block known exploit patterns and review WordPress access logs for signs of compromise.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "WordPress core or specific plugins/themes (consult vendor advisories for exact versions)",
-      "how_to_determine_impact": "Check all WordPress installations for the vulnerable version or plugin. Review web server and WordPress access logs for unusual requests, unexpected file uploads, or signs of unauthorized command execution.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Application Name contains 'WordPress' or Get File Version['<path_to_wordpress_core_file>'] and compare against known vulnerable versions.",
-      "rapid7_query_hint": "Scan web servers hosting WordPress with InsightVM to identify vulnerable versions or misconfigurations. Monitor web server logs for suspicious POST requests or attempts to access uncommon paths within WordPress directories via InsightIDR.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
       "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
-      "tldr": "A security researcher has released a proof-of-concept (PoC) exploit for a recently patched Android vulnerability, dubbed 'SMS of Death' and tracked as CVE-2026-58882. This exploit allows attackers to remotely disrupt cellular service or crash unpatched phones by sending a specially crafted text message.",
-      "action": "Update all Android devices to the latest patched versions as advised by Google and device manufacturers. Prioritize updates for devices identified as vulnerable to CVE-2026-58882.",
+      "tldr": "A security researcher has released a proof-of-concept (PoC) exploit for a recently patched Android vulnerability, tracked as CVE-2026-58882, dubbed \"SMS of Death.\" This flaw allows an attacker to remotely disrupt cellular service or crash unpatched Android phones by sending a specially crafted text message.",
+      "action": "Immediately update all Android devices to the latest available security patch level. Users should also be cautious of suspicious or unexpected text messages, although the exploit may not require user interaction.",
       "cve_ids": [
         "CVE-2026-58882"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Unpatched Android phones (specific versions require Google and device vendor advisories addressing CVE-2026-58882)",
-      "how_to_determine_impact": "Check Android device patch levels and OS versions. Verify if the security update addressing CVE-2026-58882 has been applied by comparing device security patch dates with advisory information.",
-      "tanium_query_hint": "This requires MDM integration or direct device scanning for mobile devices. Use 'Get Android OS Version' sensor (if available) to identify devices lacking the patch.",
-      "rapid7_query_hint": "Integrate MDM solutions with InsightVM to scan and identify Android OS versions and patch levels. Search for 'CVE-2026-58882' in InsightVM for relevant vulnerability checks.",
+      "affected_versions": "Unpatched Android devices vulnerable to CVE-2026-58882. Refer to Google's official Android Security Bulletin for specific affected Android versions and patch levels.",
+      "how_to_determine_impact": "Check the Android security patch level on devices (typically found under Settings > About phone > Android security patch level). Devices with patch levels prior to the month containing the fix for CVE-2026-58882 are vulnerable.",
+      "tanium_query_hint": "For managed Android endpoints, leverage mobile device management (MDM) solutions to query the OS version and patch status. Tanium may not directly query Android devices unless integrated with an MDM platform or specific mobile management capabilities.",
+      "rapid7_query_hint": "Utilize mobile device management (MDM) integrations with InsightVM or InsightIDR to query Android device patch levels. Search for 'CVE-2026-58882' in InsightVM's vulnerability database and scan mobile devices if possible.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
+      "cvss_score": "7.5 High (Estimated)"
     },
     {
       "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
-      "tldr": "A critical Linux kernel vulnerability allows unauthenticated attackers to remotely execute commands as root on servers running Multipath TCP (MPTCP) listeners. Security researchers at Anthropic have developed an exploit for this flaw, indicating a high risk of active exploitation.",
-      "action": "Immediately patch all Linux systems running MPTCP with the latest kernel updates. If MPTCP is not strictly required, disable it. Implement strong network segmentation for MPTCP-enabled servers.",
+      "tldr": "Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that permits unauthenticated attackers to remotely execute commands as root on servers running Multipath TCP (MPTCP) listeners. This flaw poses a significant risk for remote system compromise.",
+      "action": "Identify all Linux servers running MPTCP listeners and apply the latest kernel patches immediately. Implement network-level filtering to restrict access to MPTCP ports if patching is not feasible. Monitor systems for any unauthorized root access or suspicious network activity originating from MPTCP-enabled services.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Linux kernel versions with MPTCP enabled (specific versions require kernel vendor advisory)",
-      "how_to_determine_impact": "Identify all Linux servers within your environment that have Multipath TCP (MPTCP) enabled or installed. Check kernel versions and verify if the latest security patches addressing this vulnerability are applied. Inspect network configurations for exposed MPTCP listeners.",
-      "tanium_query_hint": "Get Operating System from all machines with Operating System Name contains 'Linux' and Get Kernel Version and Get Listening Ports matching '*' and 'mptcp'",
-      "rapid7_query_hint": "Scan Linux servers with InsightVM to detect vulnerable kernel versions and MPTCP configurations. Use InsightAgent to monitor for suspicious processes or root-level activity on affected servers.",
+      "affected_versions": "Linux kernel versions with Multipath TCP (MPTCP) enabled. Specific vulnerable kernel versions will depend on the distribution (e.g., Ubuntu, RHEL, Debian). Consult distribution-specific security advisories.",
+      "how_to_determine_impact": "Verify if MPTCP is enabled on Linux servers by checking 'sysctl net.mptcp.enabled' (a value of 1 indicates enabled). Confirm the installed kernel version using 'uname -r' and compare against vendor security advisories to determine vulnerability.",
+      "tanium_query_hint": "Get 'Kernel Version' from all Linux machines. Run 'Execute Command[cat /proc/sys/net/mptcp/enabled]' to check MPTCP status. 'Get Installed Packages' filtered by 'kernel' to identify patch levels.",
+      "rapid7_query_hint": "Search InsightVM for Linux assets with specific kernel versions and associated MPTCP configurations. Look for vulnerabilities related to 'MPTCP' or 'Linux kernel remote root'. Use Asset Search with 'Operating System: Linux' and filter by 'Kernel Version'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     }
   ],
   "insurance": [],
@@ -26705,6 +26713,110 @@
         "rapid7_query_hint": "Integrate MDM solutions with InsightVM to scan and identify Android OS versions and patch levels. Search for 'CVE-2026-58882' in InsightVM for relevant vulnerability checks.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "7.8 High",
+        "category": "vulns"
+      }
+    ],
+    "2026-11-01": [
+      {
+        "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
+        "tldr": "Blockchain analytics firm Chainalysis reported a data breach where attackers used \"offensive agentic techniques\" to access internal systems, exposing customer names, email addresses, user IDs, and organizational roles. This PII could be used for targeted phishing or further attacks.",
+        "action": "Chainalysis customers should be highly vigilant for phishing attempts leveraging this exposed PII. Consider reviewing and strengthening account security within Chainalysis platforms and related services.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Northflank security breach leads to abuse of customers' AI API keys",
+        "tldr": "Cloud application hosting platform Northflank experienced a security breach that resulted in the unauthorized use and potential abuse of customers' AI API keys. The extent of the compromise regarding data accessed via these keys is under investigation.",
+        "action": "Northflank customers must immediately rotate all credentials, API keys, and secrets stored on the platform. Review API key usage logs and associated AI service accounts for any suspicious or unauthorized activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
+        "tldr": "Trezor has received credible reports of a suspected hardware crypto-theft implant discovered in a Trezor Safe 5 wallet. The compromised devices were reportedly sold by its reseller, CryptoBilis, in Southeast Asia, posing a direct threat of cryptocurrency theft.",
+        "action": "Users who purchased Trezor Safe 5 wallets from CryptoBilis, particularly in Southeast Asia, should immediately verify the integrity of their device. It is recommended to transfer all cryptocurrency assets to a secure, uncompromised wallet if any suspicion exists. Contact Trezor support for verification and guidance.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
+        "tldr": "Over $2 million has been drained from Polymarket traders due to a sophisticated new supply chain attack. While specific details of the exploit chain are not fully disclosed, the attack led to significant financial losses for users of the platform.",
+        "action": "Polymarket users should meticulously review their transaction history for any unauthorized activity. It is crucial to ensure all cryptocurrency assets are secured using robust authentication methods and best security practices, including revoking unnecessary permissions.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "CISA says max severity GitLab flaw now exploited in the wild",
+        "tldr": "A recently patched maximum-severity vulnerability in GitLab is now being actively exploited in the wild, as confirmed by CISA. This critical flaw allows attackers to compromise GitLab instances, potentially leading to remote code execution or unauthorized access to repositories and pipelines.",
+        "action": "Immediately apply the latest security patches for all GitLab instances (Enterprise Edition and Community Edition). Conduct an urgent forensic review for indicators of compromise (IoCs), especially on internet-exposed GitLab servers.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All unpatched versions of GitLab (Enterprise Edition and Community Edition) affected by the recently disclosed maximum-severity vulnerability. Refer to GitLab's official security advisories for exact version ranges.",
+        "how_to_determine_impact": "Check the installed version of GitLab using 'sudo gitlab-rake gitlab:check_version'. Consult GitLab's official security advisories for the specific CVE and corresponding patched versions. Look for logs indicating suspicious API calls, unauthorized repository access, or unusual process execution on the GitLab host.",
+        "tanium_query_hint": "Get 'Installed Applications' from all machines with computer name containing 'gitlab'. Use 'Get File Version[\"/opt/gitlab/embedded/service/gitlab-rails/VERSION\"]' or similar for specific paths. Investigate 'Get Running Processes' for unexpected GitLab-related processes.",
+        "rapid7_query_hint": "Search for vulnerability ID associated with the latest critical GitLab patch within InsightVM. Use Asset Search with 'Software Name contains GitLab' and filter by installed version to identify vulnerable assets. Check for relevant IoCs within InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
+        "tldr": "Threat actors are actively chaining three distinct vulnerabilities in Ivanti Connect Secure VPN and Policy Secure Gateways to achieve unauthenticated root access. This chain of flaws represents a severe compromise vector, allowing complete control over the affected appliances.",
+        "action": "Immediately apply all available patches and mitigations released by Ivanti for Connect Secure and Policy Secure devices. Conduct a thorough forensic analysis for signs of compromise, such as persistent backdoors or unauthorized configuration changes, especially if patches were not applied promptly.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Specific versions of Ivanti Connect Secure VPN and Policy Secure Gateways. Refer to Ivanti's official security advisories for precise vulnerable version ranges and patch details.",
+        "how_to_determine_impact": "Check Ivanti Connect Secure appliance logs for unusual activity, unauthorized file modifications, or unexpected process execution. Utilize Ivanti's provided integrity checker tools and threat detection scripts. Verify the patch level of all Ivanti Connect Secure deployments against vendor advisories.",
+        "tanium_query_hint": "Get 'Installed Applications' sensor output for 'Ivanti Connect Secure' or 'Pulse Connect Secure'. Use 'Get File Content' for configuration files for specific indicators outlined in Ivanti advisories. 'Get Running Processes' for suspicious processes on the appliances.",
+        "rapid7_query_hint": "Search for 'Ivanti Connect Secure' vulnerabilities within InsightVM's vulnerability database. Use Asset Search to identify devices running Ivanti software and check their patch status against vendor recommendations. Monitor for IoCs in InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+        "tldr": "A security researcher has released a proof-of-concept (PoC) exploit for a recently patched Android vulnerability, tracked as CVE-2026-58882, dubbed \"SMS of Death.\" This flaw allows an attacker to remotely disrupt cellular service or crash unpatched Android phones by sending a specially crafted text message.",
+        "action": "Immediately update all Android devices to the latest available security patch level. Users should also be cautious of suspicious or unexpected text messages, although the exploit may not require user interaction.",
+        "cve_ids": [
+          "CVE-2026-58882"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Unpatched Android devices vulnerable to CVE-2026-58882. Refer to Google's official Android Security Bulletin for specific affected Android versions and patch levels.",
+        "how_to_determine_impact": "Check the Android security patch level on devices (typically found under Settings > About phone > Android security patch level). Devices with patch levels prior to the month containing the fix for CVE-2026-58882 are vulnerable.",
+        "tanium_query_hint": "For managed Android endpoints, leverage mobile device management (MDM) solutions to query the OS version and patch status. Tanium may not directly query Android devices unless integrated with an MDM platform or specific mobile management capabilities.",
+        "rapid7_query_hint": "Utilize mobile device management (MDM) integrations with InsightVM or InsightIDR to query Android device patch levels. Search for 'CVE-2026-58882' in InsightVM's vulnerability database and scan mobile devices if possible.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.5 High (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
+        "tldr": "Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that permits unauthenticated attackers to remotely execute commands as root on servers running Multipath TCP (MPTCP) listeners. This flaw poses a significant risk for remote system compromise.",
+        "action": "Identify all Linux servers running MPTCP listeners and apply the latest kernel patches immediately. Implement network-level filtering to restrict access to MPTCP ports if patching is not feasible. Monitor systems for any unauthorized root access or suspicious network activity originating from MPTCP-enabled services.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Linux kernel versions with Multipath TCP (MPTCP) enabled. Specific vulnerable kernel versions will depend on the distribution (e.g., Ubuntu, RHEL, Debian). Consult distribution-specific security advisories.",
+        "how_to_determine_impact": "Verify if MPTCP is enabled on Linux servers by checking 'sysctl net.mptcp.enabled' (a value of 1 indicates enabled). Confirm the installed kernel version using 'uname -r' and compare against vendor security advisories to determine vulnerability.",
+        "tanium_query_hint": "Get 'Kernel Version' from all Linux machines. Run 'Execute Command[cat /proc/sys/net/mptcp/enabled]' to check MPTCP status. 'Get Installed Packages' filtered by 'kernel' to identify patch levels.",
+        "rapid7_query_hint": "Search InsightVM for Linux assets with specific kernel versions and associated MPTCP configurations. Look for vulnerabilities related to 'MPTCP' or 'Linux kernel remote root'. Use Asset Search with 'Operating System: Linux' and filter by 'Kernel Version'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated)",
         "category": "vulns"
       }
     ]
