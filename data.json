@@ -1,35 +1,35 @@
 {
   "breaches": [
     {
-      "title": "Chainalysis discloses data breach from \"offensive agentic techniques\"",
-      "tldr": "Blockchain analytics firm Chainalysis reported a data breach where attackers used \"offensive agentic techniques\" to access internal systems. This led to the exposure of customer names, email addresses, user IDs, and organizational roles.",
-      "action": "Customers should be advised to monitor their accounts for suspicious activity and change any reused credentials. Organizations should review their vendor security assessments for Chainalysis.",
+      "title": "Chainalysis Confirms Intrusion into Internal Tools and Exposure of Customer Identity Data",
+      "tldr": "Blockchain analytics firm Chainalysis disclosed a data breach resulting from \"offensive agentic techniques\" used by attackers to access internal systems. This intrusion exposed sensitive customer identity data, including names, email addresses, user IDs, and organizational roles.",
+      "action": "Customers should be vigilant for phishing attempts or unauthorized activity related to their Chainalysis accounts. Review and strengthen multi-factor authentication where applicable. Companies relying on Chainalysis should assess potential impact on their own security posture.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-discloses-data-breach-from-offensive-agentic-techniques/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
+      "tldr": "The FBI has officially linked North Korean state-sponsored hackers, identified as TraderTraitor, to a record-setting cryptocurrency theft from Binance. This heist, totaling approximately $6.3-$6.43 billion, marks the largest cryptocurrency theft on record and highlights persistent threats from state-backed groups targeting financial institutions.",
+      "action": "Organizations, especially in the crypto sector, should review their defenses against advanced persistent threats (APTs) and sophisticated phishing campaigns. Implement robust access controls and monitoring for unusual activities.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+      "source": "The Hacker News"
     },
     {
       "title": "Northflank security breach leads to abuse of customers' AI API keys",
-      "tldr": "Cloud application hosting platform Northflank experienced a security breach resulting in the unauthorized use of customers' AI API keys. This compromise necessitates immediate action from affected users.",
-      "action": "Customers of Northflank should immediately rotate all credentials and secrets stored on the platform, especially AI API keys. Review logs for unauthorized API usage.",
+      "tldr": "Cloud application hosting platform Northflank has suffered a security breach that resulted in the unauthorized use of customers' AI API keys. The company is advising all affected customers to immediately rotate credentials and secrets stored on its platform to mitigate further abuse.",
+      "action": "If you are a Northflank customer, immediately rotate all API keys, credentials, and secrets stored on the Northflank platform. Monitor logs for any unauthorized API usage or suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
       "source": "BleepingComputer"
     },
     {
-      "title": "$2 Million+ Drained From Polymarket Traders in New Supply Chain Attack",
-      "tldr": "Over $2 million was stolen from Polymarket traders due to a new supply chain attack, specifically via a hijacked DebugBear script. This incident highlights the risks associated with third-party dependencies in web applications.",
-      "action": "Users of Polymarket should monitor their accounts for unauthorized transactions. Organizations should review their supply chain security and third-party script integrations for compromise.",
+      "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+      "tldr": "Hackers have stolen approximately $2.7 million from Polymarket traders through a supply chain attack involving a hijacked DebugBear script. The compromise of a third-party script injected malicious code, enabling the financial drain from users.",
+      "action": "Users of Polymarket should monitor their crypto wallets for unauthorized transactions. Organizations should review third-party script integrations and implement Content Security Policies (CSPs) to mitigate supply chain risks.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/2-million-drained-from-polymarket-traders-in-new-supply-chain-attack/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "FBI Links North Korea's TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
-      "tldr": "The FBI has linked North Korea's TraderTraitor group to a massive $6.43 billion cryptocurrency heist from Binance. This marks one of the largest crypto thefts on record, highlighting state-sponsored cybercrime in the financial sector.",
-      "action": "Financial institutions and cryptocurrency exchanges should enhance their defenses against state-sponsored APTs like TraderTraitor, focusing on advanced threat detection and anomaly behavioral analysis.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+      "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
       "source": "The Hacker News"
     }
   ],
@@ -37,65 +37,65 @@
   "vulns": [
     {
       "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
-      "tldr": "A critical vulnerability (CVSS 10.0) in LXD and MicroCloud allows attackers to impersonate trusted clients without needing a private key. This flaw could lead to unauthorized access and privilege escalation within affected environments.",
-      "action": "Immediately identify and patch all LXD and MicroCloud installations. Restrict network access to management interfaces where possible.",
+      "tldr": "A critical vulnerability, rated CVSS 10.0, has been discovered in LXD and MicroCloud. This flaw allows unauthenticated attackers to impersonate trusted clients without needing a private key, potentially leading to unauthorized access and privilege escalation within cloud environments utilizing these technologies.",
+      "action": "Immediately apply patches or security updates released by the vendors for LXD and MicroCloud. Review access logs for any anomalous client connections or unauthorized activities.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "LXD and MicroCloud (all unpatched versions)",
-      "how_to_determine_impact": "Check for running LXD and MicroCloud instances. Verify versions against vendor advisories. Look for signs of unauthorized client connections.",
-      "tanium_query_hint": "Get Running Processes[\"lxd\", \"microcloud\"] from all machines with Computer Name matches \".+\"; Get Installed Applications from all machines with Computer Name matches \".+\" contains \"lxd\" or \"microcloud\"",
-      "rapid7_query_hint": "Search assets for installed software \"LXD\" or \"MicroCloud\". Filter for vulnerabilities with CVSS score 10.0.",
+      "affected_versions": "LXD and MicroCloud, specific vulnerable versions are unconfirmed but likely latest stable releases prior to patch.",
+      "how_to_determine_impact": "Verify if LXD or MicroCloud are deployed in your environment. Check for any non-standard configurations or exposure to untrusted networks. Review LXD/MicroCloud logs for unusual authentication attempts or client impersonation events.",
+      "tanium_query_hint": "Get Running Processes with CommandLine contains 'lxd' or 'microcloud' from all machines. Get Installed Applications contains 'LXD' or 'MicroCloud' from all machines. Check for relevant package versions.",
+      "rapid7_query_hint": "Search for assets running LXD or MicroCloud. Look for vulnerability checks related to 'LXD impersonation' or 'MicroCloud authentication bypass' once available. Use InsightAgent to query for installed package versions.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
+      "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
+      "tldr": "Attackers are actively chaining three vulnerabilities in Ivanti Connect Secure appliances to achieve unauthenticated root access. This chain of exploits bypasses existing security measures, posing a severe risk to organizations relying on these VPN solutions for remote access.",
+      "action": "Immediately apply all available patches from Ivanti for Connect Secure. Review logs for indicators of compromise (IOCs) related to these exploits, including unusual access patterns, unexplained reboots, or new processes. Isolate affected systems during patching.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Ivanti Connect Secure appliances, specific vulnerable versions are unconfirmed but presumed to be any unpatched versions prior to emergency updates.",
+      "how_to_determine_impact": "Check Ivanti Connect Secure appliance health, verify firmware versions against vendor advisories. Look for any signs of compromise as per Ivanti's guidance, such as unexplained configurations or process anomalies. Review forensic images if possible.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Source contains 'Ivanti' and Name contains 'Connect Secure'. Check File Version of core Ivanti binaries for indicators of compromise or unpatched status. Look for unusual process activity on Ivanti appliances.",
+      "rapid7_query_hint": "Search InsightVM for vulnerabilities associated with 'Ivanti Connect Secure' and 'root access'. Utilize the InsightAgent to scan for specific file hashes or configurations indicative of exploitation as provided by Ivanti. Filter assets by 'Ivanti' vendor.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
       "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
-      "tldr": "A proof-of-concept exploit, tracked as CVE-2026-58882, has been released for a \"SMS of Death\" vulnerability in Android. This flaw allows attackers to remotely disrupt cellular service or crash unpatched phones by sending a specially crafted text message.",
-      "action": "Apply all available Android security updates immediately. Block suspicious SMS messages if possible through network or device security solutions.",
+      "tldr": "A proof-of-concept exploit has been released for a newly patched Android vulnerability, CVE-2026-58882, dubbed \"SMS of Death.\" This flaw allows attackers to remotely disrupt cellular service or crash unpatched Android phones by sending a specially crafted text message.",
+      "action": "Users should update their Android devices to the latest available security patch immediately. Carriers and device manufacturers should expedite the release and deployment of patches.",
       "cve_ids": [
         "CVE-2026-58882"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Unpatched Android phones (requires device-specific vendor patch details for CVE-2026-58882)",
-      "how_to_determine_impact": "Verify Android security patch level on all corporate-managed Android devices. Compare against vendor-specific advisories for CVE-2026-58882.",
-      "tanium_query_hint": "Get Android OS Version and Patch Level from all machines with Device Type matches \"mobile\"",
-      "rapid7_query_hint": "Search vulnerabilities for CVE-2026-58882. Filter assets by mobile devices running Android and check patch levels.",
+      "affected_versions": "Unpatched Android phones, specific versions affected prior to the fix for CVE-2026-58882.",
+      "how_to_determine_impact": "Check the Android security patch level on your devices. Any device not updated with the patch addressing CVE-2026-58882 is vulnerable.",
+      "tanium_query_hint": "Not directly applicable for mobile devices unless managed via MDM. For managed Android devices, query MDM for reported OS versions and patch levels. 'Get Android OS Version' or 'Get Android Security Patch Level'.",
+      "rapid7_query_hint": "Not directly applicable for mobile devices unless integrated with a mobile security solution. For integrated MDM, search for devices with Android OS versions lacking the patch for CVE-2026-58882.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 High (Estimated)"
+      "cvss_score": "7.8 High"
     },
     {
       "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
-      "tldr": "Researchers have developed an exploit for a critical Linux kernel vulnerability impacting Multipath TCP (MPTCP) servers. This flaw allows unauthenticated attackers to remotely execute commands as root, posing a severe risk to affected systems.",
-      "action": "Identify and patch all Linux systems running MPTCP with the latest kernel updates. Disable MPTCP if not strictly required until patches can be applied.",
+      "tldr": "Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability impacting Multipath TCP (MPTCP) servers. This flaw allows unauthenticated attackers to remotely execute commands as root, posing a severe threat to affected Linux systems.",
+      "action": "Immediately identify all Linux systems running MPTCP listeners. Apply available kernel patches to remediate the vulnerability. If immediate patching is not possible, disable MPTCP where feasible or restrict network access to MPTCP ports.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Linux kernel versions utilizing Multipath TCP (MPTCP) listeners (specific versions depend on distribution and kernel)",
-      "how_to_determine_impact": "Check kernel versions on Linux servers, specifically if MPTCP is enabled (e.g., 'ip mptcp status'). Consult distribution-specific advisories for patch availability.",
-      "tanium_query_hint": "Get Kernel Version and Get Running Processes[\"mptcp\"] from all Linux machines.",
-      "rapid7_query_hint": "Search assets for Operating System starts with \"Linux\". Check kernel versions against known vulnerabilities. Look for MPTCP listener configurations.",
+      "affected_versions": "Linux kernel versions implementing MPTCP, specific vulnerable ranges are unconfirmed but likely recent kernels prior to patches.",
+      "how_to_determine_impact": "On Linux systems, check for MPTCP listener activity using 'ip a' or 'ss -tuln'. Verify kernel version ('uname -r') against vendor advisories for affected ranges. Look for unusual network activity on MPTCP ports.",
+      "tanium_query_hint": "Get Kernel Version from all machines with OS Name contains 'Linux'. Get Listen Ports from all machines and filter for MPTCP-related ports. Get Package List from all machines with OS Name contains 'Linux' and search for 'kernel-mptcp'.",
+      "rapid7_query_hint": "Search InsightVM for Linux assets with 'kernel-mptcp' packages or listening on MPTCP ports. Check vulnerability definitions for Linux kernel remote root vulnerabilities affecting MPTCP. Filter assets by 'Linux'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
-    },
-    {
-      "title": "Max-Severity GitLab Vulnerability Exploited Against Alpine Linux",
-      "tldr": "A maximum-severity GitLab vulnerability was actively exploited in an attempted RCE attack against Alpine Linux's development infrastructure. This critical flaw prompted Alpine Linux to rebuild its GitLab server and reset all user passwords.",
-      "action": "Immediately update GitLab instances to the latest patched version. Review GitLab logs for signs of compromise and enforce password resets for all users.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/max-severity-gitlab-vulnerability-exploited-against-alpine-linux/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "GitLab (specific version impacted requires vendor advisory, implies any unpatched critical versions)",
-      "how_to_determine_impact": "Verify GitLab instance versions against vendor advisories. Check for RCE attempts or suspicious activity in GitLab logs (e.g., /var/log/gitlab/gitlab-rails/production.log, /var/log/gitlab/nginx/access.log).",
-      "tanium_query_hint": "Get Installed Applications contains \"GitLab\" and Get File Version[\"/opt/gitlab/version-manifest.txt\"] from all machines.",
-      "rapid7_query_hint": "Search assets for installed software \"GitLab\". Filter for max-severity vulnerabilities. Review logs for suspicious activity.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical (Estimated)"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -26859,6 +26859,24 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "10.0 Critical (Estimated)",
         "category": "vulns"
+      },
+      {
+        "title": "Chainalysis Confirms Intrusion into Internal Tools and Exposure of Customer Identity Data",
+        "tldr": "Blockchain analytics firm Chainalysis disclosed a data breach resulting from \"offensive agentic techniques\" used by attackers to access internal systems. This intrusion exposed sensitive customer identity data, including names, email addresses, user IDs, and organizational roles.",
+        "action": "Customers should be vigilant for phishing attempts or unauthorized activity related to their Chainalysis accounts. Review and strengthen multi-factor authentication where applicable. Companies relying on Chainalysis should assess potential impact on their own security posture.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+        "tldr": "Hackers have stolen approximately $2.7 million from Polymarket traders through a supply chain attack involving a hijacked DebugBear script. The compromise of a third-party script injected malicious code, enabling the financial drain from users.",
+        "action": "Users of Polymarket should monitor their crypto wallets for unauthorized transactions. Organizations should review third-party script integrations and implement Content Security Policies (CSPs) to mitigate supply chain risks.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+        "source": "The Hacker News",
+        "category": "breaches"
       }
     ]
   }
