@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
-      "tldr": "The DarkBlinders group has successfully compromised an Israeli target and the Iraqi Kurdish Government Cloud Environment. This involves unauthorized access and potential data exfiltration from critical government infrastructure.",
-      "action": "Organizations, particularly those in government and critical sectors, must conduct thorough security audits, review access logs for anomalies, and bolster cloud environment security with advanced threat detection and strong access controls.",
+      "tldr": "The DarkBlinders group has successfully compromised an Israeli target and the Iraqi Kurdish Government's cloud environment. This indicates unauthorized access to sensitive systems and potentially data exfiltration from these critical entities.",
+      "action": "Investigate network logs and cloud environment access for indicators of compromise related to DarkBlinders, focusing on unusual access patterns and data egress. Implement enhanced access controls and monitoring.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
       "source": "The Hacker News"
     },
     {
       "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
-      "tldr": "Attackers are leveraging social engineering tactics by posing as IT support on Microsoft Teams and abusing Active Directory Certificate Services (AD CS) to gain unauthorized access and steal sensitive company data. This represents a multi-stage attack combining human and technical exploitation.",
-      "action": "Implement comprehensive security awareness training for all employees, focusing on social engineering and phishing on collaboration platforms. Enhance monitoring for suspicious AD CS activity and review certificate issuance policies.",
+      "tldr": "Attackers are using social engineering via Microsoft Teams, posing as IT support, to abuse Active Directory Certificate Services (AD CS). This enables them to gain unauthorized access and steal sensitive company data, highlighting a sophisticated blend of phishing and AD CS exploitation.",
+      "action": "Educate users on social engineering tactics and verify IT support requests. Audit AD CS configurations for misconfigurations and monitor for unusual certificate requests or usage. Implement multi-factor authentication widely.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
       "source": "The Hacker News"
     },
     {
-      "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
-      "tldr": "The VOLTA infostealer has emerged, utilizing AI models (Claude, Gemini, Kimi) to assess and prioritize victims based on their financial value, allowing for more targeted and impactful data theft operations.",
-      "action": "Deploy robust endpoint detection and response (EDR) solutions to identify and block infostealer activity. Enhance data loss prevention (DLP) policies and implement multi-factor authentication (MFA) across all critical systems.",
+      "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+      "tldr": "Attackers stole approximately $2.7 million from Polymarket traders by hijacking a DebugBear script. This supply chain attack compromised the integrity of the website, leading to unauthorized transactions and financial losses for users.",
+      "action": "Review third-party script integrations on web applications, implement Subresource Integrity (SRI) where possible. Monitor for unauthorized script modifications and unusual financial transactions. Users should verify website URLs and be cautious with linked crypto wallets.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
+      "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
       "source": "The Hacker News"
     },
     {
       "title": "Florida Student Aid Website Hack Puts Data of 4.9 Million People at Risk",
-      "tldr": "A cyberattack on the Florida Student Aid website has potentially compromised the personal data of 4.9 million individuals. This significant breach exposes sensitive PII to risk.",
-      "action": "Organizations handling large volumes of PII must implement stringent web application security, robust database encryption, and continuous vulnerability scanning. Ensure proper incident response plans are in place for large-scale data breaches.",
+      "tldr": "A hack of the Florida Student Aid website has potentially exposed the data of 4.9 million individuals. This significant data breach involves sensitive personal information, highlighting risks associated with educational and government-related online services.",
+      "action": "Monitor for any suspicious activity related to student aid accounts. Implement enhanced security measures for web applications handling sensitive personal data, including robust intrusion detection and prevention systems.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/florida-student-aid-website-hack-puts-data-of-4-9-million-people-at-risk/",
       "source": "SecurityWeek"
@@ -36,8 +36,8 @@
   "ransomware": [
     {
       "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
-      "tldr": "Synology has issued an urgent warning regarding an increase in C3RB3r ransomware attacks specifically targeting their Network-Attached Storage (NAS) devices, aiming to encrypt data and extort victims.",
-      "action": "All Synology NAS users must immediately update their devices to the latest firmware. Implement robust backup strategies with offline storage, enable two-factor authentication, and utilize strong, unique passwords for all accounts.",
+      "tldr": "Synology has issued a warning to its customers regarding a surge in C3RB3R ransomware attacks specifically targeting Synology Network-Attached Storage (NAS) devices. These attacks aim to encrypt data and demand ransom for its release.",
+      "action": "Immediately update all Synology NAS devices to the latest firmware. Ensure strong, unique passwords are used, and enable multi-factor authentication. Implement regular, offline backups of critical data.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
       "source": "BleepingComputer"
@@ -46,63 +46,63 @@
   "vulns": [
     {
       "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
-      "tldr": "Critical vulnerabilities in Langflow allow unauthenticated attackers to execute arbitrary code on servers, posing a severe remote code execution (RCE) risk.",
-      "action": "Immediately update all Langflow installations to the latest patched version. Implement network segmentation to limit exposure of Langflow instances.",
+      "tldr": "Critical vulnerabilities in Langflow allow unauthenticated attackers to execute arbitrary code on affected servers. These flaws pose a severe risk, potentially leading to full system compromise without prior authentication.",
+      "action": "Immediately identify and update all Langflow installations to the latest patched version. Implement network segmentation and restrict access to Langflow instances until remediation is complete.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Not specified in the provided information. Refer to vendor advisories for specific vulnerable versions.",
-      "how_to_determine_impact": "Identify all deployed Langflow instances. Verify the installed version against vendor advisories.",
-      "tanium_query_hint": "Get Installed Applications contains \"Langflow\" from all machines.",
-      "rapid7_query_hint": "Asset Search: installed_software_name = \"Langflow\". Check for relevant CVE ID (if available).",
+      "affected_versions": "All unpatched versions of Langflow.",
+      "how_to_determine_impact": "Inspect Langflow server logs for signs of unauthorized access or unusual process execution. Verify Langflow version numbers against vendor advisories.",
+      "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"Langflow\".",
+      "rapid7_query_hint": "Search for vulnerability ID specific to Langflow if available, otherwise search for assets with \"Langflow\" in software inventory and cross-reference with advisory.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
-      "tldr": "A maximum severity (CVSS 10.0) vulnerability in LXD and MicroCloud allows attackers to impersonate trusted clients without a private key, enabling unauthorized access and potential control over systems.",
-      "action": "Apply security patches for LXD and MicroCloud without delay. Review and harden authentication mechanisms for these services.",
+      "tldr": "A critical vulnerability (CVSS 10.0) in LXD and MicroCloud allows attackers to impersonate trusted clients without needing a private key. This flaw could lead to complete compromise of affected LXD and MicroCloud environments by bypassing authentication mechanisms.",
+      "action": "Immediately identify and update all LXD and MicroCloud installations to the latest patched versions as per vendor advisories. Restrict network access to management interfaces.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Not specified in the provided information. Refer to vendor advisories for specific vulnerable versions.",
-      "how_to_determine_impact": "Identify all deployed LXD and MicroCloud instances. Verify the installed version against vendor advisories.",
-      "tanium_query_hint": "Get Installed Applications contains \"LXD\" or \"MicroCloud\" from all machines.",
-      "rapid7_query_hint": "Asset Search: installed_software_name = \"LXD\" or \"MicroCloud\". Check for relevant CVE ID (if available).",
+      "affected_versions": "All unpatched versions of LXD and MicroCloud.",
+      "how_to_determine_impact": "Check the installed versions of LXD and MicroCloud against vendor advisories. Examine logs for unusual authentication attempts or unauthorized client impersonation.",
+      "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"LXD\" or \"MicroCloud\".",
+      "rapid7_query_hint": "Search for vulnerability ID specific to LXD/MicroCloud if available, otherwise search for assets with \"LXD\" or \"MicroCloud\" in software inventory and cross-reference with advisory.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
+      "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
+      "tldr": "BTCPay Server is warning users of active cryptocurrency thefts from \"hot wallets\" on outdated instances. Attackers are exploiting vulnerabilities present in older versions of the open-source payment processor, leading to direct financial loss.",
+      "action": "Immediately update all BTCPay Server instances to the latest recommended version. Audit all connected hot wallets and review transaction logs for unauthorized activity. Implement strong access controls and monitoring.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "All versions of BTCPay Server prior to the latest secure release.",
+      "how_to_determine_impact": "Check the installed version of BTCPay Server against the latest secure release. Review cryptocurrency wallet transaction logs for unauthorized outflows.",
+      "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"BTCPay Server\".",
+      "rapid7_query_hint": "Search for assets with \"BTCPay Server\" in software inventory and cross-reference with the latest vendor advisories for vulnerable versions. Monitor for associated indicators of compromise (IOCs) within InsightIDR.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical"
+    },
+    {
       "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
-      "tldr": "More than 1,000 internet-exposed GitLab servers remain unpatched against a maximum-severity remote code execution (RCE) flaw that is actively being exploited in the wild.",
-      "action": "Prioritize and immediately patch all internet-facing GitLab servers to mitigate the actively exploited RCE vulnerability. Conduct an urgent review of GitLab instance security and isolate unpatched systems.",
+      "tldr": "More than 1,000 internet-exposed GitLab servers remain unpatched against a maximum-severity flaw that is actively being exploited for remote code execution (RCE). This ongoing exploitation poses a significant risk to affected organizations.",
+      "action": "Immediately identify and patch all vulnerable GitLab servers to the latest secure version. Isolate any unpatched systems from the internet. Scan for indicators of compromise on affected servers.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Specific vulnerable versions not explicitly detailed in the headline; refer to GitLab's official security advisories for precise version ranges. Assume all unpatched internet-exposed instances are at risk.",
-      "how_to_determine_impact": "Check the version of all GitLab instances, especially those exposed to the internet. Look for indicators of compromise (IOCs) associated with this specific RCE vulnerability.",
-      "tanium_query_hint": "Get Installed Applications containing \"GitLab\" AND Get Network Connections containing \"listen\" from all machines.",
-      "rapid7_query_hint": "Asset Search: installed_software_name = \"GitLab\" AND exposed_on_internet = true. Refer to InsightVM vulnerability checks for GitLab RCE.",
+      "affected_versions": "All unpatched versions of GitLab susceptible to the actively exploited RCE flaw. Refer to GitLab's official security advisories for specific version details.",
+      "how_to_determine_impact": "Check the installed version of GitLab against official vendor security advisories. Look for signs of compromise such as unusual processes, unauthorized file modifications, or unexpected network connections on GitLab server hosts.",
+      "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"GitLab\".",
+      "rapid7_query_hint": "Search for vulnerability IDs related to recent GitLab RCE flaws. Alternatively, query for assets with \"GitLab\" in software inventory and filter by known vulnerable versions and exploitation status.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated based on \"maximum-severity flaw\" and active exploitation)"
-    },
-    {
-      "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
-      "tldr": "Ivanti has released urgent security updates for two new zero-day vulnerabilities in its Connect Secure (ICS) remote access gateways. These flaws have been actively exploited in the wild since October 1, often in a chained manner.",
-      "action": "Immediately apply all available security patches to Ivanti Connect Secure (ICS) devices. Conduct an in-depth forensic analysis for any signs of compromise or exploitation, as these are zero-day flaws.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Ivanti Connect Secure (ICS) series. Refer to official Ivanti security advisories for specific vulnerable versions and patch levels.",
-      "how_to_determine_impact": "Verify Ivanti Connect Secure appliance firmware versions. Implement IOC detection (e.g., specific file paths, process names, network connections) provided by Ivanti or CISA.",
-      "tanium_query_hint": "Get File Version[\"C:\\Program Files\\Ivanti\\Connect Secure\\...\\bin\\*.exe\"] OR Get Ivanti Connect Secure Version.",
-      "rapid7_query_hint": "Asset Search: installed_software_name = \"Ivanti Connect Secure\". Search InsightVM for related CVE IDs or vulnerability checks.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated based on zero-day, chained exploitation)"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -27108,6 +27108,117 @@
         "source_url": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
         "source": "The Hacker News",
         "category": "breaches"
+      }
+    ],
+    "2026-11-03": [
+      {
+        "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
+        "tldr": "The DarkBlinders group has successfully compromised an Israeli target and the Iraqi Kurdish Government's cloud environment. This indicates unauthorized access to sensitive systems and potentially data exfiltration from these critical entities.",
+        "action": "Investigate network logs and cloud environment access for indicators of compromise related to DarkBlinders, focusing on unusual access patterns and data egress. Implement enhanced access controls and monitoring.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
+        "tldr": "Attackers are using social engineering via Microsoft Teams, posing as IT support, to abuse Active Directory Certificate Services (AD CS). This enables them to gain unauthorized access and steal sensitive company data, highlighting a sophisticated blend of phishing and AD CS exploitation.",
+        "action": "Educate users on social engineering tactics and verify IT support requests. Audit AD CS configurations for misconfigurations and monitor for unusual certificate requests or usage. Implement multi-factor authentication widely.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+        "tldr": "Attackers stole approximately $2.7 million from Polymarket traders by hijacking a DebugBear script. This supply chain attack compromised the integrity of the website, leading to unauthorized transactions and financial losses for users.",
+        "action": "Review third-party script integrations on web applications, implement Subresource Integrity (SRI) where possible. Monitor for unauthorized script modifications and unusual financial transactions. Users should verify website URLs and be cautious with linked crypto wallets.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Florida Student Aid Website Hack Puts Data of 4.9 Million People at Risk",
+        "tldr": "A hack of the Florida Student Aid website has potentially exposed the data of 4.9 million individuals. This significant data breach involves sensitive personal information, highlighting risks associated with educational and government-related online services.",
+        "action": "Monitor for any suspicious activity related to student aid accounts. Implement enhanced security measures for web applications handling sensitive personal data, including robust intrusion detection and prevention systems.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/florida-student-aid-website-hack-puts-data-of-4-9-million-people-at-risk/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
+        "tldr": "Synology has issued a warning to its customers regarding a surge in C3RB3R ransomware attacks specifically targeting Synology Network-Attached Storage (NAS) devices. These attacks aim to encrypt data and demand ransom for its release.",
+        "action": "Immediately update all Synology NAS devices to the latest firmware. Ensure strong, unique passwords are used, and enable multi-factor authentication. Implement regular, offline backups of critical data.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
+        "tldr": "Critical vulnerabilities in Langflow allow unauthenticated attackers to execute arbitrary code on affected servers. These flaws pose a severe risk, potentially leading to full system compromise without prior authentication.",
+        "action": "Immediately identify and update all Langflow installations to the latest patched version. Implement network segmentation and restrict access to Langflow instances until remediation is complete.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "All unpatched versions of Langflow.",
+        "how_to_determine_impact": "Inspect Langflow server logs for signs of unauthorized access or unusual process execution. Verify Langflow version numbers against vendor advisories.",
+        "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"Langflow\".",
+        "rapid7_query_hint": "Search for vulnerability ID specific to Langflow if available, otherwise search for assets with \"Langflow\" in software inventory and cross-reference with advisory.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
+        "tldr": "A critical vulnerability (CVSS 10.0) in LXD and MicroCloud allows attackers to impersonate trusted clients without needing a private key. This flaw could lead to complete compromise of affected LXD and MicroCloud environments by bypassing authentication mechanisms.",
+        "action": "Immediately identify and update all LXD and MicroCloud installations to the latest patched versions as per vendor advisories. Restrict network access to management interfaces.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "All unpatched versions of LXD and MicroCloud.",
+        "how_to_determine_impact": "Check the installed versions of LXD and MicroCloud against vendor advisories. Examine logs for unusual authentication attempts or unauthorized client impersonation.",
+        "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"LXD\" or \"MicroCloud\".",
+        "rapid7_query_hint": "Search for vulnerability ID specific to LXD/MicroCloud if available, otherwise search for assets with \"LXD\" or \"MicroCloud\" in software inventory and cross-reference with advisory.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
+        "tldr": "BTCPay Server is warning users of active cryptocurrency thefts from \"hot wallets\" on outdated instances. Attackers are exploiting vulnerabilities present in older versions of the open-source payment processor, leading to direct financial loss.",
+        "action": "Immediately update all BTCPay Server instances to the latest recommended version. Audit all connected hot wallets and review transaction logs for unauthorized activity. Implement strong access controls and monitoring.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All versions of BTCPay Server prior to the latest secure release.",
+        "how_to_determine_impact": "Check the installed version of BTCPay Server against the latest secure release. Review cryptocurrency wallet transaction logs for unauthorized outflows.",
+        "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"BTCPay Server\".",
+        "rapid7_query_hint": "Search for assets with \"BTCPay Server\" in software inventory and cross-reference with the latest vendor advisories for vulnerable versions. Monitor for associated indicators of compromise (IOCs) within InsightIDR.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
+        "tldr": "More than 1,000 internet-exposed GitLab servers remain unpatched against a maximum-severity flaw that is actively being exploited for remote code execution (RCE). This ongoing exploitation poses a significant risk to affected organizations.",
+        "action": "Immediately identify and patch all vulnerable GitLab servers to the latest secure version. Isolate any unpatched systems from the internet. Scan for indicators of compromise on affected servers.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "All unpatched versions of GitLab susceptible to the actively exploited RCE flaw. Refer to GitLab's official security advisories for specific version details.",
+        "how_to_determine_impact": "Check the installed version of GitLab against official vendor security advisories. Look for signs of compromise such as unusual processes, unauthorized file modifications, or unexpected network connections on GitLab server hosts.",
+        "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"GitLab\".",
+        "rapid7_query_hint": "Search for vulnerability IDs related to recent GitLab RCE flaws. Alternatively, query for assets with \"GitLab\" in software inventory and filter by known vulnerable versions and exploitation status.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
       }
     ]
   }
