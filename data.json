@@ -1,33 +1,33 @@
 {
   "breaches": [
     {
-      "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
-      "tldr": "The DarkBlinders group has successfully compromised an Israeli target and the Iraqi Kurdish Government's cloud environment. This indicates unauthorized access to sensitive systems and potentially data exfiltration from these critical entities.",
-      "action": "Investigate network logs and cloud environment access for indicators of compromise related to DarkBlinders, focusing on unusual access patterns and data egress. Implement enhanced access controls and monitoring.",
+      "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+      "tldr": "Chainstack announced a breach of their production systems, which resulted in the exposure of customer data, including password hashes. Users are advised to take immediate action to secure their accounts.",
+      "action": "Customers of Chainstack should immediately change their passwords, enable multi-factor authentication (MFA) if not already active, and monitor their accounts for any suspicious activity.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
+      "source_url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
-      "tldr": "Attackers are using social engineering via Microsoft Teams, posing as IT support, to abuse Active Directory Certificate Services (AD CS). This enables them to gain unauthorized access and steal sensitive company data, highlighting a sophisticated blend of phishing and AD CS exploitation.",
-      "action": "Educate users on social engineering tactics and verify IT support requests. Audit AD CS configurations for misconfigurations and monitor for unusual certificate requests or usage. Implement multi-factor authentication widely.",
+      "title": "Harvard University data breach exposed info of 851,000 accounts",
+      "tldr": "Harvard University's Alumni Affairs and Development systems were breached in November 2025, leading to the theft of data associated with over 850,000 unique email addresses. This data was subsequently found on breach notification services.",
+      "action": "Individuals associated with Harvard University, particularly those with Alumni Affairs and Development accounts, should monitor their email and other personal accounts for suspicious activity and consider changing passwords.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
+      "source": "BleepingComputer"
     },
     {
-      "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
-      "tldr": "Attackers stole approximately $2.7 million from Polymarket traders by hijacking a DebugBear script. This supply chain attack compromised the integrity of the website, leading to unauthorized transactions and financial losses for users.",
-      "action": "Review third-party script integrations on web applications, implement Subresource Integrity (SRI) where possible. Monitor for unauthorized script modifications and unusual financial transactions. Users should verify website URLs and be cautious with linked crypto wallets.",
+      "title": "Frontline Education Data Breach Impacts Over 1.3 Million",
+      "tldr": "Frontline Education experienced a data breach impacting over 1.3 million individuals. While specific data types are not fully detailed, sensitive personal information is likely at risk.",
+      "action": "Individuals who use Frontline Education services should be vigilant for phishing attempts and unexpected communications, and consider enabling multi-factor authentication where available.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
-      "source": "The Hacker News"
+      "source_url": "https://www.securityweek.com/frontline-education-data-breach-impacts-over-1-3-million/",
+      "source": "SecurityWeek"
     },
     {
       "title": "Florida Student Aid Website Hack Puts Data of 4.9 Million People at Risk",
-      "tldr": "A hack of the Florida Student Aid website has potentially exposed the data of 4.9 million individuals. This significant data breach involves sensitive personal information, highlighting risks associated with educational and government-related online services.",
-      "action": "Monitor for any suspicious activity related to student aid accounts. Implement enhanced security measures for web applications handling sensitive personal data, including robust intrusion detection and prevention systems.",
+      "tldr": "A hack on Florida's student aid website has potentially compromised the data of 4.9 million individuals. This significant breach puts a large number of students and financial aid applicants at risk of identity theft and other malicious activities.",
+      "action": "Individuals who have used Florida's student aid website should immediately change passwords for related accounts, monitor financial statements, and consider signing up for identity theft protection services.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/florida-student-aid-website-hack-puts-data-of-4-9-million-people-at-risk/",
       "source": "SecurityWeek"
@@ -35,74 +35,83 @@
   ],
   "ransomware": [
     {
-      "title": "Synology warns of C3RB3R ransomware attacks targeting NAS devices",
-      "tldr": "Synology has issued a warning to its customers regarding a surge in C3RB3R ransomware attacks specifically targeting Synology Network-Attached Storage (NAS) devices. These attacks aim to encrypt data and demand ransom for its release.",
-      "action": "Immediately update all Synology NAS devices to the latest firmware. Ensure strong, unique passwords are used, and enable multi-factor authentication. Implement regular, offline backups of critical data.",
+      "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
+      "tldr": "A UK school estate was targeted by a 3AM ransomware affiliate. The attack, potentially assisted by AI, successfully encrypted approximately 37 out of 50 machines accessed through an unmanaged host, leading to operational disruption.",
+      "action": "Review and secure all unmanaged hosts within the network. Ensure robust endpoint detection and response (EDR) solutions are in place and regularly updated. Implement strong network segmentation and backup strategies.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
       "source": "BleepingComputer"
     }
   ],
   "vulns": [
     {
-      "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
-      "tldr": "Critical vulnerabilities in Langflow allow unauthenticated attackers to execute arbitrary code on affected servers. These flaws pose a severe risk, potentially leading to full system compromise without prior authentication.",
-      "action": "Immediately identify and update all Langflow installations to the latest patched version. Implement network segmentation and restrict access to Langflow instances until remediation is complete.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
+      "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
+      "tldr": "Red Hat has released patches for a critical 9.8-rated Linux TCP RCE flaw. Ubuntu is also preparing fixes for testing. This vulnerability allows for remote code execution and poses a severe risk to affected Linux systems.",
+      "action": "Immediately apply available patches from Red Hat and monitor for Ubuntu's official release. Prioritize patching internet-facing and critical Linux systems first.",
+      "cve_ids": [
+        "CVE-UNKNOWN-2026-LinuxTCP"
+      ],
+      "source_url": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "All unpatched versions of Langflow.",
-      "how_to_determine_impact": "Inspect Langflow server logs for signs of unauthorized access or unusual process execution. Verify Langflow version numbers against vendor advisories.",
-      "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"Langflow\".",
-      "rapid7_query_hint": "Search for vulnerability ID specific to Langflow if available, otherwise search for assets with \"Langflow\" in software inventory and cross-reference with advisory.",
+      "affected_versions": "Specific versions of Red Hat Enterprise Linux and Ubuntu operating systems; details available in vendor advisories.",
+      "how_to_determine_impact": "Check kernel versions and applied patches on Linux systems. Consult Red Hat and Ubuntu security advisories for specific version ranges and detection scripts.",
+      "tanium_query_hint": "Get Kernel Version from all machines; Get Installed Patches from all machines; Get Open TCP Ports from all machines",
+      "rapid7_query_hint": "Search for vulnerability ID 'Red Hat TCP RCE' or similar in InsightVM. Query assets for specific kernel versions using `Software.Name contains 'Linux kernel' AND Software.Version < 'affected_version'`",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
-      "tldr": "A critical vulnerability (CVSS 10.0) in LXD and MicroCloud allows attackers to impersonate trusted clients without needing a private key. This flaw could lead to complete compromise of affected LXD and MicroCloud environments by bypassing authentication mechanisms.",
-      "action": "Immediately identify and update all LXD and MicroCloud installations to the latest patched versions as per vendor advisories. Restrict network access to management interfaces.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
+      "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+      "tldr": "Barracuda Networks has warned customers about critical vulnerabilities that, when chained, can bypass authorization and lead to root access on affected devices. These flaws pose a severe risk to the integrity of the devices.",
+      "action": "Apply the latest security patches provided by Barracuda Networks immediately. Review network logs for any unusual activity originating from Barracuda devices.",
+      "cve_ids": [
+        "CVE-UNKNOWN-2026-Barracuda-1",
+        "CVE-UNKNOWN-2026-Barracuda-2"
+      ],
+      "source_url": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "All unpatched versions of LXD and MicroCloud.",
-      "how_to_determine_impact": "Check the installed versions of LXD and MicroCloud against vendor advisories. Examine logs for unusual authentication attempts or unauthorized client impersonation.",
-      "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"LXD\" or \"MicroCloud\".",
-      "rapid7_query_hint": "Search for vulnerability ID specific to LXD/MicroCloud if available, otherwise search for assets with \"LXD\" or \"MicroCloud\" in software inventory and cross-reference with advisory.",
+      "affected_versions": "Specific Barracuda Networks devices and firmware versions; consult vendor advisories for exact details.",
+      "how_to_determine_impact": "Verify the firmware version of all Barracuda devices in your environment against the vendor's security advisory. Look for any unauthorized access attempts in device logs.",
+      "tanium_query_hint": "Get Barracuda Firmware Version from all machines; Get Running Processes from all machines where Process Name contains 'barracuda' to check for suspicious processes.",
+      "rapid7_query_hint": "Search for vulnerability ID 'Barracuda Root Access' or relevant CVEs in InsightVM. Filter assets by `Vendor Name contains 'Barracuda'` and `Software.Version < 'affected_version'`",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "BTCPay Server warns of hot wallet crypto thefts on outdated instances",
-      "tldr": "BTCPay Server is warning users of active cryptocurrency thefts from \"hot wallets\" on outdated instances. Attackers are exploiting vulnerabilities present in older versions of the open-source payment processor, leading to direct financial loss.",
-      "action": "Immediately update all BTCPay Server instances to the latest recommended version. Audit all connected hot wallets and review transaction logs for unauthorized activity. Implement strong access controls and monitoring.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/btcpay-server-warns-of-hot-wallet-thefts-targeting-outdated-instances/",
-      "source": "BleepingComputer",
+      "title": "Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware",
+      "tldr": "Russia-aligned Gorbag hackers are actively exploiting a vulnerability in WinRAR to deploy data-stealing malware. This indicates active exploitation of a known or newly discovered flaw in the popular archiving software, leading to potential data compromise.",
+      "action": "Update WinRAR to the latest version immediately. Deploy updated endpoint detection and response (EDR) signatures to detect the Gorbag malware. Educate users about phishing attempts related to archives.",
+      "cve_ids": [
+        "CVE-UNKNOWN-2026-WinRAR"
+      ],
+      "source_url": "https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html",
+      "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "All versions of BTCPay Server prior to the latest secure release.",
-      "how_to_determine_impact": "Check the installed version of BTCPay Server against the latest secure release. Review cryptocurrency wallet transaction logs for unauthorized outflows.",
-      "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"BTCPay Server\".",
-      "rapid7_query_hint": "Search for assets with \"BTCPay Server\" in software inventory and cross-reference with the latest vendor advisories for vulnerable versions. Monitor for associated indicators of compromise (IOCs) within InsightIDR.",
+      "affected_versions": "Specific versions of WinRAR archiving software; consult vendor advisories for patch information.",
+      "how_to_determine_impact": "Identify all systems with WinRAR installed. Check for any unusual outgoing network connections or presence of known Gorbag malware indicators of compromise (IOCs).",
+      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'WinRAR'; Get Running Processes from all machines where CommandLine contains 'winrar' and suspicious activity.",
+      "rapid7_query_hint": "Search for vulnerability ID 'WinRAR Gorbag' or specific CVE if identified, in InsightVM. Query assets for `Software.Name contains 'WinRAR' AND Software.Version < 'patched_version'`",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.0 Critical"
     },
     {
-      "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
-      "tldr": "More than 1,000 internet-exposed GitLab servers remain unpatched against a maximum-severity flaw that is actively being exploited for remote code execution (RCE). This ongoing exploitation poses a significant risk to affected organizations.",
-      "action": "Immediately identify and patch all vulnerable GitLab servers to the latest secure version. Isolate any unpatched systems from the internet. Scan for indicators of compromise on affected servers.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
-      "source": "BleepingComputer",
+      "title": "Critical Node-RED Flaw Exploited in Attacks",
+      "tldr": "A critical vulnerability in Node-RED is being actively exploited by attackers. This flaw allows unauthorized access or control, posing a significant risk to systems using Node-RED for automation and IoT integration.",
+      "action": "Immediately patch Node-RED installations to the latest secure version. Review Node-RED flows and logs for any signs of unauthorized modification or access. Isolate affected systems if patching is not immediately feasible.",
+      "cve_ids": [
+        "CVE-UNKNOWN-2026-Node-RED"
+      ],
+      "source_url": "https://www.securityweek.com/critical-node-red-flaw-exploited-in-attacks/",
+      "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "All unpatched versions of GitLab susceptible to the actively exploited RCE flaw. Refer to GitLab's official security advisories for specific version details.",
-      "how_to_determine_impact": "Check the installed version of GitLab against official vendor security advisories. Look for signs of compromise such as unusual processes, unauthorized file modifications, or unexpected network connections on GitLab server hosts.",
-      "tanium_query_hint": "Get Installed Applications|select Computer Name, Application Name, Application Version from all machines where Application Name contains \"GitLab\".",
-      "rapid7_query_hint": "Search for vulnerability IDs related to recent GitLab RCE flaws. Alternatively, query for assets with \"GitLab\" in software inventory and filter by known vulnerable versions and exploitation status.",
+      "affected_versions": "Specific versions of Node-RED; consult vendor advisories for exact vulnerable versions.",
+      "how_to_determine_impact": "Identify all systems running Node-RED. Verify the installed version against official security advisories. Check Node-RED server logs for suspicious access or deployments.",
+      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Node-RED'; Get Process CommandLine from all machines where Process Name contains 'node' and arguments relate to Node-RED.",
+      "rapid7_query_hint": "Search for vulnerability ID 'Node-RED Critical Flaw' or relevant CVEs in InsightVM. Query assets using `Software.Name contains 'Node-RED' AND Software.Version < 'patched_version'`",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.5 Critical"
     }
   ],
   "insurance": [],
@@ -27218,6 +27227,115 @@
         "rapid7_query_hint": "Search for vulnerability IDs related to recent GitLab RCE flaws. Alternatively, query for assets with \"GitLab\" in software inventory and filter by known vulnerable versions and exploitation status.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+        "tldr": "Chainstack announced a breach of their production systems, which resulted in the exposure of customer data, including password hashes. Users are advised to take immediate action to secure their accounts.",
+        "action": "Customers of Chainstack should immediately change their passwords, enable multi-factor authentication (MFA) if not already active, and monitor their accounts for any suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Harvard University data breach exposed info of 851,000 accounts",
+        "tldr": "Harvard University's Alumni Affairs and Development systems were breached in November 2025, leading to the theft of data associated with over 850,000 unique email addresses. This data was subsequently found on breach notification services.",
+        "action": "Individuals associated with Harvard University, particularly those with Alumni Affairs and Development accounts, should monitor their email and other personal accounts for suspicious activity and consider changing passwords.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Frontline Education Data Breach Impacts Over 1.3 Million",
+        "tldr": "Frontline Education experienced a data breach impacting over 1.3 million individuals. While specific data types are not fully detailed, sensitive personal information is likely at risk.",
+        "action": "Individuals who use Frontline Education services should be vigilant for phishing attempts and unexpected communications, and consider enabling multi-factor authentication where available.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/frontline-education-data-breach-impacts-over-1-3-million/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
+        "tldr": "A UK school estate was targeted by a 3AM ransomware affiliate. The attack, potentially assisted by AI, successfully encrypted approximately 37 out of 50 machines accessed through an unmanaged host, leading to operational disruption.",
+        "action": "Review and secure all unmanaged hosts within the network. Ensure robust endpoint detection and response (EDR) solutions are in place and regularly updated. Implement strong network segmentation and backup strategies.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
+        "tldr": "Red Hat has released patches for a critical 9.8-rated Linux TCP RCE flaw. Ubuntu is also preparing fixes for testing. This vulnerability allows for remote code execution and poses a severe risk to affected Linux systems.",
+        "action": "Immediately apply available patches from Red Hat and monitor for Ubuntu's official release. Prioritize patching internet-facing and critical Linux systems first.",
+        "cve_ids": [
+          "CVE-UNKNOWN-2026-LinuxTCP"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific versions of Red Hat Enterprise Linux and Ubuntu operating systems; details available in vendor advisories.",
+        "how_to_determine_impact": "Check kernel versions and applied patches on Linux systems. Consult Red Hat and Ubuntu security advisories for specific version ranges and detection scripts.",
+        "tanium_query_hint": "Get Kernel Version from all machines; Get Installed Patches from all machines; Get Open TCP Ports from all machines",
+        "rapid7_query_hint": "Search for vulnerability ID 'Red Hat TCP RCE' or similar in InsightVM. Query assets for specific kernel versions using `Software.Name contains 'Linux kernel' AND Software.Version < 'affected_version'`",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+        "tldr": "Barracuda Networks has warned customers about critical vulnerabilities that, when chained, can bypass authorization and lead to root access on affected devices. These flaws pose a severe risk to the integrity of the devices.",
+        "action": "Apply the latest security patches provided by Barracuda Networks immediately. Review network logs for any unusual activity originating from Barracuda devices.",
+        "cve_ids": [
+          "CVE-UNKNOWN-2026-Barracuda-1",
+          "CVE-UNKNOWN-2026-Barracuda-2"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Specific Barracuda Networks devices and firmware versions; consult vendor advisories for exact details.",
+        "how_to_determine_impact": "Verify the firmware version of all Barracuda devices in your environment against the vendor's security advisory. Look for any unauthorized access attempts in device logs.",
+        "tanium_query_hint": "Get Barracuda Firmware Version from all machines; Get Running Processes from all machines where Process Name contains 'barracuda' to check for suspicious processes.",
+        "rapid7_query_hint": "Search for vulnerability ID 'Barracuda Root Access' or relevant CVEs in InsightVM. Filter assets by `Vendor Name contains 'Barracuda'` and `Software.Version < 'affected_version'`",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware",
+        "tldr": "Russia-aligned Gorbag hackers are actively exploiting a vulnerability in WinRAR to deploy data-stealing malware. This indicates active exploitation of a known or newly discovered flaw in the popular archiving software, leading to potential data compromise.",
+        "action": "Update WinRAR to the latest version immediately. Deploy updated endpoint detection and response (EDR) signatures to detect the Gorbag malware. Educate users about phishing attempts related to archives.",
+        "cve_ids": [
+          "CVE-UNKNOWN-2026-WinRAR"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Specific versions of WinRAR archiving software; consult vendor advisories for patch information.",
+        "how_to_determine_impact": "Identify all systems with WinRAR installed. Check for any unusual outgoing network connections or presence of known Gorbag malware indicators of compromise (IOCs).",
+        "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'WinRAR'; Get Running Processes from all machines where CommandLine contains 'winrar' and suspicious activity.",
+        "rapid7_query_hint": "Search for vulnerability ID 'WinRAR Gorbag' or specific CVE if identified, in InsightVM. Query assets for `Software.Name contains 'WinRAR' AND Software.Version < 'patched_version'`",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical Node-RED Flaw Exploited in Attacks",
+        "tldr": "A critical vulnerability in Node-RED is being actively exploited by attackers. This flaw allows unauthorized access or control, posing a significant risk to systems using Node-RED for automation and IoT integration.",
+        "action": "Immediately patch Node-RED installations to the latest secure version. Review Node-RED flows and logs for any signs of unauthorized modification or access. Isolate affected systems if patching is not immediately feasible.",
+        "cve_ids": [
+          "CVE-UNKNOWN-2026-Node-RED"
+        ],
+        "source_url": "https://www.securityweek.com/critical-node-red-flaw-exploited-in-attacks/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Specific versions of Node-RED; consult vendor advisories for exact vulnerable versions.",
+        "how_to_determine_impact": "Identify all systems running Node-RED. Verify the installed version against official security advisories. Check Node-RED server logs for suspicious access or deployments.",
+        "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Node-RED'; Get Process CommandLine from all machines where Process Name contains 'node' and arguments relate to Node-RED.",
+        "rapid7_query_hint": "Search for vulnerability ID 'Node-RED Critical Flaw' or relevant CVEs in InsightVM. Query assets using `Software.Name contains 'Node-RED' AND Software.Version < 'patched_version'`",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.5 Critical",
         "category": "vulns"
       }
     ]
