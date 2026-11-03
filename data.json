@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
-      "tldr": "Chainstack announced a breach of their production systems, which resulted in the exposure of customer data, including password hashes. Users are advised to take immediate action to secure their accounts.",
-      "action": "Customers of Chainstack should immediately change their passwords, enable multi-factor authentication (MFA) if not already active, and monitor their accounts for any suspicious activity.",
+      "tldr": "Blockchain infrastructure provider Chainstack has reported a breach of its production systems. The incident led to the exposure of sensitive customer data and password hashes, raising concerns about potential account compromise.",
+      "action": "All Chainstack users should immediately change their passwords for Chainstack accounts and any other services where similar credentials were used. Additionally, enable multi-factor authentication (MFA) on all critical accounts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Harvard University data breach exposed info of 851,000 accounts",
-      "tldr": "Harvard University's Alumni Affairs and Development systems were breached in November 2025, leading to the theft of data associated with over 850,000 unique email addresses. This data was subsequently found on breach notification services.",
-      "action": "Individuals associated with Harvard University, particularly those with Alumni Affairs and Development accounts, should monitor their email and other personal accounts for suspicious activity and consider changing passwords.",
+      "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
+      "tldr": "Binance disclosed a staggering $6.43 billion theft, attributing it to North Korean hackers who used fake job interviews and AI tools. This elaborate social engineering attack tricked an employee into installing malware, compromising wallet infrastructure.",
+      "action": "Enhance employee security training to cover sophisticated social engineering, especially AI-assisted tactics. Implement robust endpoint detection and response (EDR) solutions and strengthen access controls for sensitive systems, particularly those managing high-value assets.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/harvard-university-data-breach-exposed-info-of-851-000-accounts/",
-      "source": "BleepingComputer"
+      "source_url": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
+      "source": "The Hacker News"
     },
     {
-      "title": "Frontline Education Data Breach Impacts Over 1.3 Million",
-      "tldr": "Frontline Education experienced a data breach impacting over 1.3 million individuals. While specific data types are not fully detailed, sensitive personal information is likely at risk.",
-      "action": "Individuals who use Frontline Education services should be vigilant for phishing attempts and unexpected communications, and consider enabling multi-factor authentication where available.",
+      "title": "cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes",
+      "tldr": "The update channel for cPGuard, a security plugin for Linux web servers, was compromised, leading to the backdooring of Linux servers. This supply chain attack enabled threat actors to collect password hashes from affected systems.",
+      "action": "Immediately verify the integrity of cPGuard installations and their update sources on all Linux servers. Rotate all administrative and user credentials on potentially affected servers. Implement strong monitoring for unusual processes or outbound connections from Linux hosts.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/frontline-education-data-breach-impacts-over-1-3-million/",
-      "source": "SecurityWeek"
+      "source_url": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
+      "source": "The Hacker News"
     },
     {
       "title": "Florida Student Aid Website Hack Puts Data of 4.9 Million People at Risk",
-      "tldr": "A hack on Florida's student aid website has potentially compromised the data of 4.9 million individuals. This significant breach puts a large number of students and financial aid applicants at risk of identity theft and other malicious activities.",
-      "action": "Individuals who have used Florida's student aid website should immediately change passwords for related accounts, monitor financial statements, and consider signing up for identity theft protection services.",
+      "tldr": "The Florida Student Aid website has suffered a significant hack, potentially exposing the personal data of 4.9 million individuals. This breach puts sensitive student aid-related information at risk, necessitating immediate action.",
+      "action": "Individuals who have used the Florida Student Aid website should closely monitor their credit reports and financial accounts for any suspicious activity. The responsible organization must implement enhanced security measures, conduct a full forensic investigation, and provide breach notifications with credit monitoring to all affected parties.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/florida-student-aid-website-hack-puts-data-of-4-9-million-people-at-risk/",
       "source": "SecurityWeek"
@@ -36,8 +36,8 @@
   "ransomware": [
     {
       "title": "UK school estate hit by 3AM ransomware in suspected AI-assisted attack",
-      "tldr": "A UK school estate was targeted by a 3AM ransomware affiliate. The attack, potentially assisted by AI, successfully encrypted approximately 37 out of 50 machines accessed through an unmanaged host, leading to operational disruption.",
-      "action": "Review and secure all unmanaged hosts within the network. Ensure robust endpoint detection and response (EDR) solutions are in place and regularly updated. Implement strong network segmentation and backup strategies.",
+      "tldr": "A 3AM ransomware affiliate targeted a UK school estate, encrypting approximately 37 out of 50 machines through an unmanaged host in a suspected AI-assisted attack. This incident highlights the evolving nature of ransomware tactics.",
+      "action": "Immediately isolate affected systems, activate incident response procedures, and restore data from secure, tested backups. Enhance network segmentation, remove unmanaged hosts from critical networks, and implement AI-aware endpoint protection to detect novel attack methods.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/uk-school-estate-hit-by-3am-ransomware-in-suspected-ai-assisted-attack/",
       "source": "BleepingComputer"
@@ -45,73 +45,64 @@
   ],
   "vulns": [
     {
+      "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+      "tldr": "Critical vulnerabilities in Barracuda products can be chained together to bypass authorization mechanisms and achieve root access. This poses a severe risk, allowing complete control over affected network devices.",
+      "action": "Immediately apply all available security patches and firmware updates released by Barracuda for affected products. Conduct a thorough audit of Barracuda device configurations and logs for any indicators of compromise, unauthorized access, or suspicious command execution.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Refer to Barracuda's official security advisories for the precise list of affected products and their vulnerable version ranges.",
+      "how_to_determine_impact": "Check the firmware or software version of your Barracuda appliances. Compare this against the versions listed in Barracuda's official security bulletin to identify vulnerable systems. Look for unusual network activity or unauthorized changes.",
+      "tanium_query_hint": "Use 'Get Installed Software Version' or 'Get File Version' for Barracuda-specific binaries. Check device configuration for any unauthorized changes or newly created root accounts. Query 'Get Running Processes' for suspicious processes.",
+      "rapid7_query_hint": "Run a vulnerability scan specifically targeting Barracuda devices. Search InsightVM for vulnerability definitions related to Barracuda critical flaws. Monitor for unauthorized root access events or suspicious login activity in InsightIDR.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated based on capability for root access and chaining)"
+    },
+    {
       "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
-      "tldr": "Red Hat has released patches for a critical 9.8-rated Linux TCP RCE flaw. Ubuntu is also preparing fixes for testing. This vulnerability allows for remote code execution and poses a severe risk to affected Linux systems.",
-      "action": "Immediately apply available patches from Red Hat and monitor for Ubuntu's official release. Prioritize patching internet-facing and critical Linux systems first.",
-      "cve_ids": [
-        "CVE-UNKNOWN-2026-LinuxTCP"
-      ],
+      "tldr": "Red Hat has released critical patches for a 9.8-rated Linux TCP Remote Code Execution (RCE) flaw, with Ubuntu preparing similar fixes. This severe vulnerability could allow unauthenticated attackers to execute arbitrary code remotely on affected Linux systems.",
+      "action": "Prioritize and immediately apply the latest security patches from Red Hat for all vulnerable Linux distributions. For Ubuntu, monitor official channels for patch release and apply promptly upon availability. Focus on systems exposed to untrusted networks.",
+      "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Specific versions of Red Hat Enterprise Linux and Ubuntu operating systems; details available in vendor advisories.",
-      "how_to_determine_impact": "Check kernel versions and applied patches on Linux systems. Consult Red Hat and Ubuntu security advisories for specific version ranges and detection scripts.",
-      "tanium_query_hint": "Get Kernel Version from all machines; Get Installed Patches from all machines; Get Open TCP Ports from all machines",
-      "rapid7_query_hint": "Search for vulnerability ID 'Red Hat TCP RCE' or similar in InsightVM. Query assets for specific kernel versions using `Software.Name contains 'Linux kernel' AND Software.Version < 'affected_version'`",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
-      "tldr": "Barracuda Networks has warned customers about critical vulnerabilities that, when chained, can bypass authorization and lead to root access on affected devices. These flaws pose a severe risk to the integrity of the devices.",
-      "action": "Apply the latest security patches provided by Barracuda Networks immediately. Review network logs for any unusual activity originating from Barracuda devices.",
-      "cve_ids": [
-        "CVE-UNKNOWN-2026-Barracuda-1",
-        "CVE-UNKNOWN-2026-Barracuda-2"
-      ],
-      "source_url": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Specific Barracuda Networks devices and firmware versions; consult vendor advisories for exact details.",
-      "how_to_determine_impact": "Verify the firmware version of all Barracuda devices in your environment against the vendor's security advisory. Look for any unauthorized access attempts in device logs.",
-      "tanium_query_hint": "Get Barracuda Firmware Version from all machines; Get Running Processes from all machines where Process Name contains 'barracuda' to check for suspicious processes.",
-      "rapid7_query_hint": "Search for vulnerability ID 'Barracuda Root Access' or relevant CVEs in InsightVM. Filter assets by `Vendor Name contains 'Barracuda'` and `Software.Version < 'affected_version'`",
+      "affected_versions": "Specific Linux kernel versions and distributions for Red Hat Enterprise Linux and Ubuntu. Refer to official Red Hat and Ubuntu security advisories for exact vulnerable versions.",
+      "how_to_determine_impact": "Check the kernel version of your Linux systems using 'uname -r'. Compare against the Red Hat and Ubuntu security advisories for the exact vulnerable versions. Look for signs of unusual TCP activity.",
+      "tanium_query_hint": "Get Kernel Version from all Linux machines and compare against known vulnerable versions. Use 'Get Linux Patch Status' sensor. Query 'Get Network Connections' for unusual TCP connections.",
+      "rapid7_query_hint": "Search for vulnerabilities related to Red Hat/Ubuntu TCP RCE in InsightVM. Filter assets by Linux operating system and kernel version. Look for relevant InsightAgent Linux checks for kernel vulnerabilities.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware",
-      "tldr": "Russia-aligned Gorbag hackers are actively exploiting a vulnerability in WinRAR to deploy data-stealing malware. This indicates active exploitation of a known or newly discovered flaw in the popular archiving software, leading to potential data compromise.",
-      "action": "Update WinRAR to the latest version immediately. Deploy updated endpoint detection and response (EDR) signatures to detect the Gorbag malware. Educate users about phishing attempts related to archives.",
-      "cve_ids": [
-        "CVE-UNKNOWN-2026-WinRAR"
-      ],
+      "tldr": "The Russia-aligned Gorbag hacking group is actively exploiting a vulnerability in WinRAR. This exploitation leads to the deployment of data-stealing malware on compromised systems, indicating targeted and malicious campaigns.",
+      "action": "Immediately update all instances of WinRAR to the latest patched version. Implement enhanced endpoint detection and response (EDR) to identify and block data-stealing malware. Conduct a threat hunt for indicators of compromise (IOCs) associated with the Gorbag group.",
+      "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific versions of WinRAR archiving software; consult vendor advisories for patch information.",
-      "how_to_determine_impact": "Identify all systems with WinRAR installed. Check for any unusual outgoing network connections or presence of known Gorbag malware indicators of compromise (IOCs).",
-      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'WinRAR'; Get Running Processes from all machines where CommandLine contains 'winrar' and suspicious activity.",
-      "rapid7_query_hint": "Search for vulnerability ID 'WinRAR Gorbag' or specific CVE if identified, in InsightVM. Query assets for `Software.Name contains 'WinRAR' AND Software.Version < 'patched_version'`",
+      "affected_versions": "Specific versions of WinRAR affected by the actively exploited vulnerability. Refer to WinRAR official security advisories for exact ranges and the patch release.",
+      "how_to_determine_impact": "Check installed WinRAR versions on all endpoints, ensuring they are running a patched version. Monitor system processes and network activity for signs of data-stealing malware or suspicious file access.",
+      "tanium_query_hint": "Get Installed Applications and versions from all machines and filter by 'WinRAR'. Deploy a threat hunt to look for known Gorbag IOCs, file hashes, and process names. Check for unusual outbound connections.",
+      "rapid7_query_hint": "Search for vulnerabilities related to WinRAR in InsightVM. Filter assets by installed WinRAR version. Scan endpoints for Gorbag-related malware using InsightAgent and monitor for suspicious activity in InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "9.0 Critical (Estimated due to active exploitation for data theft)"
     },
     {
       "title": "Critical Node-RED Flaw Exploited in Attacks",
-      "tldr": "A critical vulnerability in Node-RED is being actively exploited by attackers. This flaw allows unauthorized access or control, posing a significant risk to systems using Node-RED for automation and IoT integration.",
-      "action": "Immediately patch Node-RED installations to the latest secure version. Review Node-RED flows and logs for any signs of unauthorized modification or access. Isolate affected systems if patching is not immediately feasible.",
-      "cve_ids": [
-        "CVE-UNKNOWN-2026-Node-RED"
-      ],
+      "tldr": "A critical vulnerability in Node-RED is currently being actively exploited by attackers. This flaw allows for unauthorized access and potentially full control over Node-RED instances, impacting IoT and automation environments.",
+      "action": "Immediately update all Node-RED instances to the latest secure version. Conduct an urgent review of Node-RED configurations, deployed flows, and system logs for any signs of compromise, unauthorized access, or the presence of malicious components.",
+      "cve_ids": [],
       "source_url": "https://www.securityweek.com/critical-node-red-flaw-exploited-in-attacks/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Specific versions of Node-RED; consult vendor advisories for exact vulnerable versions.",
-      "how_to_determine_impact": "Identify all systems running Node-RED. Verify the installed version against official security advisories. Check Node-RED server logs for suspicious access or deployments.",
-      "tanium_query_hint": "Get Installed Applications from all machines where Name contains 'Node-RED'; Get Process CommandLine from all machines where Process Name contains 'node' and arguments relate to Node-RED.",
-      "rapid7_query_hint": "Search for vulnerability ID 'Node-RED Critical Flaw' or relevant CVEs in InsightVM. Query assets using `Software.Name contains 'Node-RED' AND Software.Version < 'patched_version'`",
+      "affected_versions": "Specific versions of Node-RED. Refer to Node-RED official security advisories for exact vulnerable ranges and patching instructions.",
+      "how_to_determine_impact": "Check your Node-RED instance version against the official security advisory. Review Node-RED logs and deployed flows for any unauthorized modifications, new deployments, or unusual network connections.",
+      "tanium_query_hint": "Get Installed Applications and versions from relevant servers and filter by 'Node-RED'. Look for unauthorized network connections or process executions originating from Node-RED instances. Check file integrity of Node-RED installation directory.",
+      "rapid7_query_hint": "Search for vulnerabilities related to Node-RED in InsightVM. Filter assets by installed Node-RED version. Monitor for suspicious activity on servers hosting Node-RED via InsightIDR, including unusual user activity or process launches.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical"
+      "cvss_score": "9.0 Critical (Estimated due to active exploitation and 'critical' designation)"
     }
   ],
   "insurance": [],
@@ -27337,6 +27328,24 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.5 Critical",
         "category": "vulns"
+      },
+      {
+        "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
+        "tldr": "Binance disclosed a staggering $6.43 billion theft, attributing it to North Korean hackers who used fake job interviews and AI tools. This elaborate social engineering attack tricked an employee into installing malware, compromising wallet infrastructure.",
+        "action": "Enhance employee security training to cover sophisticated social engineering, especially AI-assisted tactics. Implement robust endpoint detection and response (EDR) solutions and strengthen access controls for sensitive systems, particularly those managing high-value assets.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes",
+        "tldr": "The update channel for cPGuard, a security plugin for Linux web servers, was compromised, leading to the backdooring of Linux servers. This supply chain attack enabled threat actors to collect password hashes from affected systems.",
+        "action": "Immediately verify the integrity of cPGuard installations and their update sources on all Linux servers. Rotate all administrative and user credentials on potentially affected servers. Implement strong monitoring for unusual processes or outbound connections from Linux hosts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
+        "source": "The Hacker News",
+        "category": "breaches"
       }
     ]
   }
