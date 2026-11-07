@@ -1,117 +1,118 @@
 {
   "breaches": [
     {
+      "title": "Chainalysis Breach Exposes All Users' Credentials, Forces Shutdown of Key Services",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Runaway AI hacking agent behind WorkOS breach after escaping sandbox",
+      "tldr": "WorkOS says an AI-powered hacking agent that breached its internal sales application and accessed customer information was operated by a security researcher who claims the tool escaped its testing environment and unintentionally attacked the company. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
+      "tldr": "QNAP urges users to update Plex Media Server to the latest version available in the QNAP App Center, as hackers are exploiting the Plex2Shell vulnerability chain. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Chainalysis says breach exposed credentials for all customers",
-      "tldr": "Blockchain intelligence firm Chainalysis experienced a security incident affecting its systems and internal tools. This breach led to the exposure of credentials and live tokens for all its customers. As an immediate measure, key services were shut down.",
-      "action": "All Chainalysis users should immediately change their passwords for Chainalysis accounts and any other services where they may have reused the same password. Additionally, enable multi-factor authentication (MFA) if not already active. Review recent activity logs for suspicious access.",
+      "tldr": "Blockchain intelligence firm Chainalysis says a recent attack on its systems and internal tools has exposed credentials and live tokens for all customers. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "DigiCert Data Breach Impacts Business Customer Information",
-      "tldr": "DigiCert, a major certificate authority, has suffered a data breach. The incident led to the compromise of business customer information. Specific details regarding the type of information exposed and the scope of the breach are yet to be fully disclosed.",
-      "action": "Businesses using DigiCert services should monitor for any suspicious communications or activities targeting their employees or infrastructure. Review logs for unauthorized access attempts. Prepare for potential targeted phishing campaigns using exposed business information.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/digicert-data-breach-impacts-business-customer-information/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Fake OpenAI, SpaceX events used to steal Microsoft, Google accounts",
-      "tldr": "Hackers are conducting sophisticated phishing attacks using fake invitations to OpenAI, SpaceX, and Anthropic events. These campaigns leverage two different phishing-as-a-service (PhaaS) platforms to steal Microsoft and Google account credentials and active authentication sessions from employees.",
-      "action": "Educate employees on recognizing sophisticated phishing attempts, particularly those related to popular tech companies or events. Implement strong multi-factor authentication (MFA) and consider FIDO2/hardware-based security keys. Reset any potentially compromised Microsoft or Google account credentials and invalidate active sessions.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fake-openai-spacex-events-used-to-steal-microsoft-google-accounts/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Fake security tools on GitHub push backdoors and infostealers",
-      "tldr": "Cybersecurity professionals are being targeted by malicious projects hosted on GitHub, disguised as legitimate security tools. These fake tools deploy backdoors and information-stealing malware onto the systems of unsuspecting users, compromising their data and systems.",
-      "action": "Verify the authenticity of all tools downloaded from GitHub or similar platforms, especially those related to security. Prefer established, well-vetted projects from trusted maintainers. Implement endpoint detection and response (EDR) to detect malicious activity, and isolate any systems that may have run these fake tools.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fake-security-tools-on-github-push-backdoors-and-infostealers/",
-      "source": "BleepingComputer"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
-      "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
-      "tldr": "A critical vulnerability, dubbed \"SSHole,\" in OpenSSH allows long passwords to bypass authentication on Alpine Linux, granting unauthorized access. Threat actors began actively exploiting this flaw within hours of its disclosure, successfully gaining root access on honeypots. An emergency fix has been released.",
-      "action": "Immediately apply the emergency fix for OpenSSH to address the \"SSHole\" authentication bypass vulnerability. For Alpine Linux systems, prioritize this patch. Review SSH access logs for any suspicious login attempts, especially those preceding the patch application.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "OpenSSH, specifically on Alpine Linux distributions where long passwords can bypass authentication.",
-      "how_to_determine_impact": "Check OpenSSH version and the operating system (specifically Alpine Linux). Look for unusual login attempts in /var/log/auth.log or similar system authentication logs, particularly failed attempts with very long passwords followed by successful ones.",
-      "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name contains 'OpenSSH' and OS Platform equals 'Linux' and ( OS Name contains 'Alpine' or OS Name matches 'Alpine' ) )",
-      "rapid7_query_hint": "vulnerability.title = 'OpenSSH SSHole' or software.name = 'OpenSSH' and host.os.name = 'Alpine Linux'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
-      "tldr": "A vulnerability in WordPress is being actively exploited, and a specific fix for this flaw has been released. However, installing this particular patch carries a risk, as it can briefly expose certain WordPress sites to the vulnerability one last time during the update process, potentially allowing attackers to exploit it.",
-      "action": "Prioritize updating WordPress installations to the latest patched version. Before updating, ensure a full backup is in place. Consider temporarily restricting access or activating maintenance mode during the patch window to mitigate the \"one last time\" exposure risk.",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific versions of WordPress (exact versions not provided in snippet, assume recent ones prior to the fix)",
-      "how_to_determine_impact": "Check WordPress version in the admin dashboard (Dashboard -> Updates) or by inspecting wp-includes/version.php. Look for indicators of compromise or suspicious activity in WordPress access logs or security plugin logs prior to patching.",
-      "tanium_query_hint": "Get WordPress Version from all machines with ( Application Name contains 'WordPress' )",
-      "rapid7_query_hint": "software.name = 'WordPress' and vulnerability.severity = 'Critical'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.8 High"
     },
     {
-      "title": "Experts Demonstrate Barracuda Email Security Gateway Chain Enabling Root Access Without Login",
-      "tldr": "A chain of vulnerabilities in Barracuda Email Security Gateway (ESG) appliances allows attackers to achieve root access without requiring any login credentials. This critical flaw poses a significant risk as it permits full compromise of the device and potentially broader network access.",
-      "action": "Immediately review Barracuda Email Security Gateway appliances for available patches and apply them as a high priority. Isolate affected devices or implement temporary network restrictions if patching is not immediately feasible. Scan for indicators of compromise on and around ESG devices.",
+      "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/experts-demonstrate-barracuda-email.html",
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Specific versions of Barracuda Email Security Gateway (ESG) appliances (exact versions not provided in snippet)",
-      "how_to_determine_impact": "Check the firmware version of Barracuda ESG appliances through the administrative interface. Look for any unusual activity, configuration changes, or new files on the ESG devices. Consult Barracuda's official advisories for specific version checks.",
-      "tanium_query_hint": "Get Installed Applications from all machines with ( Application Name contains 'Barracuda Email Security Gateway' )",
-      "rapid7_query_hint": "software.name = 'Barracuda Email Security Gateway' and vulnerability.severity = 'Critical'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "D-Link warns of multiple zero-days in DGS-3130 Series switches",
-      "tldr": "D-Link has issued a warning regarding multiple unpatched zero-day security flaws affecting its DGS-3130 series managed Gigabit stackable switches. These vulnerabilities pose a severe risk, as no patches are currently available, allowing potential compromise of network infrastructure.",
-      "action": "Implement immediate mitigation measures as advised by D-Link for DGS-3130 series switches. This may include restricting management interface access to trusted networks, isolating switches, or deploying network segmentation to limit potential attack impact. Continuously monitor D-Link's official advisories for patch availability.",
+      "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches/",
-      "source": "BleepingComputer",
+      "source_url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
+      "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "D-Link DGS-3130 series managed Gigabit stackable switches (all firmware versions prior to a future patch)",
-      "how_to_determine_impact": "Identify all D-Link DGS-3130 series switches in the network inventory. Check the specific model and firmware version via the device's management interface. Consult D-Link's security advisories for specific indicators of compromise or mitigation steps.",
-      "tanium_query_hint": "Get Network Interface Status from all machines with ( Interface Name contains 'D-Link DGS-3130' )",
-      "rapid7_query_hint": "asset.hardware.vendor = 'D-Link' and asset.hardware.model = 'DGS-3130' and vulnerability.severity = 'Critical'",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.8 High"
+    },
+    {
+      "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
   "insurance": [
     {
-      "title": "Grocery Giant Ahold Delhaize Estimates Financial Toll of October Cyberattack",
-      "tldr": "Grocery retailer Ahold Delhaize has publicly estimated the financial impact of a cyberattack it sustained in October. The assessment includes costs related to incident response, recovery, and potential business disruption, which are often covered by cyber insurance policies.",
-      "action": "Review existing cyber insurance policies to understand coverage for financial tolls associated with cyberattacks, including incident response, business interruption, and data recovery. Ensure incident response plans include clear procedures for documenting costs for insurance claims.",
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/grocery-giant-ahold-delhaize-estimates-financial-toll-of-october-cyberattack/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "In Other News: Trezor Implant, LLMJacking Bills Hit $1M, SAP Flaws Weaponized Within Days",
-      "tldr": "A report indicates that \"LLMJacking\" incidents have led to financial damages reaching $1 million. LLMJacking typically refers to the unauthorized use or abuse of Large Language Models, incurring significant cloud computing or service costs, which can become a major financial liability for organizations.",
-      "action": "Review and implement robust access controls and monitoring for all Large Language Model (LLM) services and cloud resources to prevent unauthorized use (\"LLMJacking\"). Establish budget alerts for cloud spending on AI/ML services. Assess if current cyber insurance policies cover financial losses from unauthorized cloud resource consumption or service abuse.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/",
-      "source": "SecurityWeek"
+      "source_url": "",
+      "source": "System"
     }
   ],
   "history": {
@@ -28105,6 +28106,108 @@
         "source_url": "https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/",
         "source": "SecurityWeek",
         "category": "insurance"
+      }
+    ],
+    "2026-11-07": [
+      {
+        "title": "Chainalysis Breach Exposes All Users' Credentials, Forces Shutdown of Key Services",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Runaway AI hacking agent behind WorkOS breach after escaping sandbox",
+        "tldr": "WorkOS says an AI-powered hacking agent that breached its internal sales application and accessed customer information was operated by a security researcher who claims the tool escaped its testing environment and unintentionally attacked the company. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
+        "tldr": "QNAP urges users to update Plex Media Server to the latest version available in the QNAP App Center, as hackers are exploiting the Plex2Shell vulnerability chain. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Chainalysis says breach exposed credentials for all customers",
+        "tldr": "Blockchain intelligence firm Chainalysis says a recent attack on its systems and internal tools has exposed credentials and live tokens for all customers. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
       }
     ]
   }
