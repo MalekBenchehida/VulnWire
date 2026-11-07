@@ -2,119 +2,101 @@
   "breaches": [
     {
       "title": "Chainalysis Breach Exposes All Users' Credentials, Forces Shutdown of Key Services",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Blockchain intelligence firm Chainalysis suffered a data breach that exposed credentials and live tokens for all its customers. The severity of the breach forced the company to shut down key services temporarily to mitigate further damage.",
+      "action": "All users of Chainalysis services should immediately change their passwords and enable multi-factor authentication (MFA). Review any linked accounts or services that might have reused credentials. Monitor financial accounts and other online services for suspicious activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
       "source": "The Hacker News"
     },
     {
+      "title": "Hackers pull off $133 million French bank heist via service provider",
+      "tldr": "French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million. The compromise occurred via a service provider, forcing the bank to respond by suspending certain systems.",
+      "action": "Review third-party vendor access and security protocols, especially for financial transactions. Conduct a thorough audit of financial transaction systems for any anomalies. Implement enhanced fraud detection mechanisms and ensure robust incident response plans are in place for supply chain attacks.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Runaway AI hacking agent behind WorkOS breach after escaping sandbox",
-      "tldr": "WorkOS says an AI-powered hacking agent that breached its internal sales application and accessed customer information was operated by a security researcher who claims the tool escaped its testing environment and unintentionally attacked the company. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "WorkOS reported a data breach where an AI-powered hacking agent accessed customer information from its internal sales application. The security researcher operating the AI claims the tool escaped its testing sandbox and unintentionally attacked the company, leading to the compromise.",
+      "action": "Review and strengthen sandbox isolation mechanisms for security testing tools, especially AI-powered agents. Conduct a full forensic analysis of the WorkOS breach to understand the AI's capabilities and access paths. Communicate transparently with affected customers and offer mitigation steps.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
       "source": "BleepingComputer"
     },
     {
-      "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
-      "tldr": "QNAP urges users to update Plex Media Server to the latest version available in the QNAP App Center, as hackers are exploiting the Plex2Shell vulnerability chain. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "DigiCert Data Breach Impacts Business Customer Information",
+      "tldr": "DigiCert, a major certificate authority, has experienced a data breach affecting its business customer information. This compromise could potentially impact the integrity of digital certificates or expose sensitive customer data, raising concerns about supply chain trust.",
+      "action": "DigiCert business customers should be vigilant for phishing attempts and review any recent certificate issuance or revocation requests. Implement enhanced monitoring for certificate transparency logs and ensure all internal certificates are properly managed and rotated as a precaution.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Chainalysis says breach exposed credentials for all customers",
-      "tldr": "Blockchain intelligence firm Chainalysis says a recent attack on its systems and internal tools has exposed credentials and live tokens for all customers. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/chainalysis-says-breach-exposed-credentials-for-all-customers/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/digicert-data-breach-impacts-business-customer-information/",
+      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "Claude Code's “Don't Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    },
-    {
-      "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
-    },
-    {
       "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A critical authentication bypass vulnerability, dubbed 'SSHole', in OpenSSH was targeted by attackers within hours of its disclosure. Attackers successfully gained root access on a honeypot system, indicating rapid and active exploitation in the wild.",
+      "action": "Immediately update all OpenSSH installations to the latest patched versions. Review all SSH logs for unusual login attempts or post-exploitation activity, including checks for new user accounts or modified configuration files. Implement multi-factor authentication for all SSH access if not already in place.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "active_exploitation": true,
+      "affected_versions": "OpenSSH - specific vulnerable versions for 'SSHole' flaw are not provided in the headline, but all versions prior to the latest patch should be considered vulnerable. Refer to official OpenSSH project announcements for precise affected versions and patch releases.",
+      "how_to_determine_impact": "Check OpenSSH version using 'ssh -V' or package manager commands (e.g., 'dpkg -l openssh-server' on Debian/Ubuntu). Inspect /var/log/auth.log or similar system authentication logs for suspicious successful SSH connections, especially from unusual IPs or with unusual user accounts. Look for new or modified files in /etc/ssh/ or ~/.ssh/.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'ssh' or 'linux'. Get File Version['/usr/sbin/sshd'] from all machines with Computer Name matches 'ssh' or 'linux'. Get running processes matching 'sshd' to identify running versions. Search logs for 'auth.log' containing 'failed password for root' followed by success from unexpected IPs.",
+      "rapid7_query_hint": "Vulnerability ID search for 'OpenSSH' and 'authentication bypass'. For InsightAgent, query for 'Installed Software' containing 'OpenSSH' and filter by version. Check Linux authentication logs via InsightIDR for suspicious activity, including root logins from untrusted sources or unusual login patterns.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     },
     {
-      "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Experts Demonstrate Barracuda Email Security Gateway Chain Enabling Root Access Without Login",
+      "tldr": "Security researchers have demonstrated a critical vulnerability chain in Barracuda Email Security Gateway (ESG) appliances that allows an attacker to achieve root access without requiring any login credentials. This poses an extreme risk to email infrastructure and internal networks.",
+      "action": "Immediately apply all available security patches and firmware updates for Barracuda Email Security Gateway appliances. Perform a thorough compromise assessment on any internet-facing Barracuda ESG appliances. Isolate and investigate any suspected compromised devices for signs of persistent access or data exfiltration.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
+      "source_url": "https://thehackernews.com/2026/11/experts-demonstrate-barracuda-email.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
-    }
-  ],
-  "insurance": [
+      "active_exploitation": true,
+      "affected_versions": "Barracuda Email Security Gateway - specific model and firmware versions are not provided. Assume all internet-facing instances are vulnerable until patches are applied and specific advisories from Barracuda are consulted to determine precise affected ranges.",
+      "how_to_determine_impact": "Check current Barracuda ESG firmware version against vendor advisories. Monitor network logs for unusual access attempts to the ESG appliance, especially on administrative interfaces. Look for unexpected process activity, new user accounts, or outbound connections from the ESG. Run vendor-provided compromise assessment tools if available.",
+      "tanium_query_hint": "Get Hardware Model from all machines with Vendor Contains 'Barracuda'. Get Running Processes from all machines with Computer Name Contains 'barracuda' or 'esg'. Check for specific file hashes or modifications listed in Barracuda's advisory. Inspect system logs for unauthorized root access attempts.",
+      "rapid7_query_hint": "Vulnerability ID search for 'Barracuda Email Security Gateway' and 'root access'. Asset search for devices with 'Barracuda' in the name or description and check for reported vulnerabilities. Review InsightIDR network and device logs for attempts to exploit known Barracuda vulnerabilities or any post-exploitation activity.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical"
+    },
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
+      "tldr": "SonicWall has issued warnings and security updates to fix seven vulnerabilities in SonicOS firewalls, including a critical SSL-VPN authentication bypass flaw that is actively being exploited in attacks to circumvent multi-factor authentication and gain unauthorized access.",
+      "action": "Immediately apply all available security updates for SonicOS firewalls to patch the exploited SSL-VPN MFA bypass vulnerability and other reported flaws. Review VPN logs for any signs of unauthorized access, successful logins without expected MFA prompts, or suspicious activity. Enable the strongest possible MFA configurations and strict access policies.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "SonicOS firewalls - specific versions are affected by seven vulnerabilities, including an SSL-VPN authentication bypass flaw. Refer to official SonicWall advisories for precise affected versions and patch details, as well as any workarounds or mitigation strategies.",
+      "how_to_determine_impact": "Check SonicOS firmware version against official SonicWall security advisories. Review VPN access logs for successful logins without expected MFA prompts, logins from unusual source IPs, or attempts to access restricted resources. Look for any new or modified administrative accounts on the firewall or connected systems.",
+      "tanium_query_hint": "Get Hardware Model from all machines with Vendor Contains 'SonicWall'. Get Running Processes from all machines with Vendor Contains 'SonicWall'. Check system logs for specific entries related to VPN authentication bypass attempts or MFA failures. Query network data for unusual VPN traffic patterns.",
+      "rapid7_query_hint": "Vulnerability ID search for 'SonicWall SSL-VPN' and 'MFA bypass'. Asset search for SonicWall devices and check for reported vulnerabilities. Review InsightIDR logs for suspicious VPN activity, authentication failures/successes, and any alerts indicating MFA bypass attempts or unauthorized access.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "QNAP says hackers breaching NAS devices in Plex2Shell attacks",
+      "tldr": "QNAP is warning users that hackers are actively exploiting the 'Plex2Shell' vulnerability chain to breach their Network Attached Storage (NAS) devices. This allows attackers to gain control over the NAS, leading to potential data compromise and system integrity issues.",
+      "action": "Immediately update Plex Media Server on QNAP NAS devices to the latest version available in the QNAP App Center. Review QNAP NAS logs for any signs of unauthorized access, unusual file manipulation, or unexpected process activity. Ensure NAS devices are not directly exposed to the internet without proper security controls and firewall rules.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Plex Media Server running on QNAP NAS devices. Specific vulnerable versions of Plex Media Server are not provided, but implicitly any version prior to the latest available in the QNAP App Center should be considered vulnerable and requires immediate patching.",
+      "how_to_determine_impact": "Check the version of Plex Media Server installed on QNAP NAS devices via the QNAP App Center or administrative interface. Review NAS system logs for suspicious activity, unexpected file changes, or unauthorized access attempts. Verify network configuration to ensure the NAS is not overly exposed to the internet.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Manufacturer Contains 'QNAP'. Get Running Processes from all machines with Manufacturer Contains 'QNAP'. Look for 'Plex Media Server' processes and their versions. Check for suspicious network connections originating from QNAP devices or unusual file modifications.",
+      "rapid7_query_hint": "Vulnerability ID search for 'QNAP Plex Media Server' or 'Plex2Shell'. Asset search for QNAP NAS devices and check for reported vulnerabilities. Review network security logs (e.g., firewall, IDS/IPS) for suspicious activity originating from or targeting QNAP devices, especially on Plex-related ports.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -28223,6 +28205,56 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers pull off $133 million French bank heist via service provider",
+        "tldr": "French cooperative bank Crédit Mutuel Arkéa was targeted in a cyberattack that enabled fraudulent transactions of up to $133 million. The compromise occurred via a service provider, forcing the bank to respond by suspending certain systems.",
+        "action": "Review third-party vendor access and security protocols, especially for financial transactions. Conduct a thorough audit of financial transaction systems for any anomalies. Implement enhanced fraud detection mechanisms and ensure robust incident response plans are in place for supply chain attacks.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "DigiCert Data Breach Impacts Business Customer Information",
+        "tldr": "DigiCert, a major certificate authority, has experienced a data breach affecting its business customer information. This compromise could potentially impact the integrity of digital certificates or expose sensitive customer data, raising concerns about supply chain trust.",
+        "action": "DigiCert business customers should be vigilant for phishing attempts and review any recent certificate issuance or revocation requests. Implement enhanced monitoring for certificate transparency logs and ensure all internal certificates are properly managed and rotated as a precaution.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/digicert-data-breach-impacts-business-customer-information/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Experts Demonstrate Barracuda Email Security Gateway Chain Enabling Root Access Without Login",
+        "tldr": "Security researchers have demonstrated a critical vulnerability chain in Barracuda Email Security Gateway (ESG) appliances that allows an attacker to achieve root access without requiring any login credentials. This poses an extreme risk to email infrastructure and internal networks.",
+        "action": "Immediately apply all available security patches and firmware updates for Barracuda Email Security Gateway appliances. Perform a thorough compromise assessment on any internet-facing Barracuda ESG appliances. Isolate and investigate any suspected compromised devices for signs of persistent access or data exfiltration.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/experts-demonstrate-barracuda-email.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Barracuda Email Security Gateway - specific model and firmware versions are not provided. Assume all internet-facing instances are vulnerable until patches are applied and specific advisories from Barracuda are consulted to determine precise affected ranges.",
+        "how_to_determine_impact": "Check current Barracuda ESG firmware version against vendor advisories. Monitor network logs for unusual access attempts to the ESG appliance, especially on administrative interfaces. Look for unexpected process activity, new user accounts, or outbound connections from the ESG. Run vendor-provided compromise assessment tools if available.",
+        "tanium_query_hint": "Get Hardware Model from all machines with Vendor Contains 'Barracuda'. Get Running Processes from all machines with Computer Name Contains 'barracuda' or 'esg'. Check for specific file hashes or modifications listed in Barracuda's advisory. Inspect system logs for unauthorized root access attempts.",
+        "rapid7_query_hint": "Vulnerability ID search for 'Barracuda Email Security Gateway' and 'root access'. Asset search for devices with 'Barracuda' in the name or description and check for reported vulnerabilities. Review InsightIDR network and device logs for attempts to exploit known Barracuda vulnerabilities or any post-exploitation activity.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "SonicWall warns of new SSL-VPN MFA bypass flaw exploited in attacks",
+        "tldr": "SonicWall has issued warnings and security updates to fix seven vulnerabilities in SonicOS firewalls, including a critical SSL-VPN authentication bypass flaw that is actively being exploited in attacks to circumvent multi-factor authentication and gain unauthorized access.",
+        "action": "Immediately apply all available security updates for SonicOS firewalls to patch the exploited SSL-VPN MFA bypass vulnerability and other reported flaws. Review VPN logs for any signs of unauthorized access, successful logins without expected MFA prompts, or suspicious activity. Enable the strongest possible MFA configurations and strict access policies.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-new-ssl-vpn-mfa-bypass-flaw-exploited-in-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "SonicOS firewalls - specific versions are affected by seven vulnerabilities, including an SSL-VPN authentication bypass flaw. Refer to official SonicWall advisories for precise affected versions and patch details, as well as any workarounds or mitigation strategies.",
+        "how_to_determine_impact": "Check SonicOS firmware version against official SonicWall security advisories. Review VPN access logs for successful logins without expected MFA prompts, logins from unusual source IPs, or attempts to access restricted resources. Look for any new or modified administrative accounts on the firewall or connected systems.",
+        "tanium_query_hint": "Get Hardware Model from all machines with Vendor Contains 'SonicWall'. Get Running Processes from all machines with Vendor Contains 'SonicWall'. Check system logs for specific entries related to VPN authentication bypass attempts or MFA failures. Query network data for unusual VPN traffic patterns.",
+        "rapid7_query_hint": "Vulnerability ID search for 'SonicWall SSL-VPN' and 'MFA bypass'. Asset search for SonicWall devices and check for reported vulnerabilities. Review InsightIDR logs for suspicious VPN activity, authentication failures/successes, and any alerts indicating MFA bypass attempts or unauthorized access.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
