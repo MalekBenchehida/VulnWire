@@ -2,42 +2,58 @@
   "breaches": [
     {
       "title": "Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data",
-      "tldr": "Hackers leveraged Qubole's trusted AWS access to compromise customer accounts and exfiltrate sensitive data. This indicates a supply chain attack vector impacting multiple downstream customers.",
-      "action": "If Qubole is a vendor, review AWS access logs for unusual activity linked to Qubole. Immediately revoke any unnecessary Qubole access to your AWS environment and implement least privilege.",
+      "tldr": "Threat actors exploited Qubole's trusted AWS access to compromise customer accounts, leading to unauthorized data exfiltration. This incident highlights the critical importance of securing cloud service access and monitoring for privilege escalation.",
+      "action": "Review cloud access policies, implement multi-factor authentication for all administrative and service accounts, and conduct regular audits of AWS access logs for unusual activity or unauthorized data transfers.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Hackers Compromise Ethersphere's bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware",
-      "tldr": "Ethersphere's bee-js and Swarm Desktop components were compromised, leading to the distribution of malware designed to steal cryptocurrency wallets. Users of these components are at risk of financial loss.",
-      "action": "Users of Ethersphere's bee-js and Swarm Desktop should immediately update to the latest secure versions and scan systems for wallet-stealing malware. Monitor cryptocurrency wallet activity for suspicious transactions.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "SEGA newsletter data breach exposes 2.2 million email addresses",
-      "tldr": "Japanese gaming company SEGA experienced a data breach via its third-party newsletter provider, ARARA, exposing 2.2 million email addresses of subscribers. This highlights supply chain risks and the importance of third-party vendor security.",
-      "action": "Users who subscribed to SEGA newsletters should be vigilant for phishing attempts targeting their email addresses. Organizations should review third-party vendor security practices, especially for services handling customer data.",
+      "tldr": "Japanese gaming giant SEGA experienced a data breach via its third-party newsletter provider, ARARA, resulting in the exposure of 2.2 million newsletter subscribers' email addresses. This incident underscores the supply chain risks associated with third-party vendors.",
+      "action": "Assess all third-party vendors for their security postures and data handling practices. Implement robust vendor risk management programs. Notify affected users and advise caution against phishing attempts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
       "source": "BleepingComputer"
     },
     {
-      "title": "York University breach exposed personal information dating to 2007",
-      "tldr": "York University experienced a cybersecurity incident where a threat actor stole personal information submitted through online forms, with data potentially dating back to 2007. This is a significant long-term data exposure that could impact a large number of individuals.",
-      "action": "Individuals who submitted information to York University online forms since 2007 should be alert for identity theft and phishing scams. Organizations should enforce data retention policies and regularly purge old, unnecessary sensitive data.",
+      "title": "Iris Plaza Breach May Have Exposed Data of 7.7 Million Customers",
+      "tldr": "A data breach at Iris Plaza potentially exposed the personal data of up to 7.7 million customers. Details regarding the vector and specific types of data compromised are awaited, but the large scale indicates a significant security incident.",
+      "action": "Monitor official communications from Iris Plaza for specific details regarding the breach. Advise users to remain vigilant for phishing scams and unauthorized access attempts to their accounts. Review personal data handling processes.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/york-university-breach-exposed-personal-information-dating-to-2007/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/iris-plaza-breach-may-have-exposed-data-of-7-7-million-customers/",
+      "source": "SecurityWeek"
+    },
+    {
+      "title": "Over 3 Million People Hit by Frontline Education Data Breach",
+      "tldr": "Frontline Education suffered a data breach impacting over 3 million individuals, compromising sensitive personal information. This breach in the education sector is particularly concerning due to the nature of the data involved.",
+      "action": "Organizations using Frontline Education services should seek immediate clarification on the scope and impact. Users should be advised to reset passwords, enable MFA, and monitor credit reports for suspicious activity.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/3-million-people-hit-by-frontline-education-data-breach/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
+      "title": "Vanderbilt University hit in BYOD ransomware attack, data theft claimed",
+      "tldr": "Vanderbilt University is responding to a cyberattack by the BYOD ransomware gang, which claims to have encrypted university databases and stolen sensitive student, employee, and research data. The attack highlights risks associated with Bring Your Own Device (BYOD) policies.",
+      "action": "Enforce strict BYOD security policies, including endpoint detection and response (EDR) solutions, network segmentation, and regular security awareness training. Ensure robust backup and recovery strategies are in place and tested.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "France blames Iranian hackers for supermarket attacks that sparked fires",
+      "tldr": "France has attributed October cyberattacks against over 700 supermarkets and retail locations, which disrupted refrigeration systems and caused 15 fires, to Iranian state-backed hackers. This incident demonstrates the potential for cyberattacks to cause significant physical damage.",
+      "action": "Implement robust segmentation for OT/IoT networks, conduct regular penetration testing of critical infrastructure, and enhance monitoring for anomalous activity across both IT and operational technology environments. Review incident response plans for physical impacts.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Russian cloud firm Beget rebuilds from scratch after data wiper attack",
-      "tldr": "Russian cloud services provider Beget was forced to rebuild its entire cloud infrastructure from scratch after suffering a data-wiping malware attack. This resulted in catastrophic data loss and business disruption, underscoring the severity of destructive cyberattacks.",
-      "action": "Implement robust, isolated backup and disaster recovery plans. Ensure that critical data is backed up offline or in immutable storage to protect against data-wiping attacks. Regularly test recovery procedures to ensure business continuity.",
+      "tldr": "Russian cloud services provider Beget was forced to rebuild its entire cloud infrastructure from scratch following a devastating data-wiping malware attack. This incident underscores the destructive potential of certain cyberattacks and the importance of resilience planning.",
+      "action": "Ensure immutable backups are regularly performed and stored offsite. Implement advanced endpoint protection and network detection technologies. Develop and regularly test comprehensive disaster recovery plans, including procedures for full system rebuilds.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/russian-cloud-firm-beget-rebuilds-from-scratch-after-data-wiper-attack/",
       "source": "BleepingComputer"
@@ -46,65 +62,65 @@
   "vulns": [
     {
       "title": "Hackers exploit SSHole OpenSSH flaw to breach Linux systems",
-      "tldr": "The \"SSHole\" vulnerability (CVE-2026-123158) in OpenSSH is being actively exploited by hackers to execute commands, steal credentials, and maintain persistent access on vulnerable Linux systems. This critical flaw allows attackers to bypass authentication.",
-      "action": "Immediately apply the latest security patches for OpenSSH to address CVE-2026-123158. Audit Linux systems for signs of compromise, especially focusing on unauthorized command execution, credential exfiltration attempts, or unusual SSH login activity.",
+      "tldr": "Hackers are actively exploiting the 'SSHole' vulnerability (CVE-2026-123158) in OpenSSH to execute commands, steal credentials, and establish persistent access on vulnerable Linux systems. This critical authentication bypass allows for full system compromise.",
+      "action": "Immediately update OpenSSH to the latest patched version that remediates CVE-2026-123158. Review SSH server logs for unusual login attempts, unauthorized processes, or modifications to authorized_keys files on Linux systems.",
       "cve_ids": [
         "CVE-2026-123158"
       ],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "OpenSSH affected by CVE-2026-123158. Consult official OpenSSH advisories for specific vulnerable versions and necessary updates.",
-      "how_to_determine_impact": "Check the installed version of OpenSSH on all Linux systems. Consult official OpenSSH advisories for affected versions of CVE-2026-123158. Look for unusual SSH login attempts, processes running under SSH, or modified SSH configuration files.",
-      "tanium_query_hint": "Get Installed Applications contains 'OpenSSH' from all machines. Get Listening Ports from all machines where 'Program Name' contains 'sshd'. Check 'File Version' of 'sshd' binary.",
-      "rapid7_query_hint": "Asset Search: 'software.name contains \"OpenSSH\"'. Run authenticated vulnerability scans looking for CVE-2026-123158. Check for associated InsightAgent alerts for suspicious SSH activity or file modifications.",
+      "affected_versions": "OpenSSH versions prior to the patched release addressing CVE-2026-123158. Consult official OpenSSH advisories for exact vulnerable ranges.",
+      "how_to_determine_impact": "Check OpenSSH server versions installed on all Linux systems. Look for unauthorized processes, unusual network connections from SSH daemons, or unexpected modifications to /root/.ssh/authorized_keys or other user authorized_keys files.",
+      "tanium_query_hint": "Get Running Processes with 'ssh' contains 'sshd' and Get Installed Applications containing 'openssh'. Also, Get File Contents of '/etc/ssh/sshd_config' to check configurations.",
+      "rapid7_query_hint": "Search for 'vulnerability.cve:CVE-2026-123158' in InsightVM. Use Asset Search with filter 'Software Name contains 'OpenSSH'' and 'Software Version is less than [patched_version]'.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "N-able takes cloud platform offline after 30+ \"zero-days\" published",
-      "tldr": "N-able took its hosted N-central environments offline and advised on-premises customers to shut down servers after a researcher publicly disclosed over 30 alleged zero-day vulnerabilities. These include exploits that could allow attackers to take over vulnerable systems, necessitating immediate action.",
-      "action": "If you are an N-able N-central customer, immediately follow N-able's guidance to shut down or isolate on-premises servers. Monitor N-able's official communications for patches and remediation instructions to safely restore service.",
+      "tldr": "N-able has taken its hosted N-central environments offline and urged on-premises customers to shut down their servers following the public disclosure of over 30 alleged zero-day vulnerabilities. These flaws reportedly include exploits that could allow attackers to take over vulnerable systems.",
+      "action": "If using N-able N-central on-premises, immediately shut down servers as advised by N-able. Monitor N-able communications closely for official patches, mitigation steps, and guidance on safely re-enabling services. Isolate affected systems.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "N-able N-central hosted environments and on-premises server deployments. Specific versions are not detailed but imply broad impact across the N-central product line.",
-      "how_to_determine_impact": "Identify any N-able N-central installations within your environment. All instances should be considered at immediate risk due to the public disclosure of zero-day exploits. Check N-able's official advisories for specific affected versions.",
-      "tanium_query_hint": "Get Installed Applications contains 'N-able N-central'. Get Running Processes named 'n-central.exe' or similar. Check for network listeners associated with N-central services.",
-      "rapid7_query_hint": "Asset Search: 'software.name contains \"N-able N-central\"'. Prioritize authenticated scans for these assets. Check vendor advisories for specific vulnerability IDs once released.",
+      "affected_versions": "N-able N-central hosted environments and on-premises installations. Specific vulnerable versions require consultation of N-able's upcoming advisories.",
+      "how_to_determine_impact": "Identify all N-able N-central instances within the environment. Consult N-able's official security advisories for specific version checks and indicators of compromise. Look for any unauthorized access attempts or suspicious activity on N-central servers prior to shutdown.",
+      "tanium_query_hint": "Get Installed Applications containing 'N-able N-central' to identify installations. Look for unusual network activity or process execution on these servers.",
+      "rapid7_query_hint": "Use Asset Search with filter 'Software Name contains 'N-able N-central''. Review logs for outbound connections or anomalous behavior from N-central systems. Perform credentialed scans once remediation is available.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
-    },
-    {
-      "title": "LNbits Urges All Operators to Shut Down Their Bitcoin Lightning Wallet Servers Amid Attacks",
-      "tldr": "LNbits has issued an urgent advisory for all operators to shut down their Bitcoin Lightning Wallet servers due to ongoing attacks. This suggests a severe, actively exploited vulnerability affecting the platform that could lead to significant financial loss.",
-      "action": "If operating an LNbits Bitcoin Lightning Wallet server, immediately shut it down as advised by LNbits. Monitor official LNbits channels for updates, patches, and instructions for safe re-activation after the threat is mitigated.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down-their-bitcoin-lightning-wallet.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "All active LNbits Bitcoin Lightning Wallet server deployments are advised to shut down.",
-      "how_to_determine_impact": "Check if you are running an LNbits Bitcoin Lightning Wallet server. Any active deployment is considered affected and at risk during the ongoing attacks. Verify if your instance is connected to the internet.",
-      "tanium_query_hint": "Get Running Processes contains 'lnbits' or 'lightning' AND OS Platform contains 'Linux' (to identify running servers). Get Listening Ports and analyze associated processes.",
-      "rapid7_query_hint": "Asset Search: 'software.name contains \"LNbits\"'. Look for network services associated with LNbits installations. Assess network traffic for known attack patterns if available and implement network segmentation.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins",
-      "tldr": "SonicWall has released patches for an actively exploited SonicOS vulnerability that weakens VPN logins, potentially allowing attackers to bypass authentication or compromise VPN sessions. This critical flaw poses a direct threat to network access and security.",
-      "action": "Immediately apply the latest firmware updates to all SonicWall appliances running SonicOS. Review VPN login logs for any unusual activity or unauthorized access attempts that could indicate compromise.",
+      "tldr": "SonicWall has released patches for an actively exploited SonicOS vulnerability that weakens VPN logins. This flaw allows unauthorized access to VPNs, posing a significant risk to network security, and is being actively targeted by threat actors.",
+      "action": "Immediately apply the latest patches released by SonicWall for SonicOS. Audit VPN access logs for any suspicious or unauthorized login attempts, and enforce strong, unique passwords or multi-factor authentication for all VPN users.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "SonicWall SonicOS. Consult official SonicWall security advisories for specific vulnerable versions that weaken VPN logins and the associated patches.",
-      "how_to_determine_impact": "Verify the SonicOS firmware version on all SonicWall devices against official SonicWall's security bulletins. Check VPN logs for signs of compromise, such as unusual login patterns, brute-force attempts, or unauthorized access.",
-      "tanium_query_hint": "Get Running Processes contains 'SonicWall' on relevant servers. Check 'File Version' of SonicOS components on managing systems if applicable. Inspect network device configuration for firmware versions.",
-      "rapid7_query_hint": "Asset Search: 'software.name contains \"SonicWall\"'. Prioritize authenticated vulnerability scans against SonicWall devices. Look for specific vulnerability checks related to SonicOS VPN weaknesses. Check for InsightAgent alerts on suspicious VPN client activities.",
+      "affected_versions": "Specific versions of SonicOS affected by the vulnerability. Refer to SonicWall's official security advisory for exact version details and affected product lines (e.g., firewall models).",
+      "how_to_determine_impact": "Identify all SonicWall appliances running SonicOS. Check the installed SonicOS version against the vendor's security advisory. Review VPN connection logs for anomalies, especially failed login attempts or successful logins from unusual sources.",
+      "tanium_query_hint": "For asset inventory, leverage network scanning tools. Tanium can aid by querying endpoints that might manage or interact with SonicWall devices. (Direct SonicOS query not typically via Tanium agents on endpoints).",
+      "rapid7_query_hint": "Use InsightVM to scan SonicWall appliances for reported vulnerabilities. Search 'vulnerability.title contains 'SonicWall SonicOS' and vulnerability.status:vulnerable' for identified assets. Review InsightIDR logs for anomalous VPN authentications.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.0 Critical"
+    },
+    {
+      "title": "Default 'admin:admin' Server Password Helps Researchers Hack Two Automakers, Unlock and Start Cars",
+      "tldr": "Researchers demonstrated a critical security flaw by exploiting default 'admin:admin' credentials on automaker servers, enabling remote control over vehicles, including unlocking doors and starting engines. This highlights severe risks from weak default passwords in operational technology (OT) environments.",
+      "action": "Conduct an immediate and comprehensive audit of all internet-facing systems, particularly those connected to OT or critical infrastructure, to identify and remove default or weak credentials. Enforce strong, unique passwords and multi-factor authentication, and ensure proper network segmentation for critical systems.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/default-adminadmin-server-password.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Any internet-facing server or device (e.g., web servers, management interfaces, IoT devices) that uses or allows default/weak credentials, specifically those controlling automotive or critical infrastructure systems.",
+      "how_to_determine_impact": "Inventory all internet-facing services and devices. Attempt to log in with common default credentials (e.g., admin:admin, root:root, vendor:vendor). Review configuration files and authentication settings for weak password policies or hardcoded credentials.",
+      "tanium_query_hint": "Get Listening Ports and Get HTTP Connection Status to identify internet-facing services. Use custom sensors to check for common default user accounts or configurations storing weak passwords on Windows/Linux endpoints.",
+      "rapid7_query_hint": "Use InsightVM for credentialed scans to identify weak/default credentials on network devices and servers. Search for 'vulnerability.title: 'Default Credentials'' or similar findings. Leverage InsightIDR to monitor authentication logs for repeated failed logins or logins using common default usernames.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -28633,6 +28649,137 @@
         "rapid7_query_hint": "Asset Search: 'software.name contains \"SonicWall\"'. Prioritize authenticated vulnerability scans against SonicWall devices. Look for specific vulnerability checks related to SonicOS VPN weaknesses. Check for InsightAgent alerts on suspicious VPN client activities.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-11-10": [
+      {
+        "title": "Hackers Exploit Qubole's Trusted AWS Access to Breach Customer Accounts and Steal Data",
+        "tldr": "Threat actors exploited Qubole's trusted AWS access to compromise customer accounts, leading to unauthorized data exfiltration. This incident highlights the critical importance of securing cloud service access and monitoring for privilege escalation.",
+        "action": "Review cloud access policies, implement multi-factor authentication for all administrative and service accounts, and conduct regular audits of AWS access logs for unusual activity or unauthorized data transfers.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "SEGA newsletter data breach exposes 2.2 million email addresses",
+        "tldr": "Japanese gaming giant SEGA experienced a data breach via its third-party newsletter provider, ARARA, resulting in the exposure of 2.2 million newsletter subscribers' email addresses. This incident underscores the supply chain risks associated with third-party vendors.",
+        "action": "Assess all third-party vendors for their security postures and data handling practices. Implement robust vendor risk management programs. Notify affected users and advise caution against phishing attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/sega-newsletter-data-breach-exposes-22-million-email-addresses/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Iris Plaza Breach May Have Exposed Data of 7.7 Million Customers",
+        "tldr": "A data breach at Iris Plaza potentially exposed the personal data of up to 7.7 million customers. Details regarding the vector and specific types of data compromised are awaited, but the large scale indicates a significant security incident.",
+        "action": "Monitor official communications from Iris Plaza for specific details regarding the breach. Advise users to remain vigilant for phishing scams and unauthorized access attempts to their accounts. Review personal data handling processes.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/iris-plaza-breach-may-have-exposed-data-of-7-7-million-customers/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Over 3 Million People Hit by Frontline Education Data Breach",
+        "tldr": "Frontline Education suffered a data breach impacting over 3 million individuals, compromising sensitive personal information. This breach in the education sector is particularly concerning due to the nature of the data involved.",
+        "action": "Organizations using Frontline Education services should seek immediate clarification on the scope and impact. Users should be advised to reset passwords, enable MFA, and monitor credit reports for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/3-million-people-hit-by-frontline-education-data-breach/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Vanderbilt University hit in BYOD ransomware attack, data theft claimed",
+        "tldr": "Vanderbilt University is responding to a cyberattack by the BYOD ransomware gang, which claims to have encrypted university databases and stolen sensitive student, employee, and research data. The attack highlights risks associated with Bring Your Own Device (BYOD) policies.",
+        "action": "Enforce strict BYOD security policies, including endpoint detection and response (EDR) solutions, network segmentation, and regular security awareness training. Ensure robust backup and recovery strategies are in place and tested.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/vanderbilt-university-hit-in-byod-ransomware-attack-data-theft-claimed/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "France blames Iranian hackers for supermarket attacks that sparked fires",
+        "tldr": "France has attributed October cyberattacks against over 700 supermarkets and retail locations, which disrupted refrigeration systems and caused 15 fires, to Iranian state-backed hackers. This incident demonstrates the potential for cyberattacks to cause significant physical damage.",
+        "action": "Implement robust segmentation for OT/IoT networks, conduct regular penetration testing of critical infrastructure, and enhance monitoring for anomalous activity across both IT and operational technology environments. Review incident response plans for physical impacts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/france-blames-iranian-hackers-for-supermarket-attacks-that-sparked-fires/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Russian cloud firm Beget rebuilds from scratch after data wiper attack",
+        "tldr": "Russian cloud services provider Beget was forced to rebuild its entire cloud infrastructure from scratch following a devastating data-wiping malware attack. This incident underscores the destructive potential of certain cyberattacks and the importance of resilience planning.",
+        "action": "Ensure immutable backups are regularly performed and stored offsite. Implement advanced endpoint protection and network detection technologies. Develop and regularly test comprehensive disaster recovery plans, including procedures for full system rebuilds.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/russian-cloud-firm-beget-rebuilds-from-scratch-after-data-wiper-attack/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Hackers exploit SSHole OpenSSH flaw to breach Linux systems",
+        "tldr": "Hackers are actively exploiting the 'SSHole' vulnerability (CVE-2026-123158) in OpenSSH to execute commands, steal credentials, and establish persistent access on vulnerable Linux systems. This critical authentication bypass allows for full system compromise.",
+        "action": "Immediately update OpenSSH to the latest patched version that remediates CVE-2026-123158. Review SSH server logs for unusual login attempts, unauthorized processes, or modifications to authorized_keys files on Linux systems.",
+        "cve_ids": [
+          "CVE-2026-123158"
+        ],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-sshole-openssh-flaw-to-breach-linux-systems/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "OpenSSH versions prior to the patched release addressing CVE-2026-123158. Consult official OpenSSH advisories for exact vulnerable ranges.",
+        "how_to_determine_impact": "Check OpenSSH server versions installed on all Linux systems. Look for unauthorized processes, unusual network connections from SSH daemons, or unexpected modifications to /root/.ssh/authorized_keys or other user authorized_keys files.",
+        "tanium_query_hint": "Get Running Processes with 'ssh' contains 'sshd' and Get Installed Applications containing 'openssh'. Also, Get File Contents of '/etc/ssh/sshd_config' to check configurations.",
+        "rapid7_query_hint": "Search for 'vulnerability.cve:CVE-2026-123158' in InsightVM. Use Asset Search with filter 'Software Name contains 'OpenSSH'' and 'Software Version is less than [patched_version]'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "N-able takes cloud platform offline after 30+ \"zero-days\" published",
+        "tldr": "N-able has taken its hosted N-central environments offline and urged on-premises customers to shut down their servers following the public disclosure of over 30 alleged zero-day vulnerabilities. These flaws reportedly include exploits that could allow attackers to take over vulnerable systems.",
+        "action": "If using N-able N-central on-premises, immediately shut down servers as advised by N-able. Monitor N-able communications closely for official patches, mitigation steps, and guidance on safely re-enabling services. Isolate affected systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "N-able N-central hosted environments and on-premises installations. Specific vulnerable versions require consultation of N-able's upcoming advisories.",
+        "how_to_determine_impact": "Identify all N-able N-central instances within the environment. Consult N-able's official security advisories for specific version checks and indicators of compromise. Look for any unauthorized access attempts or suspicious activity on N-central servers prior to shutdown.",
+        "tanium_query_hint": "Get Installed Applications containing 'N-able N-central' to identify installations. Look for unusual network activity or process execution on these servers.",
+        "rapid7_query_hint": "Use Asset Search with filter 'Software Name contains 'N-able N-central''. Review logs for outbound connections or anomalous behavior from N-central systems. Perform credentialed scans once remediation is available.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "SonicWall Patches Exploited SonicOS Vulnerability That Weakens VPN Logins",
+        "tldr": "SonicWall has released patches for an actively exploited SonicOS vulnerability that weakens VPN logins. This flaw allows unauthorized access to VPNs, posing a significant risk to network security, and is being actively targeted by threat actors.",
+        "action": "Immediately apply the latest patches released by SonicWall for SonicOS. Audit VPN access logs for any suspicious or unauthorized login attempts, and enforce strong, unique passwords or multi-factor authentication for all VPN users.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Specific versions of SonicOS affected by the vulnerability. Refer to SonicWall's official security advisory for exact version details and affected product lines (e.g., firewall models).",
+        "how_to_determine_impact": "Identify all SonicWall appliances running SonicOS. Check the installed SonicOS version against the vendor's security advisory. Review VPN connection logs for anomalies, especially failed login attempts or successful logins from unusual sources.",
+        "tanium_query_hint": "For asset inventory, leverage network scanning tools. Tanium can aid by querying endpoints that might manage or interact with SonicWall devices. (Direct SonicOS query not typically via Tanium agents on endpoints).",
+        "rapid7_query_hint": "Use InsightVM to scan SonicWall appliances for reported vulnerabilities. Search 'vulnerability.title contains 'SonicWall SonicOS' and vulnerability.status:vulnerable' for identified assets. Review InsightIDR logs for anomalous VPN authentications.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Default 'admin:admin' Server Password Helps Researchers Hack Two Automakers, Unlock and Start Cars",
+        "tldr": "Researchers demonstrated a critical security flaw by exploiting default 'admin:admin' credentials on automaker servers, enabling remote control over vehicles, including unlocking doors and starting engines. This highlights severe risks from weak default passwords in operational technology (OT) environments.",
+        "action": "Conduct an immediate and comprehensive audit of all internet-facing systems, particularly those connected to OT or critical infrastructure, to identify and remove default or weak credentials. Enforce strong, unique passwords and multi-factor authentication, and ensure proper network segmentation for critical systems.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/default-adminadmin-server-password.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Any internet-facing server or device (e.g., web servers, management interfaces, IoT devices) that uses or allows default/weak credentials, specifically those controlling automotive or critical infrastructure systems.",
+        "how_to_determine_impact": "Inventory all internet-facing services and devices. Attempt to log in with common default credentials (e.g., admin:admin, root:root, vendor:vendor). Review configuration files and authentication settings for weak password policies or hardcoded credentials.",
+        "tanium_query_hint": "Get Listening Ports and Get HTTP Connection Status to identify internet-facing services. Use custom sensors to check for common default user accounts or configurations storing weak passwords on Windows/Linux endpoints.",
+        "rapid7_query_hint": "Use InsightVM for credentialed scans to identify weak/default credentials on network devices and servers. Search for 'vulnerability.title: 'Default Credentials'' or similar findings. Leverage InsightIDR to monitor authentication logs for repeated failed logins or logins using common default usernames.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
