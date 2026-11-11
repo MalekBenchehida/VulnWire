@@ -1,43 +1,43 @@
 {
   "breaches": [
     {
-      "title": "Japanese furniture giant Nitori says hackers stole 37.6M customer records",
-      "tldr": "Japanese retailer Nitori announced a data breach affecting 37.6 million customer records. An attacker gained unauthorized access to a network system and extracted sensitive customer information.",
-      "action": "Immediately initiate an investigation to determine the scope of the breach and identify compromised data types. Notify affected customers and relevant authorities as per data protection regulations. Review access controls and network segmentation.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/japanese-furniture-giant-nitori-says-hackers-stole-376m-customer-records/",
-      "source": "BleepingComputer"
-    },
-    {
       "title": "Over 35,000 Grok-Built Apps Exposed Online, Some Leaking Confidential Data and Passwords",
-      "tldr": "A significant number of applications built with the Grok platform (over 35,000) have been found publicly exposed online. This exposure has led to the leakage of confidential data, including passwords, from some of these applications.",
-      "action": "Audit all Grok-built applications for proper access controls and ensure no sensitive data is publicly exposed. Rotate any potentially leaked credentials immediately. Implement robust security configurations and regular audits for all publicly facing applications.",
+      "tldr": "More than 35,000 applications built with Grok are currently exposed online. This exposure has led to the leakage of confidential data and user passwords from some of these applications, posing a significant risk to affected users and organizations.",
+      "action": "Identify and secure any Grok-built applications within your environment. Review access logs for exposed applications and consider password resets for potentially compromised accounts.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Railway breach leads to $740,000 in fraudulent AI charges",
-      "tldr": "Cloud hosting provider Railway experienced a breach where attackers exploited infrastructure vulnerabilities to steal customer authentication secrets. This led to approximately $740,000 in fraudulent AI usage and potentially exposed credentials for up to 100,000 workspaces.",
-      "action": "Review and strengthen authentication mechanisms, especially for API keys and service accounts. Implement strict monitoring for unusual cloud resource usage and cost spikes. Force password resets or API key rotations for all potentially affected customer accounts.",
+      "title": "Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges",
+      "tldr": "Customer AI keys belonging to Railway were stolen, resulting in approximately $740,000 in unauthorized usage charges. This incident highlights the financial and security risks associated with compromised API keys and credentials.",
+      "action": "Immediately rotate any exposed or potentially compromised API or AI keys. Implement robust access controls and monitoring for all API usage, especially for high-cost services.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/apple/railway-breach-leads-to-740-000-in-fraudulent-ai-charges/",
+      "source_url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "Baker Tilly notifies clients of data breach at third-party provider",
+      "tldr": "Baker Tilly Advisory Group is notifying its clients about a data breach that occurred at a third-party provider. This breach has compromised personal information pertaining to both clients and their dependents.",
+      "action": "Clients of Baker Tilly should monitor their financial accounts and credit reports for any suspicious activity. Organizations should review their third-party vendor security posture and data sharing agreements.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers use AntiFox AI agents in AWS credential-theft attacks",
-      "tldr": "Threat actors are actively deploying self-managed instances of AntiFox, an open-source AI-driven pentesting platform, from Alibaba Cloud to target web services and AWS environments. These attacks aim to steal AWS credentials, leading to unauthorized access and potential data exfiltration.",
-      "action": "Implement enhanced monitoring for suspicious activity originating from Alibaba Cloud IPs, especially targeting AWS infrastructure. Strengthen AWS credential hygiene, enforce MFA, and regularly review IAM policies. Consider behavioral analytics for unusual AWS API calls.",
+      "title": "Notion says Fireworks breach exposed customer AI chat transcripts",
+      "tldr": "Notion, a digital workspace platform, has disclosed a security breach at its AI infrastructure provider, Fireworks AI. This incident led to the exposure of Notion AI chat transcripts from a limited number of customer workspaces.",
+      "action": "Users of Notion AI should be aware of this exposure. Organizations using Notion AI should assess if their chat transcripts contained sensitive information and review data retention policies.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
       "source": "BleepingComputer"
     }
   ],
   "ransomware": [
     {
       "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
-      "tldr": "Maersk has confirmed a data breach resulting from unauthorized access to a legacy system, which led to data extraction. The WhiteArmor ransomware group is reportedly demanding a $5 million ransom for the stolen data.",
-      "action": "Isolate and forensicially examine the compromised legacy system. Implement enhanced detection for WhiteArmor ransomware indicators of compromise (IoCs) across the network. Review and strengthen data backup and recovery strategies, including offline backups.",
+      "tldr": "Maersk has confirmed a data breach stemming from unauthorized access to a local legacy system acquired previously. The WhiteArmor ransomware group is claiming responsibility and demanding a $5 million ransom.",
+      "action": "Implement robust network segmentation and least privilege access to legacy systems. Enhance endpoint detection and response (EDR) capabilities and maintain offline backups to prepare for potential ransomware attacks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
       "source": "BleepingComputer"
@@ -45,64 +45,64 @@
   ],
   "vulns": [
     {
-      "title": "Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes",
-      "tldr": "Microsoft released a significant patch update addressing 1,259 flaws, including an actively exploited Outlook bug. This Outlook vulnerability could lead to the exposure of NTLMv2 hashes, enabling relay attacks.",
-      "action": "Apply the latest Microsoft security updates (Patch Tuesday for November 2026) to all affected systems, especially those running Outlook. Prioritize patching systems exposed to the internet.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "All supported Microsoft Windows versions and components, including Outlook, updated with the November 2026 Patch Tuesday. Specific Outlook versions with the NTLMv2 hash exposure bug will need further details from official advisories.",
-      "how_to_determine_impact": "Verify the installation of the November 2026 security updates for Windows and Office products via Windows Update history or `Get-HotFix` in PowerShell. For the Outlook NTLMv2 issue, monitor network traffic for NTLMv2 hash exposure attempts.",
-      "tanium_query_hint": "Get Installed Applications, Get Windows Patch Status, Get Registry Value HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Component Based Servicing\\Packages",
-      "rapid7_query_hint": "Vulnerability ID: Microsoft-Windows-*November-2026-Security-Updates*, Asset Search: Has Software: Microsoft Outlook AND Operating System: Windows",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
-      "tldr": "CISA has issued a warning regarding a high-severity Cisco BroadWorks vulnerability that is being actively exploited in attacks. Organizations using affected versions are urged to apply patches immediately to mitigate the risk of compromise.",
-      "action": "Immediately apply available security patches for Cisco BroadWorks. Monitor for signs of compromise, including suspicious network connections or unauthorized access attempts. Review and strengthen access controls for BroadWorks deployments.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Cisco BroadWorks platforms with unpatched high-severity vulnerability. Refer to official Cisco advisories for specific vulnerable versions and patch releases.",
-      "how_to_determine_impact": "Check Cisco BroadWorks version against official Cisco security advisories. Look for signs of compromise such as unexpected processes, connections, or configuration changes on BroadWorks servers. Review logs for unauthorized access attempts.",
-      "tanium_query_hint": "Get Running Processes matches 'broadworks', Get Installed Applications with Name contains 'Cisco BroadWorks', Get File Version of 'path/to/broadworks/executable'",
-      "rapid7_query_hint": "Vulnerability ID: Cisco-BroadWorks-*actively-exploited-flaw*, Asset Search: Has Software: Cisco BroadWorks",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
-    },
-    {
-      "title": "N-able releases security hotfixes for zero-day vulnerabilities",
-      "tldr": "N-able has released urgent hotfixes to address zero-day vulnerabilities affecting its N-central remote monitoring and management (RMM) platform. These flaws were publicly disclosed and prompted N-able to temporarily take vulnerable hosted environments offline.",
-      "action": "Immediately apply the provided hotfixes to all N-able N-central RMM instances, both self-hosted and cloud-based if applicable. Verify that hosted environments are back online and secured.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "N-able N-central RMM platform versions impacted by newly disclosed zero-day vulnerabilities. Consult N-able's official security advisories for precise version ranges and hotfix details.",
-      "how_to_determine_impact": "Check the installed version of N-able N-central against vendor advisories. Ensure hotfixes have been successfully applied by checking installed updates or specific file versions as indicated by N-able.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'N-able N-central', Get File Version of 'path/to/ncentral/server/executable'",
-      "rapid7_query_hint": "Vulnerability ID: N-able-N-central-*zero-day*, Asset Search: Has Software: N-able N-central",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation",
-      "tldr": "A critical vulnerability has been identified in Zoom Workplace that could enable an unauthenticated attacker to achieve remote privilege escalation. This flaw poses a significant risk to the confidentiality and integrity of Zoom installations.",
-      "action": "Update all Zoom Workplace installations to the latest patched version immediately. Review system configurations for any unusual activity and apply least privilege principles to user accounts.",
+      "tldr": "A critical vulnerability has been identified in Zoom Workplace that could permit unauthenticated remote privilege escalation. This flaw presents a significant risk for attackers to gain unauthorized control over affected systems without prior authentication.",
+      "action": "Immediately apply the latest security patches released by Zoom for Zoom Workplace. Prioritize patching all instances of Zoom Workplace to mitigate the risk of unauthenticated remote privilege escalation.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Zoom Workplace, specific versions vulnerable to unauthenticated remote privilege escalation. Refer to official Zoom security bulletins for exact affected versions and patch releases.",
-      "how_to_determine_impact": "Check the installed version of Zoom Workplace applications (desktop clients, server components if applicable) against Zoom's official security advisories. Ensure the application is updated to the latest secure version.",
-      "tanium_query_hint": "Get Installed Applications with Name contains 'Zoom Workplace', Get File Version of 'path/to/zoom/executable'",
-      "rapid7_query_hint": "Vulnerability ID: Zoom-Workplace-*Privilege-Escalation*, Asset Search: Has Software: Zoom Workplace",
-      "remediation_priority": "High next patch cycle",
+      "affected_versions": "Zoom Workplace, specific vulnerable versions are detailed in vendor security advisories. Refer to Zoom's official advisories and Story 23 also indicates patches released.",
+      "how_to_determine_impact": "Verify the installed version of Zoom Workplace against Zoom's official security advisories. Check system logs for unusual network connections, unauthorized process execution, or privilege escalation events on machines running Zoom Workplace.",
+      "tanium_query_hint": "Get Tanium System Details from all machines with Computer Name matches 'Zoom Workplace' OR Get Installed Applications with Name contains 'Zoom' and check version.",
+      "rapid7_query_hint": "Search for vulnerability ID associated with Zoom Workplace unauthenticated privilege escalation, or use an InsightAgent query to check 'applications.name CONTAINS 'Zoom' AND applications.version < [patched_version]'.",
+      "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes",
+      "tldr": "Microsoft has released extensive security updates addressing 1,259 vulnerabilities, including a critical Outlook bug that is actively exploited in the wild. This Outlook vulnerability can expose NTLMv2 hashes, posing a significant risk for credential theft.",
+      "action": "Apply all available Microsoft security updates for November 2026 immediately, prioritizing patches for Outlook. Ensure systems are configured to prevent NTLMv2 hash exposure and implement robust monitoring for NTLM authentication.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Various Microsoft products and services, including a specific Outlook version vulnerable to NTLMv2 hash exposure. Refer to Microsoft's November 2026 Patch Tuesday advisories for comprehensive details.",
+      "how_to_determine_impact": "Ensure all Microsoft products are updated with the November 2026 patches. For Outlook, verify application versions and review network traffic for suspicious NTLMv2 hash capture attempts or NTLM relay attacks.",
+      "tanium_query_hint": "Get Patch Status and Patch Release Date from all machines with OS 'Windows' OR Get Installed Applications with Name contains 'Outlook' and check version against known vulnerable versions.",
+      "rapid7_query_hint": "Search for Microsoft November 2026 Patch Tuesday vulnerabilities. Use InsightAgent queries to check 'os.hotfixes' or 'applications.name CONTAINS 'Outlook' AND applications.version < [patched_version]'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "8.8 High"
+    },
+    {
+      "title": "N-able releases security hotfixes for zero-day vulnerabilities",
+      "tldr": "N-able has released security hotfixes to address actively exploited zero-day vulnerabilities within its N-central remote monitoring and management (RMM) platform. The public disclosure of these bugs prompted N-able to take vulnerable hosted environments offline.",
+      "action": "Immediately apply the hotfixes released by N-able for the N-central RMM platform. If patching is not feasible, follow N-able's recommended guidance, which may include isolating or taking vulnerable environments offline.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/n-able-releases-security-hotfixes-for-zero-day-vulnerabilities/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "N-able N-central remote monitoring and management (RMM) platform. Refer to N-able's official security advisory for specific vulnerable versions and hotfix details.",
+      "how_to_determine_impact": "Check the exact version of N-able N-central RMM installed on your systems. Consult N-able's advisory for indicators of compromise or specific file/registry checks related to these zero-day vulnerabilities.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'N-able N-central' and check version numbers. Look for presence of hotfix files or registry keys as per N-able's instructions.",
+      "rapid7_query_hint": "Search for N-able N-central zero-day vulnerabilities. Use InsightAgent queries to check 'applications.name CONTAINS 'N-able N-central' AND applications.version < [patched_version]' to identify vulnerable assets.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+      "tldr": "Cisco BroadWorks and Openwave vulnerabilities are being actively exploited in attacks, even though patches have been released. CISA has issued a warning, stressing the urgency for organizations to apply these patches without delay to prevent compromise.",
+      "action": "Immediately apply all available security patches for Cisco BroadWorks and Openwave products. Conduct a thorough review of logs and network traffic for any signs of exploitation if immediate patching is not possible.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Cisco BroadWorks and Openwave products. Specific vulnerable versions are detailed in Cisco and Openwave's official security advisories.",
+      "how_to_determine_impact": "Check installed versions of Cisco BroadWorks and Openwave software against vendor advisories. Look for indicators of compromise such as unexpected network activity, unauthorized process execution, or anomalous login attempts.",
+      "tanium_query_hint": "Get Installed Applications with Name contains 'Cisco BroadWorks' OR 'Openwave' and check version. Check for relevant process names or network connections indicating exploitation.",
+      "rapid7_query_hint": "Search for Cisco BroadWorks and Openwave vulnerabilities flagged by CISA. Use InsightAgent queries to check 'applications.name CONTAINS 'Cisco BroadWorks' OR applications.name CONTAINS 'Openwave' AND applications.version < [patched_version]'.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical"
     }
   ],
   "insurance": [],
@@ -29168,6 +29168,49 @@
         "rapid7_query_hint": "Vulnerability ID: Zoom-Workplace-*Privilege-Escalation*, Asset Search: Has Software: Zoom Workplace",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges",
+        "tldr": "Customer AI keys belonging to Railway were stolen, resulting in approximately $740,000 in unauthorized usage charges. This incident highlights the financial and security risks associated with compromised API keys and credentials.",
+        "action": "Immediately rotate any exposed or potentially compromised API or AI keys. Implement robust access controls and monitoring for all API usage, especially for high-cost services.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Baker Tilly notifies clients of data breach at third-party provider",
+        "tldr": "Baker Tilly Advisory Group is notifying its clients about a data breach that occurred at a third-party provider. This breach has compromised personal information pertaining to both clients and their dependents.",
+        "action": "Clients of Baker Tilly should monitor their financial accounts and credit reports for any suspicious activity. Organizations should review their third-party vendor security posture and data sharing agreements.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/baker-tilly-notifies-clients-of-data-breach-at-third-party-provider/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Notion says Fireworks breach exposed customer AI chat transcripts",
+        "tldr": "Notion, a digital workspace platform, has disclosed a security breach at its AI infrastructure provider, Fireworks AI. This incident led to the exposure of Notion AI chat transcripts from a limited number of customer workspaces.",
+        "action": "Users of Notion AI should be aware of this exposure. Organizations using Notion AI should assess if their chat transcripts contained sensitive information and review data retention policies.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/notion-says-fireworks-breach-exposed-customer-ai-chat-transcripts/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+        "tldr": "Cisco BroadWorks and Openwave vulnerabilities are being actively exploited in attacks, even though patches have been released. CISA has issued a warning, stressing the urgency for organizations to apply these patches without delay to prevent compromise.",
+        "action": "Immediately apply all available security patches for Cisco BroadWorks and Openwave products. Conduct a thorough review of logs and network traffic for any signs of exploitation if immediate patching is not possible.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Cisco BroadWorks and Openwave products. Specific vulnerable versions are detailed in Cisco and Openwave's official security advisories.",
+        "how_to_determine_impact": "Check installed versions of Cisco BroadWorks and Openwave software against vendor advisories. Look for indicators of compromise such as unexpected network activity, unauthorized process execution, or anomalous login attempts.",
+        "tanium_query_hint": "Get Installed Applications with Name contains 'Cisco BroadWorks' OR 'Openwave' and check version. Check for relevant process names or network connections indicating exploitation.",
+        "rapid7_query_hint": "Search for Cisco BroadWorks and Openwave vulnerabilities flagged by CISA. Use InsightAgent queries to check 'applications.name CONTAINS 'Cisco BroadWorks' OR applications.name CONTAINS 'Openwave' AND applications.version < [patched_version]'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
         "category": "vulns"
       }
     ]
