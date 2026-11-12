@@ -1,43 +1,43 @@
 {
   "breaches": [
     {
+      "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
+      "tldr": "In a campaign dubbed 'wfx-loot', attackers compromised 4,837 GitHub accounts, used them to probe over 61,000 repositories, and pushed secrets-stealing malware to steal cloud credentials. This poses a significant risk for further cloud environment breaches.",
+      "action": "GitHub users should immediately reset their passwords, enable 2FA, thoroughly review repository access logs, and check for any unauthorized commits or malware in their repositories, especially if cloud credentials are stored there.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+      "source": "BleepingComputer"
+    },
+    {
       "title": "Apify rotates API tokens, prompts 2FA resets after breach",
-      "tldr": "Apify experienced unauthorized access to its internal systems, leading to a confirmed breach. In response, critical internal secrets were rotated, and specific third-party OAuth connections were revoked, prompting users to reset their two-factor authentication.",
-      "action": "Apify users must immediately reset their 2FA and review any connected third-party applications or API tokens for suspicious activity. All internal secrets and credentials used to interact with Apify services should be rotated as a precaution.",
+      "tldr": "Apify detected unauthorized access to its internal systems, leading to a breach. As a result, they have rotated critical internal secrets, revoked some third-party OAuth connections, and are prompting users to reset 2FA to mitigate further impact.",
+      "action": "Apify users should immediately reset their 2FA settings and any API tokens as prompted by the service. It is also crucial to review any applications connected via OAuth for suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/",
       "source": "BleepingComputer"
     },
     {
       "title": "Notion Customer Data Compromised in Fireworks AI Hack",
-      "tldr": "Notion customer data was compromised following a hack targeting Fireworks AI, a third-party service. This incident represents a supply chain breach where sensitive user information stored or processed by Notion through Fireworks AI could be exposed.",
-      "action": "Notion users should monitor their accounts for unusual activity or unsolicited communications. If Notion is integrated with other critical business systems, immediately review access permissions and logs, and consider rotating any shared API keys or tokens.",
+      "tldr": "Notion customer data has been compromised as a result of a hack targeting Fireworks AI. This indicates a supply chain attack where sensitive data from a downstream service (Notion) was exposed due to a breach at a third-party vendor (Fireworks AI).",
+      "action": "Notion users should monitor their accounts for any suspicious activity and remain vigilant against phishing attempts. Both Notion and Fireworks AI users should review their security configurations and data access policies with third-party integrations.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack/",
       "source": "SecurityWeek"
     },
     {
-      "title": "Attacker Targets 60,000 GitHub Repositories in Credential Theft Campaign",
-      "tldr": "An active credential theft campaign is targeting approximately 60,000 GitHub repositories, aiming to steal user credentials. This widespread attack could lead to unauthorized access, code manipulation, or further propagation of supply chain attacks.",
-      "action": "GitHub users, especially repository maintainers, must promptly review access logs for suspicious activity, rotate all personal access tokens and SSH keys, and enforce multi-factor authentication (MFA) across all accounts. Regularly scan repositories for unauthorized commits or injected code.",
+      "title": "Maersk Confirms Data Theft Amid $5 Million Extortion Attempt",
+      "tldr": "Maersk has confirmed a significant data theft from its systems, revealing a $5 million extortion attempt. This incident points to a double-extortion tactic, where sensitive data was exfiltrated before a ransom demand was made to prevent its release.",
+      "action": "Organizations should review and strengthen their data exfiltration detection capabilities and implement robust incident response plans specifically tailored for extortion and double-extortion scenarios. Focus on endpoint detection and network egress monitoring.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/attacker-targets-60000-github-repositories-in-credential-theft-campaign/",
+      "source_url": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/",
       "source": "SecurityWeek"
-    },
-    {
-      "title": "Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign",
-      "tldr": "A sophisticated campaign is bypassing multi-factor authentication (MFA) to hijack Google user sessions through deceptive calendar invites and live proxy attacks. This allows threat actors to gain persistent, unauthorized access to compromised Google accounts.",
-      "action": "Immediately implement and enforce robust session management policies across your organization. Educate users on identifying sophisticated phishing attempts, particularly those involving calendar invites, and monitor for unusual login locations or session anomalies in Google account activity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html",
-      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
       "title": "Maersk Confirms Data Theft Amid $5 Million Extortion Attempt",
-      "tldr": "Maersk has confirmed a data theft incident, which was followed by a $5 million extortion attempt. While encryption ransomware was not specified, the financial demand tied to data exfiltration aligns with modern ransomware-like extortion tactics.",
-      "action": "Enhance data exfiltration prevention controls and continuously monitor network traffic for any unusual outbound data transfers. Ensure robust backup and recovery strategies are thoroughly tested for critical data, and conduct incident response simulations for data theft and extortion scenarios.",
+      "tldr": "Maersk has confirmed data theft from its systems, revealing a $5 million extortion attempt. This points to a double-extortion ransomware tactic where data is exfiltrated and then a ransom is demanded to prevent its release (though encryption isn't explicitly mentioned, extortion in this context implies it or data leak).",
+      "action": "Strengthen data exfiltration detection and implement robust incident response for extortion scenarios. Consider a ransomware-specific playbook that addresses both data recovery and data leak prevention.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/",
       "source": "SecurityWeek"
@@ -46,63 +46,63 @@
   "vulns": [
     {
       "title": "New N-able \"4EverAble2Shell\" zero-day exploited hours after PoC released",
-      "tldr": "A new zero-day vulnerability in N-able N-central, dubbed \"4EverAble2Shell,\" is under active exploitation. Threat actors are compromising servers, including those with recent patches, to deploy cryptocurrency miners and achieve Root RCE and Windows SYSTEM access.",
-      "action": "Immediately apply all available patches for N-able N-central. If patches are not yet available or proven ineffective, isolate N-central servers from broader network access. Actively hunt for indicators of compromise (IoCs) such as unexpected processes, high CPU usage, or suspicious network connections related to cryptocurrency mining.",
+      "tldr": "A critical N-able N-central zero-day vulnerability, dubbed \"4EverAble2Shell,\" is under active exploitation. This exploit allows unauthenticated attackers to achieve root remote code execution (RCE) on Linux servers and SYSTEM privileges on Windows, even on recently patched systems, and is being used to deploy cryptocurrency miners.",
+      "action": "Immediately isolate N-able N-central servers. Thoroughly inspect for compromise, including cryptocurrency miners and unauthorized access. Apply any emergency patches or mitigation guidance released by N-able without delay.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "N-able N-central, including systems running the latest security update at the time of discovery. Customers should refer to official N-able advisories for specific vulnerable version ranges.",
-      "how_to_determine_impact": "Inspect N-able N-central servers for unexpected processes, high CPU usage (indicative of cryptominers), or suspicious network connections. Review N-central logs for unauthorized commands or configuration changes. Check managed endpoints for new processes or files associated with cryptominers.",
-      "tanium_query_hint": "Get Running Processes to look for known cryptominer executables. Get Installed Applications or Get Tanium System Details to confirm N-central installation. Get File Hash[*] on N-central executable directories for known malicious hashes.",
-      "rapid7_query_hint": "Search for assets running N-able N-central. Use InsightIDR to look for unusual process execution patterns, network connections to known cryptomining pools, or suspicious activity originating from N-central servers. Look for N-able N-central vulnerability IDs in InsightVM once assigned.",
+      "affected_versions": "N-able N-central servers, including versions updated with the latest security patches prior to the emergency fix for '4EverAble2Shell'. Consult N-able's latest advisories for specific version ranges and updates.",
+      "how_to_determine_impact": "Check N-able N-central server logs for unusual process creation (e.g., cryptocurrency miners, unexpected shells), unauthorized root/SYSTEM access, and unusual outbound network connections. Verify if the emergency patch addressing '4EverAble2Shell' has been successfully applied and if the system shows signs of post-exploitation activity.",
+      "tanium_query_hint": "Get Running Processes with Filter 'process.command_line contains (miner|xmrig|powershell -e)' or 'Get Open Ports and Connections from all machines with process.name contains ncentral'. Check 'Get File Hash' for known malware hashes within N-central directories. Use 'Get Installed Applications' to confirm N-central version.",
+      "rapid7_query_hint": "Use InsightVM to scan for N-able N-central assets. Once a CVE is assigned, search InsightVM for 'N-able N-central 4EverAble2Shell' vulnerability ID. In InsightIDR, monitor N-central server logs for RCE indicators, privilege escalation events (e.g., 'SYSTEM' process creations), and alerts on cryptocurrency mining activity.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "Estimate: 9.8 Critical (Root RCE, SYSTEM access, active exploitation)"
     },
     {
       "title": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
-      "tldr": "A new Windows zero-day exploit, \"SignDrop,\" has been publicly released, enabling attackers to gain SYSTEM privileges on compromised systems. This privilege escalation vulnerability leverages an abuse of the Windows CLFS security feature, granting full control post-initial access.",
-      "action": "Patch Windows systems immediately upon the release of an official fix. Until then, restrict non-administrative user privileges to critical system functions and diligently monitor for suspicious process activity from low-privileged accounts attempting to escalate to SYSTEM.",
+      "tldr": "A new Windows zero-day exploit, named \"SignDrop\" and publicly disclosed by security researcher Abdelhamid Naceri, allows attackers to achieve SYSTEM-level privileges. This critical privilege escalation vulnerability leverages a flaw within the Common Log File System (CLFS).",
+      "action": "Deploy vendor patches immediately upon release. Prioritize monitoring Windows systems for any signs of privilege escalation, unusual process behavior, or unauthorized SYSTEM-level commands until a patch is available and applied.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Microsoft Windows operating systems that include the CLFS (Common Log File System) feature, typically modern client and server versions. Refer to Microsoft's advisory for precise version applicability once a CVE is assigned.",
-      "how_to_determine_impact": "Look for unexpected processes running with SYSTEM privileges initiated by lower-privileged accounts. Monitor for attempts to manipulate CLFS logs or related system components.",
-      "tanium_query_hint": "Get Running Processes and filter for processes with SYSTEM integrity not typically associated with system services. Get Event Log[Application] for specific CLFS-related errors or warnings.",
-      "rapid7_query_hint": "Use InsightIDR to monitor for unusual process creations, especially those elevating privileges. Filter asset searches in InsightVM for Windows operating systems and apply patches as they become available.",
+      "affected_versions": "Windows operating systems utilizing the Common Log File System (CLFS) feature; specific vulnerable versions are currently under investigation. Likely impacts recent and supported Windows versions.",
+      "how_to_determine_impact": "Identify all Windows endpoints. Monitor system event logs (e.g., Security, System) for unusual process creations, especially those spawned with SYSTEM privileges from unexpected parent processes or locations. Look for attempts to manipulate CLFS files or related artifacts. Await detailed vendor guidance for specific forensic indicators.",
+      "tanium_query_hint": "Get Running Processes with Filter 'process.user equals SYSTEM and process.parent_process_name not in ('services.exe', 'wininit.exe', 'csrss.exe')'. Use 'Get File Hash' on CLFS related files for integrity checks. Check 'Get Registry Value' for suspicious entries.",
+      "rapid7_query_hint": "Search for 'Windows CLFS SignDrop' or similar keywords in InsightVM as soon as a CVE or vulnerability ID is available. In InsightIDR, configure alerts for unusual SYSTEM privilege grants, unexpected service installations, and suspicious file modifications in system directories related to CLFS.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "7.8 High"
+      "cvss_score": "Estimate: 9.8 Critical (Privilege escalation to SYSTEM)"
     },
     {
-      "title": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
-      "tldr": "A critical remote code execution (RCE) vulnerability has been identified and patched in the HTTP/2 module of Apache HTTP Server. This flaw allows an unauthenticated attacker to execute arbitrary code on the server, potentially leading to full system compromise.",
-      "action": "Immediately apply the latest security patches released for Apache HTTP Server to all affected instances. Ensure that the HTTP/2 module is configured securely, and disable it if not strictly required. Review server access logs for any suspicious activity preceding the patch deployment.",
+      "title": "Apache Patches Critical HTTP Server RCE Found by Anthropic, Google",
+      "tldr": "Apache HTTP Server has released patches to address a critical remote code execution (RCE) vulnerability within its HTTP/2 module. Discovered by researchers from Anthropic and Google, this flaw allows unauthenticated attackers to execute arbitrary code.",
+      "action": "Immediately apply the latest available patches for Apache HTTP Server, particularly for instances configured to use the HTTP/2 module. Verify patch application and restart services.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/",
-      "source": "BleepingComputer",
+      "source_url": "https://www.securityweek.com/apache-patches-critical-http-server-rce-found-by-anthropic-google/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Apache HTTP Server versions that include and enable the HTTP/2 module. Specific vulnerable version ranges will be detailed in the official Apache security advisory.",
-      "how_to_determine_impact": "Identify all servers running Apache HTTP Server. Verify if the HTTP/2 module is enabled and active. Check Apache version numbers against the vendor's advisory for vulnerable ranges.",
-      "tanium_query_hint": "Get Installed Applications or Get Running Processes to identify Apache instances. Get File Version['httpd.exe'] or Get File Version['mod_http2.so'] to determine specific component versions.",
-      "rapid7_query_hint": "Use InsightVM to scan for Apache HTTP Server installations. Look for specific vulnerability IDs related to Apache HTTP/2 RCE once published. Filter by operating system and installed software.",
+      "affected_versions": "Apache HTTP Server versions configured with the HTTP/2 module. Specific vulnerable version ranges should be confirmed via official Apache security advisories.",
+      "how_to_determine_impact": "Identify all Apache HTTP Server installations. Check the `httpd.conf` or equivalent configuration files to determine if the `mod_http2` module is loaded and enabled. Verify the installed Apache version against the vendor's security bulletin for patched versions.",
+      "tanium_query_hint": "Get Installed Applications and versions from all machines where Application Name contains 'Apache HTTP Server'. Check 'Get File Content' of `httpd.conf` or `00-mpm.conf` for 'LoadModule http2_module'.",
+      "rapid7_query_hint": "Scan for 'Apache HTTP Server' vulnerabilities in InsightVM. Filter results by 'Vendor: Apache' and 'CVSS Score: Critical'. Ensure the latest vulnerability definitions are synced. Look for vulnerability IDs related to HTTP/2 RCE once published.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "Estimate: 9.8 Critical (Unauthenticated RCE)"
     },
     {
-      "title": "Critical Red Hat Quay Flaw Lets Attackers Read and Overwrite All Private Container Images in a Registry",
-      "tldr": "A critical vulnerability in Red Hat Quay allows attackers to read and overwrite all private container images within an affected registry. This flaw presents a severe supply chain risk, enabling image manipulation, unauthorized deployments, or exfiltration of sensitive intellectual property.",
-      "action": "Monitor Red Hat's official advisories closely for patches specific to Quay and apply them immediately upon release. Implement strong network segmentation for Quay instances to limit unauthorized access, and routinely audit access logs for unusual activity related to container image manipulation or access.",
+      "title": "Critical Red Hat Quay Vulnerability Could Expose Private Container Images",
+      "tldr": "A critical vulnerability in Red Hat Quay allows unauthenticated attackers to potentially read and overwrite all private container images stored in a registry. This poses severe risks to data confidentiality, integrity, and the software supply chain.",
+      "action": "Immediately apply the available security patches for Red Hat Quay. Conduct an audit of private container images for any unauthorized access or modifications.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/critical-red-hat-quay-flaw-lets.html",
-      "source": "The Hacker News",
+      "source_url": "https://www.securityweek.com/critical-red-hat-quay-vulnerability-could-expose-private-container-images/",
+      "source": "SecurityWeek",
       "active_exploitation": false,
-      "affected_versions": "Red Hat Quay. Specific vulnerable version ranges should be confirmed via Red Hat's official security advisories.",
-      "how_to_determine_impact": "Identify all deployments of Red Hat Quay within your environment. Check the version of Red Hat Quay against official Red Hat security advisories.",
-      "tanium_query_hint": "Get Installed Applications or Get Running Processes to identify Red Hat Quay instances. Get File Version['quay-*.jar'] or similar based on Quay's application structure.",
-      "rapid7_query_hint": "Scan network for Red Hat Quay installations. Use InsightVM to identify relevant vulnerability IDs once available for Red Hat Quay. Focus on container orchestration and registry components.",
+      "affected_versions": "Red Hat Quay (specific vulnerable versions are not detailed in the source, consult Red Hat's official security advisories for precise version ranges).",
+      "how_to_determine_impact": "Identify all deployed Red Hat Quay instances. Check the installed version against Red Hat's security advisories. Review Quay access logs for unusual or unauthorized attempts to read or modify private container images.",
+      "tanium_query_hint": "Get Installed Applications and versions from all machines where Application Name contains 'Red Hat Quay'. Check 'Get Process Details' for Quay-related services and their configurations. Review system logs for suspicious API calls.",
+      "rapid7_query_hint": "Scan for 'Red Hat Quay vulnerabilities' in InsightVM, once a CVE or specific vulnerability ID is available. Use InsightIDR to monitor Red Hat Quay logs for unauthenticated access attempts to private repositories and any suspicious image push/pull operations.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
+      "cvss_score": "Estimate: 9.0+ Critical (Unauthenticated access, data exposure/overwrite)"
     }
   ],
   "insurance": [],
@@ -29431,6 +29431,47 @@
         "rapid7_query_hint": "Scan network for Red Hat Quay installations. Use InsightVM to identify relevant vulnerability IDs once available for Red Hat Quay. Focus on container orchestration and registry components.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
+        "tldr": "In a campaign dubbed 'wfx-loot', attackers compromised 4,837 GitHub accounts, used them to probe over 61,000 repositories, and pushed secrets-stealing malware to steal cloud credentials. This poses a significant risk for further cloud environment breaches.",
+        "action": "GitHub users should immediately reset their passwords, enable 2FA, thoroughly review repository access logs, and check for any unauthorized commits or malware in their repositories, especially if cloud credentials are stored there.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Apache Patches Critical HTTP Server RCE Found by Anthropic, Google",
+        "tldr": "Apache HTTP Server has released patches to address a critical remote code execution (RCE) vulnerability within its HTTP/2 module. Discovered by researchers from Anthropic and Google, this flaw allows unauthenticated attackers to execute arbitrary code.",
+        "action": "Immediately apply the latest available patches for Apache HTTP Server, particularly for instances configured to use the HTTP/2 module. Verify patch application and restart services.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/apache-patches-critical-http-server-rce-found-by-anthropic-google/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Apache HTTP Server versions configured with the HTTP/2 module. Specific vulnerable version ranges should be confirmed via official Apache security advisories.",
+        "how_to_determine_impact": "Identify all Apache HTTP Server installations. Check the `httpd.conf` or equivalent configuration files to determine if the `mod_http2` module is loaded and enabled. Verify the installed Apache version against the vendor's security bulletin for patched versions.",
+        "tanium_query_hint": "Get Installed Applications and versions from all machines where Application Name contains 'Apache HTTP Server'. Check 'Get File Content' of `httpd.conf` or `00-mpm.conf` for 'LoadModule http2_module'.",
+        "rapid7_query_hint": "Scan for 'Apache HTTP Server' vulnerabilities in InsightVM. Filter results by 'Vendor: Apache' and 'CVSS Score: Critical'. Ensure the latest vulnerability definitions are synced. Look for vulnerability IDs related to HTTP/2 RCE once published.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "Estimate: 9.8 Critical (Unauthenticated RCE)",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical Red Hat Quay Vulnerability Could Expose Private Container Images",
+        "tldr": "A critical vulnerability in Red Hat Quay allows unauthenticated attackers to potentially read and overwrite all private container images stored in a registry. This poses severe risks to data confidentiality, integrity, and the software supply chain.",
+        "action": "Immediately apply the available security patches for Red Hat Quay. Conduct an audit of private container images for any unauthorized access or modifications.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/critical-red-hat-quay-vulnerability-could-expose-private-container-images/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Red Hat Quay (specific vulnerable versions are not detailed in the source, consult Red Hat's official security advisories for precise version ranges).",
+        "how_to_determine_impact": "Identify all deployed Red Hat Quay instances. Check the installed version against Red Hat's security advisories. Review Quay access logs for unusual or unauthorized attempts to read or modify private container images.",
+        "tanium_query_hint": "Get Installed Applications and versions from all machines where Application Name contains 'Red Hat Quay'. Check 'Get Process Details' for Quay-related services and their configurations. Review system logs for suspicious API calls.",
+        "rapid7_query_hint": "Scan for 'Red Hat Quay vulnerabilities' in InsightVM, once a CVE or specific vulnerability ID is available. Use InsightIDR to monitor Red Hat Quay logs for unauthenticated access attempts to private repositories and any suspicious image push/pull operations.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "Estimate: 9.0+ Critical (Unauthenticated access, data exposure/overwrite)",
         "category": "vulns"
       }
     ]
