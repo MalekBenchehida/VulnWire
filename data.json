@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
-      "tldr": "North Korean state-sponsored hackers successfully stole over $400 million in cryptocurrency by employing sophisticated deepfake video calls to impersonate individuals and deceive targets. The elaborate social engineering tactics bypassed security measures to facilitate the theft of digital assets.",
-      "action": "Educate employees on deepfake threats and advanced social engineering tactics, especially for high-value transactions or interactions involving sensitive information. Implement multi-factor authentication and strict verification processes for all cryptocurrency transactions and privileged access.",
+      "tldr": "North Korean state-sponsored hackers, identified by the FBI, stole over $400 million in cryptocurrency. They reportedly used sophisticated deepfake video calls to impersonate individuals and deceive targets into transferring funds.",
+      "action": "Educate employees, especially those handling high-value assets like cryptocurrency, about advanced social engineering tactics, including deepfake impersonations. Implement multi-factor authentication (MFA) and strict verification processes for all high-value transactions.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
       "source": "The Hacker News"
     },
     {
       "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
-      "tldr": "Trezor has confirmed that three Safe 5 hardware wallets sold by reseller CryptoBilis contained malicious implants designed to steal wallet recovery phrases. These implants transmitted stolen phrases over cellular networks, leading to the theft of cryptocurrency.",
-      "action": "Users who purchased Trezor Safe 5 devices from CryptoBilis should immediately check for physical tampering and transfer funds to a new, secure wallet. Trezor users should always verify the authenticity of their hardware wallets and purchase directly from official channels.",
+      "tldr": "Trezor has confirmed that three Safe 5 hardware wallets sold by the reseller CryptoBilis contained malicious hardware implants. These implants were designed to steal users' cryptocurrency recovery phrases and transmit them via cellular networks. Trezor has issued a fix, likely a procedural or software update for detection.",
+      "action": "Users who purchased Trezor Safe 5 devices from CryptoBilis must immediately cease using them, transfer all funds to new, secure wallets, and strictly follow Trezor's official advisory. Always purchase hardware wallets directly from the manufacturer or authorized, reputable distributors.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
       "source": "BleepingComputer"
     },
     {
-      "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
-      "tldr": "The SilentAir threat group has compromised multiple Asian telecom networks, enabling them to intercept SMS messages, including two-factor authentication (2FA) codes, and conduct surveillance on Taiwanese users. This direct access to network infrastructure facilitates widespread data interception and espionage.",
-      "action": "Users in affected regions should switch to app-based or hardware token 2FA methods where available, as SMS-based 2FA is vulnerable to interception. Telecom operators must audit their network security and implement robust measures to detect and prevent unauthorized access and data interception.",
+      "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
+      "tldr": "Operation Endgame, a global law enforcement effort, successfully disrupted the infrastructure of major malware families including Gootloader, CastleRAT, and StealC. This significant operation led to the seizure of servers and the recovery of 6.4 million stolen login credentials.",
+      "action": "Organizations and individuals should actively monitor breach notification services to check if their credentials were among the stolen data. Implement strong, unique passwords and enable multi-factor authentication (MFA) across all accounts to mitigate risks.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
+      "source_url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
       "source": "The Hacker News"
     },
     {
       "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
-      "tldr": "A campaign dubbed 'wfx-loot' has compromised 4,837 GitHub accounts, using them to probe over 61,000 repositories, open malicious pull requests, and deploy secrets-stealing malware. The primary objective is to exfiltrate cloud credentials and other sensitive information.",
-      "action": "GitHub users should immediately review their account activity for suspicious commits, pull requests, or unauthorized repository access. Enable strong 2FA, rotate all connected cloud credentials, and scan repositories for leaked secrets using security tools. Implement repository scanning for malware and malicious code.",
+      "tldr": "A new campaign, 'wfx-loot', has compromised 4,837 GitHub accounts, using them to probe 61,764 repositories. Attackers opened pull requests and pushed secrets-stealing malware to steal cloud credentials from developers' environments.",
+      "action": "GitHub users should immediately review their account activity for suspicious pull requests or unauthorized repository modifications. Enable MFA on all GitHub accounts, rotate all cloud credentials linked to GitHub, and audit repositories for injected malicious code or secrets.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
       "source": "BleepingComputer"
@@ -37,63 +37,63 @@
   "vulns": [
     {
       "title": "Check Point warns of zero-day flaw exploited for root access",
-      "tldr": "A high-severity zero-day vulnerability (likely PHP2Shell related) in Check Point Security Gateway products is being actively exploited to gain root access, establish persistence, and deploy VMware ESXi wiper malware. Emergency hotfixes are now available.",
-      "action": "Apply emergency hotfixes immediately to all Check Point Security Gateway instances. Conduct an immediate forensic investigation for compromise indicators, including TSGA backdoor presence and ESXi wiper activity, especially on connected VMware ESXi hosts.",
+      "tldr": "Check Point Software has released emergency hotfixes to address a high-severity zero-day vulnerability. This flaw has been actively exploited since late October, allowing attackers to gain root privileges and establish persistence on vulnerable Check Point devices.",
+      "action": "Immediately apply the emergency hotfixes released by Check Point for all affected devices. Conduct a thorough forensic analysis on all Check Point gateways for signs of compromise and the establishment of persistence mechanisms.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Vulnerable Check Point Security Gateway instances. Hotfixes released for versions 6000, 7000, 15000, 26000, 28000, and 69000 series, as well as Quantum Maestro and Quantum Virtual Appliances.",
-      "how_to_determine_impact": "Check Check Point Security Gateway logs for suspicious activity, unexpected root access, or PHP2Shell related exploits. Inspect VMware ESXi hosts connected to exploited gateways for presence of TSGA backdoor, unusual file activity, or data-wiping malware. Verify hotfix application status.",
-      "tanium_query_hint": "Get Running Processes with CommandLine contains 'php2shell' or 'TSGA'; Get Installed Patches matches 'Check Point hotfix'; Get File Exists['/opt/CPphp/htdocs/php2shell.php']",
-      "rapid7_query_hint": "Asset search for Check Point Security Gateway assets with missing hotfixes. InsightAgent query for 'process.name TSGA' or 'file.name php2shell.php' on managed endpoints. Review EDR alerts for suspicious activity on ESXi hosts.",
+      "affected_versions": "Check Point Security Gateways. Specific versions require consulting official Check Point advisories for the zero-day exploited since late October.",
+      "how_to_determine_impact": "Verify Check Point Security Gateway versions and ensure the latest emergency hotfixes are applied. Inspect logs for indicators of compromise consistent with unauthorized root access and persistence.",
+      "tanium_query_hint": "Get Installed Hotfixes[\"Check Point Security Gateway\"]. Get Running Processes and examine for unusual executables or persistent services.",
+      "rapid7_query_hint": "Search for 'vulnerability.title contains \"Check Point Zero-Day\"'. Investigate processes and file integrity on Check Point assets for signs of compromise.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Hackers Exploit New N-central Zero-Day Hours After PoC Publication",
-      "tldr": "A new zero-day vulnerability in N-central (likely a remote management software) was actively exploited by hackers within hours of a Proof-of-Concept (PoC) being published. This led to the infection of at least 21 servers, including some that had already applied a previous hotfix.",
-      "action": "Apply all available security updates and hotfixes for N-central without delay. Isolate and investigate any N-central servers exhibiting signs of compromise, such as unexpected processes or network connections. Implement robust monitoring for post-exploitation activities.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/hackers-exploit-new-n-central-zero-day-hours-after-poc-publication/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "N-central servers, including those running Hotfix 2. Specific version ranges are not detailed but imply recently patched versions are still vulnerable to this new zero-day.",
-      "how_to_determine_impact": "Review N-central server logs for unauthorized access, unusual process execution, or new user accounts. Check for the presence of known indicators of compromise (IoCs) related to this exploitation, if released. Verify system integrity and patch levels.",
-      "tanium_query_hint": "Get Installed Applications contains 'N-central'; Get Running Processes with CommandLine contains 'powershell -encodedcommand' or 'suspicious_payload'; Get Last Logged In User from all machines where Computer Name contains 'N-central'",
-      "rapid7_query_hint": "Asset search for 'N-central' software and associated vulnerability IDs. InsightAgent query for process anomalies or file modifications on N-central servers. Review Endpoint Detection and Response (EDR) alerts for suspicious activity.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (estimate, based on root access and active exploitation)"
     },
     {
       "title": "Nightmare Eclipse Drops Windows Zero-Day Exploit 'SignDrop'",
-      "tldr": "A new Windows zero-day exploit, dubbed 'SignDrop', has been publicly released by a group named Nightmare Eclipse. Details are limited, but as a zero-day, it represents an immediate and severe threat to Windows systems, indicating active exploit availability.",
-      "action": "Monitor CISA and vendor advisories closely for official patches and mitigation steps. Implement enhanced detection and response capabilities for Windows endpoints, focusing on anomalous process execution, privilege escalation attempts, and any activity related to certificate or signature validation.",
+      "tldr": "The 'Nightmare Eclipse' threat group has publicly released 'SignDrop', a zero-day exploit targeting Windows operating systems. This indicates a new, critical vulnerability in Windows is being actively exploited in the wild, posing an immediate threat.",
+      "action": "Monitor official Microsoft channels for emergency patches or mitigation guidance regarding the 'SignDrop' zero-day. Implement enhanced endpoint detection and response (EDR) rules to detect and block 'SignDrop' related activity and indicators of compromise.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "All supported versions of Microsoft Windows are potentially affected until a patch is released. Specific versions targeted by the 'SignDrop' exploit are currently unknown.",
-      "how_to_determine_impact": "Monitor Windows event logs for unusual system events (e.g., Event ID 4624/4625 for logon failures, 4672 for admin logon), crashes, or unauthorized code execution. Look for suspicious activity related to certificate or signature validation if 'SignDrop' relates to those mechanisms. Awaiting further technical details from vendor.",
-      "tanium_query_hint": "Get Operating System; Get Running Processes where CommandLine contains 'suspicious_activity' or 'unknown_binaries'; Get Event Log['Security'] for 'EventID = 4688' (Process Creation) with no parent process. Monitor File Hash of critical system files for changes.",
-      "rapid7_query_hint": "Asset search for Windows operating systems. Implement custom detection rules for endpoint activity monitoring that could indicate exploitation. Monitor EDR alerts for process injection, privilege escalation, or unexpected system calls and file modifications.",
+      "affected_versions": "Windows operating systems vulnerable to the 'SignDrop' zero-day exploit. Specific versions yet to be detailed by Microsoft.",
+      "how_to_determine_impact": "Monitor for Indicators of Compromise (IOCs) related to 'SignDrop' on Windows hosts. Check system logs for unusual process execution, privilege escalation attempts, or unauthorized code injection.",
+      "tanium_query_hint": "Get Running Processes matching \"signdrop.exe\" or similar known IOCs. Get Event Log Data filtered by security events for privilege escalation.",
+      "rapid7_query_hint": "Search for 'vulnerability.title contains \"Windows SignDrop Zero-Day\"'. Look for `process.name contains \"signdrop\"` or associated malware hashes on Windows assets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (estimate, as it's a Windows zero-day exploit)"
+    },
+    {
+      "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+      "tldr": "A new worm-like malware toolkit, 'SCKit', is being actively deployed in ScreenConnect attacks, specifically targeting Managed Service Providers (MSPs). This malware has the capability to spread from infected customer devices to MSP technician workstations, compromising additional managed networks.",
+      "action": "MSPs should immediately review their ScreenConnect instances for compromise, implement strict network segmentation, and enforce robust endpoint security on technician workstations. Proactively hunt for the presence of SCKit malware and its associated Indicators of Compromise.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "ScreenConnect environments, particularly those managed by MSPs, likely exploiting previously patched or newly discovered vulnerabilities. All ScreenConnect instances should be considered at risk.",
+      "how_to_determine_impact": "Check ScreenConnect server logs and endpoint logs for signs of SCKit activity. Hunt for known IOCs associated with SCKit malware. Review network traffic for suspicious lateral movement patterns.",
+      "tanium_query_hint": "Get Installed Applications having Name contains \"ScreenConnect\". Get Running Processes and Get File Exists for known SCKit indicators.",
+      "rapid7_query_hint": "Search for 'vulnerability.title contains \"ScreenConnect\"' and 'malware.name contains \"SCKit\"'. Monitor for suspicious process activity and network connections from ScreenConnect assets.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (estimate, given worm-like spread and MSP targeting)"
     },
     {
       "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
-      "tldr": "PostgreSQL has released patches addressing 52 vulnerabilities, critically including a 22-year-old bug that enables authenticated Remote Code Execution (RCE). These extensive updates are crucial to mitigate severe security risks across PostgreSQL deployments.",
-      "action": "Upgrade all PostgreSQL installations to the latest patched versions immediately. Review PostgreSQL server configurations and access controls, especially for authenticated users, to minimize the attack surface for the authenticated RCE vulnerability.",
+      "tldr": "PostgreSQL has released significant patches addressing 52 vulnerabilities, including a severe 22-year-old bug that could allow an authenticated attacker to achieve remote code execution (RCE). This update is critical for maintaining the security of PostgreSQL database deployments.",
+      "action": "Immediately apply the latest PostgreSQL security updates to all PostgreSQL installations. Review systems for potential exploitation indicators if patches were not applied promptly, especially for systems exposed to untrusted users.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "All versions of PostgreSQL prior to the latest patches released in November 2026 are affected. Specific attention should be paid to older, unpatched instances potentially harboring the 22-year-old RCE bug.",
-      "how_to_determine_impact": "Check the version of all running PostgreSQL instances. Any version older than the latest November 2026 release is vulnerable. Specifically, identify instances where authenticated RCE could be a concern and review user privileges.",
-      "tanium_query_hint": "Get Installed Applications contains 'PostgreSQL' and Get Running Processes with CommandLine contains 'postgres'; Get Registry Value['HKEY_LOCAL_MACHINE\\SOFTWARE\\PostgreSQL\\*\\Version'] or 'Get File Version[C:\\Program Files\\PostgreSQL\\*\\bin\\postgres.exe]'",
-      "rapid7_query_hint": "Asset search for 'PostgreSQL' software and scan systems for PostgreSQL version information. Use InsightAgent to check service versions. Look for associated vulnerability IDs as they become available post-patch.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "affected_versions": "All PostgreSQL versions prior to the patched releases (specific versions need to be confirmed with official PostgreSQL security advisories).",
+      "how_to_determine_impact": "Check the installed version of PostgreSQL. Any version older than the latest patched release is considered affected. Consult PostgreSQL documentation for specific version upgrade paths.",
+      "tanium_query_hint": "Get Installed Applications having Name contains \"PostgreSQL\" and Get Running Processes matching \"postgres\". Compare their versions against official advisories.",
+      "rapid7_query_hint": "Search for 'vulnerability.title contains \"PostgreSQL\"' and 'vulnerability.severity >= \"High\"'. Identify assets with outdated PostgreSQL installations.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.8 High (estimate, given authenticated RCE)"
     }
   ],
   "insurance": [],
@@ -29666,6 +29666,15 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
         "category": "vulns"
+      },
+      {
+        "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
+        "tldr": "Operation Endgame, a global law enforcement effort, successfully disrupted the infrastructure of major malware families including Gootloader, CastleRAT, and StealC. This significant operation led to the seizure of servers and the recovery of 6.4 million stolen login credentials.",
+        "action": "Organizations and individuals should actively monitor breach notification services to check if their credentials were among the stolen data. Implement strong, unique passwords and enable multi-factor authentication (MFA) across all accounts to mitigate risks.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
+        "source": "The Hacker News",
+        "category": "breaches"
       }
     ]
   }
