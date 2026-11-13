@@ -2,42 +2,42 @@
   "breaches": [
     {
       "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
-      "tldr": "In a campaign dubbed 'wfx-loot', attackers compromised 4,837 GitHub accounts, used them to probe over 61,000 repositories, and pushed secrets-stealing malware to steal cloud credentials. This poses a significant risk for further cloud environment breaches.",
-      "action": "GitHub users should immediately reset their passwords, enable 2FA, thoroughly review repository access logs, and check for any unauthorized commits or malware in their repositories, especially if cloud credentials are stored there.",
+      "tldr": "A new campaign dubbed 'wfx-loot' compromised 4,837 GitHub accounts, probing over 61,000 repositories. Threat actors opened pull requests and pushed secrets-stealing malware to exfiltrate cloud credentials.",
+      "action": "Review all GitHub account activity for suspicious commits, pull requests, or unauthorized OAuth applications. Immediately revoke all personal access tokens and OAuth authorizations. Force password resets and enable/review MFA on all GitHub accounts. Scan repositories for committed secrets or malware. Rotate cloud credentials if any repository was involved.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
       "source": "BleepingComputer"
     },
     {
+      "title": "Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign",
+      "tldr": "A Google session hijacking campaign is underway, leveraging malicious calendar invites and live proxy techniques. This allows threat actors to bypass multi-factor authentication and gain unauthorized access to user sessions.",
+      "action": "Educate users on the risks of suspicious calendar invites and links. Advise immediate reporting of unusual calendar events. Implement advanced phishing detection and email security gateways. Review Google Workspace logs for unusual login locations, session activity, or tokens. Consider FIDO2/hardware security keys for critical accounts.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Apify rotates API tokens, prompts 2FA resets after breach",
-      "tldr": "Apify detected unauthorized access to its internal systems, leading to a breach. As a result, they have rotated critical internal secrets, revoked some third-party OAuth connections, and are prompting users to reset 2FA to mitigate further impact.",
-      "action": "Apify users should immediately reset their 2FA settings and any API tokens as prompted by the service. It is also crucial to review any applications connected via OAuth for suspicious activity.",
+      "tldr": "Apify detected unauthorized access to its internal systems, leading to a breach where critical internal secrets were rotated and some third-party OAuth connections were revoked. Users are being prompted to reset 2FA.",
+      "action": "If you are an Apify user, immediately reset your 2FA and any API tokens. Review your Apify account activity for any unauthorized actions. Audit any third-party integrations that use Apify OAuth for suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/",
       "source": "BleepingComputer"
     },
     {
       "title": "Notion Customer Data Compromised in Fireworks AI Hack",
-      "tldr": "Notion customer data has been compromised as a result of a hack targeting Fireworks AI. This indicates a supply chain attack where sensitive data from a downstream service (Notion) was exposed due to a breach at a third-party vendor (Fireworks AI).",
-      "action": "Notion users should monitor their accounts for any suspicious activity and remain vigilant against phishing attempts. Both Notion and Fireworks AI users should review their security configurations and data access policies with third-party integrations.",
+      "tldr": "Customer data belonging to Notion users has been compromised as a result of a hack targeting Fireworks AI. The extent and nature of the compromised data are being investigated.",
+      "action": "If you use Notion, monitor your account for any suspicious activity. If you reused passwords or have sensitive data, consider changing your Notion password and any other accounts using the same credentials. Be vigilant for phishing attempts.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack/",
-      "source": "SecurityWeek"
-    },
-    {
-      "title": "Maersk Confirms Data Theft Amid $5 Million Extortion Attempt",
-      "tldr": "Maersk has confirmed a significant data theft from its systems, revealing a $5 million extortion attempt. This incident points to a double-extortion tactic, where sensitive data was exfiltrated before a ransom demand was made to prevent its release.",
-      "action": "Organizations should review and strengthen their data exfiltration detection capabilities and implement robust incident response plans specifically tailored for extortion and double-extortion scenarios. Focus on endpoint detection and network egress monitoring.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
       "title": "Maersk Confirms Data Theft Amid $5 Million Extortion Attempt",
-      "tldr": "Maersk has confirmed data theft from its systems, revealing a $5 million extortion attempt. This points to a double-extortion ransomware tactic where data is exfiltrated and then a ransom is demanded to prevent its release (though encryption isn't explicitly mentioned, extortion in this context implies it or data leak).",
-      "action": "Strengthen data exfiltration detection and implement robust incident response for extortion scenarios. Consider a ransomware-specific playbook that addresses both data recovery and data leak prevention.",
+      "tldr": "Maersk has confirmed a data theft incident, which is now accompanied by an extortion attempt demanding $5 million. The specific nature and volume of the stolen data, as well as the perpetrators, are currently under investigation.",
+      "action": "Implement and review robust data loss prevention (DLP) strategies. Enhance endpoint detection and response (EDR) capabilities to prevent initial compromise and data exfiltration. Review incident response plans, specifically for extortion and ransomware scenarios, including negotiation strategies and data recovery.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/",
       "source": "SecurityWeek"
@@ -46,63 +46,63 @@
   "vulns": [
     {
       "title": "New N-able \"4EverAble2Shell\" zero-day exploited hours after PoC released",
-      "tldr": "A critical N-able N-central zero-day vulnerability, dubbed \"4EverAble2Shell,\" is under active exploitation. This exploit allows unauthenticated attackers to achieve root remote code execution (RCE) on Linux servers and SYSTEM privileges on Windows, even on recently patched systems, and is being used to deploy cryptocurrency miners.",
-      "action": "Immediately isolate N-able N-central servers. Thoroughly inspect for compromise, including cryptocurrency miners and unauthorized access. Apply any emergency patches or mitigation guidance released by N-able without delay.",
+      "tldr": "A newly disclosed N-able N-central zero-day vulnerability, dubbed \"4EverAble2Shell\", is being actively exploited to compromise servers and deploy cryptocurrency miners. This vulnerability enables root RCE and Windows SYSTEM access, affecting systems including those running the latest security update.",
+      "action": "Immediately apply available patches for N-able N-central. Conduct a thorough forensic analysis for compromise, especially for cryptocurrency miners or unauthorized SYSTEM-level access. Review and harden all N-central deployments.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "N-able N-central servers, including versions updated with the latest security patches prior to the emergency fix for '4EverAble2Shell'. Consult N-able's latest advisories for specific version ranges and updates.",
-      "how_to_determine_impact": "Check N-able N-central server logs for unusual process creation (e.g., cryptocurrency miners, unexpected shells), unauthorized root/SYSTEM access, and unusual outbound network connections. Verify if the emergency patch addressing '4EverAble2Shell' has been successfully applied and if the system shows signs of post-exploitation activity.",
-      "tanium_query_hint": "Get Running Processes with Filter 'process.command_line contains (miner|xmrig|powershell -e)' or 'Get Open Ports and Connections from all machines with process.name contains ncentral'. Check 'Get File Hash' for known malware hashes within N-central directories. Use 'Get Installed Applications' to confirm N-central version.",
-      "rapid7_query_hint": "Use InsightVM to scan for N-able N-central assets. Once a CVE is assigned, search InsightVM for 'N-able N-central 4EverAble2Shell' vulnerability ID. In InsightIDR, monitor N-central server logs for RCE indicators, privilege escalation events (e.g., 'SYSTEM' process creations), and alerts on cryptocurrency mining activity.",
+      "affected_versions": "N-able N-central, including systems running the latest security update.",
+      "how_to_determine_impact": "Check N-able N-central servers for evidence of compromise, such as unexpected processes (e.g., cryptocurrency miners), unauthorized SYSTEM/root access, or suspicious network connections. Review N-central logs for unusual activity.",
+      "tanium_query_hint": "Get Running Processes with CommandLine and ParentProcessName to detect miners; Get Logged in Users for SYSTEM accounts; Get Files Matching 'N-central installation path' with Name 'suspicious_file.exe' from all machines for IOCs.",
+      "rapid7_query_hint": "vulnerability.title = 'N-able N-central 4EverAble2Shell' for vulnerability detection (if added); process.name = 'xmrig' or process.name = 'cpuminer' for miner detection in InsightIDR; asset.software.name = 'N-able N-central' for affected asset identification.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Estimate: 9.8 Critical (Root RCE, SYSTEM access, active exploitation)"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
-      "tldr": "A new Windows zero-day exploit, named \"SignDrop\" and publicly disclosed by security researcher Abdelhamid Naceri, allows attackers to achieve SYSTEM-level privileges. This critical privilege escalation vulnerability leverages a flaw within the Common Log File System (CLFS).",
-      "action": "Deploy vendor patches immediately upon release. Prioritize monitoring Windows systems for any signs of privilege escalation, unusual process behavior, or unauthorized SYSTEM-level commands until a patch is available and applied.",
+      "tldr": "A new Windows zero-day exploit named \"SignDrop\", released by security researcher Abdelhamid Naceri, allows attackers to gain SYSTEM privileges. This exploit leverages the Windows CLFS (Common Log File System) security feature.",
+      "action": "Monitor systems for unusual process activity attempting to escalate privileges to SYSTEM. Apply official patches as soon as they become available. Implement least privilege principles and restrict user execution permissions.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Windows operating systems utilizing the Common Log File System (CLFS) feature; specific vulnerable versions are currently under investigation. Likely impacts recent and supported Windows versions.",
-      "how_to_determine_impact": "Identify all Windows endpoints. Monitor system event logs (e.g., Security, System) for unusual process creations, especially those spawned with SYSTEM privileges from unexpected parent processes or locations. Look for attempts to manipulate CLFS files or related artifacts. Await detailed vendor guidance for specific forensic indicators.",
-      "tanium_query_hint": "Get Running Processes with Filter 'process.user equals SYSTEM and process.parent_process_name not in ('services.exe', 'wininit.exe', 'csrss.exe')'. Use 'Get File Hash' on CLFS related files for integrity checks. Check 'Get Registry Value' for suspicious entries.",
-      "rapid7_query_hint": "Search for 'Windows CLFS SignDrop' or similar keywords in InsightVM as soon as a CVE or vulnerability ID is available. In InsightIDR, configure alerts for unusual SYSTEM privilege grants, unexpected service installations, and suspicious file modifications in system directories related to CLFS.",
+      "affected_versions": "Microsoft Windows versions leveraging the Common Log File System (CLFS).",
+      "how_to_determine_impact": "Inspect Windows event logs for unusual privilege escalation events or crashes related to CLFS. Look for unauthorized processes running with SYSTEM privileges.",
+      "tanium_query_hint": "Get Running Processes with Username and CommandLine where Username is SYSTEM; Get Windows Event Log[System,1] for relevant event IDs.",
+      "rapid7_query_hint": "vulnerability.title = 'Windows SignDrop' (if ID is created); asset.os.family = 'Windows' and asset.privileges.escalated = true combined with process monitoring in InsightIDR for suspicious SYSTEM processes.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Estimate: 9.8 Critical (Privilege escalation to SYSTEM)"
+      "cvss_score": "7.8 High"
     },
     {
-      "title": "Apache Patches Critical HTTP Server RCE Found by Anthropic, Google",
-      "tldr": "Apache HTTP Server has released patches to address a critical remote code execution (RCE) vulnerability within its HTTP/2 module. Discovered by researchers from Anthropic and Google, this flaw allows unauthenticated attackers to execute arbitrary code.",
-      "action": "Immediately apply the latest available patches for Apache HTTP Server, particularly for instances configured to use the HTTP/2 module. Verify patch application and restart services.",
+      "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+      "tldr": "A new worm-like malware toolkit, SCKit, is being actively deployed in ScreenConnect attacks targeting Managed Service Providers (MSPs). The malware is designed to spread from infected customer devices to MSP technicians' computers and compromise additional managed networks, leveraging ScreenConnect sessions.",
+      "action": "Immediately update all ScreenConnect installations to the latest secure version. Review all ScreenConnect session logs for unauthorized access or unusual activity. Implement strict network segmentation for MSP remote access tools and enhance endpoint detection and response (EDR) capabilities on technician workstations and customer endpoints.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/apache-patches-critical-http-server-rce-found-by-anthropic-google/",
-      "source": "SecurityWeek",
-      "active_exploitation": false,
-      "affected_versions": "Apache HTTP Server versions configured with the HTTP/2 module. Specific vulnerable version ranges should be confirmed via official Apache security advisories.",
-      "how_to_determine_impact": "Identify all Apache HTTP Server installations. Check the `httpd.conf` or equivalent configuration files to determine if the `mod_http2` module is loaded and enabled. Verify the installed Apache version against the vendor's security bulletin for patched versions.",
-      "tanium_query_hint": "Get Installed Applications and versions from all machines where Application Name contains 'Apache HTTP Server'. Check 'Get File Content' of `httpd.conf` or `00-mpm.conf` for 'LoadModule http2_module'.",
-      "rapid7_query_hint": "Scan for 'Apache HTTP Server' vulnerabilities in InsightVM. Filter results by 'Vendor: Apache' and 'CVSS Score: Critical'. Ensure the latest vulnerability definitions are synced. Look for vulnerability IDs related to HTTP/2 RCE once published.",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "Estimate: 9.8 Critical (Unauthenticated RCE)"
+      "source_url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "ScreenConnect (versions vulnerable to remote exploitation or misconfigurations that allow malware deployment). Specific versions should be identified by ConnectWise.",
+      "how_to_determine_impact": "Check ScreenConnect server logs for suspicious login attempts, unauthorized commands, or new user creations. Scan customer and MSP technician endpoints for SCKit malware indicators of compromise (IOCs) such as suspicious processes, file paths, or network connections.",
+      "tanium_query_hint": "Get Running Processes with MD5 Hash and CommandLine to search for known SCKit IOCs; Get File Exists['C:\\Program Files\\ConnectWise\\ScreenConnect\\*'] combined with Get Last Logged in Users for suspicious activity.",
+      "rapid7_query_hint": "vulnerability.title = 'ConnectWise ScreenConnect' (for relevant vulns); malware.name = 'SCKit' in InsightIDR for detection; asset.software.name = 'ConnectWise ScreenConnect' for affected asset identification.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical"
     },
     {
-      "title": "Critical Red Hat Quay Vulnerability Could Expose Private Container Images",
-      "tldr": "A critical vulnerability in Red Hat Quay allows unauthenticated attackers to potentially read and overwrite all private container images stored in a registry. This poses severe risks to data confidentiality, integrity, and the software supply chain.",
-      "action": "Immediately apply the available security patches for Red Hat Quay. Conduct an audit of private container images for any unauthorized access or modifications.",
+      "title": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
+      "tldr": "A critical vulnerability in the HTTP/2 module of Apache HTTP Server has been patched. This flaw could be exploited by an unauthenticated attacker to achieve remote code execution (RCE).",
+      "action": "Immediately upgrade Apache HTTP Server installations to the latest patched version. Review Apache access and error logs for any signs of exploitation attempts prior to patching.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/critical-red-hat-quay-vulnerability-could-expose-private-container-images/",
-      "source": "SecurityWeek",
+      "source_url": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/",
+      "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "Red Hat Quay (specific vulnerable versions are not detailed in the source, consult Red Hat's official security advisories for precise version ranges).",
-      "how_to_determine_impact": "Identify all deployed Red Hat Quay instances. Check the installed version against Red Hat's security advisories. Review Quay access logs for unusual or unauthorized attempts to read or modify private container images.",
-      "tanium_query_hint": "Get Installed Applications and versions from all machines where Application Name contains 'Red Hat Quay'. Check 'Get Process Details' for Quay-related services and their configurations. Review system logs for suspicious API calls.",
-      "rapid7_query_hint": "Scan for 'Red Hat Quay vulnerabilities' in InsightVM, once a CVE or specific vulnerability ID is available. Use InsightIDR to monitor Red Hat Quay logs for unauthenticated access attempts to private repositories and any suspicious image push/pull operations.",
+      "affected_versions": "Apache HTTP Server versions affected by HTTP/2 module vulnerability.",
+      "how_to_determine_impact": "Check the installed version of Apache HTTP Server. Verify the HTTP/2 module is enabled. Inspect configuration files (e.g., httpd.conf) for LoadModule http2_module.",
+      "tanium_query_hint": "Get Installed Applications for Apache HTTP Server versions; Get File Content['C:\\Program Files\\Apache Group\\Apache2\\conf\\httpd.conf'] for module loading.",
+      "rapid7_query_hint": "vulnerability.title = 'Apache HTTP Server HTTP/2 RCE' (if ID is created); asset.software.name = 'Apache HTTP Server' and asset.software.version < 'patched_version'",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "Estimate: 9.0+ Critical (Unauthenticated access, data exposure/overwrite)"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -29472,6 +29472,117 @@
         "rapid7_query_hint": "Scan for 'Red Hat Quay vulnerabilities' in InsightVM, once a CVE or specific vulnerability ID is available. Use InsightIDR to monitor Red Hat Quay logs for unauthenticated access attempts to private repositories and any suspicious image push/pull operations.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "Estimate: 9.0+ Critical (Unauthenticated access, data exposure/overwrite)",
+        "category": "vulns"
+      }
+    ],
+    "2026-11-13": [
+      {
+        "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
+        "tldr": "A new campaign dubbed 'wfx-loot' compromised 4,837 GitHub accounts, probing over 61,000 repositories. Threat actors opened pull requests and pushed secrets-stealing malware to exfiltrate cloud credentials.",
+        "action": "Review all GitHub account activity for suspicious commits, pull requests, or unauthorized OAuth applications. Immediately revoke all personal access tokens and OAuth authorizations. Force password resets and enable/review MFA on all GitHub accounts. Scan repositories for committed secrets or malware. Rotate cloud credentials if any repository was involved.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign",
+        "tldr": "A Google session hijacking campaign is underway, leveraging malicious calendar invites and live proxy techniques. This allows threat actors to bypass multi-factor authentication and gain unauthorized access to user sessions.",
+        "action": "Educate users on the risks of suspicious calendar invites and links. Advise immediate reporting of unusual calendar events. Implement advanced phishing detection and email security gateways. Review Google Workspace logs for unusual login locations, session activity, or tokens. Consider FIDO2/hardware security keys for critical accounts.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Apify rotates API tokens, prompts 2FA resets after breach",
+        "tldr": "Apify detected unauthorized access to its internal systems, leading to a breach where critical internal secrets were rotated and some third-party OAuth connections were revoked. Users are being prompted to reset 2FA.",
+        "action": "If you are an Apify user, immediately reset your 2FA and any API tokens. Review your Apify account activity for any unauthorized actions. Audit any third-party integrations that use Apify OAuth for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/apify-rotates-api-tokens-prompts-2fa-resets-after-breach/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Notion Customer Data Compromised in Fireworks AI Hack",
+        "tldr": "Customer data belonging to Notion users has been compromised as a result of a hack targeting Fireworks AI. The extent and nature of the compromised data are being investigated.",
+        "action": "If you use Notion, monitor your account for any suspicious activity. If you reused passwords or have sensitive data, consider changing your Notion password and any other accounts using the same credentials. Be vigilant for phishing attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/notion-customer-data-compromised-in-fireworks-ai-hack/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Maersk Confirms Data Theft Amid $5 Million Extortion Attempt",
+        "tldr": "Maersk has confirmed a data theft incident, which is now accompanied by an extortion attempt demanding $5 million. The specific nature and volume of the stolen data, as well as the perpetrators, are currently under investigation.",
+        "action": "Implement and review robust data loss prevention (DLP) strategies. Enhance endpoint detection and response (EDR) capabilities to prevent initial compromise and data exfiltration. Review incident response plans, specifically for extortion and ransomware scenarios, including negotiation strategies and data recovery.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/maersk-confirms-data-theft-amid-5-million-extortion-attempt/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "New N-able \"4EverAble2Shell\" zero-day exploited hours after PoC released",
+        "tldr": "A newly disclosed N-able N-central zero-day vulnerability, dubbed \"4EverAble2Shell\", is being actively exploited to compromise servers and deploy cryptocurrency miners. This vulnerability enables root RCE and Windows SYSTEM access, affecting systems including those running the latest security update.",
+        "action": "Immediately apply available patches for N-able N-central. Conduct a thorough forensic analysis for compromise, especially for cryptocurrency miners or unauthorized SYSTEM-level access. Review and harden all N-central deployments.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-n-able-4everable2shell-zero-day-exploited-hours-after-poc-released/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "N-able N-central, including systems running the latest security update.",
+        "how_to_determine_impact": "Check N-able N-central servers for evidence of compromise, such as unexpected processes (e.g., cryptocurrency miners), unauthorized SYSTEM/root access, or suspicious network connections. Review N-central logs for unusual activity.",
+        "tanium_query_hint": "Get Running Processes with CommandLine and ParentProcessName to detect miners; Get Logged in Users for SYSTEM accounts; Get Files Matching 'N-central installation path' with Name 'suspicious_file.exe' from all machines for IOCs.",
+        "rapid7_query_hint": "vulnerability.title = 'N-able N-central 4EverAble2Shell' for vulnerability detection (if added); process.name = 'xmrig' or process.name = 'cpuminer' for miner detection in InsightIDR; asset.software.name = 'N-able N-central' for affected asset identification.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
+        "tldr": "A new Windows zero-day exploit named \"SignDrop\", released by security researcher Abdelhamid Naceri, allows attackers to gain SYSTEM privileges. This exploit leverages the Windows CLFS (Common Log File System) security feature.",
+        "action": "Monitor systems for unusual process activity attempting to escalate privileges to SYSTEM. Apply official patches as soon as they become available. Implement least privilege principles and restrict user execution permissions.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Microsoft Windows versions leveraging the Common Log File System (CLFS).",
+        "how_to_determine_impact": "Inspect Windows event logs for unusual privilege escalation events or crashes related to CLFS. Look for unauthorized processes running with SYSTEM privileges.",
+        "tanium_query_hint": "Get Running Processes with Username and CommandLine where Username is SYSTEM; Get Windows Event Log[System,1] for relevant event IDs.",
+        "rapid7_query_hint": "vulnerability.title = 'Windows SignDrop' (if ID is created); asset.os.family = 'Windows' and asset.privileges.escalated = true combined with process monitoring in InsightIDR for suspicious SYSTEM processes.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
+        "tldr": "A new worm-like malware toolkit, SCKit, is being actively deployed in ScreenConnect attacks targeting Managed Service Providers (MSPs). The malware is designed to spread from infected customer devices to MSP technicians' computers and compromise additional managed networks, leveraging ScreenConnect sessions.",
+        "action": "Immediately update all ScreenConnect installations to the latest secure version. Review all ScreenConnect session logs for unauthorized access or unusual activity. Implement strict network segmentation for MSP remote access tools and enhance endpoint detection and response (EDR) capabilities on technician workstations and customer endpoints.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "ScreenConnect (versions vulnerable to remote exploitation or misconfigurations that allow malware deployment). Specific versions should be identified by ConnectWise.",
+        "how_to_determine_impact": "Check ScreenConnect server logs for suspicious login attempts, unauthorized commands, or new user creations. Scan customer and MSP technician endpoints for SCKit malware indicators of compromise (IOCs) such as suspicious processes, file paths, or network connections.",
+        "tanium_query_hint": "Get Running Processes with MD5 Hash and CommandLine to search for known SCKit IOCs; Get File Exists['C:\\Program Files\\ConnectWise\\ScreenConnect\\*'] combined with Get Last Logged in Users for suspicious activity.",
+        "rapid7_query_hint": "vulnerability.title = 'ConnectWise ScreenConnect' (for relevant vulns); malware.name = 'SCKit' in InsightIDR for detection; asset.software.name = 'ConnectWise ScreenConnect' for affected asset identification.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Apache HTTP Server patches critical HTTP/2 remote code execution flaw",
+        "tldr": "A critical vulnerability in the HTTP/2 module of Apache HTTP Server has been patched. This flaw could be exploited by an unauthenticated attacker to achieve remote code execution (RCE).",
+        "action": "Immediately upgrade Apache HTTP Server installations to the latest patched version. Review Apache access and error logs for any signs of exploitation attempts prior to patching.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/apache-http-server-patches-critical-http-2-remote-code-execution-flaw/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "Apache HTTP Server versions affected by HTTP/2 module vulnerability.",
+        "how_to_determine_impact": "Check the installed version of Apache HTTP Server. Verify the HTTP/2 module is enabled. Inspect configuration files (e.g., httpd.conf) for LoadModule http2_module.",
+        "tanium_query_hint": "Get Installed Applications for Apache HTTP Server versions; Get File Content['C:\\Program Files\\Apache Group\\Apache2\\conf\\httpd.conf'] for module loading.",
+        "rapid7_query_hint": "vulnerability.title = 'Apache HTTP Server HTTP/2 RCE' (if ID is created); asset.software.name = 'Apache HTTP Server' and asset.software.version < 'patched_version'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.8 Critical",
         "category": "vulns"
       }
     ]
