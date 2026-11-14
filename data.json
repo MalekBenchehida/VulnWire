@@ -2,98 +2,131 @@
   "breaches": [
     {
       "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
-      "tldr": "North Korean state-sponsored hackers, identified by the FBI, stole over $400 million in cryptocurrency. They reportedly used sophisticated deepfake video calls to impersonate individuals and deceive targets into transferring funds.",
-      "action": "Educate employees, especially those handling high-value assets like cryptocurrency, about advanced social engineering tactics, including deepfake impersonations. Implement multi-factor authentication (MFA) and strict verification processes for all high-value transactions.",
+      "tldr": "North Korean state-sponsored hackers, identified by the FBI, orchestrated a sophisticated phishing campaign using deepfake video calls to impersonate legitimate individuals. They successfully stole over $400 million in cryptocurrency from various organizations by leveraging these advanced social engineering tactics. This highlights the evolving nature of sophisticated impersonation techniques employed by state-sponsored threat actors.",
+      "action": "Warn employees about deepfake phishing attempts and the importance of verifying identities through multiple channels. Implement enhanced authentication and approval processes for high-value financial transactions. Review and strengthen cybersecurity awareness training to include advanced social engineering and impersonation tactics.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
       "source": "The Hacker News"
     },
     {
       "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
-      "tldr": "Trezor has confirmed that three Safe 5 hardware wallets sold by the reseller CryptoBilis contained malicious hardware implants. These implants were designed to steal users' cryptocurrency recovery phrases and transmit them via cellular networks. Trezor has issued a fix, likely a procedural or software update for detection.",
-      "action": "Users who purchased Trezor Safe 5 devices from CryptoBilis must immediately cease using them, transfer all funds to new, secure wallets, and strictly follow Trezor's official advisory. Always purchase hardware wallets directly from the manufacturer or authorized, reputable distributors.",
+      "tldr": "Trezor confirmed that three Safe 5 hardware wallets sold by Southeast Asian reseller CryptoBilis contained malicious hardware implants. These implants were specifically designed to intercept and steal wallet recovery phrases, covertly transmitting them to attackers over cellular networks. Trezor has since released a fix and is actively addressing this significant supply chain compromise.",
+      "action": "Users who purchased Trezor Safe 5 wallets from CryptoBilis should immediately cease using the device and contact Trezor support. Transfer all funds to a new, securely acquired wallet. Always purchase hardware wallets directly from the manufacturer or through authorized, reputable resellers, and meticulously inspect devices upon receipt for any signs of tampering.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
-      "tldr": "Operation Endgame, a global law enforcement effort, successfully disrupted the infrastructure of major malware families including Gootloader, CastleRAT, and StealC. This significant operation led to the seizure of servers and the recovery of 6.4 million stolen login credentials.",
-      "action": "Organizations and individuals should actively monitor breach notification services to check if their credentials were among the stolen data. Implement strong, unique passwords and enable multi-factor authentication (MFA) across all accounts to mitigate risks.",
+      "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
+      "tldr": "The SilentAir threat group is actively hijacking Asian telecom networks to intercept SMS messages, specifically targeting two-factor authentication (2FA) codes. This operation enables them to bypass multi-factor authentication, gain unauthorized access to accounts, and spy on Taiwanese users. The attack compromises user privacy and undermines the security of SMS-based authentication methods.",
+      "action": "Organizations should evaluate and prioritize alternatives to SMS-based 2FA, favoring stronger methods like app-based authenticators or hardware security keys. Users should be vigilant for any suspicious account activities or unusual SMS behavior and report them immediately. Telecom providers must conduct thorough audits of their network security to detect and mitigate any signs of compromise.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
+      "source_url": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
       "source": "The Hacker News"
     },
     {
       "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
-      "tldr": "A new campaign, 'wfx-loot', has compromised 4,837 GitHub accounts, using them to probe 61,764 repositories. Attackers opened pull requests and pushed secrets-stealing malware to steal cloud credentials from developers' environments.",
-      "action": "GitHub users should immediately review their account activity for suspicious pull requests or unauthorized repository modifications. Enable MFA on all GitHub accounts, rotate all cloud credentials linked to GitHub, and audit repositories for injected malicious code or secrets.",
+      "tldr": "A new campaign, dubbed 'wfx-loot', has compromised 4,837 GitHub accounts, utilizing them to probe 61,764 repositories. Attackers opened pull requests and pushed malware specifically designed to steal cloud credentials. This large-scale attack targets developer accounts to exfiltrate sensitive access tokens and keys, leading to potential broader cloud environment compromises.",
+      "action": "GitHub users must immediately enable 2FA on their accounts and rotate all personal access tokens and SSH keys. Organizations should implement secret scanning in their CI/CD pipelines to prevent credential leakage and rotate cloud credentials frequently. Regularly audit GitHub repository access logs for any suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
       "source": "BleepingComputer"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
+      "tldr": "Vulnerable Check Point Security Gateway instances have been targeted in PHP2Shell attacks that exploit flaws to deploy data-wiping malware. This malware is specifically designed to target and destroy data on VMware ESXi hosts, indicating a destructive attack aimed at data destruction and system incapacitation, rather than traditional data encryption for ransom. The attacks render virtual environments inoperable.",
+      "action": "Immediately patch all Check Point Security Gateway instances to the latest secure versions. Implement robust network segmentation to isolate VMware ESXi hosts from less trusted networks. Ensure comprehensive, tested backups are in place for all ESXi environments, including offline copies, to facilitate recovery from destructive attacks. Monitor Check Point devices and ESXi environments for unusual process activity or unauthorized data access.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "German military drone operations disrupted by cyberattack",
+      "tldr": "German defense technology company Quantum Systems confirmed a cyberattack in late October by 'hostile actors' that significantly disrupted military drone operations. While specific details about the nature of the attack (e.g., ransomware, wiper, espionage) remain undisclosed, it underscores the severe impact such incidents can have on critical infrastructure and national defense capabilities. The disruption highlights vulnerabilities in operational technology systems.",
+      "action": "Organizations, particularly those in critical infrastructure and defense sectors, must conduct a thorough review and hardening of their operational technology (OT) and information technology (IT) security postures. Implement strong network segmentation between OT and IT, develop robust incident response plans specifically for operational disruptions, and conduct regular penetration testing on all critical systems. Enhance monitoring for anomalous network behavior.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+      "tldr": "Attackers are actively exploiting PHP2Shell vulnerabilities within Check Point Gateways to deploy a TSGA backdoor, enabling persistent access, and subsequently wiping VMware ESXi virtual machine files. This is a destructive attack vector that first compromises network perimeter devices, then extends to critical virtualization infrastructure to destroy data. The coordinated approach ensures both stealthy access and impactful data loss.",
+      "action": "Patch Check Point Security Gateways immediately to address any PHP2Shell vulnerabilities. Implement stringent network monitoring to detect unusual outbound connections from Check Point devices or ESXi hosts. Maintain offline and immutable backups of all VMware ESXi environments and regularly test recovery procedures to ensure business continuity in the event of a destructive attack.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+      "source": "The Hacker News"
+    },
+    {
+      "title": "PHP2Shell Exploited in Destructive Check Point Gateway Attacks",
+      "tldr": "Multiple reports confirm ongoing exploitation of PHP2Shell vulnerabilities in Check Point Security Gateway instances, leading to destructive attacks. These attacks are characterized by the installation of backdoors and the wiping of data on connected systems, including VMware ESXi hosts. The widespread nature of these attacks poses a significant threat to organizational data integrity and system availability, emphasizing the need for immediate action.",
+      "action": "Prioritize and immediately apply all available patches for Check Point Security Gateway devices to mitigate the PHP2Shell vulnerability. Deploy intrusion detection systems (IDS) and endpoint detection and response (EDR) solutions to detect exploitation attempts and anomalous network traffic. Isolate critical virtualized environments and ensure robust data backup and recovery mechanisms are in place and regularly tested to counter data destruction.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/",
+      "source": "SecurityWeek"
+    }
+  ],
   "vulns": [
     {
       "title": "Check Point warns of zero-day flaw exploited for root access",
-      "tldr": "Check Point Software has released emergency hotfixes to address a high-severity zero-day vulnerability. This flaw has been actively exploited since late October, allowing attackers to gain root privileges and establish persistence on vulnerable Check Point devices.",
-      "action": "Immediately apply the emergency hotfixes released by Check Point for all affected devices. Conduct a thorough forensic analysis on all Check Point gateways for signs of compromise and the establishment of persistence mechanisms.",
+      "tldr": "Check Point Software has issued emergency hotfixes to address a high-severity zero-day vulnerability in its products. This flaw is actively being exploited by attackers in the wild to gain root privileges and establish persistence on vulnerable devices. Immediate patching is critical to prevent system compromise and unauthorized control.",
+      "action": "Immediately apply the emergency hotfixes released by Check Point for all affected products. Conduct an in-depth forensic analysis of Check Point devices to identify any signs of compromise, such as unauthorized root access or persistent backdoors. Review logs for unusual activity prior to applying the patch and ensure continuous monitoring.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Check Point Security Gateways. Specific versions require consulting official Check Point advisories for the zero-day exploited since late October.",
-      "how_to_determine_impact": "Verify Check Point Security Gateway versions and ensure the latest emergency hotfixes are applied. Inspect logs for indicators of compromise consistent with unauthorized root access and persistence.",
-      "tanium_query_hint": "Get Installed Hotfixes[\"Check Point Security Gateway\"]. Get Running Processes and examine for unusual executables or persistent services.",
-      "rapid7_query_hint": "Search for 'vulnerability.title contains \"Check Point Zero-Day\"'. Investigate processes and file integrity on Check Point assets for signs of compromise.",
+      "affected_versions": "Check Point Security Gateways and potentially other products; specific vulnerable versions require hotfixes. Consult official Check Point advisories for exact details.",
+      "how_to_determine_impact": "Verify Check Point device logs for any indicators of compromise, such as unauthorized root access attempts, unusual process creation, or unexpected file modifications. Ensure that all recommended emergency hotfixes are installed and confirmed by vendor guidance. Perform a configuration audit for any unauthorized changes.",
+      "tanium_query_hint": "Get Running Processes with CommandLine and UserName from all machines containing 'Check Point' and look for unusual root processes. Get Installed Patches from all machines containing 'Check Point' for hotfix verification. Search for specific IOCs once released by Check Point.",
+      "rapid7_query_hint": "Search for Check Point assets within InsightVM and InsightIDR. Look for vulnerabilities related to recent hotfixes or any specific indicators of compromise (IOCs) provided by Check Point. Utilize Insight Agent to inspect process activity, file modifications, or suspicious network connections on Check Point devices.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimate, based on root access and active exploitation)"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "Nightmare Eclipse Drops Windows Zero-Day Exploit 'SignDrop'",
-      "tldr": "The 'Nightmare Eclipse' threat group has publicly released 'SignDrop', a zero-day exploit targeting Windows operating systems. This indicates a new, critical vulnerability in Windows is being actively exploited in the wild, posing an immediate threat.",
-      "action": "Monitor official Microsoft channels for emergency patches or mitigation guidance regarding the 'SignDrop' zero-day. Implement enhanced endpoint detection and response (EDR) rules to detect and block 'SignDrop' related activity and indicators of compromise.",
+      "tldr": "The threat group 'Nightmare Eclipse' has reportedly released a new Windows zero-day exploit named 'SignDrop'. While specific technical details are scarce, the release of a zero-day exploit for Windows implies critical unpatched vulnerabilities that could allow attackers to compromise Windows systems without immediate defenses. This necessitates extreme vigilance and proactive defensive measures.",
+      "action": "Monitor official Microsoft security advisories and trusted security news outlets for immediate details regarding the 'SignDrop' zero-day. Isolate critical Windows systems if technically feasible to limit potential exposure. Implement advanced endpoint detection and response (EDR) solutions to detect anomalous behavior. Prepare for an emergency patch cycle from Microsoft.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Windows operating systems vulnerable to the 'SignDrop' zero-day exploit. Specific versions yet to be detailed by Microsoft.",
-      "how_to_determine_impact": "Monitor for Indicators of Compromise (IOCs) related to 'SignDrop' on Windows hosts. Check system logs for unusual process execution, privilege escalation attempts, or unauthorized code injection.",
-      "tanium_query_hint": "Get Running Processes matching \"signdrop.exe\" or similar known IOCs. Get Event Log Data filtered by security events for privilege escalation.",
-      "rapid7_query_hint": "Search for 'vulnerability.title contains \"Windows SignDrop Zero-Day\"'. Look for `process.name contains \"signdrop\"` or associated malware hashes on Windows assets.",
+      "affected_versions": "All supported and unsupported versions of Windows operating systems are potentially at risk until Microsoft provides specific patch information. Assume broad impact.",
+      "how_to_determine_impact": "Actively monitor security bulletins from Microsoft and CISA. Implement behavioral analysis on Windows endpoints for suspicious process creation, privilege escalation, or unusual system calls. Assume impact on all Windows client and server OS versions until a specific vulnerability and patch information is released.",
+      "tanium_query_hint": "Get Running Processes with Ancestry and CommandLine from all Windows machines, looking for unusual execution chains. Get Process Hash and Path for newly started processes on Windows machines. Monitor for suspicious kernel module loading.",
+      "rapid7_query_hint": "Utilize InsightIDR for unusual process activity or privilege escalation on Windows assets. Monitor for new processes leveraging Windows core components in an uncharacteristic manner. Search for IOCs once released by security researchers or Microsoft within InsightVM.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (estimate, as it's a Windows zero-day exploit)"
-    },
-    {
-      "title": "New worm-like 'SCKit' malware targets MSPs in ScreenConnect attacks",
-      "tldr": "A new worm-like malware toolkit, 'SCKit', is being actively deployed in ScreenConnect attacks, specifically targeting Managed Service Providers (MSPs). This malware has the capability to spread from infected customer devices to MSP technician workstations, compromising additional managed networks.",
-      "action": "MSPs should immediately review their ScreenConnect instances for compromise, implement strict network segmentation, and enforce robust endpoint security on technician workstations. Proactively hunt for the presence of SCKit malware and its associated Indicators of Compromise.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/new-worm-like-sckit-malware-targets-msps-in-screenconnect-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "ScreenConnect environments, particularly those managed by MSPs, likely exploiting previously patched or newly discovered vulnerabilities. All ScreenConnect instances should be considered at risk.",
-      "how_to_determine_impact": "Check ScreenConnect server logs and endpoint logs for signs of SCKit activity. Hunt for known IOCs associated with SCKit malware. Review network traffic for suspicious lateral movement patterns.",
-      "tanium_query_hint": "Get Installed Applications having Name contains \"ScreenConnect\". Get Running Processes and Get File Exists for known SCKit indicators.",
-      "rapid7_query_hint": "Search for 'vulnerability.title contains \"ScreenConnect\"' and 'malware.name contains \"SCKit\"'. Monitor for suspicious process activity and network connections from ScreenConnect assets.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical (estimate, given worm-like spread and MSP targeting)"
+      "cvss_score": "9.8 Critical"
     },
     {
       "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
-      "tldr": "PostgreSQL has released significant patches addressing 52 vulnerabilities, including a severe 22-year-old bug that could allow an authenticated attacker to achieve remote code execution (RCE). This update is critical for maintaining the security of PostgreSQL database deployments.",
-      "action": "Immediately apply the latest PostgreSQL security updates to all PostgreSQL installations. Review systems for potential exploitation indicators if patches were not applied promptly, especially for systems exposed to untrusted users.",
+      "tldr": "PostgreSQL has released patches addressing a significant number of vulnerabilities, including a severe 22-year-old authenticated Remote Code Execution (RCE) bug. This RCE flaw, if exploited by an authenticated database user, could allow arbitrary code execution on the server. The update also covers 51 other flaws, underscoring the importance of timely database security updates.",
+      "action": "Immediately update all PostgreSQL database instances to the latest patched versions as advised by the vendor. Review and audit database user privileges to strictly adhere to the principle of least privilege, especially for all authenticated users. Monitor PostgreSQL server logs for any suspicious activity or unauthorized command execution.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "All PostgreSQL versions prior to the patched releases (specific versions need to be confirmed with official PostgreSQL security advisories).",
-      "how_to_determine_impact": "Check the installed version of PostgreSQL. Any version older than the latest patched release is considered affected. Consult PostgreSQL documentation for specific version upgrade paths.",
-      "tanium_query_hint": "Get Installed Applications having Name contains \"PostgreSQL\" and Get Running Processes matching \"postgres\". Compare their versions against official advisories.",
-      "rapid7_query_hint": "Search for 'vulnerability.title contains \"PostgreSQL\"' and 'vulnerability.severity >= \"High\"'. Identify assets with outdated PostgreSQL installations.",
+      "affected_versions": "All versions of PostgreSQL prior to the latest patched releases are affected. The 22-year-old RCE bug implies a very wide range of historical versions are vulnerable.",
+      "how_to_determine_impact": "Check PostgreSQL server versions using the SQL query `SELECT version();`. Compare the installed version against official PostgreSQL security advisories for the specific patched versions. Verify that all recommended security updates have been successfully applied to all database instances.",
+      "tanium_query_hint": "Get Installed Applications containing 'PostgreSQL' and their Version from database servers. Get Process CommandLine containing 'postgres' to identify running instances and their configuration. Inspect system logs for postgres processes for anomalous activity.",
+      "rapid7_query_hint": "Search for assets with 'PostgreSQL' installed within InsightVM. Utilize vulnerability checks specifically for PostgreSQL versions to identify unpatched systems. Use Insight Agent to query installed software versions and review configuration files for insecure settings.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High (estimate, given authenticated RCE)"
+      "cvss_score": "9.0 Critical"
+    },
+    {
+      "title": "Citrix Patches 10 Critical NetScaler Vulnerabilities",
+      "tldr": "Citrix has released patches to address 10 critical vulnerabilities affecting its NetScaler products, specifically Application Delivery Controllers (ADC) and Gateway. These flaws pose severe security risks, including potential remote code execution, unauthorized access, or denial-of-service. Immediate patching is essential to protect these widely deployed edge devices from compromise.",
+      "action": "Prioritize and immediately apply all available patches and hotfixes for Citrix NetScaler ADC and Gateway appliances according to official Citrix security advisories. Ensure these devices are adequately segmented within the network and exposed to the internet only when absolutely necessary. Review system logs for any indications of compromise or suspicious activity prior to applying patches.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/citrix-patches-10-critical-netscaler-vulnerabilities/",
+      "source": "SecurityWeek",
+      "active_exploitation": false,
+      "affected_versions": "Specific versions of Citrix NetScaler ADC and Gateway appliances. Consult official Citrix security advisories for exact vulnerable version ranges and corresponding patches.",
+      "how_to_determine_impact": "Identify all Citrix NetScaler ADC and Gateway appliances deployed within the environment. Check the firmware/software version of each appliance against Citrix's published security advisories. Verify the successful application of all required patches and hotfixes.",
+      "tanium_query_hint": "Get Installed Software Version[Name = 'Citrix NetScaler' or 'Citrix Gateway'] on all relevant network devices. Get Network Configuration to identify exposed services and ports. Collect system logs for forensic analysis if compromise is suspected.",
+      "rapid7_query_hint": "Search for assets with 'Citrix NetScaler' or 'Citrix Gateway' within InsightVM. Utilize vulnerability checks for Citrix products to identify unpatched systems. Review network traffic for suspicious connections to these appliances and investigate any anomalies with InsightIDR.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical"
     }
   ],
   "insurance": [],
@@ -29675,6 +29708,144 @@
         "source_url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
         "source": "The Hacker News",
         "category": "breaches"
+      }
+    ],
+    "2026-11-14": [
+      {
+        "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
+        "tldr": "North Korean state-sponsored hackers, identified by the FBI, orchestrated a sophisticated phishing campaign using deepfake video calls to impersonate legitimate individuals. They successfully stole over $400 million in cryptocurrency from various organizations by leveraging these advanced social engineering tactics. This highlights the evolving nature of sophisticated impersonation techniques employed by state-sponsored threat actors.",
+        "action": "Warn employees about deepfake phishing attempts and the importance of verifying identities through multiple channels. Implement enhanced authentication and approval processes for high-value financial transactions. Review and strengthen cybersecurity awareness training to include advanced social engineering and impersonation tactics.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Trezor confirms crypto-stealing implants in three wallets, releases fix",
+        "tldr": "Trezor confirmed that three Safe 5 hardware wallets sold by Southeast Asian reseller CryptoBilis contained malicious hardware implants. These implants were specifically designed to intercept and steal wallet recovery phrases, covertly transmitting them to attackers over cellular networks. Trezor has since released a fix and is actively addressing this significant supply chain compromise.",
+        "action": "Users who purchased Trezor Safe 5 wallets from CryptoBilis should immediately cease using the device and contact Trezor support. Transfer all funds to a new, securely acquired wallet. Always purchase hardware wallets directly from the manufacturer or through authorized, reputable resellers, and meticulously inspect devices upon receipt for any signs of tampering.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/cryptocurrency/trezor-confirms-crypto-stealing-implants-in-three-wallets-releases-fix/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
+        "tldr": "The SilentAir threat group is actively hijacking Asian telecom networks to intercept SMS messages, specifically targeting two-factor authentication (2FA) codes. This operation enables them to bypass multi-factor authentication, gain unauthorized access to accounts, and spy on Taiwanese users. The attack compromises user privacy and undermines the security of SMS-based authentication methods.",
+        "action": "Organizations should evaluate and prioritize alternatives to SMS-based 2FA, favoring stronger methods like app-based authenticators or hardware security keys. Users should be vigilant for any suspicious account activities or unusual SMS behavior and report them immediately. Telecom providers must conduct thorough audits of their network security to detect and mitigate any signs of compromise.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers compromise 4,800 GitHub accounts to steal cloud credentials",
+        "tldr": "A new campaign, dubbed 'wfx-loot', has compromised 4,837 GitHub accounts, utilizing them to probe 61,764 repositories. Attackers opened pull requests and pushed malware specifically designed to steal cloud credentials. This large-scale attack targets developer accounts to exfiltrate sensitive access tokens and keys, leading to potential broader cloud environment compromises.",
+        "action": "GitHub users must immediately enable 2FA on their accounts and rotate all personal access tokens and SSH keys. Organizations should implement secret scanning in their CI/CD pipelines to prevent credential leakage and rotate cloud credentials frequently. Regularly audit GitHub repository access logs for any suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
+        "tldr": "Vulnerable Check Point Security Gateway instances have been targeted in PHP2Shell attacks that exploit flaws to deploy data-wiping malware. This malware is specifically designed to target and destroy data on VMware ESXi hosts, indicating a destructive attack aimed at data destruction and system incapacitation, rather than traditional data encryption for ransom. The attacks render virtual environments inoperable.",
+        "action": "Immediately patch all Check Point Security Gateway instances to the latest secure versions. Implement robust network segmentation to isolate VMware ESXi hosts from less trusted networks. Ensure comprehensive, tested backups are in place for all ESXi environments, including offline copies, to facilitate recovery from destructive attacks. Monitor Check Point devices and ESXi environments for unusual process activity or unauthorized data access.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "German military drone operations disrupted by cyberattack",
+        "tldr": "German defense technology company Quantum Systems confirmed a cyberattack in late October by 'hostile actors' that significantly disrupted military drone operations. While specific details about the nature of the attack (e.g., ransomware, wiper, espionage) remain undisclosed, it underscores the severe impact such incidents can have on critical infrastructure and national defense capabilities. The disruption highlights vulnerabilities in operational technology systems.",
+        "action": "Organizations, particularly those in critical infrastructure and defense sectors, must conduct a thorough review and hardening of their operational technology (OT) and information technology (IT) security postures. Implement strong network segmentation between OT and IT, develop robust incident response plans specifically for operational disruptions, and conduct regular penetration testing on all critical systems. Enhance monitoring for anomalous network behavior.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/german-military-drone-operations-disrupted-by-cyberattack/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+        "tldr": "Attackers are actively exploiting PHP2Shell vulnerabilities within Check Point Gateways to deploy a TSGA backdoor, enabling persistent access, and subsequently wiping VMware ESXi virtual machine files. This is a destructive attack vector that first compromises network perimeter devices, then extends to critical virtualization infrastructure to destroy data. The coordinated approach ensures both stealthy access and impactful data loss.",
+        "action": "Patch Check Point Security Gateways immediately to address any PHP2Shell vulnerabilities. Implement stringent network monitoring to detect unusual outbound connections from Check Point devices or ESXi hosts. Maintain offline and immutable backups of all VMware ESXi environments and regularly test recovery procedures to ensure business continuity in the event of a destructive attack.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "PHP2Shell Exploited in Destructive Check Point Gateway Attacks",
+        "tldr": "Multiple reports confirm ongoing exploitation of PHP2Shell vulnerabilities in Check Point Security Gateway instances, leading to destructive attacks. These attacks are characterized by the installation of backdoors and the wiping of data on connected systems, including VMware ESXi hosts. The widespread nature of these attacks poses a significant threat to organizational data integrity and system availability, emphasizing the need for immediate action.",
+        "action": "Prioritize and immediately apply all available patches for Check Point Security Gateway devices to mitigate the PHP2Shell vulnerability. Deploy intrusion detection systems (IDS) and endpoint detection and response (EDR) solutions to detect exploitation attempts and anomalous network traffic. Isolate critical virtualized environments and ensure robust data backup and recovery mechanisms are in place and regularly tested to counter data destruction.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/php2shell-exploited-in-destructive-check-point-gateway-attacks/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Check Point warns of zero-day flaw exploited for root access",
+        "tldr": "Check Point Software has issued emergency hotfixes to address a high-severity zero-day vulnerability in its products. This flaw is actively being exploited by attackers in the wild to gain root privileges and establish persistence on vulnerable devices. Immediate patching is critical to prevent system compromise and unauthorized control.",
+        "action": "Immediately apply the emergency hotfixes released by Check Point for all affected products. Conduct an in-depth forensic analysis of Check Point devices to identify any signs of compromise, such as unauthorized root access or persistent backdoors. Review logs for unusual activity prior to applying the patch and ensure continuous monitoring.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Check Point Security Gateways and potentially other products; specific vulnerable versions require hotfixes. Consult official Check Point advisories for exact details.",
+        "how_to_determine_impact": "Verify Check Point device logs for any indicators of compromise, such as unauthorized root access attempts, unusual process creation, or unexpected file modifications. Ensure that all recommended emergency hotfixes are installed and confirmed by vendor guidance. Perform a configuration audit for any unauthorized changes.",
+        "tanium_query_hint": "Get Running Processes with CommandLine and UserName from all machines containing 'Check Point' and look for unusual root processes. Get Installed Patches from all machines containing 'Check Point' for hotfix verification. Search for specific IOCs once released by Check Point.",
+        "rapid7_query_hint": "Search for Check Point assets within InsightVM and InsightIDR. Look for vulnerabilities related to recent hotfixes or any specific indicators of compromise (IOCs) provided by Check Point. Utilize Insight Agent to inspect process activity, file modifications, or suspicious network connections on Check Point devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Nightmare Eclipse Drops Windows Zero-Day Exploit 'SignDrop'",
+        "tldr": "The threat group 'Nightmare Eclipse' has reportedly released a new Windows zero-day exploit named 'SignDrop'. While specific technical details are scarce, the release of a zero-day exploit for Windows implies critical unpatched vulnerabilities that could allow attackers to compromise Windows systems without immediate defenses. This necessitates extreme vigilance and proactive defensive measures.",
+        "action": "Monitor official Microsoft security advisories and trusted security news outlets for immediate details regarding the 'SignDrop' zero-day. Isolate critical Windows systems if technically feasible to limit potential exposure. Implement advanced endpoint detection and response (EDR) solutions to detect anomalous behavior. Prepare for an emergency patch cycle from Microsoft.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "All supported and unsupported versions of Windows operating systems are potentially at risk until Microsoft provides specific patch information. Assume broad impact.",
+        "how_to_determine_impact": "Actively monitor security bulletins from Microsoft and CISA. Implement behavioral analysis on Windows endpoints for suspicious process creation, privilege escalation, or unusual system calls. Assume impact on all Windows client and server OS versions until a specific vulnerability and patch information is released.",
+        "tanium_query_hint": "Get Running Processes with Ancestry and CommandLine from all Windows machines, looking for unusual execution chains. Get Process Hash and Path for newly started processes on Windows machines. Monitor for suspicious kernel module loading.",
+        "rapid7_query_hint": "Utilize InsightIDR for unusual process activity or privilege escalation on Windows assets. Monitor for new processes leveraging Windows core components in an uncharacteristic manner. Search for IOCs once released by security researchers or Microsoft within InsightVM.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
+        "tldr": "PostgreSQL has released patches addressing a significant number of vulnerabilities, including a severe 22-year-old authenticated Remote Code Execution (RCE) bug. This RCE flaw, if exploited by an authenticated database user, could allow arbitrary code execution on the server. The update also covers 51 other flaws, underscoring the importance of timely database security updates.",
+        "action": "Immediately update all PostgreSQL database instances to the latest patched versions as advised by the vendor. Review and audit database user privileges to strictly adhere to the principle of least privilege, especially for all authenticated users. Monitor PostgreSQL server logs for any suspicious activity or unauthorized command execution.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "All versions of PostgreSQL prior to the latest patched releases are affected. The 22-year-old RCE bug implies a very wide range of historical versions are vulnerable.",
+        "how_to_determine_impact": "Check PostgreSQL server versions using the SQL query `SELECT version();`. Compare the installed version against official PostgreSQL security advisories for the specific patched versions. Verify that all recommended security updates have been successfully applied to all database instances.",
+        "tanium_query_hint": "Get Installed Applications containing 'PostgreSQL' and their Version from database servers. Get Process CommandLine containing 'postgres' to identify running instances and their configuration. Inspect system logs for postgres processes for anomalous activity.",
+        "rapid7_query_hint": "Search for assets with 'PostgreSQL' installed within InsightVM. Utilize vulnerability checks specifically for PostgreSQL versions to identify unpatched systems. Use Insight Agent to query installed software versions and review configuration files for insecure settings.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Citrix Patches 10 Critical NetScaler Vulnerabilities",
+        "tldr": "Citrix has released patches to address 10 critical vulnerabilities affecting its NetScaler products, specifically Application Delivery Controllers (ADC) and Gateway. These flaws pose severe security risks, including potential remote code execution, unauthorized access, or denial-of-service. Immediate patching is essential to protect these widely deployed edge devices from compromise.",
+        "action": "Prioritize and immediately apply all available patches and hotfixes for Citrix NetScaler ADC and Gateway appliances according to official Citrix security advisories. Ensure these devices are adequately segmented within the network and exposed to the internet only when absolutely necessary. Review system logs for any indications of compromise or suspicious activity prior to applying patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/citrix-patches-10-critical-netscaler-vulnerabilities/",
+        "source": "SecurityWeek",
+        "active_exploitation": false,
+        "affected_versions": "Specific versions of Citrix NetScaler ADC and Gateway appliances. Consult official Citrix security advisories for exact vulnerable version ranges and corresponding patches.",
+        "how_to_determine_impact": "Identify all Citrix NetScaler ADC and Gateway appliances deployed within the environment. Check the firmware/software version of each appliance against Citrix's published security advisories. Verify the successful application of all required patches and hotfixes.",
+        "tanium_query_hint": "Get Installed Software Version[Name = 'Citrix NetScaler' or 'Citrix Gateway'] on all relevant network devices. Get Network Configuration to identify exposed services and ports. Collect system logs for forensic analysis if compromise is suspected.",
+        "rapid7_query_hint": "Search for assets with 'Citrix NetScaler' or 'Citrix Gateway' within InsightVM. Utilize vulnerability checks for Citrix products to identify unpatched systems. Review network traffic for suspicious connections to these appliances and investigate any anomalies with InsightIDR.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical",
+        "category": "vulns"
       }
     ]
   }
