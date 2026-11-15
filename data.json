@@ -1,33 +1,33 @@
 {
   "breaches": [
     {
-      "title": "Italy Fines Meta \n805 Million Over Facebook's Android Gallery Access Without Explicit Consent",
-      "tldr": "Meta was fined \n805 million by Italian regulators for accessing Android device photo galleries via Facebook without obtaining explicit user consent, violating privacy regulations.",
-      "action": "Review consent mechanisms for data access in all applications, especially those handling sensitive user data, to ensure explicit and informed consent is obtained as per regional and international regulations.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
-      "tldr": "The FBI reports that North Korean state-sponsored hackers, likely the Lazarus Group, stole over $400 million in cryptocurrency by employing advanced social engineering techniques, including the use of deepfake video calls to impersonate individuals and compromise crypto firms.",
-      "action": "Enhance multi-factor authentication for all critical accounts, especially those involving financial transactions. Conduct regular social engineering awareness training, with a specific focus on deepfake detection and verification protocols for high-value operations and communications.",
+      "tldr": "North Korean state-sponsored hackers, identified as part of the \"FaceStealer\" campaign, leveraged deepfake video calls and social engineering tactics to illicitly obtain over $400 million in cryptocurrency from various victims. The U.S. government has since taken action to disrupt this widespread and sophisticated theft operation.",
+      "action": "Implement immediate and continuous training for all personnel on recognizing advanced social engineering, particularly deepfake phishing attempts. Enhance multi-factor authentication (MFA) and require stringent verification protocols for all cryptocurrency and high-value financial transactions.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
       "source": "The Hacker News"
     },
     {
       "title": "Trezor Confirms Hidden Implants in CryptoBilis-Sold Wallets That Can Steal Recovery Phrases",
-      "tldr": "Trezor confirmed that three Safe 5 hardware wallets, specifically those sold by Southeast Asian reseller CryptoBilis, contained malicious hardware implants designed to exfiltrate users' cryptocurrency recovery phrases over cellular networks.",
-      "action": "Users who purchased Trezor Safe 5 devices from CryptoBilis must immediately transfer all funds to a new, secure wallet and cease using the compromised device. Always purchase hardware wallets directly from the manufacturer or authorized, trusted resellers.",
+      "tldr": "Trezor confirmed that specific Safe 5 hardware wallets, distributed by the Southeast Asian reseller CryptoBilis, contained malicious hardware implants. These implants were designed to surreptitiously capture and transmit the user's wallet recovery phrases over cellular networks. Trezor has issued guidance and a fix for affected users.",
+      "action": "Customers who acquired Trezor Safe 5 devices from CryptoBilis must immediately consult Trezor's official website for verification steps and apply any recommended fixes. Always prioritize purchasing hardware wallets directly from the manufacturer or authorized, trusted resellers to mitigate supply chain risks.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
       "source": "The Hacker News"
     },
     {
+      "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
+      "tldr": "A major international law enforcement initiative, dubbed \"Operation Endgame,\" successfully dismantled critical infrastructure supporting the Gootloader, CastleRAT, and StealC malware families. This extensive operation led to the seizure of servers containing approximately 6.4 million stolen login credentials.",
+      "action": "Urgently advise all employees and users to check if their credentials have been exposed in recent breaches using reputable services like HaveIBeenPwned. Enforce the use of strong, unique passwords across all enterprise and personal accounts, coupled with mandatory multi-factor authentication (MFA) wherever possible.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "TSMC employee data breach linked to cloud provider",
-      "tldr": "Taiwan Semiconductor Manufacturing Company (TSMC) confirmed that personal employee data was leaked online after a threat actor advertised 6.9GB of information allegedly stolen from the company, with the incident linked to a compromise at a cloud provider.",
-      "action": "Conduct a thorough security audit of all third-party cloud providers and service providers handling sensitive data. Implement stringent data segregation, encryption, and access controls for all sensitive employee and corporate data, especially when managed by external vendors.",
+      "tldr": "Taiwan Semiconductor Manufacturing Company (TSMC) confirmed a data breach resulting in the online leakage of 6.9GB of personal employee information. The compromise was traced back to a security incident involving a third-party cloud service provider used by TSMC.",
+      "action": "Conduct an immediate audit of all third-party vendors with access to sensitive company and employee data, scrutinizing their security postures and contractual obligations. Reinforce stringent access controls and continuous monitoring within all cloud environments to detect and prevent unauthorized data access or exfiltration.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
       "source": "BleepingComputer"
@@ -37,63 +37,63 @@
   "vulns": [
     {
       "title": "Check Point warns of zero-day flaw exploited for root access",
-      "tldr": "Check Point Software has issued emergency hotfixes for a critical zero-day vulnerability that has been actively exploited since late October. The flaw allows attackers to gain root privileges and establish persistence on vulnerable Check Point devices.",
-      "action": "Immediately apply all emergency hotfixes released by Check Point for the identified zero-day vulnerability. Conduct a comprehensive forensic analysis of all Check Point devices for any signs of compromise, unauthorized root access, or established persistence mechanisms.",
+      "tldr": "Check Point Software has released urgent hotfixes to address a critical zero-day vulnerability impacting its Security Gateway products. This flaw is actively being exploited in the wild, allowing attackers to gain root privileges and establish persistent access on compromised devices.",
+      "action": "Immediately apply the provided emergency hotfixes across all affected Check Point Security Gateway instances. Conduct a thorough forensic investigation on these devices to identify any indicators of compromise, unauthorized access, or persistent footholds established by attackers since late October.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Specific Check Point devices and software versions impacted by the zero-day flaw; consult Check Point's official emergency hotfix advisories for exact details.",
-      "how_to_determine_impact": "Identify all Check Point appliances within the environment. Verify their current software versions and patch levels against the vendor's emergency advisory. Look for unusual processes, unauthorized file modifications, or unexpected outbound network connections from these devices.",
-      "tanium_query_hint": "Get Installed Applications contains 'Check Point' and 'Version' < 'patched_version'. Check 'Running Processes' for any suspicious entries or deviations from baseline. Use 'Get File Hash' for known Indicators of Compromise (IOCs) from Check Point advisories.",
-      "rapid7_query_hint": "Search for vulnerability ID or asset filters related to 'Check Point zero-day'. Use InsightAgent to query for 'processes.command_line' or 'files.hash' for IOCs on Check Point assets. Asset search for 'Check Point Software' and filter by 'version' based on vendor advisory.",
+      "affected_versions": "Check Point Security Gateway instances. Specific versions need to be confirmed via Check Point's official advisories, but generally include actively supported versions prior to patch application.",
+      "how_to_determine_impact": "Check Point customers should consult the vendor's official security advisory (e.g., sk182336) for tools or indicators of compromise (IoCs) to determine if their gateways have been exploited. Look for unauthorized root access or persistence mechanisms.",
+      "tanium_query_hint": "Get Tanium Sensor 'Check Point Security Gateway Version' from all machines; Get Tanium Sensor 'Running Processes with Command Line' from all machines matching 'Check Point Security Gateway Version' and look for suspicious processes.",
+      "rapid7_query_hint": "Search for vulnerability ID associated with Check Point's emergency hotfix (once available). Use InsightIDR to search for suspicious root logins or process executions on Check Point devices.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.8 Critical (Estimated, given active zero-day exploitation for root access)"
     },
     {
       "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
-      "tldr": "Threat actors are actively exploiting a critical flaw in UnrealIRCd that allows for server-level command injection, potentially leading to remote code execution (RCE) and full control over affected IRC servers.",
-      "action": "Immediately update all UnrealIRCd installations to the latest patched version. Isolate any identified vulnerable or potentially compromised UnrealIRCd servers until remediation is complete. Scan for indicators of compromise, including unusual process activity or network connections.",
+      "tldr": "A critical vulnerability in UnrealIRCd, enabling server-level command injection, is currently being actively exploited by attackers. Successful exploitation of this flaw can grant adversaries full system compromise on vulnerable IRC server installations.",
+      "action": "Apply the latest security patch for UnrealIRCd without delay to mitigate this actively exploited command injection vulnerability. Review all server logs for UnrealIRCd for any anomalous process executions, outbound network connections, or unauthorized file system modifications that could indicate compromise.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "All versions of UnrealIRCd prior to the patch addressing the command injection flaw (specific vulnerable version ranges require consulting official UnrealIRCd advisories).",
-      "how_to_determine_impact": "Identify all servers running UnrealIRCd. Verify their version numbers against vendor security advisories. Inspect server logs for unexpected commands being executed or suspicious child processes spawned by the IRCd service.",
-      "tanium_query_hint": "Get Installed Applications contains 'UnrealIRCd' and 'Version' < 'patched_version'. Use 'Get Running Processes' and 'Get Open Network Connections' to identify any unusual activity originating from IRCd server processes.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to 'UnrealIRCd command injection'. Use InsightAgent to query for 'software.name' equals 'UnrealIRCd' and 'software.version' (regex for vulnerable range). Monitor for suspicious process executions on IRCd servers.",
+      "affected_versions": "UnrealIRCd versions prior to the latest security patch. Specific vulnerable versions should be confirmed with official UnrealIRCd advisories.",
+      "how_to_determine_impact": "Identify all systems running UnrealIRCd. Check application and system logs for unusual process creations, outbound connections, or unauthorized file modifications indicative of command injection.",
+      "tanium_query_hint": "Get Tanium Sensor 'Running Processes' from all machines with 'unrealircd.exe' or 'unrealircd' in process name; Get Tanium Sensor 'Installed Applications' matching 'UnrealIRCd' and compare versions.",
+      "rapid7_query_hint": "Search for assets running 'UnrealIRCd' and verify version numbers. Use InsightIDR to monitor for suspicious activity on IRC server hosts, especially related to shell commands or file changes.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
-    },
-    {
-      "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
-      "tldr": "Vulnerable Check Point Security Gateway instances have been leveraged via PHP2Shell attacks to deploy data-wiping malware specifically targeting VMware ESXi hosts, indicating a dangerous attack chain and active exploitation.",
-      "action": "Patch all Check Point Security Gateway instances immediately to mitigate PHP2Shell vulnerabilities. Conduct an immediate audit and scan of all VMware ESXi environments for signs of wiper malware, unauthorized access, or unusual activity.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Vulnerable Check Point Security Gateway instances susceptible to PHP2Shell exploitation; consult Check Point advisories for specific version ranges. VMware ESXi hosts accessible from compromised gateways.",
-      "how_to_determine_impact": "Identify all Check Point Security Gateway appliances and verify their patch status for known PHP2Shell vulnerabilities. Monitor associated VMware ESXi hosts for any unexplained reboots, storage issues, or unauthorized file deletions. Check gateway logs for suspicious activity.",
-      "tanium_query_hint": "Get Installed Applications contains 'Check Point Security Gateway' and 'Version' < 'patched_version'. On ESXi hosts (via Tanium Connect to vCenter/ESXi or direct agent if supported), search for 'Running Processes' related to known wiper malware. Get File Hash for known IOCs on ESXi volumes.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to 'Check Point PHP2Shell' or 'VMware ESXi wiper'. Use InsightAgent to query for 'software.name' equals 'Check Point Security Gateway' and 'software.version'. On ESXi assets, monitor for suspicious processes or disk activity.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.1 Critical (Estimated)"
+      "cvss_score": "9.8 Critical (Estimated, due to active exploitation and server-level command injection)"
     },
     {
       "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
-      "tldr": "PostgreSQL has released crucial security updates addressing 52 vulnerabilities, notably including a 22-year-old bug that could allow an authenticated attacker to achieve remote code execution (RCE) on affected database servers.",
-      "action": "Immediately apply all available PostgreSQL security updates to mitigate the numerous vulnerabilities, including the critical authenticated RCE flaw. Review database user privileges to ensure least privilege is enforced.",
+      "tldr": "PostgreSQL has issued comprehensive patches to resolve 52 vulnerabilities, notably including a 22-year-old bug that facilitates authenticated Remote Code Execution (RCE). These updates are crucial for maintaining the security and integrity of PostgreSQL deployments.",
+      "action": "Plan and schedule immediate updates for all PostgreSQL database installations to the latest patched versions, prioritizing any instances exposed to external networks or critical internal systems. Thoroughly test the new versions in a staging environment before deploying to production to ensure compatibility and stability.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "All unsupported PostgreSQL versions, and specific older supported versions prior to the latest security releases (exact versions require consulting official PostgreSQL security advisories for the November 2026 updates).",
-      "how_to_determine_impact": "Identify all PostgreSQL database instances within the environment. Check the exact version number of each installation against the official PostgreSQL security advisories to determine if they are vulnerable to the recently patched flaws.",
-      "tanium_query_hint": "Get Installed Applications contains 'PostgreSQL' and 'Version' < 'latest_patched_version'. Use 'Get Running Processes' to identify active PostgreSQL instances and ensure they are running patched versions.",
-      "rapid7_query_hint": "Search for vulnerability IDs related to 'PostgreSQL RCE' or 'PostgreSQL critical vulnerabilities'. Use InsightAgent to query for 'software.name' equals 'PostgreSQL' and 'software.version' to identify vulnerable assets.",
+      "affected_versions": "All PostgreSQL versions prior to the latest patch release (e.g., 16.x, 15.x, 14.x, 13.x, 12.x series). Specific versions and patches should be consulted from official PostgreSQL security advisories.",
+      "how_to_determine_impact": "Identify all systems running PostgreSQL. Verify the installed version against official PostgreSQL security advisories to determine vulnerability. An authenticated RCE means systems with exposed PostgreSQL instances are at risk if credentials are compromised or weak.",
+      "tanium_query_hint": "Get Tanium Sensor 'Installed Applications' matching 'PostgreSQL' and 'Version'; Get Tanium Sensor 'Running Processes with Arguments' matching 'postgres' and look for unusual arguments.",
+      "rapid7_query_hint": "Search for assets with 'PostgreSQL' installed and check reported versions. Consult InsightVM for specific vulnerability checks related to PostgreSQL CVEs in the recent patch cycle.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical (Estimated)"
+      "cvss_score": "9.0 High (Estimated for the RCE vulnerability, assuming network access)"
+    },
+    {
+      "title": "New Mior and Skyfall Attacks Let Rogue Cloud Hosts Steal Secrets From AMD SEV-SNP VMs",
+      "tldr": "New research has detailed \"Mior\" and \"Skyfall\" attacks, which demonstrate methods for malicious cloud hosts to bypass AMD's Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP) protections. These attacks allow rogue cloud providers to potentially steal sensitive data from guest virtual machines.",
+      "action": "Organizations utilizing AMD SEV-SNP virtual machines in cloud environments should engage with their cloud providers to understand their specific mitigations against these new host-level attacks. Consider implementing additional encryption for sensitive data at rest and in transit within VMs, and ensure robust access controls are in place.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "AMD SEV-SNP enabled virtual machines. Specific AMD CPU generations and firmware versions may be affected. Consult AMD's official advisories for affected product lines.",
+      "how_to_determine_impact": "Determine if your cloud infrastructure utilizes AMD SEV-SNP. If so, contact your cloud provider to understand their mitigation strategies and assess your exposure to rogue host attacks.",
+      "tanium_query_hint": "Not directly applicable for cloud host attacks on hardware features. For on-prem AMD SEV-SNP, 'Get Hardware Information' and 'Get BIOS Settings' might provide hints, but complex to determine host-level risk.",
+      "rapid7_query_hint": "Not directly applicable for cloud host attacks. For on-prem, similar to Tanium, direct host-level vulnerability scanning won't detect this host-level bypass.",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "8.5 High (Estimated, as it bypasses a key security feature in cloud environments)"
     }
   ],
   "insurance": [],
@@ -30007,6 +30007,31 @@
         "rapid7_query_hint": "Search for vulnerability IDs related to 'Check Point PHP2Shell' or 'VMware ESXi wiper'. Use InsightAgent to query for 'software.name' equals 'Check Point Security Gateway' and 'software.version'. On ESXi assets, monitor for suspicious processes or disk activity.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.1 Critical (Estimated)",
+        "category": "vulns"
+      },
+      {
+        "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
+        "tldr": "A major international law enforcement initiative, dubbed \"Operation Endgame,\" successfully dismantled critical infrastructure supporting the Gootloader, CastleRAT, and StealC malware families. This extensive operation led to the seizure of servers containing approximately 6.4 million stolen login credentials.",
+        "action": "Urgently advise all employees and users to check if their credentials have been exposed in recent breaches using reputable services like HaveIBeenPwned. Enforce the use of strong, unique passwords across all enterprise and personal accounts, coupled with mandatory multi-factor authentication (MFA) wherever possible.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "New Mior and Skyfall Attacks Let Rogue Cloud Hosts Steal Secrets From AMD SEV-SNP VMs",
+        "tldr": "New research has detailed \"Mior\" and \"Skyfall\" attacks, which demonstrate methods for malicious cloud hosts to bypass AMD's Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP) protections. These attacks allow rogue cloud providers to potentially steal sensitive data from guest virtual machines.",
+        "action": "Organizations utilizing AMD SEV-SNP virtual machines in cloud environments should engage with their cloud providers to understand their specific mitigations against these new host-level attacks. Consider implementing additional encryption for sensitive data at rest and in transit within VMs, and ensure robust access controls are in place.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "AMD SEV-SNP enabled virtual machines. Specific AMD CPU generations and firmware versions may be affected. Consult AMD's official advisories for affected product lines.",
+        "how_to_determine_impact": "Determine if your cloud infrastructure utilizes AMD SEV-SNP. If so, contact your cloud provider to understand their mitigation strategies and assess your exposure to rogue host attacks.",
+        "tanium_query_hint": "Not directly applicable for cloud host attacks on hardware features. For on-prem AMD SEV-SNP, 'Get Hardware Information' and 'Get BIOS Settings' might provide hints, but complex to determine host-level risk.",
+        "rapid7_query_hint": "Not directly applicable for cloud host attacks. For on-prem, similar to Tanium, direct host-level vulnerability scanning won't detect this host-level bypass.",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "8.5 High (Estimated, as it bypasses a key security feature in cloud environments)",
         "category": "vulns"
       }
     ]
