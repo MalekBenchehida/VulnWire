@@ -1,99 +1,99 @@
 {
   "breaches": [
     {
+      "title": "Italy Fines Meta \n805 Million Over Facebook's Android Gallery Access Without Explicit Consent",
+      "tldr": "Meta was fined \n805 million by Italian regulators for accessing Android device photo galleries via Facebook without obtaining explicit user consent, violating privacy regulations.",
+      "action": "Review consent mechanisms for data access in all applications, especially those handling sensitive user data, to ensure explicit and informed consent is obtained as per regional and international regulations.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
-      "tldr": "North Korean state-sponsored hackers have reportedly stolen over $400 million in cryptocurrency by employing sophisticated social engineering tactics, including deepfake video calls. This advanced campaign targets individuals in crypto-related roles to defraud them of their digital assets.",
-      "action": "Educate employees, particularly those in cryptocurrency-related roles, about the evolving threat of deepfakes and advanced social engineering. Implement robust multi-factor authentication (MFA) and stringent verification processes for all high-value transactions and sensitive information exchanges.",
+      "tldr": "The FBI reports that North Korean state-sponsored hackers, likely the Lazarus Group, stole over $400 million in cryptocurrency by employing advanced social engineering techniques, including the use of deepfake video calls to impersonate individuals and compromise crypto firms.",
+      "action": "Enhance multi-factor authentication for all critical accounts, especially those involving financial transactions. Conduct regular social engineering awareness training, with a specific focus on deepfake detection and verification protocols for high-value operations and communications.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
       "source": "The Hacker News"
     },
     {
       "title": "Trezor Confirms Hidden Implants in CryptoBilis-Sold Wallets That Can Steal Recovery Phrases",
-      "tldr": "Trezor has confirmed that certain Safe 5 hardware wallets, specifically three devices sold by the Southeast Asian reseller CryptoBilis, contained hidden malicious hardware implants. These implants are designed to steal users' cryptocurrency recovery phrases and transmit them over cellular networks, leading to potential loss of funds.",
-      "action": "Users who purchased Trezor Safe 5 wallets from CryptoBilis must immediately transfer all funds to a new, securely verified wallet. Follow Trezor's official guidance for disposing of potentially compromised devices and securing any remaining assets.",
+      "tldr": "Trezor confirmed that three Safe 5 hardware wallets, specifically those sold by Southeast Asian reseller CryptoBilis, contained malicious hardware implants designed to exfiltrate users' cryptocurrency recovery phrases over cellular networks.",
+      "action": "Users who purchased Trezor Safe 5 devices from CryptoBilis must immediately transfer all funds to a new, secure wallet and cease using the compromised device. Always purchase hardware wallets directly from the manufacturer or authorized, trusted resellers.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Cursor confirms security breach led to malicious Claude Code extension",
-      "tldr": "Cursor, an AI code editor, has confirmed a security breach where attackers stole credentials from its AI infrastructure provider, Fireworks AI. This compromise enabled the distribution of a malicious Claude Code extension through Cursor's official marketplace, potentially impacting users who installed it.",
-      "action": "Users of Cursor, especially those who installed the Claude Code extension, should immediately remove the extension and change all associated credentials. Review systems for any signs of compromise, such as unauthorized access or unusual activity, resulting from the malicious extension.",
+      "title": "TSMC employee data breach linked to cloud provider",
+      "tldr": "Taiwan Semiconductor Manufacturing Company (TSMC) confirmed that personal employee data was leaked online after a threat actor advertised 6.9GB of information allegedly stolen from the company, with the incident linked to a compromise at a cloud provider.",
+      "action": "Conduct a thorough security audit of all third-party cloud providers and service providers handling sensitive data. Implement stringent data segregation, encryption, and access controls for all sensitive employee and corporate data, especially when managed by external vendors.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Apify Confirms Customer Data Accessed in Cyberattack",
-      "tldr": "Apify, a web scraping and automation platform, has confirmed a cyberattack that resulted in unauthorized access to customer data. The company is currently investigating the full extent of the compromise, including specific types of data accessed and the number of affected customers.",
-      "action": "Apify customers should immediately reset their account credentials and enable multi-factor authentication (MFA) if not already active. Users should also remain vigilant for any suspicious phishing attempts or unusual activity related to their Apify accounts or associated services.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/apify-confirms-customer-data-accessed-in-cyberattack/",
-      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
-      "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
-      "tldr": "An active exploitation campaign is leveraging a critical flaw in UnrealIRCd, allowing attackers to inject commands at the server level. This zero-day vulnerability grants malicious actors arbitrary code execution capabilities and full control over affected systems.",
-      "action": "Immediately identify and patch all UnrealIRCd installations to the latest secure version. Isolate any systems running vulnerable versions for further investigation and forensic analysis to determine potential compromise.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "UnrealIRCd versions prior to the latest security patch that addresses server-level command injection.",
-      "how_to_determine_impact": "Identify all servers running UnrealIRCd. Verify the installed version against vendor advisories and check server logs for any unusual command executions, unauthorized file modifications, or suspicious process activity indicative of compromise.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'UnrealIRCd' OR Get File Version['/path/to/unrealircd'] and 'Get Running Processes' for suspicious activity.",
-      "rapid7_query_hint": "Search for vulnerability ID related to UnrealIRCd command injection or asset search for 'UnrealIRCd' software installations. Review server logs via InsightIDR for command execution anomalies or unauthorized access.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
       "title": "Check Point warns of zero-day flaw exploited for root access",
-      "tldr": "Check Point Software has released emergency hotfixes for an actively exploited high-severity zero-day vulnerability (likely related to PHP2Shell flaws). Attackers are leveraging this flaw to gain root privileges, establish persistence, deploy TSGA backdoors, and wipe VMware ESXi files on vulnerable Check Point Gateways since late October.",
-      "action": "Immediately apply the emergency hotfixes released by Check Point (Hotfix Take 1133 for Quantum Security Gateway and Quantum Spark appliances). Conduct a thorough forensic analysis on any potentially compromised Check Point devices and associated ESXi hosts for indicators of TSGA backdoor or wiper activity.",
+      "tldr": "Check Point Software has issued emergency hotfixes for a critical zero-day vulnerability that has been actively exploited since late October. The flaw allows attackers to gain root privileges and establish persistence on vulnerable Check Point devices.",
+      "action": "Immediately apply all emergency hotfixes released by Check Point for the identified zero-day vulnerability. Conduct a comprehensive forensic analysis of all Check Point devices for any signs of compromise, unauthorized root access, or established persistence mechanisms.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/check-point-patches-zero-day-that-lets-hackers-get-root-access/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "Check Point Quantum Security Gateway and Quantum Spark appliances vulnerable to the zero-day flaw (Hotfix Take 1133 addresses it). Exploitation uses PHP2Shell.",
-      "how_to_determine_impact": "Identify all Check Point Security Gateway and Quantum Spark appliances. Verify current patch level and ensure Hotfix Take 1133 is applied. Inspect device logs and connected ESXi hosts for signs of unauthorized root access, PHP2Shell activity, TSGA backdoor artifacts, or ESXi file wiping (e.g., specific log entries, unusual processes, modified files).",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'Check Point' AND Check for suspicious processes (e.g., 'TSGA') or file modifications on Check Point devices and ESXi hosts using 'Get Running Processes' and 'Get File Hash' and 'Get Modified Files'.",
-      "rapid7_query_hint": "Search for new Check Point zero-day vulnerability IDs. Scan Check Point appliances and associated ESXi hosts for indicators of compromise including unauthorized root access, PHP2Shell activity, and presence of TSGA backdoor or wiper malware. Look for unusual activity in logs and network traffic.",
+      "affected_versions": "Specific Check Point devices and software versions impacted by the zero-day flaw; consult Check Point's official emergency hotfix advisories for exact details.",
+      "how_to_determine_impact": "Identify all Check Point appliances within the environment. Verify their current software versions and patch levels against the vendor's emergency advisory. Look for unusual processes, unauthorized file modifications, or unexpected outbound network connections from these devices.",
+      "tanium_query_hint": "Get Installed Applications contains 'Check Point' and 'Version' < 'patched_version'. Check 'Running Processes' for any suspicious entries or deviations from baseline. Use 'Get File Hash' for known Indicators of Compromise (IOCs) from Check Point advisories.",
+      "rapid7_query_hint": "Search for vulnerability ID or asset filters related to 'Check Point zero-day'. Use InsightAgent to query for 'processes.command_line' or 'files.hash' for IOCs on Check Point assets. Asset search for 'Check Point Software' and filter by 'version' based on vendor advisory.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
     },
     {
-      "title": "Hackers Exploit N-central Flaws to Infect 21 Servers, Including 19 Running Hotfix 2",
-      "tldr": "Threat actors are actively exploiting unpatched flaws in N-central to compromise 21 servers, with 19 of them already running Hotfix 2. This suggests either a new, undisclosed vulnerability or a bypass for the existing hotfix, posing a significant risk to managed service providers (MSPs) and their clients.",
-      "action": "Immediately isolate and thoroughly investigate all N-central servers. Apply any new available patches and hotfixes from the vendor. Monitor for indicators of compromise on N-central servers and any client systems managed by them, as this RMM tool is a high-value target.",
+      "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+      "tldr": "Threat actors are actively exploiting a critical flaw in UnrealIRCd that allows for server-level command injection, potentially leading to remote code execution (RCE) and full control over affected IRC servers.",
+      "action": "Immediately update all UnrealIRCd installations to the latest patched version. Isolate any identified vulnerable or potentially compromised UnrealIRCd servers until remediation is complete. Scan for indicators of compromise, including unusual process activity or network connections.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html",
+      "source_url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "N-central servers, including specific installations running Hotfix 2, indicating an unpatched flaw or a bypass mechanism. Consult vendor for specific vulnerable version ranges.",
-      "how_to_determine_impact": "Identify all N-central installations within your environment. Verify the current patch level and compare it with the latest vendor advisories. Look for signs of compromise such as unauthorized access, unusual processes, or suspicious network connections on N-central servers and managed endpoints.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'N-central' OR Check running processes for known malicious executables on N-central servers using 'Get Running Processes' and 'Get Process Hash'.",
-      "rapid7_query_hint": "Search for N-central vulnerabilities. Scan N-central servers for indicators of compromise. Review logs for unauthorized access, unusual activity, or suspicious remote connections related to the N-central service.",
+      "affected_versions": "All versions of UnrealIRCd prior to the patch addressing the command injection flaw (specific vulnerable version ranges require consulting official UnrealIRCd advisories).",
+      "how_to_determine_impact": "Identify all servers running UnrealIRCd. Verify their version numbers against vendor security advisories. Inspect server logs for unexpected commands being executed or suspicious child processes spawned by the IRCd service.",
+      "tanium_query_hint": "Get Installed Applications contains 'UnrealIRCd' and 'Version' < 'patched_version'. Use 'Get Running Processes' and 'Get Open Network Connections' to identify any unusual activity originating from IRCd server processes.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to 'UnrealIRCd command injection'. Use InsightAgent to query for 'software.name' equals 'UnrealIRCd' and 'software.version' (regex for vulnerable range). Monitor for suspicious process executions on IRCd servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical"
+      "cvss_score": "9.8 Critical (Estimated)"
+    },
+    {
+      "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
+      "tldr": "Vulnerable Check Point Security Gateway instances have been leveraged via PHP2Shell attacks to deploy data-wiping malware specifically targeting VMware ESXi hosts, indicating a dangerous attack chain and active exploitation.",
+      "action": "Patch all Check Point Security Gateway instances immediately to mitigate PHP2Shell vulnerabilities. Conduct an immediate audit and scan of all VMware ESXi environments for signs of wiper malware, unauthorized access, or unusual activity.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Vulnerable Check Point Security Gateway instances susceptible to PHP2Shell exploitation; consult Check Point advisories for specific version ranges. VMware ESXi hosts accessible from compromised gateways.",
+      "how_to_determine_impact": "Identify all Check Point Security Gateway appliances and verify their patch status for known PHP2Shell vulnerabilities. Monitor associated VMware ESXi hosts for any unexplained reboots, storage issues, or unauthorized file deletions. Check gateway logs for suspicious activity.",
+      "tanium_query_hint": "Get Installed Applications contains 'Check Point Security Gateway' and 'Version' < 'patched_version'. On ESXi hosts (via Tanium Connect to vCenter/ESXi or direct agent if supported), search for 'Running Processes' related to known wiper malware. Get File Hash for known IOCs on ESXi volumes.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to 'Check Point PHP2Shell' or 'VMware ESXi wiper'. Use InsightAgent to query for 'software.name' equals 'Check Point Security Gateway' and 'software.version'. On ESXi assets, monitor for suspicious processes or disk activity.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.1 Critical (Estimated)"
     },
     {
       "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
-      "tldr": "PostgreSQL has released a significant update patching 52 vulnerabilities, notably including a 22-year-old bug that enables authenticated Remote Code Execution (RCE). While requiring authentication, the sheer number of flaws and the severity of the RCE highlight the importance of timely patching for database security.",
-      "action": "Apply all available PostgreSQL patches immediately. Prioritize patching systems exposed to untrusted users or those with shared credentials, as the authenticated RCE could lead to significant data compromise.",
+      "tldr": "PostgreSQL has released crucial security updates addressing 52 vulnerabilities, notably including a 22-year-old bug that could allow an authenticated attacker to achieve remote code execution (RCE) on affected database servers.",
+      "action": "Immediately apply all available PostgreSQL security updates to mitigate the numerous vulnerabilities, including the critical authenticated RCE flaw. Review database user privileges to ensure least privilege is enforced.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "PostgreSQL versions prior to the latest patches released in November 2026, specifically addressing 52 flaws including the 22-year-old authenticated RCE bug.",
-      "how_to_determine_impact": "Identify all PostgreSQL instances deployed across your infrastructure. Check the installed version and ensure all available security updates have been applied. Review user authentication mechanisms and access controls for all database users.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'PostgreSQL' OR Get File Version['/path/to/postgresql/bin/postgres'] for specific binaries.",
-      "rapid7_query_hint": "Search for PostgreSQL vulnerabilities by vendor and product. Filter by vulnerability IDs released in November 2026. Use InsightAgent queries to verify installed software versions and patch levels on database servers.",
+      "affected_versions": "All unsupported PostgreSQL versions, and specific older supported versions prior to the latest security releases (exact versions require consulting official PostgreSQL security advisories for the November 2026 updates).",
+      "how_to_determine_impact": "Identify all PostgreSQL database instances within the environment. Check the exact version number of each installation against the official PostgreSQL security advisories to determine if they are vulnerable to the recently patched flaws.",
+      "tanium_query_hint": "Get Installed Applications contains 'PostgreSQL' and 'Version' < 'latest_patched_version'. Use 'Get Running Processes' to identify active PostgreSQL instances and ensure they are running patched versions.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to 'PostgreSQL RCE' or 'PostgreSQL critical vulnerabilities'. Use InsightAgent to query for 'software.name' equals 'PostgreSQL' and 'software.version' to identify vulnerable assets.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "8.8 High"
+      "cvss_score": "9.0 Critical (Estimated)"
     }
   ],
   "insurance": [],
@@ -29973,6 +29973,40 @@
         "rapid7_query_hint": "Search for PostgreSQL vulnerabilities by vendor and product. Filter by vulnerability IDs released in November 2026. Use InsightAgent queries to verify installed software versions and patch levels on database servers.",
         "remediation_priority": "High next patch cycle",
         "cvss_score": "8.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Italy Fines Meta \n805 Million Over Facebook's Android Gallery Access Without Explicit Consent",
+        "tldr": "Meta was fined \n805 million by Italian regulators for accessing Android device photo galleries via Facebook without obtaining explicit user consent, violating privacy regulations.",
+        "action": "Review consent mechanisms for data access in all applications, especially those handling sensitive user data, to ensure explicit and informed consent is obtained as per regional and international regulations.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "TSMC employee data breach linked to cloud provider",
+        "tldr": "Taiwan Semiconductor Manufacturing Company (TSMC) confirmed that personal employee data was leaked online after a threat actor advertised 6.9GB of information allegedly stolen from the company, with the incident linked to a compromise at a cloud provider.",
+        "action": "Conduct a thorough security audit of all third-party cloud providers and service providers handling sensitive data. Implement stringent data segregation, encryption, and access controls for all sensitive employee and corporate data, especially when managed by external vendors.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/tsmc-employee-data-breach-linked-to-cloud-provider/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Check Point gateways hacked via PHP2Shell to deploy VMware ESXi wiper",
+        "tldr": "Vulnerable Check Point Security Gateway instances have been leveraged via PHP2Shell attacks to deploy data-wiping malware specifically targeting VMware ESXi hosts, indicating a dangerous attack chain and active exploitation.",
+        "action": "Patch all Check Point Security Gateway instances immediately to mitigate PHP2Shell vulnerabilities. Conduct an immediate audit and scan of all VMware ESXi environments for signs of wiper malware, unauthorized access, or unusual activity.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Vulnerable Check Point Security Gateway instances susceptible to PHP2Shell exploitation; consult Check Point advisories for specific version ranges. VMware ESXi hosts accessible from compromised gateways.",
+        "how_to_determine_impact": "Identify all Check Point Security Gateway appliances and verify their patch status for known PHP2Shell vulnerabilities. Monitor associated VMware ESXi hosts for any unexplained reboots, storage issues, or unauthorized file deletions. Check gateway logs for suspicious activity.",
+        "tanium_query_hint": "Get Installed Applications contains 'Check Point Security Gateway' and 'Version' < 'patched_version'. On ESXi hosts (via Tanium Connect to vCenter/ESXi or direct agent if supported), search for 'Running Processes' related to known wiper malware. Get File Hash for known IOCs on ESXi volumes.",
+        "rapid7_query_hint": "Search for vulnerability IDs related to 'Check Point PHP2Shell' or 'VMware ESXi wiper'. Use InsightAgent to query for 'software.name' equals 'Check Point Security Gateway' and 'software.version'. On ESXi assets, monitor for suspicious processes or disk activity.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.1 Critical (Estimated)",
         "category": "vulns"
       }
     ]
