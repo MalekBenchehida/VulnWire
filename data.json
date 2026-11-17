@@ -1,104 +1,122 @@
 {
   "breaches": [
     {
-      "title": "Optimizely supply chain attack infects major brands' sites with malware",
-      "tldr": "A suspected supply chain attack targeting Optimizely has led to malicious JavaScript being loaded on numerous popular websites, including Zoom, CNN, Fox News, BBC, Salesforce, and GitLab. This malware is designed to steal cryptocurrency and payment information and exploit vulnerabilities in iOS devices, affecting a wide range of users.",
-      "action": "Review third-party scripts loaded on websites, especially those using Optimizely. Implement Content Security Policy (CSP) to restrict script execution. Advise users to monitor for suspicious activity, especially on payment pages.",
+      "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
+      "tldr": "Credentials and access secrets exposed in public Docker Hub images are being extracted and exploited by attackers within as little as eight seconds of publication. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-infects-major-brands-sites-with-malware/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify, and Other Apps for API Keys",
-      "tldr": "Amazon has detected an AI agent-driven campaign aimed at compromising applications like LiteLLM and Dify to steal API keys. This method allows attackers to gain unauthorized access to various services and data, escalating the risk of data breaches and service abuse.",
-      "action": "Review security configurations for LiteLLM, Dify, and similar applications. Rotate API keys regularly, enforce least privilege, and implement robust API key management practices. Monitor for unusual API activity.",
+      "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
+      "tldr": "Microsoft is testing a new feature that lets enterprise IT administrators remotely lock stolen or lost Windows devices without wiping them. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Fandango says hackers stole payment card details from checkout pages",
-      "tldr": "Ticket seller Fandango Media is notifying customers about a data breach where hackers stole payment card details entered on its checkout pages. This indicates a potential web skimmer or compromise of the e-commerce platform, leading to financial data theft.",
-      "action": "Users should monitor credit card statements for suspicious activity. Organizations running e-commerce sites should conduct regular security audits, implement robust payment card industry (PCI DSS) compliance, and monitor for web skimming attempts.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Uber Data Breach Impacts 150,000 People",
-      "tldr": "Uber has experienced a data breach affecting approximately 150,000 individuals. The extent of the compromised data is currently unclear, but this incident highlights the persistent risk of large-scale customer data exposure for major corporations.",
-      "action": "Uber users should remain vigilant for phishing attempts and monitor their accounts for suspicious activity. Organizations should review their data protection strategies and incident response plans to mitigate future data breaches.",
+      "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
+      "tldr": "Ride-hailing company Uber is notifying nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/uber-data-breach-impacts-150000-people/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Market Research Giant Ipsos Investigating Breach of Internal System",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/market-research-giant-ipsos-investigating-breach-of-internal-system/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
-      "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
-      "tldr": "A group known as \"BO Team\" has exploited the critical Log4Shell vulnerability (CVE-2021-44228) in VMware vCenter instances to compromise a Russian firm's code-signing server. This demonstrates the ongoing threat of Log4Shell and its potential for high-impact supply chain attacks.",
-      "action": "Verify that all VMware vCenter instances and other software susceptible to Log4Shell (CVE-2021-44228) are fully patched and hardened. Conduct a forensic review for any signs of compromise, especially on code-signing infrastructure.",
-      "cve_ids": [
-        "CVE-2021-44228"
-      ],
-      "source_url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html",
+      "title": "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "VMware vCenter versions affected by CVE-2021-44228. Also, any application using Log4j 2.0-beta9 to 2.14.1.",
-      "how_to_determine_impact": "Check vCenter and other Java applications for Log4j versions. Search for JNDI lookup patterns in logs. Use scripts/tools to detect vulnerable Log4j libraries.",
-      "tanium_query_hint": "Get Log4j Files with Version and Path from all machines; Get Running Processes that contain 'java' and 'log4j'.",
-      "rapid7_query_hint": "Search for vulnerability ID 'log4shell' or 'CVE-2021-44228'. Perform authenticated scans on all systems running Java applications, especially vCenter.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "7.8 High"
     },
     {
-      "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
-      "tldr": "Attackers are actively exploiting a vulnerability in UnrealIRCd that allows for server-level command injection. This critical flaw enables remote attackers to execute arbitrary commands on the server, potentially leading to full system compromise.",
-      "action": "Immediately patch all UnrealIRCd installations to the latest secure version. If patching is not feasible, restrict network access to UnrealIRCd servers or disable them until a patch can be applied.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+      "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [
+        "CVE-2026-114938"
+      ],
+      "source_url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific versions of UnrealIRCd. Refer to UnrealIRCd official security advisories for details.",
-      "how_to_determine_impact": "Check all systems running UnrealIRCd. Verify installed version and consult vendor documentation for vulnerability status.",
-      "tanium_query_hint": "'Get Installed Applications' filtered by 'UnrealIRCd'. 'Get Running Processes' and inspect command-line arguments if applicable.",
-      "rapid7_query_hint": "Scan for 'UnrealIRCd' related vulnerabilities. Use 'Software Name: UnrealIRCd' filter in asset search to identify targets.",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Installed Applications having Name contains \"CVE-2026-114938\"",
+      "rapid7_query_hint": "vulnerability.cveIds CONTAINS 'CVE-2026-114938'",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login",
-      "tldr": "Six critical unpatched vulnerabilities have been discovered in Danfoss refrigeration controllers, potentially allowing remote attackers to take complete control of affected devices without requiring authentication. These flaws pose a significant risk to industrial control systems (ICS).",
-      "action": "Immediately identify and isolate any Danfoss refrigeration controllers in the environment. Apply any available temporary mitigations recommended by Danfoss until patches are released.",
+      "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
+      "source_url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Specific Danfoss refrigeration controller models. Refer to Danfoss security advisories for exact versions.",
-      "how_to_determine_impact": "Inventory all Danfoss refrigeration controllers. Check model numbers and firmware versions against vendor advisories. Look for network exposure of these devices.",
-      "tanium_query_hint": "Query for specific hardware models or network configurations on ICS/OT networks: 'Get System Info' or 'Get Network Interfaces and Connections' filtered by known controller IPs/MACs.",
-      "rapid7_query_hint": "Perform network scans on OT/ICS segments. Use asset search filters for known Danfoss device identifiers or open ports associated with these controllers. Look for 'Unpatched Danfoss' vulnerability names.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0+ Critical"
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "⚡ Weekly Recap: N-able 0-Days, Windows 0-Days, Chrome 0-Days, Fridge 0-Days, and More Bad Days",
-      "tldr": "This weekly recap highlights multiple zero-day vulnerabilities affecting N-able, Windows, Chrome, and various refrigeration control systems. These unpatched flaws represent critical security risks with immediate potential for exploitation, requiring urgent attention.",
-      "action": "Review recent advisories for N-able, Windows, Chrome, and IoT/ICS devices. Prioritize immediate patching or mitigation for any disclosed zero-day vulnerabilities.",
+      "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/weekly-recap-n-able-0-days-windows-0.html",
+      "source_url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Refer to vendor advisories for specific affected versions of N-able products, Windows OS, Chrome browser, and various IoT/ICS refrigeration controllers.",
-      "how_to_determine_impact": "Check all relevant systems for installed products and versions. Cross-reference with vendor-specific security advisories for zero-day disclosures.",
-      "tanium_query_hint": "For general software inventory: 'Get Installed Applications'. For specific OS versions: 'Get OS Version'. For browser versions: 'Get Chrome Version'.",
-      "rapid7_query_hint": "Perform an authenticated scan on all assets. Filter by 'Vulnerability Category: Zero-Day' or search for 'N-able', 'Windows', 'Chrome', 'Fridge' in vulnerability names.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Varies by specific vulnerability (Expected Critical 9.0+ for 0-days)"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -30351,6 +30369,108 @@
         "rapid7_query_hint": "Perform an authenticated scan on all assets. Filter by 'Vulnerability Category: Zero-Day' or search for 'N-able', 'Windows', 'Chrome', 'Fridge' in vulnerability names.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Varies by specific vulnerability (Expected Critical 9.0+ for 0-days)",
+        "category": "vulns"
+      },
+      {
+        "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
+        "tldr": "Credentials and access secrets exposed in public Docker Hub images are being extracted and exploited by attackers within as little as eight seconds of publication. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
+        "tldr": "Microsoft is testing a new feature that lets enterprise IT administrators remotely lock stolen or lost Windows devices without wiping them. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
+        "tldr": "Ride-hailing company Uber is notifying nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Market Research Giant Ipsos Investigating Breach of Internal System",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/market-research-giant-ipsos-investigating-breach-of-internal-system/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "7.8 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [
+          "CVE-2026-114938"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Installed Applications having Name contains \"CVE-2026-114938\"",
+        "rapid7_query_hint": "vulnerability.cveIds CONTAINS 'CVE-2026-114938'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
