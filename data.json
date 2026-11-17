@@ -2,121 +2,106 @@
   "breaches": [
     {
       "title": "Cloud keys leaked in Docker Hub images are stolen within seconds",
-      "tldr": "Credentials and access secrets exposed in public Docker Hub images are being extracted and exploited by attackers within as little as eight seconds of publication. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "Researchers found that credentials and access secrets exposed in public Docker Hub images are being harvested by attackers within seconds of their publication. This rapid exfiltration leads to immediate compromise of cloud resources associated with the leaked keys.",
+      "action": "Review all public Docker Hub images for exposed credentials. Implement automated scanning for secrets in CI/CD pipelines and Docker images before publishing. Rotate any potentially compromised keys immediately.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Microsoft testing Remote Lock for lost or stolen Windows devices",
-      "tldr": "Microsoft is testing a new feature that lets enterprise IT administrators remotely lock stolen or lost Windows devices without wiping them. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Japan takes Fugaku supercomputer offlline after cyberattack",
+      "tldr": "Japan's RIKEN Center for Computational Science took its Fugaku supercomputer offline following a security breach. The nature of the cyberattack is not fully detailed, but the incident necessitated a complete shutdown of the critical national infrastructure.",
+      "action": "Conduct a thorough incident response investigation to determine the attack vector and extent of compromise. Implement enhanced network segmentation, access controls, and monitoring for critical systems.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-testing-remote-lock-for-lost-or-stolen-windows-devices/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Uber notifies drivers of data breach affecting nearly 150,000 people",
-      "tldr": "Ride-hailing company Uber is notifying nearly 150,000 drivers that attackers stole their data after breaching AI infrastructure provider Fireworks in early October. [...]",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Access Dental Management Data Breach Impacts Over 340,000",
+      "tldr": "Access Dental Management experienced a data breach impacting over 340,000 individuals. While specific details of the breach vector are not immediately available, it resulted in the compromise of sensitive patient data.",
+      "action": "Identify the root cause of the breach and secure affected systems. Notify impacted individuals and relevant regulatory bodies in accordance with data breach regulations. Offer credit monitoring or identity theft protection services to affected parties.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/uber-notifies-drivers-of-data-breach-affecting-nearly-150-000-people/",
-      "source": "BleepingComputer"
+      "source_url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
+      "source": "SecurityWeek"
     },
     {
-      "title": "Market Research Giant Ipsos Investigating Breach of Internal System",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Fandango Warns Ticket Buyers of Payment Card Data Exposure",
+      "tldr": "Fandango has warned its ticket buyers about potential exposure of payment card data. The notice indicates that customer payment information may have been compromised, urging users to monitor their financial accounts for suspicious activity.",
+      "action": "If you are a Fandango customer, monitor credit card statements and bank accounts for unauthorized transactions. If you are an enterprise, assess any third-party integrations with Fandango or similar services for potential supply chain risks.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/market-research-giant-ipsos-investigating-breach-of-internal-system/",
+      "source_url": "https://www.securityweek.com/fandango-warns-ticket-buyers-of-payment-card-data-exposure/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [
-    {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
-      "cve_ids": [],
-      "source_url": "",
-      "source": "System"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
-      "title": "Researchers Claim Two RCE Exploits That Bypass Telegram’s New Android Defenses",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
-      "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Running Processes matching service name",
-      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
-      "remediation_priority": "High next patch cycle",
-      "cvss_score": "7.8 High"
-    },
-    {
       "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "tldr": "A critical Remote Code Execution (RCE) vulnerability, dubbed Java4Shell and assigned CVE-2026-114938, has been reported in OpenJDK. This flaw can allow unauthenticated attackers to execute arbitrary code on popular enterprise Java applications like Jenkins, Atlassian Jira, Confluence, and Keycloak. Oracle is expected to release patches today for this and 10 other Java flaws.",
+      "action": "Immediately apply Oracle's emergency patches for OpenJDK and other Java installations. Prioritize patching systems running critical enterprise Java applications such as Jenkins, Jira, and Confluence.",
       "cve_ids": [
         "CVE-2026-114938"
       ],
       "source_url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor advisories for specific version ranges.",
-      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
-      "tanium_query_hint": "Get Installed Applications having Name contains \"CVE-2026-114938\"",
-      "rapid7_query_hint": "vulnerability.cveIds CONTAINS 'CVE-2026-114938'",
+      "active_exploitation": true,
+      "affected_versions": "OpenJDK, and potentially other Java implementations, impacting applications like Jenkins, Atlassian Jira, Confluence, and Keycloak. Specific version ranges pending Oracle's advisory.",
+      "how_to_determine_impact": "Identify all systems running Java applications. Check Java runtime versions and application server logs for unusual activity. Specifically look for unauthenticated remote requests or unexpected process spawns related to Java processes. Consult Oracle's advisory once released for specific version checks.",
+      "tanium_query_hint": "Get Installed Applications and Running Processes from all machines where (Application Name contains 'Java' or Process Name contains 'java'). Look for Java versions and processes associated with affected applications like Jenkins, Jira, Confluence.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-114938' in InsightVM. For InsightIDR, query logs for suspicious activity on Java application servers, filtering by process creation events from Java processes, or unusual network connections from these servers.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated, pending official Oracle CVSS score)"
     },
     {
-      "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "title": "Researchers Claim Two RCE Exploits That Bypass Telegram\nas New Android Defenses",
+      "tldr": "Security researchers claim to have discovered two Remote Code Execution (RCE) exploits capable of bypassing Telegram's recently implemented Android defenses. These vulnerabilities could allow attackers to execute arbitrary code on affected Android devices, potentially compromising user data and device integrity.",
+      "action": "Telegram users on Android should ensure their application is updated to the latest version as soon as patches are released. Organizations should advise users to update and monitor for official security advisories from Telegram.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
+      "source_url": "https://thehackernews.com/2026/11/researchers-claim-two-rce-exploits-that.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
+      "affected_versions": "Telegram for Android. Specific vulnerable versions pending official disclosure from Telegram.",
+      "how_to_determine_impact": "Monitor official Telegram security channels for advisories. Users should ensure automatic updates are enabled for Telegram on Android. For enterprises, ensure mobile device management (MDM) solutions enforce app updates for Telegram.",
+      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'Telegram' and Operating System contains 'Android'). Check versions against official advisories.",
+      "rapid7_query_hint": "Check mobile device inventory for Telegram for Android installations and their versions. For InsightIDR, monitor Android device logs for unusual process execution or network activity originating from the Telegram application.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical (Estimated based on RCE capability bypassing defenses)"
     },
     {
-      "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
-      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
-      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+      "title": "ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems",
+      "tldr": "ConnectWise has issued warnings regarding ongoing attacks targeting unpatched ScreenConnect systems, specifically mentioning the SCKit tool. Attackers are actively exploiting known vulnerabilities in ScreenConnect to compromise remote management and monitoring (RMM) infrastructure, posing a significant risk to MSPs and their clients.",
+      "action": "Immediately patch all ConnectWise ScreenConnect instances to the latest secure versions. Review logs for any indicators of compromise related to ScreenConnect, including unusual logins, process execution, or network connections. Isolate unpatched systems until they can be updated.",
+      "cve_ids": [
+        "CVE-2024-1709",
+        "CVE-2024-1708"
+      ],
+      "source_url": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
       "source": "The Hacker News",
-      "active_exploitation": false,
-      "affected_versions": "Check vendor documentation.",
-      "how_to_determine_impact": "Analyze configurations and dependency logs.",
-      "tanium_query_hint": "Get Installed Applications",
-      "rapid7_query_hint": "asset.name CONTAINS ''",
-      "remediation_priority": "Medium standard patching",
-      "cvss_score": "7.0 High"
-    }
-  ],
-  "insurance": [
+      "active_exploitation": true,
+      "affected_versions": "ConnectWise ScreenConnect versions prior to 23.9.8 for CVE-2024-1709 and CVE-2024-1708. Consult ConnectWise advisories for precise impacted versions for ongoing attacks.",
+      "how_to_determine_impact": "Check ScreenConnect server versions. Look for signs of compromise such as unauthorized access, deployment of SCKit, unexpected processes, or modifications to configuration files. Review authentication logs for suspicious activity.",
+      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'ScreenConnect' or 'ConnectWise Control'). Check for versions less than 23.9.8. Also, search for file existence of known SCKit components or unusual process activity on ScreenConnect servers.",
+      "rapid7_query_hint": "Search for vulnerability IDs 'CVE-2024-1709' and 'CVE-2024-1708' in InsightVM. For InsightIDR, monitor logs from ScreenConnect servers for indicators of compromise, such as new user accounts, unusual remote PowerShell activity, or connections to suspicious external IPs.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "10.0 Critical (Based on CVE-2024-1709, other related vulns are also critical)"
+    },
     {
-      "title": "Awaiting Fresh Intelligence",
-      "tldr": "No automated categorization found for this cycle.",
-      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "title": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
+      "tldr": "N-able has released patches for 17 N-central flaws, including several \"zero-days\", some of which were actively exploited to deploy crypto miners. The vulnerabilities range from legacy API issues to unstated critical flaws that allowed attackers to gain unauthorized access and deploy malicious payloads.",
+      "action": "Immediately apply all available N-able N-central patches. Conduct a comprehensive scan of N-central managed endpoints for indicators of compromise, especially crypto-miner activity, and review N-central server logs for unauthorized access or unusual administrative actions.",
       "cve_ids": [],
-      "source_url": "",
-      "source": "System"
+      "source_url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "N-able N-central. Specific vulnerable versions prior to the latest patches. Consult N-able's security advisories for exact version ranges.",
+      "how_to_determine_impact": "Check N-central server versions and ensure all patches are applied. Monitor N-central agents and managed endpoints for high CPU usage indicative of crypto mining, unexpected software installations, or unauthorized remote access. Review N-central audit logs for suspicious activity.",
+      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'N-able N-central'). Check versions against N-able's latest advisories. Additionally, search for running processes that consume high CPU or are known crypto-miner executables.",
+      "rapid7_query_hint": "Search for N-able N-central assets in InsightVM and ensure they are fully patched. For InsightIDR, monitor endpoints for suspicious process creation, high CPU utilization by unknown processes, and network connections to known crypto-mining pools.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.0 Critical (Estimated, based on 'zero-days' and active exploitation for crypto-miners)"
     }
   ],
+  "insurance": [],
   "history": {
     "2026-06-22": [
       {
@@ -30471,6 +30456,68 @@
         "rapid7_query_hint": "asset.name CONTAINS ''",
         "remediation_priority": "Medium standard patching",
         "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Japan takes Fugaku supercomputer offlline after cyberattack",
+        "tldr": "Japan's RIKEN Center for Computational Science took its Fugaku supercomputer offline following a security breach. The nature of the cyberattack is not fully detailed, but the incident necessitated a complete shutdown of the critical national infrastructure.",
+        "action": "Conduct a thorough incident response investigation to determine the attack vector and extent of compromise. Implement enhanced network segmentation, access controls, and monitoring for critical systems.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/japan-takes-fugaku-supercomputer-offlline-after-cyberattack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Access Dental Management Data Breach Impacts Over 340,000",
+        "tldr": "Access Dental Management experienced a data breach impacting over 340,000 individuals. While specific details of the breach vector are not immediately available, it resulted in the compromise of sensitive patient data.",
+        "action": "Identify the root cause of the breach and secure affected systems. Notify impacted individuals and relevant regulatory bodies in accordance with data breach regulations. Offer credit monitoring or identity theft protection services to affected parties.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/access-dental-management-data-breach-impacts-over-340000/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Fandango Warns Ticket Buyers of Payment Card Data Exposure",
+        "tldr": "Fandango has warned its ticket buyers about potential exposure of payment card data. The notice indicates that customer payment information may have been compromised, urging users to monitor their financial accounts for suspicious activity.",
+        "action": "If you are a Fandango customer, monitor credit card statements and bank accounts for unauthorized transactions. If you are an enterprise, assess any third-party integrations with Fandango or similar services for potential supply chain risks.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/fandango-warns-ticket-buyers-of-payment-card-data-exposure/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems",
+        "tldr": "ConnectWise has issued warnings regarding ongoing attacks targeting unpatched ScreenConnect systems, specifically mentioning the SCKit tool. Attackers are actively exploiting known vulnerabilities in ScreenConnect to compromise remote management and monitoring (RMM) infrastructure, posing a significant risk to MSPs and their clients.",
+        "action": "Immediately patch all ConnectWise ScreenConnect instances to the latest secure versions. Review logs for any indicators of compromise related to ScreenConnect, including unusual logins, process execution, or network connections. Isolate unpatched systems until they can be updated.",
+        "cve_ids": [
+          "CVE-2024-1709",
+          "CVE-2024-1708"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "ConnectWise ScreenConnect versions prior to 23.9.8 for CVE-2024-1709 and CVE-2024-1708. Consult ConnectWise advisories for precise impacted versions for ongoing attacks.",
+        "how_to_determine_impact": "Check ScreenConnect server versions. Look for signs of compromise such as unauthorized access, deployment of SCKit, unexpected processes, or modifications to configuration files. Review authentication logs for suspicious activity.",
+        "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'ScreenConnect' or 'ConnectWise Control'). Check for versions less than 23.9.8. Also, search for file existence of known SCKit components or unusual process activity on ScreenConnect servers.",
+        "rapid7_query_hint": "Search for vulnerability IDs 'CVE-2024-1709' and 'CVE-2024-1708' in InsightVM. For InsightIDR, monitor logs from ScreenConnect servers for indicators of compromise, such as new user accounts, unusual remote PowerShell activity, or connections to suspicious external IPs.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical (Based on CVE-2024-1709, other related vulns are also critical)",
+        "category": "vulns"
+      },
+      {
+        "title": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
+        "tldr": "N-able has released patches for 17 N-central flaws, including several \"zero-days\", some of which were actively exploited to deploy crypto miners. The vulnerabilities range from legacy API issues to unstated critical flaws that allowed attackers to gain unauthorized access and deploy malicious payloads.",
+        "action": "Immediately apply all available N-able N-central patches. Conduct a comprehensive scan of N-central managed endpoints for indicators of compromise, especially crypto-miner activity, and review N-central server logs for unauthorized access or unusual administrative actions.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "N-able N-central. Specific vulnerable versions prior to the latest patches. Consult N-able's security advisories for exact version ranges.",
+        "how_to_determine_impact": "Check N-central server versions and ensure all patches are applied. Monitor N-central agents and managed endpoints for high CPU usage indicative of crypto mining, unexpected software installations, or unauthorized remote access. Review N-central audit logs for suspicious activity.",
+        "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'N-able N-central'). Check versions against N-able's latest advisories. Additionally, search for running processes that consume high CPU or are known crypto-miner executables.",
+        "rapid7_query_hint": "Search for N-able N-central assets in InsightVM and ensure they are fully patched. For InsightIDR, monitor endpoints for suspicious process creation, high CPU utilization by unknown processes, and network connections to known crypto-mining pools.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.0 Critical (Estimated, based on 'zero-days' and active exploitation for crypto-miners)",
         "category": "vulns"
       }
     ]
