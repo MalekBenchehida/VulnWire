@@ -1,99 +1,99 @@
 {
   "breaches": [
     {
-      "title": "Fandango says hackers stole payment card details from checkout pages",
-      "tldr": "Fandango Media is notifying customers of a data breach where hackers stole payment card details entered on its checkout pages. This incident likely involved web skimming or Magecart-style malware, compromising sensitive financial information during transactions.",
-      "action": "Advise users who have recently purchased tickets from Fandango to monitor their payment card statements for suspicious activity. Internally, conduct a comprehensive review of web application security for all checkout and payment processing pages to identify and remediate any skimming malware.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify, and Other Apps for API Keys",
-      "tldr": "Amazon has discovered an AI agent campaign specifically designed to target applications like LiteLLM and Dify to steal API keys. This campaign aims to gain unauthorized access to critical services and data by compromising these essential authentication credentials.",
-      "action": "Immediately rotate API keys for LiteLLM, Dify, and any similar applications. Implement strict API key management best practices, including principles of least privilege, regular rotation, and strong access controls. Enhance monitoring for unusual API usage patterns.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
-      "tldr": "The AI coding assistant Cursor has reported that a stolen Fireworks AI key was responsible for an incident where their Claude code extension was trojanized. This indicates a supply chain attack originating from compromised credentials at a third-party vendor, potentially impacting users of the extension.",
-      "action": "Organizations utilizing Cursor's Claude code extension should verify the integrity of their installations. All organizations using Fireworks AI or similar third-party AI services should review and strengthen their API key management, rotation policies, and overall third-party vendor security.",
+      "tldr": "A stolen API key for Fireworks AI led to a supply chain attack targeting users of the Cursor AI coding assistant. Attackers injected malicious code into a Claude Code Extension, compromising user data and systems.",
+      "action": "Users of Cursor's Claude Code Extension should immediately verify the integrity of their installations, revoke any API keys used with the affected extension, and monitor for suspicious activity.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
       "source": "The Hacker News"
     },
     {
       "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
-      "tldr": "Network and email security company Barracuda experienced a cloud environment breach, which they linked to hackers utilizing a stolen cloud access key and the ARTEX AI penetration testing framework. This incident highlights the growing threat of sophisticated, AI-assisted attacks targeting critical cloud infrastructure.",
-      "action": "Immediately rotate all cloud access keys and conduct a thorough review of access control policies for all cloud environments. Implement robust monitoring for AI-powered attack frameworks like ARTEX and strengthen multi-factor authentication for all cloud access, especially for administrative accounts.",
+      "tldr": "Barracuda experienced a cloud environment breach where hackers used a stolen cloud access key. The attack is linked to the ARTEX AI penetration testing framework, indicating sophisticated and potentially automated exploitation capabilities.",
+      "action": "Barracuda customers should review their cloud access keys, rotate credentials, and implement strong multi-factor authentication. Investigate any unusual access patterns or activity within Barracuda's cloud services.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Fandango says hackers stole payment card details from checkout pages",
+      "tldr": "Fandango Media is notifying customers of a data breach where hackers compromised checkout pages to steal payment card details. This likely involved client-side skimming or Magecart-style attacks.",
+      "action": "Users who have made purchases on Fandango should monitor their credit card statements for any unauthorized transactions and and consider replacing their payment cards. Organizations should implement robust client-side security monitoring.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Uber Data Breach Impacts 150,000 People",
+      "tldr": "Uber has confirmed a data breach affecting approximately 150,000 individuals. While specific details about the type of data compromised are not fully disclosed, it impacts a significant number of users.",
+      "action": "Uber users should be vigilant against phishing attempts and monitor their accounts for suspicious activity. Consider changing passwords and enabling multi-factor authentication on all online services.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/uber-data-breach-impacts-150000-people/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
+      "title": "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login",
+      "tldr": "Multiple critical vulnerabilities exist in Danfoss refrigeration controllers, potentially allowing unauthenticated remote takeover of devices. These flaws pose a significant risk to industrial control systems (ICS) and critical infrastructure.",
+      "action": "Isolate vulnerable Danfoss refrigeration controllers from public networks. Implement network segmentation and strong access controls. Await official patches from Danfoss and apply them immediately upon release.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Danfoss EKC/ERC/MCX refrigeration controllers (specific models and firmware versions are likely affected, refer to vendor advisory)",
+      "how_to_determine_impact": "Identify all Danfoss refrigeration controllers in your environment. Check the model and firmware version against vendor advisories. Assess network exposure and access controls for these devices.",
+      "tanium_query_hint": "Get Computer Name and OS Platform from all machines where Operating System contains 'Linux' or 'Embedded' and Running Applications contains 'Danfoss' or 'ICS'",
+      "rapid7_query_hint": "Search for assets by 'hardware_vendor = \"Danfoss\"' or 'software_name = \"Danfoss\"' on relevant network segments. Use unauthenticated scans targeting ICS protocols if safe to do so.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
       "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
-      "tldr": "The BO Team has actively exploited the critical Log4Shell vulnerability (CVE-2021-44228) in VMware vCenter instances. This exploitation led to the compromise of a Russian firm's code-signing server, underscoring the persistent danger of unpatched high-severity vulnerabilities leading to severe supply chain impacts.",
-      "action": "Immediately verify all VMware vCenter instances for the presence of Log4Shell (CVE-2021-44228) and ensure they are fully patched. Conduct a thorough forensic analysis on any vCenter instances found to be unpatched, searching for indicators of compromise or lateral movement.",
+      "tldr": "The Log4Shell vulnerability (CVE-2021-44228) continues to be actively exploited, specifically in VMware vCenter environments. A recent incident involved the compromise of a Russian firm's code-signing server through this long-standing flaw.",
+      "action": "Immediately verify that all VMware vCenter instances and any other systems using Log4j have been patched or mitigated against CVE-2021-44228. Scan for indicators of compromise (IOCs) on affected systems.",
       "cve_ids": [
         "CVE-2021-44228"
       ],
       "source_url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "VMware vCenter versions affected by Log4Shell (CVE-2021-44228). Refer to VMware security advisories VMSA-2021-0028, VMSA-2021-0028.1, and VMSA-2021-0028.2 for specific versions and patches.",
-      "how_to_determine_impact": "Check installed VMware vCenter versions and applied patches. Review vCenter logs for JNDI lookup patterns ('${jndi:') or unusual process execution. Perform a file system scan for vulnerable Log4j JAR files (e.g., log4j-core-2.x.jar where x < 17).",
-      "tanium_query_hint": "Get Installed Applications from all machines, filter for 'VMware vCenter'. Run 'Get File Version[log4j-core-*.jar]' in vCenter directories. Search 'Get Event Log' for 'JNDI' or specific vCenter service restarts.",
-      "rapid7_query_hint": "Search InsightVM for vulnerability 'CVE-2021-44228' on assets running 'VMware vCenter'. Use InsightIDR to search logs for 'JNDI' patterns or known Log4Shell exploitation indicators on vCenter servers.",
+      "affected_versions": "VMware vCenter versions susceptible to Log4Shell (CVE-2021-44228). This typically includes vCenter Server 6.7, 7.0, and 8.0 before specific patches.",
+      "how_to_determine_impact": "Check vCenter Server versions. Verify Log4j remediation status (e.g., JndiLookup class removal, log4j2.formatMsgNoLookups set to true, or patched Log4j library). Scan for known Log4Shell IOCs.",
+      "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'VMware vCenter' or 'Log4j') and (Application Version not in 'patched_versions_list')",
+      "rapid7_query_hint": "Search for vulnerability ID 'log4shell' or 'CVE-2021-44228' on assets with 'software_name = \"VMware vCenter Server\"'. Look for InsightVM vulnerability checks.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
       "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
-      "tldr": "An unspecified flaw in UnrealIRCd, allowing for server-level command injection, is being actively exploited by attackers. This critical vulnerability poses a severe risk, enabling unauthorized remote code execution and full compromise of affected IRC servers.",
-      "action": "Immediately identify all UnrealIRCd installations within your environment. If running, upgrade to the latest patched version without delay or apply all vendor-recommended mitigations. Conduct a thorough investigation for signs of compromise on any potentially affected servers.",
+      "tldr": "A newly disclosed vulnerability in UnrealIRCd, allowing server-level command injection, is actively being exploited by attackers. This critical flaw can lead to full compromise of IRC server infrastructure.",
+      "action": "All administrators running UnrealIRCd servers must immediately patch their installations to the latest secure version. Review server logs for any signs of compromise or unauthorized command execution.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific versions of UnrealIRCd are vulnerable. Refer to UnrealIRCd official advisories and change logs for precise patch information and vulnerable version ranges.",
-      "how_to_determine_impact": "Check the version of UnrealIRCd installed on all servers. Monitor IRC server logs for unusual commands, unexpected process spawning, or outbound network connections to suspicious destinations, which could indicate compromise.",
-      "tanium_query_hint": "Get Installed Applications from all machines, filter for 'UnrealIRCd'. Use 'Get Running Processes' and 'Get Network Connections' to identify suspicious activity or unusual outbound connections from IRC servers.",
-      "rapid7_query_hint": "Search InsightVM for assets running 'UnrealIRCd' to identify affected systems. Monitor InsightIDR logs for command injection attempts, unusual process activity, or unauthorized network connections originating from IRC server hosts.",
+      "affected_versions": "UnrealIRCd (specific vulnerable versions need to be identified from vendor advisory, likely recent releases before a patch)",
+      "how_to_determine_impact": "Identify all instances of UnrealIRCd running. Check the version number against the vendor's security advisory. Review server logs for unusual commands or unauthorized activity.",
+      "tanium_query_hint": "Get Running Processes from all machines where Process Name contains 'unrealircd' and CommandLine contains 'vulnerable_command_pattern'",
+      "rapid7_query_hint": "Search for assets with 'software_name = \"UnrealIRCd\"'. Look for vulnerability checks related to command injection or recent updates.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "⚡ Weekly Recap: N-able 0-Days, Windows 0-Days, Chrome 0-Days, Fridge 0-Days, and More Bad Days",
-      "tldr": "This weekly recap highlights multiple zero-day vulnerabilities across diverse platforms, including N-able, Windows, Chrome, and IoT devices like refrigerators. The widespread nature of these zero-days indicates a highly significant and broad threat landscape requiring urgent attention to patching and mitigation efforts.",
-      "action": "Review all recent security advisories from N-able, Microsoft, Google, and any relevant IoT vendors. Immediately prioritize patching or implementing vendor-recommended workarounds for any identified zero-day vulnerabilities across all affected systems, as these are likely under active exploitation.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/weekly-recap-n-able-0-days-windows-0.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Multiple, unspecified N-able, Windows, Google Chrome, and various IoT device versions. Organizations must consult specific vendor advisories for exact vulnerable product versions and patch availability.",
-      "how_to_determine_impact": "Consult official security advisories from Microsoft, Google, N-able, and relevant IoT device manufacturers for details on affected product versions and specific detection methods. Conduct a comprehensive asset inventory to identify all systems running these products and check their version numbers.",
-      "tanium_query_hint": "Run 'Get Installed Applications from all machines', 'Get Operating System from all machines', and 'Get Chrome Version from all machines'. Cross-reference the collected version data with the latest vendor security advisories for specific zero-day vulnerabilities.",
-      "rapid7_query_hint": "Search InsightVM for newly published vulnerabilities by vendor (e.g., 'Microsoft', 'Google Chrome', 'N-able') and product, filtering by severity 'Critical' and 'High'. Leverage InsightVM's scanning capabilities to identify affected assets and prioritize remediation.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Likely Critical (9.0+)"
-    },
-    {
       "title": "Telegram Widgets Hit by RCE Demos, Malware Warning Days After Launch",
-      "tldr": "Days after their public launch, Telegram Widgets have been impacted by demonstrations of Remote Code Execution (RCE) vulnerabilities, alongside warnings about associated malware. This indicates critical security flaws allowing attackers to execute arbitrary code on user systems with potentially severe consequences.",
-      "action": "Advise all users to exercise extreme caution with Telegram Widgets and consider disabling them until official patches are released. Organizations should block access to Telegram Widgets on corporate networks and monitor for any exploitation attempts targeting Telegram clients or associated processes.",
+      "tldr": "Shortly after their launch, Telegram Widgets have been demonstrated to be vulnerable to Remote Code Execution (RCE), with warnings about potential malware exploitation. This highlights immediate security risks for users integrating these widgets.",
+      "action": "Users and developers should exercise extreme caution with Telegram Widgets, limiting their use until official patches or security guidance are released. Review systems interacting with these widgets for compromise.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/telegram-widgets-hit-by-rce-demos-malware-warning-days-after-launch/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Telegram Widgets (a newly launched feature). Specific client versions that integrate or enable widget functionality may be impacted. Refer to Telegram official advisories for precise details.",
-      "how_to_determine_impact": "Identify any instances of Telegram client usage, particularly those with enabled widget functionality. Monitor endpoint and network logs for unusual process execution, outbound network connections, or any suspicious activity originating from Telegram applications.",
-      "tanium_query_hint": "Get Installed Applications from all machines, filter for 'Telegram'. Use 'Get Running Processes' and 'Get Network Connections' to identify suspicious activity related to Telegram or processes spawned by it.",
-      "rapid7_query_hint": "Search InsightVM for assets with 'Telegram' installed. Monitor InsightIDR logs for alerts related to RCE attempts, malware detections, or unusual behavior associated with Telegram applications on endpoints.",
+      "affected_versions": "Telegram Widgets (all versions immediately following their launch, pending specific patch information)",
+      "how_to_determine_impact": "Identify any applications or websites that have integrated Telegram Widgets. Evaluate the data accessed by these integrations and their network exposure. Review logs for unusual requests or outbound connections from widget-hosting environments.",
+      "tanium_query_hint": "Get Running Processes from all machines where Process Name contains 'telegram' and Process Command Line contains 'widget_related_parameters'",
+      "rapid7_query_hint": "Identify web servers or applications hosting Telegram Widgets. Search for potential vulnerability checks related to web widget RCE or client-side vulnerabilities.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     }
@@ -30211,6 +30211,110 @@
         "how_to_determine_impact": "Identify any instances of Telegram client usage, particularly those with enabled widget functionality. Monitor endpoint and network logs for unusual process execution, outbound network connections, or any suspicious activity originating from Telegram applications.",
         "tanium_query_hint": "Get Installed Applications from all machines, filter for 'Telegram'. Use 'Get Running Processes' and 'Get Network Connections' to identify suspicious activity related to Telegram or processes spawned by it.",
         "rapid7_query_hint": "Search InsightVM for assets with 'Telegram' installed. Monitor InsightIDR logs for alerts related to RCE attempts, malware detections, or unusual behavior associated with Telegram applications on endpoints.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-11-17": [
+      {
+        "title": "Cursor Says Stolen Fireworks AI Key Led to Trojanized Claude Code Extension Incident",
+        "tldr": "A stolen API key for Fireworks AI led to a supply chain attack targeting users of the Cursor AI coding assistant. Attackers injected malicious code into a Claude Code Extension, compromising user data and systems.",
+        "action": "Users of Cursor's Claude Code Extension should immediately verify the integrity of their installations, revoke any API keys used with the affected extension, and monitor for suspicious activity.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Barracuda links cloud breach to ARTEX AI-powered cyberattack",
+        "tldr": "Barracuda experienced a cloud environment breach where hackers used a stolen cloud access key. The attack is linked to the ARTEX AI penetration testing framework, indicating sophisticated and potentially automated exploitation capabilities.",
+        "action": "Barracuda customers should review their cloud access keys, rotate credentials, and implement strong multi-factor authentication. Investigate any unusual access patterns or activity within Barracuda's cloud services.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/barracuda-links-cloud-breach-to-artex-ai-powered-cyberattack/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Fandango says hackers stole payment card details from checkout pages",
+        "tldr": "Fandango Media is notifying customers of a data breach where hackers compromised checkout pages to steal payment card details. This likely involved client-side skimming or Magecart-style attacks.",
+        "action": "Users who have made purchases on Fandango should monitor their credit card statements for any unauthorized transactions and and consider replacing their payment cards. Organizations should implement robust client-side security monitoring.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/fandango-says-hackers-stole-payment-card-details-from-checkout-pages/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Uber Data Breach Impacts 150,000 People",
+        "tldr": "Uber has confirmed a data breach affecting approximately 150,000 individuals. While specific details about the type of data compromised are not fully disclosed, it impacts a significant number of users.",
+        "action": "Uber users should be vigilant against phishing attempts and monitor their accounts for suspicious activity. Consider changing passwords and enabling multi-factor authentication on all online services.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/uber-data-breach-impacts-150000-people/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login",
+        "tldr": "Multiple critical vulnerabilities exist in Danfoss refrigeration controllers, potentially allowing unauthenticated remote takeover of devices. These flaws pose a significant risk to industrial control systems (ICS) and critical infrastructure.",
+        "action": "Isolate vulnerable Danfoss refrigeration controllers from public networks. Implement network segmentation and strong access controls. Await official patches from Danfoss and apply them immediately upon release.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Danfoss EKC/ERC/MCX refrigeration controllers (specific models and firmware versions are likely affected, refer to vendor advisory)",
+        "how_to_determine_impact": "Identify all Danfoss refrigeration controllers in your environment. Check the model and firmware version against vendor advisories. Assess network exposure and access controls for these devices.",
+        "tanium_query_hint": "Get Computer Name and OS Platform from all machines where Operating System contains 'Linux' or 'Embedded' and Running Applications contains 'Danfoss' or 'ICS'",
+        "rapid7_query_hint": "Search for assets by 'hardware_vendor = \"Danfoss\"' or 'software_name = \"Danfoss\"' on relevant network segments. Use unauthenticated scans targeting ICS protocols if safe to do so.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
+        "tldr": "The Log4Shell vulnerability (CVE-2021-44228) continues to be actively exploited, specifically in VMware vCenter environments. A recent incident involved the compromise of a Russian firm's code-signing server through this long-standing flaw.",
+        "action": "Immediately verify that all VMware vCenter instances and any other systems using Log4j have been patched or mitigated against CVE-2021-44228. Scan for indicators of compromise (IOCs) on affected systems.",
+        "cve_ids": [
+          "CVE-2021-44228"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "VMware vCenter versions susceptible to Log4Shell (CVE-2021-44228). This typically includes vCenter Server 6.7, 7.0, and 8.0 before specific patches.",
+        "how_to_determine_impact": "Check vCenter Server versions. Verify Log4j remediation status (e.g., JndiLookup class removal, log4j2.formatMsgNoLookups set to true, or patched Log4j library). Scan for known Log4Shell IOCs.",
+        "tanium_query_hint": "Get Installed Applications from all machines where (Application Name contains 'VMware vCenter' or 'Log4j') and (Application Version not in 'patched_versions_list')",
+        "rapid7_query_hint": "Search for vulnerability ID 'log4shell' or 'CVE-2021-44228' on assets with 'software_name = \"VMware vCenter Server\"'. Look for InsightVM vulnerability checks.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+        "tldr": "A newly disclosed vulnerability in UnrealIRCd, allowing server-level command injection, is actively being exploited by attackers. This critical flaw can lead to full compromise of IRC server infrastructure.",
+        "action": "All administrators running UnrealIRCd servers must immediately patch their installations to the latest secure version. Review server logs for any signs of compromise or unauthorized command execution.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "UnrealIRCd (specific vulnerable versions need to be identified from vendor advisory, likely recent releases before a patch)",
+        "how_to_determine_impact": "Identify all instances of UnrealIRCd running. Check the version number against the vendor's security advisory. Review server logs for unusual commands or unauthorized activity.",
+        "tanium_query_hint": "Get Running Processes from all machines where Process Name contains 'unrealircd' and CommandLine contains 'vulnerable_command_pattern'",
+        "rapid7_query_hint": "Search for assets with 'software_name = \"UnrealIRCd\"'. Look for vulnerability checks related to command injection or recent updates.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Telegram Widgets Hit by RCE Demos, Malware Warning Days After Launch",
+        "tldr": "Shortly after their launch, Telegram Widgets have been demonstrated to be vulnerable to Remote Code Execution (RCE), with warnings about potential malware exploitation. This highlights immediate security risks for users integrating these widgets.",
+        "action": "Users and developers should exercise extreme caution with Telegram Widgets, limiting their use until official patches or security guidance are released. Review systems interacting with these widgets for compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/telegram-widgets-hit-by-rce-demos-malware-warning-days-after-launch/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Telegram Widgets (all versions immediately following their launch, pending specific patch information)",
+        "how_to_determine_impact": "Identify any applications or websites that have integrated Telegram Widgets. Evaluate the data accessed by these integrations and their network exposure. Review logs for unusual requests or outbound connections from widget-hosting environments.",
+        "tanium_query_hint": "Get Running Processes from all machines where Process Name contains 'telegram' and Process Command Line contains 'widget_related_parameters'",
+        "rapid7_query_hint": "Identify web servers or applications hosting Telegram Widgets. Search for potential vulnerability checks related to web widget RCE or client-side vulnerabilities.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
         "category": "vulns"
