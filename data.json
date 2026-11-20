@@ -1,60 +1,53 @@
 {
   "breaches": [
     {
+      "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
+      "tldr": "N-able has experienced a breach of its cloud server, leading to disruption in email security management services across three geographical regions. This incident likely involved unauthorized access to sensitive systems or data.",
+      "action": "N-able customers should monitor their email security configurations and logs for any suspicious activity and apply any recommended security measures from N-able.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
-      "tldr": "SBC Medical Group reported two cybersecurity incidents resulting in the theft of sensitive customer and employee data, affecting 1.6 million individuals. The exposed information includes personal details.",
-      "action": "Individuals affected should monitor financial accounts and credit reports for suspicious activity and be vigilant against phishing. Organizations should review their data protection strategies and incident response plans.",
+      "tldr": "SBC Medical Group disclosed two cybersecurity incidents that resulted in the theft of sensitive customer and employee information, affecting 1.6 million individuals. The exposed data includes personal details.",
+      "action": "SBC Medical Group customers should monitor their credit reports and financial statements for suspicious activity. Affected individuals should consider identity theft protection services.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
       "source": "BleepingComputer"
     },
     {
       "title": "Transport for London breach exposes 265,000 Oyster card users' data",
-      "tldr": "Transport for London (TfL) announced a data breach affecting approximately 265,000 Oyster photocard customers, exposing their account details. This incident could lead to credential compromise or targeted phishing attacks.",
-      "action": "Oyster photocard users should change their account passwords and remain alert for suspicious emails or communications. TfL should reinforce its data security measures and notify all affected individuals.",
+      "tldr": "Transport for London (TfL) announced a data breach impacting approximately 265,000 Oyster photocard customers, potentially exposing their account details.",
+      "action": "Affected Oyster card users should monitor their account activity and be vigilant for phishing attempts. TfL should provide further guidance to impacted individuals.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
       "source": "BleepingComputer"
-    },
-    {
-      "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
-      "tldr": "Hackers successfully breached an N-able cloud server, causing disruption to email security management services across three distinct regions. This incident highlights critical supply chain risks for managed service providers and their clients.",
-      "action": "N-able customers should closely monitor their email security configurations and logs for any unauthorized changes or suspicious activity. Consult N-able's official advisories for specific mitigation guidance.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
-      "source": "The Hacker News"
     }
   ],
   "ransomware": [
     {
-      "title": "NVIDIA investigating Gentlemen ransomware breach claims",
-      "tldr": "NVIDIA is currently investigating claims made by the Gentlemen ransomware group, which has listed the company on its dark web data leak site. This indicates a potential data breach, data exfiltration, and an ongoing extortion attempt.",
-      "action": "Organizations should review their defenses against known tactics, techniques, and procedures (TTPs) of the Gentlemen ransomware group. NVIDIA should continue its investigation, engage incident response experts, and prepare for potential data exposure.",
+      "title": "Five warning signs of ransomware breach before encryption or data theft",
+      "tldr": "Ransomware attacks typically involve a series of stages like credential theft, lateral movement, and disabling security controls before actual encryption or data exfiltration. Recognizing these five warning signs can enable earlier detection and containment.",
+      "action": "Implement proactive monitoring for common ransomware precursor activities, such as unusual credential access, suspicious lateral movement, and attempts to disable security agents. Enhance endpoint detection and response (EDR) capabilities.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Nvidia Responds to Gentlemen Ransomware Claim",
+      "tldr": "Nvidia has issued a response regarding a ransomware claim made by the \"Gentlemen\" group. Details of the claim and Nvidia's response are under investigation, but it suggests a potential data breach or system compromise.",
+      "action": "Monitor official statements from Nvidia regarding the \"Gentlemen\" ransomware claim. Be vigilant for any associated phishing campaigns or further indicators of compromise.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/",
+      "source": "SecurityWeek"
     }
   ],
   "vulns": [
     {
-      "title": "Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT",
-      "tldr": "A critical vulnerability in VMware vCenter (CVSS 9.8), enabling authentication bypass, has been actively exploited as a zero-day by a Chinese APT group. Patches have been released, but exploitation is ongoing.",
-      "action": "Immediately apply the latest security patches for VMware vCenter and hunt for signs of compromise, such as unusual activity on vCenter servers, unauthorized access attempts, or new user accounts.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "All VMware vCenter Server versions prior to the patches released in the relevant VMSA advisory. Consult VMware's official advisory for precise version matrix.",
-      "how_to_determine_impact": "Verify your VMware vCenter Server version. Check for indicators of compromise (IoCs) published by VMware or CISA, including unusual log entries, new user accounts, or suspicious network connections from/to vCenter.",
-      "tanium_query_hint": "Get Installed Applications with Name like 'VMware vCenter Server' and Version < 'Patched_Version_Number' (replace with actual patched version). Alternatively, 'Get Tanium Gather Version[VMware vCenter Server]'.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'VMware vCenter authentication bypass' or 'VMware zero-day exploit'. Asset search: 'software.name CONTAINS \"VMware vCenter Server\"'.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Palo Alto Networks PAN-OS PHP Vulnerabilities Exploited in Firewalls (CVE-2026-109618, CVE-2026-109619)",
-      "tldr": "Palo Alto Networks confirmed active exploitation of two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, affecting PAN-OS management interfaces exposed to the internet. These flaws allow unauthenticated remote code execution (RCE).",
-      "action": "Immediately apply available patches for Palo Alto Networks PAN-OS. Ensure that management interfaces are not exposed to the internet, or restrict access via strong access control lists and VPN.",
+      "title": "Everything Is a Web Application, Including Your Firewall",
+      "tldr": "Palo Alto Networks confirmed active exploitation of two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, affecting PAN-OS management interfaces exposed to the internet. These flaws enable unauthenticated remote code execution (RCE).",
+      "action": "Immediately apply the latest patches or workarounds provided by Palo Alto Networks for PAN-OS. Ensure management interfaces are not exposed directly to the internet.",
       "cve_ids": [
         "CVE-2026-109618",
         "CVE-2026-109619"
@@ -62,42 +55,57 @@
       "source_url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific PAN-OS versions with management interfaces exposed to the internet. Consult Palo Alto Networks advisory for precise version matrix.",
-      "how_to_determine_impact": "Check your PAN-OS version and network configuration to identify if management interfaces are internet-exposed. Look for suspicious activity or unauthorized access attempts in firewall logs.",
-      "tanium_query_hint": "Get Tanium Gather Version[Palo Alto Networks PAN-OS]' and 'Get Network Interface Status containing 'Public IP'' to identify internet exposure.",
-      "rapid7_query_hint": "Search for vulnerabilities 'CVE-2026-109618' or 'CVE-2026-109619'. Asset search: 'software.name CONTAINS \"PAN-OS\" AND network.interface.exposed_to_internet = true'.",
+      "affected_versions": "Palo Alto Networks PAN-OS management interfaces vulnerable to CVE-2026-109618 and CVE-2026-109619. Specific versions should be checked against Palo Alto advisories.",
+      "how_to_determine_impact": "Verify PAN-OS versions and confirm if patches for CVE-2026-109618 and CVE-2026-109619 are applied. Check network configurations for internet exposure of management interfaces.",
+      "tanium_query_hint": "Get Installed Applications containing \"PAN-OS\" and 'Version'. Check network configurations via 'Get Network Configuration' sensor for exposed management IPs/ports.",
+      "rapid7_query_hint": "Search for vulnerabilities \"CVE-2026-109618\" or \"CVE-2026-109619\". Use asset search to filter for Palo Alto Networks devices.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
-      "title": "F5 Patches Critical NGINX ‘NGINX2Root’ Flaws as PoC Exploits Go Public",
-      "tldr": "F5 has released patches for the critical NGINX 'nginx2root' vulnerabilities, which allow unauthenticated remote code execution and potential root access. Proof-of-Concept exploits for these flaws are now publicly available, increasing immediate risk.",
-      "action": "Immediately apply all available patches for NGINX deployments (whether standalone or via F5 products). Review NGINX server logs for any indicators of compromise related to these exploits.",
+      "title": "VMware patches vCenter zero-day exploited in attacks since September",
+      "tldr": "Broadcom has released security updates to fix a critical VMware vCenter Server authentication bypass vulnerability (zero-day) that Chinese-linked hackers have actively exploited since September 2026. This flaw has a CVSS score of 9.8.",
+      "action": "Immediately apply the latest Broadcom security updates for VMware vCenter Server. Prioritize this patch due to active zero-day exploitation by sophisticated threat actors.",
       "cve_ids": [],
-      "source_url": "https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/",
-      "source": "SecurityWeek",
+      "source_url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
+      "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "All NGINX versions prior to the patches addressing 'nginx2root' vulnerabilities. Consult F5/NGINX advisories for precise version ranges.",
-      "how_to_determine_impact": "Check your NGINX server version. Look for suspicious processes running under NGINX user, unusual file modifications, or unauthorized network connections.",
-      "tanium_query_hint": "Get Installed Applications with Name like 'NGINX' and Version < 'Patched_Version_Number' (replace with actual patched version). Alternatively, 'Get Running Processes with Name 'nginx''.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'NGINX2Root' or 'NGINX RCE'. Asset search: 'software.name CONTAINS \"NGINX\"'.",
+      "affected_versions": "VMware vCenter Server versions affected by the critical authentication bypass zero-day. Specific versions should be confirmed via Broadcom/VMware advisories.",
+      "how_to_determine_impact": "Check your VMware vCenter Server environment for version numbers and ensure the latest security patches from Broadcom have been applied.",
+      "tanium_query_hint": "Get Installed Applications containing \"VMware vCenter Server\" and 'Version'.",
+      "rapid7_query_hint": "Search for \"VMware vCenter zero-day\" or \"vCenter authentication bypass\" vulnerabilities. Filter assets by installed software \"VMware vCenter Server\".",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical"
+    },
+    {
+      "title": "Critical NGINX \n\t\t\t\t\t'NGINX2Root' bugs let attackers hijack servers",
+      "tldr": "Two critical NGINX vulnerabilities, dubbed \"nginx2root,\" allow unauthenticated attackers to remotely execute code on vulnerable web servers. Researchers demonstrated chaining these flaws with a Linux kernel bug to gain root access.",
+      "action": "Immediately apply patches for NGINX to mitigate the \"nginx2root\" vulnerabilities. Ensure associated Linux kernels are also up-to-date.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "NGINX web servers vulnerable to \"nginx2root\" flaws. Also implies interaction with Linux kernel versions that allow privilege escalation from NGINX's user.",
+      "how_to_determine_impact": "Check NGINX server versions and installed Linux kernel versions. Consult NGINX and OS vendor advisories for specific patch requirements related to \"nginx2root\" and associated kernel bugs.",
+      "tanium_query_hint": "Get Installed Applications containing \"NGINX\" and 'Version'. Get Kernel Version from all machines. Check for specific NGINX configuration files or modules related to the flaw.",
+      "rapid7_query_hint": "Search for \"NGINX2Root\" vulnerabilities. Scan assets for NGINX and Linux kernel vulnerabilities, specifically looking for RCE and privilege escalation paths.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Java4Shell Exploitation Attempts Begin as Vendors Rush Out Advisories",
-      "tldr": "Active exploitation attempts for the 'Java4Shell' vulnerability have commenced, leading multiple vendors to urgently release advisories and patches. This critical flaw poses a widespread and severe risk to Java-based applications and services.",
-      "action": "Immediately review all Java-based applications and services for susceptibility to 'Java4Shell'. Prioritize applying vendor-specific patches and implementing recommended mitigation strategies with utmost urgency.",
+      "tldr": "Exploitation attempts for a new critical vulnerability, dubbed \"Java4Shell,\" have begun, prompting vendors to rapidly release advisories. This zero-day-like situation requires immediate attention for Java-based systems.",
+      "action": "Immediately identify all Java-based applications and systems. Monitor vendor advisories for specific patches and mitigation steps for \"Java4Shell\" and apply them as soon as possible.",
       "cve_ids": [],
       "source_url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/",
       "source": "SecurityWeek",
       "active_exploitation": true,
-      "affected_versions": "Impacted Java components or libraries; specific versions and components will vary by vendor advisory. Consult relevant vendor advisories for precise details (e.g., specific versions of Log4j, Spring, etc.).",
-      "how_to_determine_impact": "Scan your environment for vulnerable Java libraries or components. Look for unusual process execution, outbound connections from Java applications, or suspicious entries in application logs.",
-      "tanium_query_hint": "Get Running Processes with Command Line containing 'java'. Further investigation of specific JAR files or application components may be needed based on vendor advisories. 'Get Installed Applications with Name like 'Java Runtime Environment'' to check Java version.",
-      "rapid7_query_hint": "Search for vulnerabilities related to 'Java4Shell' or 'Java RCE'. Asset search: 'software.name CONTAINS \"Java\"' combined with specific component names as identified by vendor advisories.",
+      "affected_versions": "Java-based applications and systems affected by \"Java4Shell\". Specific vulnerable versions will be detailed in vendor advisories.",
+      "how_to_determine_impact": "Identify all Java runtime environments and applications across your estate. Consult vendor and open-source project advisories for \"Java4Shell\" for specific version impacts or configuration checks.",
+      "tanium_query_hint": "Get Installed Applications containing \"Java\" and 'Version'. Get Running Processes containing \"java\" to identify active Java applications.",
+      "rapid7_query_hint": "Search for \"Java4Shell\" vulnerabilities. Scan assets for Java installations and applications.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "10.0 Critical"
     }
   ],
   "insurance": [],
@@ -31007,6 +31015,120 @@
         "rapid7_query_hint": "Search for vulnerabilities related to 'NGINX2Root' or 'NGINX RCE'. Asset search: 'software.name CONTAINS \"NGINX\"'.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-11-20": [
+      {
+        "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
+        "tldr": "N-able has experienced a breach of its cloud server, leading to disruption in email security management services across three geographical regions. This incident likely involved unauthorized access to sensitive systems or data.",
+        "action": "N-able customers should monitor their email security configurations and logs for any suspicious activity and apply any recommended security measures from N-able.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
+        "tldr": "SBC Medical Group disclosed two cybersecurity incidents that resulted in the theft of sensitive customer and employee information, affecting 1.6 million individuals. The exposed data includes personal details.",
+        "action": "SBC Medical Group customers should monitor their credit reports and financial statements for suspicious activity. Affected individuals should consider identity theft protection services.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Transport for London breach exposes 265,000 Oyster card users' data",
+        "tldr": "Transport for London (TfL) announced a data breach impacting approximately 265,000 Oyster photocard customers, potentially exposing their account details.",
+        "action": "Affected Oyster card users should monitor their account activity and be vigilant for phishing attempts. TfL should provide further guidance to impacted individuals.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Five warning signs of ransomware breach before encryption or data theft",
+        "tldr": "Ransomware attacks typically involve a series of stages like credential theft, lateral movement, and disabling security controls before actual encryption or data exfiltration. Recognizing these five warning signs can enable earlier detection and containment.",
+        "action": "Implement proactive monitoring for common ransomware precursor activities, such as unusual credential access, suspicious lateral movement, and attempts to disable security agents. Enhance endpoint detection and response (EDR) capabilities.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
+        "source": "BleepingComputer",
+        "category": "ransomware"
+      },
+      {
+        "title": "Nvidia Responds to Gentlemen Ransomware Claim",
+        "tldr": "Nvidia has issued a response regarding a ransomware claim made by the \"Gentlemen\" group. Details of the claim and Nvidia's response are under investigation, but it suggests a potential data breach or system compromise.",
+        "action": "Monitor official statements from Nvidia regarding the \"Gentlemen\" ransomware claim. Be vigilant for any associated phishing campaigns or further indicators of compromise.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/",
+        "source": "SecurityWeek",
+        "category": "ransomware"
+      },
+      {
+        "title": "Everything Is a Web Application, Including Your Firewall",
+        "tldr": "Palo Alto Networks confirmed active exploitation of two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, affecting PAN-OS management interfaces exposed to the internet. These flaws enable unauthenticated remote code execution (RCE).",
+        "action": "Immediately apply the latest patches or workarounds provided by Palo Alto Networks for PAN-OS. Ensure management interfaces are not exposed directly to the internet.",
+        "cve_ids": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Palo Alto Networks PAN-OS management interfaces vulnerable to CVE-2026-109618 and CVE-2026-109619. Specific versions should be checked against Palo Alto advisories.",
+        "how_to_determine_impact": "Verify PAN-OS versions and confirm if patches for CVE-2026-109618 and CVE-2026-109619 are applied. Check network configurations for internet exposure of management interfaces.",
+        "tanium_query_hint": "Get Installed Applications containing \"PAN-OS\" and 'Version'. Check network configurations via 'Get Network Configuration' sensor for exposed management IPs/ports.",
+        "rapid7_query_hint": "Search for vulnerabilities \"CVE-2026-109618\" or \"CVE-2026-109619\". Use asset search to filter for Palo Alto Networks devices.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "VMware patches vCenter zero-day exploited in attacks since September",
+        "tldr": "Broadcom has released security updates to fix a critical VMware vCenter Server authentication bypass vulnerability (zero-day) that Chinese-linked hackers have actively exploited since September 2026. This flaw has a CVSS score of 9.8.",
+        "action": "Immediately apply the latest Broadcom security updates for VMware vCenter Server. Prioritize this patch due to active zero-day exploitation by sophisticated threat actors.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "VMware vCenter Server versions affected by the critical authentication bypass zero-day. Specific versions should be confirmed via Broadcom/VMware advisories.",
+        "how_to_determine_impact": "Check your VMware vCenter Server environment for version numbers and ensure the latest security patches from Broadcom have been applied.",
+        "tanium_query_hint": "Get Installed Applications containing \"VMware vCenter Server\" and 'Version'.",
+        "rapid7_query_hint": "Search for \"VMware vCenter zero-day\" or \"vCenter authentication bypass\" vulnerabilities. Filter assets by installed software \"VMware vCenter Server\".",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical NGINX \n\t\t\t\t\t'NGINX2Root' bugs let attackers hijack servers",
+        "tldr": "Two critical NGINX vulnerabilities, dubbed \"nginx2root,\" allow unauthenticated attackers to remotely execute code on vulnerable web servers. Researchers demonstrated chaining these flaws with a Linux kernel bug to gain root access.",
+        "action": "Immediately apply patches for NGINX to mitigate the \"nginx2root\" vulnerabilities. Ensure associated Linux kernels are also up-to-date.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/critical-nginx-nginx2root-bugs-let-attackers-hijack-servers/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "NGINX web servers vulnerable to \"nginx2root\" flaws. Also implies interaction with Linux kernel versions that allow privilege escalation from NGINX's user.",
+        "how_to_determine_impact": "Check NGINX server versions and installed Linux kernel versions. Consult NGINX and OS vendor advisories for specific patch requirements related to \"nginx2root\" and associated kernel bugs.",
+        "tanium_query_hint": "Get Installed Applications containing \"NGINX\" and 'Version'. Get Kernel Version from all machines. Check for specific NGINX configuration files or modules related to the flaw.",
+        "rapid7_query_hint": "Search for \"NGINX2Root\" vulnerabilities. Scan assets for NGINX and Linux kernel vulnerabilities, specifically looking for RCE and privilege escalation paths.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "Java4Shell Exploitation Attempts Begin as Vendors Rush Out Advisories",
+        "tldr": "Exploitation attempts for a new critical vulnerability, dubbed \"Java4Shell,\" have begun, prompting vendors to rapidly release advisories. This zero-day-like situation requires immediate attention for Java-based systems.",
+        "action": "Immediately identify all Java-based applications and systems. Monitor vendor advisories for specific patches and mitigation steps for \"Java4Shell\" and apply them as soon as possible.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Java-based applications and systems affected by \"Java4Shell\". Specific vulnerable versions will be detailed in vendor advisories.",
+        "how_to_determine_impact": "Identify all Java runtime environments and applications across your estate. Consult vendor and open-source project advisories for \"Java4Shell\" for specific version impacts or configuration checks.",
+        "tanium_query_hint": "Get Installed Applications containing \"Java\" and 'Version'. Get Running Processes containing \"java\" to identify active Java applications.",
+        "rapid7_query_hint": "Search for \"Java4Shell\" vulnerabilities. Scan assets for Java installations and applications.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "10.0 Critical",
         "category": "vulns"
       }
     ]
