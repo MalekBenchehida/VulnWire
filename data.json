@@ -2,109 +2,100 @@
   "breaches": [
     {
       "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
-      "tldr": "Bell Canada confirmed an \"agentic\" threat actor breached its systems on November 17, 2026, stealing enterprise customer data. The compromised information includes details from a system used for ordering and provisioning telecommunications circuits.",
-      "action": "Bell Canada customers, particularly enterprise clients, should monitor for suspicious activity and review their service accounts. Organizations should reinforce network segmentation and monitor access to critical provisioning systems.",
+      "tldr": "Bell Canada confirmed an \"agentic\" threat actor breached its systems on November 17, 2026. The attacker stole enterprise customer data, including information from a system used for ordering and provisioning telecommunications circuits.",
+      "action": "Identify if your organization is an enterprise customer of Bell Canada. If so, monitor for communications from Bell regarding potential impact and review your accounts for suspicious activity. Review access logs related to telecommunication circuit provisioning.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
       "source": "BleepingComputer"
     },
     {
       "title": "Vendor data breach exposes Chase, Visa, Mastercard customer info",
-      "tldr": "J.P. Morgan Chase reported a data breach stemming from a cyberattack on a third-party service provider. This incident exposed personal information and marketing data belonging to customers of Chase, Visa, and Mastercard.",
-      "action": "Customers of affected banks should immediately monitor their financial statements and credit reports for any unauthorized activity. Affected organizations should conduct thorough security assessments of all third-party vendors with access to sensitive data.",
+      "tldr": "J.P. Morgan Chase confirmed a data breach at a third-party service provider. This incident exposed customers' personal information and marketing data, potentially affecting Chase, Visa, and Mastercard cardholders whose data was handled by the vendor.",
+      "action": "Financial institutions and individuals who are customers of Chase, Visa, or Mastercard should monitor their accounts for unauthorized transactions and be vigilant against phishing attempts. Review third-party vendor security postures and data sharing agreements.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/",
       "source": "BleepingComputer"
     },
     {
       "title": "N-able says recent security breach led to major service outage",
-      "tldr": "N-able, a software provider, confirmed that a security breach on one of its servers led to a major global outage impacting its Mail Assure and SpamExperts Hosted Cloud services. Attackers breached the server, causing service disruption.",
-      "action": "Organizations utilizing N-able's Mail Assure or SpamExperts Hosted Cloud services should monitor N-able's official advisories for updates and assess the potential impact on their operations and data integrity. Review incident response plans for third-party service compromises.",
+      "tldr": "N-able reported a security breach affecting one of its servers, leading to a major outage of its Mail Assure and SpamExperts Hosted Cloud services worldwide. This breach impacted the availability of critical services for its customers.",
+      "action": "If your organization uses N-able's Mail Assure or SpamExperts Hosted Cloud services, monitor for official updates from N-able regarding the incident, assess any potential data exposure or service disruptions, and review incident response plans.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
       "source": "BleepingComputer"
     },
     {
       "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
-      "tldr": "SBC Medical Group disclosed two cybersecurity incidents that resulted in hackers stealing sensitive customer and employee information. The data breach affects approximately 1.6 million individuals, including personal data.",
-      "action": "Individuals who are or were customers/employees of SBC Medical Group should be vigilant for phishing attempts and identity theft. Organizations should review their data protection strategies and third-party risk management, especially in the healthcare sector.",
+      "tldr": "SBC Medical Group disclosed two cybersecurity incidents that resulted in the exposure of sensitive customer and employee information. The breach impacted personal data belonging to 1.6 million people.",
+      "action": "If you are a customer or employee of SBC Medical Group, be alert for identity theft and phishing scams. Organizations should review their third-party risk management for healthcare providers and ensure robust data protection measures are in place.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
       "source": "BleepingComputer"
     }
   ],
-  "ransomware": [
-    {
-      "title": "ThreatsDay: GPT-6.2 Jailbreak Flaws, BubbleLoader PNG Malware, $500M Ransom Demands + 17 More Stories",
-      "tldr": "This summary highlights a significant development in ransomware, noting recent demands totaling $500 million. While specific targets are not detailed, this indicates a high level of financial impact from ongoing ransomware operations.",
-      "action": "Organizations should review and enhance their ransomware defense strategies, including robust backups, incident response plans, and employee training. Focus on prevention and rapid recovery to minimize potential extortion risks.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html",
-      "source": "The Hacker News"
-    }
-  ],
+  "ransomware": [],
   "vulns": [
     {
+      "title": "VMware patches vCenter zero-day exploited in attacks since September",
+      "tldr": "Broadcom released security updates for a critical VMware vCenter Server authentication bypass vulnerability. This zero-day flaw has been actively exploited by China-linked hackers since September 2026 to gain administrative access.",
+      "action": "Immediately apply the latest security updates released by Broadcom/VMware for vCenter Server. Review logs for indicators of compromise or unauthorized access to vCenter instances, especially prior to September 2026.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "VMware vCenter Server (all unpatched versions susceptible to the authentication bypass zero-day exploited since September 2026)",
+      "how_to_determine_impact": "Check vCenter Server appliance versions against official Broadcom/VMware advisories. Look for signs of compromise in vCenter logs, particularly for unauthorized administrative access or unusual activity dating back to September 2026. Review network traffic for suspicious connections to/from vCenter.",
+      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'vCenter' or 'VMware vCenter'. Get File Version['/path/to/vcenter_binary'] to confirm specific patch levels.",
+      "rapid7_query_hint": "Search for vulnerability ID associated with the VMware vCenter authentication bypass. Use InsightAgent queries to check installed software versions on vCenter appliances. Utilize asset search filters for 'VMware vCenter' and 'Installed Software' to identify vulnerable assets.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, for authentication bypass zero-day leading to admin access)"
+    },
+    {
       "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
-      "tldr": "A critical vulnerability, CVE-2026-99312, has been discovered in Linux KVM, specifically affecting AMD-based hosts. This flaw allows a malicious guest virtual machine to access the memory of the host system, potentially leading to privilege escalation and information disclosure.",
-      "action": "Immediately identify and patch all Linux KVM hosts running on AMD processors. Isolate critical virtual machines if patching cannot be done immediately.",
+      "tldr": "A critical vulnerability, CVE-2026-99312, in Linux KVM allows a malicious guest virtual machine to access host memory on AMD-based systems. This flaw could lead to privilege escalation and compromise of the host system.",
+      "action": "Apply vendor-provided patches or updates for Linux KVM as soon as they become available. Systems running KVM on AMD processors should be prioritized for patching. Isolate vulnerable KVM hosts where immediate patching is not possible.",
       "cve_ids": [
         "CVE-2026-99312"
       ],
       "source_url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Linux KVM on AMD hosts (specific kernel versions would need to be checked against CVE details, but broad impact for KVM on AMD is implied).",
-      "how_to_determine_impact": "Identify all Linux servers acting as KVM hosts, specifically those utilizing AMD processors. Check `virt-host-validate` output and kernel version. Examine KVM configuration for affected parameters.",
-      "tanium_query_hint": "Get Running Processes with Computer Name and KVM Service Details from all machines where ( Processor Type matches 'AMD' and OS Contains 'Linux' )",
-      "rapid7_query_hint": "Search assets for 'Linux' and 'KVM' where 'Processor type' is 'AMD'. Look for vulnerability ID 'CVE-2026-99312' in scanned assets.",
+      "affected_versions": "Linux Kernel-based Virtual Machine (KVM) running on AMD processors; specific kernel versions affected would be detailed in official advisories.",
+      "how_to_determine_impact": "Identify all Linux servers running KVM virtualization. Check processor type (AMD) and kernel version. Consult official Linux distribution advisories for CVE-2026-99312 to determine if your specific kernel version is affected.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Linux Kernel'. Get CPU Type from all machines. Check for 'KVM' process existence. Evaluate kernel versions against vulnerability details using 'Get Kernel Version'.",
+      "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-99312'. Use InsightAgent queries to identify Linux hosts with AMD processors and installed KVM modules. Filter assets by operating system and CPU architecture.",
       "remediation_priority": "High next patch cycle",
-      "cvss_score": "9.0 Critical"
-    },
-    {
-      "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
-      "tldr": "Hackers are actively exploiting a critical vulnerability in Cisco Expressway devices, leading to breaches of at least four devices. This exploitation allowed attackers to gain access to the internal networks of affected organizations.",
-      "action": "Immediately patch all Cisco Expressway deployments. If patching is not feasible, disconnect affected devices from external networks and conduct a thorough investigation for compromise, focusing on network access logs and device integrity.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Cisco Expressway (specific vulnerable versions would be detailed in Cisco's advisory, but not in this brief)",
-      "how_to_determine_impact": "Check Cisco Expressway devices for indicators of compromise (IOCs) released by Cisco. Review system logs for unusual access attempts, unauthorized configuration changes, or unexpected outbound connections. Confirm software version against Cisco's security advisories.",
-      "tanium_query_hint": "Get Installed Applications containing 'Cisco Expressway' from all machines. Check for network connections to unusual external IPs or processes indicative of breach.",
-      "rapid7_query_hint": "Search assets for 'Cisco Expressway' with status 'vulnerable' based on recent scans. Investigate alerts related to unusual network activity originating from Expressway devices in InsightIDR.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "VMware patches vCenter zero-day exploited in attacks since September",
-      "tldr": "Broadcom has released urgent security updates to address a critical VMware vCenter Server authentication bypass vulnerability. This zero-day flaw has been actively exploited by Chinese-linked hackers in attacks since September 2026, allowing them to gain administrative access.",
-      "action": "Immediately apply the latest security patches from Broadcom for all VMware vCenter Server instances. Conduct a forensic analysis of vCenter servers for any signs of compromise dating back to September 2026.",
-      "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "VMware vCenter Server (specific versions patched by Broadcom's security updates)",
-      "how_to_determine_impact": "Check the version of all VMware vCenter Server installations. Review vCenter logs for suspicious authentication attempts, unauthorized access, or unusual administrative actions from September 2026 onwards. Look for IOCs provided by VMware/Broadcom.",
-      "tanium_query_hint": "Get Tanium Software Package Exists[VMware vCenter Server] from all machines. Then Get Tanium Software Version[VMware vCenter Server] for identified servers. Check `service status` and `event logs` for anomalies.",
-      "rapid7_query_hint": "Search assets for 'VMware vCenter' with known vulnerability IDs. Review InsightIDR logs for failed authentication attempts or suspicious logins to vCenter, especially from September 2026.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "8.8 High (Estimated, based on guest to host memory access and potential privilege escalation)"
     },
     {
       "title": "F5 releases emergency patches for critical BIG-IP RCE flaws",
-      "tldr": "F5 has issued emergency patches for five critical vulnerabilities in its BIG-IP platform, warning customers of potential denial-of-service (DoS) and remote code execution (RCE) risks. These flaws require immediate attention due to their severity.",
-      "action": "Immediately apply the emergency patches released by F5 for all affected BIG-IP devices. Prioritize external-facing devices. Review network logs for any indicators of compromise or exploitation attempts against BIG-IP systems.",
+      "tldr": "F5 has released emergency patches to address five critical vulnerabilities in its BIG-IP platform. These flaws could allow attackers to trigger denial-of-service (DoS) or achieve remote code execution (RCE) on affected devices.",
+      "action": "Immediately apply the emergency security patches provided by F5 for all BIG-IP deployments. Prioritize internet-facing BIG-IP devices. Review systems for signs of compromise, especially for DoS or RCE attempts.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
       "source": "BleepingComputer",
       "active_exploitation": false,
-      "affected_versions": "F5 BIG-IP (specific vulnerable versions would be detailed in F5's security advisory, covering five critical flaws)",
-      "how_to_determine_impact": "Identify all F5 BIG-IP appliances. Check their current software version against F5's latest security advisories. Look for signs of compromise, such as unusual processes, unauthorized file modifications, or suspicious network connections.",
-      "tanium_query_hint": "Get Running Processes from all machines. Filter for 'F5' or 'BIG-IP' related processes. Get File Version['/path/to/bigip_firmware'] or relevant config files for installed version info.",
-      "rapid7_query_hint": "Search assets for 'F5 BIG-IP' and filter by vulnerability severity 'Critical' and 'Remote Code Execution'. Monitor network traffic for anomalies related to BIG-IP interfaces.",
+      "affected_versions": "F5 BIG-IP (specific versions will be detailed in F5's official security advisories for the five critical vulnerabilities)",
+      "how_to_determine_impact": "Check the version of all F5 BIG-IP appliances against the latest F5 security advisories. Look for evidence of unusual restarts, high resource utilization, or unexpected process execution, which could indicate DoS or RCE attempts.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'F5 BIG-IP'. Get Configuration Files for F5 BIG-IP to identify installed versions. Check process lists for unusual activity.",
+      "rapid7_query_hint": "Search for relevant F5 BIG-IP vulnerability IDs. Use InsightAgent to scan F5 BIG-IP systems for installed software versions. Filter assets by 'F5 Networks' and 'BIG-IP' to identify targets.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "cvss_score": "9.8 Critical (Estimated, based on RCE and DoS capabilities for critical flaws)"
+    },
+    {
+      "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+      "tldr": "Hackers have exploited a critical vulnerability in Cisco Expressway devices, leading to the breach of four devices and unauthorized access to an internal network. This indicates active exploitation of a significant flaw.",
+      "action": "Identify all Cisco Expressway deployments within your environment. Immediately apply any available patches or workarounds from Cisco. Review logs for signs of compromise, such as unauthorized access, unusual network traffic, or configuration changes, on Expressway devices and connected internal systems.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Cisco Expressway (specific vulnerable versions would be detailed in Cisco's official security advisory)",
+      "how_to_determine_impact": "Check Cisco Expressway device versions against Cisco's official advisories. Review system logs for unauthorized logins, configuration changes, or unusual process execution. Inspect network traffic patterns for unexpected connections to internal networks originating from Expressway devices.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'Cisco Expressway'. Get Running Processes and Network Connections to identify suspicious activity. Check 'Get Cisco Device Version' for firmware/software versions.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to Cisco Expressway. Use InsightAgent queries to identify installed Cisco Expressway versions. Filter assets by 'Cisco' and check for specific device models and software versions.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.8 Critical (Estimated, based on active exploitation leading to internal network breach)"
     }
   ],
   "insurance": [],
@@ -31264,6 +31255,110 @@
         "rapid7_query_hint": "Search assets for 'F5 BIG-IP' and filter by vulnerability severity 'Critical' and 'Remote Code Execution'. Monitor network traffic for anomalies related to BIG-IP interfaces.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      }
+    ],
+    "2026-11-21": [
+      {
+        "title": "Bell Canada says 'agentic' hacker stole enterprise customer data",
+        "tldr": "Bell Canada confirmed an \"agentic\" threat actor breached its systems on November 17, 2026. The attacker stole enterprise customer data, including information from a system used for ordering and provisioning telecommunications circuits.",
+        "action": "Identify if your organization is an enterprise customer of Bell Canada. If so, monitor for communications from Bell regarding potential impact and review your accounts for suspicious activity. Review access logs related to telecommunication circuit provisioning.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Vendor data breach exposes Chase, Visa, Mastercard customer info",
+        "tldr": "J.P. Morgan Chase confirmed a data breach at a third-party service provider. This incident exposed customers' personal information and marketing data, potentially affecting Chase, Visa, and Mastercard cardholders whose data was handled by the vendor.",
+        "action": "Financial institutions and individuals who are customers of Chase, Visa, or Mastercard should monitor their accounts for unauthorized transactions and be vigilant against phishing attempts. Review third-party vendor security postures and data sharing agreements.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "N-able says recent security breach led to major service outage",
+        "tldr": "N-able reported a security breach affecting one of its servers, leading to a major outage of its Mail Assure and SpamExperts Hosted Cloud services worldwide. This breach impacted the availability of critical services for its customers.",
+        "action": "If your organization uses N-able's Mail Assure or SpamExperts Hosted Cloud services, monitor for official updates from N-able regarding the incident, assess any potential data exposure or service disruptions, and review incident response plans.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/microsoft/n-able-says-recent-security-breach-led-to-major-service-outage/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
+        "tldr": "SBC Medical Group disclosed two cybersecurity incidents that resulted in the exposure of sensitive customer and employee information. The breach impacted personal data belonging to 1.6 million people.",
+        "action": "If you are a customer or employee of SBC Medical Group, be alert for identity theft and phishing scams. Organizations should review their third-party risk management for healthcare providers and ensure robust data protection measures are in place.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "VMware patches vCenter zero-day exploited in attacks since September",
+        "tldr": "Broadcom released security updates for a critical VMware vCenter Server authentication bypass vulnerability. This zero-day flaw has been actively exploited by China-linked hackers since September 2026 to gain administrative access.",
+        "action": "Immediately apply the latest security updates released by Broadcom/VMware for vCenter Server. Review logs for indicators of compromise or unauthorized access to vCenter instances, especially prior to September 2026.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "VMware vCenter Server (all unpatched versions susceptible to the authentication bypass zero-day exploited since September 2026)",
+        "how_to_determine_impact": "Check vCenter Server appliance versions against official Broadcom/VMware advisories. Look for signs of compromise in vCenter logs, particularly for unauthorized administrative access or unusual activity dating back to September 2026. Review network traffic for suspicious connections to/from vCenter.",
+        "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'vCenter' or 'VMware vCenter'. Get File Version['/path/to/vcenter_binary'] to confirm specific patch levels.",
+        "rapid7_query_hint": "Search for vulnerability ID associated with the VMware vCenter authentication bypass. Use InsightAgent queries to check installed software versions on vCenter appliances. Utilize asset search filters for 'VMware vCenter' and 'Installed Software' to identify vulnerable assets.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, for authentication bypass zero-day leading to admin access)",
+        "category": "vulns"
+      },
+      {
+        "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
+        "tldr": "A critical vulnerability, CVE-2026-99312, in Linux KVM allows a malicious guest virtual machine to access host memory on AMD-based systems. This flaw could lead to privilege escalation and compromise of the host system.",
+        "action": "Apply vendor-provided patches or updates for Linux KVM as soon as they become available. Systems running KVM on AMD processors should be prioritized for patching. Isolate vulnerable KVM hosts where immediate patching is not possible.",
+        "cve_ids": [
+          "CVE-2026-99312"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Linux Kernel-based Virtual Machine (KVM) running on AMD processors; specific kernel versions affected would be detailed in official advisories.",
+        "how_to_determine_impact": "Identify all Linux servers running KVM virtualization. Check processor type (AMD) and kernel version. Consult official Linux distribution advisories for CVE-2026-99312 to determine if your specific kernel version is affected.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Linux Kernel'. Get CPU Type from all machines. Check for 'KVM' process existence. Evaluate kernel versions against vulnerability details using 'Get Kernel Version'.",
+        "rapid7_query_hint": "Search for vulnerability ID 'CVE-2026-99312'. Use InsightAgent queries to identify Linux hosts with AMD processors and installed KVM modules. Filter assets by operating system and CPU architecture.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "8.8 High (Estimated, based on guest to host memory access and potential privilege escalation)",
+        "category": "vulns"
+      },
+      {
+        "title": "F5 releases emergency patches for critical BIG-IP RCE flaws",
+        "tldr": "F5 has released emergency patches to address five critical vulnerabilities in its BIG-IP platform. These flaws could allow attackers to trigger denial-of-service (DoS) or achieve remote code execution (RCE) on affected devices.",
+        "action": "Immediately apply the emergency security patches provided by F5 for all BIG-IP deployments. Prioritize internet-facing BIG-IP devices. Review systems for signs of compromise, especially for DoS or RCE attempts.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/f5-releases-emergency-patches-for-critical-big-ip-rce-flaws/",
+        "source": "BleepingComputer",
+        "active_exploitation": false,
+        "affected_versions": "F5 BIG-IP (specific versions will be detailed in F5's official security advisories for the five critical vulnerabilities)",
+        "how_to_determine_impact": "Check the version of all F5 BIG-IP appliances against the latest F5 security advisories. Look for evidence of unusual restarts, high resource utilization, or unexpected process execution, which could indicate DoS or RCE attempts.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'F5 BIG-IP'. Get Configuration Files for F5 BIG-IP to identify installed versions. Check process lists for unusual activity.",
+        "rapid7_query_hint": "Search for relevant F5 BIG-IP vulnerability IDs. Use InsightAgent to scan F5 BIG-IP systems for installed software versions. Filter assets by 'F5 Networks' and 'BIG-IP' to identify targets.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, based on RCE and DoS capabilities for critical flaws)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Exploit Critical Cisco Expressway Flaw, Breach Four Devices and Reach Internal Network",
+        "tldr": "Hackers have exploited a critical vulnerability in Cisco Expressway devices, leading to the breach of four devices and unauthorized access to an internal network. This indicates active exploitation of a significant flaw.",
+        "action": "Identify all Cisco Expressway deployments within your environment. Immediately apply any available patches or workarounds from Cisco. Review logs for signs of compromise, such as unauthorized access, unusual network traffic, or configuration changes, on Expressway devices and connected internal systems.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Cisco Expressway (specific vulnerable versions would be detailed in Cisco's official security advisory)",
+        "how_to_determine_impact": "Check Cisco Expressway device versions against Cisco's official advisories. Review system logs for unauthorized logins, configuration changes, or unusual process execution. Inspect network traffic patterns for unexpected connections to internal networks originating from Expressway devices.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'Cisco Expressway'. Get Running Processes and Network Connections to identify suspicious activity. Check 'Get Cisco Device Version' for firmware/software versions.",
+        "rapid7_query_hint": "Search for vulnerability IDs related to Cisco Expressway. Use InsightAgent queries to identify installed Cisco Expressway versions. Filter assets by 'Cisco' and check for specific device models and software versions.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (Estimated, based on active exploitation leading to internal network breach)",
         "category": "vulns"
       }
     ]
