@@ -1,101 +1,101 @@
 {
   "breaches": [
     {
-      "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
-      "tldr": "Researchers identified that three AI hosting providers integrated with OpenRouter were involved in months-long prompt theft, leading OpenRouter to drop these providers. This indicates a supply chain data leakage issue affecting sensitive AI model inputs and user data.",
-      "action": "Review all third-party AI service providers for data handling policies and audit logs for unusual access patterns. Ensure data encryption at rest and in transit, and implement strong vendor vetting processes for AI supply chains.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
-      "tldr": "E-commerce platform Cleverbridge experienced a data breach where hackers gained unauthorized access to systems and stole customers' payment card information. This included credit card numbers and CVV security codes, affecting a large number of users.",
-      "action": "Customers who used Cleverbridge should immediately monitor their credit card statements for suspicious activity, enable transaction alerts, and consider placing fraud alerts with credit bureaus. Cleverbridge should conduct a thorough forensic investigation and enhance payment processing security.",
+      "tldr": "E-commerce platform Cleverbridge experienced a data breach where hackers stole customers' payment card information, including credit card numbers and CVV security codes. This incident directly impacts financial data privacy for a broad customer base.",
+      "action": "Advise customers who used Cleverbridge to monitor their credit card statements for fraudulent activity. Consider reissuing affected payment cards and implementing enhanced security for e-commerce platforms, including PCI DSS compliance checks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
       "source": "BleepingComputer"
     },
     {
       "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
-      "tldr": "Rackspace reported a breach in its Rackspace Spot cloud platform, where compromised credentials allowed hackers to deploy unauthorized workloads. The attackers also gained access to Kubernetes secrets belonging to customers, posing a significant risk to cloud environments.",
-      "action": "Rackspace Spot customers should immediately rotate all Kubernetes secrets and credentials. Additionally, review audit logs for any unauthorized deployments or access attempts, and strengthen access controls with multi-factor authentication for all cloud management interfaces.",
+      "tldr": "Rackspace's Spot cloud platform suffered a breach due to compromised credentials, allowing hackers to deploy unauthorized workloads and access Kubernetes secrets within customer clusters. This exposure of sensitive configuration and access data poses a significant risk to affected cloud environments.",
+      "action": "Customers using Rackspace Spot should immediately rotate all Kubernetes secrets and audit for unauthorized workloads or access. Implement stronger access controls, including multi-factor authentication, for all cloud platforms.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
       "source": "BleepingComputer"
     },
     {
       "title": "FBI reportedly hacked again, this time targeting nationwide police database",
-      "tldr": "The FBI's National Crime Information Center (NCIC) database was reportedly breached, marking the second such incident for the agency in two months. This database is critical for sharing information among local, state, and federal law enforcement agencies, indicating a severe compromise.",
-      "action": "While this is an external breach, organizations handling sensitive law enforcement data should review their own database security, access controls, and incident response plans. Ensure robust authentication, network segmentation, and continuous monitoring are in place for critical systems.",
+      "tldr": "The FBI's National Crime Information Center (NCIC), a critical database for nationwide law enforcement information sharing, was reportedly breached for the second time in two months. This compromise poses a severe threat to sensitive national security and law enforcement data.",
+      "action": "Monitor for further official statements from the FBI. For any organizations interacting with NCIC, review access logs and credentials for any anomalies. Enhance security protocols for government databases and information-sharing networks.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+      "tldr": "SBC Medical Group experienced a data breach impacting over 2 million individuals, exposing protected health information (PHI). This incident carries significant privacy risks for patients and compliance challenges for the organization under healthcare regulations.",
+      "action": "Affected individuals should be notified immediately in accordance with regulations (e.g., HIPAA). Implement enhanced access controls, encryption, and continuous monitoring for PHI databases. Conduct a thorough forensic investigation.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/",
+      "source": "SecurityWeek"
     }
   ],
   "ransomware": [],
   "vulns": [
     {
       "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
-      "tldr": "A critical vulnerability, CVE-2026-99312, in Linux KVM on AMD hosts allows guest virtual machines to access the memory of the host system. This can lead to potential privilege escalation, information disclosure, and full host compromise from a guest VM.",
-      "action": "Immediately identify all Linux KVM instances running on AMD hosts. Apply the kernel patches addressing CVE-2026-99312 as soon as they are available and reboot affected systems. Isolate vulnerable hosts and monitor for unusual activity between guest and host.",
+      "tldr": "A critical vulnerability, CVE-2026-99312, in Linux KVM allows guest virtual machines to access host memory when running on AMD hosts. This presents a severe VM escape risk, compromising host integrity and other guests.",
+      "action": "Immediately apply patches for CVE-2026-99312 to all Linux KVM hosts running on AMD processors. Isolate affected hosts and perform integrity checks.",
       "cve_ids": [
         "CVE-2026-99312"
       ],
       "source_url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
       "source": "The Hacker News",
       "active_exploitation": false,
-      "affected_versions": "Linux KVM on AMD hosts. Specific kernel versions affected by CVE-2026-99312 will be detailed in vendor advisories (e.g., Red Hat, Ubuntu, Debian kernel versions).",
-      "how_to_determine_impact": "Identify all Linux servers operating as KVM hosts with AMD processors. Check the exact kernel version (e.g., uname -r) against vendor security advisories for CVE-2026-99312 to determine vulnerability status.",
-      "tanium_query_hint": "Get Kernel Version with Computer Name from all machines where (OS Platform contains 'Linux' and CPU Vendor Name contains 'AMD')",
-      "rapid7_query_hint": "Search for assets with 'Linux' OS and 'AMD' CPU architecture. Scan for vulnerability CVE-2026-99312 or associated kernel vulnerabilities against these systems in InsightVM.",
+      "affected_versions": "Linux KVM on AMD hosts vulnerable to CVE-2026-99312. Specific kernel versions vary by distribution; consult official Linux kernel and distribution advisories (e.g., Red Hat, Ubuntu, Debian) for patch details.",
+      "how_to_determine_impact": "Identify all Linux servers running KVM on AMD hardware. Use 'uname -a' to check kernel version and consult distribution-specific vulnerability databases or CVE-2026-99312 advisories to determine if the running kernel is vulnerable. Verify KVM module status.",
+      "tanium_query_hint": "Get Computer Name and OS Platform and Kernel Version and CPU Type from all machines with 'OS Platform' contains 'Linux' and 'CPU Type' contains 'AMD'",
+      "rapid7_query_hint": "Vulnerability ID search for 'CVE-2026-99312'. Asset Search: 'Operating System' contains 'Linux' AND 'Hardware CPU Vendor' contains 'AMD'.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.8 Critical (estimated, due to VM escape allowing host memory access)"
     },
     {
-      "title": "Amazon: China-Linked Hackers' AI Agents Exploited Medical Software Zero-Day",
-      "tldr": "China-linked hackers, utilizing AI agents, exploited a zero-day vulnerability in medical software to gain unauthorized access to critical systems, as reported by Amazon. This sophisticated attack highlights the increasing use of AI in nation-state cyber espionage and targets sensitive healthcare data.",
-      "action": "Organizations using medical software should conduct immediate comprehensive audits for unusual activity and compromise on affected systems. Implement enhanced monitoring for AI-driven attack patterns, strengthen network segmentation, and engage with threat intelligence feeds for IOCs.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "Specific medical software and versions are a zero-day and currently unknown. Consult your medical software vendors for advisories and potential workarounds.",
-      "how_to_determine_impact": "Inventory all medical software instances and critical healthcare systems. Proactively monitor logs and network traffic for indicators of compromise (IOCs) such as unusual process execution, unauthorized network connections, or data exfiltration attempts. Review security audits from AWS/Amazon for specific details.",
-      "tanium_query_hint": "Get Running Processes with Computer Name from all machines where (Process Name contains 'med' or Process Name contains 'imaging') and Has Suspicious Activity = True and Is Process Suspicious matches 'True'",
-      "rapid7_query_hint": "Deploy EDR agents to all medical systems and monitor for unusual process execution, file modifications, or network connections. Search InsightIDR for IOCs and anomalous behaviors on healthcare-related assets.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
-    },
-    {
-      "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerges",
-      "tldr": "Threat actors are actively exploiting critical, unnamed vulnerabilities in VMware, Cisco, and Apache products, indicating widespread and severe risks. Evidence suggests these exploits are being leveraged as part of broader espionage campaigns, requiring immediate attention.",
-      "action": "Immediately identify all instances of VMware, Cisco, and Apache products within the environment. Prioritize patching these critical vulnerabilities, referencing vendor advisories for specific CVEs and affected versions. Implement network segmentation and strong access controls to limit potential lateral movement.",
+      "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
+      "tldr": "Hackers are actively exploiting critical vulnerabilities in VMware, Cisco, and Apache products, leading to espionage attacks. This indicates sophisticated threat actors leveraging known flaws for targeted intelligence gathering.",
+      "action": "Immediately patch all VMware, Cisco, and Apache products. Prioritize systems exposed to the internet. Conduct thorough compromise assessments for these systems. Implement strong network segmentation and monitor for indicators of compromise (IOCs) related to espionage.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Critical VMware, Cisco, and Apache flaws. Specific vulnerable versions and CVEs are not detailed in the summary but would be found in the full article and vendor advisories (e.g., VMware ESXi, Cisco IOS XE, Apache HTTP Server).",
-      "how_to_determine_impact": "Conduct a comprehensive asset inventory for VMware, Cisco, and Apache products. Cross-reference installed versions with known critical vulnerabilities, especially those listed in CISA KEV. Look for indicators of compromise (IOCs) associated with espionage campaigns on these systems.",
-      "tanium_query_hint": "Get Installed Applications from all machines where (Installed Application Name contains 'VMware' or Installed Application Name contains 'Cisco' or Installed Application Name contains 'Apache') and (Known Vulnerability CVEs contains 'critical' or Known Vulnerability CVEs contains 'actively exploited')",
-      "rapid7_query_hint": "Run targeted vulnerability scans for critical VMware, Cisco, and Apache vulnerabilities. Filter assets by relevant CVEs in InsightVM. Monitor InsightIDR for suspicious network activity, lateral movement, or unusual user behavior on affected systems.",
+      "affected_versions": "Critical VMware products, Cisco products (e.g., IOS XE, ASA, FTD), and Apache products (e.g., HTTP Server, Struts) with known, actively exploited vulnerabilities. Specific versions must be identified by consulting recent vendor advisories and CISA KEV catalog.",
+      "how_to_determine_impact": "Inventory all VMware, Cisco, and Apache deployments. Cross-reference all installed versions against recent vendor security advisories and the CISA Known Exploited Vulnerabilities (KEV) catalog. Perform vulnerability scans targeting these vendors and inspect logs for indicators of compromise (IOCs) related to espionage campaigns.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'VMware' or 'Cisco' or 'Apache' contains 'True'. Also, 'Get Listen Ports' and 'Get Established Connections' to detect suspicious network activity, and 'Get Running Processes' for unexpected binaries.",
+      "rapid7_query_hint": "Vulnerability ID search for 'VMware', 'Cisco', 'Apache' vulnerabilities with 'Exploited in the Wild' or 'CISA KEV' tags. Asset Search: 'Software Name' contains 'VMware' or 'Cisco' or 'Apache'. Utilize InsightIDR for behavioral anomaly detection.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated)"
+      "cvss_score": "9.8 Critical (estimated, due to active exploitation for espionage across multiple critical vendors)"
     },
     {
       "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
-      "tldr": "Hackers exploited an undisclosed vulnerability in GL.iNet's cloud remote management services, leading to the installation of custom malware on customer routers and KVM devices. This exploitation resulted in backdoors and reverse shells, giving attackers persistent remote access to infected devices.",
-      "action": "Users of GL.iNet devices should immediately disable cloud remote management services if not strictly essential. Apply any available firmware updates from GL.iNet and conduct a thorough inspection of devices for signs of compromise, such as unusual processes, network connections, or unauthorized configuration changes.",
+      "tldr": "Hackers exploited a vulnerability in GL.iNet's cloud remote management services to install custom malware, including backdoors and reverse shells, on customer routers and KVM devices. This provides remote access to infected devices.",
+      "action": "Disconnect GL.iNet devices from public internet access if cloud management is not essential. Patch GL.iNet devices and cloud services immediately. Scan affected devices for malware and unusual network connections.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
       "source": "BleepingComputer",
       "active_exploitation": true,
-      "affected_versions": "GL.iNet cloud remote management services and associated router/KVM devices. Specific vulnerable firmware versions would require consulting GL.iNet's official security advisories.",
-      "how_to_determine_impact": "Identify all GL.iNet routers and KVM devices in your environment. Check if cloud remote management is currently enabled. Review device logs for unauthorized access attempts, unusual outbound connections, or suspicious process execution. Perform firmware integrity checks.",
-      "tanium_query_hint": "Get Running Processes from all machines where (Process Name contains 'backdoor' or Process Name contains 'reverse shell') and (Manufacturer contains 'GL.iNet' or Device Type contains 'Router' or Device Type contains 'KVM')",
-      "rapid7_query_hint": "Monitor network traffic for unusual outbound connections from GL.iNet devices to unknown external IPs. Perform firmware integrity checks where possible. Search for known indicators of compromise (IOCs) when provided by GL.iNet or threat intelligence.",
+      "affected_versions": "GL.iNet cloud remote management services and associated router and KVM devices. Specific vulnerable firmware versions require consulting GL.iNet's official advisories. It is critical to update both cloud configurations and device firmware.",
+      "how_to_determine_impact": "Identify all GL.iNet routers and KVM devices within the environment. Check if they are configured to use GL.iNet cloud remote management services. Audit device configurations for unauthorized changes. Scan devices for suspicious processes, unexpected open ports, or unauthorized firmware modifications (e.g., backdoors, reverse shells).",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'GL.iNet' contains 'True'. Use 'Get Network Configuration for Port 80, 443, and 22' and 'Get Running Processes' for suspicious activity. Look for processes like 'nc' (netcat) or unusual SSH/Telnet connections.",
+      "rapid7_query_hint": "Asset Search: 'Software Name' contains 'GL.iNet'. Perform network vulnerability scans to detect unexpected open ports. Use EDR or network IDS/IPS to monitor for suspicious outbound connections or unauthorized process execution on connected devices. Review logs from GL.iNet cloud services for unauthorized access.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.5 Critical (Estimated)"
+      "cvss_score": "9.5 Critical (estimated, due to remote code execution and persistent access via cloud service exploitation)"
+    },
+    {
+      "title": "Amazon: China-Linked Hackers' AI Agents Exploited Medical Software Zero-Day",
+      "tldr": "Amazon reported that China-linked hackers used AI agents to exploit a zero-day vulnerability in medical software. This indicates state-sponsored actors are leveraging AI for advanced persistent threats, highlighting a significant threat to critical infrastructure.",
+      "action": "Prioritize patching and enhanced monitoring for all medical software, especially those used in critical infrastructure. Implement robust threat intelligence to track state-sponsored activities and deploy AI-driven defense mechanisms.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/",
+      "source": "SecurityWeek",
+      "active_exploitation": true,
+      "affected_versions": "Undisclosed medical software (zero-day). All unpatched versions are considered vulnerable. Organizations should contact their medical software vendors for specific advisories regarding AI-driven zero-day exploitation.",
+      "how_to_determine_impact": "Inventory all medical software and devices. Monitor network traffic for unusual egress connections, unauthorized data transfers, or connections to known China-linked APT infrastructure. Review application logs for unexpected behavior, privilege escalation, or file modifications. Proactive threat hunting for advanced persistent threats is essential.",
+      "tanium_query_hint": "Get Installed Applications from all machines with 'medical' contains 'True' or 'healthcare' contains 'True'. Use 'Get Running Processes with Open Files', 'Get DNS Lookups from Medical Software processes', and 'Get Established Connections' filtered for outbound to suspicious IPs/domains.",
+      "rapid7_query_hint": "Asset Search: 'Software Name' contains 'medical' or 'healthcare'. Utilize EDR and network detection and response (NDR) solutions for anomaly detection, indicators of compromise (IOCs) associated with state-sponsored activity, and behavioral analytics for unusual process execution or network communication on medical systems.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "9.9 Critical (estimated, state-sponsored zero-day exploitation of critical medical infrastructure)"
     }
   ],
   "insurance": [],
@@ -31588,6 +31588,110 @@
         "rapid7_query_hint": "Perform network-based scanning to identify GL.iNet devices. Check for suspicious outbound connections from these devices, indicative of command-and-control activity. Consult vendor advisories in InsightVM for specific vulnerability IDs if available. Monitor network segments where these devices reside for anomalous traffic.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.5 Critical (Estimated)",
+        "category": "vulns"
+      }
+    ],
+    "2026-11-23": [
+      {
+        "title": "Cleverbridge warns hackers stole credit card numbers, CVVs in data breach",
+        "tldr": "E-commerce platform Cleverbridge experienced a data breach where hackers stole customers' payment card information, including credit card numbers and CVV security codes. This incident directly impacts financial data privacy for a broad customer base.",
+        "action": "Advise customers who used Cleverbridge to monitor their credit card statements for fraudulent activity. Consider reissuing affected payment cards and implementing enhanced security for e-commerce platforms, including PCI DSS compliance checks.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Rackspace Spot breach let hackers access customer Kubernetes secrets",
+        "tldr": "Rackspace's Spot cloud platform suffered a breach due to compromised credentials, allowing hackers to deploy unauthorized workloads and access Kubernetes secrets within customer clusters. This exposure of sensitive configuration and access data poses a significant risk to affected cloud environments.",
+        "action": "Customers using Rackspace Spot should immediately rotate all Kubernetes secrets and audit for unauthorized workloads or access. Implement stronger access controls, including multi-factor authentication, for all cloud platforms.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "FBI reportedly hacked again, this time targeting nationwide police database",
+        "tldr": "The FBI's National Crime Information Center (NCIC), a critical database for nationwide law enforcement information sharing, was reportedly breached for the second time in two months. This compromise poses a severe threat to sensitive national security and law enforcement data.",
+        "action": "Monitor for further official statements from the FBI. For any organizations interacting with NCIC, review access logs and credentials for any anomalies. Enhance security protocols for government databases and information-sharing networks.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/fbi-reportedly-hacked-again-this-time-targeting-nationwide-police-database/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "SBC Medical Group Data Breach Impacts Over 2 Million",
+        "tldr": "SBC Medical Group experienced a data breach impacting over 2 million individuals, exposing protected health information (PHI). This incident carries significant privacy risks for patients and compliance challenges for the organization under healthcare regulations.",
+        "action": "Affected individuals should be notified immediately in accordance with regulations (e.g., HIPAA). Implement enhanced access controls, encryption, and continuous monitoring for PHI databases. Conduct a thorough forensic investigation.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/sbc-medical-group-data-breach-impacts-over-2-million/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
+        "tldr": "A critical vulnerability, CVE-2026-99312, in Linux KVM allows guest virtual machines to access host memory when running on AMD hosts. This presents a severe VM escape risk, compromising host integrity and other guests.",
+        "action": "Immediately apply patches for CVE-2026-99312 to all Linux KVM hosts running on AMD processors. Isolate affected hosts and perform integrity checks.",
+        "cve_ids": [
+          "CVE-2026-99312"
+        ],
+        "source_url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Linux KVM on AMD hosts vulnerable to CVE-2026-99312. Specific kernel versions vary by distribution; consult official Linux kernel and distribution advisories (e.g., Red Hat, Ubuntu, Debian) for patch details.",
+        "how_to_determine_impact": "Identify all Linux servers running KVM on AMD hardware. Use 'uname -a' to check kernel version and consult distribution-specific vulnerability databases or CVE-2026-99312 advisories to determine if the running kernel is vulnerable. Verify KVM module status.",
+        "tanium_query_hint": "Get Computer Name and OS Platform and Kernel Version and CPU Type from all machines with 'OS Platform' contains 'Linux' and 'CPU Type' contains 'AMD'",
+        "rapid7_query_hint": "Vulnerability ID search for 'CVE-2026-99312'. Asset Search: 'Operating System' contains 'Linux' AND 'Hardware CPU Vendor' contains 'AMD'.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (estimated, due to VM escape allowing host memory access)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
+        "tldr": "Hackers are actively exploiting critical vulnerabilities in VMware, Cisco, and Apache products, leading to espionage attacks. This indicates sophisticated threat actors leveraging known flaws for targeted intelligence gathering.",
+        "action": "Immediately patch all VMware, Cisco, and Apache products. Prioritize systems exposed to the internet. Conduct thorough compromise assessments for these systems. Implement strong network segmentation and monitor for indicators of compromise (IOCs) related to espionage.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Critical VMware products, Cisco products (e.g., IOS XE, ASA, FTD), and Apache products (e.g., HTTP Server, Struts) with known, actively exploited vulnerabilities. Specific versions must be identified by consulting recent vendor advisories and CISA KEV catalog.",
+        "how_to_determine_impact": "Inventory all VMware, Cisco, and Apache deployments. Cross-reference all installed versions against recent vendor security advisories and the CISA Known Exploited Vulnerabilities (KEV) catalog. Perform vulnerability scans targeting these vendors and inspect logs for indicators of compromise (IOCs) related to espionage campaigns.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'VMware' or 'Cisco' or 'Apache' contains 'True'. Also, 'Get Listen Ports' and 'Get Established Connections' to detect suspicious network activity, and 'Get Running Processes' for unexpected binaries.",
+        "rapid7_query_hint": "Vulnerability ID search for 'VMware', 'Cisco', 'Apache' vulnerabilities with 'Exploited in the Wild' or 'CISA KEV' tags. Asset Search: 'Software Name' contains 'VMware' or 'Cisco' or 'Apache'. Utilize InsightIDR for behavioral anomaly detection.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical (estimated, due to active exploitation for espionage across multiple critical vendors)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+        "tldr": "Hackers exploited a vulnerability in GL.iNet's cloud remote management services to install custom malware, including backdoors and reverse shells, on customer routers and KVM devices. This provides remote access to infected devices.",
+        "action": "Disconnect GL.iNet devices from public internet access if cloud management is not essential. Patch GL.iNet devices and cloud services immediately. Scan affected devices for malware and unusual network connections.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "GL.iNet cloud remote management services and associated router and KVM devices. Specific vulnerable firmware versions require consulting GL.iNet's official advisories. It is critical to update both cloud configurations and device firmware.",
+        "how_to_determine_impact": "Identify all GL.iNet routers and KVM devices within the environment. Check if they are configured to use GL.iNet cloud remote management services. Audit device configurations for unauthorized changes. Scan devices for suspicious processes, unexpected open ports, or unauthorized firmware modifications (e.g., backdoors, reverse shells).",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'GL.iNet' contains 'True'. Use 'Get Network Configuration for Port 80, 443, and 22' and 'Get Running Processes' for suspicious activity. Look for processes like 'nc' (netcat) or unusual SSH/Telnet connections.",
+        "rapid7_query_hint": "Asset Search: 'Software Name' contains 'GL.iNet'. Perform network vulnerability scans to detect unexpected open ports. Use EDR or network IDS/IPS to monitor for suspicious outbound connections or unauthorized process execution on connected devices. Review logs from GL.iNet cloud services for unauthorized access.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.5 Critical (estimated, due to remote code execution and persistent access via cloud service exploitation)",
+        "category": "vulns"
+      },
+      {
+        "title": "Amazon: China-Linked Hackers' AI Agents Exploited Medical Software Zero-Day",
+        "tldr": "Amazon reported that China-linked hackers used AI agents to exploit a zero-day vulnerability in medical software. This indicates state-sponsored actors are leveraging AI for advanced persistent threats, highlighting a significant threat to critical infrastructure.",
+        "action": "Prioritize patching and enhanced monitoring for all medical software, especially those used in critical infrastructure. Implement robust threat intelligence to track state-sponsored activities and deploy AI-driven defense mechanisms.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/amazon-china-linked-hackers-ai-agents-exploited-medical-software-zero-day/",
+        "source": "SecurityWeek",
+        "active_exploitation": true,
+        "affected_versions": "Undisclosed medical software (zero-day). All unpatched versions are considered vulnerable. Organizations should contact their medical software vendors for specific advisories regarding AI-driven zero-day exploitation.",
+        "how_to_determine_impact": "Inventory all medical software and devices. Monitor network traffic for unusual egress connections, unauthorized data transfers, or connections to known China-linked APT infrastructure. Review application logs for unexpected behavior, privilege escalation, or file modifications. Proactive threat hunting for advanced persistent threats is essential.",
+        "tanium_query_hint": "Get Installed Applications from all machines with 'medical' contains 'True' or 'healthcare' contains 'True'. Use 'Get Running Processes with Open Files', 'Get DNS Lookups from Medical Software processes', and 'Get Established Connections' filtered for outbound to suspicious IPs/domains.",
+        "rapid7_query_hint": "Asset Search: 'Software Name' contains 'medical' or 'healthcare'. Utilize EDR and network detection and response (NDR) solutions for anomaly detection, indicators of compromise (IOCs) associated with state-sponsored activity, and behavioral analytics for unusual process execution or network communication on medical systems.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.9 Critical (estimated, state-sponsored zero-day exploitation of critical medical infrastructure)",
         "category": "vulns"
       }
     ]
