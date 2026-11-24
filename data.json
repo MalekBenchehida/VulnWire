@@ -1,102 +1,120 @@
 {
   "breaches": [
     {
+      "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+      "source": "The Hacker News"
+    },
+    {
       "title": "South Korea’s power giant KEPCO confirms data breach impacting 1.5 million",
-      "tldr": "Korea Electric Power Corporation (KEPCO) has confirmed a data breach affecting 1.5 million individuals. Attackers accessed two internal systems containing customer, employee, and contractor data.",
-      "action": "Individuals impacted should monitor their accounts for suspicious activity. Organizations should review access controls and network segmentation, especially for critical infrastructure systems.",
+      "tldr": "A threat actor breached the internal network of Korea Electric Power Corporation (KEPCO) and accessed two systems containing customer, employee, and contractor data. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
-      "tldr": "A security vulnerability in Microsoft Azure API Management (APIM) Classic tiers was exploited, leading to the theft of customers' stored API credentials. Norwegian authorities have linked this exploitation to cyberattacks targeting energy companies.",
-      "action": "Immediately audit Azure APIM Classic tier configurations and rotate all API credentials stored within these tiers. Investigate logs for any unauthorized access attempts or suspicious activity.",
+      "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+      "tldr": "OpenRouter removed three AI providers from its platform after discovering that they had violated their stated data-handling policies and exposed sensitive data. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+      "source_url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Spanish LaLiga confirms hackers stole soccer fans’ personal data",
-      "tldr": "LaLiga, Spain's top men's football league, has disclosed a data breach. The breach resulted in hackers stealing personal information belonging to users of its services and those of some affiliated clubs.",
-      "action": "If you are a LaLiga user, monitor your personal and online accounts for any suspicious activity. Organizations should ensure robust data protection measures are in place for all customer personal data.",
+      "title": "GL.iNet Routers, KVMs Compromised via Remote Management Service Flaw",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "FBI Investigating Apparent Hack of Its Key National Criminal Justice Database, AP Source Says",
-      "tldr": "The FBI is reportedly investigating an apparent hack of its critical National Criminal Justice Database. If confirmed, this incident would represent a significant breach of highly sensitive law enforcement data.",
-      "action": "Monitor official FBI announcements for further confirmation and detailed information. Organizations should review their own security posture, especially data handling and access controls, in light of such high-profile attacks on critical government systems.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/",
+      "source_url": "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/",
       "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "vulns": [
     {
-      "title": "CISA Flags Critical Cisco Expressway RCE Flaw Actively Exploited",
-      "tldr": "CISA has issued a warning about a critical, recently patched Remote Code Execution (RCE) vulnerability in Cisco Expressway, confirming it is being actively exploited in the wild. This vulnerability poses a severe and immediate risk to unpatched systems.",
-      "action": "Immediately apply the latest security updates and patches for Cisco Expressway. Review system logs and network traffic for any indicators of compromise or suspicious activity related to this RCE exploitation.",
+      "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Cisco Expressway Series versions prior to the latest patched releases (e.g., X14.0.5, X12.10.4, X8.12.13). Refer to Cisco's official security advisory for exact vulnerable versions.",
-      "how_to_determine_impact": "Check the currently installed version of Cisco Expressway software. Additionally, inspect system logs for unusual process execution, unauthenticated access attempts, or anomalous network connections from/to the Expressway appliance.",
-      "tanium_query_hint": "Get Computer Name and Installed Application Version[\"Cisco Expressway Series\"] from all machines with Computer Name matches \"CiscoExpressway*\"",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID matching \"Cisco Expressway RCE\" or perform an asset search for \"Cisco Expressway\" instances with known vulnerable versions as per vendor advisory.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
+      "source_url": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs",
-      "tldr": "A critical vulnerability in ConnectWise Control (formerly ScreenConnect) is being actively exploited by attackers. This flaw allows unauthorized hijacking of Managed Service Provider (MSP) technician PCs without warning, providing extensive access into client networks.",
-      "action": "Immediately apply the latest security updates released by ConnectWise for Control (ScreenConnect). Isolate any instances that cannot be immediately patched and conduct a thorough forensic review for signs of compromise, such as new user accounts or unusual process activity.",
+      "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
+    },
+    {
+      "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "ConnectWise Control (ScreenConnect) versions prior to vendor-provided patches (e.g., 23.9.8 and earlier). Consult ConnectWise advisories for specific patched versions.",
-      "how_to_determine_impact": "Verify the installed version of ConnectWise Control on all technician workstations and servers. Check system and application logs for unauthorized remote connections, newly created user accounts, or any unusual process activity indicative of compromise.",
-      "tanium_query_hint": "Get Installed Applications with Name matches \"ConnectWise Control\" and Version < \"23.9.8\" from all machines",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID matching \"ConnectWise Control RCE\" or conduct an asset search on \"ConnectWise Control\" applications for vulnerable versions.",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
-      "tldr": "Attackers are actively exploiting a critical flaw in the ASP.NET Anti-CSRF library, leading to unauthenticated Remote Code Execution (RCE). This vulnerability poses a severe risk to web applications utilizing the affected library, potentially allowing full system compromise.",
-      "action": "Immediately update the ASP.NET Anti-CSRF library to the latest patched version. Implement and configure web application firewalls (WAF) to detect and block exploitation attempts against ASP.NET applications.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific versions of Microsoft.AspNetCore.Antiforgery and related ASP.NET Anti-CSRF packages prior to the security update. Refer to Microsoft's official security advisories for exact vulnerable versions.",
-      "how_to_determine_impact": "Inspect .csproj files or package references within ASP.NET projects to identify the exact version of the `Microsoft.AspNetCore.Antiforgery` or similar Anti-CSRF components in use. Check IIS/web server logs for suspicious requests.",
-      "tanium_query_hint": "Get File Version[\"path_to_Microsoft.AspNetCore.Antiforgery.dll\"] from all machines running processes \"w3wp.exe\" or \"iisexpress.exe\"",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID or keywords like \"ASP.NET Anti-CSRF RCE\" or use an InsightAgent query to check installed package versions within ASP.NET application directories.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical"
-    },
-    {
-      "title": "N-able Patches Critical Mail Assure Flaw Disclosed After Cyberattack Investigation",
-      "tldr": "N-able has released patches for a critical vulnerability in its Mail Assure product. This flaw was discovered during an investigation into a cyberattack, strongly implying potential active exploitation or prior compromise related to the incident.",
-      "action": "Apply the latest security updates for N-able Mail Assure immediately across all deployments. Review system and application logs for any unauthorized access or unusual activity that occurred prior to applying the patch.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/n-able-patches-critical-flaw-disclosed-after-mail-assure-cyberattack/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "N-able Mail Assure versions prior to the released patch. Consult N-able's official security advisory for specific version numbers and update instructions.",
-      "how_to_determine_impact": "Check the installed version of N-able Mail Assure deployed within your environment. Review vendor advisories for specific version numbers of the released patch and the corresponding vulnerable releases.",
-      "tanium_query_hint": "Get Installed Applications with Name matches \"N-able Mail Assure\" and Version < \"LatestPatchedVersion\" from all machines",
-      "rapid7_query_hint": "Search InsightVM for vulnerability ID associated with \"N-able Mail Assure\" or perform an asset search on \"N-able\" products to identify vulnerable versions.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.0 Critical"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
+      "cve_ids": [],
+      "source_url": "",
+      "source": "System"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -31808,6 +31826,81 @@
         "rapid7_query_hint": "Search InsightVM for vulnerability ID associated with \"N-able Mail Assure\" or perform an asset search on \"N-able\" products to identify vulnerable versions.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.0 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+        "tldr": "OpenRouter removed three AI providers from its platform after discovering that they had violated their stated data-handling policies and exposed sensitive data. [...]",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "GL.iNet Routers, KVMs Compromised via Remote Management Service Flaw",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/gl-inet-routers-kvms-compromised-via-remote-management-service-flaw/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
         "category": "vulns"
       }
     ]
