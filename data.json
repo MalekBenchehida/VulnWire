@@ -2,32 +2,32 @@
   "breaches": [
     {
       "title": "Rackspace shuts down Spot cloud platform after security breach",
-      "tldr": "Rackspace is discontinuing its Spot cloud platform due to a security breach that allowed attackers to access customer Kubernetes clusters and secrets. Customers are required to migrate their services and download data by December 8.",
-      "action": "If your organization uses Rackspace Spot cloud, immediately migrate data and services, and secure any exposed secrets. Review Rackspace communications for specific instructions.",
+      "tldr": "Rackspace is shutting down its Spot cloud platform after a security breach compromised customer Kubernetes clusters and secrets. This incident necessitates customer migration and data download by December 8, 2026.",
+      "action": "Customers using Rackspace Spot cloud platform must immediately migrate all services and download their data before the December 8 deadline. Additionally, review logs for any unauthorized access to Kubernetes clusters and rotate any compromised secrets.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
       "source": "BleepingComputer"
     },
     {
       "title": "Radware discloses breach exposing customer cloud access keys",
-      "tldr": "Cybersecurity company Radware experienced a breach where attackers accessed customer account details and cloud access keys. The compromise occurred via an unsecured internal Cloud WAF management API left exposed online.",
-      "action": "If your organization is a Radware customer, immediately rotate any cloud access keys and API credentials associated with Radware services. Review Radware's official disclosure for further recommendations.",
+      "tldr": "Cybersecurity firm Radware disclosed a breach exposing customer cloud access keys and account details. Attackers exploited an unsecured internal Cloud WAF management API that was publicly exposed.",
+      "action": "Radware customers should immediately review their Cloud WAF configurations, rotate all potentially compromised cloud access keys, and strengthen API access controls to prevent further exposure.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
       "source": "BleepingComputer"
     },
     {
       "title": "European Commission confirms data theft in EU Academy breach",
-      "tldr": "The European Commission confirmed a data breach affecting its EU Academy online learning hub, resulting in the theft of personal data from an undisclosed number of users.",
-      "action": "If your organization or employees used the EU Academy platform, advise them to change passwords and be vigilant for phishing attempts related to the breach. Monitor for official advisories from the European Commission.",
+      "tldr": "The European Commission confirmed a data theft from its EU Academy online learning hub following a cyberattack. Personal data of an undisclosed number of users was compromised in the breach.",
+      "action": "Users of the EU Academy platform should remain vigilant for phishing attempts and consider changing passwords for any linked accounts. The European Commission is expected to provide official notification to affected individuals.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/european-commission-confirms-data-theft-in-eu-academy-breach/",
       "source": "BleepingComputer"
     },
     {
       "title": "McDonald's Japan data breach exposes customer location information",
-      "tldr": "McDonald's Japan disclosed a data breach where attackers accessed a database containing sensitive location information for users of its official smartphone app.",
-      "action": "If your organization or employees use the McDonald's Japan app, advise them to change their passwords and remain alert for potential phishing or targeted attacks.",
+      "tldr": "McDonald's Japan reported a data breach where attackers accessed a database containing sensitive location information for users of its official smartphone app. The breach exposed customer geographical data to unauthorized parties.",
+      "action": "McDonald's Japan app users should be highly alert for targeted phishing and review location service permissions for the app. The company needs to issue direct, specific guidance to affected customers on mitigation steps.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/mcdonalds-japan-data-breach-exposes-customer-location-information/",
       "source": "BleepingComputer"
@@ -36,81 +36,89 @@
   "ransomware": [
     {
       "title": "New Inception extortion gang launches large-scale vishing campaign",
-      "tldr": "A new data extortion group, 'Inception', is launching a broad vishing campaign targeting single sign-on (SSO) credentials from numerous global brands and firms. This group aims for data exfiltration and extortion.",
-      "action": "Educate employees about vishing tactics, especially those impersonating IT support or internal staff. Implement strong MFA for all SSO accounts and monitor for suspicious login attempts.",
+      "tldr": "A new data extortion group, 'Inception', is waging a large-scale vishing campaign to steal single sign-on (SSO) credentials from numerous global organizations. This group focuses on data exfiltration and subsequent extortion.",
+      "action": "Organizations should implement robust multi-factor authentication (MFA) and provide ongoing employee training on vishing tactics. Monitor SSO activity for anomalies and credential abuse.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
       "source": "BleepingComputer"
     },
     {
       "title": "ShinyHunters claims to return after FBI arrests, uses old PGP keys as proof",
-      "tldr": "The notorious ShinyHunters data extortion gang has announced its return via a new data leak site, following recent FBI arrests of alleged members. The group is known for large-scale data breaches and subsequent extortion.",
-      "action": "Stay vigilant for data leak claims or extortion attempts from ShinyHunters. Review existing security measures against common attack vectors used by this group, such as credential stuffing and exploiting third-party vulnerabilities.",
+      "tldr": "The ShinyHunters extortion gang claims to be active again on a new data leak site, using old PGP keys as proof of their resurgence following recent FBI arrests. This group is notorious for data theft and extortion.",
+      "action": "Enhance data exfiltration monitoring capabilities and strengthen perimeter defenses against known TTPs associated with data extortion groups. Educate employees on social engineering and credential theft.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/shinyhunters-resurfaces-after-fbi-arrests-uses-old-pgp-keys-as-proof/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
+      "tldr": "Okta has identified a connection between the ShinyHunters-associated vishing group and the new INCEPTION data leak site. This collaboration indicates a sophisticated and organized effort to perform social engineering attacks for data extortion.",
+      "action": "Implement robust anti-phishing training programs and strengthen multi-factor authentication protections across all systems. Conduct regular penetration tests focusing on social engineering vectors to identify and close gaps.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
+      "source": "The Hacker News"
     }
   ],
   "vulns": [
     {
       "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
-      "tldr": "A new critical authentication bypass vulnerability (CVSS 9.8) has been discovered in VMware vCenter, following previous zero-day exploitations. This flaw allows attackers to bypass authentication and gain full control.",
-      "action": "Immediately apply available patches for VMware vCenter. Restrict network access to vCenter servers to only necessary administrative interfaces. Review logs for signs of unauthorized access.",
+      "tldr": "A critical, 9.8-rated authentication bypass flaw impacting VMware vCenter is being actively exploited as a zero-day. This vulnerability allows unauthenticated attackers to gain unauthorized access to vCenter servers.",
+      "action": "Immediately apply all available security patches from VMware for vCenter and ESX. Isolate vCenter Server from direct internet exposure and implement strict network segmentation to limit attack surfaces.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "VMware vCenter Server (specific versions not provided). Consult official VMware advisories for the precise vulnerable versions. Given the 'critical' rating, assume recent versions are affected.",
-      "how_to_determine_impact": "Check your deployed VMware vCenter Server versions against official VMware security advisories. Additionally, review vCenter logs for any unusual authentication attempts, unauthorized configuration changes, or suspicious process executions that may indicate exploitation.",
-      "tanium_query_hint": "Get Installed Applications with Name 'VMware vCenter Server' and Computer Name matches 'vcenter*'. Use 'Get Registry Value Data' for specific vCenter configuration paths if available in advisories.",
-      "rapid7_query_hint": "In InsightVM, search for vulnerability IDs related to 'VMware vCenter Authentication Bypass' or filter by 'Critical' severity and 'VMware vCenter'. In InsightIDR, look for suspicious logins or administrative activities on vCenter assets.",
+      "affected_versions": "VMware vCenter Server (all versions lacking the most recent patches), VMware ESX (all versions lacking the most recent patches). Refer to official VMware security advisories for specific version ranges.",
+      "how_to_determine_impact": "Check VMware vCenter Server and ESX host logs for any unauthorized access attempts, unusual administrative activity, or unexpected process execution. Verify that the latest security patches from VMware have been successfully applied on all relevant systems.",
+      "tanium_query_hint": "Get Tanium Patch Status from all machines with Computer Name matches 'vcenter' or 'esx'. Use 'Get Installed Applications matches 'VMware vCenter Server'' to determine versions. Search for specific Indicators of Compromise (IOCs) such as suspicious process creations or network connections.",
+      "rapid7_query_hint": "Search for vulnerability IDs related to 'VMware vCenter authentication bypass' in InsightVM. Use InsightAgent queries to check for specific patch levels on vCenter and ESX assets. Monitor network flows for unusual activity emanating from vCenter/ESX servers.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "9.8 Critical"
     },
     {
       "title": "Microsoft Fixes Azure API Management Classic Flaw as Actor Targets Customer Secrets",
-      "tldr": "Microsoft has patched a critical flaw in Azure API Management Classic that was being actively exploited by threat actors to target and potentially compromise customer secrets.",
-      "action": "Review audit logs for Azure API Management Classic instances for any signs of compromise or unauthorized access, especially prior to the patch date. Apply all available security updates for Azure services. Rotate any secrets potentially exposed.",
+      "tldr": "Microsoft addressed a vulnerability in Azure API Management Classic that was actively targeted by threat actors. This flaw allowed adversaries to access and potentially compromise customer secrets.",
+      "action": "Ensure all Azure API Management Classic instances are updated with the latest patches provided by Microsoft. Thoroughly review Azure activity logs for any suspicious access or operations against API Management instances, and rotate all secrets associated with these services.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Azure API Management Classic instances. Consult Microsoft Azure security advisories for specific affected service configurations and update requirements.",
-      "how_to_determine_impact": "Examine Azure Activity Logs and Azure Monitor logs for suspicious API calls, unusual access patterns to Azure API Management Classic resources, or any unauthorized changes to secrets or configurations, especially actions related to service principals or managed identities.",
-      "tanium_query_hint": "N/A for direct cloud service vulnerability. For endpoints that interact with Azure API Management, 'Get Running Processes with Name 'az.exe' or 'azure-cli.exe' and Get Command Line for those processes' can reveal API interactions. Monitor endpoint access to Azure management portals if credentials were compromised.",
-      "rapid7_query_hint": "In InsightVM, search for misconfigurations or vulnerabilities in connected Azure cloud environments. In InsightIDR, monitor Azure AD and Azure logs for unusual authentication, privilege escalation, or resource access related to Azure API Management.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "N/A (Cloud service flaw, likely high impact if exploited. Estimate 9.0 Critical based on description of targeting secrets and active exploitation.)"
+      "affected_versions": "Azure API Management Classic (specific versions patched by Microsoft). Consult Microsoft's official security advisories for detailed patch information.",
+      "how_to_determine_impact": "Review Azure Activity Logs for unauthorized access attempts, unusual API calls, or configuration changes within Azure API Management Classic instances. Confirm that all Azure services are running their latest patched versions as per Microsoft's guidance.",
+      "tanium_query_hint": "N/A (Cloud service, direct Tanium agent queries are typically not applicable to the cloud service platform itself). Focus on monitoring cloud configuration compliance and reviewing security logs through Azure's native tools.",
+      "rapid7_query_hint": "Monitor Azure logs for unusual API activity via InsightIDR and cloud security posture management tools. Search for relevant Microsoft advisories regarding Azure API Management Classic and apply associated vulnerability checks and misconfiguration detections.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "8.5 High"
+    },
+    {
+      "title": "WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login",
+      "tldr": "A severe SQL injection vulnerability in WHMCS allows unauthenticated attackers to extract customer data and admin password hashes. This critical flaw bypasses login mechanisms, posing a significant risk of unauthorized information disclosure.",
+      "action": "Immediately apply the latest security updates provided by WHMCS to patch this SQL injection vulnerability. Review web server logs for suspicious requests indicative of exploitation attempts and rotate all administrative passwords for WHMCS installations.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "WHMCS (specific vulnerable versions will be detailed in official WHMCS security advisory). It is crucial to check for official updates.",
+      "how_to_determine_impact": "Check the version of your WHMCS installation against official advisories. Examine web server access logs (e.g., Apache, Nginx) for anomalous requests containing SQL injection payloads targeting WHMCS scripts.",
+      "tanium_query_hint": "Use 'Get Installed Applications matches 'WHMCS'' to identify affected systems. Search for known vulnerable file paths or file hashes if available. Monitor web server logs for specific SQL injection patterns on WHMCS directories.",
+      "rapid7_query_hint": "Search InsightVM for 'WHMCS SQL Injection' vulnerability checks. Conduct authenticated scans on web servers hosting WHMCS to identify vulnerable versions. Monitor web application logs in InsightIDR for signs of exploitation.",
+      "remediation_priority": "High next patch cycle",
+      "cvss_score": "9.0 Critical"
     },
     {
       "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
-      "tldr": "Two distinct vulnerabilities are being actively exploited: a flaw in N-able MailAssure and a zero-day in MONAI Label. Both are under active attack by threat actors, with the MONAI Label flaw being exploited by 'AI agents.'",
-      "action": "For N-able MailAssure users, immediately apply patches and review logs for signs of compromise. For MONAI Label users, disable or isolate affected instances until a patch is available and review systems for active exploitation.",
+      "tldr": "Hackers are actively exploiting a flaw in N-able MailAssure, while AI agents are exploiting a zero-day in MONAI Label. Both situations indicate immediate, severe risks due to active exploitation.",
+      "action": "For N-able MailAssure, immediately ensure all instances are updated to the latest patched version and monitor for any unusual activity. For MONAI Label, apply any available patches or workarounds, restrict network access to affected systems, and conduct a thorough compromise assessment.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "N-able MailAssure (specific versions not provided). MONAI Label (specific versions not provided, zero-day indicates latest versions may be affected). Consult vendor advisories immediately for precise vulnerable versions and patches.",
-      "how_to_determine_impact": "For N-able MailAssure, inspect appliance/service logs for any unusual outbound connections, unauthorized administrative access, or unexpected email relay activity. For MONAI Label, check server logs, running processes for suspicious activity, and network traffic from MONAI Label instances for unauthorized data exfiltration or command and control communications.",
-      "tanium_query_hint": "For N-able MailAssure: 'Get Installed Applications with Name 'N-able MailAssure''. For MONAI Label: 'Get Running Processes with Name 'monai*' or 'Get File Hash['/path/to/monai_executable']' to check for known malicious hashes.",
-      "rapid7_query_hint": "In InsightVM, search for vulnerability IDs related to 'N-able MailAssure' and 'MONAI Label'. In InsightIDR, monitor for suspicious network connections, process anomalies, or file modifications on servers running these applications.",
+      "affected_versions": "N-able MailAssure (specific versions requiring patches), MONAI Label (all versions currently lacking a patch are considered vulnerable to the zero-day). Refer to vendor advisories for specifics.",
+      "how_to_determine_impact": "For N-able MailAssure, verify installed versions and check mail logs for unauthorized access or configuration changes. For MONAI Label, review system logs for unusual process execution or network connections originating from MONAI Label instances.",
+      "tanium_query_hint": "For N-able MailAssure: 'Get Installed Applications matches 'N-able MailAssure''. For MONAI Label: 'Get Installed Applications matches 'MONAI Label'' or check for specific file paths and versions. Monitor network activity for suspicious connections.",
+      "rapid7_query_hint": "Search InsightVM for 'N-able MailAssure vulnerability' or 'MONAI Label zero-day' once CVEs are assigned. Use InsightAgent queries to check for specific software versions and look for IOCs in endpoint telemetry via InsightIDR.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "N/A (No specific scores given. Estimate 9.0 Critical for both due to active exploitation and zero-day status.)"
-    },
-    {
-      "title": "VMware Updates Patch Critical ESX, vCenter Vulnerabilities",
-      "tldr": "VMware has released critical patches for vulnerabilities affecting ESX and vCenter products. These updates address significant security flaws that could lead to system compromise and are highly likely to include fixes for actively exploited issues.",
-      "action": "Immediately apply all available patches for VMware ESX and vCenter servers. Verify successful patch installation and review vendor advisories for detailed information on the specific vulnerabilities addressed.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/",
-      "source": "SecurityWeek",
-      "active_exploitation": true,
-      "affected_versions": "VMware ESX and vCenter (specific versions not provided). Consult official VMware security advisories for exact product and version details and the corresponding patches.",
-      "how_to_determine_impact": "Verify that the latest security patches from VMware have been successfully applied to all ESX hosts and vCenter Server instances. Review ESX/vCenter logs for any indicators of compromise prior to patching, such as unauthorized access attempts or suspicious system modifications.",
-      "tanium_query_hint": "Get Installed Applications with Name 'VMware ESX' or 'VMware vCenter Server'. Use 'Get Patch Status' or 'Get KB Article Status' sensors to confirm patch application. Additionally, 'Get Registry Value Data' for specific registry keys mentioned in advisories.",
-      "rapid7_query_hint": "In InsightVM, run a scan to identify missing patches for 'VMware ESX' and 'vCenter' vulnerabilities. Search for vulnerability IDs matching 'VMware ESX' or 'vCenter' and filter by 'Critical' severity.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "N/A (Multiple vulnerabilities. At least one 9.8 Critical based on related news.)"
+      "cvss_score": "9.8 Critical"
     }
   ],
   "insurance": [],
@@ -32138,6 +32146,31 @@
         "rapid7_query_hint": "In InsightVM, run a scan to identify missing patches for 'VMware ESX' and 'vCenter' vulnerabilities. Search for vulnerability IDs matching 'VMware ESX' or 'vCenter' and filter by 'Critical' severity.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "N/A (Multiple vulnerabilities. At least one 9.8 Critical based on related news.)",
+        "category": "vulns"
+      },
+      {
+        "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
+        "tldr": "Okta has identified a connection between the ShinyHunters-associated vishing group and the new INCEPTION data leak site. This collaboration indicates a sophisticated and organized effort to perform social engineering attacks for data extortion.",
+        "action": "Implement robust anti-phishing training programs and strengthen multi-factor authentication protections across all systems. Conduct regular penetration tests focusing on social engineering vectors to identify and close gaps.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
+        "source": "The Hacker News",
+        "category": "ransomware"
+      },
+      {
+        "title": "WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login",
+        "tldr": "A severe SQL injection vulnerability in WHMCS allows unauthenticated attackers to extract customer data and admin password hashes. This critical flaw bypasses login mechanisms, posing a significant risk of unauthorized information disclosure.",
+        "action": "Immediately apply the latest security updates provided by WHMCS to patch this SQL injection vulnerability. Review web server logs for suspicious requests indicative of exploitation attempts and rotate all administrative passwords for WHMCS installations.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "WHMCS (specific vulnerable versions will be detailed in official WHMCS security advisory). It is crucial to check for official updates.",
+        "how_to_determine_impact": "Check the version of your WHMCS installation against official advisories. Examine web server access logs (e.g., Apache, Nginx) for anomalous requests containing SQL injection payloads targeting WHMCS scripts.",
+        "tanium_query_hint": "Use 'Get Installed Applications matches 'WHMCS'' to identify affected systems. Search for known vulnerable file paths or file hashes if available. Monitor web server logs for specific SQL injection patterns on WHMCS directories.",
+        "rapid7_query_hint": "Search InsightVM for 'WHMCS SQL Injection' vulnerability checks. Conduct authenticated scans on web servers hosting WHMCS to identify vulnerable versions. Monitor web application logs in InsightIDR for signs of exploitation.",
+        "remediation_priority": "High next patch cycle",
+        "cvss_score": "9.0 Critical",
         "category": "vulns"
       }
     ]
