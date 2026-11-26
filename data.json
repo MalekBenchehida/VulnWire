@@ -2,98 +2,107 @@
   "breaches": [
     {
       "title": "U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
-      "tldr": "The U.S. Treasury's Financial Crimes Enforcement Network (FinCEN) has taken certain systems offline after experiencing a cyber intrusion. This incident points to potential unauthorized access to sensitive financial data or operational disruption within a critical government agency. Investigations are ongoing to determine the full scope and impact.",
-      "action": "Organizations should review their network logs for any unusual activity originating from or targeting FinCEN-related systems if applicable, and reinforce network segmentation and access controls. Ensure incident response plans are ready.",
+      "tldr": "The U.S. Treasury's Financial Crimes Enforcement Network (FinCEN) has taken some systems offline due to a cyber intrusion. The extent of the intrusion and data impact is under investigation.",
+      "action": "Monitor for further updates from FinCEN. Review supply chain security if your organization integrates with FinCEN systems.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
       "source": "The Hacker News"
     },
     {
-      "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
-      "tldr": "A suspected AI-driven attack campaign has led to the compromise of 24 Check Point Management Servers. This breach could grant attackers deep access to an organization's security infrastructure, potentially allowing for broader network control, data exfiltration, or further lateral movement. The involvement of AI suggests advanced capabilities.",
-      "action": "Immediately audit all Check Point Management Servers for signs of compromise, review logs for unauthorized access, and apply all available security patches. Implement multi-factor authentication for management interfaces and restrict access to these servers from untrusted networks.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
-      "source": "The Hacker News"
-    },
-    {
-      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
-      "tldr": "A group of hackers, likely commercially affiliated, are hijacking cloud accounts through vishing attacks to steal data and extort victims. These attacks exploit human vulnerabilities to gain initial access, leading to significant data loss and potential financial demands. Cloud service users are particularly at risk.",
-      "action": "Educate employees on vishing tactics, reinforce the importance of not divulging credentials over the phone, and implement strong multi-factor authentication (MFA) for all cloud accounts. Regularly audit cloud access logs for suspicious activity and enforce least privilege principles.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
-      "source": "The Hacker News"
-    },
-    {
       "title": "1Password customer data stolen after employee GitHub account breach",
-      "tldr": "1Password has confirmed a data breach where an employee's corporate GitHub account was compromised. Attackers used this access to deploy malicious code to backend services, resulting in the theft of customer data. This highlights supply chain risks through developer accounts.",
-      "action": "Users of 1Password should monitor their accounts for suspicious activity. Organizations should enforce robust security for developer accounts, including strong MFA, regular credential rotation, and continuous monitoring of code repositories for unauthorized changes. Review supply chain security measures.",
+      "tldr": "1Password experienced a data breach after an employee's corporate GitHub account was compromised. Attackers used this access to deploy malicious code to backend services, resulting in the theft of customer data.",
+      "action": "Review access logs for GitHub and related development infrastructure for any unauthorized activity. Enhance MFA and security training for developer accounts. 1Password customers should monitor for suspicious activity.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
       "source": "BleepingComputer"
+    },
+    {
+      "title": "Hackers reportedly breached CIA intelligence analysis system",
+      "tldr": "Unknown attackers have reportedly breached an unclassified open-source intelligence analysis system at the US Central Intelligence Agency (CIA). The extent of data compromise or system impact is currently under investigation.",
+      "action": "Enhance security controls for intelligence analysis systems, especially those processing open-source information. Monitor for any indicators of compromise related to this event.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
+      "source": "BleepingComputer"
+    },
+    {
+      "title": "Plagiarism Checker Turnitin Investigating Cyberattack",
+      "tldr": "The plagiarism checker service Turnitin is currently investigating a cyberattack. Details regarding the nature of the attack or potential data compromise are pending.",
+      "action": "If your institution uses Turnitin, monitor for official updates and advice. Review associated accounts for suspicious activity and strengthen credentials.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/plagiarism-checker-turnitin-investigating-cyberattack/",
+      "source": "SecurityWeek"
     }
   ],
-  "ransomware": [],
+  "ransomware": [
+    {
+      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+      "tldr": "\"Com-affiliated\" hackers are hijacking cloud accounts through vishing attacks to steal data and demand extortion payments. This represents a multi-pronged attack vector targeting cloud environments for financial gain.",
+      "action": "Implement strong MFA on all cloud accounts. Educate users about vishing attacks and social engineering tactics. Review cloud access logs for unauthorized activity.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
+      "source": "The Hacker News"
+    }
+  ],
   "vulns": [
     {
-      "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
-      "tldr": "Two critical unauthenticated Remote Code Execution (RCE) flaws in GeoServer are being actively exploited by hackers. These vulnerabilities allow attackers to execute arbitrary code without authentication, posing a severe risk to affected systems.",
-      "action": "Immediately identify and patch all GeoServer instances to the latest secure version. If patching is not immediately feasible, restrict network access to GeoServer instances, particularly from the internet, and monitor for indicators of compromise.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "GeoServer with specific vulnerabilities leading to unauthenticated RCE chains. Exact versions require further investigation into threat intelligence advisories, but assume recent versions are affected if not patched.",
-      "how_to_determine_impact": "Identify all GeoServer installations within your environment. Check GeoServer logs for unusual process execution or file modifications. Verify current GeoServer version against vendor advisories. Look for incoming connections to GeoServer management interfaces from unusual sources.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name matches 'GeoServer' then Get GeoServer Version or Get Running Processes contains 'geoserver' and get Open Ports with status equals 'listening' and port equals '8080'",
-      "rapid7_query_hint": "Search for assets running 'GeoServer' service. Check vulnerability definitions for 'GeoServer RCE' vulnerabilities. Query asset configuration for public exposure of GeoServer instances. Investigate logs for unusual outbound connections from GeoServer hosts.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, given unauthenticated RCE and active exploitation)"
-    },
-    {
-      "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
-      "tldr": "A critical Remote Code Execution (RCE) flaw in Drupal, possibly related to a 'Fail2Install' exploit, is being actively exploited. Attackers can hijack unpatched Drupal sites, leading to full system compromise. Patching is urgent to prevent exploitation.",
-      "action": "Update all Drupal installations immediately to the latest patched version. Review web server logs for suspicious requests targeting Drupal installation or configuration files, and check for unauthorized file changes on Drupal servers.",
-      "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
-      "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific vulnerable versions of Drupal. Consult official Drupal security advisories for precise version ranges. Assume all unpatched versions are at risk until confirmed otherwise.",
-      "how_to_determine_impact": "Identify all Drupal websites and their running versions. Check for the presence of the 'Fail2Install' module or related vulnerable components if specific to that. Scan web servers for indicators of compromise such as webshells or unexpected user accounts.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name contains 'drupal' and Get File Version['/path/to/drupal/core/CHANGELOG.txt'] or Get Running Processes with CommandLine contains 'php' and path contains 'drupal'",
-      "rapid7_query_hint": "Search for assets with 'Drupal' installed. Look for vulnerability checks related to 'Drupal RCE' or specific 'Fail2Install' vulnerability. Scan web application firewalls (WAF) logs for suspicious POST requests to Drupal sites.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, given unauthenticated RCE and active exploitation)"
-    },
-    {
       "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
-      "tldr": "A critical Remote Code Execution (RCE) flaw in Hex.pm, with a CVSS score of 10.0, has been actively exploited, leading to the compromise of 6 package registry servers. This vulnerability allows maximum impact, potentially affecting software supply chains reliant on Hex.pm.",
-      "action": "Immediately identify and secure any systems interacting with or hosting Hex.pm package registries. Review and verify the integrity of all packages downloaded from Hex.pm, especially from compromised servers. Apply any available patches or workarounds for the RCE flaw.",
+      "tldr": "Hackers exploited a critical Hex.pm Remote Code Execution (RCE) vulnerability with a CVSS score of 10.0, leading to the compromise of six package registry servers. This presents a significant supply chain risk for projects relying on Hex.pm.",
+      "action": "If your organization uses Hex.pm, review logs for suspicious package modifications or downloads. Monitor for official advisories and ensure Hex.pm dependencies are secure.",
       "cve_ids": [],
       "source_url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific vulnerable versions of Hex.pm package registry software. Refer to Hex.pm official advisories for precise version ranges and patching instructions. Assume any public-facing Hex.pm instance is at risk if unpatched.",
-      "how_to_determine_impact": "Check if your organization runs or uses Hex.pm package registry servers. If so, inspect server logs for signs of unauthorized access, unusual processes, or package tampering. Cross-reference internal Hex.pm instances with official vulnerability reports.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Computer Name contains 'hex.pm' or 'elixir' and Get File Version['/path/to/hexpm/server']",
-      "rapid7_query_hint": "Search for assets running 'Hex.pm' or 'Elixir' related services. Look for vulnerability checks related to 'Hex.pm RCE'. Review network traffic for suspicious connections to or from Hex.pm infrastructure.",
+      "affected_versions": "Hex.pm package registry servers; specific versions of Hex.pm that allowed RCE. Review Hex.pm official advisories for precise versions.",
+      "how_to_determine_impact": "Check if your development environment or production systems fetch packages from Hex.pm. Monitor for unexpected package updates or integrity issues with deployed packages.",
+      "tanium_query_hint": "Get running processes with command line contains 'mix hex.install' or 'rebar3 hex publish' to identify potential exposure. Review relevant package manager logs for unusual activity.",
+      "rapid7_query_hint": "Search InsightVM for 'vulnerability.cvss_score >= 10.0 AND vulnerability.title CONTAINS \"Hex.pm RCE\"'. Investigate assets connecting to Hex.pm for signs of compromise or vulnerable dependencies.",
       "remediation_priority": "Emergency out-of-band",
       "cvss_score": "10.0 Critical"
     },
     {
-      "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
-      "tldr": "CISA has issued a warning regarding a critical, unpatched vulnerability in Danfoss AK-SM 8xxA Series controllers. These controllers are widely used in food retail for managing refrigeration, HVAC, and lighting. The flaw poses a significant risk to critical infrastructure and operational technology (OT) environments.",
-      "action": "Immediately identify all Danfoss AK-SM 8xxA Series controllers within your environment. Isolate these devices from corporate networks if possible, and restrict remote access. Monitor vendor advisories for patch availability and prepare for immediate deployment.",
+      "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
+      "tldr": "A critical RCE vulnerability, dubbed 'Fail2Install', in Drupal is actively being exploited in the wild. Exploit details have emerged, indicating attackers can hijack unpatched Drupal sites.",
+      "action": "Immediately identify and patch all Drupal installations to the latest secure version. Review Drupal logs for signs of compromise, including unauthorized access or modifications.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
-      "source": "BleepingComputer",
-      "active_exploitation": false,
-      "affected_versions": "Danfoss AK-SM 8xxA Series controllers. All unpatched versions are considered vulnerable.",
-      "how_to_determine_impact": "Conduct an inventory of all OT/ICS devices to identify Danfoss AK-SM 8xxA Series controllers. Verify current firmware versions. Physically inspect devices or consult network topology to determine network exposure.",
-      "tanium_query_hint": "Get Installed Applications from all machines with Manufacturer contains 'Danfoss' and Product Name contains 'AK-SM 8xxA' or Get Network Interfaces from all machines with Vendor contains 'Danfoss' and IP Address matches 'OT Network Segment'",
-      "rapid7_query_hint": "Search assets for 'Danfoss AK-SM 8xxA' via network scans (e.g., NMAP scripts for industrial protocols). Look for relevant vulnerability checks on these specific controllers. Implement network segmentation monitoring for OT devices.",
+      "source_url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Specific vulnerable versions of Drupal, including those containing the 'Fail2Install' vulnerability. Consult Drupal's official security advisories for precise version ranges.",
+      "how_to_determine_impact": "Verify your Drupal version. Check for unauthorized modifications to Drupal files or database, new suspicious user accounts, or unexpected web shell presence.",
+      "tanium_query_hint": "Use 'Get Installed Applications with Name contains \"Drupal\"' to identify installations. Search for files associated with known exploits or suspicious activity in the web root of Drupal installations.",
+      "rapid7_query_hint": "Search InsightVM for 'vulnerability.title CONTAINS \"Drupal Fail2Install\" AND vulnerability.exploit_available = true'. Use InsightAgent queries to check for known exploit indicators on web servers hosting Drupal.",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "9.8 Critical (Estimated, given 'critical unpatched flaw' and CISA warning for OT devices)"
+      "cvss_score": "Critical, likely 9.8-10.0"
+    },
+    {
+      "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
+      "tldr": "Palo Alto Networks is warning about the active exploitation of the 'Fragnesia' flaw, often chained with PHP2Shell, to target PAN-OS devices with management interfaces exposed to the internet.",
+      "action": "Immediately patch all Palo Alto Networks PAN-OS devices, especially those with management interfaces exposed to the internet. Restrict network access to these interfaces to trusted sources only.",
+      "cve_ids": [],
+      "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+      "source": "BleepingComputer",
+      "active_exploitation": true,
+      "affected_versions": "Specific PAN-OS versions vulnerable to Fragnesia and PHP2Shell exploits. Consult Palo Alto Networks' official security advisories for details.",
+      "how_to_determine_impact": "Check PAN-OS device logs for signs of compromise, such as unauthorized access attempts, unusual configuration changes, or execution of PHP2Shell. Verify your PAN-OS version against vendor advisories.",
+      "tanium_query_hint": "Use 'Get PAN-OS Version' (if a custom sensor exists) or 'Get Network Interfaces and Connections' to identify internet-exposed management interfaces. Search for unusual process activity on PAN-OS devices.",
+      "rapid7_query_hint": "Search InsightVM for 'vulnerability.title CONTAINS \"Palo Alto Networks Fragnesia\" AND vulnerability.exploit_available = true'. Identify PAN-OS assets with internet-facing management interfaces and prioritize scanning/remediation for them.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical, likely 9.0-10.0"
+    },
+    {
+      "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
+      "tldr": "Hackers are actively exploiting two vulnerabilities in GeoServer, including unauthenticated Remote Code Execution (RCE) flaws. Security researchers are warning of active exploitation chains impacting these critical vulnerabilities.",
+      "action": "Immediately identify and patch all GeoServer instances to the latest secure version. Restrict network access to GeoServer management interfaces to only trusted IP ranges.",
+      "cve_ids": [],
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
+      "source": "The Hacker News",
+      "active_exploitation": true,
+      "affected_versions": "Specific vulnerable versions of GeoServer. Refer to official GeoServer security advisories for precise version information and patching guidance.",
+      "how_to_determine_impact": "Check GeoServer logs for suspicious activity, unauthorized access attempts, or signs of RCE. Verify the installed GeoServer version and compare it against known vulnerable versions.",
+      "tanium_query_hint": "Use 'Get Installed Applications with Name contains \"GeoServer\"' to identify installations. Investigate process activity for unusual commands originating from GeoServer processes or user accounts.",
+      "rapid7_query_hint": "Search InsightVM for 'vulnerability.title CONTAINS \"GeoServer\" AND vulnerability.exploit_available = true'. Perform authenticated scans on GeoServer instances to detect vulnerable versions.",
+      "remediation_priority": "Emergency out-of-band",
+      "cvss_score": "Critical, likely 9.8-10.0"
     }
   ],
   "insurance": [],
@@ -32366,6 +32375,40 @@
         "rapid7_query_hint": "Search assets for 'Danfoss AK-SM 8xxA' via network scans (e.g., NMAP scripts for industrial protocols). Look for relevant vulnerability checks on these specific controllers. Implement network segmentation monitoring for OT devices.",
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "9.8 Critical (Estimated, given 'critical unpatched flaw' and CISA warning for OT devices)",
+        "category": "vulns"
+      },
+      {
+        "title": "Hackers reportedly breached CIA intelligence analysis system",
+        "tldr": "Unknown attackers have reportedly breached an unclassified open-source intelligence analysis system at the US Central Intelligence Agency (CIA). The extent of data compromise or system impact is currently under investigation.",
+        "action": "Enhance security controls for intelligence analysis systems, especially those processing open-source information. Monitor for any indicators of compromise related to this event.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
+        "source": "BleepingComputer",
+        "category": "breaches"
+      },
+      {
+        "title": "Plagiarism Checker Turnitin Investigating Cyberattack",
+        "tldr": "The plagiarism checker service Turnitin is currently investigating a cyberattack. Details regarding the nature of the attack or potential data compromise are pending.",
+        "action": "If your institution uses Turnitin, monitor for official updates and advice. Review associated accounts for suspicious activity and strengthen credentials.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/plagiarism-checker-turnitin-investigating-cyberattack/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
+        "tldr": "Palo Alto Networks is warning about the active exploitation of the 'Fragnesia' flaw, often chained with PHP2Shell, to target PAN-OS devices with management interfaces exposed to the internet.",
+        "action": "Immediately patch all Palo Alto Networks PAN-OS devices, especially those with management interfaces exposed to the internet. Restrict network access to these interfaces to trusted sources only.",
+        "cve_ids": [],
+        "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+        "source": "BleepingComputer",
+        "active_exploitation": true,
+        "affected_versions": "Specific PAN-OS versions vulnerable to Fragnesia and PHP2Shell exploits. Consult Palo Alto Networks' official security advisories for details.",
+        "how_to_determine_impact": "Check PAN-OS device logs for signs of compromise, such as unauthorized access attempts, unusual configuration changes, or execution of PHP2Shell. Verify your PAN-OS version against vendor advisories.",
+        "tanium_query_hint": "Use 'Get PAN-OS Version' (if a custom sensor exists) or 'Get Network Interfaces and Connections' to identify internet-exposed management interfaces. Search for unusual process activity on PAN-OS devices.",
+        "rapid7_query_hint": "Search InsightVM for 'vulnerability.title CONTAINS \"Palo Alto Networks Fragnesia\" AND vulnerability.exploit_available = true'. Identify PAN-OS assets with internet-facing management interfaces and prioritize scanning/remediation for them.",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "Critical, likely 9.0-10.0",
         "category": "vulns"
       }
     ]
