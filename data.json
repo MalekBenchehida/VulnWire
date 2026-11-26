@@ -1,111 +1,112 @@
 {
   "breaches": [
     {
-      "title": "U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
-      "tldr": "The U.S. Treasury's Financial Crimes Enforcement Network (FinCEN) has taken some systems offline due to a cyber intrusion. The extent of the intrusion and data impact is under investigation.",
-      "action": "Monitor for further updates from FinCEN. Review supply chain security if your organization integrates with FinCEN systems.",
+      "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
+      "source_url": "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html",
       "source": "The Hacker News"
     },
     {
       "title": "1Password customer data stolen after employee GitHub account breach",
-      "tldr": "1Password experienced a data breach after an employee's corporate GitHub account was compromised. Attackers used this access to deploy malicious code to backend services, resulting in the theft of customer data.",
-      "action": "Review access logs for GitHub and related development infrastructure for any unauthorized activity. Enhance MFA and security training for developer accounts. 1Password customers should monitor for suspicious activity.",
+      "tldr": "1Password has disclosed a data breach after a an employee's corporate GitHub account was hacked and used to deploy malicious code to the company's backend services to steal customer data. [...]",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
       "source_url": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
       "source": "BleepingComputer"
     },
     {
-      "title": "Hackers reportedly breached CIA intelligence analysis system",
-      "tldr": "Unknown attackers have reportedly breached an unclassified open-source intelligence analysis system at the US Central Intelligence Agency (CIA). The extent of data compromise or system impact is currently under investigation.",
-      "action": "Enhance security controls for intelligence analysis systems, especially those processing open-source information. Monitor for any indicators of compromise related to this event.",
+      "title": "1Password Breach Exposes Customer Data, Internal Source Code",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/",
-      "source": "BleepingComputer"
-    },
-    {
-      "title": "Plagiarism Checker Turnitin Investigating Cyberattack",
-      "tldr": "The plagiarism checker service Turnitin is currently investigating a cyberattack. Details regarding the nature of the attack or potential data compromise are pending.",
-      "action": "If your institution uses Turnitin, monitor for official updates and advice. Review associated accounts for suspicious activity and strengthen credentials.",
-      "cve_ids": [],
-      "source_url": "https://www.securityweek.com/plagiarism-checker-turnitin-investigating-cyberattack/",
+      "source_url": "https://www.securityweek.com/1password-breach-exposes-customer-data-internal-source-code/",
       "source": "SecurityWeek"
     }
   ],
   "ransomware": [
     {
-      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
-      "tldr": "\"Com-affiliated\" hackers are hijacking cloud accounts through vishing attacks to steal data and demand extortion payments. This represents a multi-pronged attack vector targeting cloud environments for financial gain.",
-      "action": "Implement strong MFA on all cloud accounts. Educate users about vishing attacks and social engineering tactics. Review cloud access logs for unauthorized activity.",
+      "title": "Awaiting Fresh Intelligence",
+      "tldr": "No automated categorization found for this cycle.",
+      "action": "Wait for next scheduled update or manually review RSS feeds.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
-      "source": "The Hacker News"
+      "source_url": "",
+      "source": "System"
     }
   ],
   "vulns": [
     {
-      "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
-      "tldr": "Hackers exploited a critical Hex.pm Remote Code Execution (RCE) vulnerability with a CVSS score of 10.0, leading to the compromise of six package registry servers. This presents a significant supply chain risk for projects relying on Hex.pm.",
-      "action": "If your organization uses Hex.pm, review logs for suspicious package modifications or downloads. Monitor for official advisories and ensure Hex.pm dependencies are secure.",
+      "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
+      "source_url": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Hex.pm package registry servers; specific versions of Hex.pm that allowed RCE. Review Hex.pm official advisories for precise versions.",
-      "how_to_determine_impact": "Check if your development environment or production systems fetch packages from Hex.pm. Monitor for unexpected package updates or integrity issues with deployed packages.",
-      "tanium_query_hint": "Get running processes with command line contains 'mix hex.install' or 'rebar3 hex publish' to identify potential exposure. Review relevant package manager logs for unusual activity.",
-      "rapid7_query_hint": "Search InsightVM for 'vulnerability.cvss_score >= 10.0 AND vulnerability.title CONTAINS \"Hex.pm RCE\"'. Investigate assets connecting to Hex.pm for signs of compromise or vulnerable dependencies.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "10.0 Critical"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
-      "tldr": "A critical RCE vulnerability, dubbed 'Fail2Install', in Drupal is actively being exploited in the wild. Exploit details have emerged, indicating attackers can hijack unpatched Drupal sites.",
-      "action": "Immediately identify and patch all Drupal installations to the latest secure version. Review Drupal logs for signs of compromise, including unauthorized access or modifications.",
+      "title": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
+      "source_url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
       "source": "The Hacker News",
-      "active_exploitation": true,
-      "affected_versions": "Specific vulnerable versions of Drupal, including those containing the 'Fail2Install' vulnerability. Consult Drupal's official security advisories for precise version ranges.",
-      "how_to_determine_impact": "Verify your Drupal version. Check for unauthorized modifications to Drupal files or database, new suspicious user accounts, or unexpected web shell presence.",
-      "tanium_query_hint": "Use 'Get Installed Applications with Name contains \"Drupal\"' to identify installations. Search for files associated with known exploits or suspicious activity in the web root of Drupal installations.",
-      "rapid7_query_hint": "Search InsightVM for 'vulnerability.title CONTAINS \"Drupal Fail2Install\" AND vulnerability.exploit_available = true'. Use InsightAgent queries to check for known exploit indicators on web servers hosting Drupal.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical, likely 9.8-10.0"
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
-      "tldr": "Palo Alto Networks is warning about the active exploitation of the 'Fragnesia' flaw, often chained with PHP2Shell, to target PAN-OS devices with management interfaces exposed to the internet.",
-      "action": "Immediately patch all Palo Alto Networks PAN-OS devices, especially those with management interfaces exposed to the internet. Restrict network access to these interfaces to trusted sources only.",
+      "title": "Most Wanted: The Phishing Kits and Techniques Getting Past Security Controls",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
-      "source": "BleepingComputer",
-      "active_exploitation": true,
-      "affected_versions": "Specific PAN-OS versions vulnerable to Fragnesia and PHP2Shell exploits. Consult Palo Alto Networks' official security advisories for details.",
-      "how_to_determine_impact": "Check PAN-OS device logs for signs of compromise, such as unauthorized access attempts, unusual configuration changes, or execution of PHP2Shell. Verify your PAN-OS version against vendor advisories.",
-      "tanium_query_hint": "Use 'Get PAN-OS Version' (if a custom sensor exists) or 'Get Network Interfaces and Connections' to identify internet-exposed management interfaces. Search for unusual process activity on PAN-OS devices.",
-      "rapid7_query_hint": "Search InsightVM for 'vulnerability.title CONTAINS \"Palo Alto Networks Fragnesia\" AND vulnerability.exploit_available = true'. Identify PAN-OS assets with internet-facing management interfaces and prioritize scanning/remediation for them.",
-      "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical, likely 9.0-10.0"
+      "source_url": "https://thehackernews.com/2026/11/most-wanted-phishing-kits-and.html",
+      "source": "The Hacker News",
+      "active_exploitation": false,
+      "affected_versions": "Check vendor documentation.",
+      "how_to_determine_impact": "Analyze configurations and dependency logs.",
+      "tanium_query_hint": "Get Installed Applications",
+      "rapid7_query_hint": "asset.name CONTAINS ''",
+      "remediation_priority": "Medium standard patching",
+      "cvss_score": "7.0 High"
     },
     {
-      "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
-      "tldr": "Hackers are actively exploiting two vulnerabilities in GeoServer, including unauthenticated Remote Code Execution (RCE) flaws. Security researchers are warning of active exploitation chains impacting these critical vulnerabilities.",
-      "action": "Immediately identify and patch all GeoServer instances to the latest secure version. Restrict network access to GeoServer management interfaces to only trusted IP ranges.",
+      "title": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
       "cve_ids": [],
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
+      "source_url": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
       "source": "The Hacker News",
       "active_exploitation": true,
-      "affected_versions": "Specific vulnerable versions of GeoServer. Refer to official GeoServer security advisories for precise version information and patching guidance.",
-      "how_to_determine_impact": "Check GeoServer logs for suspicious activity, unauthorized access attempts, or signs of RCE. Verify the installed GeoServer version and compare it against known vulnerable versions.",
-      "tanium_query_hint": "Use 'Get Installed Applications with Name contains \"GeoServer\"' to identify installations. Investigate process activity for unusual commands originating from GeoServer processes or user accounts.",
-      "rapid7_query_hint": "Search InsightVM for 'vulnerability.title CONTAINS \"GeoServer\" AND vulnerability.exploit_available = true'. Perform authenticated scans on GeoServer instances to detect vulnerable versions.",
+      "affected_versions": "Check vendor advisories for specific version ranges.",
+      "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+      "tanium_query_hint": "Get Running Processes matching service name",
+      "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
       "remediation_priority": "Emergency out-of-band",
-      "cvss_score": "Critical, likely 9.8-10.0"
+      "cvss_score": "9.8 Critical"
     }
   ],
-  "insurance": [],
+  "insurance": [
+    {
+      "title": "ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties",
+      "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+      "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+      "cve_ids": [],
+      "source_url": "https://www.securityweek.com/shinyhunters-claims-comeback-new-inception-group-rejects-alleged-ties/",
+      "source": "SecurityWeek"
+    }
+  ],
   "history": {
     "2026-06-22": [
       {
@@ -32410,6 +32411,97 @@
         "remediation_priority": "Emergency out-of-band",
         "cvss_score": "Critical, likely 9.0-10.0",
         "category": "vulns"
+      },
+      {
+        "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html",
+        "source": "The Hacker News",
+        "category": "breaches"
+      },
+      {
+        "title": "1Password Breach Exposes Customer Data, Internal Source Code",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/1password-breach-exposes-customer-data-internal-source-code/",
+        "source": "SecurityWeek",
+        "category": "breaches"
+      },
+      {
+        "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Most Wanted: The Phishing Kits and Techniques Getting Past Security Controls",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/most-wanted-phishing-kits-and.html",
+        "source": "The Hacker News",
+        "active_exploitation": false,
+        "affected_versions": "Check vendor documentation.",
+        "how_to_determine_impact": "Analyze configurations and dependency logs.",
+        "tanium_query_hint": "Get Installed Applications",
+        "rapid7_query_hint": "asset.name CONTAINS ''",
+        "remediation_priority": "Medium standard patching",
+        "cvss_score": "7.0 High",
+        "category": "vulns"
+      },
+      {
+        "title": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
+        "source": "The Hacker News",
+        "active_exploitation": true,
+        "affected_versions": "Check vendor advisories for specific version ranges.",
+        "how_to_determine_impact": "Scan external exposure. Audit version files or package lockfiles.",
+        "tanium_query_hint": "Get Running Processes matching service name",
+        "rapid7_query_hint": "asset.vulnerabilities.title CONTAINS 'vulnerability'",
+        "remediation_priority": "Emergency out-of-band",
+        "cvss_score": "9.8 Critical",
+        "category": "vulns"
+      },
+      {
+        "title": "ShinyHunters Claims Comeback, New Inception Group Rejects Alleged Ties",
+        "tldr": "Breaking cybersecurity development requiring immediate attention and assessment.",
+        "action": "Verify system logs for indicators of compromise and apply relevant patches.",
+        "cve_ids": [],
+        "source_url": "https://www.securityweek.com/shinyhunters-claims-comeback-new-inception-group-rejects-alleged-ties/",
+        "source": "SecurityWeek",
+        "category": "insurance"
       }
     ]
   }
